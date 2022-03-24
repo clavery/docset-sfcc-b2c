@@ -1,0 +1,4 @@
+.env/
+*.zip
+SFCC_API.docset/
+.idea/

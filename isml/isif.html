@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+<meta content="(C) Copyright 2017" name="copyright"/>
+<meta content="(C) Copyright 2017" name="DC.rights.owner"/>
+<meta content="concept" name="DC.Type"/>
+<meta content="isif element" name="DC.Title"/>
+<meta content="XHTML" name="DC.Format"/>
+<meta content="D11234" name="DC.Identifier"/>
+<meta content="en-us" name="DC.Language"/>
+<link href="../css/commonltr.css" rel="stylesheet" type="text/css"/><script src="../scripts/jquery-2.0.3.min.js" type="text/javascript" xml:space="preserve"> //  // </script><script src="../scripts/dwScript.js" type="text/javascript" xml:space="preserve"> //  // </script>
+<title>isif element</title>
+<!-- text added to HEAD tag-->
+<script src="../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+
+<link charset="ISO-8859-1" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css"/>
+<script src="../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+</head>
+<body id="D11234">
+<div class="help_breadcrumbs"><a href="../../../topic/com.demandware.dochelp/GettingStarted/Welcome.html" shape="rect">Salesforce Commerce Cloud 17.3</a> &gt; <a href="../../../topic/com.demandware.dochelp/SiteDevelopment/SiteDevelopment.html" shape="rect">Developing your storefront</a> &gt; <a href="../../../topic/com.demandware.dochelp/SiteDevelopment/WorkingwithTemplates.html" shape="rect">Working with templates</a> &gt; <a href="../../../topic/com.demandware.dochelp/ISML/ISML.html" shape="rect">ISML</a></div>
+
+<div><!-- text added to header of html--></div>
+  <h1 class="title topictitle1" id="ariaid-title1">isif element</h1>
+
+
+  
+
+  <div class="body conbody">
+    <div class="section"><h2 class="title sectiontitle">Syntax</h2><pre class="pre codeblock" xml:space="preserve"><code>&lt;isif condition = if_expression&gt;
+  ...
+ &lt;iselseif condition = elseif_expression&gt; //0 or more
+  ...
+ &lt;/iselseif&gt; 
+ &lt;iselse&gt;
+  ...
+&lt;/isif&gt;</code></pre><div class="p bodytext"><dl class="dl parml">
+        
+          <dt class="dt pt dlterm">condition = if_expression</dt>
+
+
+          <dd class="dd pd"><p class="p"><em class="ph i">Allowed data type: </em>string or expression.</p>
+<p class="p bodytext">if_expression evaluates to a boolean value.
+          If the <code class="ph codeph"><code class="ph codeph">&lt;isif&gt;</code></code> condition is
+          true, the system executes the code immediately following the
+          <code class="ph codeph">&lt;isif&gt;</code> tag, ignoring the enclosed
+          <code class="ph codeph">&lt;iselseif&gt;</code> and
+          <code class="ph codeph">&lt;iselse&gt;</code> tags. If the
+          <code class="ph codeph">&lt;isif&gt;</code> condition is false, the system ignores
+          the code immediately following the <code class="ph codeph">&lt;isif&gt;</code>
+          tag, and then tests each <code class="ph codeph">&lt;iselseif&gt;</code> condition
+          in order. When the system finds a true
+          <code class="ph codeph">&lt;iselseif&gt;</code> condition, the system executes the
+          code immediately following the <code class="ph codeph">&lt;iselseif&gt;</code> tag
+          and ignores any remaining <code class="ph codeph">&lt;iselseif&gt;</code> and
+          <code class="ph codeph">&lt;iselse&gt;</code> tags. If all
+          <code class="ph codeph">&lt;iselseif&gt;</code> conditions are false, the system
+          executes the code following the <code class="ph codeph">&lt;iselse&gt;</code>
+          tag.</p>
+</dd>
+
+        
+      </dl>
+</div>
+</div>
+
+
+    <div class="section"><h2 class="title sectiontitle">Purpose</h2><p class="p bodytext">Creating
+    conditional template code and controlling the flow of business logic. The
+    <code class="ph codeph">&lt;isif&gt;</code> tag group allows you to create conditional
+    programming constructs using custom tags.</p>
+</div>
+
+
+    <div class="section"><h2 class="title sectiontitle">Supporting tags</h2><p class="p bodytext"><code class="ph codeph">&lt;isif&gt;</code> and its supporting
+    tags, <code class="ph codeph">&lt;iselseif&gt;</code> and
+    <code class="ph codeph">&lt;iselse&gt;</code>, are some of the most commonly used tags.
+    They contain no business logic, just the conditional visualization of
+    data.</p>
+</div>
+
+
+    <div class="section"><h2 class="title sectiontitle">Rules of use</h2><p class="p bodytext">Every
+    <code class="ph codeph">&lt;isif&gt;</code> tag must have a matching
+    <code class="ph codeph">&lt;/isif&gt;</code> tag. You can use any Commerce Cloud Digital script
+    expression as a condition for the <code class="ph codeph">&lt;isif&gt;</code> tag. In
+    particular, you can use local variables, Pipeline Dictionary variables and
+    any functions within those expressions.</p>
+<p class="p bodytext"><code class="ph codeph">&lt;iselse&gt;</code> and
+    <code class="ph codeph">&lt;iselseif&gt;</code> are optional. You can use as many
+    <code class="ph codeph">&lt;iselseif&gt;</code> tags as needed in an
+    <code class="ph codeph">&lt;isif&gt;</code> statement, but you can only use one
+    <code class="ph codeph">&lt;iselse&gt;</code>, which must always be the last tag within
+    an <code class="ph codeph">&lt;isif&gt;</code> group.</p>
+</div>
+
+
+    <div class="section"><h2 class="title sectiontitle">Example</h2><p class="p bodytext">A conditional
+    expression should typically return a boolean which is interpreted
+    appropriately. If condition expression evaluates to non boolean and is not
+    null, it is interpreted as true. When it evaluates to null it is
+    interpreted as false.</p>
+<pre class="pre codeblock" xml:space="preserve"><code>&lt;isif condition="${pdict.Products.Price == 0}"&gt; 
+Special free gift.
+&lt;iselseif condition="${pdict.Products.Price &lt; 100}"&gt;
+Special deal.
+&lt;iselse&gt;
+Today's low price.
+&lt;/isif&gt;</code></pre><p class="p bodytext">This example shows how to
+    toggle continuously between three different colors for the rows of a
+    table. The current color is stored in the user-defined variable,
+    color.</p>
+<pre class="pre codeblock" xml:space="preserve"><code>&lt;isset name="color" value="${'#00FFFF'}" scope="PAGE"&gt;
+&lt;table&gt;
+&lt;isloop iterator="${pdict.Basket.products} var="product"&gt;
+&lt;tr&gt;
+&lt;td bgcolor="${product.color}"&gt;
+&lt;isprint value = "${product.name}"&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;isif condition="${color == '#00FFFF'}"&gt;
+&lt;isset name="color" value="${'#00CCFF'}" scope="PAGE"&gt;
+&lt;iselseif condition="${color == '#00CCFF'}"&gt;
+&lt;isset name="color" value="${'#0099FF'}" scope="PAGE"&gt;
+&lt;iselse&gt;
+&lt;isset name="color" value="${'#00FFFF'}"&gt;
+&lt;/isif&gt;
+&lt;/isloop&gt;
+&lt;/table&gt;</code></pre><p class="p bodytext">See also <a class="xref" href="iselse.html" shape="rect">&lt;iselse&gt;</a> and <a class="xref" href="iselseif.html" shape="rect">iselseif</a>.</p>
+</div>
+
+  </div>
+
+<div><table class="copyright_table" width="100%"><tr><td align="left" colspan="1" rowspan="1"><p class="copyright_footer"> copyright © 2017 salesforce.com, inc. All rights reserved.</p></td>
+<td colspan="1" rowspan="1"><a href="#" id="bookmarklink" onclick="showLink();" shape="rect">Show URL</a><div id="bookmarkme" style="display:none"><!-- --></div></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" onclick="javascript:window.location='mailto:docfeedback@demandware.com?subject=' + document.title" shape="rect">Submit Feedback</a></td></tr>
+</table></div></body>
+</html>
