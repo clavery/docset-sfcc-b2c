@@ -3,6 +3,7 @@
 
 from pyquery import PyQuery as pq
 import sqlite3
+import os
 import os.path
 import shutil
 import markdown
@@ -44,7 +45,7 @@ shutil.copy('./code.css', './SFCC_API.docset/Contents/Resources/Documents/code.c
 
 with open('./SFCC_API.docset/Contents/Info.plist', 'w') as f:
     f.write(PLIST)
-    
+
 conn = sqlite3.connect('./SFCC_API.docset/Contents/Resources/docSet.dsidx')
 c = conn.cursor()
 c.execute("CREATE TABLE IF NOT EXISTS searchIndex(id INTEGER PRIMARY KEY, name TEXT, type TEXT, path TEXT);")
@@ -59,17 +60,17 @@ shutil.copytree("./docs/scriptapi/html/api", "./SFCC_API.docset/Contents/Resourc
 
 with open("./SFCC_API.docset/Contents/Resources/Documents/api/classList.html", "r") as f:
     d = pq(f.read())
-    
+
 for link in d('.classesName a'):
     title = link.attrib["title"]
     name = link.text
     path = link.attrib["href"]
-    
+
     print("scriptapi", name, title)
-    
-    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Class', '%s');" % 
+
+    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Class', '%s');" %
               (name, "api/%s" % path))
-    
+
 conn.commit()
 
 # Job Step API
@@ -85,12 +86,12 @@ with open("./SFCC_API.docset/Contents/Resources/Documents/jobstepapi/jobStepList
 for link in d('.classesName a'):
     name = link.find("span").text
     path = link.attrib["href"]
-    
+
     print("jobstep", name)
-    
-    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Builtin', '%s');" % 
+
+    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Builtin', '%s');" %
               (name, "jobstepapi/%s" % path))
-    
+
 conn.commit()
 
 # Pipelet API
@@ -105,14 +106,21 @@ with open("./SFCC_API.docset/Contents/Resources/Documents/pipelet/pipeletList.ht
 for link in d('.classesName a'):
     name = link.find("span").text
     path = link.attrib["href"]
-    
+
     print("pipelet", name)
-    
-    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Procedure', '%s');" % 
+
+    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Procedure', '%s');" %
               (name, "pipelet/%s" % path))
-    
+
 conn.commit()
 
+# Remove JS files
+if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/api/js/dwapi.js"):
+    os.remove("./SFCC_API.docset/Contents/Resources/Documents/api/js/dwapi.js")
+if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/jobstepapi/js/dwapi.js"):
+    os.remove("./SFCC_API.docset/Contents/Resources/Documents/jobstepapi/js/dwapi.js")
+if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/pipelet/js/dwapi.js"):
+    os.remove("./SFCC_API.docset/Contents/Resources/Documents/pipelet/js/dwapi.js")
 
 # Samples/Guides
 
@@ -122,14 +130,14 @@ template = Template(template_src)
 
 if not os.path.exists('./SFCC_API.docset/Contents/Resources/Documents/guides/'):
     os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/guides/')
-    
+
 for f in os.listdir('./guides/'):
     name, ext = os.path.splitext(f)
     title = name + " (Guide)"
     print("guide", name)
     c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Guide', '%s');" %
               (title, "guides/%s" % (name+".html")))
-    
+
     with open('./guides/' + f, 'r') as f:
         doc_output = markdown.markdown(f.read(), extensions=[TableExtension(), FencedCodeExtension(), CodeHiliteExtension()])
 
@@ -143,14 +151,14 @@ conn.commit()
 
 if not os.path.exists('./SFCC_API.docset/Contents/Resources/Documents/isml/'):
     os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/isml/')
-    
+
 for f in os.listdir('./isml/'):
     name, ext = os.path.splitext(f)
     title = name + " (ISML Tag)"
     print("isml", name)
     c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Tag', '%s');" %
               (title, "isml/%s" % (name+".html")))
-    
+
     shutil.copy('./isml/' + f, './SFCC_API.docset/Contents/Resources/Documents/isml/' + f)
 
 conn.commit()
@@ -169,9 +177,9 @@ for f in os.listdir('./docs/xsd/'):
     if ext != ".xsd":
         continue
     print("schema", name)
-    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Protocol', '%s');" % 
+    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Protocol', '%s');" %
               (f, "schemas/%s" % (name+".html")))
-    
+
     with open('./docs/xsd/' + f, 'r') as f:
         md = """
 ```xml
@@ -227,7 +235,7 @@ for page in OCAPI_INDICIES:
             continue
         if full_link.endswith('.html') and "DOC3" in full_link:
             LINKS.add(full_link)
-            
+
 resp = requests.get('https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/css/commonltr.css')
 css = f"""<style>
 {resp.content.decode('utf-8')}
@@ -238,7 +246,7 @@ copyright_table td:nth-child(4) {{ display: table-cell; }}
 
 if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/ocapi"):
     shutil.rmtree("./SFCC_API.docset/Contents/Resources/Documents/ocapi")
-    
+
 if not os.path.exists('./SFCC_API.docset/Contents/Resources/Documents/ocapi/'):
     os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/ocapi/shop/Documents')
     os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/ocapi/data/Documents')
@@ -284,7 +292,7 @@ for link in LINKS:
 
     print(entry_type, entry_name)
 
-    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" % 
+    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
               (entry_name, entry_type, "ocapi/%s%s" % (entry_folder, name+".html")))
     with open(os.path.join('./SFCC_API.docset/Contents/Resources/Documents/ocapi/%s' % entry_folder, name+".html"), 'w') as f:
         f.write(content)
