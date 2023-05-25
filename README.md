@@ -5,6 +5,11 @@ See [releases](https://github.com/clavery/docset-sfcc-b2c/releases/latest) for t
 ![screen.png](./screen.png)
 ![screen2.png](./screen2.png)
 
+# Installation
+
+- Use the Feed URL: `https://raw.githubusercontent.com/clavery/docset-sfcc-b2c/main/SFCC_API.xml` or...
+- Use the releases on the side to download a zip release
+ 
 ## Building
 
 1. Download the API docs from your instance with WebDAV credentials
