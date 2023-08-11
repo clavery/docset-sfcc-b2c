@@ -1,0 +1,3232 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-148075995-1" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148075995-1');
+</script>
+
+<link href="https://developer.salesforce.com/docs/commerce/b2c-commerce/references/ocapi-data-api?meta=Summary" rel="canonical"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+<meta content="(C) Copyright 2023" name="copyright"/>
+<meta content="(C) Copyright 2023" name="DC.rights.owner"/>
+<meta content="concept" name="DC.Type"/>
+<meta content="Roles resource (Data API 23.2)" name="DC.Title"/>
+<meta content="" name="abstract"/>
+<meta content="" name="description"/>
+<meta content="XHTML" name="DC.Format"/>
+<meta content="id-420209469" name="DC.Identifier"/>
+<meta content="en-us" name="DC.Language"/>
+<link href="../../../../css/commonltr.css" rel="stylesheet" type="text/css"/><script src="../../../../scripts/jquery-3.5.0.min.js" type="text/javascript" xml:space="preserve"> //  // </script><script src="../../../../scripts/dwScript.js" type="text/javascript" xml:space="preserve"> //  // </script>
+<title>Roles resource (Data API 23.2)</title>
+<!-- text added to HEAD tag-->
+<script src="../../../../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+
+<link charset="ISO-8859-1" href="../../../../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css"/>
+<script src="../../../../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == "blah" ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../../../../index.jsp?topic=%2Fcom.demandware.dochelp%2FOCAPI%2Fcurrent%2Fdata%2FResources%2FRoles.html" + anchorParam);
+}
+</script>
+<style>
+@import url(//fonts.googleapis.com/css?family=Salesforce+Sans:400,400italic,bold,bolditalic);
+
+/*
+ | This file is part of the DITA Open Toolkit project. See the accompanying license.txt file for
+ | applicable licenses.
+*/
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+.unresolved { background-color: skyblue }
+.noTemplate { background-color: yellow }
+.base { background-color: #ffffff }
+/* Add space for top level topics */
+/*.nested0 { margin-top : 1em }*/
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p { margin-top: 1em }
+/* Default of italics to set apart figure captions */
+.figcap { font-style: italic }
+.figdesc { font-style: normal }
+/* Use @frame to create frames on figures */
+.figborder {
+    border-style: solid;
+    padding-left : 3px;
+    border-width : 2px;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figsides {
+    border-left : 2px solid;
+    padding-left : 3px;
+    border-right : 2px solid;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figtop {
+    border-top : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figbottom {
+    border-bottom : 2px solid;
+    border-color : Silver;
+}
+.figtopbot {
+    border-top : 2px solid;
+    border-bottom : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks {
+  list-style-type: none;
+}
+.ulchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.olchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.linklist {
+  margin-bottom: 1em;
+}
+.linklistwithchild {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.sublinklist {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.relconcepts {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.reltasks {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relref {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relinfo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.breadcrumb {
+    font-size : 1em;
+    margin-bottom: 1em;
+}
+dt.prereq { margin-left : 20px }
+/* Set heading sizes, getting smaller for deeper nesting */
+.topictitle1 {
+    color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+	margin-top: .5em
+}
+.topictitle2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle3 {
+    /* margin-top: 1pc;
+    margin-bottom: .17em;*/
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle4 {
+    /* margin-top: .83em; */
+    font-size: 1.4em;
+}
+.topictitle5 { font-size: 1.2em }
+.topictitle6 {
+    font-size: 1.2em;
+    font-style: italic;
+}
+.sectiontitle {
+    font-size: 1.6em;
+    font-style: bold;
+}
+.section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.example {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+div.tasklabel {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h2.tasklabel,
+h3.tasklabel,
+h4.tasklabel,
+h5.tasklabel,
+h6.tasklabel { font-size: 100% }
+/* All note formats have the same default presentation */
+.note {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.notetitle { font-weight: bold }
+.notelisttitle { font-weight: bold }
+.tip {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.tiptitle { font-weight: bold }
+.fastpath {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.fastpathtitle { font-weight: bold }
+.important {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.importanttitle { font-weight: bold }
+.remember {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.remembertitle { font-weight: bold }
+.restriction {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.restrictiontitle { font-weight: bold }
+.attention {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.attentiontitle { font-weight: bold }
+.dangertitle { font-weight: bold }
+.danger {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.cautiontitle { font-weight: bold }
+.caution {
+    font-weight: bold;
+    margin-bottom : 1em;
+}
+.warning {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.warningtitle { font-weight: bold }
+/* Simple lists do not get a bullet */
+ul.simple { list-style-type: none }
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol { font-weight : bold }
+/* Various basic phrase styles */
+.bold { font-weight: bold }
+.boldItalic {
+    font-weight: bold;
+    font-style: italic;
+}
+.italic { font-style: italic }
+.underlined { text-decoration: underline }
+.uicontrol { font-weight: bold }
+.parmname { font-weight: bold }
+.kwd { font-weight: bold }
+.defkwd {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.var { font-style : italic }
+.shortcut { text-decoration: underline }
+/* Default of bold for definition list terms */
+.dlterm { font-weight: bold }
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand {
+    font-weight: bold;
+    margin-top: 1em;
+}
+*[compact="yes"]>li { margin-top: 0em }
+*[compact="no"]>li { margin-top: .53em }
+.liexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sliexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.dlexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ddexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.stepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.substepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* Align images based on @align on topic/image */
+div.imageleft { text-align: left }
+div.imagecenter { text-align: center }
+div.imageright { text-align: right }
+div.imagejustify { text-align: justify }
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+
+pre.screen {
+    padding: 5px 5px 5px 5px;
+    border: outset;
+    background-color: #CCCCCC;
+    margin-top: 2px;
+    margin-bottom : 2px;
+    white-space: pre;
+}
+/* Demandware Styles */
+
+span.filepath {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 10px 0;
+}
+
+.nocellnorowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.cellrowborder {
+   border: 1px solid #ACB1B7;
+}
+.row-nocellborder {
+    border: 1px solid #ACB1B7;
+}
+.cell-norowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.topictitle1{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle2{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle3{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.sectiontitle{
+    color: #706e6b;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+body {
+    /* background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #DADADA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    */
+    color: #111111;
+    font-family: "Salesforce Sans", Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    line-height: 1.4em;
+    padding: 10px;
+}
+li { padding-top: 1em }
+p.subheading1 { font-size: 1.4em }
+p.subheading2 { font-size: 1.2em }
+.copyright_footer {
+	 font-size: 1em;
+	 font-style: italic;
+}
+a:link,
+a:visited { color: #008CB9 }
+a:hover,
+a:focus {
+    color: #3778C7;
+    text-decoration: underline;
+}
+strong { color: #000000 }
+.help_breadcrumbs,
+.help_breadcrumbs a {
+    color: #1589ee;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0 0 0px;
+    text-decoration: none;
+	margin: 0px;
+}
+.help_breadcrumbs a:hover { text-decoration: underline }
+.related-links { font-size: 11px }
+div.header{
+	line-height: 1em;
+}
+
+.alignleft {
+	float: left;
+	font-size: 1em;
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+
+}
+.alignright {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+li table {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.tablenoborder {
+	margin-top: 1em;
+}
+
+
+table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table th {
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8');; ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8')";
+    background-image: -moz-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -ms-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -o-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#eef0f4), to(#ccd1d8));
+    background-image: -webkit-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: linear-gradient(top, #eef0f4, #ccd1d8);*/
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    color: #4F5762;
+    font-size: 1em;
+    font-weight: bold;
+    /* padding: 10px 3px 8px 5px; */
+    padding: 1em;
+}
+table.table td,
+table.simpletable td {
+    border: 1px solid #ACB1B7;
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*//*Element must have a height (not auto)*//*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5')"; */
+    /*Element must have a height (not auto)*//*All filters must be placed together*/
+    /* background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: linear-gradient(top, #ffffff, #e5e5e5);*/
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+    /* padding: 12px 3px 12px 5px; */
+    padding: 1em;
+}
+table.copyright_table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+    padding: 0px;
+	margin:0;
+}
+
+table.copyright_table td {
+    padding: 0px;
+	margin:0;
+}
+
+body .resultofText {
+    background-color: transparent;
+    color: #60a345;
+}
+pre {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    /* font-weight: bold; */
+    margin: 8px;
+    padding: 8px;
+    overflow-x: auto;
+}
+pre code {
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.codeph {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.note {
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #333333;
+/*    font-family: Verdana,Arial,Helvetica,sans-serif;  */
+    font-size: 1em;
+    padding: 10px 10px 10px 26px;
+}
+.hidden { display: none; }
+.shown { display: block; }
+div[role=search]{
+	background-color: #25282A;
+	color: #CCCCCC;
+}
+a:link.scopeLabel {color:#FFB549;}
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #F1D600;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #E0C91F;
+}
+#ocapiDeprecationBanner {
+    background-color: #0747a6;
+    min-height: 26px;
+    font-size: 14px;
+    color: white;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#ocapiDeprecationBanner a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeDeprecationBanner {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+.help_breadcrumbs { display: none !important; }
+.copyright_table td { display: none; }
+copyright_table td:nth-child(4) { display: table-cell; }
+</style>
+<body id="id-420209469">
+<div class="help_breadcrumbs"><a href="../../../../../../topic/com.demandware.dochelp/content/b2c_commerce/topics/getting_started/b2c_welcome.html" shape="rect">Salesforce B2C Commerce 23.6</a> &gt; <a href="../../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html" shape="rect">Open Commerce API 23.2</a> &gt; <a href="../../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/DataAPIResources.html" shape="rect">Data API resources 23.2</a></div>
+
+<div><!-- text added to header of html--></div>
+      <h1 class="title topictitle1" id="ariaid-title1">Roles resource (Data API 23.2)</h1>
+
+      
+      <div class="body conbody"><p class="shortdesc"> </p>
+<div class="section" id="id-420209469__Summary"><h2 class="title sectiontitle">Summary</h2>
+      
+      
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">Http Method</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;">Resource</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id-715567576" shape="rect">/roles</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to get all the access roles with no filtering.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id-1382598176" shape="rect">/roles/{id}</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to get a single access role.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id963553991" shape="rect">/roles/{id}</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to create an access role.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id-2125350517" shape="rect">/roles/{id}</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to delete an access role.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id1483329035" shape="rect">/roles/{id}/permissions</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Retrieves a list of permissions assigned to the given role.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id1691622514" shape="rect">/roles/{id}/permissions</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Assigns permissions to the given role. This will replace the current permission assignments. For the 'Administrator'
+ role only adjustments for custom module permissions will be processed but other given permissions will be ignored.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id-1949391159" shape="rect">/roles/{id}/user_search</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Searches for users of the specified access role.
+ <p class="p">The query attribute specifies a complex query that can be used to narrow down the search. These are the list
+ of searchable attributes:</p>
+
+ <ul class="ul">
+ <li class="li">login - String</li>
+
+ <li class="li">email - String</li>
+
+ <li class="li">first_name - String</li>
+
+ <li class="li">last_name - String</li>
+
+ <li class="li">external_id - String</li>
+
+ <li class="li">last_login_date - Date</li>
+
+ <li class="li">is_locked - Boolean</li>
+
+ <li class="li">is_disabled - Boolean</li>
+
+ </ul>
+
+
+ <p class="p">The output of the query can also be sorted. These are the list of sortable attributes:</p>
+
+ <ul class="ul">
+ <li class="li">login - String</li>
+
+ <li class="li">email - String</li>
+
+ <li class="li">first_name - String</li>
+
+ <li class="li">last_name - String</li>
+
+ <li class="li">external_id - String</li>
+
+ <li class="li">last_login_date - Date</li>
+
+ </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id1341942023" shape="rect">/roles/{id}/users</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to get all the users assigned to the specified access role.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id2134264398" shape="rect">/roles/{id}/users/{login}</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to assign a user to an access role</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e32" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="Roles.html#id-420209469__id-1985596910" shape="rect">/roles/{id}/users/{login}</a></td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e36" rowspan="1" style="text-align:left;vertical-align:top;">Action to unassign a user to an access role</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+    </div>
+<div class="section" id="id-420209469__id-715567576"><h2 class="title sectiontitle">Get public Access Roles</h2>
+      
+      <p class="p"><!-- --></p>
+Action to get all the access roles with no filtering.
+      <p class="p subheading1" id="id-420209469__id-1550850489">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET https://hostname:port/dw/data/v23_2/roles?start={Integer}&amp;count={Integer}&amp;select={String}&amp;expand={String}</code></pre>
+      <p class="p subheading1" id="id-420209469__id-754910156">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id65620640">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e224" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e226" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e224" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e226" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-539038159">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/Roles.html#id939414" shape="rect">Roles</a></p>
+<p class="p subheading1" id="id-420209469__id1413033961">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e265" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e267" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e269" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e271" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e265" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e267" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e269" rowspan="1" style="text-align:left;vertical-align:top;">Optional count for retrieving only a subset of the items (default is 25).</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e271" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e265" rowspan="1" style="text-align:left;vertical-align:top;">expand</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e267" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e269" rowspan="1" style="text-align:left;vertical-align:top;">List of expansions.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e271" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e265" rowspan="1" style="text-align:left;vertical-align:top;">select</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e267" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e269" rowspan="1" style="text-align:left;vertical-align:top;">The property selector.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e271" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e265" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e267" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e269" rowspan="1" style="text-align:left;vertical-align:top;">Optional start index for retrieving the items from a given index (default 0).</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e271" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-496532014">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /s/-/dw/data/v23_2/roles?select=(**)&amp;expand=users HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118.72ed5
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 294836
+Content-Type: application/json; charset=UTF-8
+
+{
+    "_v" : "23.2",
+    "_type": "roles",
+    "count": 20,
+    "data": [
+        {
+            "_type": "role",
+            "_resource_state": "8a70837a2a5c1af95d5fc5e61686e41d89f62ce43257d72e7a8b4d89ade5d983",
+            "description": "The administrator has the rights to perform tasks related to the overall administration of the merchant organization and its users and roles. This access role is not site-specific and will grant the user access to the entire organization.",
+            "id": "Administrator",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/Administrator",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c131f1d0c153c19041d110c1019521f1311">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "LocaleDude",
+                    "locked": false,
+                    "login": "localeDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "18f70e67257ef0dc691ed33dca14d16b5a1932207ef7a6bf683fea7ea9cf2007",
+            "description": "Read and Write Site Preferences of multiple Sites ",
+            "id": "MultiSite-Full-ReadWriteSitePreferences",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/MultiSite-Full-ReadWriteSitePreferences",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81eee2e0f1e8dee3e7edc1e4f9e0ecf1ede4afe2eeec">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "MultiSite-Full-ReadWriteSitePreferences",
+                    "locked": false,
+                    "login": "MultiSite-Full-ReadWriteSitePreferences",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "27b6ba2d4e85ff931fe0312007885b1668ee05ab7d2560e42183f61f4055a7c9",
+            "description": "Read and Write Site Preferences of multiple Sites ",
+            "id": "MultiSite-ReadWriteSitePreferences",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/MultiSite-ReadWriteSitePreferences",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee818d8f9e87b18c8882ae8b968f839e828bc08d8183">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "MultiSite-ReadWriteSitePreferences",
+                    "locked": false,
+                    "login": "MultiSite-ReadWriteSitePreferences",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "49821f548f36454ca11c0dedc4a69ca1e0863bd37415055e2da40ff7e2423424",
+            "description": "Allowed to manage things global",
+            "id": "OrgManager",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/OrgManager",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c737f7d6c755c79647d716c7079327f7371">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "OrgDude",
+                    "locked": false,
+                    "login": "orgDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "9ebc0644131de366b60e29c9f9dfc2b6a1019d3969bb5ca8f7060f42feca340a",
+            "description": "Allowed to manage roles",
+            "id": "RoleManager",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/RoleManager",
+            "user_count": 2,
+            "user_manager": true,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f7989496879eb7928f969a879b92d994989a">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_login_date": "2017-01-11",
+                    "last_name": "RoleDude",
+                    "locked": false,
+                    "login": "roleDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                },
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb4b8baabb29bbea3bab6abb7bef5b8b4b6">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SecondRoleManager",
+                    "locked": false,
+                    "login": "secondRoleManager",
+                    "preferred_data_locale": "en",
+                    "preferred_uilocale": "de"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "7d8a9ab3cc4c95ad372d5a070e2ce06240f2e16cdcbcdbae423a6361e7b60b36",
+            "description": "Read SiteGenesis Site Preferences ",
+            "id": "SiteGenesis-ReadSitePreferences",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesis-ReadSitePreferences",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff909c9e8f96a09d9993bf9a879e928f939ad19c9092">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesis-ReadSitePreferences",
+                    "locked": false,
+                    "login": "SiteGenesis-ReadSitePreferences",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "534a2e085d7893cf3a4bb69e63d5670eb3eaa34ba94ea5a01caeb9f75902fd81",
+            "description": "Allowed to do agent use cases for site SiteGenesis-Customization and to Create_Order_On_Behalf_Of for sites SiteGenesis-MinConfig, SiteGenesis-Settings and SiteGenesis",
+            "id": "SiteGenesisAgent",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgent",
+            "user_count": 2,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5aaa6a4b5ac9aa4a2a0abb185a0bda4a8b5a9a0eba6aaa8">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentMultiRole",
+                    "locked": false,
+                    "login": "SiteGenesisAgentMultiRole",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                },
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="553a3634253c0a3432303b2115302d34382539307b363a38">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgent",
+                    "locked": false,
+                    "login": "SiteGenesisAgent",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "c963858ecf3eafba17560d5cb157f3ef1f5c749fb627a807ad3fd1d3a5e76ca4",
+            "description": "Allowed to Handle_External_Orders for SiteGenesis-Customization",
+            "id": "SiteGenesisAgentExternalOrders",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgentExternalOrders",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="345b5755445d6b5553515a406b5b465051466b514c4074514c55594458511a575b59">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentExternalOrders",
+                    "locked": false,
+                    "login": "SiteGenesisAgentExternalOrders",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "9cabd0d7e44d75e4130b28c0255bcfa9d5bff8395d040d8d756ccdcf3bb33268",
+            "description": "Allowed to Create_Order_On_Behalf_Of and Adjust_Item_Price for SiteGenesis-Customization",
+            "id": "SiteGenesisAgentItemAdjustment",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgentItemAdjustment",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d525e5c4d54625c5a58534962524f59584f6254495850625c5957484e4950585349597d58455c504d5158135e5250">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentItemAdjustment",
+                    "locked": false,
+                    "login": "SiteGenesisAgentItemAdjustment",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "6461ddc34b9033ed0962c7b152a48c88d3afc49363905c1acb95d1d2d2854e87",
+            "description": "Allowed to Create_Order_On_Behalf_Of and Adjust_Order_Price for SiteGenesis-Customization",
+            "id": "SiteGenesisAgentOrderAdjustment",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgentOrderAdjustment",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7d8d4d6c7dee8d6d0d2d9c3e8d8c5d3d2c5e8d8c5d3d2c5e8d6d3ddc2c4c3dad2d9c3d3f7d2cfd6dac7dbd299d4d8da">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentOrderAdjustment",
+                    "locked": false,
+                    "login": "SiteGenesisAgentOrderAdjustment",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "91152c94d417fea07ba34a511446c8cd645d35184f3366623067f2880a2b0cad",
+            "description": "Allowed to Create_Order_On_Behalf_Of for SiteGenesis-Customization",
+            "id": "SiteGenesisAgentOrderCreateOnBehalf",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgentOrderCreateOnBehalf",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="305f535140596f5157555e446f5f425455426f534255514455705548515d405c551e535f5d">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentOrderCreateOnBehalf",
+                    "locked": false,
+                    "login": "SiteGenesisAgentOrderCreateOnBehalf",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "d7787329ec3247878c8dd19c0e959d06eb5d9804cfa3678de0d4a0a94c4d8bf4",
+            "description": "Allowed to Search_Orders for SiteGenesis-Customization",
+            "id": "SiteGenesisAgentOrderSearch",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgentOrderSearch",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dfb0bcbeafb680beb8bab1ab80b0adbbbaad80acbabeadbcb79fbaa7beb2afb3baf1bcb0b2">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentOrderSearch",
+                    "locked": false,
+                    "login": "SiteGenesisAgentOrderSearch",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "2fa3578a05ca203ac3384f7ba2a9e6e786ecec4e823e22f6d89bfdc9454ad45d",
+            "description": "Allowed to Create_Order_On_Behalf_Of and Adjust_Shipping_Price for SiteGenesis-Customization",
+            "id": "SiteGenesisAgentShippingAdjustment",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisAgentShippingAdjustment",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="37585456475e68565052594368584553524568445f5e47475e59506856535d4244435a5259435377524f565a475b521954585a">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentShippingAdjustment",
+                    "locked": false,
+                    "login": "SiteGenesisAgentShippingAdjustment",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "6313d29bb37df05e39a3d4ec693d6a0d1c38d494c14376674527079c23b0ae60",
+            "description": "Allowed to Adjust_Item_Price, Adjust_Shipping_Price, Adjust_Order_Price and Handle_External_Orders for SiteGenesis-Customization",
+            "id": "SiteGenesisBfl",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisBfl",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f202c2e3f26102d29230f2a372e223f232a612c2022">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "testAgentBfl",
+                    "locked": false,
+                    "login": "testAgentBfl",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "1bce5ab4efa425510f14d6e6f85d04060b6843a71567137fc819573d44538fcc",
+            "description": "Allowed to manage only site SiteGenesis-DE",
+            "id": "SiteGenesisDEManager",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisDEManager",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a15191b0a133a1f021b170a161f54191517">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisDEDude",
+                    "locked": false,
+                    "login": "SiteGenesisDEDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "4553edb0fa1ea413fa9646bb376182c8eeb721f47e7a418.7691ea3d598f2159",
+            "description": "Allowed to manage only site SiteGenesis",
+            "id": "SiteGenesisManager",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisManager",
+            "user_count": 4,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1beb2b0a1b88eb0b6b4bfa591b4a9b0bca1bdb4ffb2bebc">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentMultiRole",
+                    "locked": false,
+                    "login": "SiteGenesisAgentMultiRole",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                },
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b74787a6b7244747a6e6f73295b7e637a766b777e35787476">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisOAuth2",
+                    "locked": false,
+                    "login": "SiteGenesisOAuth2",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                },
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4aba7a5b4ad84a1bca5a9b4a8a1eaa7aba9">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_login_date": "2017-01-11",
+                    "last_name": "SiteGenesisDude",
+                    "locked": false,
+                    "login": "SiteGenesisDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                },
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99f6faf8e9f0c6f6f8ecedf1d9fce1f8f4e9f5fcb7faf6f4">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisOAuth",
+                    "locked": false,
+                    "login": "SiteGenesisOAuth",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "01ec043647372212f349c3abe96fcf402d1ea4b5353103b4187d7ac9851de94b",
+            "description": "Allowed to Create_Order_On_Behalf_Of and Search_Orders for SiteGenesis-Customization",
+            "id": "SiteGenesisNoPriceAdjustment",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/SiteGenesisNoPriceAdjustment",
+            "user_count": 1,
+            "user_manager": false,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adc2ceccddc4f2cccac8c3d9f2c2dfc9c8dff2c1c4c0c4d9c8c9edc8d5ccc0ddc1c883cec2c0">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "SiteGenesisAgentLimited",
+                    "locked": false,
+                    "login": "SiteGenesisLimited",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "896cbc90eeb44a199f85b3fba984639f73ab4d568c6ab838e6c712a00d7d30b5",
+            "description": "Allowed to manage users",
+            "id": "UserManager",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/UserManager",
+            "user_count": 1,
+            "user_manager": true,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="28474b495841684d50494558444d064b4745">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_login_date": "2017-01-11",
+                    "last_name": "UserDude",
+                    "locked": false,
+                    "login": "userDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        },
+        {
+            "_type": "role",
+            "_resource_state": "025c8cff1b2a5b5ffac36e66e6644d368ceea61f6bcd6e807e37f4c16c8e07ad",
+            "description": "Allowed to manage users and roles",
+            "id": "UserRoleManager",
+            "link": "https://example.com/s/-/dw/data/v23_2/roles/UserRoleManager",
+            "user_count": 1,
+            "user_manager": true,
+            "users": [
+                {
+                    "_type": "user",
+                    "disabled": false,
+                    "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cca3afadbca58ca9b4ada1bca0a9e2afa3a1">[email&#160;protected]</a>",
+                    "first_name": "Ocapi",
+                    "last_name": "UserRoleDude",
+                    "locked": false,
+                    "login": "userRoleDude",
+                    "preferred_data_locale": "default",
+                    "preferred_uilocale": "default"
+                }
+            ]
+        }
+    ],
+    "expand": [
+        "users",
+        "permissions"
+    ],
+    "select": "(**)",
+    "start": 0,
+    "total": 20
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id-1382598176"><h2 class="title sectiontitle">Get Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Action to get a single access role.
+      <p class="p subheading1" id="id-420209469__id-245776497">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET https://hostname:port/dw/data/v23_2/roles/{id}?expand={String}</code></pre>
+      <p class="p subheading1" id="id-420209469__id170717564">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id765744216">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e354" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e356" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e354" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e356" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id481225081">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/Role.html#id2058430079" shape="rect">Role</a></p>
+<p class="p subheading1" id="id-420209469__id-530979740">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e395" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e397" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e399" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e401" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e395" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e397" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e399" rowspan="1" style="text-align:left;vertical-align:top;">The id of the requested access role.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e401" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id-420209469__id-78074975">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e434" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e436" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e438" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e440" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e434" rowspan="1" style="text-align:left;vertical-align:top;">expand</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e436" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e438" rowspan="1" style="text-align:left;vertical-align:top;">The list of expansions.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e440" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id546856049">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e482" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e484" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e486" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e488" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e482" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e484" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e486" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e488" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the access role with the given id does not exist.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id918800266">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /s/-/dw/data/v23_2/roles/my-role?select=(**)&amp;expand=users,permissions HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118.72ed5
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 4128
+Content-Type: application/json; charset=UTF-8
+
+{
+    "_v" : "23.2",
+    "_type": "role",
+    "_resource_state": "4553edb0fa1ea413fa9646bb376182c8eeb721f47e7a418.7691ea3d598f2159",
+    "description": "Description of your role",
+    "id": "my-role",
+    "link": "https://example.com/s/-/dw/data/v23_2/roles/my-role",
+    "user_count": 4,
+    "user_manager": false,
+    "users": [
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2ddd1d3c2dbedd3d5d7dcc6f2d7cad3dfc2ded79cd1dddf">[email&#160;protected]</a>",
+            "first_name": "Ocapi",
+            "last_name": "SiteGenesisAgentMultiRole",
+            "locked": false,
+            "login": "SiteGenesisAgentMultiRole",
+            "preferred_data_locale": "default",
+            "preferred_uilocale": "default"
+        },
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f404c4e5f4670404e5a5b471d6f4a574e425f434a014c4042">[email&#160;protected]</a>",
+            "first_name": "Ocapi",
+            "last_name": "SiteGenesisOAuth2",
+            "locked": false,
+            "login": "SiteGenesisOAuth2",
+            "preferred_data_locale": "default",
+            "preferred_uilocale": "default"
+        },
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a35393b2a331a3f223b372a363f74393537">[email&#160;protected]</a>",
+            "first_name": "Ocapi",
+            "last_login_date": "2017-01-11",
+            "last_name": "SiteGenesisDude",
+            "locked": false,
+            "login": "SiteGenesisDude",
+            "preferred_data_locale": "default",
+            "preferred_uilocale": "default"
+        },
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87e8e4e6f7eed8e8e6f2f3efc7e2ffe6eaf7ebe2a9e4e8ea">[email&#160;protected]</a>",
+            "first_name": "Ocapi",
+            "last_name": "SiteGenesisOAuth",
+            "locked": false,
+            "login": "SiteGenesisOAuth",
+            "preferred_data_locale": "default",
+            "preferred_uilocale": "default"
+        }
+    ]
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id963553991"><h2 class="title sectiontitle">Create Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Action to create an access role.
+      <p class="p subheading1" id="id-420209469__id1970622792">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>PUT https://hostname:port/dw/data/v23_2/roles/{id}</code></pre>
+      <p class="p subheading1" id="id-420209469__id239533749">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id-927685377">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e549" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e551" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e549" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e551" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-1878016622">Request Document</p>
+<p class="p"><a class="xref" href="../Documents/Role.html#id2058430079" shape="rect">Role</a></p>
+<p class="p subheading1" id="id-420209469__id206078834">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/Role.html#id2058430079" shape="rect">Role</a></p>
+<p class="p subheading1" id="id-420209469__id-1487689571">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e599" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e601" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e603" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e605" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e599" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e601" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e603" rowspan="1" style="text-align:left;vertical-align:top;">The id of the access role to create.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e605" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id-1529134056">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e648" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e650" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e652" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e654" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e648" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e650" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">IdConflictException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e652" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">bodyID (String)</p>
+<p class="p">urlID (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e654" rowspan="1" style="text-align:left;vertical-align:top;">Thrown when id in query parameter is different from the id in the body.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e648" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e650" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleOperationNotAllowedException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e652" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">roleId (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e654" rowspan="1" style="text-align:left;vertical-align:top;">Thrown when an access role with the id "Support" or "Business Support" should be created.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e648" rowspan="1" style="text-align:left;vertical-align:top;">409</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e650" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleAlreadyExistsException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e652" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">roleId (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e654" rowspan="1" style="text-align:left;vertical-align:top;">Thrown when an access role with the given id already exists.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-1157189839">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+PUT /s/-/dw/data/v23_2/roles/my-role HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118.72ed5
+Accept: application/json
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 201 Created
+Content-Length: 4128
+Content-Type: application/json; charset=UTF-8
+
+{
+    "_v" : "23.2",
+    "_type": "role",
+    "_resource_state": "4553edb0fa1ea413fa9646bb376182c8eeb721f47e7a418.7691ea3d598f2159",
+    "description": "Description of your role",
+    "id": "my-role",
+    "link": "https://example.com/s/-/dw/data/v23_2/roles/my-role",
+    "user_count": 0,
+    "user_manager": false
+}
+
+# in case of failure:
+
+RESPONSE:
+HTTP/1.1 409 Conflict
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"RoleAlreadyExistsException",
+    "message":"An access role with id 'my-role' already exists. Delete the existing role before creating a role with the same id."
+  }
+}
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"RoleOperationNotAllowedException",
+    "message":"Operation is not allowed for role with id 'my-role'."
+  }
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id-2125350517"><h2 class="title sectiontitle">Delete Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Action to delete an access role.
+      <p class="p subheading1" id="id-420209469__id90741764">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>DELETE https://hostname:port/dw/data/v23_2/roles/{id}</code></pre>
+      <p class="p subheading1" id="id-420209469__id-1981904015">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id-752579389">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e739" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e741" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e739" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e741" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-354371239">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e771" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e773" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e775" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e777" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e771" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e773" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e775" rowspan="1" style="text-align:left;vertical-align:top;">The id of the access role to delete.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e777" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id1308700636">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e819" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e821" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e823" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e825" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e819" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e821" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleOperationNotAllowedException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e823" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">roleId (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e825" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if deletion of the given role is not allowed</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e819" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e821" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e823" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e825" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the given role does not exist</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id1680644853">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+DELETE /s/-/dw/data/v23_2/roles/my-role HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118732ed5
+Accept: application/json
+x-dw-resource-state: 4553edb0fa1ea413fa9646bb376182c8eeb721f47e7a41823691ea3d598f2159
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 204 No content
+
+# in case of failure:
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"RoleOperationNotAllowedException",
+    "message":"Operation is not allowed for role with id 'my-role'."
+  }
+}
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"RoleNotFoundException",
+    "message":"No access role with ID 'my-role' was found."
+  }
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id1483329035"><h2 class="title sectiontitle">Get role permissions</h2>
+      
+      <p class="p"><!-- --></p>
+Retrieves a list of permissions assigned to the given role.
+      <p class="p subheading1" id="id-420209469__id-1063110780">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET https://hostname:port/dw/data/v23_2/roles/{id}/permissions</code></pre>
+      <p class="p subheading1" id="id-420209469__id-1881250063">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id1916715331">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e898" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e900" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e898" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e900" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-1957179218">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/RolePermissions.html#id1768891909" shape="rect">RolePermissions</a></p>
+<p class="p subheading1" id="id-420209469__id789386457">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e939" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e941" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e943" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e945" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e939" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e941" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e943" rowspan="1" style="text-align:left;vertical-align:top;">The id of the requested access role.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e945" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id-489167780">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e988" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e990" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e992" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e994" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e988" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e990" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e992" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e994" rowspan="1" style="text-align:left;vertical-align:top;">If the specified access role does not exist.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-117223563">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /s/-/dw/data/v23_2/roles/my-role/permissions HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118732ed5
+Accept: application/json
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 2833
+x-dw-resource-state: 673705992074cd44247a9898ce5d0ec8e2c8e7bf21498422e1f75a5ec34fc13b
+Content-Type: application/json; charset=UTF-8
+
+{
+    "_v" : "23.2",
+    "_type": "role_permissions",
+    "_resource_state": "673705992074cd44247a9898ce5d0ec8e2c8e7bf21498422e1f75a5ec34fc13b",
+    "functional": {
+        "_type": "role_functional_permissions",
+        "organization": [
+            {
+                "_type": "role_functional_permission",
+                "name": "Delete_All_Catalogs",
+                "type": "functional",
+                "value": "ACCESS"
+            },
+            {
+                "_type": "role_functional_permission",
+                "name": "Manage_All_Catalogs",
+                "type": "functional",
+                "value": "ACCESS"
+            },
+            {
+                "_type": "role_functional_permission",
+                "name": "WebDAV_Security_Logs_Access",
+                "type": "functional",
+                "value": "ACCESS"
+            }
+        ],
+        "site": [
+            {
+                "_type": "role_functional_permission",
+                "name": "Manage_Site_Catalog",
+                "type": "functional",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "ACCESS"
+                }
+            },
+            {
+                "_type": "role_functional_permission",
+                "name": "Manage_Site_Library",
+                "type": "functional",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "ACCESS"
+                }
+            },
+            {
+                "_type": "role_functional_permission",
+                "name": "Manage_Site_PriceBooks",
+                "type": "functional",
+                "values": {
+                    "SiteGenesis": "ACCESS"
+                }
+            },
+            {
+                "_type": "role_functional_permission",
+                "name": "Manage_Site_Inventory",
+                "type": "functional",
+                "values": {
+                    "SiteGenesis": "ACCESS"
+                }
+            }
+        ]
+    },
+    "locale": {
+        "_type": "role_locale_permissions",
+        "unscoped": [
+            {
+                "_type": "role_locale_permission",
+                "locale_id": "de",
+                "type": "locale",
+                "value": "ACCESS"
+            },
+            {
+                "_type": "role_locale_permission",
+                "locale_id": "default",
+                "type": "locale",
+                "value": "READONLY"
+            },
+            {
+                "_type": "role_locale_permission",
+                "locale_id": "en",
+                "type": "locale",
+                "value": "READONLY"
+            },
+            {
+                "_type": "role_locale_permission",
+                "locale_id": "en_US",
+                "type": "locale",
+                "value": "ACCESS"
+            },
+            {
+                "_type": role_"locale_permission",
+                "locale_id": "fr_FR",
+                "type": "locale",
+                "value": "ACCESS"
+            }
+        ]
+    },
+    "module": {
+        "_type": "role_module_permissions",
+        "organization": [
+            {
+                "_type": "role_module_permission",
+                "name": "jobmonitor",
+                "type": "module",
+                "application": "bm",
+                "value": "READONLY"
+            },
+            {
+                "_type": "role_module_permission",
+                "name": "jobschedules",
+                "type": "module",
+                "application": "bm",
+                "value": "ACCESS",
+                "system": true
+            }
+        ],
+        "site": [
+            {
+                "_type": "role_module_permission",
+                "name": "library_content_libraries",
+                "system": true,
+                "type": "module",
+                "application": "bm",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "READONLY"
+                }
+            },
+            {
+                "_type": "role_module_permission",
+                "name": "library_folder",
+                "system": true,
+                "type": "module",
+                "application": "bm",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "ACCESS"
+                }
+            },
+            {
+                "_type": "role_module_permission",
+                "name": "library_content",
+                "system": true,
+                "type": "module",
+                "application": "bm",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "READONLY"
+                }
+            }
+        ]
+    },
+    "webdav": {
+        "_type": "role_webdav_permissions",
+        "unscoped": [
+            {
+                "_type": "role_webdav_permission",
+                "folder": "/catalogs/apparel-catalog",
+                "type": "webdav",
+                "value": "ACCESS"
+            },
+            {
+                "_type": "role_webdav_permission",
+                "folder": "/catalogs/electronics-catalog",
+                "type": "webdav",
+                "value": "READONLY"
+            },
+            {
+                "_type": "role_webdav_permission",
+                "folder": "/catalogs/storefront-catalog-en",
+                "type": "webdav",
+                "value": "READONLY"
+            },
+            {
+                "_type": "role_webdav_permission",
+                "folder": "/catalogs/storefront-catalog-non-en",
+                "type": "webdav",
+                "value": "READONLY"
+            },
+            {
+                "_type": "role_webdav_permission",
+                "folder": "/libraries/SiteGenesis",
+                "type": "webdav",
+                "value": "ACCESS"
+            },
+            {
+                "_type": "role_webdav_permission",
+                "folder": "/libraries/SiteGenesisGlobal",
+                "type": "webdav",
+                "value": "READONLY"
+            }
+        ]
+    }
+}
+
+# in case of failure:
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "roleId": "RoleManager"
+        },
+        "type": "RoleNotFoundException",
+        "message": "No access role with id 'my-role' found."
+    }
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id1691622514"><h2 class="title sectiontitle">Set role permissions</h2>
+      
+      <p class="p"><!-- --></p>
+Assigns permissions to the given role. This will replace the current permission assignments. For the 'Administrator'
+ role only adjustments for custom module permissions will be processed but other given permissions will be ignored.
+      <p class="p subheading1" id="id-420209469__id-2019820611">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>PUT https://hostname:port/dw/data/v23_2/roles/{id}/permissions</code></pre>
+      <p class="p subheading1" id="id-420209469__id-8821078">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id2127581034">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1055" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1057" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1055" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1057" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id770341181">Request Document</p>
+<p class="p"><a class="xref" href="../Documents/RolePermissions.html#id1768891909" shape="rect">RolePermissions</a></p>
+<p class="p subheading1" id="id-420209469__id700792103">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/RolePermissions.html#id1768891909" shape="rect">RolePermissions</a></p>
+<p class="p subheading1" id="id-420209469__id-1263711342">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1105" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1107" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1109" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1111" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1105" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1107" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1109" rowspan="1" style="text-align:left;vertical-align:top;">The id of the access role for which the permissions will be set.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1111" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id-428766845">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidPermissionTypeException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">permissionID (String)</p>
+<p class="p">path (String)</p>
+<p class="p">expected (String)</p>
+<p class="p">given (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If the type of a given permission does not match the expected type.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownPermissionException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">permissionID (String)</p>
+<p class="p">permissionApp (String)</p>
+<p class="p">path (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If the id of a given permission could not be resolved to a permission.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidPermissionValueException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">permissionID (String)</p>
+<p class="p">path (String)</p>
+<p class="p">givenValue (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If a permission value is given that is either unknown or not supported for a certain permission.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidPermissionValueScopeException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">permissionID (String)</p>
+<p class="p">path (String)</p>
+<p class="p">givenScope (String)</p>
+<p class="p">expectedScope (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If values are given permission multi values are used where only single values are support or vice versa (e.g. setting 'values' attribute of ModulePermissionWO in organization scope).</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">DefaultLocalePermissionMissingException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If no permission for the 'default' locale is given (permission for 'default' locale is mandatory).</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownSiteIdException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">siteId (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If a site specific permission is given for a site that is not known.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">DuplicatePermissionException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">permissionID (String)</p>
+<p class="p">path (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If a permission is listed more than once within a scope.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">SystemFlagMissingException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">permissionID (String)</p>
+<p class="p">path (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If the 'system' flag is not set for a module permission.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">If the specified access role does not exist.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1154" rowspan="1" style="text-align:left;vertical-align:top;">409</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1156" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ResourceStateConflictException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1158" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">client (String)</p>
+<p class="p">server (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1160" rowspan="1" style="text-align:left;vertical-align:top;">In case of state token conflicts.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-56822628">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+PUT /s/-/dw/data/v23_2/roles/my-role/permissions HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118732ed5
+Accept: application/json
+{
+  "_v" : "23.2",
+  "permissions" : {
+    "functional" : {
+      "organization" : [ {
+        "name" : "Delete_All_Catalogs",
+        "type" : "functional",
+        "value" : "ACCESS"
+      } ],
+      "site" : [ {
+        "name" : "Manage_Site_Catalog",
+        "type" : "functional",
+        "values" : {
+          "SiteGenesis" : "ACCESS",
+          "SiteGenesisGlobal" : "ACCESS"
+        }
+      } ]
+    },
+    "locale" : {
+      "unscoped" : [ {
+        "locale_id" : "default",
+        "type" : "locale",
+        "value" : "READONLY"
+      }, {
+        "locale_id" : "en_US",
+        "type" : "locale",
+        "value" : "ACCESS"
+      } ]
+    },
+    "module" : {
+      "organization" : [ {
+        "name" : "jobmonitor",
+        "system" : true,
+        "type" : "module",
+        "value" : "READONLY"
+      } ],
+      "site" : [ {
+        "name" : "library_content_libraries",
+        "system" : true,
+        "type" : "module",
+        "values" : {
+          "SiteGenesis" : "ACCESS",
+          "SiteGenesisGlobal" : "READONLY"
+        }
+      } ]
+    },
+    "webdav" : {
+      "unscoped" : [ {
+        "folder" : "/libraries/SiteGenesis",
+        "type" : "webdav",
+        "value" : "ACCESS"
+      }, {
+        "folder" : "/libraries/SiteGenesisGlobal",
+        "type" : "webdav",
+        "value" : "READONLY"
+      } ]
+    }
+  }
+}
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 201 CREATED
+{
+    "_v" : "23.2",
+    "_type": "permissions",
+    "_resource_state": "ecab41f8d4f068ebc5e3290fb4b4d71098b5776a46de6675999a6cb3d7c2c11d",
+    "functional": {
+        "_type": "functional_permissions",
+        "organization": [
+            {
+                "_type": "functional_permission",
+                "name": "Delete_All_Catalogs",
+                "type": "functional",
+                "value": "ACCESS"
+            }
+        ],
+        "site": [
+            {
+                "_type": "functional_permission",
+                "name": "Manage_Site_Catalog",
+                "type": "functional",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "ACCESS"
+                }
+            }
+        ]
+    },
+    "locale": {
+        "_type": "locale_permissions",
+        "unscoped": [
+            {
+                "_type": "locale_permission",
+                "locale_id": "default",
+                "type": "locale",
+                "value": "READONLY"
+            },
+            {
+                "_type": "locale_permission",
+                "locale_id": "en_US",
+                "type": "locale",
+                "value": "ACCESS"
+            }
+        ]
+    },
+    "module": {
+        "_type": "module_permissions",
+        "organization": [
+            {
+                "_type": "module_permission",
+                "name": "jobmonitor",
+                "system": true,
+                "type": "module",
+                "value": "READONLY"
+            }
+        ],
+        "site": [
+            {
+                "_type": "module_permission",
+                "name": "library_content_libraries",
+                "system": true,
+                "type": "module",
+                "values": {
+                    "SiteGenesis": "ACCESS",
+                    "SiteGenesisGlobal": "READONLY"
+                }
+            }
+        ]
+    },
+    "webdav": {
+        "_type": "webdav_permissions",
+        "unscoped": [
+            {
+                "_type": "webdav_permission",
+                "folder": "/libraries/SiteGenesis",
+                "type": "webdav",
+                "value": "ACCESS"
+            },
+            {
+                "_type": "webdav_permission",
+                "folder": "/libraries/SiteGenesisGlobal",
+                "type": "webdav",
+                "value": "READONLY"
+            }
+        ]
+    }
+}
+
+
+# in case of failure (unknown permission):
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "path": "locale.unscoped",
+            "permissionID": "foobar"
+        },
+        "type": "UnknownPermissionException",
+        "message": "Permission 'foobar' in path 'locale.unscoped' is unknown."
+    }
+}
+
+
+# in case of failure (invalid permission type):
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "expected": "locale",
+            "given": "foo",
+            "path": "locale.unscoped",
+            "permissionID": "en_US"
+        },
+        "type": "InvalidPermissionTypeException",
+        "message": "Expected permission type 'locale' but got 'foo' for permission 'en_US' in path 'locale.unscoped'."
+    }
+}
+
+
+# in case of failure (invalid permission value):
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "givenValue": "BAR",
+            "path": "module.site",
+            "permissionID": "library_content_libraries(system)"
+        },
+        "type": "InvalidPermissionValueException",
+        "message": "Permission 'library_content_libraries(system)' in path 'module.site' does not support a value of 'BAR'."
+    }
+}
+
+
+# in case of failure (invalid permission scope):
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "expectedScope": "single",
+            "givenScope": "multi",
+            "path": "webdav.unscoped",
+            "permissionID": "/libraries/SiteGenesis"
+        },
+        "type": "InvalidPermissionValueScopeException",
+        "message": "Permission '/libraries/SiteGenesis' in path 'webdav.unscoped' provided multi value but expected single value."
+    }
+}
+
+
+# in case of failure (missing default locale permission):
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "type": "DefaultLocalePermissionMissingException",
+        "message": "Permission for 'default' locale is missing."
+    }
+}
+
+
+# in case of failure (unkown site):
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "siteId": "Foobar"
+        },
+        "type": "UnknownSiteIdException",
+        "message": "The site id 'Foobar' is unknown."
+    }
+}
+
+
+# in case of failure (duplicate permission):
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "arguments": {
+            "path": "module.site",
+            "permissionID": "library_content_libraries(system)"
+        },
+        "type": "DuplicatePermissionException",
+        "message": "Permission 'library_content_libraries(system)' in path 'module.site' is provided multiple times."
+    }
+}
+</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id-1949391159"><h2 class="title sectiontitle">Search for Users on a public Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Searches for users of the specified access role.
+ <p class="p">The query attribute specifies a complex query that can be used to narrow down the search. These are the list
+ of searchable attributes:</p>
+
+ <ul class="ul">
+ <li class="li">login - String</li>
+
+ <li class="li">email - String</li>
+
+ <li class="li">first_name - String</li>
+
+ <li class="li">last_name - String</li>
+
+ <li class="li">external_id - String</li>
+
+ <li class="li">last_login_date - Date</li>
+
+ <li class="li">is_locked - Boolean</li>
+
+ <li class="li">is_disabled - Boolean</li>
+
+ </ul>
+
+
+ <p class="p">The output of the query can also be sorted. These are the list of sortable attributes:</p>
+
+ <ul class="ul">
+ <li class="li">login - String</li>
+
+ <li class="li">email - String</li>
+
+ <li class="li">first_name - String</li>
+
+ <li class="li">last_name - String</li>
+
+ <li class="li">external_id - String</li>
+
+ <li class="li">last_login_date - Date</li>
+
+ </ul>
+
+      <p class="p subheading1" id="id-420209469__id-2059092474">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>POST https://hostname:port/dw/data/v23_2/roles/{id}/user_search</code></pre>
+      <p class="p subheading1" id="id-420209469__id-1695163277">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id-1188924031">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1401" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1403" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1401" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1403" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id474707348">Request Document</p>
+<p class="p"><a class="xref" href="../Documents/SearchRequest.html#id-1088879668" shape="rect">SearchRequest</a></p>
+<p class="p subheading1" id="id-420209469__id126077872">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/UserSearchResult.html#id909175397" shape="rect">UserSearchResult</a></p>
+<p class="p subheading1" id="id-420209469__id-996153253">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1451" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1453" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1455" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1457" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1451" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1453" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1455" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1457" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id-2145732966">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1498" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1500" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1502" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1504" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1498" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1500" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedSearchParameterException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1502" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1504" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the query is ill-formed.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1498" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1500" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1502" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1504" rowspan="1" style="text-align:left;vertical-align:top;">If the specified access role does not exist.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-1773788749">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+POST /s/-/dw/data/v23_2/roles/my-role/user_search HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118.72ed5
+Accept: application/json
+
+{
+    "query": {
+        "text_query": {
+            "fields": [
+                "login"
+            ],
+            "search_phrase": "Dude"
+        }
+    },
+    "select": "(**)"
+}
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 432
+Content-Type: application/json; charset=UTF-8
+
+{
+    "_v" : "23.2",
+    "_type": "user_search_result",
+    "count": 1,
+    "hits": [
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="68070b091801280d10090518040d460b0705">[email&#160;protected]</a>",
+            "external_id": "e2b07841-1db0-a5c1-9a1f-f6a02b6fa25c",
+            "first_name": "Ocapi",
+            "last_login_date": "2017-01-11",
+            "last_name": "SiteGenesisDude",
+            "locked": false,
+            "login": "SiteGenesisDude",
+            "preferred_data_locale": "default",
+            "preferred_uilocale": "default"
+        }
+    ],
+    "query": {
+        "text_query": {
+            "_type": "text_query",
+            "fields": [
+                "login"
+            ],
+            "search_phrase": "Dude"
+        }
+    },
+    "select": "(**)",
+    "start": 0,
+    "total": 1
+}
+
+# in case of failure:
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+{
+    "_v" : "23.2",
+    "fault": {
+        "type": "ExternalIdNotAllowedException",
+        "message": "Attribute 'external_id' is not allowed with the current server settings."
+    }
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id1341942023"><h2 class="title sectiontitle">Get Users assigned to an Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Action to get all the users assigned to the specified access role.
+      <p class="p subheading1" id="id-420209469__id239332104">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET https://hostname:port/dw/data/v23_2/roles/{id}/users?start={Integer}&amp;count={Integer}&amp;select={String}</code></pre>
+      <p class="p subheading1" id="id-420209469__id112375925">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id876114751">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1575" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1577" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1575" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1577" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-1415115470">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/Users.html#id109391147" shape="rect">Users</a></p>
+<p class="p subheading1" id="id-420209469__id-1404460451">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1616" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1618" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1620" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1622" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1616" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1618" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1620" rowspan="1" style="text-align:left;vertical-align:top;">ID of the access role.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1622" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id-420209469__id-1386173240">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1655" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1657" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1659" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1661" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1655" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1657" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1659" rowspan="1" style="text-align:left;vertical-align:top;">Optional count for retrieving only a subset of the items (default is 25).</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1661" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1655" rowspan="1" style="text-align:left;vertical-align:top;">select</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1657" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1659" rowspan="1" style="text-align:left;vertical-align:top;">The property selector.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1661" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1655" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1657" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1659" rowspan="1" style="text-align:left;vertical-align:top;">Optional start index for retrieving the items from a given index (default 0).</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1661" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id-147762600">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1719" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1721" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1723" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1725" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1719" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1721" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1723" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1725" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the access role with the given id does not exist.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id224181617">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /s/-/dw/data/v23_2/roles/my-role/users?select=(**) HTTP/1.1
+Host: example.com
+Authorization: Bearer b6104653-d53c-4175-a23d-52f118.72ed5
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 539
+Content-Type: application/json; charset=UTF-8
+
+{
+    "_v" : "23.2",
+    "_type": "users",
+    "count": 2,
+    "data": [
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="107f73716079507568717d607c753e737f7d">[email&#160;protected]</a>",
+            "first_name": "Ocapi",
+            "last_login_date": "2017-01-12",
+            "last_name": "RoleDude",
+            "locked": false,
+            "login": "roleDude",
+            "preferred_data_locale": "default",
+            "preferred_uilocale": "default"
+        },
+        {
+            "_type": "user",
+            "disabled": false,
+            "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="036c6062736a43667b626e736f662d606c6e">[email&#160;protected]</a>",
+            "first_name": "Ocapi",
+            "last_name": "SecondRoleManager",
+            "locked": false,
+            "login": "secondRoleManager",
+            "preferred_data_locale": "en",
+            "preferred_uilocale": "de"
+        }
+    ],
+    "select": "(**)",
+    "start": 0,
+    "total": 2
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id2134264398"><h2 class="title sectiontitle">Assign User to Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Action to assign a user to an access role
+      <p class="p subheading1" id="id-420209469__id-825053087">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>PUT https://hostname:port/dw/data/v23_2/roles/{id}/users/{login}</code></pre>
+      <p class="p subheading1" id="id-420209469__id-1388500658">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id-1880159162">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1786" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1788" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1786" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1788" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id1908474571">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/User.html#id2061928522" shape="rect">User</a></p>
+<p class="p subheading1" id="id-420209469__id-949605834">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1827" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1829" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1831" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1833" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1827" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1829" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1831" rowspan="1" style="text-align:left;vertical-align:top;">ID of the access role.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1833" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1827" rowspan="1" style="text-align:left;vertical-align:top;">login</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1829" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1831" rowspan="1" style="text-align:left;vertical-align:top;">Login of the user.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1833" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id496558687">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1885" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1887" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e1889" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1891" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1885" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1887" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidRoleException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1889" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">roleId (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1891" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the access role with the given id does not exist.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e1885" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1887" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidUserLoginException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e1889" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">login (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e1891" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a user with the given login does not exist.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1885" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1887" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UserOperationNotAllowedException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e1889" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">login (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1891" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the operation is not allowed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id868502904">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+PUT /s/-/dw/data/v23_2/roles/my-role/users/my-user HTTP/1.1
+Host: example.com
+Authorization: Bearer a5b6eb0d-8312-41a3-88f3-2c53c4507367
+Accept: application/json
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 201 Created
+Content-Length: 539
+Content-Type: application/json; charset=UTF-8
+{
+  "_type": "user",
+  "disabled": false,
+  "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9868a889980a98c91888499858cc78a8684">[email&#160;protected]</a>",
+  "first_name": "Ocapi",
+  "last_login_date": "2017-01-12",
+  "last_name": "RoleDude",
+  "locked": false,
+  "login": "roleDude"
+}
+
+# in case of failure:
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"InvalidUserLoginException",
+    "message":"A user with login name 'my-user' does not exist."
+  }
+}
+
+RESPONSE:
+HTTP/1.1 400 Bad Request
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"InvalidRoleException",
+    "message":"The role 'my-role' does not exist."
+  }
+}
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"UserOperationNotAllowedException",
+    "message":"The operation is not allowed for the user with login 'my-user'."
+  }
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id-420209469__id-1985596910"><h2 class="title sectiontitle">Unassign User to Access Role</h2>
+      
+      <p class="p"><!-- --></p>
+Action to unassign a user to an access role
+      <p class="p subheading1" id="id-420209469__id1667138077">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>DELETE https://hostname:port/dw/data/v23_2/roles/{id}/users/{login}</code></pre>
+      <p class="p subheading1" id="id-420209469__id-1882079990">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id-420209469__id-184808182">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e1974" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e1976" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e1974" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e1976" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id66666994">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e2006" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e2008" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e2010" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e2012" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e2006" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e2008" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e2010" rowspan="1" style="text-align:left;vertical-align:top;">ID of the access role.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e2012" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e2006" rowspan="1" style="text-align:left;vertical-align:top;">login</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e2008" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e2010" rowspan="1" style="text-align:left;vertical-align:top;">Login of the user.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e2012" rowspan="1" style="text-align:left;vertical-align:top;">minLength=1</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id-1949695663" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id-420209469__id-1736120541">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4029024e2063" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e2065" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4029024e2067" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4029024e2069" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e2063" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e2065" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UserOperationNotAllowedException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e2067" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">login (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e2069" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the admin user is unassigned from the Administrator role.</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4029024e2063" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e2065" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RoleNotFoundException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4029024e2067" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">id (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4029024e2069" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if the access role with the given id does not exist.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4029024e2063" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e2065" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UserNotFoundException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4029024e2067" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">login (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4029024e2069" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a user with the given login does not exist.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id-420209469__id-1364176324">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+DELETE /s/-/dw/data/v23_2/roles/my-role/users/my-user HTTP/1.1
+Host: example.com
+Authorization: Bearer a5b6eb0d-8312-41a3-88f3-2c53c4507367
+Accept: application/json
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 204 No Content
+
+# in case of failure:
+
+RESPONSE:
+HTTP/1.1 403 Forbidden
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"UserOperationNotAllowedException",
+    "message":"Operation is not allowed for user with login 'my-user'."
+  }
+}
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"RoleNotFoundException",
+    "message":"No access role with ID 'my-role' was found."
+  }
+}
+
+RESPONSE:
+HTTP/1.1 404 Not Found
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "fault":{
+    "type":"UserNotFoundException",
+    "message":"No user with login 'my-user' was found."
+  }
+}
+</code></pre></div>
+
+    </div>
+
+      </div>
+
+    <div><table class="copyright_table" width="100%"><tr><td align="left" colspan="1" rowspan="1"><p class="copyright_footer">© Copyright 2000-2023, Salesforce, Inc. All rights reserved. Various trademarks held by their respective owners.</p></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" id="bookmarklink" onclick="showLink();" shape="rect">Show URL</a><div id="bookmarkme" style="display:none"><!-- --></div></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" onclick="javascript:window.location='mailto:b2ccommercedocfeedback@salesforce.com?subject=' + document.title" shape="rect">Submit Feedback</a></td><td align="right" colspan="1" rowspan="1"><a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy</a></td></tr>
+</table></div><div id="ocapiDeprecationBanner"><a id="closeDeprecationBanner" onclick="closeDeprecationBanner()" shape="rect">X</a>
+<b>OCAPI versions 15.x and 16.x will be retired on March 31, 2021. For dates and more information, see the <a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/VersioningAndDeprecationPolicy.html" shape="rect" target="_blank">OCAPI versioning and deprecation policy</a> and this <a href="https://help.salesforce.com/articleView?id=000351399&amp;language=en_US&amp;type=1&amp;mode=1" shape="rect" target="_blank">Knowledge Article</a>.</b></div>
+<div id="cookieConsent"><a id="closeCookieConsent" onclick="closeBanner()" shape="rect">X</a>
+<b>Privacy Update:</b>    We use cookies to make interactions with our websites and services easy and meaningful, to better understand how they are used. By continuing to use this site you are giving us your consent to do this. <a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy.</a>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" xml:space="preserve">
+window.onload = function () {
+	
+	var ssFlag;
+	var ocapiBannerElement =  document.getElementById('ocapiDeprecationBanner');
+	
+	// If we're not in the correct infocenter, don't bother going further.
+	// Return immediately.
+	if( location.hostname != "documentation.b2c.commercecloud.salesforce.com" ) {
+		return;                                      
+	}
+
+
+	// Show the OCAPI deprecation banner for English
+	if ( typeof(ocapiBannerElement) != 'undefined' ) {
+		if ( ocapiBannerElement != null ) {
+			ocapiBannerElement.style.display = "none";
+		}
+	}
+
+
+	// If sessionStorage is supported, check if the sessionConsentFlag is true.
+	// Return immediately if true.
+	if(ssTest() === true){  
+    	ssFlag = true;
+    	if ( sessionStorage.getItem('sessionConsentFlag') == 'true' ) {
+			return;                
+		} 
+	}	
+	 
+	// If localStorage isn't supported, return immediately.
+	// If it is supported, check if the localConsentFlag is true.
+	// Return immediately if true; othewise, display the banner and wait 
+	// for the user's response.
+	if(lsTest() === true){   
+    	if ( localStorage.getItem('localConsentFlag') == 'true' ) {
+			return;                
+		}else{
+			// Display the banner
+			document.getElementById("cookieConsent").style.display = "none";
+		} 
+	}else{
+    	return; 
+	}
+
+	return;
+}
+
+// Close the banner and set the flags.
+function closeBanner() {
+	document.getElementById("cookieConsent").style.display = "none";
+	localStorage.setItem('localConsentFlag', 'true');
+	if(ssFlag) {
+		sessionStorage.setItem('sessionConsentFlag', 'true');
+	}
+	return;
+}
+
+// Close the deprecation banner.
+function closeDeprecationBanner() {
+	var ocapiBannerElem =  document.getElementById('ocapiDeprecationBanner');
+	if ( typeof(ocapiBannerElem) != 'undefined' ) {
+		if ( ocapiBannerElem != null ) {
+			ocapiBannerElem.style.display = "none";
+		}
+	}
+	return;
+}
+
+function lsTest(){
+    var lcTest = 'test';
+    try {
+        localStorage.setItem(lcTest, lcTest);
+        localStorage.removeItem(lcTest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+function ssTest(){
+    var sstest = 'test';
+    try {
+        sessionStorage.setItem(sstest, sstest);
+        sessionStorage.removeItem(sstest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+</script>
+</body>
+
+
+</html>

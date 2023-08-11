@@ -1,0 +1,3672 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-148075995-1" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148075995-1');
+</script>
+
+<link href="https://developer.salesforce.com/docs/commerce/b2c-commerce/references/ocapi-shop-api?meta=Summary" rel="canonical"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+<meta content="(C) Copyright 2023" name="copyright"/>
+<meta content="(C) Copyright 2023" name="DC.rights.owner"/>
+<meta content="concept" name="DC.Type"/>
+<meta content="ProductSearch resource (Shop API 23.2)" name="DC.Title"/>
+<meta content="" name="abstract"/>
+<meta content="" name="description"/>
+<meta content="XHTML" name="DC.Format"/>
+<meta content="id17327509" name="DC.Identifier"/>
+<meta content="en-us" name="DC.Language"/>
+<link href="../../../../css/commonltr.css" rel="stylesheet" type="text/css"/><script src="../../../../scripts/jquery-3.5.0.min.js" type="text/javascript" xml:space="preserve"> //  // </script><script src="../../../../scripts/dwScript.js" type="text/javascript" xml:space="preserve"> //  // </script>
+<title>ProductSearch resource (Shop API 23.2)</title>
+<!-- text added to HEAD tag-->
+<script src="../../../../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+
+<link charset="ISO-8859-1" href="../../../../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css"/>
+<script src="../../../../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == "blah" ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../../../../index.jsp?topic=%2Fcom.demandware.dochelp%2FOCAPI%2Fcurrent%2Fshop%2FResources%2FProductSearch.html" + anchorParam);
+}
+</script>
+<style>
+@import url(//fonts.googleapis.com/css?family=Salesforce+Sans:400,400italic,bold,bolditalic);
+
+/*
+ | This file is part of the DITA Open Toolkit project. See the accompanying license.txt file for
+ | applicable licenses.
+*/
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+.unresolved { background-color: skyblue }
+.noTemplate { background-color: yellow }
+.base { background-color: #ffffff }
+/* Add space for top level topics */
+/*.nested0 { margin-top : 1em }*/
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p { margin-top: 1em }
+/* Default of italics to set apart figure captions */
+.figcap { font-style: italic }
+.figdesc { font-style: normal }
+/* Use @frame to create frames on figures */
+.figborder {
+    border-style: solid;
+    padding-left : 3px;
+    border-width : 2px;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figsides {
+    border-left : 2px solid;
+    padding-left : 3px;
+    border-right : 2px solid;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figtop {
+    border-top : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figbottom {
+    border-bottom : 2px solid;
+    border-color : Silver;
+}
+.figtopbot {
+    border-top : 2px solid;
+    border-bottom : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks {
+  list-style-type: none;
+}
+.ulchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.olchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.linklist {
+  margin-bottom: 1em;
+}
+.linklistwithchild {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.sublinklist {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.relconcepts {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.reltasks {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relref {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relinfo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.breadcrumb {
+    font-size : 1em;
+    margin-bottom: 1em;
+}
+dt.prereq { margin-left : 20px }
+/* Set heading sizes, getting smaller for deeper nesting */
+.topictitle1 {
+    color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+	margin-top: .5em
+}
+.topictitle2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle3 {
+    /* margin-top: 1pc;
+    margin-bottom: .17em;*/
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle4 {
+    /* margin-top: .83em; */
+    font-size: 1.4em;
+}
+.topictitle5 { font-size: 1.2em }
+.topictitle6 {
+    font-size: 1.2em;
+    font-style: italic;
+}
+.sectiontitle {
+    font-size: 1.6em;
+    font-style: bold;
+}
+.section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.example {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+div.tasklabel {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h2.tasklabel,
+h3.tasklabel,
+h4.tasklabel,
+h5.tasklabel,
+h6.tasklabel { font-size: 100% }
+/* All note formats have the same default presentation */
+.note {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.notetitle { font-weight: bold }
+.notelisttitle { font-weight: bold }
+.tip {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.tiptitle { font-weight: bold }
+.fastpath {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.fastpathtitle { font-weight: bold }
+.important {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.importanttitle { font-weight: bold }
+.remember {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.remembertitle { font-weight: bold }
+.restriction {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.restrictiontitle { font-weight: bold }
+.attention {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.attentiontitle { font-weight: bold }
+.dangertitle { font-weight: bold }
+.danger {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.cautiontitle { font-weight: bold }
+.caution {
+    font-weight: bold;
+    margin-bottom : 1em;
+}
+.warning {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.warningtitle { font-weight: bold }
+/* Simple lists do not get a bullet */
+ul.simple { list-style-type: none }
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol { font-weight : bold }
+/* Various basic phrase styles */
+.bold { font-weight: bold }
+.boldItalic {
+    font-weight: bold;
+    font-style: italic;
+}
+.italic { font-style: italic }
+.underlined { text-decoration: underline }
+.uicontrol { font-weight: bold }
+.parmname { font-weight: bold }
+.kwd { font-weight: bold }
+.defkwd {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.var { font-style : italic }
+.shortcut { text-decoration: underline }
+/* Default of bold for definition list terms */
+.dlterm { font-weight: bold }
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand {
+    font-weight: bold;
+    margin-top: 1em;
+}
+*[compact="yes"]>li { margin-top: 0em }
+*[compact="no"]>li { margin-top: .53em }
+.liexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sliexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.dlexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ddexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.stepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.substepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* Align images based on @align on topic/image */
+div.imageleft { text-align: left }
+div.imagecenter { text-align: center }
+div.imageright { text-align: right }
+div.imagejustify { text-align: justify }
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+
+pre.screen {
+    padding: 5px 5px 5px 5px;
+    border: outset;
+    background-color: #CCCCCC;
+    margin-top: 2px;
+    margin-bottom : 2px;
+    white-space: pre;
+}
+/* Demandware Styles */
+
+span.filepath {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 10px 0;
+}
+
+.nocellnorowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.cellrowborder {
+   border: 1px solid #ACB1B7;
+}
+.row-nocellborder {
+    border: 1px solid #ACB1B7;
+}
+.cell-norowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.topictitle1{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle2{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle3{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.sectiontitle{
+    color: #706e6b;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+body {
+    /* background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #DADADA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    */
+    color: #111111;
+    font-family: "Salesforce Sans", Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    line-height: 1.4em;
+    padding: 10px;
+}
+li { padding-top: 1em }
+p.subheading1 { font-size: 1.4em }
+p.subheading2 { font-size: 1.2em }
+.copyright_footer {
+	 font-size: 1em;
+	 font-style: italic;
+}
+a:link,
+a:visited { color: #008CB9 }
+a:hover,
+a:focus {
+    color: #3778C7;
+    text-decoration: underline;
+}
+strong { color: #000000 }
+.help_breadcrumbs,
+.help_breadcrumbs a {
+    color: #1589ee;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0 0 0px;
+    text-decoration: none;
+	margin: 0px;
+}
+.help_breadcrumbs a:hover { text-decoration: underline }
+.related-links { font-size: 11px }
+div.header{
+	line-height: 1em;
+}
+
+.alignleft {
+	float: left;
+	font-size: 1em;
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+
+}
+.alignright {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+li table {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.tablenoborder {
+	margin-top: 1em;
+}
+
+
+table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table th {
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8');; ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8')";
+    background-image: -moz-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -ms-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -o-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#eef0f4), to(#ccd1d8));
+    background-image: -webkit-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: linear-gradient(top, #eef0f4, #ccd1d8);*/
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    color: #4F5762;
+    font-size: 1em;
+    font-weight: bold;
+    /* padding: 10px 3px 8px 5px; */
+    padding: 1em;
+}
+table.table td,
+table.simpletable td {
+    border: 1px solid #ACB1B7;
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*//*Element must have a height (not auto)*//*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5')"; */
+    /*Element must have a height (not auto)*//*All filters must be placed together*/
+    /* background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: linear-gradient(top, #ffffff, #e5e5e5);*/
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+    /* padding: 12px 3px 12px 5px; */
+    padding: 1em;
+}
+table.copyright_table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+    padding: 0px;
+	margin:0;
+}
+
+table.copyright_table td {
+    padding: 0px;
+	margin:0;
+}
+
+body .resultofText {
+    background-color: transparent;
+    color: #60a345;
+}
+pre {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    /* font-weight: bold; */
+    margin: 8px;
+    padding: 8px;
+    overflow-x: auto;
+}
+pre code {
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.codeph {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.note {
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #333333;
+/*    font-family: Verdana,Arial,Helvetica,sans-serif;  */
+    font-size: 1em;
+    padding: 10px 10px 10px 26px;
+}
+.hidden { display: none; }
+.shown { display: block; }
+div[role=search]{
+	background-color: #25282A;
+	color: #CCCCCC;
+}
+a:link.scopeLabel {color:#FFB549;}
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #F1D600;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #E0C91F;
+}
+#ocapiDeprecationBanner {
+    background-color: #0747a6;
+    min-height: 26px;
+    font-size: 14px;
+    color: white;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#ocapiDeprecationBanner a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeDeprecationBanner {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+.help_breadcrumbs { display: none !important; }
+.copyright_table td { display: none; }
+copyright_table td:nth-child(4) { display: table-cell; }
+</style>
+<body id="id17327509">
+<div class="help_breadcrumbs"><a href="../../../../../../topic/com.demandware.dochelp/content/b2c_commerce/topics/getting_started/b2c_welcome.html" shape="rect">Salesforce B2C Commerce 23.6</a> &gt; <a href="../../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html" shape="rect">Open Commerce API 23.2</a> &gt; <a href="../../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/ShopAPIResources.html" shape="rect">Shop API resources 23.2</a></div>
+
+<div><!-- text added to header of html--></div>
+      <h1 class="title topictitle1" id="ariaid-title1">ProductSearch resource (Shop API 23.2)</h1>
+
+      
+      <div class="body conbody"><p class="shortdesc"> </p>
+<div class="section" id="id17327509__Summary"><h2 class="title sectiontitle">Summary</h2>
+      
+      
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">Http Method</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;">Resource</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="ProductSearch.html#id17327509__id-1941601727" shape="rect">/product_search</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link and name in
+ the product search hit. Other search hit properties can be added by using the expand parameter. The search result
+ contains only products that are online and assigned to site catalog.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="ProductSearch.html#id17327509__id1458223091" shape="rect">/product_search/availability</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ availability information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="ProductSearch.html#id17327509__id-1127348810" shape="rect">/product_search/images</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ image information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="ProductSearch.html#id17327509__id940624420" shape="rect">/product_search/prices</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ price information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="ProductSearch.html#id17327509__id-239294062" shape="rect">/product_search/represented_products</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ represented product information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="ProductSearch.html#id17327509__id-375475986" shape="rect">/product_search/variations</a></td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e36" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, name and
+ variation information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. Use the <a class="xref" href="Products.html" shape="rect">
+ products resource</a> to retrieve more details about a variation product.</p>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+    </div>
+<div class="section" id="id17327509__id-1941601727"><h2 class="title sectiontitle">Search Products</h2>
+      
+      <p class="p"><!-- --></p>
+<p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link and name in
+ the product search hit. Other search hit properties can be added by using the expand parameter. The search result
+ contains only products that are online and assigned to site catalog.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+
+      <p class="p subheading1" id="id17327509__id-1932357746">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET http://hostname:port/dw/shop/v23_2/product_search?q={String}&amp;refine={String}&amp;sort={String}&amp;start={Integer}&amp;count={Integer}&amp;expand={String}&amp;currency={String}&amp;locale={String}</code></pre>
+      <p class="p subheading1" id="id17327509__id-1666209285">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id17327509__id-2049450247">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e211" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e213" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e211" rowspan="1" style="text-align:left;vertical-align:top;">JWT</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e213" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via Customer JWT.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e211" rowspan="1" style="text-align:left;vertical-align:top;">None</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e213" rowspan="1" style="text-align:left;vertical-align:top;">No authentication.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id849366840">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/ProductSearchResult.html#id-1340382645" shape="rect">ProductSearchResult</a></p>
+<p class="p subheading1" id="id17327509__id349442562">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The maximum number of instances per request. Default value is 25.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;">maxIntegerValue=200, minIntegerValue=1</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">currency</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The currency mnemonic specified for price. This parameter is effective only if specified expand parameter value contains prices.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">expand</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The expand parameter. A comma separated list with the allowed values (<em class="ph i">availability, images,
+            prices, represented_products, variations</em>)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">locale</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The locale context.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">q</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The query phrase to search for.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;">maxLength=50</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">refine</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and
+            value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and
+            can be provided by separating them using a pipe (URL
+            encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine
+            parameters can be provided by adding an underscore in combination with an integer counter right behind
+            the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The
+            following system refinement attribute ids are supported:
+            <ul class="ul">
+            <li class="li">cgid: Allows to refine per single category id. Multiple category ids are not supported.</li>
+
+            <li class="li">price: Allows to refine per single price range. Multiple price ranges are not supported.</li>
+
+            <li class="li">pmid: Allows to refine per promotion id(s).</li>
+
+            <li class="li">htype: Allow to refine by including only the provided hit types. Accepted types are 'product', 'master', 'set', 'bundle', 'slicing_group' (deprecated), 'variation_group'.</li>
+
+            <li class="li">orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple
+            refinement values are not supported.</li>
+
+            </ul>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">sort</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The id of the sorting option to sort the search hits.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e257" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e259" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e261" rowspan="1" style="text-align:left;vertical-align:top;">The result set index to return the first instance for. Default value is 0.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e263" rowspan="1" style="text-align:left;vertical-align:top;">minIntegerValue=0</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id1939230365" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id17327509__id-1867704302">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e384" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e386" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e388" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e390" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e384" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e386" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidExpandParameterException</code></td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e388" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">param (String)</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e390" rowspan="1" style="text-align:left;vertical-align:top;">Thrown in case a specified expand parameter value is unknown.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e384" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e386" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedPriceRefinementException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e388" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">malformedPrice (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e390" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a price refinement parameter is malformed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id17327509__id-1490774222">Customization</p>
+<p class="p">This Resource supports server-side customization.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e436" rowspan="1" style="text-align:left;vertical-align:top;">Extension Point</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e438" rowspan="1" style="text-align:left;vertical-align:top;">Method Detail</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e436" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.beforeGET</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e438" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">beforeGET</strong>
+      () :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called before the request will be processed.</p>
+<dl class="dl parml">
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e436" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.modifyGETResponse</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e438" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">modifyGETResponse</strong>
+      (doc : <a class="xref" href="../Documents/ProductSearchResult.html" shape="rect">
+          ProductSearchResult
+        </a>) :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called after the request has been processed.</p>
+<dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Parameters:</strong></dt>
+
+          <dd class="dd pd">doc - the document</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-1495760085">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /dw/shop/v23_2/product_search?q=shoes&amp;refine_1=cgid=womens&amp;refine_2=c_refinementColor=Black&amp;refine_3=price=(0..500)&amp;sort=top-sellers&amp;count=5&amp;expand=prices HTTP/1.1
+Host: example.com
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 67
+Content-Type: application/json; charset=UTF-8
+{
+  "_v" : "23.2",
+  "count": 4,
+  "hits": [
+    {
+      "link": "http://example.com/dw/shop/v23_2/products/25772717",
+      "price": 99.00,
+      "price_per_unit": 99.00,
+      "product_id": "25772717",
+      "product_name": "Zerrick",
+      "product_type": {
+        "master": true
+      },
+      "unit_measure" : "each",
+      "unit_quantity" : 1
+    },
+    {
+      "link": "http://example.com/dw/shop/v23_2/products/25791388",
+      "price": 99.00,
+      "price_per_unit": 99.00,
+      "product_id": "25791388",
+      "product_name": "Zacco",
+      "product_type": {
+        "master": true
+      },
+      "unit_measure" : "each",
+      "unit_quantity" : 1
+    },
+    {
+      "link": "http://example.com/dw/shop/v23_2/products/25772792",
+      "price": 79.00,
+      "price_per_unit": 79.00,
+      "product_id": "25772792",
+      "product_name": "Aylin",
+      "product_type": {
+        "master": true
+      },
+      "unit_measure" : "each",
+      "unit_quantity" : 1
+    },
+    {
+      "link": "http://example.com/dw/shop/v23_2/products/25772707",
+      "price": 89.00,
+      "price_per_unit": 89.00,
+      "product_id": "25772707",
+      "product_name": "Bozwell",
+      "product_type": {
+        "master": true
+      },
+      "unit_measure" : "each",
+      "unit_quantity" : 1
+    }
+  ],
+  "query": "shoes",
+  "refinements": [
+    {
+      "attribute_id": "cgid",
+      "label": "Category",
+      "values": [
+        {
+          "hit_count": 1,
+          "label": "New Arrivals",
+          "value": "newarrivals"
+        },
+        {
+          "hit_count": 4,
+          "label": "Womens",
+          "value": "womens",
+          "values": [
+            {
+              "hit_count": 4,
+              "label": "Accessories",
+              "value": "womens-accessories",
+              "values": [
+                {
+                  "hit_count": 4,
+                  "label": "Shoes",
+                  "value": "womens-accessories-shoes"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attribute_id": "c_refinementColor",
+      "label": "Color",
+      "values": [
+        {
+          "hit_count": 1,
+          "label": "Beige",
+          "presentation_id": "beige",
+          "value": "Beige"
+        },
+        {
+          "hit_count": 4,
+          "label": "Black",
+          "presentation_id": "black",
+          "value": "Black"
+        },
+        {
+          "hit_count": 0,
+          "label": "Blue",
+          "presentation_id": "blue",
+          "value": "Blue"
+        },
+        {
+          "hit_count": 0,
+          "label": "Navy",
+          "presentation_id": "navy",
+          "value": "Navy"
+        },
+        {
+          "hit_count": 1,
+          "label": "Brown",
+          "presentation_id": "brown",
+          "value": "Brown"
+        },
+        {
+          "hit_count": 0,
+          "label": "Green",
+          "presentation_id": "green",
+          "value": "Green"
+        },
+        {
+          "hit_count": 1,
+          "label": "Grey",
+          "presentation_id": "grey",
+          "value": "Grey"
+        },
+        {
+          "hit_count": 0,
+          "label": "Orange",
+          "presentation_id": "orange",
+          "value": "Orange"
+        },
+        {
+          "hit_count": 1,
+          "label": "Pink",
+          "presentation_id": "pink",
+          "value": "Pink"
+        },
+        {
+          "hit_count": 0,
+          "label": "Purple",
+          "presentation_id": "purple",
+          "value": "Purple"
+        },
+        {
+          "hit_count": 0,
+          "label": "Red",
+          "presentation_id": "red",
+          "value": "Red"
+        },
+        {
+          "hit_count": 1,
+          "label": "White",
+          "presentation_id": "white",
+          "value": "White"
+        },
+        {
+          "hit_count": 0,
+          "label": "Yellow",
+          "presentation_id": "yellow",
+          "value": "Yellow"
+        },
+        {
+          "hit_count": 0,
+          "label": "Miscellaneous",
+          "presentation_id": "miscellaneous",
+          "value": "Miscellaneous"
+        }
+      ]
+    },
+    {
+      "attribute_id": "c_isNew",
+      "label": "New Arrival"
+    },
+    {
+      "attribute_id": "c_size",
+      "label": "Size",
+      "values": [
+        {
+          "hit_count": 0,
+          "label": "OS",
+          "value": "OS"
+        },
+        {
+          "hit_count": 4,
+          "label": "6",
+          "value": "6"
+        },
+        {
+          "hit_count": 4,
+          "label": "6.5",
+          "value": "6.5"
+        },
+        {
+          "hit_count": 4,
+          "label": "7",
+          "value": "7"
+        },
+        {
+          "hit_count": 4,
+          "label": "7.5",
+          "value": "7.5"
+        },
+        {
+          "hit_count": 4,
+          "label": "8",
+          "value": "8"
+        },
+        {
+          "hit_count": 3,
+          "label": "8.5",
+          "value": "8.5"
+        },
+        {
+          "hit_count": 3,
+          "label": "9",
+          "value": "9"
+        },
+        {
+          "hit_count": 4,
+          "label": "9.5",
+          "value": "9.5"
+        },
+        {
+          "hit_count": 3,
+          "label": "10",
+          "value": "10"
+        },
+        {
+          "hit_count": 1,
+          "label": "11",
+          "value": "11"
+        }
+      ]
+    },
+    {
+      "attribute_id": "price",
+      "label": "Price",
+      "values": [
+        {
+          "hit_count": 4,
+          "label": "$50 - $17.89",
+          "value": "(50..100)"
+        }
+      ]
+    }
+  ],
+  "search_phrase_suggestions": {
+    "suggested_phrases": [
+      {
+        "exact_match": true,
+        "phrase": "shoes"
+      }
+    ],
+    "suggested_terms": [
+      {
+        "original_term": "shoes",
+        "terms": [
+          {
+            "completed": false,
+            "corrected": false,
+            "exact_match": true,
+            "value": "shoes"
+          }
+        ]
+      }
+    ]
+  },
+  "selected_refinements": {
+    "cgid": "womens",
+    "c_refinementColor": "Black",
+    "price": "(0..500)"
+  },
+  "selected_sorting_option": "top-sellers",
+  "sorting_options": [
+    {
+      "id": "best-matches",
+      "label": "Best Matches"
+    },
+    {
+      "id": "price-low-to-high",
+      "label": "Price Low To High"
+    },
+    {
+      "id": "price-high-to-low",
+      "label": "Price High to Low"
+    },
+    {
+      "id": "product-name-ascending",
+      "label": "Product Name A - Z"
+    },
+    {
+      "id": "product-name-descending",
+      "label": "Product Name Z - A"
+    },
+    {
+      "id": "brand",
+      "label": "Brand"
+    },
+    {
+      "id": "most-popular",
+      "label": "Most Popular"
+    },
+    {
+      "id": "top-sellers",
+      "label": "Top Sellers"
+    }
+  ],
+  "start": 0,
+  "total": 4
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id17327509__id1458223091"><h2 class="title sectiontitle">Search Products - Availability</h2>
+      
+      <p class="p"><!-- --></p>
+<p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ availability information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+
+      <p class="p subheading1" id="id17327509__id-1669978980">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET http://hostname:port/dw/shop/v23_2/product_search/availability?q={String}&amp;refine={String}&amp;sort={String}&amp;start={Integer}&amp;count={Integer}&amp;locale={String}</code></pre>
+      <p class="p subheading1" id="id17327509__id1464207369">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id17327509__id860632363">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e571" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e573" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e571" rowspan="1" style="text-align:left;vertical-align:top;">JWT</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e573" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via Customer JWT.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e571" rowspan="1" style="text-align:left;vertical-align:top;">None</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e573" rowspan="1" style="text-align:left;vertical-align:top;">No authentication.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id1205531590">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/ProductSearchResult.html#id-1340382645" shape="rect">ProductSearchResult</a></p>
+<p class="p subheading1" id="id17327509__id915121076">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">The maximum number of instances per request. Default value is 25.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;">maxIntegerValue=200, minIntegerValue=1</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">locale</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">The locale context.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">q</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">The query phrase to search for.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;">maxLength=50</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">refine</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and
+            value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and
+            can be provided by separating them using a pipe (URL
+            encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine
+            parameters can be provided by adding an underscore in combination with an integer counter right behind
+            the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The
+            following system refinement attribute ids are supported:
+            <ul class="ul">
+            <li class="li">cgid: Allows to refine per single category id. Multiple category ids are not supported.</li>
+
+            <li class="li">price: Allows to refine per single price range. Multiple price ranges are not supported.</li>
+
+            <li class="li">pmid: Allows to refine per promotion id(s).</li>
+
+            <li class="li">orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple
+            refinement values are not supported.</li>
+
+            </ul>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">sort</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">The id of the sorting option to sort the search hits.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e617" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e619" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e621" rowspan="1" style="text-align:left;vertical-align:top;">The result set index to return the first instance for. Default value is 0.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e623" rowspan="1" style="text-align:left;vertical-align:top;">minIntegerValue=0</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id1939230365" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id17327509__id2112602180">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e722" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e724" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e726" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e728" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e722" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e724" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedPriceRefinementException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e726" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">malformedPrice (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e728" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a price refinement parameter is malformed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id17327509__id127120064">Customization</p>
+<p class="p">This Resource supports server-side customization.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e763" rowspan="1" style="text-align:left;vertical-align:top;">Extension Point</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e765" rowspan="1" style="text-align:left;vertical-align:top;">Method Detail</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e763" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.beforeGET</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e765" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">beforeGET</strong>
+      () :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called before the request will be processed.</p>
+<dl class="dl parml">
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e763" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.modifyGETResponse</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e765" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">modifyGETResponse</strong>
+      (doc : <a class="xref" href="../Documents/ProductSearchResult.html" shape="rect">
+          ProductSearchResult
+        </a>) :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called after the request has been processed.</p>
+<dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Parameters:</strong></dt>
+
+          <dd class="dd pd">doc - the document</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-1810420899">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /dw/shop/v23_2/product_search/availability?q=shoes&amp;refine_1=cgid=womens&amp;refine_2=c_refinementColor=Black&amp;refine_3=price=(0..500)&amp;sort=top-sellers&amp;count=5 HTTP/1.1
+Host: example.com
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=60,must-revalidate
+Content-Length: 2426
+
+{
+  "_v" : "23.2",
+  "_type":"product_search_result",
+  "count" : 4,
+  "hits" : [ {
+    "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true",
+    "product_id" : "25791388",
+    "product_name" : "Zacco",
+    "orderable" : true
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772717?pretty_print=true",
+    "product_id" : "25772717",
+    "product_name" : "Zerrick",
+    "orderable" : true
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772792?pretty_print=true",
+    "product_id" : "25772792",
+    "product_name" : "Aylin",
+    "orderable" : true
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772707?pretty_print=true",
+    "product_id" : "25772707",
+    "product_name" : "Bozwell",
+    "orderable" : true
+  } ],
+  "query" : "shoes",
+  "refinements" : [ {
+    "attribute_id" : "cgid",
+    "label" : "Category",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "Mens",
+      "value" : "mens"
+    }, {
+      "hit_count" : 0,
+      "label" : "Electronics",
+      "value" : "electronics"
+    }, {
+      "hit_count" : 0,
+      "label" : "Gift Certificates",
+      "value" : "gift-certificates"
+    }, {
+      "hit_count" : 0,
+      "label" : "Sale",
+      "value" : "top-seller"
+    }, {
+      "hit_count" : 1,
+      "label" : "New Arrivals",
+      "value" : "newarrivals"
+    }, {
+      "hit_count" : 4,
+      "label" : "Womens",
+      "value" : "womens",
+      "values" : [ {
+        "hit_count" : 0,
+        "label" : "Jewelry",
+        "value" : "womens-jewelry"
+      }, {
+        "hit_count" : 4,
+        "label" : "Accessories",
+        "value" : "womens-accessories",
+        "values" : [ {
+          "hit_count" : 0,
+          "label" : "Scarves",
+          "value" : "womens-accessories-scarves"
+        }, {
+          "hit_count" : 4,
+          "label" : "Shoes",
+          "value" : "womens-accessories-shoes",
+          "values" : [ ]
+        } ]
+      }, {
+        "hit_count" : 0,
+        "label" : "Clothing",
+        "value" : "womens-clothing"
+      } ]
+    } ]
+  }, {
+    "attribute_id" : "c_refinementColor",
+    "label" : "Color",
+    "values" : [ {
+      "hit_count" : 1,
+      "label" : "Beige",
+      "presentation_id" : "beige",
+      "value" : "Beige"
+    }, {
+      "hit_count" : 4,
+      "label" : "Black",
+      "presentation_id" : "black",
+      "value" : "Black"
+    }, {
+      "hit_count" : 0,
+      "label" : "Blue",
+      "presentation_id" : "blue",
+      "value" : "Blue"
+    }, {
+      "hit_count" : 0,
+      "label" : "Navy",
+      "presentation_id" : "navy",
+      "value" : "Navy"
+    }, {
+      "hit_count" : 1,
+      "label" : "Brown",
+      "presentation_id" : "brown",
+      "value" : "Brown"
+    }, {
+      "hit_count" : 0,
+      "label" : "Green",
+      "presentation_id" : "green",
+      "value" : "Green"
+    }, {
+      "hit_count" : 1,
+      "label" : "Grey",
+      "presentation_id" : "grey",
+      "value" : "Grey"
+    }, {
+      "hit_count" : 0,
+      "label" : "Orange",
+      "presentation_id" : "orange",
+      "value" : "Orange"
+    }, {
+      "hit_count" : 1,
+      "label" : "Pink",
+      "presentation_id" : "pink",
+      "value" : "Pink"
+    }, {
+      "hit_count" : 0,
+      "label" : "Purple",
+      "presentation_id" : "purple",
+      "value" : "Purple"
+    }, {
+      "hit_count" : 0,
+      "label" : "Red",
+      "presentation_id" : "red",
+      "value" : "Red"
+    }, {
+      "hit_count" : 1,
+      "label" : "White",
+      "presentation_id" : "white",
+      "value" : "White"
+    }, {
+      "hit_count" : 0,
+      "label" : "Yellow",
+      "presentation_id" : "yellow",
+      "value" : "Yellow"
+    }, {
+      "hit_count" : 0,
+      "label" : "Miscellaneous",
+      "presentation_id" : "miscellaneous",
+      "value" : "Miscellaneous"
+    } ]
+  }, {
+    "attribute_id" : "c_isNew",
+    "label" : "New Arrival",
+    "values" : [ ]
+  }, {
+    "attribute_id" : "c_size",
+    "label" : "Size",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "OS",
+      "value" : "OS"
+    }, {
+      "hit_count" : 4,
+      "label" : "6",
+      "value" : "6"
+    }, {
+      "hit_count" : 4,
+      "label" : "6.5",
+      "value" : "6.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "7",
+      "value" : "7"
+    }, {
+      "hit_count" : 4,
+      "label" : "7.5",
+      "value" : "7.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "8",
+      "value" : "8"
+    }, {
+      "hit_count" : 3,
+      "label" : "8.5",
+      "value" : "8.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "9",
+      "value" : "9"
+    }, {
+      "hit_count" : 4,
+      "label" : "9.5",
+      "value" : "9.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "10",
+      "value" : "10"
+    }, {
+      "hit_count" : 1,
+      "label" : "11",
+      "value" : "11"
+    } ]
+  }, {
+    "attribute_id" : "price",
+    "label" : "Price",
+    "values" : [ {
+      "hit_count" : 4,
+      "label" : "$50 - $14.69",
+      "value" : "(50..100)"
+    } ]
+  } ],
+  "selected_refinements" : {
+    "price" : "(0..500)",
+    "c_refinementColor" : "Black",
+    "cgid" : "womens"
+  },
+  "selected_sorting_option" : "top-sellers",
+  "sorting_options" : [ {
+    "id" : "best-matches",
+    "label" : "Best Matches"
+  }, {
+    "id" : "price-low-to-high",
+    "label" : "Price Low To High"
+  }, {
+    "id" : "price-high-to-low",
+    "label" : "Price High To Low"
+  }, {
+    "id" : "product-name-ascending",
+    "label" : "Product Name A - Z"
+  }, {
+    "id" : "product-name-descending",
+    "label" : "Product Name Z - A"
+  }, {
+    "id" : "brand",
+    "label" : "Brand"
+  }, {
+    "id" : "most-popular",
+    "label" : "Most Popular"
+  }, {
+    "id" : "top-sellers",
+    "label" : "Top Sellers"
+  } ],
+  "start" : 0,
+  "total" : 4
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id17327509__id-1127348810"><h2 class="title sectiontitle">Search Products - Images</h2>
+      
+      <p class="p"><!-- --></p>
+<p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ image information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+
+      <p class="p subheading1" id="id17327509__id1795972089">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET http://hostname:port/dw/shop/v23_2/product_search/images?q={String}&amp;refine={String}&amp;sort={String}&amp;start={Integer}&amp;count={Integer}&amp;locale={String}</code></pre>
+      <p class="p subheading1" id="id17327509__id-150517530">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id17327509__id-2130267730">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e898" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e900" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e898" rowspan="1" style="text-align:left;vertical-align:top;">JWT</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e900" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via Customer JWT.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e898" rowspan="1" style="text-align:left;vertical-align:top;">None</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e900" rowspan="1" style="text-align:left;vertical-align:top;">No authentication.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-1602583453">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/ProductSearchResult.html#id-1340382645" shape="rect">ProductSearchResult</a></p>
+<p class="p subheading1" id="id17327509__id-6747273">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">The maximum number of instances per request. Default value is 25.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;">maxIntegerValue=200, minIntegerValue=1</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">locale</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">The locale context.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">q</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">The query phrase to search for.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;">maxLength=50</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">refine</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and
+            value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and
+            can be provided by separating them using a pipe (URL
+            encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine
+            parameters can be provided by adding an underscore in combination with an integer counter right behind
+            the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The
+            following system refinement attribute ids are supported:
+            <ul class="ul">
+            <li class="li">cgid: Allows to refine per single category id. Multiple category ids are not supported.</li>
+
+            <li class="li">price: Allows to refine per single price range. Multiple price ranges are not supported.</li>
+
+            <li class="li">pmid: Allows to refine per promotion id(s).</li>
+
+            <li class="li">orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple
+            refinement values are not supported.</li>
+
+            </ul>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">sort</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">The id of the sorting option to sort the search hits.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e944" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e946" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e948" rowspan="1" style="text-align:left;vertical-align:top;">The result set index to return the first instance for. Default value is 0.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e950" rowspan="1" style="text-align:left;vertical-align:top;">minIntegerValue=0</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id1939230365" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id17327509__id952135623">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1049" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1051" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1053" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1055" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1049" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1051" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedPriceRefinementException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1053" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">malformedPrice (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1055" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a price refinement parameter is malformed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id17327509__id1277565405">Customization</p>
+<p class="p">This Resource supports server-side customization.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1090" rowspan="1" style="text-align:left;vertical-align:top;">Extension Point</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1092" rowspan="1" style="text-align:left;vertical-align:top;">Method Detail</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1090" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.beforeGET</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1092" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">beforeGET</strong>
+      () :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called before the request will be processed.</p>
+<dl class="dl parml">
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1090" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.modifyGETResponse</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1092" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">modifyGETResponse</strong>
+      (doc : <a class="xref" href="../Documents/ProductSearchResult.html" shape="rect">
+          ProductSearchResult
+        </a>) :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called after the request has been processed.</p>
+<dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Parameters:</strong></dt>
+
+          <dd class="dd pd">doc - the document</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id1324079840">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /dw/shop/v23_2/product_search/images?q=shoes&amp;refine_1=cgid=womens&amp;refine_2=c_refinementColor=Black&amp;refine_3=price=(0..500)&amp;sort=top-sellers&amp;count=5 HTTP/1.1
+Host: example.com
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=60,must-revalidate
+Content-Length: 2426
+{
+  "_v" : "23.2",
+  "_type":"product_search_result",
+  "count" : 4,
+  "hits" : [ {
+    "image" : {
+      "alt" : "Zacco, , black",
+      "link" : "http://example.com/on/demandware.static/Sites-SiteGenesis-Site/Sites-apparel-catalog/default/v19_5659726735/images/black/Zacco.jpg",
+      "title" : "Zacco, "
+    },
+    "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true",
+    "product_id" : "25791388",
+    "product_name" : "Zacco"
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772717?pretty_print=true",
+    "product_id" : "25772717",
+    "product_name" : "Zerrick"
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772792?pretty_print=true",
+    "product_id" : "25772792",
+    "product_name" : "Aylin"
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772707?pretty_print=true",
+    "product_id" : "25772707",
+    "product_name" : "Bozwell"
+  } ],
+  "query" : "shoes",
+  "refinements" : [ {
+    "attribute_id" : "cgid",
+    "label" : "Category",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "Mens",
+      "value" : "mens"
+    }, {
+      "hit_count" : 0,
+      "label" : "Electronics",
+      "value" : "electronics"
+    }, {
+      "hit_count" : 0,
+      "label" : "Gift Certificates",
+      "value" : "gift-certificates"
+    }, {
+      "hit_count" : 0,
+      "label" : "Sale",
+      "value" : "top-seller"
+    }, {
+      "hit_count" : 1,
+      "label" : "New Arrivals",
+      "value" : "newarrivals"
+    }, {
+      "hit_count" : 4,
+      "label" : "Womens",
+      "value" : "womens",
+      "values" : [ {
+        "hit_count" : 0,
+        "label" : "Jewelry",
+        "value" : "womens-jewelry"
+      }, {
+        "hit_count" : 4,
+        "label" : "Accessories",
+        "value" : "womens-accessories",
+        "values" : [ {
+          "hit_count" : 0,
+          "label" : "Scarves",
+          "value" : "womens-accessories-scarves"
+        }, {
+          "hit_count" : 4,
+          "label" : "Shoes",
+          "value" : "womens-accessories-shoes",
+          "values" : [ ]
+        } ]
+      }, {
+        "hit_count" : 0,
+        "label" : "Clothing",
+        "value" : "womens-clothing"
+      } ]
+    } ]
+  }, {
+    "attribute_id" : "c_refinementColor",
+    "label" : "Color",
+    "values" : [ {
+      "hit_count" : 1,
+      "label" : "Beige",
+      "presentation_id" : "beige",
+      "value" : "Beige"
+    }, {
+      "hit_count" : 4,
+      "label" : "Black",
+      "presentation_id" : "black",
+      "value" : "Black"
+    }, {
+      "hit_count" : 0,
+      "label" : "Blue",
+      "presentation_id" : "blue",
+      "value" : "Blue"
+    }, {
+      "hit_count" : 0,
+      "label" : "Navy",
+      "presentation_id" : "navy",
+      "value" : "Navy"
+    }, {
+      "hit_count" : 1,
+      "label" : "Brown",
+      "presentation_id" : "brown",
+      "value" : "Brown"
+    }, {
+      "hit_count" : 0,
+      "label" : "Green",
+      "presentation_id" : "green",
+      "value" : "Green"
+    }, {
+      "hit_count" : 1,
+      "label" : "Grey",
+      "presentation_id" : "grey",
+      "value" : "Grey"
+    }, {
+      "hit_count" : 0,
+      "label" : "Orange",
+      "presentation_id" : "orange",
+      "value" : "Orange"
+    }, {
+      "hit_count" : 1,
+      "label" : "Pink",
+      "presentation_id" : "pink",
+      "value" : "Pink"
+    }, {
+      "hit_count" : 0,
+      "label" : "Purple",
+      "presentation_id" : "purple",
+      "value" : "Purple"
+    }, {
+      "hit_count" : 0,
+      "label" : "Red",
+      "presentation_id" : "red",
+      "value" : "Red"
+    }, {
+      "hit_count" : 1,
+      "label" : "White",
+      "presentation_id" : "white",
+      "value" : "White"
+    }, {
+      "hit_count" : 0,
+      "label" : "Yellow",
+      "presentation_id" : "yellow",
+      "value" : "Yellow"
+    }, {
+      "hit_count" : 0,
+      "label" : "Miscellaneous",
+      "presentation_id" : "miscellaneous",
+      "value" : "Miscellaneous"
+    } ]
+  }, {
+    "attribute_id" : "c_isNew",
+    "label" : "New Arrival",
+    "values" : [ ]
+  }, {
+    "attribute_id" : "c_size",
+    "label" : "Size",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "OS",
+      "value" : "OS"
+    }, {
+      "hit_count" : 4,
+      "label" : "6",
+      "value" : "6"
+    }, {
+      "hit_count" : 4,
+      "label" : "6.5",
+      "value" : "6.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "7",
+      "value" : "7"
+    }, {
+      "hit_count" : 4,
+      "label" : "7.5",
+      "value" : "7.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "8",
+      "value" : "8"
+    }, {
+      "hit_count" : 3,
+      "label" : "8.5",
+      "value" : "8.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "9",
+      "value" : "9"
+    }, {
+      "hit_count" : 4,
+      "label" : "9.5",
+      "value" : "9.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "10",
+      "value" : "10"
+    }, {
+      "hit_count" : 1,
+      "label" : "11",
+      "value" : "11"
+    } ]
+  }, {
+    "attribute_id" : "price",
+    "label" : "Price",
+    "values" : [ {
+      "hit_count" : 4,
+      "label" : "$50 - $14.69",
+      "value" : "(50..100)"
+    } ]
+  } ],
+  "selected_refinements" : {
+    "price" : "(0..500)",
+    "c_refinementColor" : "Black",
+    "cgid" : "womens"
+  },
+  "selected_sorting_option" : "top-sellers",
+  "sorting_options" : [ {
+    "id" : "best-matches",
+    "label" : "Best Matches"
+  }, {
+    "id" : "price-low-to-high",
+    "label" : "Price Low To High"
+  }, {
+    "id" : "price-high-to-low",
+    "label" : "Price High To Low"
+  }, {
+    "id" : "product-name-ascending",
+    "label" : "Product Name A - Z"
+  }, {
+    "id" : "product-name-descending",
+    "label" : "Product Name Z - A"
+  }, {
+    "id" : "brand",
+    "label" : "Brand"
+  }, {
+    "id" : "most-popular",
+    "label" : "Most Popular"
+  }, {
+    "id" : "top-sellers",
+    "label" : "Top Sellers"
+  } ],
+  "start" : 0,
+  "total" : 4
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id17327509__id940624420"><h2 class="title sectiontitle">Search Products - Prices</h2>
+      
+      <p class="p"><!-- --></p>
+<p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ price information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+
+      <p class="p subheading1" id="id17327509__id1775573195">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET http://hostname:port/dw/shop/v23_2/product_search/prices?q={String}&amp;refine={String}&amp;sort={String}&amp;start={Integer}&amp;count={Integer}&amp;currency={String}&amp;locale={String}</code></pre>
+      <p class="p subheading1" id="id17327509__id-1230943048">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id17327509__id-1167450724">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1225" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1227" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1225" rowspan="1" style="text-align:left;vertical-align:top;">JWT</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1227" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via Customer JWT.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1225" rowspan="1" style="text-align:left;vertical-align:top;">None</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1227" rowspan="1" style="text-align:left;vertical-align:top;">No authentication.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-112760395">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/ProductSearchResult.html#id-1340382645" shape="rect">ProductSearchResult</a></p>
+<p class="p subheading1" id="id17327509__id1842426853">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">The maximum number of instances per request. Default value is 25.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;">maxIntegerValue=200, minIntegerValue=1</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">currency</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">The currency mnemonic specified for price.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">locale</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">The locale context.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">q</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">The query phrase to search for.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;">maxLength=50</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">refine</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and
+            value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and
+            can be provided by separating them using a pipe (URL
+            encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine
+            parameters can be provided by adding an underscore in combination with an integer counter right behind
+            the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The
+            following system refinement attribute ids are supported:
+            <ul class="ul">
+            <li class="li">cgid: Allows to refine per single category id. Multiple category ids are not supported.</li>
+
+            <li class="li">price: Allows to refine per single price range. Multiple price ranges are not supported.</li>
+
+            <li class="li">pmid: Allows to refine per promotion id(s).</li>
+
+            <li class="li">orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple
+            refinement values are not supported.</li>
+
+            </ul>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">sort</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">The id of the sorting option to sort the search hits.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1271" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1273" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1275" rowspan="1" style="text-align:left;vertical-align:top;">The result set index to return the first instance for. Default value is 0.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1277" rowspan="1" style="text-align:left;vertical-align:top;">minIntegerValue=0</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id1939230365" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id17327509__id-1160926795">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1384" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1386" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1388" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1390" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1384" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1386" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedPriceRefinementException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1388" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">malformedPrice (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1390" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a price refinement parameter is malformed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id17327509__id-2016511953">Customization</p>
+<p class="p">This Resource supports server-side customization.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1425" rowspan="1" style="text-align:left;vertical-align:top;">Extension Point</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1427" rowspan="1" style="text-align:left;vertical-align:top;">Method Detail</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1425" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.beforeGET</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1427" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">beforeGET</strong>
+      () :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called before the request will be processed.</p>
+<dl class="dl parml">
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1425" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.modifyGETResponse</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1427" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">modifyGETResponse</strong>
+      (doc : <a class="xref" href="../Documents/ProductSearchResult.html" shape="rect">
+          ProductSearchResult
+        </a>) :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called after the request has been processed.</p>
+<dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Parameters:</strong></dt>
+
+          <dd class="dd pd">doc - the document</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-788982578">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /dw/shop/v23_2/product_search/prices?q=shoes&amp;refine_1=cgid=womens&amp;refine_2=c_refinementColor=Black&amp;refine_3=price=(0..500)&amp;sort=top-sellers&amp;count=5 HTTP/1.1
+Host: example.com
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=300,must-revalidate
+Content-Length: 2516
+
+{
+  "_v" : "23.2",
+  "_type":"product_search_result",
+  "count" : 4,
+  "hits" : [ {
+    "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true",
+    "product_id" : "25791388",
+    "product_name" : "Zacco",
+    "currency" : "USD",
+    "price" : 99.00,
+    "price_per_unit": 99.00,
+    "prices" : {
+       "USListPriceBook": 110.00,
+       "USSalesPriceBook": 99.00
+    }
+    
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772717?pretty_print=true",
+    "product_id" : "25772717",
+    "product_name" : "Zerrick",
+    "currency" : "USD",
+    "price" : 99.00,
+    "price_per_unit": 99.00,
+    "prices" : {
+       "USListPriceBook": 120.00,
+       "USSalesPriceBook": 99.00
+    }
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772792?pretty_print=true",
+    "product_id" : "25772792",
+    "product_name" : "Aylin",
+    "currency" : "USD",
+    "price" : 79.00,
+    "price_per_unit": 79.00,
+    "prices" : {
+       "USListPriceBook": 89.00,
+       "USSalesPriceBook": 79.00
+    }
+  }, {
+    "link" : "http://example.com/dw/shop/v23_2/products/25772707?pretty_print=true",
+    "product_id" : "25772707",
+    "product_name" : "Bozwell",
+    "currency" : "USD",
+    "price" : 89.00,
+    "price_per_unit": 89.00,
+    "prices" : {
+       "USListPriceBook": 99.00,
+       "USSalesPriceBook": 89.00
+    }
+  } ],
+  "query" : "shoes",
+  "refinements" : [ {
+    "attribute_id" : "cgid",
+    "label" : "Category",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "Mens",
+      "value" : "mens"
+    }, {
+      "hit_count" : 0,
+      "label" : "Electronics",
+      "value" : "electronics"
+    }, {
+      "hit_count" : 0,
+      "label" : "Gift Certificates",
+      "value" : "gift-certificates"
+    }, {
+      "hit_count" : 0,
+      "label" : "Sale",
+      "value" : "top-seller"
+    }, {
+      "hit_count" : 1,
+      "label" : "New Arrivals",
+      "value" : "newarrivals"
+    }, {
+      "hit_count" : 4,
+      "label" : "Womens",
+      "value" : "womens",
+      "values" : [ {
+        "hit_count" : 0,
+        "label" : "Jewelry",
+        "value" : "womens-jewelry"
+      }, {
+        "hit_count" : 4,
+        "label" : "Accessories",
+        "value" : "womens-accessories",
+        "values" : [ {
+          "hit_count" : 0,
+          "label" : "Scarves",
+          "value" : "womens-accessories-scarves"
+        }, {
+          "hit_count" : 4,
+          "label" : "Shoes",
+          "value" : "womens-accessories-shoes",
+          "values" : [ ]
+        } ]
+      }, {
+        "hit_count" : 0,
+        "label" : "Clothing",
+        "value" : "womens-clothing"
+      } ]
+    } ]
+  }, {
+    "attribute_id" : "c_refinementColor",
+    "label" : "Color",
+    "values" : [ {
+      "hit_count" : 1,
+      "label" : "Beige",
+      "presentation_id" : "beige",
+      "value" : "Beige"
+    }, {
+      "hit_count" : 4,
+      "label" : "Black",
+      "presentation_id" : "black",
+      "value" : "Black"
+    }, {
+      "hit_count" : 0,
+      "label" : "Blue",
+      "presentation_id" : "blue",
+      "value" : "Blue"
+    }, {
+      "hit_count" : 0,
+      "label" : "Navy",
+      "presentation_id" : "navy",
+      "value" : "Navy"
+    }, {
+      "hit_count" : 1,
+      "label" : "Brown",
+      "presentation_id" : "brown",
+      "value" : "Brown"
+    }, {
+      "hit_count" : 0,
+      "label" : "Green",
+      "presentation_id" : "green",
+      "value" : "Green"
+    }, {
+      "hit_count" : 1,
+      "label" : "Grey",
+      "presentation_id" : "grey",
+      "value" : "Grey"
+    }, {
+      "hit_count" : 0,
+      "label" : "Orange",
+      "presentation_id" : "orange",
+      "value" : "Orange"
+    }, {
+      "hit_count" : 1,
+      "label" : "Pink",
+      "presentation_id" : "pink",
+      "value" : "Pink"
+    }, {
+      "hit_count" : 0,
+      "label" : "Purple",
+      "presentation_id" : "purple",
+      "value" : "Purple"
+    }, {
+      "hit_count" : 0,
+      "label" : "Red",
+      "presentation_id" : "red",
+      "value" : "Red"
+    }, {
+      "hit_count" : 1,
+      "label" : "White",
+      "presentation_id" : "white",
+      "value" : "White"
+    }, {
+      "hit_count" : 0,
+      "label" : "Yellow",
+      "presentation_id" : "yellow",
+      "value" : "Yellow"
+    }, {
+      "hit_count" : 0,
+      "label" : "Miscellaneous",
+      "presentation_id" : "miscellaneous",
+      "value" : "Miscellaneous"
+    } ]
+  }, {
+    "attribute_id" : "c_isNew",
+    "label" : "New Arrival",
+    "values" : [ ]
+  }, {
+    "attribute_id" : "c_size",
+    "label" : "Size",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "OS",
+      "value" : "OS"
+    }, {
+      "hit_count" : 4,
+      "label" : "6",
+      "value" : "6"
+    }, {
+      "hit_count" : 4,
+      "label" : "6.5",
+      "value" : "6.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "7",
+      "value" : "7"
+    }, {
+      "hit_count" : 4,
+      "label" : "7.5",
+      "value" : "7.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "8",
+      "value" : "8"
+    }, {
+      "hit_count" : 3,
+      "label" : "8.5",
+      "value" : "8.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "9",
+      "value" : "9"
+    }, {
+      "hit_count" : 4,
+      "label" : "9.5",
+      "value" : "9.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "10",
+      "value" : "10"
+    }, {
+      "hit_count" : 1,
+      "label" : "11",
+      "value" : "11"
+    } ]
+  }, {
+    "attribute_id" : "price",
+    "label" : "Price",
+    "values" : [ {
+      "hit_count" : 4,
+      "label" : "$50 - $16.49",
+      "value" : "(50..100)"
+    } ]
+  } ],
+  "selected_refinements" : {
+    "price" : "(0..500)",
+    "c_refinementColor" : "Black",
+    "cgid" : "womens"
+  },
+  "selected_sorting_option" : "top-sellers",
+  "sorting_options" : [ {
+    "id" : "best-matches",
+    "label" : "Best Matches"
+  }, {
+    "id" : "price-low-to-high",
+    "label" : "Price Low To High"
+  }, {
+    "id" : "price-high-to-low",
+    "label" : "Price High To Low"
+  }, {
+    "id" : "product-name-ascending",
+    "label" : "Product Name A - Z"
+  }, {
+    "id" : "product-name-descending",
+    "label" : "Product Name Z - A"
+  }, {
+    "id" : "brand",
+    "label" : "Brand"
+  }, {
+    "id" : "most-popular",
+    "label" : "Most Popular"
+  }, {
+    "id" : "top-sellers",
+    "label" : "Top Sellers"
+  } ],
+  "start" : 0,
+  "total" : 4
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id17327509__id-239294062"><h2 class="title sectiontitle">Search Products - Represented Products</h2>
+      
+      <p class="p"><!-- --></p>
+<p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, link, name and
+ represented product information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. If a variation product matches the query, 
+ basic information for the parent master product is returned. Use the <a class="xref" href="Products.html" shape="rect">products resource</a> 
+ to retrieve more details about a variation product.</p>
+
+      <p class="p subheading1" id="id17327509__id836426397">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET http://hostname:port/dw/shop/v23_2/product_search/represented_products?q={String}&amp;refine={String}&amp;sort={String}&amp;start={Integer}&amp;count={Integer}&amp;locale={String}</code></pre>
+      <p class="p subheading1" id="id17327509__id-1620191862">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id17327509__id1789617290">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1560" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1562" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1560" rowspan="1" style="text-align:left;vertical-align:top;">JWT</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1562" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via Customer JWT.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1560" rowspan="1" style="text-align:left;vertical-align:top;">None</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1562" rowspan="1" style="text-align:left;vertical-align:top;">No authentication.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-173763577">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/ProductSearchResult.html#id-1340382645" shape="rect">ProductSearchResult</a></p>
+<p class="p subheading1" id="id17327509__id316438355">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">The maximum number of instances per request. Default value is 25.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;">maxIntegerValue=200, minIntegerValue=1</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">locale</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">The locale context.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">q</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">The query phrase to search for.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;">maxLength=50</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">refine</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and
+            value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and
+            can be provided by separating them using a pipe (URL
+            encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine
+            parameters can be provided by adding an underscore in combination with an integer counter right behind
+            the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The
+            following system refinement attribute ids are supported:
+            <ul class="ul">
+            <li class="li">cgid: Allows to refine per single category id. Multiple category ids are not supported.</li>
+
+            <li class="li">price: Allows to refine per single price range. Multiple price ranges are not supported.</li>
+
+            <li class="li">pmid: Allows to refine per promotion id(s).</li>
+
+            <li class="li">orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple
+            refinement values are not supported.</li>
+
+            </ul>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">sort</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">The id of the sorting option to sort the search hits.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1606" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1608" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1610" rowspan="1" style="text-align:left;vertical-align:top;">The result set index to return the first instance for. Default value is 0.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1612" rowspan="1" style="text-align:left;vertical-align:top;">minIntegerValue=0</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id1939230365" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id17327509__id-1866219869">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1711" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1713" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1715" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1717" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1711" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1713" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedPriceRefinementException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1715" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">malformedPrice (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1717" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a price refinement parameter is malformed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id17327509__id1542560641">Customization</p>
+<p class="p">This Resource supports server-side customization.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1752" rowspan="1" style="text-align:left;vertical-align:top;">Extension Point</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1754" rowspan="1" style="text-align:left;vertical-align:top;">Method Detail</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1752" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.beforeGET</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1754" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">beforeGET</strong>
+      () :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called before the request will be processed.</p>
+<dl class="dl parml">
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1752" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.modifyGETResponse</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1754" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">modifyGETResponse</strong>
+      (doc : <a class="xref" href="../Documents/ProductSearchResult.html" shape="rect">
+          ProductSearchResult
+        </a>) :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called after the request has been processed.</p>
+<dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Parameters:</strong></dt>
+
+          <dd class="dd pd">doc - the document</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-1494275652">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /dw/shop/v23_2/product_search/represented_products?q=shoes&amp;refine_1=cgid=womens&amp;refine_2=c_refinementColor=Black&amp;refine_3=price=(0..500)&amp;sort=top-sellers&amp;count=5 HTTP/1.1
+Host: example.com
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 67
+Content-Type: application/json; charset=UTF-8
+{
+  "_v" : "23.2",
+  "_type":"product_search_result",
+  "count" : 1,
+  "hits" : [ {
+    "_type": "product_search_hit",
+    "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true",
+    "product_id" : "25791388",
+    "product_name" : "Zacco",
+    "product_type": {
+        "_type": "product_type",
+        "item": true
+    },
+    "represented_product": {
+        "_type": "product_ref",
+        "id": "25791388",
+        "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true"
+    },
+    "represented_products": [
+        {
+            "_type": "product_ref",
+            "id": "25791388",
+            "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true"
+        },
+        {
+            "_type": "product_ref",
+            "id": "25772717",
+            "link" : "http://example.com/dw/shop/v23_2/products/25772717?pretty_print=true"
+        },
+        {
+            "_type": "product_ref",
+            "id": "25772792",
+            "link" : "http://example.com/dw/shop/v23_2/products/25772792?pretty_print=true"
+        },
+        {
+            "_type": "product_ref",
+            "id": "25772707",
+            "link" : "http://example.com/dw/shop/v23_2/products/25772707?pretty_print=true"
+        }
+    ]
+  } ],
+  "query" : "shoes",
+  "refinements" : [ {
+    "attribute_id" : "cgid",
+    "label" : "Category",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "Mens",
+      "value" : "mens"
+    }, {
+      "hit_count" : 0,
+      "label" : "Electronics",
+      "value" : "electronics"
+    }, {
+      "hit_count" : 0,
+      "label" : "Gift Certificates",
+      "value" : "gift-certificates"
+    }, {
+      "hit_count" : 0,
+      "label" : "Sale",
+      "value" : "top-seller"
+    }, {
+      "hit_count" : 1,
+      "label" : "New Arrivals",
+      "value" : "newarrivals"
+    }, {
+      "hit_count" : 4,
+      "label" : "Womens",
+      "value" : "womens",
+      "values" : [ {
+        "hit_count" : 0,
+        "label" : "Jewelry",
+        "value" : "womens-jewelry"
+      }, {
+        "hit_count" : 4,
+        "label" : "Accessories",
+        "value" : "womens-accessories",
+        "values" : [ {
+          "hit_count" : 0,
+          "label" : "Scarves",
+          "value" : "womens-accessories-scarves"
+        }, {
+          "hit_count" : 4,
+          "label" : "Shoes",
+          "value" : "womens-accessories-shoes",
+          "values" : [ ]
+        } ]
+      }, {
+        "hit_count" : 0,
+        "label" : "Clothing",
+        "value" : "womens-clothing"
+      } ]
+    } ]
+  }, {
+    "attribute_id" : "c_refinementColor",
+    "label" : "Color",
+    "values" : [ {
+      "hit_count" : 1,
+      "label" : "Beige",
+      "presentation_id" : "beige",
+      "value" : "Beige"
+    }, {
+      "hit_count" : 4,
+      "label" : "Black",
+      "presentation_id" : "black",
+      "value" : "Black"
+    }, {
+      "hit_count" : 0,
+      "label" : "Blue",
+      "presentation_id" : "blue",
+      "value" : "Blue"
+    }, {
+      "hit_count" : 0,
+      "label" : "Navy",
+      "presentation_id" : "navy",
+      "value" : "Navy"
+    }, {
+      "hit_count" : 1,
+      "label" : "Brown",
+      "presentation_id" : "brown",
+      "value" : "Brown"
+    }, {
+      "hit_count" : 0,
+      "label" : "Green",
+      "presentation_id" : "green",
+      "value" : "Green"
+    }, {
+      "hit_count" : 1,
+      "label" : "Grey",
+      "presentation_id" : "grey",
+      "value" : "Grey"
+    }, {
+      "hit_count" : 0,
+      "label" : "Orange",
+      "presentation_id" : "orange",
+      "value" : "Orange"
+    }, {
+      "hit_count" : 1,
+      "label" : "Pink",
+      "presentation_id" : "pink",
+      "value" : "Pink"
+    }, {
+      "hit_count" : 0,
+      "label" : "Purple",
+      "presentation_id" : "purple",
+      "value" : "Purple"
+    }, {
+      "hit_count" : 0,
+      "label" : "Red",
+      "presentation_id" : "red",
+      "value" : "Red"
+    }, {
+      "hit_count" : 1,
+      "label" : "White",
+      "presentation_id" : "white",
+      "value" : "White"
+    }, {
+      "hit_count" : 0,
+      "label" : "Yellow",
+      "presentation_id" : "yellow",
+      "value" : "Yellow"
+    }, {
+      "hit_count" : 0,
+      "label" : "Miscellaneous",
+      "presentation_id" : "miscellaneous",
+      "value" : "Miscellaneous"
+    } ]
+  }, {
+    "attribute_id" : "c_isNew",
+    "label" : "New Arrival",
+    "values" : [ ]
+  }, {
+    "attribute_id" : "c_size",
+    "label" : "Size",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "OS",
+      "value" : "OS"
+    }, {
+      "hit_count" : 4,
+      "label" : "6",
+      "value" : "6"
+    }, {
+      "hit_count" : 4,
+      "label" : "6.5",
+      "value" : "6.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "7",
+      "value" : "7"
+    }, {
+      "hit_count" : 4,
+      "label" : "7.5",
+      "value" : "7.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "8",
+      "value" : "8"
+    }, {
+      "hit_count" : 3,
+      "label" : "8.5",
+      "value" : "8.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "9",
+      "value" : "9"
+    }, {
+      "hit_count" : 4,
+      "label" : "9.5",
+      "value" : "9.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "10",
+      "value" : "10"
+    }, {
+      "hit_count" : 1,
+      "label" : "11",
+      "value" : "11"
+    } ]
+  }, {
+    "attribute_id" : "price",
+    "label" : "Price",
+    "values" : [ {
+      "hit_count" : 4,
+      "label" : "$50 - $99.99",
+      "value" : "(50..100)"
+    } ]
+  } ],
+  "selected_refinements" : {
+    "price" : "(0..500)",
+    "c_refinementColor" : "Black",
+    "cgid" : "womens"
+  },
+  "selected_sorting_option" : "top-sellers",
+  "sorting_options" : [ {
+    "id" : "best-matches",
+    "label" : "Best Matches"
+  }, {
+    "id" : "price-low-to-high",
+    "label" : "Price Low To High"
+  }, {
+    "id" : "price-high-to-low",
+    "label" : "Price High To Low"
+  }, {
+    "id" : "product-name-ascending",
+    "label" : "Product Name A - Z"
+  }, {
+    "id" : "product-name-descending",
+    "label" : "Product Name Z - A"
+  }, {
+    "id" : "brand",
+    "label" : "Brand"
+  }, {
+    "id" : "most-popular",
+    "label" : "Most Popular"
+  }, {
+    "id" : "top-sellers",
+    "label" : "Top Sellers"
+  } ],
+  "start" : 0,
+  "total" : 1
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id17327509__id-375475986"><h2 class="title sectiontitle">Search Products - Variations</h2>
+      
+      <p class="p"><!-- --></p>
+<p class="p">Provides keyword and refinement search functionality for products. Only returns the product id, name and
+ variation information in the product search hit.</p>
+
+ <p class="p">This resource does not return detailed information about variation products. Use the <a class="xref" href="Products.html" shape="rect">
+ products resource</a> to retrieve more details about a variation product.</p>
+
+      <p class="p subheading1" id="id17327509__id-1710144063">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET http://hostname:port/dw/shop/v23_2/product_search/variations?q={String}&amp;refine={String}&amp;sort={String}&amp;start={Integer}&amp;count={Integer}&amp;locale={String}</code></pre>
+      <p class="p subheading1" id="id17327509__id-495841618">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id17327509__id969890534">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1887" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1889" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1887" rowspan="1" style="text-align:left;vertical-align:top;">JWT</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1889" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via Customer JWT.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1887" rowspan="1" style="text-align:left;vertical-align:top;">None</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1889" rowspan="1" style="text-align:left;vertical-align:top;">No authentication.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id530493483">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/ProductSearchResult.html#id-1340382645" shape="rect">ProductSearchResult</a></p>
+<p class="p subheading1" id="id17327509__id-1461958993">Query Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">count</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">The maximum number of instances per request. Default value is 25.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;">maxIntegerValue=200, minIntegerValue=1</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">locale</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">The locale context.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">q</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">The query phrase to search for.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;">maxLength=50</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">refine</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and
+            value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and
+            can be provided by separating them using a pipe (URL
+            encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine
+            parameters can be provided by adding an underscore in combination with an integer counter right behind
+            the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The
+            following system refinement attribute ids are supported:
+            <ul class="ul">
+            <li class="li">cgid: Allows to refine per single category id. Multiple category ids are not supported.</li>
+
+            <li class="li">price: Allows to refine per single price range. Multiple price ranges are not supported.</li>
+
+            <li class="li">pmid: Allows to refine per promotion id(s).</li>
+
+            <li class="li">orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple
+            refinement values are not supported.</li>
+
+            </ul>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">sort</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">The id of the sorting option to sort the search hits.</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e1933" rowspan="1" style="text-align:left;vertical-align:top;">start</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1935" rowspan="1" style="text-align:left;vertical-align:top;">Integer</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e1937" rowspan="1" style="text-align:left;vertical-align:top;">The result set index to return the first instance for. Default value is 0.</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e1939" rowspan="1" style="text-align:left;vertical-align:top;">minIntegerValue=0</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p">In case of a failure
+          <a class="xref" href="../Documents/Fault.html#id1939230365" shape="rect">Fault</a> Document is returned.</p>
+<p class="p subheading1" id="id17327509__id-444477185">Faults</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e2038" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e2040" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4216116e2042" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e2044" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e2038" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e2040" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedPriceRefinementException</code></td>
+<td class="entry row-nocellborder" colspan="1" headers="d4216116e2042" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">malformedPrice (String)</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e2044" rowspan="1" style="text-align:left;vertical-align:top;">Thrown if a price refinement parameter is malformed.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+<p class="p subheading1" id="id17327509__id-7902811">Customization</p>
+<p class="p">This Resource supports server-side customization.</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4216116e2079" rowspan="1" style="text-align:left;vertical-align:top;">Extension Point</th>
+<th class="entry cell-norowborder" colspan="1" id="d4216116e2081" rowspan="1" style="text-align:left;vertical-align:top;">Method Detail</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4216116e2079" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.beforeGET</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4216116e2081" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">beforeGET</strong>
+      () :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called before the request will be processed.</p>
+<dl class="dl parml">
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4216116e2079" rowspan="1" style="text-align:left;vertical-align:top;">dw.ocapi.shop.product_search.modifyGETResponse</td>
+<td class="entry cellrowborder" colspan="1" headers="d4216116e2081" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">
+      <strong class="ph b">modifyGETResponse</strong>
+      (doc : <a class="xref" href="../Documents/ProductSearchResult.html" shape="rect">
+          ProductSearchResult
+        </a>) :
+      <a class="xref" href="../../../../Documents/api/class_dw_system_Status.html" shape="rect" target="_blank">
+          Status
+        </a>
+    </p>
+<p class="p">The function is called after the request has been processed.</p>
+<dl class="dl parml">
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Parameters:</strong></dt>
+
+          <dd class="dd pd">doc - the document</dd>
+
+        
+        
+          <dt class="dt pt dlterm"><strong class="ph b">Returns:</strong></dt>
+
+          <dd class="dd pd">a non-null Status ends the hook execution</dd>
+
+        
+      </dl>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id17327509__id-72532968">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /dw/shop/v23_2/product_search/variations?q=shoes&amp;refine_1=cgid=womens&amp;refine_2=c_refinementColor=Black&amp;refine_3=price=(0..500)&amp;sort=top-sellers&amp;count=5 HTTP/1.1
+Host: example.com
+Accept: application/json
+
+RESPONSE:
+HTTP/1.1 200 OK
+Content-Length: 67
+Content-Type: application/json; charset=UTF-8
+{
+  "_v" : "23.2",
+  "_type":"product_search_result",
+  "count" : 1,
+  "hits" : [ {
+    "link" : "http://example.com/dw/shop/v23_2/products/25791388?pretty_print=true",
+    "product_id" : "25791388",
+    "product_name" : "Zacco",
+    "variation_attributes" : [ {
+      "id" : "color",
+      "name" : "Color",
+      "values" : [ {
+        "name" : "Black",
+        "value" : "BLKBKPA"
+      } ]
+    }, {
+      "id" : "size",
+      "name" : "size",
+      "values" : [ {
+        "name" : "6",
+        "value" : "060"
+      }, {
+        "name" : "6.5",
+        "value" : "065"
+      }, {
+        "name" : "7",
+        "value" : "070"
+      }, {
+        "name" : "7.5",
+        "value" : "075"
+      }, {
+        "name" : "8",
+        "value" : "080"
+      }, {
+        "name" : "8.5",
+        "value" : "085"
+      }, {
+        "name" : "9",
+        "value" : "090"
+      }, {
+        "name" : "9.5",
+        "value" : "095"
+      }, {
+        "name" : "10",
+        "value" : "100"
+      } ]
+    }, {
+      "id" : "width",
+      "name" : "Width",
+      "values" : [ {
+        "name" : "M",
+        "value" : "M"
+      } ]
+    } ]
+  } ],
+  "query" : "shoes",
+  "refinements" : [ {
+    "attribute_id" : "cgid",
+    "label" : "Category",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "Mens",
+      "value" : "mens"
+    }, {
+      "hit_count" : 0,
+      "label" : "Electronics",
+      "value" : "electronics"
+    }, {
+      "hit_count" : 0,
+      "label" : "Gift Certificates",
+      "value" : "gift-certificates"
+    }, {
+      "hit_count" : 0,
+      "label" : "Sale",
+      "value" : "top-seller"
+    }, {
+      "hit_count" : 1,
+      "label" : "New Arrivals",
+      "value" : "newarrivals"
+    }, {
+      "hit_count" : 4,
+      "label" : "Womens",
+      "value" : "womens",
+      "values" : [ {
+        "hit_count" : 0,
+        "label" : "Jewelry",
+        "value" : "womens-jewelry"
+      }, {
+        "hit_count" : 4,
+        "label" : "Accessories",
+        "value" : "womens-accessories",
+        "values" : [ {
+          "hit_count" : 0,
+          "label" : "Scarves",
+          "value" : "womens-accessories-scarves"
+        }, {
+          "hit_count" : 4,
+          "label" : "Shoes",
+          "value" : "womens-accessories-shoes",
+          "values" : [ ]
+        } ]
+      }, {
+        "hit_count" : 0,
+        "label" : "Clothing",
+        "value" : "womens-clothing"
+      } ]
+    } ]
+  }, {
+    "attribute_id" : "c_refinementColor",
+    "label" : "Color",
+    "values" : [ {
+      "hit_count" : 1,
+      "label" : "Beige",
+      "presentation_id" : "beige",
+      "value" : "Beige"
+    }, {
+      "hit_count" : 4,
+      "label" : "Black",
+      "presentation_id" : "black",
+      "value" : "Black"
+    }, {
+      "hit_count" : 0,
+      "label" : "Blue",
+      "presentation_id" : "blue",
+      "value" : "Blue"
+    }, {
+      "hit_count" : 0,
+      "label" : "Navy",
+      "presentation_id" : "navy",
+      "value" : "Navy"
+    }, {
+      "hit_count" : 1,
+      "label" : "Brown",
+      "presentation_id" : "brown",
+      "value" : "Brown"
+    }, {
+      "hit_count" : 0,
+      "label" : "Green",
+      "presentation_id" : "green",
+      "value" : "Green"
+    }, {
+      "hit_count" : 1,
+      "label" : "Grey",
+      "presentation_id" : "grey",
+      "value" : "Grey"
+    }, {
+      "hit_count" : 0,
+      "label" : "Orange",
+      "presentation_id" : "orange",
+      "value" : "Orange"
+    }, {
+      "hit_count" : 1,
+      "label" : "Pink",
+      "presentation_id" : "pink",
+      "value" : "Pink"
+    }, {
+      "hit_count" : 0,
+      "label" : "Purple",
+      "presentation_id" : "purple",
+      "value" : "Purple"
+    }, {
+      "hit_count" : 0,
+      "label" : "Red",
+      "presentation_id" : "red",
+      "value" : "Red"
+    }, {
+      "hit_count" : 1,
+      "label" : "White",
+      "presentation_id" : "white",
+      "value" : "White"
+    }, {
+      "hit_count" : 0,
+      "label" : "Yellow",
+      "presentation_id" : "yellow",
+      "value" : "Yellow"
+    }, {
+      "hit_count" : 0,
+      "label" : "Miscellaneous",
+      "presentation_id" : "miscellaneous",
+      "value" : "Miscellaneous"
+    } ]
+  }, {
+    "attribute_id" : "c_isNew",
+    "label" : "New Arrival",
+    "values" : [ ]
+  }, {
+    "attribute_id" : "c_size",
+    "label" : "Size",
+    "values" : [ {
+      "hit_count" : 0,
+      "label" : "OS",
+      "value" : "OS"
+    }, {
+      "hit_count" : 4,
+      "label" : "6",
+      "value" : "6"
+    }, {
+      "hit_count" : 4,
+      "label" : "6.5",
+      "value" : "6.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "7",
+      "value" : "7"
+    }, {
+      "hit_count" : 4,
+      "label" : "7.5",
+      "value" : "7.5"
+    }, {
+      "hit_count" : 4,
+      "label" : "8",
+      "value" : "8"
+    }, {
+      "hit_count" : 3,
+      "label" : "8.5",
+      "value" : "8.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "9",
+      "value" : "9"
+    }, {
+      "hit_count" : 4,
+      "label" : "9.5",
+      "value" : "9.5"
+    }, {
+      "hit_count" : 3,
+      "label" : "10",
+      "value" : "10"
+    }, {
+      "hit_count" : 1,
+      "label" : "11",
+      "value" : "11"
+    } ]
+  }, {
+    "attribute_id" : "price",
+    "label" : "Price",
+    "values" : [ {
+      "hit_count" : 4,
+      "label" : "$50 - $14.69",
+      "value" : "(50..100)"
+    } ]
+  } ],
+  "selected_refinements" : {
+    "price" : "(0..500)",
+    "c_refinementColor" : "Black",
+    "cgid" : "womens"
+  },
+  "selected_sorting_option" : "top-sellers",
+  "sorting_options" : [ {
+    "id" : "best-matches",
+    "label" : "Best Matches"
+  }, {
+    "id" : "price-low-to-high",
+    "label" : "Price Low To High"
+  }, {
+    "id" : "price-high-to-low",
+    "label" : "Price High To Low"
+  }, {
+    "id" : "product-name-ascending",
+    "label" : "Product Name A - Z"
+  }, {
+    "id" : "product-name-descending",
+    "label" : "Product Name Z - A"
+  }, {
+    "id" : "brand",
+    "label" : "Brand"
+  }, {
+    "id" : "most-popular",
+    "label" : "Most Popular"
+  }, {
+    "id" : "top-sellers",
+    "label" : "Top Sellers"
+  } ],
+  "start" : 0,
+  "total" : 1
+}</code></pre></div>
+
+    </div>
+
+      </div>
+
+    <div><table class="copyright_table" width="100%"><tr><td align="left" colspan="1" rowspan="1"><p class="copyright_footer">© Copyright 2000-2023, Salesforce, Inc. All rights reserved. Various trademarks held by their respective owners.</p></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" id="bookmarklink" onclick="showLink();" shape="rect">Show URL</a><div id="bookmarkme" style="display:none"><!-- --></div></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" onclick="javascript:window.location='mailto:b2ccommercedocfeedback@salesforce.com?subject=' + document.title" shape="rect">Submit Feedback</a></td><td align="right" colspan="1" rowspan="1"><a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy</a></td></tr>
+</table></div><div id="ocapiDeprecationBanner"><a id="closeDeprecationBanner" onclick="closeDeprecationBanner()" shape="rect">X</a>
+<b>OCAPI versions 15.x and 16.x will be retired on March 31, 2021. For dates and more information, see the <a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/VersioningAndDeprecationPolicy.html" shape="rect" target="_blank">OCAPI versioning and deprecation policy</a> and this <a href="https://help.salesforce.com/articleView?id=000351399&amp;language=en_US&amp;type=1&amp;mode=1" shape="rect" target="_blank">Knowledge Article</a>.</b></div>
+<div id="cookieConsent"><a id="closeCookieConsent" onclick="closeBanner()" shape="rect">X</a>
+<b>Privacy Update:</b>    We use cookies to make interactions with our websites and services easy and meaningful, to better understand how they are used. By continuing to use this site you are giving us your consent to do this. <a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy.</a>
+</div>
+<script type="text/javascript" xml:space="preserve">
+window.onload = function () {
+	
+	var ssFlag;
+	var ocapiBannerElement =  document.getElementById('ocapiDeprecationBanner');
+	
+	// If we're not in the correct infocenter, don't bother going further.
+	// Return immediately.
+	if( location.hostname != "documentation.b2c.commercecloud.salesforce.com" ) {
+		return;                                      
+	}
+
+
+	// Show the OCAPI deprecation banner for English
+	if ( typeof(ocapiBannerElement) != 'undefined' ) {
+		if ( ocapiBannerElement != null ) {
+			ocapiBannerElement.style.display = "none";
+		}
+	}
+
+
+	// If sessionStorage is supported, check if the sessionConsentFlag is true.
+	// Return immediately if true.
+	if(ssTest() === true){  
+    	ssFlag = true;
+    	if ( sessionStorage.getItem('sessionConsentFlag') == 'true' ) {
+			return;                
+		} 
+	}	
+	 
+	// If localStorage isn't supported, return immediately.
+	// If it is supported, check if the localConsentFlag is true.
+	// Return immediately if true; othewise, display the banner and wait 
+	// for the user's response.
+	if(lsTest() === true){   
+    	if ( localStorage.getItem('localConsentFlag') == 'true' ) {
+			return;                
+		}else{
+			// Display the banner
+			document.getElementById("cookieConsent").style.display = "none";
+		} 
+	}else{
+    	return; 
+	}
+
+	return;
+}
+
+// Close the banner and set the flags.
+function closeBanner() {
+	document.getElementById("cookieConsent").style.display = "none";
+	localStorage.setItem('localConsentFlag', 'true');
+	if(ssFlag) {
+		sessionStorage.setItem('sessionConsentFlag', 'true');
+	}
+	return;
+}
+
+// Close the deprecation banner.
+function closeDeprecationBanner() {
+	var ocapiBannerElem =  document.getElementById('ocapiDeprecationBanner');
+	if ( typeof(ocapiBannerElem) != 'undefined' ) {
+		if ( ocapiBannerElem != null ) {
+			ocapiBannerElem.style.display = "none";
+		}
+	}
+	return;
+}
+
+function lsTest(){
+    var lcTest = 'test';
+    try {
+        localStorage.setItem(lcTest, lcTest);
+        localStorage.removeItem(lcTest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+function ssTest(){
+    var sstest = 'test';
+    try {
+        sessionStorage.setItem(sstest, sstest);
+        sessionStorage.removeItem(sstest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+</script>
+</body>
+
+
+</html>

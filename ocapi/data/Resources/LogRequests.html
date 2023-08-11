@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-148075995-1" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148075995-1');
+</script>
+
+<link href="https://developer.salesforce.com/docs/commerce/b2c-commerce/references/ocapi-data-api?meta=Summary" rel="canonical"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+<meta content="(C) Copyright 2023" name="copyright"/>
+<meta content="(C) Copyright 2023" name="DC.rights.owner"/>
+<meta content="concept" name="DC.Type"/>
+<meta content="LogRequests resource (Data API 23.2)" name="DC.Title"/>
+<meta content="" name="abstract"/>
+<meta content="" name="description"/>
+<meta content="XHTML" name="DC.Format"/>
+<meta content="id1357141560" name="DC.Identifier"/>
+<meta content="en-us" name="DC.Language"/>
+<link href="../../../../css/commonltr.css" rel="stylesheet" type="text/css"/><script src="../../../../scripts/jquery-3.5.0.min.js" type="text/javascript" xml:space="preserve"> //  // </script><script src="../../../../scripts/dwScript.js" type="text/javascript" xml:space="preserve"> //  // </script>
+<title>LogRequests resource (Data API 23.2)</title>
+<!-- text added to HEAD tag-->
+<script src="../../../../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+
+<link charset="ISO-8859-1" href="../../../../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css"/>
+<script src="../../../../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == "blah" ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../../../../index.jsp?topic=%2Fcom.demandware.dochelp%2FOCAPI%2Fcurrent%2Fdata%2FResources%2FLogRequests.html" + anchorParam);
+}
+</script>
+<style>
+@import url(//fonts.googleapis.com/css?family=Salesforce+Sans:400,400italic,bold,bolditalic);
+
+/*
+ | This file is part of the DITA Open Toolkit project. See the accompanying license.txt file for
+ | applicable licenses.
+*/
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+.unresolved { background-color: skyblue }
+.noTemplate { background-color: yellow }
+.base { background-color: #ffffff }
+/* Add space for top level topics */
+/*.nested0 { margin-top : 1em }*/
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p { margin-top: 1em }
+/* Default of italics to set apart figure captions */
+.figcap { font-style: italic }
+.figdesc { font-style: normal }
+/* Use @frame to create frames on figures */
+.figborder {
+    border-style: solid;
+    padding-left : 3px;
+    border-width : 2px;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figsides {
+    border-left : 2px solid;
+    padding-left : 3px;
+    border-right : 2px solid;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figtop {
+    border-top : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figbottom {
+    border-bottom : 2px solid;
+    border-color : Silver;
+}
+.figtopbot {
+    border-top : 2px solid;
+    border-bottom : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks {
+  list-style-type: none;
+}
+.ulchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.olchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.linklist {
+  margin-bottom: 1em;
+}
+.linklistwithchild {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.sublinklist {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.relconcepts {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.reltasks {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relref {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relinfo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.breadcrumb {
+    font-size : 1em;
+    margin-bottom: 1em;
+}
+dt.prereq { margin-left : 20px }
+/* Set heading sizes, getting smaller for deeper nesting */
+.topictitle1 {
+    color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+	margin-top: .5em
+}
+.topictitle2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle3 {
+    /* margin-top: 1pc;
+    margin-bottom: .17em;*/
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle4 {
+    /* margin-top: .83em; */
+    font-size: 1.4em;
+}
+.topictitle5 { font-size: 1.2em }
+.topictitle6 {
+    font-size: 1.2em;
+    font-style: italic;
+}
+.sectiontitle {
+    font-size: 1.6em;
+    font-style: bold;
+}
+.section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.example {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+div.tasklabel {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h2.tasklabel,
+h3.tasklabel,
+h4.tasklabel,
+h5.tasklabel,
+h6.tasklabel { font-size: 100% }
+/* All note formats have the same default presentation */
+.note {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.notetitle { font-weight: bold }
+.notelisttitle { font-weight: bold }
+.tip {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.tiptitle { font-weight: bold }
+.fastpath {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.fastpathtitle { font-weight: bold }
+.important {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.importanttitle { font-weight: bold }
+.remember {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.remembertitle { font-weight: bold }
+.restriction {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.restrictiontitle { font-weight: bold }
+.attention {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.attentiontitle { font-weight: bold }
+.dangertitle { font-weight: bold }
+.danger {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.cautiontitle { font-weight: bold }
+.caution {
+    font-weight: bold;
+    margin-bottom : 1em;
+}
+.warning {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.warningtitle { font-weight: bold }
+/* Simple lists do not get a bullet */
+ul.simple { list-style-type: none }
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol { font-weight : bold }
+/* Various basic phrase styles */
+.bold { font-weight: bold }
+.boldItalic {
+    font-weight: bold;
+    font-style: italic;
+}
+.italic { font-style: italic }
+.underlined { text-decoration: underline }
+.uicontrol { font-weight: bold }
+.parmname { font-weight: bold }
+.kwd { font-weight: bold }
+.defkwd {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.var { font-style : italic }
+.shortcut { text-decoration: underline }
+/* Default of bold for definition list terms */
+.dlterm { font-weight: bold }
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand {
+    font-weight: bold;
+    margin-top: 1em;
+}
+*[compact="yes"]>li { margin-top: 0em }
+*[compact="no"]>li { margin-top: .53em }
+.liexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sliexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.dlexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ddexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.stepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.substepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* Align images based on @align on topic/image */
+div.imageleft { text-align: left }
+div.imagecenter { text-align: center }
+div.imageright { text-align: right }
+div.imagejustify { text-align: justify }
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+
+pre.screen {
+    padding: 5px 5px 5px 5px;
+    border: outset;
+    background-color: #CCCCCC;
+    margin-top: 2px;
+    margin-bottom : 2px;
+    white-space: pre;
+}
+/* Demandware Styles */
+
+span.filepath {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 10px 0;
+}
+
+.nocellnorowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.cellrowborder {
+   border: 1px solid #ACB1B7;
+}
+.row-nocellborder {
+    border: 1px solid #ACB1B7;
+}
+.cell-norowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.topictitle1{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle2{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle3{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.sectiontitle{
+    color: #706e6b;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+body {
+    /* background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #DADADA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    */
+    color: #111111;
+    font-family: "Salesforce Sans", Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    line-height: 1.4em;
+    padding: 10px;
+}
+li { padding-top: 1em }
+p.subheading1 { font-size: 1.4em }
+p.subheading2 { font-size: 1.2em }
+.copyright_footer {
+	 font-size: 1em;
+	 font-style: italic;
+}
+a:link,
+a:visited { color: #008CB9 }
+a:hover,
+a:focus {
+    color: #3778C7;
+    text-decoration: underline;
+}
+strong { color: #000000 }
+.help_breadcrumbs,
+.help_breadcrumbs a {
+    color: #1589ee;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0 0 0px;
+    text-decoration: none;
+	margin: 0px;
+}
+.help_breadcrumbs a:hover { text-decoration: underline }
+.related-links { font-size: 11px }
+div.header{
+	line-height: 1em;
+}
+
+.alignleft {
+	float: left;
+	font-size: 1em;
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+
+}
+.alignright {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+li table {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.tablenoborder {
+	margin-top: 1em;
+}
+
+
+table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table th {
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8');; ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8')";
+    background-image: -moz-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -ms-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -o-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#eef0f4), to(#ccd1d8));
+    background-image: -webkit-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: linear-gradient(top, #eef0f4, #ccd1d8);*/
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    color: #4F5762;
+    font-size: 1em;
+    font-weight: bold;
+    /* padding: 10px 3px 8px 5px; */
+    padding: 1em;
+}
+table.table td,
+table.simpletable td {
+    border: 1px solid #ACB1B7;
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*//*Element must have a height (not auto)*//*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5')"; */
+    /*Element must have a height (not auto)*//*All filters must be placed together*/
+    /* background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: linear-gradient(top, #ffffff, #e5e5e5);*/
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+    /* padding: 12px 3px 12px 5px; */
+    padding: 1em;
+}
+table.copyright_table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+    padding: 0px;
+	margin:0;
+}
+
+table.copyright_table td {
+    padding: 0px;
+	margin:0;
+}
+
+body .resultofText {
+    background-color: transparent;
+    color: #60a345;
+}
+pre {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    /* font-weight: bold; */
+    margin: 8px;
+    padding: 8px;
+    overflow-x: auto;
+}
+pre code {
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.codeph {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.note {
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #333333;
+/*    font-family: Verdana,Arial,Helvetica,sans-serif;  */
+    font-size: 1em;
+    padding: 10px 10px 10px 26px;
+}
+.hidden { display: none; }
+.shown { display: block; }
+div[role=search]{
+	background-color: #25282A;
+	color: #CCCCCC;
+}
+a:link.scopeLabel {color:#FFB549;}
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #F1D600;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #E0C91F;
+}
+#ocapiDeprecationBanner {
+    background-color: #0747a6;
+    min-height: 26px;
+    font-size: 14px;
+    color: white;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#ocapiDeprecationBanner a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeDeprecationBanner {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+.help_breadcrumbs { display: none !important; }
+.copyright_table td { display: none; }
+copyright_table td:nth-child(4) { display: table-cell; }
+</style>
+<body id="id1357141560">
+<div class="help_breadcrumbs"><a href="../../../../../../topic/com.demandware.dochelp/content/b2c_commerce/topics/getting_started/b2c_welcome.html" shape="rect">Salesforce B2C Commerce 23.6</a> &gt; <a href="../../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html" shape="rect">Open Commerce API 23.2</a> &gt; <a href="../../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/DataAPIResources.html" shape="rect">Data API resources 23.2</a></div>
+
+<div><!-- text added to header of html--></div>
+      <h1 class="title topictitle1" id="ariaid-title1">LogRequests resource (Data API 23.2)</h1>
+
+      
+      <div class="body conbody"><p class="shortdesc"> </p>
+<div class="section" id="id1357141560__Summary"><h2 class="title sectiontitle">Summary</h2>
+      
+      
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4000409e32" rowspan="1" style="text-align:left;vertical-align:top;">Http Method</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4000409e34" rowspan="1" style="text-align:left;vertical-align:top;">Resource</th>
+<th class="entry cell-norowborder" colspan="1" id="d4000409e36" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4000409e32" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4000409e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="LogRequests.html#id1357141560__id1702881367" shape="rect">/log_requests/ecdn</a></td>
+<td class="entry cell-norowborder" colspan="1" headers="d4000409e36" rowspan="1" style="text-align:left;vertical-align:top;">Requests a LogFile-Fetching for the passed zone and time frame.</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4000409e32" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4000409e34" rowspan="1" style="text-align:left;vertical-align:top;"><a class="xref" href="LogRequests.html#id1357141560__id-842655941" shape="rect">/log_requests/ecdn/{id}</a></td>
+<td class="entry cellrowborder" colspan="1" headers="d4000409e36" rowspan="1" style="text-align:left;vertical-align:top;">Retrieves the current execution status of the log file fetching.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+    </div>
+<div class="section" id="id1357141560__id1702881367"><h2 class="title sectiontitle">Request Log File</h2>
+      
+      <p class="p"><!-- --></p>
+Requests a LogFile-Fetching for the passed zone and time frame.
+      <p class="p subheading1" id="id1357141560__id-1614779976">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>POST https://hostname:port/dw/data/v23_2/log_requests/ecdn</code></pre>
+      <p class="p subheading1" id="id1357141560__id1936744229">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id1357141560__id-691870065">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4000409e97" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4000409e99" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4000409e97" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4000409e99" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id1357141560__id1402198818">Request Document</p>
+<p class="p"><a class="xref" href="../Documents/EcdnLogFetchRequest.html#id-1119782526" shape="rect">EcdnLogFetchRequest</a></p>
+<p class="p subheading1" id="id1357141560__id-1186457630">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/EcdnLogFetchResponse.html#id-362875754" shape="rect">EcdnLogFetchResponse</a></p>
+
+      <p class="p subheading1" id="id1357141560__id1945600193">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+POST /s/-/dw/data/v23_2/log_requests/ecdn HTTP/1.1
+Host: example.com
+Authorization: Bearer a5b6eb0d-8312-41a3-88f3-2c53c4507367
+Content-Type: application/json; charset=UTF-8
+{
+  "zone_name": "sitegenesis.com",
+  "start_time": "21.2-09-14T16:48:07Z",
+  "end_time": "21.2-09-14T16:53:07Z"
+}
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+{
+  "_v" : "23.2",
+  "_type": "ecdn_log_fetch_response",
+  "id": "9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0",
+  "status": "pending"
+}
+
+# in case of finished log fetch operation:
+
+RESPONSE:
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+{
+  "_v" : "23.2",
+  "_type": "ecdn_log_fetch_response",
+  "id": "9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0",
+  "status": "finished",
+  "link": "https://ecdn.commercecloud.salesforce.com/logs/sitegenesis_com_21.2_09_14.gz?token=3d03ekddsflk3m4fl3ekmdes"
+}
+
+# in case of zone not found:
+
+RESPONSE:
+HTTP/1.1 404 NOT FOUND
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "_type": "fault",
+  "fault":
+  {
+    "arguments":
+    {
+      "id": "sitegenesis.com"
+    }
+    "type": "ZoneNotFoundException",
+    "message": "No zone with name 'sitegenesis.com' was found."
+  }
+}</code></pre></div>
+
+    </div>
+<div class="section" id="id1357141560__id-842655941"><h2 class="title sectiontitle">Read Logfetching Execution status</h2>
+      
+      <p class="p"><!-- --></p>
+Retrieves the current execution status of the log file fetching.
+      <p class="p subheading1" id="id1357141560__id520822868">Url</p>
+
+      <pre class="pre codeblock" xml:space="preserve"><code>GET https://hostname:port/dw/data/v23_2/log_requests/ecdn/{id}</code></pre>
+      <p class="p subheading1" id="id1357141560__id1258710977">Formats</p>
+ <p class="p">json, xml</p>
+
+      <p class="p subheading1" id="id1357141560__id-1056229773">Authentication</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4000409e174" rowspan="1" style="text-align:left;vertical-align:top;">Name</th>
+<th class="entry cell-norowborder" colspan="1" id="d4000409e176" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4000409e174" rowspan="1" style="text-align:left;vertical-align:top;">OAuth</td>
+<td class="entry cellrowborder" colspan="1" headers="d4000409e176" rowspan="1" style="text-align:left;vertical-align:top;">Authentication via OAuth token.</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id1357141560__id1850805630">Response Document</p>
+<p class="p"><a class="xref" href="../Documents/EcdnLogFetchResponse.html#id-362875754" shape="rect">EcdnLogFetchResponse</a></p>
+<p class="p subheading1" id="id1357141560__id-1177598551">Path Parameters</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4000409e215" rowspan="1" style="text-align:left;vertical-align:top;">Parameter</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4000409e217" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4000409e219" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+<th class="entry cell-norowborder" colspan="1" id="d4000409e221" rowspan="1" style="text-align:left;vertical-align:top;">Constraints</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4000409e215" rowspan="1" style="text-align:left;vertical-align:top;">id</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4000409e217" rowspan="1" style="text-align:left;vertical-align:top;">String</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4000409e219" rowspan="1" style="text-align:left;vertical-align:top;">ID of the log fetching execution</td>
+<td class="entry cellrowborder" colspan="1" headers="d4000409e221" rowspan="1" style="text-align:left;vertical-align:top;">mandatory=true, nullable=false</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+      <p class="p subheading1" id="id1357141560__id-1955597147">Sample</p>
+
+      <div class="p"><pre class="pre codeblock" xml:space="preserve"><code>REQUEST:
+GET /s/-/dw/data/v23_2/log_requests/ecdn/9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0 HTTP/1.1
+Host: example.com
+Authorization: Bearer a5b6eb0d-8312-41a3-88f3-2c53c4507367
+Content-Type: application/json; charset=UTF-8
+{
+  "zone_name": "sitegenesis.com",
+  "start_time": "21.2-09-14T16:48:07Z",
+  "end_time": "21.2-09-14T16:53:07Z"
+}
+
+# in case of success:
+
+RESPONSE:
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+{
+  "_v" : "23.2",
+  "_type": "ecdn_log_fetch_response",
+  "id": "9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0",
+  "status": "pending"
+}
+
+# in case of finished log fetch operation:
+
+RESPONSE:
+HTTP/1.1 200 OK
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+{
+  "_v" : "23.2",
+  "_type": "ecdn_log_fetch_response",
+  "id": "9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0",
+  "status": "finished",
+  "link": "https://ecdn.commercecloud.salesforce.com/logs/sitegenesis_com_21.2_09_14.gz?token=3d03ekddsflk3m4fl3ekmdes"
+}
+
+# in case of zone not found:
+
+RESPONSE:
+HTTP/1.1 404 NOT FOUND
+Expires: Thu, 01-Jan-1970 00:00:00 GMT
+Content-Type: application/json;charset=UTF-8
+Cache-Control: max-age=0,no-cache,no-store,must-revalidate
+{
+  "_v" : "23.2",
+  "_type": "fault",
+  "fault":
+  {
+    "arguments":
+    {
+      "id": "9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0"
+    }
+    "type": "EcdnLogFetchRequestNotFoundException",
+    "message": "No log fetch operation request with ID '9f83cls0-d93d-llus-foo1-p8dsl3dkcpw0' was found."
+  }
+}</code></pre></div>
+
+    </div>
+
+      </div>
+
+    <div><table class="copyright_table" width="100%"><tr><td align="left" colspan="1" rowspan="1"><p class="copyright_footer">© Copyright 2000-2023, Salesforce, Inc. All rights reserved. Various trademarks held by their respective owners.</p></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" id="bookmarklink" onclick="showLink();" shape="rect">Show URL</a><div id="bookmarkme" style="display:none"><!-- --></div></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" onclick="javascript:window.location='mailto:b2ccommercedocfeedback@salesforce.com?subject=' + document.title" shape="rect">Submit Feedback</a></td><td align="right" colspan="1" rowspan="1"><a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy</a></td></tr>
+</table></div><div id="ocapiDeprecationBanner"><a id="closeDeprecationBanner" onclick="closeDeprecationBanner()" shape="rect">X</a>
+<b>OCAPI versions 15.x and 16.x will be retired on March 31, 2021. For dates and more information, see the <a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/VersioningAndDeprecationPolicy.html" shape="rect" target="_blank">OCAPI versioning and deprecation policy</a> and this <a href="https://help.salesforce.com/articleView?id=000351399&amp;language=en_US&amp;type=1&amp;mode=1" shape="rect" target="_blank">Knowledge Article</a>.</b></div>
+<div id="cookieConsent"><a id="closeCookieConsent" onclick="closeBanner()" shape="rect">X</a>
+<b>Privacy Update:</b>    We use cookies to make interactions with our websites and services easy and meaningful, to better understand how they are used. By continuing to use this site you are giving us your consent to do this. <a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy.</a>
+</div>
+<script type="text/javascript" xml:space="preserve">
+window.onload = function () {
+	
+	var ssFlag;
+	var ocapiBannerElement =  document.getElementById('ocapiDeprecationBanner');
+	
+	// If we're not in the correct infocenter, don't bother going further.
+	// Return immediately.
+	if( location.hostname != "documentation.b2c.commercecloud.salesforce.com" ) {
+		return;                                      
+	}
+
+
+	// Show the OCAPI deprecation banner for English
+	if ( typeof(ocapiBannerElement) != 'undefined' ) {
+		if ( ocapiBannerElement != null ) {
+			ocapiBannerElement.style.display = "none";
+		}
+	}
+
+
+	// If sessionStorage is supported, check if the sessionConsentFlag is true.
+	// Return immediately if true.
+	if(ssTest() === true){  
+    	ssFlag = true;
+    	if ( sessionStorage.getItem('sessionConsentFlag') == 'true' ) {
+			return;                
+		} 
+	}	
+	 
+	// If localStorage isn't supported, return immediately.
+	// If it is supported, check if the localConsentFlag is true.
+	// Return immediately if true; othewise, display the banner and wait 
+	// for the user's response.
+	if(lsTest() === true){   
+    	if ( localStorage.getItem('localConsentFlag') == 'true' ) {
+			return;                
+		}else{
+			// Display the banner
+			document.getElementById("cookieConsent").style.display = "none";
+		} 
+	}else{
+    	return; 
+	}
+
+	return;
+}
+
+// Close the banner and set the flags.
+function closeBanner() {
+	document.getElementById("cookieConsent").style.display = "none";
+	localStorage.setItem('localConsentFlag', 'true');
+	if(ssFlag) {
+		sessionStorage.setItem('sessionConsentFlag', 'true');
+	}
+	return;
+}
+
+// Close the deprecation banner.
+function closeDeprecationBanner() {
+	var ocapiBannerElem =  document.getElementById('ocapiDeprecationBanner');
+	if ( typeof(ocapiBannerElem) != 'undefined' ) {
+		if ( ocapiBannerElem != null ) {
+			ocapiBannerElem.style.display = "none";
+		}
+	}
+	return;
+}
+
+function lsTest(){
+    var lcTest = 'test';
+    try {
+        localStorage.setItem(lcTest, lcTest);
+        localStorage.removeItem(lcTest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+function ssTest(){
+    var sstest = 'test';
+    try {
+        sessionStorage.setItem(sstest, sstest);
+        sessionStorage.removeItem(sstest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+</script>
+</body>
+
+
+</html>

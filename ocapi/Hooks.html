@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-148075995-1" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148075995-1');
+</script>
+
+<link href="https://developer.salesforce.com/docs/commerce/b2c-commerce/references/b2c-commerce-ocapi/hooks.html" rel="canonical"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+<meta content="(C) Copyright 2023" name="copyright"/>
+<meta content="(C) Copyright 2023" name="DC.rights.owner"/>
+<meta content="concept" name="DC.Type"/>
+<meta content="OCAPI Hooks" name="DC.Title"/>
+<meta content="" name="abstract"/>
+<meta content="" name="description"/>
+<meta content="../../../content/b2c_commerce/topics/b2c_security_best_practices/b2c_using_hooks_securely.html" name="DC.Relation" scheme="URI"/>
+<meta content="XHTML" name="DC.Format"/>
+<meta content="Hooks23.2" name="DC.Identifier"/>
+<meta content="en-us" name="DC.Language"/>
+<link href="../../../css/commonltr.css" rel="stylesheet" type="text/css"/><script src="../../../scripts/jquery-3.5.0.min.js" type="text/javascript" xml:space="preserve"> //  // </script><script src="../../../scripts/dwScript.js" type="text/javascript" xml:space="preserve"> //  // </script>
+<title>OCAPI Hooks</title>
+<!-- text added to HEAD tag-->
+<script src="../../../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+
+<link charset="ISO-8859-1" href="../../../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css"/>
+<script src="../../../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == "blah" ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../../../index.jsp?topic=%2Fcom.demandware.dochelp%2FOCAPI%2Fcurrent%2Fusage%2FHooks.html" + anchorParam);
+}
+</script>
+<style>
+@import url(//fonts.googleapis.com/css?family=Salesforce+Sans:400,400italic,bold,bolditalic);
+
+/*
+ | This file is part of the DITA Open Toolkit project. See the accompanying license.txt file for
+ | applicable licenses.
+*/
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+.unresolved { background-color: skyblue }
+.noTemplate { background-color: yellow }
+.base { background-color: #ffffff }
+/* Add space for top level topics */
+/*.nested0 { margin-top : 1em }*/
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p { margin-top: 1em }
+/* Default of italics to set apart figure captions */
+.figcap { font-style: italic }
+.figdesc { font-style: normal }
+/* Use @frame to create frames on figures */
+.figborder {
+    border-style: solid;
+    padding-left : 3px;
+    border-width : 2px;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figsides {
+    border-left : 2px solid;
+    padding-left : 3px;
+    border-right : 2px solid;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figtop {
+    border-top : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figbottom {
+    border-bottom : 2px solid;
+    border-color : Silver;
+}
+.figtopbot {
+    border-top : 2px solid;
+    border-bottom : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks {
+  list-style-type: none;
+}
+.ulchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.olchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.linklist {
+  margin-bottom: 1em;
+}
+.linklistwithchild {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.sublinklist {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.relconcepts {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.reltasks {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relref {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relinfo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.breadcrumb {
+    font-size : 1em;
+    margin-bottom: 1em;
+}
+dt.prereq { margin-left : 20px }
+/* Set heading sizes, getting smaller for deeper nesting */
+.topictitle1 {
+    color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+	margin-top: .5em
+}
+.topictitle2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle3 {
+    /* margin-top: 1pc;
+    margin-bottom: .17em;*/
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle4 {
+    /* margin-top: .83em; */
+    font-size: 1.4em;
+}
+.topictitle5 { font-size: 1.2em }
+.topictitle6 {
+    font-size: 1.2em;
+    font-style: italic;
+}
+.sectiontitle {
+    font-size: 1.6em;
+    font-style: bold;
+}
+.section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.example {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+div.tasklabel {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h2.tasklabel,
+h3.tasklabel,
+h4.tasklabel,
+h5.tasklabel,
+h6.tasklabel { font-size: 100% }
+/* All note formats have the same default presentation */
+.note {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.notetitle { font-weight: bold }
+.notelisttitle { font-weight: bold }
+.tip {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.tiptitle { font-weight: bold }
+.fastpath {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.fastpathtitle { font-weight: bold }
+.important {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.importanttitle { font-weight: bold }
+.remember {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.remembertitle { font-weight: bold }
+.restriction {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.restrictiontitle { font-weight: bold }
+.attention {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.attentiontitle { font-weight: bold }
+.dangertitle { font-weight: bold }
+.danger {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.cautiontitle { font-weight: bold }
+.caution {
+    font-weight: bold;
+    margin-bottom : 1em;
+}
+.warning {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.warningtitle { font-weight: bold }
+/* Simple lists do not get a bullet */
+ul.simple { list-style-type: none }
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol { font-weight : bold }
+/* Various basic phrase styles */
+.bold { font-weight: bold }
+.boldItalic {
+    font-weight: bold;
+    font-style: italic;
+}
+.italic { font-style: italic }
+.underlined { text-decoration: underline }
+.uicontrol { font-weight: bold }
+.parmname { font-weight: bold }
+.kwd { font-weight: bold }
+.defkwd {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.var { font-style : italic }
+.shortcut { text-decoration: underline }
+/* Default of bold for definition list terms */
+.dlterm { font-weight: bold }
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand {
+    font-weight: bold;
+    margin-top: 1em;
+}
+*[compact="yes"]>li { margin-top: 0em }
+*[compact="no"]>li { margin-top: .53em }
+.liexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sliexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.dlexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ddexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.stepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.substepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* Align images based on @align on topic/image */
+div.imageleft { text-align: left }
+div.imagecenter { text-align: center }
+div.imageright { text-align: right }
+div.imagejustify { text-align: justify }
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+
+pre.screen {
+    padding: 5px 5px 5px 5px;
+    border: outset;
+    background-color: #CCCCCC;
+    margin-top: 2px;
+    margin-bottom : 2px;
+    white-space: pre;
+}
+/* Demandware Styles */
+
+span.filepath {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 10px 0;
+}
+
+.nocellnorowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.cellrowborder {
+   border: 1px solid #ACB1B7;
+}
+.row-nocellborder {
+    border: 1px solid #ACB1B7;
+}
+.cell-norowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.topictitle1{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle2{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle3{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.sectiontitle{
+    color: #706e6b;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+body {
+    /* background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #DADADA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    */
+    color: #111111;
+    font-family: "Salesforce Sans", Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    line-height: 1.4em;
+    padding: 10px;
+}
+li { padding-top: 1em }
+p.subheading1 { font-size: 1.4em }
+p.subheading2 { font-size: 1.2em }
+.copyright_footer {
+	 font-size: 1em;
+	 font-style: italic;
+}
+a:link,
+a:visited { color: #008CB9 }
+a:hover,
+a:focus {
+    color: #3778C7;
+    text-decoration: underline;
+}
+strong { color: #000000 }
+.help_breadcrumbs,
+.help_breadcrumbs a {
+    color: #1589ee;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0 0 0px;
+    text-decoration: none;
+	margin: 0px;
+}
+.help_breadcrumbs a:hover { text-decoration: underline }
+.related-links { font-size: 11px }
+div.header{
+	line-height: 1em;
+}
+
+.alignleft {
+	float: left;
+	font-size: 1em;
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+
+}
+.alignright {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+li table {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.tablenoborder {
+	margin-top: 1em;
+}
+
+
+table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table th {
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8');; ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8')";
+    background-image: -moz-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -ms-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -o-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#eef0f4), to(#ccd1d8));
+    background-image: -webkit-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: linear-gradient(top, #eef0f4, #ccd1d8);*/
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    color: #4F5762;
+    font-size: 1em;
+    font-weight: bold;
+    /* padding: 10px 3px 8px 5px; */
+    padding: 1em;
+}
+table.table td,
+table.simpletable td {
+    border: 1px solid #ACB1B7;
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*//*Element must have a height (not auto)*//*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5')"; */
+    /*Element must have a height (not auto)*//*All filters must be placed together*/
+    /* background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: linear-gradient(top, #ffffff, #e5e5e5);*/
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+    /* padding: 12px 3px 12px 5px; */
+    padding: 1em;
+}
+table.copyright_table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+    padding: 0px;
+	margin:0;
+}
+
+table.copyright_table td {
+    padding: 0px;
+	margin:0;
+}
+
+body .resultofText {
+    background-color: transparent;
+    color: #60a345;
+}
+pre {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    /* font-weight: bold; */
+    margin: 8px;
+    padding: 8px;
+    overflow-x: auto;
+}
+pre code {
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.codeph {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.note {
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #333333;
+/*    font-family: Verdana,Arial,Helvetica,sans-serif;  */
+    font-size: 1em;
+    padding: 10px 10px 10px 26px;
+}
+.hidden { display: none; }
+.shown { display: block; }
+div[role=search]{
+	background-color: #25282A;
+	color: #CCCCCC;
+}
+a:link.scopeLabel {color:#FFB549;}
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #F1D600;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #E0C91F;
+}
+#ocapiDeprecationBanner {
+    background-color: #0747a6;
+    min-height: 26px;
+    font-size: 14px;
+    color: white;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#ocapiDeprecationBanner a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeDeprecationBanner {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+.help_breadcrumbs { display: none !important; }
+.copyright_table td { display: none; }
+copyright_table td:nth-child(4) { display: table-cell; }
+</style>
+<body id="Hooks23.2">
+<div class="help_breadcrumbs"><a href="../../../../../topic/com.demandware.dochelp/content/b2c_commerce/topics/getting_started/b2c_welcome.html" shape="rect">Salesforce B2C Commerce 23.6</a> &gt; <a href="../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html" shape="rect">Open Commerce API 23.2</a> &gt; <a href="../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/APIUsage.html" shape="rect">OCAPI Usage 23.2</a></div>
+
+<div><!-- text added to header of html--></div>
+      <h1 class="title topictitle1" id="ariaid-title1">OCAPI Hooks</h1>
+
+      
+      <div class="body conbody"><p class="shortdesc"> </p>
+
+        <p class="p">The following hooks exist in version 23.2:</p>
+
+        <div class="section"><h2 class="title sectiontitle">Shop API</h2>
+                
+                
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">Request Method</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">Request Path</th>
+<th class="entry cell-norowborder" colspan="1" id="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;">Extension Points</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.beforePOST_v2
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/reference</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.reference.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.reference.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.reference.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.modifyGETResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.modifyPATCHResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/agent</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.agent.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.agent.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.agent.modifyPUTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/approaching_discounts</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.approaching_discounts.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.approaching_discounts.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/billing_address</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.billing_address.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.billing_address.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.billing_address.modifyPUTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/coupons</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.coupon.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.coupon.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.coupon.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/coupons/{coupon_item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.coupon.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.coupon.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.coupon.modifyDELETEResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/customer</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.customer.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.customer.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.customer.modifyPUTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/gift_certificate_items</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/gift_certificate_items/{gift_certificate_item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.modifyDELETEResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/gift_certificate_items/{gift_certificate_item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.gift_certificate_item.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/items</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.items.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.items.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.items.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/items/{item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.item.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.item.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.item.modifyPATCHResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/items/{item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.item.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.item.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.item.modifyDELETEResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/notes</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.note.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.note.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.note.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/notes</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.notes.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.notes.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/notes/{note_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.note.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.note.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.note.modifyDELETEResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/payment_instruments</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/payment_instruments/{payment_instrument_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.modifyPATCHResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/payment_instruments/{payment_instrument_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_instrument.modifyDELETEResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/payment_methods</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.payment_methods.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_methods.afterGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.payment_methods.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/price_adjustments</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/price_adjustments/{price_adjustment_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.modifyDELETEResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/price_adjustments/{price_adjustment_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.price_adjustment.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/shipments</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.shipment.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/shipments/{shipment_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.shipment.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.modifyPATCHResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/shipments/{shipment_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.shipment.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.modifyDELETEResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/shipments/{shipment_id}/shipping_address</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.shipment.shipping_address.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.shipping_address.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.shipping_address.modifyPUTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/shipments/{shipment_id}/shipping_method</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.shipment.shipping_method.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.shipping_method.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipment.shipping_method.modifyPUTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/shipments/{shipment_id}/shipping_methods</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.shipments.shipping_methods.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.shipments.shipping_methods.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/baskets/{basket_id}/storefront</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.basket.storefront.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.storefront.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.storefront.modifyPUTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/categories/({id},...,{id})</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.category.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.category.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/categories/{id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.category.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.category.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/content/({id},...,{id})</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.content.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.content.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/content/{id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.content.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.content.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/content_search</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.content_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.content_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.custom_object.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.custom_object.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/auth</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.auth.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.auth.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.auth.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/password_reset</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customers.password_reset.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customers.password_reset.afterPOST
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/addresses</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.addresses.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.addresses.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/addresses</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.addresses.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.addresses.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.address.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/addresses/{address_name}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.address.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.address.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/addresses/{address_name}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.address.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.address.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/addresses/{address_name}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.address.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.address.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.address.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/auth</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.auth.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.auth.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.auth.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/baskets</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.baskets.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.baskets.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/orders</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.orders.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.orders.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/password_reset</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.password_reset.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.password_reset.afterPOST
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/payment_instruments</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.payment_instruments.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.payment_instruments.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/payment_instruments</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/payment_instruments/{payment_instrument_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/payment_instruments/{payment_instrument_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.payment_instrument.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_lists.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_lists.modifyGETResponse_v3
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_lists.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_lists.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.items.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.items.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.items.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.items.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchases.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchases.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchases.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchases.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchases.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases/{purchase_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchase.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchase.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases/{purchase_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchase.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchase.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.customer.product_list.item.purchase.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/folders/({id},...,{id})</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.folder.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.folder.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/folders/{id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.folder.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.folder.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/gift_certificate</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.gift_certificate.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.gift_certificate.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/order_search</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order_search.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.afterPOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.basket.validateBasket
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.afterPUT
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.modifyPUTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.modifyPATCHResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/notes</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.note.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.note.modifyPOSTResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/notes</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.notes.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.notes.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/notes/{note_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.note.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.note.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.note.modifyDELETEResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/payment_instruments</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.validateOrder
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.modifyPOSTResponse
+                    </li>
+<li class="li">
+                      dw.order.payment.authorize
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.beforePOST
+                    </li>
+<li class="li">
+                      dw.order.payment.authorizeCreditCard
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.afterPOST
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/payment_instruments/{payment_instrument_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.payment_instrument.afterPATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.modifyPATCHResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.validateOrder
+                    </li>
+<li class="li">
+                      dw.order.payment.authorize
+                    </li>
+<li class="li">
+                      dw.order.payment.authorizeCreditCard
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/payment_instruments/{payment_instrument_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.validateOrder
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.afterDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_instrument.modifyDELETEResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/orders/{order_no}/payment_methods</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.order.payment_methods.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.order.payment_methods.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/price_adjustment_limits</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.price_adjustment_limits.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.price_adjustment_limits.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_lists</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_lists.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_lists.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_lists/{list_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_list.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_list.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_lists/{list_id}/items</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_list.items.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_list.items.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_lists/{list_id}/items/{item_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_list.item.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_list.item.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_search</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_search/availability</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_search/images</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_search/prices</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_search/represented_products</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/product_search/variations</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product_search.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product_search.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/({id},...,{id})</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/availability</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/bundled_products</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/images</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/links</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/options</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/prices</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/promotions</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/recommendations</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/set_products</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/shipping_methods</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.shipping_methods.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.shipping_methods.modifyGETResponse_v2
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/products/{id}/variations</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.product.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.product.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/promotions</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.promotions.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.promotions.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/promotions/({id},...,{id})</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.promotion.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.promotion.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/promotions/{id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.promotion.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.promotion.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/search_suggestion</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.search_suggestion.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.search_suggestion.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/site</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.site.beforeGET
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.site.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/stores</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.stores.modifyGETResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.stores.beforeGET
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/stores/({id},...,{id})</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.store.modifyGETResponse
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4245403e36" rowspan="1" style="text-align:left;vertical-align:top;">GET</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4245403e38" rowspan="1" style="text-align:left;vertical-align:top;">/stores/{id}</td>
+<td class="entry cellrowborder" colspan="1" headers="d4245403e40" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.shop.store.modifyGETResponse
+                    </li>
+<li class="li">
+                      dw.ocapi.shop.store.beforeGET
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+              </div>
+<div class="section"><h2 class="title sectiontitle">Data API</h2>
+                
+                
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">Request Method</th>
+<th class="entry nocellnorowborder" colspan="1" id="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">Request Path</th>
+<th class="entry cell-norowborder" colspan="1" id="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;">Extension Points</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.object.beforePut
+                    </li>
+<li class="li">
+                      dw.ocapi.data.object.afterPut
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.object.beforeDelete
+                    </li>
+<li class="li">
+                      dw.ocapi.data.object.afterDelete
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.object.beforePatch
+                    </li>
+<li class="li">
+                      dw.ocapi.data.object.afterPatch
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customers.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customers.afterPOST
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers/{customer_no}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customer.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customer.afterPATCH
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers/{customer_no}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customer.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customer.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers/{customer_no}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customers.beforePUT
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customers.afterPUT
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">POST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers/{customer_no}/addresses</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customer.addresses.beforePOST
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customer.addresses.afterPOST
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers/{customer_no}/addresses/{address_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customer.address.beforePATCH
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customer.address.afterPATCH
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/customer_lists/{list_id}/customers/{customer_no}/addresses/{address_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.customer_list.customer.address.beforeDELETE
+                    </li>
+<li class="li">
+                      dw.ocapi.data.customer_list.customer.address.afterDELETE
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/libraries/{library_id}/content/{content_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.content.content.beforeCreate
+                    </li>
+<li class="li">
+                      dw.ocapi.data.content.content.afterCreate
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/libraries/{library_id}/content/{content_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.content.content.beforeDelete
+                    </li>
+<li class="li">
+                      dw.ocapi.data.content.content.afterDelete
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/libraries/{library_id}/content/{content_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.content.content.beforeUpdate
+                    </li>
+<li class="li">
+                      dw.ocapi.data.content.content.afterUpdate
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/libraries/{library_id}/folders/{folder_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.content.folder.beforeCreate
+                    </li>
+<li class="li">
+                      dw.ocapi.data.content.folder.afterCreate
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/libraries/{library_id}/folders/{folder_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.content.folder.beforeDelete
+                    </li>
+<li class="li">
+                      dw.ocapi.data.content.folder.afterDelete
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/libraries/{library_id}/folders/{folder_id}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.content.folder.beforeUpdate
+                    </li>
+<li class="li">
+                      dw.ocapi.data.content.folder.afterUpdate
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PUT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/sites/{site_id}/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.object.beforePut
+                    </li>
+<li class="li">
+                      dw.ocapi.data.object.afterPut
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">DELETE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/sites/{site_id}/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.object.beforeDelete
+                    </li>
+<li class="li">
+                      dw.ocapi.data.object.afterDelete
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry nocellnorowborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/sites/{site_id}/custom_objects/{object_type}/{key}</td>
+<td class="entry cell-norowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.object.beforePatch
+                    </li>
+<li class="li">
+                      dw.ocapi.data.object.afterPatch
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+<tr class="row"><td class="entry row-nocellborder" colspan="1" headers="d4245403e1780" rowspan="1" style="text-align:left;vertical-align:top;">PATCH</td>
+<td class="entry row-nocellborder" colspan="1" headers="d4245403e1782" rowspan="1" style="text-align:left;vertical-align:top;">/users/this/password</td>
+<td class="entry cellrowborder" colspan="1" headers="d4245403e1784" rowspan="1" style="text-align:left;vertical-align:top;"><ul class="ul">
+                    <li class="li">
+                      dw.ocapi.data.users.afterPATCH
+                    </li>
+
+                  </ul>
+</td>
+</tr>
+
+          </tbody>
+</table>
+</div>
+
+              </div>
+
+      </div>
+
+    <div class="related-links">
+<div class="linklist linklist relinfo relconcepts"><strong>Related concepts</strong><br clear="none"/>
+
+<div><a class="link" href="../../../content/b2c_commerce/topics/b2c_security_best_practices/b2c_using_hooks_securely.html" shape="rect" title="In Salesforce B2C Commerce, you can use hooks as a powerful tool to extend default functionality. Like all powerful tools, however, hooks are dangerous if not used properly.">Using Hooks Securely</a></div></div>
+</div><div><table class="copyright_table" width="100%"><tr><td align="left" colspan="1" rowspan="1"><p class="copyright_footer">© Copyright 2000-2023, Salesforce, Inc. All rights reserved. Various trademarks held by their respective owners.</p></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" id="bookmarklink" onclick="showLink();" shape="rect">Show URL</a><div id="bookmarkme" style="display:none"><!-- --></div></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" onclick="javascript:window.location='mailto:b2ccommercedocfeedback@salesforce.com?subject=' + document.title" shape="rect">Submit Feedback</a></td><td align="right" colspan="1" rowspan="1"><a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy</a></td></tr>
+</table></div><div id="ocapiDeprecationBanner"><a id="closeDeprecationBanner" onclick="closeDeprecationBanner()" shape="rect">X</a>
+<b>OCAPI versions 15.x and 16.x will be retired on March 31, 2021. For dates and more information, see the <a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/VersioningAndDeprecationPolicy.html" shape="rect" target="_blank">OCAPI versioning and deprecation policy</a> and this <a href="https://help.salesforce.com/articleView?id=000351399&amp;language=en_US&amp;type=1&amp;mode=1" shape="rect" target="_blank">Knowledge Article</a>.</b></div>
+<div id="cookieConsent"><a id="closeCookieConsent" onclick="closeBanner()" shape="rect">X</a>
+<b>Privacy Update:</b>    We use cookies to make interactions with our websites and services easy and meaningful, to better understand how they are used. By continuing to use this site you are giving us your consent to do this. <a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy.</a>
+</div>
+<script type="text/javascript" xml:space="preserve">
+window.onload = function () {
+	
+	var ssFlag;
+	var ocapiBannerElement =  document.getElementById('ocapiDeprecationBanner');
+	
+	// If we're not in the correct infocenter, don't bother going further.
+	// Return immediately.
+	if( location.hostname != "documentation.b2c.commercecloud.salesforce.com" ) {
+		return;                                      
+	}
+
+
+	// Show the OCAPI deprecation banner for English
+	if ( typeof(ocapiBannerElement) != 'undefined' ) {
+		if ( ocapiBannerElement != null ) {
+			ocapiBannerElement.style.display = "none";
+		}
+	}
+
+
+	// If sessionStorage is supported, check if the sessionConsentFlag is true.
+	// Return immediately if true.
+	if(ssTest() === true){  
+    	ssFlag = true;
+    	if ( sessionStorage.getItem('sessionConsentFlag') == 'true' ) {
+			return;                
+		} 
+	}	
+	 
+	// If localStorage isn't supported, return immediately.
+	// If it is supported, check if the localConsentFlag is true.
+	// Return immediately if true; othewise, display the banner and wait 
+	// for the user's response.
+	if(lsTest() === true){   
+    	if ( localStorage.getItem('localConsentFlag') == 'true' ) {
+			return;                
+		}else{
+			// Display the banner
+			document.getElementById("cookieConsent").style.display = "none";
+		} 
+	}else{
+    	return; 
+	}
+
+	return;
+}
+
+// Close the banner and set the flags.
+function closeBanner() {
+	document.getElementById("cookieConsent").style.display = "none";
+	localStorage.setItem('localConsentFlag', 'true');
+	if(ssFlag) {
+		sessionStorage.setItem('sessionConsentFlag', 'true');
+	}
+	return;
+}
+
+// Close the deprecation banner.
+function closeDeprecationBanner() {
+	var ocapiBannerElem =  document.getElementById('ocapiDeprecationBanner');
+	if ( typeof(ocapiBannerElem) != 'undefined' ) {
+		if ( ocapiBannerElem != null ) {
+			ocapiBannerElem.style.display = "none";
+		}
+	}
+	return;
+}
+
+function lsTest(){
+    var lcTest = 'test';
+    try {
+        localStorage.setItem(lcTest, lcTest);
+        localStorage.removeItem(lcTest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+function ssTest(){
+    var sstest = 'test';
+    try {
+        sessionStorage.setItem(sstest, sstest);
+        sessionStorage.removeItem(sstest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+</script>
+</body>
+
+
+</html>

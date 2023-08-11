@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-148075995-1" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148075995-1');
+</script>
+
+<link href="https://developer.salesforce.com/docs/commerce/b2c-commerce/references/b2c-commerce-ocapi/exceptions.html" rel="canonical"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+
+<meta content="(C) Copyright 2023" name="copyright"/>
+<meta content="(C) Copyright 2023" name="DC.rights.owner"/>
+<meta content="concept" name="DC.Type"/>
+<meta content="OCAPI Global Exceptions 23.2" name="DC.Title"/>
+<meta content="" name="abstract"/>
+<meta content="" name="description"/>
+<meta content="XHTML" name="DC.Format"/>
+<meta content="GlobalExceptions23.2" name="DC.Identifier"/>
+<meta content="en-us" name="DC.Language"/>
+<link href="../../../css/commonltr.css" rel="stylesheet" type="text/css"/><script src="../../../scripts/jquery-3.5.0.min.js" type="text/javascript" xml:space="preserve"> //  // </script><script src="../../../scripts/dwScript.js" type="text/javascript" xml:space="preserve"> //  // </script>
+<title>OCAPI Global Exceptions 23.2</title>
+<!-- text added to HEAD tag-->
+<script src="../../../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+
+<link charset="ISO-8859-1" href="../../../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css"/>
+<script src="../../../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == "blah" ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../../../index.jsp?topic=%2Fcom.demandware.dochelp%2FOCAPI%2Fcurrent%2Fusage%2FExceptions.html" + anchorParam);
+}
+</script>
+<style>
+@import url(//fonts.googleapis.com/css?family=Salesforce+Sans:400,400italic,bold,bolditalic);
+
+/*
+ | This file is part of the DITA Open Toolkit project. See the accompanying license.txt file for
+ | applicable licenses.
+*/
+/*
+ | (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved.
+ */
+.unresolved { background-color: skyblue }
+.noTemplate { background-color: yellow }
+.base { background-color: #ffffff }
+/* Add space for top level topics */
+/*.nested0 { margin-top : 1em }*/
+/* div with class=p is used for paragraphs that contain blocks, to keep the XHTML valid */
+.p { margin-top: 1em }
+/* Default of italics to set apart figure captions */
+.figcap { font-style: italic }
+.figdesc { font-style: normal }
+/* Use @frame to create frames on figures */
+.figborder {
+    border-style: solid;
+    padding-left : 3px;
+    border-width : 2px;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figsides {
+    border-left : 2px solid;
+    padding-left : 3px;
+    border-right : 2px solid;
+    padding-right : 3px;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figtop {
+    border-top : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+.figbottom {
+    border-bottom : 2px solid;
+    border-color : Silver;
+}
+.figtopbot {
+    border-top : 2px solid;
+    border-bottom : 2px solid;
+    margin-top: 1em;
+    border-color : Silver;
+}
+/* Most link groups are created with <div>. Ensure they have space before and after. */
+.ullinks {
+  list-style-type: none;
+}
+.ulchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.olchildlink {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.linklist {
+  margin-bottom: 1em;
+}
+.linklistwithchild {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.sublinklist {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+.relconcepts {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.reltasks {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relref {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.relinfo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.breadcrumb {
+    font-size : 1em;
+    margin-bottom: 1em;
+}
+dt.prereq { margin-left : 20px }
+/* Set heading sizes, getting smaller for deeper nesting */
+.topictitle1 {
+    color: #333333;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.5em;
+	margin-top: .5em
+}
+.topictitle2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle3 {
+    /* margin-top: 1pc;
+    margin-bottom: .17em;*/
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.topictitle4 {
+    /* margin-top: .83em; */
+    font-size: 1.4em;
+}
+.topictitle5 { font-size: 1.2em }
+.topictitle6 {
+    font-size: 1.2em;
+    font-style: italic;
+}
+.sectiontitle {
+    font-size: 1.6em;
+    font-style: bold;
+}
+.section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.example {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+div.tasklabel {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h2.tasklabel,
+h3.tasklabel,
+h4.tasklabel,
+h5.tasklabel,
+h6.tasklabel { font-size: 100% }
+/* All note formats have the same default presentation */
+.note {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.notetitle { font-weight: bold }
+.notelisttitle { font-weight: bold }
+.tip {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.tiptitle { font-weight: bold }
+.fastpath {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.fastpathtitle { font-weight: bold }
+.important {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.importanttitle { font-weight: bold }
+.remember {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.remembertitle { font-weight: bold }
+.restriction {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.restrictiontitle { font-weight: bold }
+.attention {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.attentiontitle { font-weight: bold }
+.dangertitle { font-weight: bold }
+.danger {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.cautiontitle { font-weight: bold }
+.caution {
+    font-weight: bold;
+    margin-bottom : 1em;
+}
+.warning {
+    margin-top: 1em;
+    margin-bottom : 1em;
+}
+.warningtitle { font-weight: bold }
+/* Simple lists do not get a bullet */
+ul.simple { list-style-type: none }
+/* Used on the first column of a table, when rowheader="firstcol" is used */
+.firstcol { font-weight : bold }
+/* Various basic phrase styles */
+.bold { font-weight: bold }
+.boldItalic {
+    font-weight: bold;
+    font-style: italic;
+}
+.italic { font-style: italic }
+.underlined { text-decoration: underline }
+.uicontrol { font-weight: bold }
+.parmname { font-weight: bold }
+.kwd { font-weight: bold }
+.defkwd {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.var { font-style : italic }
+.shortcut { text-decoration: underline }
+/* Default of bold for definition list terms */
+.dlterm { font-weight: bold }
+/* Use CSS to expand lists with @compact="no" */
+.dltermexpand {
+    font-weight: bold;
+    margin-top: 1em;
+}
+*[compact="yes"]>li { margin-top: 0em }
+*[compact="no"]>li { margin-top: .53em }
+.liexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.sliexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.dlexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.ddexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.stepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.substepexpand {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* Align images based on @align on topic/image */
+div.imageleft { text-align: left }
+div.imagecenter { text-align: center }
+div.imageright { text-align: right }
+div.imagejustify { text-align: justify }
+/* The cell border can be turned on with
+   {border-right:solid}
+   This value creates a very thick border in Firefox (does not match other tables)
+
+   Firefox works with
+   {border-right:solid 1pt}
+   but this causes a barely visible line in IE */
+
+pre.screen {
+    padding: 5px 5px 5px 5px;
+    border: outset;
+    background-color: #CCCCCC;
+    margin-top: 2px;
+    margin-bottom : 2px;
+    white-space: pre;
+}
+/* Demandware Styles */
+
+span.filepath {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 10px 0;
+}
+
+.nocellnorowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.cellrowborder {
+   border: 1px solid #ACB1B7;
+}
+.row-nocellborder {
+    border: 1px solid #ACB1B7;
+}
+.cell-norowborder {
+    border: 1px solid #ACB1B7;
+}
+
+.topictitle1{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle2{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.topictitle3{
+    color: #253045;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+.sectiontitle{
+    color: #706e6b;
+    font-family: "Salesforce Sans", "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+body {
+    /* background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #DADADA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    */
+    color: #111111;
+    font-family: "Salesforce Sans", Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    line-height: 1.4em;
+    padding: 10px;
+}
+li { padding-top: 1em }
+p.subheading1 { font-size: 1.4em }
+p.subheading2 { font-size: 1.2em }
+.copyright_footer {
+	 font-size: 1em;
+	 font-style: italic;
+}
+a:link,
+a:visited { color: #008CB9 }
+a:hover,
+a:focus {
+    color: #3778C7;
+    text-decoration: underline;
+}
+strong { color: #000000 }
+.help_breadcrumbs,
+.help_breadcrumbs a {
+    color: #1589ee;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0 0 0px;
+    text-decoration: none;
+	margin: 0px;
+}
+.help_breadcrumbs a:hover { text-decoration: underline }
+.related-links { font-size: 11px }
+div.header{
+	line-height: 1em;
+}
+
+.alignleft {
+	float: left;
+	font-size: 1em;
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+
+}
+.alignright {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+li table {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+div.tablenoborder {
+	margin-top: 1em;
+}
+
+
+table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table th {
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8');; ;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eef0f4', endColorstr = '#ccd1d8')";
+    background-image: -moz-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -ms-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -o-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#eef0f4), to(#ccd1d8));
+    background-image: -webkit-linear-gradient(top, #eef0f4, #ccd1d8);
+    background-image: linear-gradient(top, #eef0f4, #ccd1d8);*/
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    color: #4F5762;
+    font-size: 1em;
+    font-weight: bold;
+    /* padding: 10px 3px 8px 5px; */
+    padding: 1em;
+}
+table.table td,
+table.simpletable td {
+    border: 1px solid #ACB1B7;
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*//*Element must have a height (not auto)*//*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e5e5e5')"; */
+    /*Element must have a height (not auto)*//*All filters must be placed together*/
+    /* background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+    background-image: linear-gradient(top, #ffffff, #e5e5e5);*/
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+    /* padding: 12px 3px 12px 5px; */
+    padding: 1em;
+}
+table.copyright_table {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-collapse: collapse;
+    padding: 0px;
+	margin:0;
+}
+
+table.copyright_table td {
+    padding: 0px;
+	margin:0;
+}
+
+body .resultofText {
+    background-color: transparent;
+    color: #60a345;
+}
+pre {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    /* font-weight: bold; */
+    margin: 8px;
+    padding: 8px;
+    overflow-x: auto;
+}
+pre code {
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.codeph {
+    color: #000000;
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+}
+.note {
+    background: url("../com.demandware.standard.infocenter/doc/icon_note.png") no-repeat scroll 6px 9px #efefef;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #333333;
+/*    font-family: Verdana,Arial,Helvetica,sans-serif;  */
+    font-size: 1em;
+    padding: 10px 10px 10px 26px;
+}
+.hidden { display: none; }
+.shown { display: block; }
+div[role=search]{
+	background-color: #25282A;
+	color: #CCCCCC;
+}
+a:link.scopeLabel {color:#FFB549;}
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #F1D600;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    float: right;
+    margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #E0C91F;
+}
+#ocapiDeprecationBanner {
+    background-color: #0747a6;
+    min-height: 26px;
+    font-size: 14px;
+    color: white;
+    line-height: 26px;
+    padding: 8px 0 8px 30px;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9999;
+}
+#ocapiDeprecationBanner a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeDeprecationBanner {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 0 0 0;
+    font-weight: bold;
+}
+.help_breadcrumbs { display: none !important; }
+.copyright_table td { display: none; }
+copyright_table td:nth-child(4) { display: table-cell; }
+</style>
+<body id="GlobalExceptions23.2">
+<div class="help_breadcrumbs"><a href="../../../../../topic/com.demandware.dochelp/content/b2c_commerce/topics/getting_started/b2c_welcome.html" shape="rect">Salesforce B2C Commerce 23.6</a> &gt; <a href="../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/OpenCommerceAPI.html" shape="rect">Open Commerce API 23.2</a> &gt; <a href="../../../../../topic/com.demandware.dochelp/OCAPI/current/usage/APIUsage.html" shape="rect">OCAPI Usage 23.2</a></div>
+
+<div><!-- text added to header of html--></div>
+  <h1 class="title topictitle1" id="ariaid-title1">OCAPI Global Exceptions 23.2</h1>
+    <div class="body conbody"><p class="shortdesc"> </p>
+
+    <p class="p">The following table lists all OCAPI global exceptions:</p>
+
+
+    <div class="section">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" rules="all" summary=""><colgroup span="1"><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><thead class="thead" style="text-align:left;">
+            <tr class="row">
+              <th class="entry nocellnorowborder" colspan="1" id="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">Status</th>
+
+
+              <th class="entry nocellnorowborder" colspan="1" id="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;">Type</th>
+
+
+              <th class="entry nocellnorowborder" colspan="1" id="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;">Arguments</th>
+
+
+              <th class="entry cell-norowborder" colspan="1" id="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+
+            </tr>
+
+          </thead>
+<tbody class="tbody">
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">BodyDecodingException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">body (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The request document (body) could not be decoded.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">EnumConstraintViolationException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">document (String)</p>
+<p class="p">enumValue (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Invalid enum value provided.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">FieldNotSortableException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified field is not sortable.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">HookStatusException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">extensionPoint (String)</p>
+<p class="p">statusCode
+              (String)</p>
+<p class="p">statusMsg (String)</p>
+<p class="p">statusDetails
+              (Map)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">An OCAPI server side extension point returned a status of
+              type error. The exception contains details like extension point
+              name, status code, status message and custom status
+              details.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">IllegalEnumerationValueException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">value (String)</p>
+<p class="p">type (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Illegal enum value provided for field type.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">IllegalHttpMethodOverrideException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">method (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The HTTP method provided via
+              <em class="ph i">x-dw-http-method-override</em> header or <em class="ph i">method</em> query
+              parameter is not allowed. HTTP methods 'PUT', 'PATCH', 'DELETE',
+              'HEAD' and 'OPTIONS' are supported as override method.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidClientIdException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">clientId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The provided client id is not the expected one for this
+              token request.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidCustomPropertyException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Cannot write custom property. Value is either invalid or
+              type doesn't support modification.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidExpandValueException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">expandValue (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified expand value is not allowed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidHostHeaderException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">host (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The host name is invalid. Not contained in the server allow list.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidSearchFieldTypeException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+<p class="p">value (String)</p>
+<p class="p">type
+              (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The type of the search value does not match the expected
+              field type.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidVersionException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Version is missing or malformed in request URL.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedLocaleException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">locale (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified locale is malformed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedMediaTypeException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">mediaType (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The media type in <em class="ph i">Content-Type</em> header is
+              malformed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedParameterException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">parameter (String)</p>
+<p class="p">value (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">A query, header or path parameter value is
+              malformed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MalformedSelectorException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">selector (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The syntax of the specified selector is
+              malformed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MissingClientIdException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">No client id was provided, neither as query nor as header
+              parameter.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">NullConstraintViolationException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">parameter (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The query or path parameter value is required, but value
+              was null.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">PropertyConstraintViolationException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">document (String)</p>
+<p class="p">path (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The value constraint of a document property is
+              violated.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">PropertyNotPermittedException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">property (String)</p>
+<p class="p">document (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">A property in the given request document is not permitted
+              to be modified.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">QuerySearchTypesNomatchException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field1 (String)</p>
+<p class="p">field2 (String)</p>
+<p class="p">type1
+              (String)</p>
+<p class="p">type2 (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The fields in the specified query don't have the same
+              type.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">QuotaExceededException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">msg (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">A platform quota constraint is violated.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RangeFilterTypeException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+<p class="p">type (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified field type is not comparable in a range
+              expression.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RangeFilterValueException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+<p class="p">value (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified value is not comparable in a range
+              expression.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ResourcePathException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">message (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The resource path was completely incorrect.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">SearchOperatorNotApplicableException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">operator (String)</p>
+<p class="p">field (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified search operator is not applicable for the
+              search field.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">StartAfterEndException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">document (String)</p>
+<p class="p">resourceId
+              (String)</p>
+<p class="p">startDate (DateTime)</p>
+<p class="p">endDate
+              (DateTime)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified start date is greater than the end
+              date.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">StringConstraintViolationException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">parameter (String)</p>
+<p class="p">expected (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The value constraint of a String query or path parameter
+              is violated.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">TermOperatorMismatchValuesException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+<p class="p">operator (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The search operator doesn't match the specified
+              values.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">TypeDecodingException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">path (String)</p>
+<p class="p">expectedTypes
+              (String)</p>
+<p class="p">actualType (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The type of a document property is invalid.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnexpectedVersionException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">version (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The version of the request document is invalid. It has to
+              be the URL version.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownLocaleException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">locale (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified locale is unknown.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownPropertyException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">property (String)</p>
+<p class="p">document (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">A property in the given request document is
+              unknown.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownSearchFieldException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The search field is unknown.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownSearchOperatorException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">operator (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified search operator is unknown.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownSiteIdException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">siteId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The site id provided for a site-specific property is
+              unknown.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnqueryableFieldException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">field (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified search field in not queryable.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnsupportedCurrencyException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">currency (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified currency is invalid (must be ISO 4217) or
+              not supported.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnsupportedLocaleException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">locale (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The specified locale is not supported/activated.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">400</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ValueConstraintViolationException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">parameter (String)</p>
+<p class="p">expected (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The value constraint of a Non-String query or path
+              parameter is violated.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">AuthorizationHeaderMissingException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;"><em class="ph i">Authorization</em> header is missing.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">DemoClientIdException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">clientId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Demo client ids are not allowed to be used on
+              development, staging or production instances. Demo client ids
+              are permitted on sandbox instances only.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidAccessTokenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">accessToken (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The OAuth access token sent via <em class="ph i">Authorization:
+              Bearer</em> header is invalid.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidAuthorizationHeaderException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Invalid <em class="ph i">Authorization</em> header. Value should be
+              something like 'Bearer {access_token}'.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidSecureTokenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The session secure token is invalid. Session may have
+              been hijacked.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnauthorizedOriginException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">origin (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The request origin is not authorized to perform the
+              request.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnauthorizedReadAccessException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">method (String)</p>
+<p class="p">path (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The client application has no READ privileges for the
+              resource.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnauthorizedWriteAccessException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">method (String)</p>
+<p class="p">path (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The client application has no WRITE privileges for the
+              resource.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">401</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownClientIdException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">clientId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">No client application found for specified client
+              id.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">AccessWithoutUserForbiddenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">To access the resource an authenticated user is
+              required.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ClientAccessForbiddenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">method (String)</p>
+<p class="p">path (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The current client is not authorized to access the
+              resource.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">OrganizationAccessForbiddenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Global access via "/s/-/" is forbidden. Expected
+              site-specific access via "/s/{site-id}/".</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">SecureCommunicationRequiredException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The request requires a secure connection (HTTPS).</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">SiteAccessForbiddenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">siteId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Site-specific access via "/s/{site-id}/" is forbidden.
+              Expected global access via "/s/-/".</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">SiteOfflineException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">siteId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Access to the offline site is forbidden.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">403</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UserAccessForbiddenException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">method (String)</p>
+<p class="p">path (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The current user is not authorized to access the
+              resource.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">CurrencyNotFoundException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">currencyId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">No currency found for specified mnemonic. Expected ISO
+              4217 mnemonic code.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ResourcePathNotFoundException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">path (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The resource could not be found in specified API and
+              version.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnknownSiteException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">siteId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">No site found for specified site id.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">404</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">VersionNotFoundException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">version (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Version specified in URL is either unknown.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">405</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">MethodNotAllowedException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">method (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The HTTP method is not allowed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">406</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">CharsetNotAcceptableException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">charset (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Unsupported charset in <em class="ph i">Accept-Charset</em> header. Only
+              UTF-8 is allowed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">409</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">IfMatchRequiredException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;"><em class="ph i">If-Match</em> header is required, but no one was
+              provided.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">409</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ObjectInDeletionConflictException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">objectId (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Object is already in (asynchronous) deletion.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">409</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">ResourceStateConflictException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">client (String)</p>
+<p class="p">server (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">A state token was sent with the request and does not
+              match the object's state on server side.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">412</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">InvalidIfMatchException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">ifMatch (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">The If-Match header entity tag is invalid or
+              out-dated.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">413</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">RequestEntityTooLargeException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"> </td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Request body size limit of 5 MB has been
+              exceeded.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">415</td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnsupportedContentTypeException</code></td>
+
+
+              <td class="entry nocellnorowborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">contentType (String)</p>
+</td>
+
+
+              <td class="entry cell-norowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Unsupported media type in <em class="ph i">Content-Type</em> header.
+              Only 'application/json', 'application/xml' and 'text/xml' are
+              allowed.</td>
+
+            </tr>
+
+
+            <tr class="row">
+              <td class="entry row-nocellborder" colspan="1" headers="d4240885e33" rowspan="1" style="text-align:left;vertical-align:top;">415</td>
+
+
+              <td class="entry row-nocellborder" colspan="1" headers="d4240885e36" rowspan="1" style="text-align:left;vertical-align:top;"><code class="ph codeph">UnsupportedFormatException</code></td>
+
+
+              <td class="entry row-nocellborder" colspan="1" headers="d4240885e39" rowspan="1" style="text-align:left;vertical-align:top;"><p class="p">format (String)</p>
+</td>
+
+
+              <td class="entry cellrowborder" colspan="1" headers="d4240885e42" rowspan="1" style="text-align:left;vertical-align:top;">Unsupported format in <em class="ph i">format</em> query parameter. Only
+              'json' and 'xml' are allowed.</td>
+
+            </tr>
+
+          </tbody>
+</table>
+</div>
+</div>
+
+  </div>
+
+<div><table class="copyright_table" width="100%"><tr><td align="left" colspan="1" rowspan="1"><p class="copyright_footer">© Copyright 2000-2023, Salesforce, Inc. All rights reserved. Various trademarks held by their respective owners.</p></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" id="bookmarklink" onclick="showLink();" shape="rect">Show URL</a><div id="bookmarkme" style="display:none"><!-- --></div></td>
+<td align="right" colspan="1" rowspan="1"><a href="#" onclick="javascript:window.location='mailto:b2ccommercedocfeedback@salesforce.com?subject=' + document.title" shape="rect">Submit Feedback</a></td><td align="right" colspan="1" rowspan="1"><a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy</a></td></tr>
+</table></div><div id="ocapiDeprecationBanner"><a id="closeDeprecationBanner" onclick="closeDeprecationBanner()" shape="rect">X</a>
+<b>OCAPI versions 15.x and 16.x will be retired on March 31, 2021. For dates and more information, see the <a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/OCAPI/current/usage/VersioningAndDeprecationPolicy.html" shape="rect" target="_blank">OCAPI versioning and deprecation policy</a> and this <a href="https://help.salesforce.com/articleView?id=000351399&amp;language=en_US&amp;type=1&amp;mode=1" shape="rect" target="_blank">Knowledge Article</a>.</b></div>
+<div id="cookieConsent"><a id="closeCookieConsent" onclick="closeBanner()" shape="rect">X</a>
+<b>Privacy Update:</b>    We use cookies to make interactions with our websites and services easy and meaningful, to better understand how they are used. By continuing to use this site you are giving us your consent to do this. <a href="https://www.salesforce.com/company/privacy/" shape="rect" target="_blank">Privacy Policy.</a>
+</div>
+<script type="text/javascript" xml:space="preserve">
+window.onload = function () {
+	
+	var ssFlag;
+	var ocapiBannerElement =  document.getElementById('ocapiDeprecationBanner');
+	
+	// If we're not in the correct infocenter, don't bother going further.
+	// Return immediately.
+	if( location.hostname != "documentation.b2c.commercecloud.salesforce.com" ) {
+		return;                                      
+	}
+
+
+	// Show the OCAPI deprecation banner for English
+	if ( typeof(ocapiBannerElement) != 'undefined' ) {
+		if ( ocapiBannerElement != null ) {
+			ocapiBannerElement.style.display = "none";
+		}
+	}
+
+
+	// If sessionStorage is supported, check if the sessionConsentFlag is true.
+	// Return immediately if true.
+	if(ssTest() === true){  
+    	ssFlag = true;
+    	if ( sessionStorage.getItem('sessionConsentFlag') == 'true' ) {
+			return;                
+		} 
+	}	
+	 
+	// If localStorage isn't supported, return immediately.
+	// If it is supported, check if the localConsentFlag is true.
+	// Return immediately if true; othewise, display the banner and wait 
+	// for the user's response.
+	if(lsTest() === true){   
+    	if ( localStorage.getItem('localConsentFlag') == 'true' ) {
+			return;                
+		}else{
+			// Display the banner
+			document.getElementById("cookieConsent").style.display = "none";
+		} 
+	}else{
+    	return; 
+	}
+
+	return;
+}
+
+// Close the banner and set the flags.
+function closeBanner() {
+	document.getElementById("cookieConsent").style.display = "none";
+	localStorage.setItem('localConsentFlag', 'true');
+	if(ssFlag) {
+		sessionStorage.setItem('sessionConsentFlag', 'true');
+	}
+	return;
+}
+
+// Close the deprecation banner.
+function closeDeprecationBanner() {
+	var ocapiBannerElem =  document.getElementById('ocapiDeprecationBanner');
+	if ( typeof(ocapiBannerElem) != 'undefined' ) {
+		if ( ocapiBannerElem != null ) {
+			ocapiBannerElem.style.display = "none";
+		}
+	}
+	return;
+}
+
+function lsTest(){
+    var lcTest = 'test';
+    try {
+        localStorage.setItem(lcTest, lcTest);
+        localStorage.removeItem(lcTest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+function ssTest(){
+    var sstest = 'test';
+    try {
+        sessionStorage.setItem(sstest, sstest);
+        sessionStorage.removeItem(sstest);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+</script>
+</body>
+
+
+</html>

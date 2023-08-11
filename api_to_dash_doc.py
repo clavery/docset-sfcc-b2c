@@ -194,108 +194,65 @@ for f in os.listdir('./docs/xsd/'):
 
 conn.commit()
 
+# Quota
+
+if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/quota/"):
+    shutil.rmtree("./SFCC_API.docset/Contents/Resources/Documents/quota/")
+shutil.copytree("./docs/quota/html/", "./SFCC_API.docset/Contents/Resources/Documents/quota")
+
+c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('Quotas', 'Setting', 'quota/index.html');")
+c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('API Quotas', 'Setting', 'quota/API_Quotas.html');")
+c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('Object Quotas', 'Setting', 'quota/Object_Quotas.html');")
+conn.commit()
+
 # ## OCAPI
-
-V = "current"
-OCAPI_PREFIX = '/DOC3/topic/com.demandware.dochelp/OCAPI/%s/' % V
-OCAPI_INDICIES = [
-    'https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/OCAPI/%s/shop/Resources/index.html' % V,
-    'https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/OCAPI/%s/data/Resources/index.html' % V,
-    'https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/OCAPI/%s/usage/APIUsage.html?cp=0_12_2' % V,
-    'https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/OCAPI/%s/shop/Documents/index.html' % V,
-    'https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/OCAPI/%s/data/Documents/index.html' % V
-]
-
-NS = "{http://www.w3.org/1999/xhtml}"
-NSMAP = {
-    "X" : "http://www.w3.org/1999/xhtml"
-}
-from urllib.parse import urlparse
-LINKS = set()
-for page in OCAPI_INDICIES:
-    r = requests.get(page)
-    content = r.content.decode('utf-8').replace('self == top', 'self == "blah"').encode('utf-8')
-    parser = ET.HTMLParser()
-    content = ET.fromstring(content, parser)
-    parsed_url = urlparse(page)
-    dirname = os.path.normpath(os.path.dirname(parsed_url.path))
-    if OCAPI_PREFIX not in dirname:
-        continue
-
-    for link in content.xpath("//a", namespaces=NSMAP):
-        if 'href' not in link.attrib:
-            continue
-        href = link.attrib['href']
-        if href.startswith("https://www"):
-            continue
-        normalized = os.path.normpath(os.path.join(dirname, href))
-        full_link = urlparse(f"{parsed_url.scheme}://{parsed_url.netloc}{normalized}")
-        full_link = f"{full_link.scheme}://{full_link.netloc}{full_link.path}"
-        if OCAPI_PREFIX not in full_link:
-            continue
-        if full_link.endswith('.html') and "DOC3" in full_link:
-            LINKS.add(full_link)
-
-resp = requests.get('https://documentation.b2c.commercecloud.salesforce.com/DOC3/topic/com.demandware.dochelp/css/commonltr.css')
-css = f"""<style>
-{resp.content.decode('utf-8')}
-.help_breadcrumbs {{ display: none !important; }}
-.copyright_table td {{ display: none; }}
-copyright_table td:nth-child(4) {{ display: table-cell; }}
-</style>"""
 
 if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/ocapi"):
     shutil.rmtree("./SFCC_API.docset/Contents/Resources/Documents/ocapi")
-
-if not os.path.exists('./SFCC_API.docset/Contents/Resources/Documents/ocapi/'):
-    os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/ocapi/shop/Documents')
-    os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/ocapi/data/Documents')
-    os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/ocapi/shop/Resources')
-    os.makedirs('./SFCC_API.docset/Contents/Resources/Documents/ocapi/data/Resources')
+shutil.copytree("./ocapi", "./SFCC_API.docset/Contents/Resources/Documents/ocapi")
 
 
-for link in LINKS:
-    r = requests.get(link)
-    r.raise_for_status()
-    content = r.content.decode('utf-8').replace('self == top', 'self == "blah"')
-    content = content.replace("</head>", css)
-    parser = ET.HTMLParser()
-    content_html = ET.fromstring(content.encode("utf-8"), parser)
-    title = content_html.xpath('//title')[0].text
-    if "(" in title:
-        title = title[:title.index('(') - 1]
+# list contents of directory
+LINKS = []
+for root, dirs, files in os.walk("./SFCC_API.docset/Contents/Resources/Documents/ocapi/data/Documents"):
+    for file in files:
+        if file.endswith(".html"):
+            entry_type = "Type"
+            entry_name = "DATADOC " + os.path.splitext(file)[0]
+            entry_folder = "data/Documents/"
+            c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
+                      (entry_name, entry_type, "ocapi/%s%s" % (entry_folder, file)))
+for root, dirs, files in os.walk("./SFCC_API.docset/Contents/Resources/Documents/ocapi/data/Resources"):
+    for file in files:
+        if file.endswith(".html"):
+            entry_type = "Resource"
+            entry_name = "DATAAPI " + os.path.splitext(file)[0]
+            entry_folder = "data/Resources/"
+            c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
+                      (entry_name, entry_type, "ocapi/%s%s" % (entry_folder, file)))
+for root, dirs, files in os.walk("./SFCC_API.docset/Contents/Resources/Documents/ocapi/shop/Documents"):
+    for file in files:
+        if file.endswith(".html"):
+            entry_type = "Type"
+            entry_name = "SHOPDOC " + os.path.splitext(file)[0]
+            entry_folder = "shop/Documents/"
+            c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
+                      (entry_name, entry_type, "ocapi/%s%s" % (entry_folder, file)))
+for root, dirs, files in os.walk("./SFCC_API.docset/Contents/Resources/Documents/ocapi/shop/Resources"):
+    for file in files:
+        if file.endswith(".html"):
+            entry_type = "Resource"
+            entry_name = "SHOPAPI " + os.path.splitext(file)[0]
+            entry_folder = "shop/Resources/"
+            c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
+                      (entry_name, entry_type, "ocapi/%s%s" % (entry_folder, file)))
 
-    # replace DWAPI/scriptapi/html with Documents for relative paths to script APIs
-    content = content.replace('DWAPI/scriptapi/html', 'Documents')
-
-    name, ext = os.path.splitext(os.path.basename(link))
-    if "shop/Resources" in link:
-        entry_type = "Resource"
-        entry_name = "SHOPAPI " + name
-        entry_folder = "shop/Resources/"
-    elif "shop/Documents" in link:
-        entry_type = "Type"
-        entry_name = "SHOPDOC "  + name
-        entry_folder = "shop/Documents/"
-    elif "data/Resources" in link:
-        entry_type = "Resource"
-        entry_name = "DATAAPI " + name
-        entry_folder = "data/Resources/"
-    elif "data/Documents" in link:
-        entry_type = "Type"
-        entry_name = "DATADOC "  + name
-        entry_folder = "data/Documents/"
-    else:
+for f in os.listdir("./SFCC_API.docset/Contents/Resources/Documents/ocapi/"):
+    if f.endswith(".html"):
         entry_type = "Guide"
-        entry_name = title
-        entry_folder = ""
-
-    print(entry_type, entry_name)
-
-    c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
-              (entry_name, entry_type, "ocapi/%s%s" % (entry_folder, name+".html")))
-    with open(os.path.join('./SFCC_API.docset/Contents/Resources/Documents/ocapi/%s' % entry_folder, name+".html"), 'w') as f:
-        f.write(content)
+        entry_name = "OCAPI " + os.path.splitext(f)[0]
+        c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', '%s', '%s');" %
+                  (entry_name, entry_type, "ocapi/%s" % (f)))
 
 conn.commit()
 conn.close()
