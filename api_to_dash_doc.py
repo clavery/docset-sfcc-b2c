@@ -68,6 +68,14 @@ for link in d('.classesName a'):
 
     print("scriptapi", name, title)
 
+    # append the online link to the first line of the file for dash
+    filename = "./SFCC_API.docset/Contents/Resources/Documents/api/%s" % path
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    lines[0] = "<html><!-- Online page at https://salesforcecommercecloud.github.io/b2c-dev-doc/docs/current/scriptapi/html/api/%s -->\n" % (path)
+    with open(filename, 'w') as file:
+        file.writelines(lines)
+
     c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Class', '%s');" %
               (name, "api/%s" % path))
 
@@ -89,13 +97,21 @@ for link in d('.classesName a'):
 
     print("jobstep", name)
 
+    # append the online link to the first line of the file for dash
+    filename = "./SFCC_API.docset/Contents/Resources/Documents/jobstepapi/%s" % path
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    lines[0] = "<html><!-- Online page at https://salesforcecommercecloud.github.io/b2c-dev-doc/docs/current/jobstepapi/html/api/%s -->\n" % (path)
+    with open(filename, 'w') as file:
+        file.writelines(lines)
+
     c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Builtin', '%s');" %
               (name, "jobstepapi/%s" % path))
 
 conn.commit()
 
 # Pipelet API
-
+# https://salesforcecommercecloud.github.io/b2c-dev-doc/docs/current/pipeletapi/html/api/pipelet.CreateCustomer.html
 if os.path.exists("./SFCC_API.docset/Contents/Resources/Documents/pipelet/"):
     shutil.rmtree("./SFCC_API.docset/Contents/Resources/Documents/pipelet/")
 shutil.copytree("./docs/pipeletapi/html/api/", "./SFCC_API.docset/Contents/Resources/Documents/pipelet")
@@ -108,6 +124,14 @@ for link in d('.classesName a'):
     path = link.attrib["href"]
 
     print("pipelet", name)
+
+    # append the online link to the first line of the file for dash
+    filename = "./SFCC_API.docset/Contents/Resources/Documents/pipelet/%s" % path
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    lines[0] = "<html><!-- Online page at https://salesforcecommercecloud.github.io/b2c-dev-doc/docs/current/pipeletapi/html/api/%s -->\n" % (path)
+    with open(filename, 'w') as file:
+        file.writelines(lines)
 
     c.execute("INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('%s', 'Procedure', '%s');" %
               (name, "pipelet/%s" % path))
@@ -213,7 +237,6 @@ shutil.copytree("./ocapi", "./SFCC_API.docset/Contents/Resources/Documents/ocapi
 
 
 # list contents of directory
-LINKS = []
 for root, dirs, files in os.walk("./SFCC_API.docset/Contents/Resources/Documents/ocapi/data/Documents"):
     for file in files:
         if file.endswith(".html"):
