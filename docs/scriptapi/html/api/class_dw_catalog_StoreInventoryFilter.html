@@ -1,0 +1,237 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class StoreInventoryFilter</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.StoreInventoryFilter">
+            <a name="dw.catalog.StoreInventoryFilter"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class StoreInventoryFilter</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.StoreInventoryFilter
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Important Note: This API class is not GA and is currently a pilot/beta service as defined by the customer's main
+ services agreement and provided as-is. If you are not part of the pilot/beta program, the API class will throw an
+ exception. Contact your customer success representative for more information.
+ <p>
+ This class represents a store inventory filter, which can be used at
+ <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_setStoreInventoryFilter_StoreInventoryFilter_DetailAnchor">ProductSearchModel.setStoreInventoryFilter(StoreInventoryFilter)</a> to filter the search result by one or more
+ store inventories. Compared to the default parameter 'ilids' (Inventory List IDs) see
+ (<a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_INVENTORY_LIST_IDS_PARAMETER_DetailAnchor">ProductSearchModel.INVENTORY_LIST_IDS_PARAMETER</a> the store inventory filter allows a customization of the
+ parameter name and the inventory list ID parameter values for the URL generations via all URLRefine and URLRelax
+ methods e.g. for <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_urlRefineCategory_String_String_DetailAnchor">ProductSearchModel.urlRefineCategory(String, String)</a>,
+ <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_urlRelaxPrice_URL_DetailAnchor">ProductSearchModel.urlRelaxPrice(URL)</a>,
+ <a href="class_dw_catalog_SearchModel.html#dw_catalog_SearchModel_urlRefineAttribute_String_String_String_DetailAnchor">SearchModel.urlRefineAttribute(String, String, String)</a>.
+ <p>
+ Example custom URL: city=Burlington|Boston
+ <p>
+ <pre>
+ new dw.catalog.StoreInventoryFilter( "city",
+     new dw.util.ArrayList( new dw.catalog.StoreInventoryFilterValue( "Burlington", "inventory_store_store9" ),
+         new dw.catalog.StoreInventoryFilterValue( "Boston", "inventory_store_store8" ) ) );</pre></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>semanticURLParameter
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The semantic URL parameter of this StoreInventoryFilter.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storeInventoryFilterValues
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances used by this StoreInventoryFilter.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_StoreInventoryFilter_StoreInventoryFilter_String_List_DetailAnchor"><span class="">StoreInventoryFilter</span></a></span>(semanticURLParameter
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, storeFilterValues
+									 : 
+									
+									<a href="class_dw_util_List.html"><span class="">List</span></a>)</span>
+                    <div class="description">Creates a new StoreInventoryFilter instance for the given semantic URL parameter and a list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_StoreInventoryFilter_getSemanticURLParameter_DetailAnchor"><span class="">getSemanticURLParameter</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the semantic URL parameter of this StoreInventoryFilter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_StoreInventoryFilter_getStoreInventoryFilterValues_DetailAnchor"><span class="">getStoreInventoryFilterValues</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns a list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances used by this StoreInventoryFilter.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_StoreInventoryFilter_StoreInventoryFilter_String_List_DetailAnchor"></a>
+                    <div class="detailName 
+						">StoreInventoryFilter</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">StoreInventoryFilter</span>(semanticURLParameter
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, storeFilterValues
+								 : 
+								 					
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+                    </div>
+                    <div class="description">Creates a new StoreInventoryFilter instance for the given semantic URL parameter and a list of
+ <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances. The semantic URL parameter e.g. city, zip, store and the semantic
+ store inventory values from the storeFilterValues will be used for URL generation. The mapped inventory list IDs
+ from the storeFilterValues will be used for filtering. on the mapped</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">semanticURLParameter</span>
+						 - 
+						<span class="parameterDesc">The semantic URL parameter which should be used for URL generation instead of 'ilids' (Inventory List IDs)</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">storeFilterValues</span>
+						 - 
+						<span class="parameterDesc">A list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances containing the store inventory values and the related real inventory list ID.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            NullArgumentException						
+						 - 
+						 <span class="parameterDesc">in case of missing required parameter.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            UnsupportedOperationException						
+						 - 
+						 <span class="parameterDesc">in case the class is used without enablement.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_StoreInventoryFilter_getSemanticURLParameter_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSemanticURLParameter</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSemanticURLParameter</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the semantic URL parameter of this StoreInventoryFilter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the semantic URL parameter of this StoreInventoryFilter.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_StoreInventoryFilter_getStoreInventoryFilterValues_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStoreInventoryFilterValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStoreInventoryFilterValues</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns a list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances used by this StoreInventoryFilter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a> instances used by this StoreInventoryFilter.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

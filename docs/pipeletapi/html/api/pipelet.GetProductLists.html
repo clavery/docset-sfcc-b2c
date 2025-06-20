@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet GetProductLists</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet GetProductLists</div>
+            <div class="topLevelDescription">Returns all ProductLists owned by the specified Customer, which are of the specified Type. Providing the optional EventType will further narrow the return results. </div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ProductList</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Customer</span>
+					&nbsp;:&nbsp;
+					Customer
+							(Required)
+						</span>
+                    <div class="description">
+The owner of the ProductLists.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Type</span>
+					&nbsp;:&nbsp;
+					Integer
+							(Required)
+						</span>
+                    <div class="description">
+The type of ProductList to find. Possible values are defined as static constants on ProductList, e.g. dw.customer.ProductList.TYPE_WISH_LIST.
+
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventType</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Optionally provides a further filter on the result set.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductLists</span>
+					&nbsp;:&nbsp;
+					Collection
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

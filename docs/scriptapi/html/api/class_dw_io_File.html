@@ -1,0 +1,1248 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class File</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.io.File">
+            <a name="dw.io.File"></a>
+            <div class="packageName">dw.io</div>
+            <div class="className
+					">	
+        	
+				Class File</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.io.File
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a file resource accessible from scripting. As with
+ <code>java.io.File</code>, a <code>File</code> is essentially an
+ "abstract pathname" which may or may not denote an actual file on the file
+ system.  Methods <code>createNewFile</code>,
+ <code>mkdir</code>, <code>mkdirs</code>, and <code>remove</code> are provided
+ to actually manipulate physical files.
+
+ <p>File access is limited to certain virtual directories.  These directories are
+ a subset of those accessible through WebDAV.  As a result of this
+ restriction, pathnames must be one of the following forms:</p>
+
+ <ul>
+ <li><code>/TEMP(/...)</code></li>
+ <li><code>/IMPEX(/...)</code></li>
+ <li><code>/REALMDATA(/...)</code></li>
+ <li><code>/CATALOGS/[Catalog Name](/...)</code></li>
+ <li><code>/LIBRARIES/[Library Name](/...)</code></li>
+ </ul>
+
+ Note, that these paths are analogous to the WebDAV URIs used to access the
+ same directories.
+
+ <p>The files are stored in a shared file system where multiple processes could
+ access the same file. The programmer has to make sure no more than one process
+ writes to a file at a given time.</p>
+
+ <p>This class provides other useful methods for listing the
+ children of a directory and for working with zip files.
+ <p/>
+ <b>Note:</b> when this class is used with sensitive data, be careful in persisting sensitive information.
+
+ <p>For performance reasons no more than 100,000 files (regular files and directories) should be stored in a
+ directory.</p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_CATALOGS_DetailAnchor"></a>CATALOGS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CATALOGS"
+                        <div class="description">Catalogs root directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_CUSTOMER_SNAPSHOTS_DetailAnchor"></a>CUSTOMER_SNAPSHOTS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CUSTOMERSNAPSHOTS"
+                        <div class="description">Customer snapshots root directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_CUSTOMERPI_DetailAnchor"></a>CUSTOMERPI
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CUSTOMERPI"
+                        <div class="description">Customer Payment Instrument root directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_DYNAMIC_DetailAnchor"></a>DYNAMIC
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"DYNAMIC"
+                        <div class="description">Reserved for future use.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_IMPEX_DetailAnchor"></a>IMPEX
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"IMPEX"
+                        <div class="description">Import/export root directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_LIBRARIES_DetailAnchor"></a>LIBRARIES
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"LIBRARIES"
+                        <div class="description">Libraries root directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_io_File_REALMDATA_DetailAnchor"></a>REALMDATA
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"REALMDATA"
+                        <div class="description">RealmData root directory.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Folder to be removed.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_SEPARATOR_DetailAnchor"></a>SEPARATOR
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"/"
+                        <div class="description">The UNIX style '/' path separator, which must be used for files paths.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_STATIC_DetailAnchor"></a>STATIC
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"STATIC"
+                        <div class="description">Static content root directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_io_File_TEMP_DetailAnchor"></a>TEMP
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"TEMP"
+                        <div class="description">Temp root directory.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>directory
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Indicates that this file is a directory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>file
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Indicates if this file is a file.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>fullPath
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Return the full file path denoted by this <code>File</code>.
+ This value will be the same regardless of which constructor was
+ used to create this <code>File</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The name of the file or directory denoted by this object. This is
+ just the last name in the pathname's name sequence. If the pathname's
+ name sequence is empty, then the empty string is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>path
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The portion of the path relative to the root directory.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_io_File.html#dw_io_File_getFullPath_DetailAnchor">getFullPath()</a> to access the full path. This method does not return the correct path for files in the CATALOGS or LIBRARIES virtual directories.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>rootDirectoryType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The root directory type, e.g. "IMPEX" represented by this
+ <code>File</code>.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_File_String_DetailAnchor"><span class="">File</span></a></span>(absPath
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a <code>File</code> from the given absolute file path in the file namespace.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_File_File_String_DetailAnchor"><span class="">File</span></a></span>(rootDir
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>, relPath
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a <code>File</code> given a root directory and a relative path.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_copyTo_File_DetailAnchor"><span class="">copyTo</span></a></span>(file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					<a href="class_dw_io_File.html"><span class="">File</span></a></span>
+                    <div class="description">Copy a file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_createNewFile_DetailAnchor"><span class="">createNewFile</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Create file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_exists_DetailAnchor"><span class="">exists</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Indicates if the file exists.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_getFullPath_DetailAnchor"><span class="">getFullPath</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Return the full file path denoted by this <code>File</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the file or directory denoted by this object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_io_File_getPath_DetailAnchor"><span class="">getPath</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the portion of the path relative to the root directory.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_io_File_getRootDirectory_String_String_DetailAnchor"><span class="">getRootDirectory</span></a></span>(rootDir
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					<a href="class_dw_io_File.html"><span class="">File</span></a></span>
+                    <div class="description">Returns a <code>File</code> representing a directory for the specified root directory type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_getRootDirectoryType_DetailAnchor"><span class="">getRootDirectoryType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the root directory type, e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_gunzip_File_DetailAnchor"><span class="">gunzip</span></a></span>(root
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					void</span>
+                    <div class="description">Assumes this instance is a gzip file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_gzip_File_DetailAnchor"><span class="">gzip</span></a></span>(outputZipFile
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					void</span>
+                    <div class="description">GZip this instance into a new gzip file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_isDirectory_DetailAnchor"><span class="">isDirectory</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Indicates that this file is a directory.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_isFile_DetailAnchor"><span class="">isFile</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Indicates if this file is a file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_lastModified_DetailAnchor"><span class="">lastModified</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Return the time, in milliseconds, that this file was last modified.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_length_DetailAnchor"><span class="">length</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Return the length of the file in bytes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_list_DetailAnchor"><span class="">list</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns an array of strings naming the files and directories in the directory denoted by this object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_listFiles_DetailAnchor"><span class="">listFiles</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns an array of <code>File</code> objects in the directory denoted by this <code>File</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_listFiles_Function_DetailAnchor"><span class="">listFiles</span></a></span>(filter
+								 : 	
+								 
+								<a href="class_TopLevel_Function.html"><span class="">Function</span></a>)
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns an array of <code>File</code> objects denoting the files and directories in the directory denoted by this object that satisfy the specified filter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_md5_DetailAnchor"><span class="">md5</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an MD5 hash of the content of the file of this instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_mkdir_DetailAnchor"><span class="">mkdir</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Creates a directory.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_mkdirs_DetailAnchor"><span class="">mkdirs</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Creates a directory, including, its parent directories, as needed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_remove_DetailAnchor"><span class="">remove</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Deletes the file or directory denoted by this object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_renameTo_File_DetailAnchor"><span class="">renameTo</span></a></span>(file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Rename file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_unzip_File_DetailAnchor"><span class="">unzip</span></a></span>(root
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					void</span>
+                    <div class="description">Assumes this instance is a zip file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_File_zip_File_DetailAnchor"><span class="">zip</span></a></span>(outputZipFile
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					void</span>
+                    <div class="description">Zip this instance into a new zip file.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_File_File_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">File</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">File</span>(absPath
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a <code>File</code> from the given absolute file path in the
+ file namespace.  If the specified path is not a valid accessible path,
+ an exception will be thrown.
+
+ <p/>The passed path should use the forward slash '/' as the path
+ separator and begin with a leading slash.  However, if a leading slash
+ is not provided, or the backslash character is used as the separator,
+ these problems will be fixed.  The normalized value will then be returned
+ by <a href="class_dw_io_File.html#dw_io_File_getFullPath_DetailAnchor">getFullPath()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">absPath</span>
+						 - 
+						<span class="parameterDesc">the absolute file path throws IOException</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_File_File_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">File</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">File</span>(rootDir
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, relPath
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a <code>File</code> given a root directory and a relative path.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rootDir</span>
+						 - 
+						<span class="parameterDesc">File object representing root directory</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">relPath</span>
+						 - 
+						<span class="parameterDesc">relative file path</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_File_copyTo_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">copyTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">copyTo</span>(file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					<a href="class_dw_io_File.html"><span class="">File</span></a>
+                    </div>
+                    <div class="description">Copy a file. Directories cannot be copied. This method cannot be used from storefront requests.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">the File object to copy to</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a reference to the copied file.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IOException						
+						 - 
+						 <span class="parameterDesc">if there is an interruption during file copy.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            FileAlreadyExistsException						
+						 - 
+						 <span class="parameterDesc">if the file to copy to already exists</span>
+                        </div>
+                        <div class="parameterDetail">
+                            UnsupportedOperationException						
+						 - 
+						 <span class="parameterDesc">if invoked from a storefront request</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_createNewFile_DetailAnchor"></a>
+                    <div class="detailName 
+						">createNewFile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createNewFile</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Create file.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">boolean, true - if file has been created, false - file already exists</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            						
+						 - 
+						 <span class="parameterDesc">Exception</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_exists_DetailAnchor"></a>
+                    <div class="detailName 
+						">exists</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">exists</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Indicates if the file exists.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if file exists, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_getFullPath_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFullPath</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFullPath</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Return the full file path denoted by this <code>File</code>.
+ This value will be the same regardless of which constructor was
+ used to create this <code>File</code>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the full file path.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the file or directory denoted by this object. This is
+ just the last name in the pathname's name sequence. If the pathname's
+ name sequence is empty, then the empty string is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The name of the file or directory denoted by this object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_getPath_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getPath</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getPath</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the portion of the path relative to the root directory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_io_File.html#dw_io_File_getFullPath_DetailAnchor">getFullPath()</a> to access the full path. This method does not return the correct path for files in the CATALOGS or LIBRARIES virtual directories.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the relative file path, possibly blank but not null.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_getRootDirectory_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRootDirectory</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getRootDirectory</span>(rootDir
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					<a href="class_dw_io_File.html"><span class="">File</span></a>
+                    </div>
+                    <div class="description">Returns a <code>File</code> representing a directory for the specified
+ root directory type. If the root directory
+ type is CATALOGS or LIBRARIES, then an additional argument representing
+ the specific catalog or library must be provided.  Otherwise, no
+ additional arguments are needed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rootDir</span>
+						 - 
+						<span class="parameterDesc">root directory type (see the constants defined in this class)</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">root directory specific arguments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">File object representing the directory</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_getRootDirectoryType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRootDirectoryType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRootDirectoryType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the root directory type, e.g. "IMPEX" represented by this
+ <code>File</code>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">root directory type</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_gunzip_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">gunzip</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">gunzip</span>(root
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Assumes this instance is a gzip file. Unzipping it will
+ explode the contents in the directory passed in (root).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">root</span>
+						 - 
+						<span class="parameterDesc">a File indicating root. root must be a directory.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the zip files contents can't be exploded.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_gzip_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">gzip</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">gzip</span>(outputZipFile
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">GZip this instance into a new gzip file. If you're zipping a file, then a single entry, the instance,
+ is included in the output gzip file. Note that a new File is created. GZipping directories is not supported.
+ This file is never modified.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">outputZipFile</span>
+						 - 
+						<span class="parameterDesc">the zip file created.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IOException						
+						 - 
+						 <span class="parameterDesc">if the zip file can't be created.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_isDirectory_DetailAnchor"></a>
+                    <div class="detailName 
+						">isDirectory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isDirectory</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Indicates that this file is a directory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the file is a directory, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_isFile_DetailAnchor"></a>
+                    <div class="detailName 
+						">isFile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isFile</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Indicates if this file is a file.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the file is a file, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_lastModified_DetailAnchor"></a>
+                    <div class="detailName 
+						">lastModified</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">lastModified</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Return the time, in milliseconds, that this file was last modified.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the time, in milliseconds, that this file was last modified.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_length_DetailAnchor"></a>
+                    <div class="detailName 
+						">length</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">length</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Return the length of the file in bytes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the file length in bytes.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_list_DetailAnchor"></a>
+                    <div class="detailName 
+						">list</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">list</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns an array of strings naming the files and directories in the
+ directory denoted by this object.
+
+ <p/>
+ If this object does not denote a directory, then this method returns
+ <code>null</code>. Otherwise an array of strings is returned, one for
+ each file or directory in the directory. Names denoting the directory
+ itself and the directory's parent directory are not included in the
+ result. Each string is a file name rather than a complete path.
+
+ <p/>
+ There is no guarantee that the name strings in the resulting array will
+ appear in any specific order; they are not, in particular, guaranteed to
+ appear in alphabetical order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">An array of strings naming the files and directories in the directory denoted by this <code>File</code>. The array will be empty if the directory is empty. Returns <code>null</code> if this <code>File</code> does not denote a directory.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_listFiles_DetailAnchor"></a>
+                    <div class="detailName 
+						">listFiles</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">listFiles</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns an array of <code>File</code> objects in the directory denoted
+ by this <code>File</code>.
+
+ <p/>
+ If this <code>File</code> does not denote a directory, then this method
+ returns <code>null</code>. Otherwise an array of <code>File</code>
+ objects is returned, one for each file or directory in the directory.
+ Files denoting the directory itself and the directory's parent directory
+ are not included in the result.
+
+ <p/>
+ There is no guarantee that the files in the resulting array will appear
+ in any specific order; they are not, in particular, guaranteed to appear
+ in alphabetical order. Example usage:
+ <p/>
+
+ <code>
+ // Assume "foo" is an accessible directory.<br/>
+ var this_directory : dw.io.File = new File("foo");<br/>
+ <br/>
+ // Find all files in directory foo, one level "down".<br/>
+ // listFiles() will <em>not</em> traverse subdirectories.<br/>
+ var folder : dw.util.List = this_directory.listFiles();<br/>
+ var first_element : dw.io.File = folder[0];<br/>
+ <br/>
+ function modification_comparison(lhs : File, rhs : File) <br/>
+ {<br/>
+ &nbsp;&nbsp;return lhs.lastModified() &lt; rhs.lastModified();<br/>
+ }<br/>
+ <br/>
+ function lexigraphic_comparison(lhs: File, rhs : File)<br/>
+ {<br/>
+ &nbsp;&nbsp;return lhs.getName() &lt; rhs.getName();<br/>
+ }<br/>
+ <br/>
+ var time_ordered_folder : dw.util.ArrayList = folder.sort(modification_comparison);<br/>
+ var alphabetic_folder : dw.util.ArrayList = folder.sort(lexigraphic_comparison); <br/>
+ </code></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of <code>File</code> objects or <code>null</code> if this is not a directory.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_listFiles_Function_DetailAnchor"></a>
+                    <div class="detailName 
+						">listFiles</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">listFiles</span>(filter
+								 : 
+								 
+								<a href="class_TopLevel_Function.html"><span class="">Function</span></a>)
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns an array of <code>File</code> objects denoting the files and
+ directories in the directory denoted by this object that satisfy the
+ specified filter. The behavior of this method is the same as that of the
+ <code><a href="class_dw_io_File.html#dw_io_File_listFiles_DetailAnchor">listFiles()</a></code> method, except that the files in the
+ returned array must satisfy the filter. The filter is a Javascript
+ function which accepts one argument, a <code>File</code>, and returns
+ true or false depending on whether the file meets the filter conditions.
+ If the given <code>filter</code> is <code>null</code> then all files
+ are accepted. Otherwise, a file satisfies the filter if and only if the
+ filter returns <code>true</code>. Example usage:
+ <p/>
+
+ <code>
+ // Assume "foo" is an accessible directory.<br/>
+ var this_directory : dw.io.File = new File("foo");<br/>
+ <br/>
+ function longer_than_3(candidate : dw.io.File)<br/>
+ {<br/>
+ &nbsp;&nbsp;return candidate.getName().length > 3;<br/>
+ }<br/>
+ <br/>
+ // Find all files in directory foo, one level "down",<br/>
+ // such that the filename is longer than 3 characters.<br/>
+ var folder_long_names : dw.util.List = this_directory.listFiles(longer_than_3);<br/>
+ </code></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">filter</span>
+						 - 
+						<span class="parameterDesc">a Javascript function which accepts a <code>File</code> argument and returns <code>true</code> or <code>false</code>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">list of <code>File</code> objects or <code>null</code> if this is not a directory</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_md5_DetailAnchor"></a>
+                    <div class="detailName 
+						">md5</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">md5</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an MD5 hash of the content of the file of this instance.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The MD5 hash of the file's content.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the file could not be read or is a directory.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_mkdir_DetailAnchor"></a>
+                    <div class="detailName 
+						">mkdir</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">mkdir</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Creates a directory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if file creation succeeded, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_mkdirs_DetailAnchor"></a>
+                    <div class="detailName 
+						">mkdirs</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">mkdirs</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Creates a directory, including, its parent directories, as needed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if file creation succeeded, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_remove_DetailAnchor"></a>
+                    <div class="detailName 
+						">remove</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">remove</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Deletes the file or directory denoted by this object. If this File
+ represents a directory, then the directory must be empty in order to be
+ deleted.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if file deletion succeeded, false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_renameTo_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">renameTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">renameTo</span>(file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Rename file.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">the File object to rename to</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">boolean, true - if file rename succeeded, false - failed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_unzip_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">unzip</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">unzip</span>(root
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Assumes this instance is a zip file. Unzipping it will
+ explode the contents in the directory passed in (root).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">root</span>
+						 - 
+						<span class="parameterDesc">a File indicating root. root must be a directory.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the zip files contents can't be exploded.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_File_zip_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">zip</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">zip</span>(outputZipFile
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Zip this instance into a new zip file. If you're zipping a directory,
+ the directory itself and all its children files to any level (any number of subdirectories)
+ are included in the zip file. The directory will be the only entry in the archive (single root).
+ If you're zipping a file, then a single entry, the instance,
+ is included in the output zip file. Note that a new File is created.
+ This file is never modified.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">outputZipFile</span>
+						 - 
+						<span class="parameterDesc">the zip file created.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IOException						
+						 - 
+						 <span class="parameterDesc">if the zip file can't be created.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

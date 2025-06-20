@@ -1,0 +1,3726 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>API Quotas</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+    </head>
+    <body>
+        <div>
+            <span class="newTitle">API Quotas</span>
+            <p>
+            API quotas may define limits on number of object instances, object sizes, runtimes, number of executions per page, or
+            prevent the execution of a B2C Commerce Script method or pipelet in the storefront.
+        </p>
+            <p>
+                            API quotas are organized into the following functional categories:
+            
+                <ul>
+                    <li>
+                        <a href="#category_A/B Test">A/B Test</a>
+                    </li>
+                    <li>
+                        <a href="#category_Basket">Basket</a>
+                    </li>
+                    <li>
+                        <a href="#category_Customer">Customer</a>
+                    </li>
+                    <li>
+                        <a href="#category_Customer Group">Customer Group</a>
+                    </li>
+                    <li>
+                        <a href="#category_Custom Objects">Custom Objects</a>
+                    </li>
+                    <li>
+                        <a href="#category_I/O and Network">I/O and Network</a>
+                    </li>
+                    <li>
+                        <a href="#category_Import/Export">Import/Export</a>
+                    </li>
+                    <li>
+                        <a href="#category_Inventory">Inventory</a>
+                    </li>
+                    <li>
+                        <a href="#category_Logging">Logging</a>
+                    </li>
+                    <li>
+                        <a href="#category_Mapping">Mapping</a>
+                    </li>
+                    <li>
+                        <a href="#category_Object Attributes">Object Attributes</a>
+                    </li>
+                    <li>
+                        <a href="#category_Order">Order</a>
+                    </li>
+                    <li>
+                        <a href="#category_Other Pipelets">Other Pipelets</a>
+                    </li>
+                    <li>
+                        <a href="#category_Pipeline">Pipeline</a>
+                    </li>
+                    <li>
+                        <a href="#category_Price">Price</a>
+                    </li>
+                    <li>
+                        <a href="#category_PriceBook">PriceBook</a>
+                    </li>
+                    <li>
+                        <a href="#category_Price Book">Price Book</a>
+                    </li>
+                    <li>
+                        <a href="#category_Product Inventory">Product Inventory</a>
+                    </li>
+                    <li>
+                        <a href="#category_Product List">Product List</a>
+                    </li>
+                    <li>
+                        <a href="#category_Script">Script</a>
+                    </li>
+                    <li>
+                        <a href="#category_Read-only Objects">Read-only Objects
+                                        </a>
+                    </li>
+                    <li>
+                        <a href="#category_Search">Search</a>
+                    </li>
+                    <li>
+                        <a href="#category_Session">Session</a>
+                    </li>
+                    <li>
+                        <a href="#category_System Notification">System Notification</a>
+                    </li>
+                    <li>
+                        <a href="#category_URL Rules">URL Rules</a>
+                    </li>
+                    <li>
+                        <a href="#category_Velocity">Velocity</a>
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="section">
+            <a name="category_A/B Test"></a>
+            <div class="header">A/B Test Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_abtest.concurrentTestSegments"></a>
+                <p class="className">Concurrent A/B Test Segments</p>
+                <p>
+            The Concurrent A/B Test Segments API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> abtest.concurrentTestSegments
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of concurrent A/B test segments taking on participants for a site. When this threshold is reached, other A/B tests won't take on participants.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>13
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Basket"></a>
+            <div class="header">Basket Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.basket.addRemoveInSameRequest"></a>
+                <p class="className">api.basket.addRemoveInSameRequest</p>
+                <p>
+            The api.basket.addRemoveInSameRequest API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.basket.addRemoveInSameRequest
+                    </li>
+                    <li>
+                        <b>Description:</b> Adding and removing a product to a basket in one request, to calculate promotion, shipping or other information isn't allowed.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.basket.productLineItemQuantity"></a>
+                <p class="className">api.basket.productLineItemQuantity</p>
+                <p>
+            The api.basket.productLineItemQuantity API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.basket.productLineItemQuantity
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum quantity value for a product line item.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.BasketPO.maxBasketLifetime"></a>
+                <p class="className">Maximum Basket Lifetime</p>
+                <p>
+            The Maximum Basket Lifetime API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.BasketPO.maxBasketLifetime
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum lifetime of the basket in minutes.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>525,600
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.BasketPO.maxInventoryReservationExpiry"></a>
+                <p class="className">Maximum Inventory Reservation Expiry</p>
+                <p>
+            The Maximum Inventory Reservation Expiry API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.BasketPO.maxInventoryReservationExpiry
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum inventory reservation expiry in minutes.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>240
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.BasketPO.relation.notes"></a>
+                <p class="className">Maximum Notes per Basket</p>
+                <p>
+            The Maximum Notes per Basket API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.BasketPO.relation.notes
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of notes for a basket.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>100 (warning at 60)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Customer"></a>
+            <div class="header">Customer Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.customer.AddressBook.createAddress()"></a>
+                <p class="className">api.dw.customer.AddressBook.createAddress()</p>
+                <p>
+            The api.dw.customer.AddressBook.createAddress() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.customer.AddressBook.createAddress()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer addresses which can be created in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>4
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.customer.AddressBook.removeAddress()"></a>
+                <p class="className">api.dw.customer.AddressBook.removeAddress()</p>
+                <p>
+            The api.dw.customer.AddressBook.removeAddress() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.customer.AddressBook.removeAddress()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer addresses which can be deleted in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>4
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.customer.CustomerMgr.createCustomer()"></a>
+                <p class="className">api.dw.customer.CustomerMgr.createCustomer()</p>
+                <p>
+            The api.dw.customer.CustomerMgr.createCustomer() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.customer.CustomerMgr.createCustomer()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer records which can be created in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>2
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.customer.CustomerMgr.createCustomer(String,String)</li>
+                            <li> dw.customer.CustomerMgr.createCustomer(String,String,String)</li>
+                            <li> dw.customer.CustomerMgr.createExternallyAuthenticatedCustomer(String,String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.customer.CustomerMgr.removeCustomer()"></a>
+                <p class="className">api.dw.customer.CustomerMgr.removeCustomer()</p>
+                <p>
+            The api.dw.customer.CustomerMgr.removeCustomer() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.customer.CustomerMgr.removeCustomer()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer records which can be deleted in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>2
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.customer.CustomerMgr.removeCustomer(Customer)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.CreateCustomer"></a>
+                <p class="className">api.pipelet.CreateCustomer</p>
+                <p>
+            The api.pipelet.CreateCustomer API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.CreateCustomer
+                    </li>
+                    <li>
+                        <b>Description:</b> The number of customer records which can be created in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>2
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet CreateCustomer</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.CreateCustomerAddress"></a>
+                <p class="className">api.pipelet.CreateCustomerAddress</p>
+                <p>
+            The api.pipelet.CreateCustomerAddress API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.CreateCustomerAddress
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer addresses which can be created in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>4
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet CreateCustomerAddress</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.RemoveCustomer"></a>
+                <p class="className">api.pipelet.RemoveCustomer</p>
+                <p>
+            The api.pipelet.RemoveCustomer API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.RemoveCustomer
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer records which can be deleted in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>2
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet RemoveCustomer</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.RemoveCustomerAddress"></a>
+                <p class="className">api.pipelet.RemoveCustomerAddress</p>
+                <p>
+            The api.pipelet.RemoveCustomerAddress API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.RemoveCustomerAddress
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of customer addresses which can be deleted in one page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>4
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet RemoveCustomerAddress</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Customer Group"></a>
+            <div class="header">Customer Group Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_customerGroup.rules.conditionCount"></a>
+                <p class="className">customerGroup.rules.conditionCount</p>
+                <p>
+            The customerGroup.rules.conditionCount API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> customerGroup.rules.conditionCount
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of conditions in a customer group rule.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>100 (warning at 20)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_customerGroup.rules.conditionValueCount"></a>
+                <p class="className">customerGroup.rules.conditionValueCount</p>
+                <p>
+            The customerGroup.rules.conditionValueCount API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> customerGroup.rules.conditionValueCount
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of values in a condition in a customer group rule.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000 (warning at 200)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_customerGroup.rules.valueCount"></a>
+                <p class="className">customerGroup.rules.valueCount</p>
+                <p>
+            The customerGroup.rules.valueCount API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> customerGroup.rules.valueCount
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of values in all conditions of a customer group rule.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>10,000 (warning at 2,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Custom Objects"></a>
+            <div class="header">Custom Objects Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.object.CustomObjectMgr.create()"></a>
+                <p class="className">api.dw.object.CustomObjectMgr.create()</p>
+                <p>
+            The api.dw.object.CustomObjectMgr.create() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.object.CustomObjectMgr.create()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of custom objects which can be created in one Storefront page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>10 (warning at 6)
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet CreateCustomObject</li>
+                            <li> dw.object.CustomObjectMgr.createCustomObject(String,String)</li>
+                            <li> dw.object.CustomObjectMgr.createCustomObject(String,int)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.object.CustomObjectMgr.remove()"></a>
+                <p class="className">api.dw.object.CustomObjectMgr.remove()</p>
+                <p>
+            The api.dw.object.CustomObjectMgr.remove() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.object.CustomObjectMgr.remove()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of custom objects which can be removed in one Storefront page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>10 (warning at 6)
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet RemoveCustomObject</li>
+                            <li> dw.object.CustomObjectMgr.remove(CustomObject)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_I/O and Network"></a>
+            <div class="header">I/O and Network Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.UnsafeContentInSVGinCustomCartridge"></a>
+                <p class="className">Unsafe Content in SVG files (in Custom Cartridges)</p>
+                <p>
+            The Unsafe Content in SVG files (in Custom Cartridges) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.UnsafeContentInSVGinCustomCartridge
+                    </li>
+                    <li>
+                        <b>Description:</b> SVGs served from custom cartridges must not contain JavaScript or embedded objects.
+        
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.UnsafeContentInSVGinUnit"></a>
+                <p class="className">Unsafe Content in SVG files (in Sites, Libraries, Catalogs)</p>
+                <p>
+            The Unsafe Content in SVG files (in Sites, Libraries, Catalogs) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.UnsafeContentInSVGinUnit
+                    </li>
+                    <li>
+                        <b>Description:</b> SVGs served from sites, libraries and catalogs must not contain JavaScript or embedded objects.
+        
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.CSVStreamReader.readAll().size"></a>
+                <p class="className">api.dw.io.CSVStreamReader.readAll().size</p>
+                <p>
+            The api.dw.io.CSVStreamReader.readAll().size API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.CSVStreamReader.readAll().size
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of lines in a CSV file which can be read with dw.io.CSVStreamReader.readAll().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>5,000 (warning at 3,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.createNewFile()"></a>
+                <p class="className">api.dw.io.File.createNewFile()</p>
+                <p>
+            The api.dw.io.File.createNewFile() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.createNewFile()
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.createNewFile().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.createNewFile()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.gunzip(File)"></a>
+                <p class="className">api.dw.io.File.gunzip(File)</p>
+                <p>
+            The api.dw.io.File.gunzip(File) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.gunzip(File)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.gunzip(File).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.gunzip(File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.gzip(File)"></a>
+                <p class="className">api.dw.io.File.gzip(File)</p>
+                <p>
+            The api.dw.io.File.gzip(File) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.gzip(File)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.gzip(File).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.gzip(File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.md5()"></a>
+                <p class="className">api.dw.io.File.md5()</p>
+                <p>
+            The api.dw.io.File.md5() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.md5()
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.md5().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.md5()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.mkdir()"></a>
+                <p class="className">api.dw.io.File.mkdir()</p>
+                <p>
+            The api.dw.io.File.mkdir() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.mkdir()
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.mkdir().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.mkdir()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.mkdirs()"></a>
+                <p class="className">api.dw.io.File.mkdirs()</p>
+                <p>
+            The api.dw.io.File.mkdirs() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.mkdirs()
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.mkdirs().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.mkdirs()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.renameTo(File)"></a>
+                <p class="className">api.dw.io.File.renameTo(File)</p>
+                <p>
+            The api.dw.io.File.renameTo(File) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.renameTo(File)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.renameTo(File).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.renameTo(File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.unzip(File)"></a>
+                <p class="className">api.dw.io.File.unzip(File)</p>
+                <p>
+            The api.dw.io.File.unzip(File) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.unzip(File)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.unzip(File).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.unzip(File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.File.zip(File)"></a>
+                <p class="className">api.dw.io.File.zip(File)</p>
+                <p>
+            The api.dw.io.File.zip(File) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.File.zip(File)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.File.zip(File).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.File.zip(File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.FileWriter(File)"></a>
+                <p class="className">api.dw.io.FileWriter(File)</p>
+                <p>
+            The api.dw.io.FileWriter(File) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.FileWriter(File)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.FileWriter(File).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.FileWriter(File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.FileWriter(File,String)"></a>
+                <p class="className">api.dw.io.FileWriter(File,String)</p>
+                <p>
+            The api.dw.io.FileWriter(File,String) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.FileWriter(File,String)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.FileWriter(File,String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.FileWriter(File,String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.FileWriter(File,String,boolean)"></a>
+                <p class="className">api.dw.io.FileWriter(File,String,boolean)</p>
+                <p>
+            The api.dw.io.FileWriter(File,String,boolean) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.FileWriter(File,String,boolean)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.FileWriter(File,String,boolean).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.FileWriter(File,String,boolean)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.FileWriter(File,boolean)"></a>
+                <p class="className">api.dw.io.FileWriter(File,boolean)</p>
+                <p>
+            The api.dw.io.FileWriter(File,boolean) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.FileWriter(File,boolean)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.io.FileWriter(File,boolean).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.io.FileWriter(File,boolean)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.Reader.getLines().size"></a>
+                <p class="className">api.dw.io.Reader.getLines().size</p>
+                <p>
+            The api.dw.io.Reader.getLines().size API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.Reader.getLines().size
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of lines which can be read with dw.io.Reader.readLines() in one call.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>5,000 (warning at 3,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.Reader.getString().length"></a>
+                <p class="className">api.dw.io.Reader.getString().length</p>
+                <p>
+            The api.dw.io.Reader.getString().length API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.Reader.getString().length
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of characters which can be read with dw.io.Reader.getString().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000,000 (warning at 600,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.Reader.read().length"></a>
+                <p class="className">api.dw.io.Reader.read().length</p>
+                <p>
+            The api.dw.io.Reader.read().length API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.Reader.read().length
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of characters which can be read with dw.io.Reader.read(int) in one call.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>50,000 (warning at 30,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.StringWriter.length"></a>
+                <p class="className">api.dw.io.StringWriter.length</p>
+                <p>
+            The api.dw.io.StringWriter.length API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.StringWriter.length
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed buffer length of a dw.io.StringWriter.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>5,000,000 (warning at 3,000,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.io.XMLStreamReader.getXMLObject().maxElements"></a>
+                <p class="className">api.dw.io.XMLStreamReader.getXMLObject().maxElements</p>
+                <p>
+            The api.dw.io.XMLStreamReader.getXMLObject().maxElements API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.io.XMLStreamReader.getXMLObject().maxElements
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of XML elements allowed to be parsed with dw.io.XMLStreamReader.getXMLObject().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>5,000 (warning at 3,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.FTPClient()"></a>
+                <p class="className">api.dw.net.FTPClient()</p>
+                <p>
+            The api.dw.net.FTPClient() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.FTPClient()
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.net.FTPClient().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.FTPClient()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.HTTPClient.send()"></a>
+                <p class="className">api.dw.net.HTTPClient.send()</p>
+                <p>
+            The api.dw.net.HTTPClient.send() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.HTTPClient.send()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of HTTPClient communications allowed per page.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>16 (warning at 10)
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.HTTPClient.__sendMultiPartToFile(HTTPRequestPart[],File)</li>
+                            <li> dw.net.HTTPClient.send()</li>
+                            <li> dw.net.HTTPClient.send(File)</li>
+                            <li> dw.net.HTTPClient.send(String)</li>
+                            <li> dw.net.HTTPClient.send(String,String)</li>
+                            <li> dw.net.HTTPClient.sendBytes(Bytes)</li>
+                            <li> dw.net.HTTPClient.sendMultiPart(HTTPRequestPart[])</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.HTTPClient.sendAndReceiveToFile()"></a>
+                <p class="className">api.dw.net.HTTPClient.sendAndReceiveToFile()</p>
+                <p>
+            The api.dw.net.HTTPClient.sendAndReceiveToFile() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.HTTPClient.sendAndReceiveToFile()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of HTTPClient communications with a file argument allowed.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.HTTPClient.sendAndReceiveToFile(File)</li>
+                            <li> dw.net.HTTPClient.sendAndReceiveToFile(String,File)</li>
+                            <li> dw.net.HTTPClient.sendAndReceiveToFile(String,String,File)</li>
+                            <li> dw.net.HTTPClient.sendBytesAndReceiveToFile(Bytes,File)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.SFTPClient()"></a>
+                <p class="className">api.dw.net.SFTPClient()</p>
+                <p>
+            The api.dw.net.SFTPClient() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.SFTPClient()
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.net.SFTPClient().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.SFTPClient()</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.WebDAVClient(String)"></a>
+                <p class="className">api.dw.net.WebDAVClient(String)</p>
+                <p>
+            The api.dw.net.WebDAVClient(String) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.WebDAVClient(String)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.net.WebDAVClient(String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.WebDAVClient(String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.WebDAVClient(String,String,String)"></a>
+                <p class="className">api.dw.net.WebDAVClient(String,String,String)</p>
+                <p>
+            The api.dw.net.WebDAVClient(String,String,String) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.WebDAVClient(String,String,String)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.net.WebDAVClient(String,String,String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.WebDAVClient(String,String,String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.serviceTimeoutNotSet"></a>
+                <p class="className">api.dw.serviceTimeoutNotSet</p>
+                <p>
+            The api.dw.serviceTimeoutNotSet API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.serviceTimeoutNotSet
+                    </li>
+                    <li>
+                        <b>Description:</b> No explicit timeout was set for the service.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Import/Export"></a>
+            <div class="header">Import/Export Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.ImportExport"></a>
+                <p class="className">api.pipelet.ImportExport</p>
+                <p>
+            The api.pipelet.ImportExport API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.ImportExport
+                    </li>
+                    <li>
+                        <b>Description:</b> No import and export is allowed from the Storefront.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet ExportABTests</li>
+                            <li> Pipelet ExportAssignments</li>
+                            <li> Pipelet ExportCatalog</li>
+                            <li> Pipelet ExportContent</li>
+                            <li> Pipelet ExportCouponCodes</li>
+                            <li> Pipelet ExportCoupons</li>
+                            <li> Pipelet ExportCustomObjects</li>
+                            <li> Pipelet ExportCustomerGroups</li>
+                            <li> Pipelet ExportCustomerList</li>
+                            <li> Pipelet ExportCustomerPI</li>
+                            <li> Pipelet ExportCustomers</li>
+                            <li> Pipelet ExportGiftCertificates</li>
+                            <li> Pipelet ExportInventoryLists</li>
+                            <li> Pipelet ExportMetaData</li>
+                            <li> Pipelet ExportOrders</li>
+                            <li> Pipelet ExportPriceAdjustmentLimits</li>
+                            <li> Pipelet ExportPriceBooks</li>
+                            <li> Pipelet ExportProductLists</li>
+                            <li> Pipelet ExportPromotions</li>
+                            <li> Pipelet ExportServices</li>
+                            <li> Pipelet ExportShippingMethods</li>
+                            <li> Pipelet ExportSlots</li>
+                            <li> Pipelet ExportSourceCodes</li>
+                            <li> Pipelet ExportStores</li>
+                            <li> Pipelet ExportTaxTable</li>
+                            <li> Pipelet ImportActiveData</li>
+                            <li> Pipelet ImportCustomObjects</li>
+                            <li> Pipelet ImportCustomerPI</li>
+                            <li> Pipelet ImportKeyValueMapping</li>
+                            <li> Pipelet ImportPipelet</li>
+                            <li> Pipelet ImportPriceAdjustmentLimits</li>
+                            <li> Pipelet ImportServices</li>
+                            <li> Pipelet ImportStores</li>
+                            <li> Pipelet ValidateActiveDataFile</li>
+                            <li> Pipelet ValidateXMLFile</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Inventory"></a>
+            <div class="header">Inventory Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.catalog.ProductInventoryRecord.update()"></a>
+                <p class="className">api.dw.catalog.ProductInventoryRecord.update()</p>
+                <p>
+            The api.dw.catalog.ProductInventoryRecord.update() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.catalog.ProductInventoryRecord.update()
+                    </li>
+                    <li>
+                        <b>Description:</b> Updating a product inventory record in a Storefront request isn't allowed.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Logging"></a>
+            <div class="header">Logging Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_logging.customLogFiles"></a>
+                <p class="className">Custom Log Files</p>
+                <p>
+            The Custom Log Files API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> logging.customLogFiles
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of custom log files per day obtained through dw.system.Logger.getLogger(String,String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>200
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Mapping"></a>
+            <div class="header">Mapping Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.object.maxMappingInputFileSize"></a>
+                <p class="className">api.object.maxMappingInputFileSize</p>
+                <p>
+            The api.object.maxMappingInputFileSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.object.maxMappingInputFileSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum size of input files for an instance (in MB).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.object.maxMappingSize"></a>
+                <p class="className">api.object.maxMappingSize</p>
+                <p>
+            The api.object.maxMappingSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.object.maxMappingSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum size of mapping files for an instance (in MB).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>40
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Object Attributes"></a>
+            <div class="header">Object Attributes Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.object.EmbeddedObjectInHTMLAttributeUserWithoutStrongAuth"></a>
+                <p class="className">Embedded Object in HTML Attribute (User Not Strongly Authenticated)</p>
+                <p>
+            The Embedded Object in HTML Attribute (User Not Strongly Authenticated) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.object.EmbeddedObjectInHTMLAttributeUserWithoutStrongAuth
+                    </li>
+                    <li>
+                        <b>Description:</b> Only users with strong authentication, such as through MFA with Account Manager, can include
+            objects embedded with iframe, object, applet, or embed tags in an HTML attribute.
+        
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.object.JSInHTMLAttributeUserWithoutStrongAuth"></a>
+                <p class="className">JavaScript in HTML Attribute (User Not Strongly Authenticated)</p>
+                <p>
+            The JavaScript in HTML Attribute (User Not Strongly Authenticated) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.object.JSInHTMLAttributeUserWithoutStrongAuth
+                    </li>
+                    <li>
+                        <b>Description:</b> Only users with strong authentication, such as through MFA with Account Manager, can include JavaScript in an HTML attribute.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.object.maxMultiValueAttribute"></a>
+                <p class="className">api.object.maxMultiValueAttribute</p>
+                <p>
+            The api.object.maxMultiValueAttribute API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.object.maxMultiValueAttribute
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of values in a multiple value attribute for example like a set of string.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>200 (warning at 120)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.object.stringAttributeLength"></a>
+                <p class="className">api.object.stringAttributeLength</p>
+                <p>
+            The api.object.stringAttributeLength API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.object.stringAttributeLength
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum string length which can be stored in a business object's long text or HTML field.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>200,000 (warning at 120,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Order"></a>
+            <div class="header">Order Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.maxAppeasements"></a>
+                <p class="className">Maximum Appeasements per Order</p>
+                <p>
+            The Maximum Appeasements per Order API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.maxAppeasements
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of appeasements for an order.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.maxInvoices"></a>
+                <p class="className">Maximum Invoices per Order</p>
+                <p>
+            The Maximum Invoices per Order API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.maxInvoices
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of invoices for an order.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>60
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.maxReturnCases"></a>
+                <p class="className">Maximum Return Cases per Order</p>
+                <p>
+            The Maximum Return Cases per Order API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.maxReturnCases
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of return cases for an order.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.maxReturns"></a>
+                <p class="className">Maximum Returns per Order</p>
+                <p>
+            The Maximum Returns per Order API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.maxReturns
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of returns for an order.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.maxShippingOrders"></a>
+                <p class="className">Maximum Shipping Orders per Order</p>
+                <p>
+            The Maximum Shipping Orders per Order API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.maxShippingOrders
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of shipping orders for an order.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.relation.notes"></a>
+                <p class="className">Maximum Notes per Order</p>
+                <p>
+            The Maximum Notes per Order API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.relation.notes
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of notes and history entries for an order.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000 (warning at 600)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Other Pipelets"></a>
+            <div class="header">Other Pipelets Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.InvalidateWebCache"></a>
+                <p class="className">api.pipelet.InvalidateWebCache</p>
+                <p>
+            The api.pipelet.InvalidateWebCache API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.InvalidateWebCache
+                    </li>
+                    <li>
+                        <b>Description:</b> The web cache can't be invalidated from the Storefront.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet InvalidateWebCache</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.Replication"></a>
+                <p class="className">api.pipelet.Replication</p>
+                <p>
+            The api.pipelet.Replication API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.Replication
+                    </li>
+                    <li>
+                        <b>Description:</b> Replication can't be managed through API anymore.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet GetReplicationStatus</li>
+                            <li> Pipelet TriggerReplication</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Pipeline"></a>
+            <div class="header">Pipeline Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipeline.stack.depth"></a>
+                <p class="className">api.pipeline.stack.depth</p>
+                <p>
+            The api.pipeline.stack.depth API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipeline.stack.depth
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum depth of the pipeline call stack.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>200 (warning at 120)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipeline.timeout"></a>
+                <p class="className">api.pipeline.timeout</p>
+                <p>
+            The api.pipeline.timeout API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipeline.timeout
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum execution time for a pipeline in seconds.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>300
+                            </li>
+                            <li>
+                                <b>Business Manager Limit: </b>300
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Price"></a>
+            <div class="header">Price Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_price.priceEntries"></a>
+                <p class="className">Price Entries</p>
+                <p>
+            The Price Entries API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> price.priceEntries
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of price entries in read-only price books.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>300,000,000 (warning at 290,000,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_PriceBook"></a>
+            <div class="header">PriceBook Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.catalog.PriceBookMgr.unassignPriceBookFromAllSites(PriceBook)"></a>
+                <p class="className">api.dw.catalog.PriceBookMgr.unassignPriceBookFromAllSites(PriceBook)</p>
+                <p>
+            The api.dw.catalog.PriceBookMgr.unassignPriceBookFromAllSites(PriceBook) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.catalog.PriceBookMgr.unassignPriceBookFromAllSites(PriceBook)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.catalog.PriceBookMgr.unassignPriceBookFromAllSites(PriceBook).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.catalog.PriceBookMgr.unassignPriceBookFromAllSites(PriceBook)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.catalog.PriceBookMgr.unassignPriceBookFromSite(PriceBook,String)"></a>
+                <p class="className">api.dw.catalog.PriceBookMgr.unassignPriceBookFromSite(PriceBook,String)</p>
+                <p>
+            The api.dw.catalog.PriceBookMgr.unassignPriceBookFromSite(PriceBook,String) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.catalog.PriceBookMgr.unassignPriceBookFromSite(PriceBook,String)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.catalog.PriceBookMgr.unassignPriceBookFromSite(PriceBook,String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.catalog.PriceBookMgr.unassignPriceBookFromSite(PriceBook,String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Price Book"></a>
+            <div class="header">Price Book Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.catalog.PriceBookMgr.assignPriceBookToSite(PriceBook,String)"></a>
+                <p class="className">api.dw.catalog.PriceBookMgr.assignPriceBookToSite(PriceBook,String)</p>
+                <p>
+            The api.dw.catalog.PriceBookMgr.assignPriceBookToSite(PriceBook,String) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.catalog.PriceBookMgr.assignPriceBookToSite(PriceBook,String)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.catalog.PriceBookMgr.assignPriceBookToSite(PriceBook,String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.catalog.PriceBookMgr.assignPriceBookToSite(PriceBook,String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Product Inventory"></a>
+            <div class="header">Product Inventory Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ProductInventoryRecordPO.maxReallocationTimeInPast"></a>
+                <p class="className">Maximum Hours Re-allocation Date Can Be Set in the Past</p>
+                <p>
+            The Maximum Hours Re-allocation Date Can Be Set in the Past API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ProductInventoryRecordPO.maxReallocationTimeInPast
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum amount of hours for which the allocation reset date can be set in the past when updating inventory records.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>48
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Product List"></a>
+            <div class="header">Product List Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.customer.ProductListMgr.create()"></a>
+                <p class="className">api.dw.customer.ProductListMgr.create()</p>
+                <p>
+            The api.dw.customer.ProductListMgr.create() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.customer.ProductListMgr.create()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of product lists which can be created within one page from the API or Pipelet.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>3
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet CreateProductList</li>
+                            <li> dw.customer.ProductListMgr.createProductList(Customer,int)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.customer.ProductListMgr.remove()"></a>
+                <p class="className">api.dw.customer.ProductListMgr.remove()</p>
+                <p>
+            The api.dw.customer.ProductListMgr.remove() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.customer.ProductListMgr.remove()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of product lists which can be deleted within one page from the API or Pipelet.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>3
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet RemoveProductList</li>
+                            <li> dw.customer.ProductListMgr.removeProductList(ProductList)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Script"></a>
+            <div class="header">Script Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.util.collectionSize"></a>
+                <p class="className">api.dw.util.collectionSize</p>
+                <p>
+            The api.dw.util.collectionSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.util.collectionSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed number of elements in a dw.util.* collection object.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20,000 (warning at 12,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsArrayBufferSize"></a>
+                <p class="className">api.jsArrayBufferSize</p>
+                <p>
+            The api.jsArrayBufferSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsArrayBufferSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed size in bytes for any ArrayBuffer or typed array.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000,000 (warning at 1,200,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsArraySize"></a>
+                <p class="className">api.jsArraySize</p>
+                <p>
+            The api.jsArraySize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsArraySize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed number of elements in a dense JavaScript array.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20,000 (warning at 12,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsArraySize2"></a>
+                <p class="className">api.jsArraySize2</p>
+                <p>
+            The api.jsArraySize2 API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsArraySize2
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed number of elements in a dense JavaScript array when extended using the [] operator.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20,000 (warning at 12,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsCollectionSize"></a>
+                <p class="className">api.jsCollectionSize</p>
+                <p>
+            The api.jsCollectionSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsCollectionSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed number of elements in a JavaScript built-in map/set type.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>20,000 (warning at 12,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsEval"></a>
+                <p class="className">api.jsEval</p>
+                <p>
+            The api.jsEval API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsEval
+                    </li>
+                    <li>
+                        <b>Description:</b> JavaScript eval() isn't supported on the Commerce Cloud server.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>0
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsJSONStringLength"></a>
+                <p class="className">api.jsJSONStringLength</p>
+                <p>
+            The api.jsJSONStringLength API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsJSONStringLength
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed length of a JavaScript string created by JSON.stringify().
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000,000 (warning at 600,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsObjectSize"></a>
+                <p class="className">api.jsObjectSize</p>
+                <p>
+            The api.jsObjectSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsObjectSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed number of properties for a single JavaScript object.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000 (warning at 1,200)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsStringLength"></a>
+                <p class="className">api.jsStringLength</p>
+                <p>
+            The api.jsStringLength API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsStringLength
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed length of a JavaScript string.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000,000 (warning at 600,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsSymbolRegistrySize"></a>
+                <p class="className">api.jsSymbolRegistrySize</p>
+                <p>
+            The api.jsSymbolRegistrySize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsSymbolRegistrySize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum allowed number of symbols in the global symbol registry.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000 (warning at 600)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsXMLSize"></a>
+                <p class="className">api.jsXMLSize</p>
+                <p>
+            The api.jsXMLSize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsXMLSize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum (estimated) size in characters of a JavaScript XML object.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000,000 (warning at 1,200,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.jsXMLfromString"></a>
+                <p class="className">api.jsXMLfromString</p>
+                <p>
+            The api.jsXMLfromString API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.jsXMLfromString
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum length of a string from which a JavaScript XML object can be created.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000,000 (warning at 1,200,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Read-only Objects"></a>
+            <div class="header">
+                                    Read-only Objects Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ExperiencePO.readonly@SF"></a>
+                <p class="className">Assignments</p>
+                <p>
+            The Assignments API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ExperiencePO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.CampaignPO.readonly@SF"></a>
+                <p class="className">Campaigns</p>
+                <p>
+            The Campaigns API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.CampaignPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.CatalogCategoryPO.readonly@SF"></a>
+                <p class="className">Catalog Categories</p>
+                <p>
+            The Catalog Categories API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.CatalogCategoryPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.CatalogPO.readonly@SF"></a>
+                <p class="className">Catalogs</p>
+                <p>
+            The Catalogs API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.CatalogPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ProductCategoryAssignmentPO.readonly@SF"></a>
+                <p class="className">Category Assignment</p>
+                <p>
+            The Category Assignment API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ProductCategoryAssignmentPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.SlackWorkspace.readonly@SF"></a>
+                <p class="className">Connected Slack Workspaces</p>
+                <p>
+            The Connected Slack Workspaces API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.SlackWorkspace.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ContentPO.readonly@SF"></a>
+                <p class="className">Content Objects</p>
+                <p>
+            The Content Objects API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ContentPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.CustomerGroupImpl.readonly@SF"></a>
+                <p class="className">Customer Groups</p>
+                <p>
+            The Customer Groups API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.CustomerGroupImpl.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.FolderPO.readonly@SF"></a>
+                <p class="className">Folders</p>
+                <p>
+            The Folders API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.FolderPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.LibraryPO.readonly@SF"></a>
+                <p class="className">Libraries</p>
+                <p>
+            The Libraries API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.LibraryPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.SystemNotificationChannelPO.readonly@SF"></a>
+                <p class="className">Notification Target Channels</p>
+                <p>
+            The Notification Target Channels API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.SystemNotificationChannelPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.InventoryDataPO.readonly@SF"></a>
+                <p class="className">OCI Inventory Cache</p>
+                <p>
+            The OCI Inventory Cache API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.InventoryDataPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrgPreferencesPO.readonly@SF"></a>
+                <p class="className">Organization Preferences</p>
+                <p>
+            The Organization Preferences API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrgPreferencesPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.PageMetaTagRulePO.readonly@SF"></a>
+                <p class="className">Page Meta Tag Rules</p>
+                <p>
+            The Page Meta Tag Rules API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.PageMetaTagRulePO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.PaymentCardPO.readonly@SF"></a>
+                <p class="className">Payment Cards</p>
+                <p>
+            The Payment Cards API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.PaymentCardPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.PaymentMethodPO.readonly@SF"></a>
+                <p class="className">Payment Methods</p>
+                <p>
+            The Payment Methods API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.PaymentMethodPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.PriceBookPO.readonly@SF"></a>
+                <p class="className">Price Books</p>
+                <p>
+            The Price Books API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.PriceBookPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ProductInventoryListPO.readonly@SF"></a>
+                <p class="className">Product Inventory Lists</p>
+                <p>
+            The Product Inventory Lists API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ProductInventoryListPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ProductPO.readonly@SF"></a>
+                <p class="className">Products</p>
+                <p>
+            The Products API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ProductPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.PromotionPO.readonly@SF"></a>
+                <p class="className">Promotions</p>
+                <p>
+            The Promotions API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.PromotionPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.Recommendation.readonly@SF"></a>
+                <p class="className">Recommendations</p>
+                <p>
+            The Recommendations API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.Recommendation.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.StageableCustomObjectPO.readonly@SF"></a>
+                <p class="className">Replicable Custom Objects</p>
+                <p>
+            The Replicable Custom Objects API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.StageableCustomObjectPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.ShippingMethodPO.readonly@SF"></a>
+                <p class="className">Shipping Methods</p>
+                <p>
+            The Shipping Methods API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.ShippingMethodPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.SitePreferencesPO.readonly@SF"></a>
+                <p class="className">Site Preferences</p>
+                <p>
+            The Site Preferences API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.SitePreferencesPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.RepositoryPO.readonly@SF"></a>
+                <p class="className">Sites</p>
+                <p>
+            The Sites API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.RepositoryPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.SourceCodeGroupPO.readonly@SF"></a>
+                <p class="className">Source Code Groups</p>
+                <p>
+            The Source Code Groups API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.SourceCodeGroupPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.StorePO.readonly@SF"></a>
+                <p class="className">Stores</p>
+                <p>
+            The Stores API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.StorePO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.SystemNotificationPO.readonly@SF"></a>
+                <p class="className">System Notification Messages</p>
+                <p>
+            The System Notification Messages API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.SystemNotificationPO.readonly@SF
+                    </li>
+                    <li>
+                        <b>Description:</b> The business object is read-only from storefront requests
+                    </li>
+                    <li>
+                        <b>Access:</b> Read-only from storefront requests.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Search"></a>
+            <div class="header">Search Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.catalog.ProductMgr.queryAllProducts()"></a>
+                <p class="className">api.dw.catalog.ProductMgr.queryAllProducts()</p>
+                <p>
+            The api.dw.catalog.ProductMgr.queryAllProducts() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.catalog.ProductMgr.queryAllProducts()
+                    </li>
+                    <li>
+                        <b>Description:</b> Access to all products in a site or catalog isn't allowed in the Storefront.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.catalog.ProductMgr.queryAllSiteProducts()</li>
+                            <li> dw.catalog.ProductMgr.queryAllSiteProductsSorted()</li>
+                            <li> dw.catalog.ProductMgr.queryProductsInCatalog(Catalog)</li>
+                            <li> dw.catalog.ProductMgr.queryProductsInCatalogSorted(Catalog)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.object.SystemObjectMgr.getAllSystemObjects(String)"></a>
+                <p class="className">api.dw.object.SystemObjectMgr.getAllSystemObjects(String)</p>
+                <p>
+            The api.dw.object.SystemObjectMgr.getAllSystemObjects(String) API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.object.SystemObjectMgr.getAllSystemObjects(String)
+                    </li>
+                    <li>
+                        <b>Description:</b> Allowed number of calls to method dw.object.SystemObjectMgr.getAllSystemObjects(String).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.object.SystemObjectMgr.getAllSystemObjects(String)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.pipelet.UpdateSearchIndex"></a>
+                <p class="className">api.pipelet.UpdateSearchIndex</p>
+                <p>
+            The api.pipelet.UpdateSearchIndex API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.pipelet.UpdateSearchIndex
+                    </li>
+                    <li>
+                        <b>Description:</b> Re-indexing can't be started from the Storefront.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>Pipelet UpdateSearchIndex</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.query.attrExpr"></a>
+                <p class="className">api.query.attrExpr</p>
+                <p>
+            The api.query.attrExpr API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.query.attrExpr
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of attribute expressions allowed in a query against system objects and custom objects.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>6
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.query.attrOrder"></a>
+                <p class="className">api.query.attrOrder</p>
+                <p>
+            The api.query.attrOrder API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.query.attrOrder
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of order criteria allowed in a query against system objects and custom objects.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>3
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.query.customAttrExpr"></a>
+                <p class="className">api.query.customAttrExpr</p>
+                <p>
+            The api.query.customAttrExpr API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.query.customAttrExpr
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of custom attribute expressions allowed in a query against system objects and custom objects.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>4
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.query.customAttrOrder"></a>
+                <p class="className">api.query.customAttrOrder</p>
+                <p>
+            The api.query.customAttrOrder API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.query.customAttrOrder
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of order criteria with a custom attribute allowed in a query against system objects and custom objects.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_searchDictionary.STEMMING_EXCEPTION"></a>
+                <p class="className">Defined Stemming Exceptions per Locale</p>
+                <p>
+            The Defined Stemming Exceptions per Locale API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> searchDictionary.STEMMING_EXCEPTION
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of defined stemming exceptions per locale.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>499
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_searchDictionary.SUGGESTEXCLUDE"></a>
+                <p class="className">Defined Suggestion Term Blocklists per Locale</p>
+                <p>
+            The Defined Suggestion Term Blocklists per Locale API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> searchDictionary.SUGGESTEXCLUDE
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of defined suggestion term blocklists per locale.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>499
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_searchDictionary.keywordCount"></a>
+                <p class="className">Maximum Number of Terms in Keyword Groups</p>
+                <p>
+            The Maximum Number of Terms in Keyword Groups API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> searchDictionary.keywordCount
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of terms in keyword groups.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>100,000 (warning at 80,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Session"></a>
+            <div class="header">Session Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.cookie.maxValueLength"></a>
+                <p class="className">api.cookie.maxValueLength</p>
+                <p>
+            The api.cookie.maxValueLength API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.cookie.maxValueLength
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum length for a cookie value on a response.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000 (warning at 1,200)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.session.maxKeyLength"></a>
+                <p class="className">api.session.maxKeyLength</p>
+                <p>
+            The api.session.maxKeyLength API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.session.maxKeyLength
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum length for the name of a session attribute.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>50
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.session.maxKeyLength.isset"></a>
+                <p class="className">api.session.maxKeyLength.isset</p>
+                <p>
+            The api.session.maxKeyLength.isset API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.session.maxKeyLength.isset
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum length for the name of a session attribute (via &lt;isset&gt;)
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>50
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.session.maxStringLength"></a>
+                <p class="className">api.session.maxStringLength</p>
+                <p>
+            The api.session.maxStringLength API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.session.maxStringLength
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum length for a string attribute in a session.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000 (warning at 1,200)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.session.maxStringLength.isset"></a>
+                <p class="className">api.session.maxStringLength.isset</p>
+                <p>
+            The api.session.maxStringLength.isset API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.session.maxStringLength.isset
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum length for a string attribute in a session (via &lt;isset&gt;)
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>2,000 (warning at 1,200)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_System Notification"></a>
+            <div class="header">System Notification Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.SystemNotificationChannelPO.relation.topics"></a>
+                <p class="className">Maximum Notification Channels for Notification Topic</p>
+                <p>
+            The Maximum Notification Channels for Notification Topic API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.SystemNotificationChannelPO.relation.topics
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of notification channels assigned to a notification topic.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>10 (warning at 5)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_URL Rules"></a>
+            <div class="header">URL Rules Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_urlRules.refinementValues.size"></a>
+                <p class="className">Maximum Supported Refinement Value Count for Search Refinement URLs</p>
+                <p>
+            The Maximum Supported Refinement Value Count for Search Refinement URLs API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> urlRules.refinementValues.size
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum supported refinement value count for search refinement URLs.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>500,000 (warning at 300,000)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Velocity"></a>
+            <div class="header">Velocity Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.velocity.includedepth"></a>
+                <p class="className">api.velocity.includedepth</p>
+                <p>
+            The api.velocity.includedepth API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.velocity.includedepth
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum nesting level of Velocity templates.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>10
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.velocity.looplimit"></a>
+                <p class="className">api.velocity.looplimit</p>
+                <p>
+            The api.velocity.looplimit API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.velocity.looplimit
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of loop iterations within a rendered Velocity template.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1,000
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.velocity.templatesize"></a>
+                <p class="className">api.velocity.templatesize</p>
+                <p>
+            The api.velocity.templatesize API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.velocity.templatesize
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum size of a Velocity template (in bytes).
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>102,400
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.velocity.timeout"></a>
+                <p class="className">api.velocity.timeout</p>
+                <p>
+            The api.velocity.timeout API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.velocity.timeout
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum execution time for a Velocity template in milliseconds.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>30,000
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

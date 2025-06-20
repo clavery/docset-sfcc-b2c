@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class CustomAttributes</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.object.CustomAttributes">
+            <a name="dw.object.CustomAttributes"></a>
+            <div class="packageName">dw.object</div>
+            <div class="className
+					">	
+        	
+				Class CustomAttributes</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.object.CustomAttributes
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class is used together with other classes that contain custom attributes
+ and is used to read and write these attributes. The actual attributes are
+ accessible as ECMA properties. The syntax for setting and retrieving the
+ value of a custom attribute depends upon the type of the attribute. If the
+ wrong syntax is used to set an individual attribute than an exception will be
+ thrown.
+
+ <p/>
+
+ The following script examples demonstrate how to work with custom attributes.
+ Suppose we have an ExtensibleObject named "eo" possessing attributes of all
+ the different types supported by the Commerce Cloud Digital metadata system. The
+ following script snippet shows that setting single-valued attributes is
+ simply a matter of using the assignment operator and standard ECMA primitives
+ and built-in types:
+
+ <p/>
+
+ <pre>
+ // attribute of value type 'Boolean'
+ eo.custom.bvalue = true;
+ var b : Boolean = eo.custom.bvalue;
+
+ // attribute of value type 'Integer'
+ eo.custom.ivalue = 10;
+ var i : Number = eo.custom.ivalue;
+
+ // attribute of value type 'Number'
+ eo.custom.dvalue = 99.99;
+ var d : Number = eo.custom.dvalue;
+
+ // attribute of value type 'String'
+ eo.custom.svalue = &quot;String1&quot;;
+ var s : String = eo.custom.svalue;
+
+ // attribute of value type 'Email'
+ eo.custom.emailvalue = &quot;email@demandware.com&quot;;
+ var e : String = eo.custom.emailvalue;
+
+ // attribute of value type 'Text'
+ eo.custom.tvalue = &quot;laaaaaaaaaaaarge text&quot;;
+ var t : String = eo.custom.tvalue;
+
+ // attribute of value type 'Date'
+ eo.custom.dtvalue = new Date;
+ var date : Date = eo.custom.dtvalue;
+ </pre>
+
+ <p/>
+
+ Setting and retrieving the values for multi-value attributes is also
+ straightforward and uses ECMA arrays to represent the multiple values. Set-of
+ attributes and enum-of attributes are handled in a very similar manner. The
+ chief difference is that enum-of attributes are limited to a prescribed set
+ of value definitions whereas set-of attributes are open-ended. Furthermore,
+ each value in an enum-of attribute has a value and a display name which
+ affects the retrieval logic.
+
+ Multi-value attributes are returned as an array. This array is read-only and
+ can't be used to update the multi-value attribute. To update the multi-value
+ attribute an array with new values must be assigned to the attribute.
+
+ <p/>
+
+ <pre>
+ // attribute of value type 'Set of String'
+ // set the attribute value only if it hasn't been already set
+ if( !('setofstringvalue' in eo.custom) )
+ {
+     eo.custom.setofstringvalue = new Array(&quot;abc&quot;,&quot;def&quot;,&quot;ghi&quot;);
+ }
+
+ // returns an Array of String instances
+ var setofstring : Array = eo.custom.setofstringvalue;
+ var s1 : String = setofstring[0];
+ var s2 : String = setofstring[1];
+ var s3 : String = setofstring[2];
+
+ // attribute of value type 'Enum of Integer' with multi-value handling
+ eo.custom.enumofintmultivalue = new Array(1, 2, 3);
+
+ // returns an Array of EnumValue instances
+ var enumofintmulti : Array = eo.custom.enumofintmultivalue;
+ var value1 : Number = enumofintmulti[0].getValue();
+ var displayvalue1 : String = enumofintmulti[0].getDisplayValue();
+ var value2 : Number = enumofintmulti[1].getValue();
+ var displayvalue2 : String = enumofintmulti[1].getDisplayValue();
+ var value3 : Number = enumofintmulti[2].getValue();
+ var displayvalue3 : String = enumofintmulti[2].getDisplayValue();
+ </pre>
+
+ <p/>
+
+ For further details on the Commerce Cloud Digital attribute system, see the core
+ Commerce Cloud Digital documentation.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

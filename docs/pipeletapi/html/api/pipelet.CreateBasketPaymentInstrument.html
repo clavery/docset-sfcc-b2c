@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateBasketPaymentInstrument</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet CreateBasketPaymentInstrument</div>
+            <div class="topLevelDescription">Deprecated. Do not use this pipelet. Use the AddPaymentInstrumentToBasket pipelet instead.<br/>
+Creates and returns a new OrderPaymentInstrument of the specified PaymentMethod, and assigns it to the specified Basket. If the Basket has any existing payment instruments, these are removed. </div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">Deprecated. Do not use this pipelet. Use the AddPaymentInstrumentToBasket pipelet instead.</div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket (deprecated)</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Basket</span>
+					&nbsp;:&nbsp;
+					Basket
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PaymentMethod</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The type of payment information. See dw.order.PaymentInformation for constants.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PaymentInstrument</span>
+					&nbsp;:&nbsp;
+					LineItemCtnrPaymentInstrument
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+A newly created OrderPaymentInstrument associated with the passed in basket.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,925 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class CustomerActiveData</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.customer.CustomerActiveData">
+            <a name="dw.customer.CustomerActiveData"></a>
+            <div class="packageName">dw.customer</div>
+            <div class="className
+					">	
+        	
+				Class CustomerActiveData</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ActiveData.html">dw.object.ActiveData</a>
+                </div>
+                <div style="position:relative;left:9%;">
+                    <img src="images/inherit.gif">dw.customer.CustomerActiveData
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents the active data for a <a href="class_dw_customer_Customer.html">Customer</a> in Commerce Cloud Digital.
+ <p/>
+ <b>Note:</b> this class allows access to sensitive personal and private information.
+ Pay attention to appropriate legal and regulatory requirements when developing.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>avgOrderValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The average order value of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>discountValueWithCoupon
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The discount value resulting from coupons, that has been applied
+ to orders of the customer, or <code>null</code> if none has been set or
+ the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>discountValueWithoutCoupon
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The discount value resulting from promotions other than coupons,
+ that has been applied to orders of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftOrders
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of orders for the Customer that contained at least
+ one product unit marked as a gift, or <code>null</code> if none has been
+ set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftUnits
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of product units in orders for the customer
+ that were marked as a gift, or <code>null</code> if none has been set
+ or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>lastOrderDate
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The date of the last order for the customer, or <code>null</code>
+ if there are no orders for the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orders
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The orders of the customer, or <code>null</code> if none
+ has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The lifetime order value of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderValueMonth
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The order value of the customer, over the most recent 30 days,
+ or <code>null</code> if none has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productMastersOrdered
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">An array containing the master product SKUs of variation products
+ in orders for the customer, or an empty collection if no SKUs have been
+ set or the collection of SKUs is no longer valid. There is no specific
+ limit on the number of SKUs that will be returned in the collection, but
+ there is also no guarantee that it will contain the SKUs for all products
+ ordered by the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productsAbandonedMonth
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">An array containing the SKUs of products in baskets abandoned
+ by the customer in the last 30 days, or an empty collection if no SKUs
+ have been set or the collection is no longer valid.  There is no specific
+ limit on the number of SKUs that will be returned in the collection, but
+ there is also no guarantee that it will contain the SKUs for all products
+ in baskets abandoned by the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productsOrdered
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">An array containing the SKUs of products in orders
+ for the customer, or an empty collection if no SKUs have been set or the
+ collection of SKUs is no longer valid.  There is no specific limit on the
+ number of SKUs that will be returned in the collection, but there is also
+ no guarantee that it will contain the SKUs for all products ordered by
+ the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productsViewedMonth
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">An array containing the SKUs of products viewed by the
+ customer in the last 30 days, or an empty collection if no SKUs have been
+ set or the collection is no longer valid.  There is no specific limit on
+ the number of SKUs that will be returned in the collection, but there is
+ also no guarantee that it will contain the SKUs for all products viewed
+ by the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returns
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of returns of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returnValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The returned revenue of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sourceCodeOrders
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of orders for the customer where a source code was
+ in effect, or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>topCategoriesOrdered
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">An array containing the IDs of up to the top 20 categories for
+ customer orders, or an empty list if no categories have been set or the
+ list of categories is no longer valid. The top category is the one for
+ which the most orders for the customer contained at least one product
+ found in that category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>visitsMonth
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The visits of the customer, over the most recent 30 days,
+ or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>visitsWeek
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The visits of the customer, over the most recent 7 days,
+ or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>visitsYear
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The visits of the customer, over the most recent 365 days,
+ or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getAvgOrderValue_DetailAnchor"><span class="">getAvgOrderValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the average order value of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getDiscountValueWithCoupon_DetailAnchor"><span class="">getDiscountValueWithCoupon</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the discount value resulting from coupons, that has been applied to orders of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getDiscountValueWithoutCoupon_DetailAnchor"><span class="">getDiscountValueWithoutCoupon</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the discount value resulting from promotions other than coupons, that has been applied to orders of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getGiftOrders_DetailAnchor"><span class="">getGiftOrders</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of orders for the Customer that contained at least one product unit marked as a gift, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getGiftUnits_DetailAnchor"><span class="">getGiftUnits</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of product units in orders for the customer that were marked as a gift, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getLastOrderDate_DetailAnchor"><span class="">getLastOrderDate</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the date of the last order for the customer, or <code>null</code> if there are no orders for the customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getOrders_DetailAnchor"><span class="">getOrders</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the orders of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getOrderValue_DetailAnchor"><span class="">getOrderValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the lifetime order value of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getOrderValueMonth_DetailAnchor"><span class="">getOrderValueMonth</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the order value of the customer, over the most recent 30 days, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getProductMastersOrdered_DetailAnchor"><span class="">getProductMastersOrdered</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns an array containing the master product SKUs of variation products in orders for the customer, or an empty collection if no SKUs have been set or the collection of SKUs is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getProductsAbandonedMonth_DetailAnchor"><span class="">getProductsAbandonedMonth</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns an array containing the SKUs of products in baskets abandoned by the customer in the last 30 days, or an empty collection if no SKUs have been set or the collection is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getProductsOrdered_DetailAnchor"><span class="">getProductsOrdered</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns an array containing the SKUs of products in orders for the customer, or an empty collection if no SKUs have been set or the collection of SKUs is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getProductsViewedMonth_DetailAnchor"><span class="">getProductsViewedMonth</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns an array containing the SKUs of products viewed by the customer in the last 30 days, or an empty collection if no SKUs have been set or the collection is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getReturns_DetailAnchor"><span class="">getReturns</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of returns of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getReturnValue_DetailAnchor"><span class="">getReturnValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the returned revenue of the customer, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getSourceCodeOrders_DetailAnchor"><span class="">getSourceCodeOrders</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of orders for the customer where a source code was in effect, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getTopCategoriesOrdered_DetailAnchor"><span class="">getTopCategoriesOrdered</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns an array containing the IDs of up to the top 20 categories for customer orders, or an empty list if no categories have been set or the list of categories is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getVisitsMonth_DetailAnchor"><span class="">getVisitsMonth</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the visits of the customer, over the most recent 30 days, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getVisitsWeek_DetailAnchor"><span class="">getVisitsWeek</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the visits of the customer, over the most recent 7 days, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_CustomerActiveData_getVisitsYear_DetailAnchor"><span class="">getVisitsYear</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the visits of the customer, over the most recent 365 days, or <code>null</code> if none has been set or the value is no longer valid.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ActiveData.html"><span class="">ActiveData</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ActiveData.html#dw_object_ActiveData_getCustom_DetailAnchor"><span class="">getCustom</span></a>, <a href="class_dw_object_ActiveData.html#dw_object_ActiveData_isEmpty_DetailAnchor"><span class="">isEmpty</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getAvgOrderValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAvgOrderValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAvgOrderValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the average order value of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the average order size.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getDiscountValueWithCoupon_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDiscountValueWithCoupon</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDiscountValueWithCoupon</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the discount value resulting from coupons, that has been applied
+ to orders of the customer, or <code>null</code> if none has been set or
+ the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the discount value resulting from coupons.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getDiscountValueWithoutCoupon_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDiscountValueWithoutCoupon</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDiscountValueWithoutCoupon</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the discount value resulting from promotions other than coupons,
+ that has been applied to orders of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the discount value resulting from promotions other than coupons.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getGiftOrders_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftOrders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftOrders</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of orders for the Customer that contained at least
+ one product unit marked as a gift, or <code>null</code> if none has been
+ set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of gift orders.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getGiftUnits_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftUnits</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftUnits</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of product units in orders for the customer
+ that were marked as a gift, or <code>null</code> if none has been set
+ or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of gift product units.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getLastOrderDate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLastOrderDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLastOrderDate</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the date of the last order for the customer, or <code>null</code>
+ if there are no orders for the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the date of the last order for the customer.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getOrders_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrders</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the orders of the customer, or <code>null</code> if none
+ has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the orders.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getOrderValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the lifetime order value of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the lifetime value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getOrderValueMonth_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderValueMonth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderValueMonth</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the order value of the customer, over the most recent 30 days,
+ or <code>null</code> if none has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value over the last 30 days.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getProductMastersOrdered_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductMastersOrdered</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductMastersOrdered</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns an array containing the master product SKUs of variation products
+ in orders for the customer, or an empty collection if no SKUs have been
+ set or the collection of SKUs is no longer valid. There is no specific
+ limit on the number of SKUs that will be returned in the collection, but
+ there is also no guarantee that it will contain the SKUs for all products
+ ordered by the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection containing the master product SKUs of variation products that were ordered.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getProductsAbandonedMonth_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductsAbandonedMonth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductsAbandonedMonth</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns an array containing the SKUs of products in baskets abandoned
+ by the customer in the last 30 days, or an empty collection if no SKUs
+ have been set or the collection is no longer valid.  There is no specific
+ limit on the number of SKUs that will be returned in the collection, but
+ there is also no guarantee that it will contain the SKUs for all products
+ in baskets abandoned by the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection containing the SKUs of products that were abandoned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getProductsOrdered_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductsOrdered</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductsOrdered</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns an array containing the SKUs of products in orders
+ for the customer, or an empty collection if no SKUs have been set or the
+ collection of SKUs is no longer valid.  There is no specific limit on the
+ number of SKUs that will be returned in the collection, but there is also
+ no guarantee that it will contain the SKUs for all products ordered by
+ the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection containing the SKUs of products that were ordered.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getProductsViewedMonth_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductsViewedMonth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductsViewedMonth</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns an array containing the SKUs of products viewed by the
+ customer in the last 30 days, or an empty collection if no SKUs have been
+ set or the collection is no longer valid.  There is no specific limit on
+ the number of SKUs that will be returned in the collection, but there is
+ also no guarantee that it will contain the SKUs for all products viewed
+ by the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection containing the SKUs of products that were ordered.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getReturns_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturns</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturns</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of returns of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the returns.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getReturnValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturnValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturnValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the returned revenue of the customer, or <code>null</code>
+ if none has been set or the value is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the returned revenue.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getSourceCodeOrders_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSourceCodeOrders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSourceCodeOrders</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of orders for the customer where a source code was
+ in effect, or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of orders with source codes in effect.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getTopCategoriesOrdered_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTopCategoriesOrdered</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTopCategoriesOrdered</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns an array containing the IDs of up to the top 20 categories for
+ customer orders, or an empty list if no categories have been set or the
+ list of categories is no longer valid. The top category is the one for
+ which the most orders for the customer contained at least one product
+ found in that category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list containing the top 20 categories.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getVisitsMonth_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVisitsMonth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVisitsMonth</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the visits of the customer, over the most recent 30 days,
+ or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the visits over the last 30 days.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getVisitsWeek_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVisitsWeek</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVisitsWeek</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the visits of the customer, over the most recent 7 days,
+ or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the visits over the last 7 days.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerActiveData_getVisitsYear_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVisitsYear</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVisitsYear</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the visits of the customer, over the most recent 365 days,
+ or <code>null</code> if none has been set or the value
+ is no longer valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the visits over the last 365 days.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

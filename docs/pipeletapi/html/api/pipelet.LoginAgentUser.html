@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet LoginAgentUser</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet LoginAgentUser</div>
+            <div class="topLevelDescription">Login an agent user, which is authorized to login on-behalf of a customer for instance to place an order. The login is only allowed during a secure protocol request (https) and only in the storefront context. Otherwise a PipelineExecutionException is thrown. 
+If the login of the agent user fails, a Status object is returned, which allows to find out the reason, what was going wrong. See dw.system.AgentUserStatusCodes for more information.
+<p/><b>Note:</b> this pipelet allows access to sensitive financial and security information. Pay attention to appropriate legal and regulatory requirements.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Login</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The login name of the agent user.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Password</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The agent users password.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The agent user login status. See dw.system.AgentUserStatusCodes for more information.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

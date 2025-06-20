@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ExportPageLocalization</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    ExportPageLocalization</div>
+            <div class="topLevelDescription">Export page content for localization purposes</div>
+            <div class="topLevelDescription"></div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Export file name and path relative to 'IMPEX/src'. Required if not using FileNamePrefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileFormat</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The format in which the data will be exported.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                JSON, RESOURCE</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileNamePrefix</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Prefix for the export file. A timestamp is appended and site information as applicable. To order the files chronologically, sort alphanumerically. Path is relative to 'IMPEX/src' and can include a subdirectory. Required if not using ExportFile.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Locale</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The locale for which the Page data will be exported.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OverwriteExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">If selected, the option overwrites an existing file. If not selected and a file exists, the job step exits and reports an error.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PageIDs</span>
+                                            &nbsp;:&nbsp;
+                                            JSONString
+                                                    (Optional)
+                                                </span>
+                    <div class="description">A JSON object containing the single property 'page_ids', which is an array of Page IDs. When not specified, 'PageIDsFile' must be used.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PageIDsFile</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">When no 'PageIDs parameter is supplied, this is the name of a file containing one Page ID per line. Its is referenced relative to the 'Impex/src' folder.'</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

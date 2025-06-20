@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet AddBonusProductToBasket</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet AddBonusProductToBasket</div>
+            <div class="topLevelDescription">Adds a bonus product to the Basket associated with the specified BonusDiscountLineItem. The pipelet creates and returns a ProductLineItem, by assigning the specified Product and Quantity to the specified Basket.  If this process fails, then the pipelet exits with an ERROR.  Otherwise the pipelet adds the new ProductLineItem to the specified shipment or the default shipment if not specified.<br/>
+
+The passed product must be one of the products associated with the BonusDiscountLineItem or the process will fail. The process does NOT validate if the number of bonus products exceeds the maximum allowed by the bonus discount.  This is the job of application logic.<br/>
+
+Pipelet always creates a new product line item, regardless of the value of the site preference 'Add Product Behavior'.<br/></div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Basket</span>
+					&nbsp;:&nbsp;
+					Basket
+							(Required)
+						</span>
+                    <div class="description">
+The basket to add the product to.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">BonusDiscountLineItem</span>
+					&nbsp;:&nbsp;
+					BonusDiscountLineItem
+							(Required)
+						</span>
+                    <div class="description">
+Line item representing an applied BonusChoiceDiscount in the basket.  The product must be in the bonus product list of this discount.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Product</span>
+					&nbsp;:&nbsp;
+					Product
+							(Required)
+						</span>
+                    <div class="description">
+The product that is to be added to the basket.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Quantity</span>
+					&nbsp;:&nbsp;
+					Number
+							(Required)
+						</span>
+                    <div class="description">
+The quantity of the product.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductOptionModel</span>
+					&nbsp;:&nbsp;
+					ProductOptionModel
+							(Optional)
+						</span>
+                    <div class="description">
+The option model of the product that is to be added to the basket.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Shipment</span>
+					&nbsp;:&nbsp;
+					LineItemGroup
+							(Optional)
+						</span>
+                    <div class="description">
+Specifies the shipment the bonus product should be added to. If not specified, the pipelet automatically adds the product to the default shipment of the basket.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductLineItem</span>
+					&nbsp;:&nbsp;
+					ProductLineItem
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The newly created product line item.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateCustomObject</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet CreateCustomObject</div>
+            <div class="topLevelDescription">Creates a CustomObject with the ID specified by the value of Key.  The objects type is determined by the value of the CustomObjectType configuration. The pipelet takes the ERROR exit if there already exist a custom object with the same ID as given by 'Key'.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">CustomObject</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomObjectType</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The custom objec type for which an object should be created.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Key</span>
+					&nbsp;:&nbsp;
+					Object
+							(Required)
+						</span>
+                    <div class="description">
+The primary key value for the custom object, which maybe either a String or an Integer number.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomObject</span>
+					&nbsp;:&nbsp;
+					CustomObject
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The newly created object.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

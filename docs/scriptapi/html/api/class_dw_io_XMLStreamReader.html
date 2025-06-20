@@ -1,0 +1,2027 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class XMLStreamReader</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.io.XMLStreamReader">
+            <a name="dw.io.XMLStreamReader"></a>
+            <div class="packageName">dw.io</div>
+            <div class="className
+					">	
+        	
+				Class XMLStreamReader</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.io.XMLStreamReader
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The XMLStreamReader allows forward, read-only access to XML.  It is designed
+ to be the lowest level and most efficient way to read XML data.
+
+ <p> The XMLStreamReader is designed to iterate over XML using
+ next() and hasNext().  The data can be accessed using methods such as getEventType(),
+ getNamespaceURI(), getLocalName() and getText();</p>
+
+ <p> The <a href="class_dw_io_XMLStreamReader.html#dw_io_XMLStreamReader_next_DetailAnchor">next()</a> method causes the reader to read the next parse event.
+ The next() method returns an integer which identifies the type of event just read.</p>
+ <p> The event type can be determined using <a href="class_dw_io_XMLStreamReader.html#dw_io_XMLStreamReader_getEventType_DetailAnchor">getEventType()</a>.</p>
+ <p> Parsing events are defined as the XML Declaration, a DTD,
+ start tag, character data, white space, end tag, comment,
+ or processing instruction.  An attribute or namespace event may be encountered
+ at the root level of a document as the result of a query operation.</p>
+
+ <p>The following table describes which methods are valid in what state.
+ If a method is called in an invalid state the method will throw a
+ java.lang.IllegalStateException.</p>
+
+ <table border="2" rules="all" cellpadding="4">
+   <thead>
+     <tr>
+       <th align="center" colspan="2">
+         Valid methods for each state
+       </th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <th>Event Type</th>
+       <th>Valid Methods</th>
+     </tr>
+     <tr>
+       <td> All States  </td>
+       <td> getProperty(), hasNext(), require(), close(),
+            getNamespaceURI(), isStartElement(),
+            isEndElement(), isCharacters(), isWhiteSpace(),
+            getNamespaceContext(), getEventType(),getLocation(),
+            hasText(), hasName()
+       </td>
+     </tr>
+     <tr>
+       <td> START_ELEMENT  </td>
+       <td> next(), getName(), getLocalName(), hasName(), getPrefix(),
+            getAttributeXXX(), isAttributeSpecified(),
+            getNamespaceXXX(),
+            getElementText(), nextTag(), getXMLObject()
+       </td>
+     </tr>
+     <tr>
+       <td> ATTRIBUTE  </td>
+       <td> next(), nextTag()
+            getAttributeXXX(), isAttributeSpecified(),
+       </td>
+     </tr>
+     <tr>
+       <td> NAMESPACE  </td>
+       <td> next(), nextTag()
+            getNamespaceXXX()
+       </td>
+     </tr>
+     <tr>
+       <td> END_ELEMENT  </td>
+       <td> next(), getName(), getLocalName(), hasName(), getPrefix(),
+            getNamespaceXXX(), nextTag()
+      </td>
+     </tr>
+     <tr>
+       <td> CHARACTERS  </td>
+       <td> next(), getTextXXX(), nextTag() </td>
+     </tr>
+     <tr>
+       <td> CDATA  </td>
+       <td> next(), getTextXXX(), nextTag() </td>
+     </tr>
+     <tr>
+       <td> COMMENT  </td>
+       <td> next(), getTextXXX(), nextTag() </td>
+     </tr>
+     <tr>
+       <td> SPACE  </td>
+       <td> next(), getTextXXX(), nextTag() </td>
+     </tr>
+     <tr>
+       <td> START_DOCUMENT  </td>
+       <td> next(), getEncoding(), getVersion(), isStandalone(), standaloneSet(),
+            getCharacterEncodingScheme(), nextTag()</td>
+     </tr>
+     <tr>
+       <td> END_DOCUMENT  </td>
+       <td> close()</td>
+     </tr>
+     <tr>
+       <td> PROCESSING_INSTRUCTION  </td>
+       <td> next(), getPITarget(), getPIData(), nextTag() </td>
+     </tr>
+     <tr>
+       <td> ENTITY_REFERENCE  </td>
+       <td> next(), getLocalName(), getText(), nextTag() </td>
+     </tr>
+     <tr>
+       <td> DTD  </td>
+       <td> next(), getText(), nextTag() </td>
+     </tr>
+   </tbody>
+  </table>
+
+ <p/>
+
+ The following is a code sample to read an XML file containing multiple
+ "myobject" sub-elements.  Only one myObject instance is kept in memory at
+ any given time to keep memory consumption low:
+
+ <pre>
+ var fileReader : FileReader = new FileReader(file, "UTF-8");
+ var xmlStreamReader : XMLStreamReader = new XMLStreamReader(fileReader);
+
+ while (xmlStreamReader.hasNext())
+ {
+   if (xmlStreamReader.next() == XMLStreamConstants.START_ELEMENT)
+   {
+     var localElementName : String = xmlStreamReader.getLocalName();
+     if (localElementName == "myobject")
+     {
+       // read single "myobject" as XML
+       var myObject : XML = xmlStreamReader.getXMLObject();
+
+       // process myObject
+     }
+   }
+ }
+
+ xmlStreamReader.close();
+ fileReader.close();
+ </pre></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>attributeCount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The count of attributes on this START_ELEMENT,
+ this method is only valid on a START_ELEMENT or ATTRIBUTE.  This
+ count excludes namespace definitions.  Attribute indices are
+ zero-based.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>characterEncodingScheme
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The character encoding declared on the XML declaration
+ Returns null if none was declared.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>characters
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the cursor points to a character data event.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>columnNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The column number where the current event ends or -1 if none is
+ available.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>elementText
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Reads the content of a text-only element, an exception is thrown if this is not a text-only element. This method
+ always returns coalesced content. <br />
+ Precondition: the current event is START_ELEMENT. <br />
+ Postcondition: the current event is the corresponding END_ELEMENT. <br />
+ The method does the following (implementations are free to be optimized but must do equivalent processing):
+
+ <pre>
+ if ( getEventType() != XMLStreamConstants.START_ELEMENT )
+ {
+     throw new XMLStreamException( "parser must be on START_ELEMENT to read next text", getLocation() );
+ }
+ int eventType = next();
+ StringBuffer content = new StringBuffer();
+ while ( eventType != XMLStreamConstants.END_ELEMENT )
+ {
+     if ( eventType == XMLStreamConstants.CHARACTERS || eventType == XMLStreamConstants.CDATA
+         || eventType == XMLStreamConstants.SPACE || eventType == XMLStreamConstants.ENTITY_REFERENCE )
+     {
+         buf.append( getText() );
+     }
+     else if ( eventType == XMLStreamConstants.PROCESSING_INSTRUCTION || eventType == XMLStreamConstants.COMMENT )
+     {
+         // skipping
+     }
+     else if ( eventType == XMLStreamConstants.END_DOCUMENT )
+     {
+         throw new XMLStreamException( "unexpected end of document when reading element text content", this );
+     }
+     else if ( eventType == XMLStreamConstants.START_ELEMENT )
+     {
+         throw new XMLStreamException( "element text content may not contain START_ELEMENT", getLocation() );
+     }
+     else
+     {
+         throw new XMLStreamException( "Unexpected event type " + eventType, getLocation() );
+     }
+     eventType = next();
+ }
+ return buf.toString();
+ </pre></div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_io_XMLStreamReader.html#dw_io_XMLStreamReader_readElementText_DetailAnchor">readElementText()</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>encoding
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Return input encoding if known or null if unknown.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>endElement
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the cursor points to an end tag.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>eventType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An integer code that indicates the type
+ of the event the cursor is pointing to.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>lineNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The line number where the current event ends or -1 if none is
+ available.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>localName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The (local) name of the current event.
+ For START_ELEMENT or END_ELEMENT returns the (local) name of the current element.
+ For ENTITY_REFERENCE it returns entity name.
+ The current event must be START_ELEMENT or END_ELEMENT,
+ or ENTITY_REFERENCE.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>namespaceCount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The count of namespaces declared on this START_ELEMENT or END_ELEMENT,
+ this method is only valid on a START_ELEMENT, END_ELEMENT or NAMESPACE. On
+ an END_ELEMENT the count is of the namespaces that are about to go
+ out of scope.  This is the equivalent of the information reported
+ by SAX callback for an end element event.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>namespaceURI
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">If the current event is a START_ELEMENT or END_ELEMENT  this method
+ returns the URI of the prefix or the default namespace.
+ Returns null if the event does not have a prefix.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>PIData
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the data section of a processing instruction.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>PITarget
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the target of a processing instruction.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>prefix
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The prefix of the current event or null if the event does not have a prefix</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>standalone
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Get the standalone declaration from the xml declaration.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>startElement
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the cursor points to a start tag.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>text
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The current value of the parse event as a string,
+ this returns the string value of a CHARACTERS event,
+ returns the value of a COMMENT, the replacement value
+ for an ENTITY_REFERENCE, the string value of a CDATA section,
+ the string value for a SPACE event,
+ or the String value of the internal subset of the DTD.
+ If an ENTITY_REFERENCE has been resolved, any character data
+ will be reported as CHARACTERS events.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>textLength
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The length of the sequence of characters for this
+ Text event within the text character array.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>textStart
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The offset into the text character array where the first
+ character (of this text event) is stored.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>version
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the xml version declared on the xml declaration.
+ Returns null if none was declared.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>whiteSpace
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the cursor points to a character data event
+ that consists of all whitespace.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>XMLObject
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Reads a sub-tree of the XML document and parses it as XML object.
+ <p/>
+ The stream must be positioned on a START_ELEMENT. Do not call the method
+ when the stream is positioned at document's root element. This would
+ cause the whole document to be parsed into a single XML what may lead to
+ an out-of-memory condition. Instead use #next() to navigate to
+ sub-elements and invoke getXMLObject() there. Do not keep references to
+ more than the currently processed XML to keep memory consumption low. The
+ method reads the stream up to the matching END_ELEMENT. When the method
+ returns the current event is the END_ELEMENT event.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_io_XMLStreamReader.html#dw_io_XMLStreamReader_readXMLObject_DetailAnchor">readXMLObject()</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_XMLStreamReader_Reader_DetailAnchor"><span class="">XMLStreamReader</span></a></span>(reader
+									 : 
+									
+									<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>)</span>
+                    <div class="description">Constructs the stream readon on behalf of the reader.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_close_DetailAnchor"><span class="">close</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Frees any resources associated with this Reader.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributeCount_DetailAnchor"><span class="">getAttributeCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the count of attributes on this START_ELEMENT, this method is only valid on a START_ELEMENT or ATTRIBUTE.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributeLocalName_Number_DetailAnchor"><span class="">getAttributeLocalName</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the localName of the attribute at the provided index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributeNamespace_Number_DetailAnchor"><span class="">getAttributeNamespace</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the namespace of the attribute at the provided index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributePrefix_Number_DetailAnchor"><span class="">getAttributePrefix</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the prefix of this attribute at the provided index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributeType_Number_DetailAnchor"><span class="">getAttributeType</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the XML type of the attribute at the provided index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributeValue_String_String_DetailAnchor"><span class="">getAttributeValue</span></a></span>(namespaceURI
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, localName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the normalized attribute value of the attribute with the namespace and localName If the namespaceURI is null the namespace is not checked for equality</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getAttributeValue_Number_DetailAnchor"><span class="">getAttributeValue</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value of the attribute at the index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getCharacterEncodingScheme_DetailAnchor"><span class="">getCharacterEncodingScheme</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the character encoding declared on the XML declaration Returns null if none was declared.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getColumnNumber_DetailAnchor"><span class="">getColumnNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the column number where the current event ends or -1 if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_io_XMLStreamReader_getElementText_DetailAnchor"><span class="">getElementText</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Reads the content of a text-only element, an exception is thrown if this is not a text-only element.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getEncoding_DetailAnchor"><span class="">getEncoding</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Return input encoding if known or null if unknown.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getEventType_DetailAnchor"><span class="">getEventType</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns an integer code that indicates the type of the event the cursor is pointing to.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getLineNumber_DetailAnchor"><span class="">getLineNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the line number where the current event ends or -1 if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getLocalName_DetailAnchor"><span class="">getLocalName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the (local) name of the current event.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getNamespaceCount_DetailAnchor"><span class="">getNamespaceCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the count of namespaces declared on this START_ELEMENT or END_ELEMENT, this method is only valid on a START_ELEMENT, END_ELEMENT or NAMESPACE.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getNamespacePrefix_Number_DetailAnchor"><span class="">getNamespacePrefix</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the prefix for the namespace declared at the index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getNamespaceURI_String_DetailAnchor"><span class="">getNamespaceURI</span></a></span>(prefix
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Return the uri for the given prefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getNamespaceURI_Number_DetailAnchor"><span class="">getNamespaceURI</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the uri for the namespace declared at the index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getNamespaceURI_DetailAnchor"><span class="">getNamespaceURI</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">If the current event is a START_ELEMENT or END_ELEMENT this method returns the URI of the prefix or the default namespace.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getPIData_DetailAnchor"><span class="">getPIData</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the data section of a processing instruction.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getPITarget_DetailAnchor"><span class="">getPITarget</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the target of a processing instruction.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getPrefix_DetailAnchor"><span class="">getPrefix</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the prefix of the current event or null if the event does not have a prefix</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getText_DetailAnchor"><span class="">getText</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the current value of the parse event as a string, this returns the string value of a CHARACTERS event, returns the value of a COMMENT, the replacement value for an ENTITY_REFERENCE, the string value of a CDATA section, the string value for a SPACE event, or the String value of the internal subset of the DTD.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getTextLength_DetailAnchor"><span class="">getTextLength</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the length of the sequence of characters for this Text event within the text character array.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getTextStart_DetailAnchor"><span class="">getTextStart</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the offset into the text character array where the first character (of this text event) is stored.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_getVersion_DetailAnchor"><span class="">getVersion</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the xml version declared on the xml declaration.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_io_XMLStreamReader_getXMLObject_DetailAnchor"><span class="">getXMLObject</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Reads a sub-tree of the XML document and parses it as XML object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_hasName_DetailAnchor"><span class="">hasName</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the current event has a name (is a START_ELEMENT or END_ELEMENT)</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_hasNext_DetailAnchor"><span class="">hasNext</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if there are more parsing events and false if there are no more events.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_hasText_DetailAnchor"><span class="">hasText</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Indicates if the current event has text.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_isAttributeSpecified_Number_DetailAnchor"><span class="">isAttributeSpecified</span></a></span>(index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if this attribute was created by default.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_isCharacters_DetailAnchor"><span class="">isCharacters</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the cursor points to a character data event.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_isEndElement_DetailAnchor"><span class="">isEndElement</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the cursor points to an end tag.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_isStandalone_DetailAnchor"><span class="">isStandalone</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Get the standalone declaration from the xml declaration.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_isStartElement_DetailAnchor"><span class="">isStartElement</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the cursor points to a start tag.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_isWhiteSpace_DetailAnchor"><span class="">isWhiteSpace</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the cursor points to a character data event that consists of all whitespace.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_next_DetailAnchor"><span class="">next</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Get next parsing event - a processor may return all contiguous character data in a single chunk, or it may split it into several chunks.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_nextTag_DetailAnchor"><span class="">nextTag</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Skips any white space (isWhiteSpace() returns true), COMMENT, or PROCESSING_INSTRUCTION, until a START_ELEMENT or END_ELEMENT is reached.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_readElementText_DetailAnchor"><span class="">readElementText</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Reads the content of a text-only element, an exception is thrown if this is not a text-only element.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_readXMLObject_DetailAnchor"><span class="">readXMLObject</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Reads a sub-tree of the XML document and parses it as XML object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_require_Number_String_String_DetailAnchor"><span class="">require</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, namespaceURI
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, localName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Test if the current event is of the given type and if the namespace and name match the current namespace and name of the current event.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_XMLStreamReader_standaloneSet_DetailAnchor"><span class="">standaloneSet</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if standalone was set in the document.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_XMLStreamReader_Reader_DetailAnchor"></a>
+                    <div class="detailName 
+						">XMLStreamReader</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">XMLStreamReader</span>(reader
+								 : 
+								 					
+								<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>)
+                    </div>
+                    <div class="description">Constructs the stream readon on behalf of the reader.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">reader</span>
+						 - 
+						<span class="parameterDesc">the reader to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_close_DetailAnchor"></a>
+                    <div class="detailName 
+						">close</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">close</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Frees any resources associated with this Reader.  This method does not close the
+ underlying reader.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributeCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeCount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the count of attributes on this START_ELEMENT,
+ this method is only valid on a START_ELEMENT or ATTRIBUTE.  This
+ count excludes namespace definitions.  Attribute indices are
+ zero-based.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the number of attributes.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributeLocalName_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeLocalName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeLocalName</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the localName of the attribute at the provided
+ index.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the local name of the attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributeNamespace_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeNamespace</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeNamespace</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the namespace of the attribute at the provided
+ index.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the attribute</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the namespace URI (can be null)</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributePrefix_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributePrefix</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributePrefix</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the prefix of this attribute at the
+ provided index.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the prefix of the attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributeType_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeType</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the XML type of the attribute at the provided
+ index.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the XML type of the attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributeValue_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeValue</span>(namespaceURI
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, localName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the normalized attribute value of the
+ attribute with the namespace and localName
+ If the namespaceURI is null the namespace
+ is not checked for equality</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespaceURI</span>
+						 - 
+						<span class="parameterDesc">the namespace of the attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">localName</span>
+						 - 
+						<span class="parameterDesc">the local name of the attribute, cannot be null</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the value of the attribute or null if not found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getAttributeValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeValue</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value of the attribute at the
+ index.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the attribute value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getCharacterEncodingScheme_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCharacterEncodingScheme</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCharacterEncodingScheme</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the character encoding declared on the XML declaration
+ Returns null if none was declared.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the encoding declared in the document or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getColumnNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getColumnNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getColumnNumber</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the column number where the current event ends or -1 if none is
+ available.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the column number or -1.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getElementText_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getElementText</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getElementText</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Reads the content of a text-only element, an exception is thrown if this is not a text-only element. This method
+ always returns coalesced content. <br />
+ Precondition: the current event is START_ELEMENT. <br />
+ Postcondition: the current event is the corresponding END_ELEMENT. <br />
+ The method does the following (implementations are free to be optimized but must do equivalent processing):
+
+ <pre>
+ if ( getEventType() != XMLStreamConstants.START_ELEMENT )
+ {
+     throw new XMLStreamException( "parser must be on START_ELEMENT to read next text", getLocation() );
+ }
+ int eventType = next();
+ StringBuffer content = new StringBuffer();
+ while ( eventType != XMLStreamConstants.END_ELEMENT )
+ {
+     if ( eventType == XMLStreamConstants.CHARACTERS || eventType == XMLStreamConstants.CDATA
+         || eventType == XMLStreamConstants.SPACE || eventType == XMLStreamConstants.ENTITY_REFERENCE )
+     {
+         buf.append( getText() );
+     }
+     else if ( eventType == XMLStreamConstants.PROCESSING_INSTRUCTION || eventType == XMLStreamConstants.COMMENT )
+     {
+         // skipping
+     }
+     else if ( eventType == XMLStreamConstants.END_DOCUMENT )
+     {
+         throw new XMLStreamException( "unexpected end of document when reading element text content", this );
+     }
+     else if ( eventType == XMLStreamConstants.START_ELEMENT )
+     {
+         throw new XMLStreamException( "element text content may not contain START_ELEMENT", getLocation() );
+     }
+     else
+     {
+         throw new XMLStreamException( "Unexpected event type " + eventType, getLocation() );
+     }
+     eventType = next();
+ }
+ return buf.toString();
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_io_XMLStreamReader.html#dw_io_XMLStreamReader_readElementText_DetailAnchor">readElementText()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getEncoding_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEncoding</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEncoding</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Return input encoding if known or null if unknown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the encoding of this instance or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getEventType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEventType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEventType</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns an integer code that indicates the type
+ of the event the cursor is pointing to.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an integer code that indicates the type of the event the cursor is pointing to.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getLineNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLineNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLineNumber</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the line number where the current event ends or -1 if none is
+ available.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the line number or -1.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getLocalName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLocalName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLocalName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the (local) name of the current event.
+ For START_ELEMENT or END_ELEMENT returns the (local) name of the current element.
+ For ENTITY_REFERENCE it returns entity name.
+ The current event must be START_ELEMENT or END_ELEMENT,
+ or ENTITY_REFERENCE.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the local name.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getNamespaceCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNamespaceCount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNamespaceCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the count of namespaces declared on this START_ELEMENT or END_ELEMENT,
+ this method is only valid on a START_ELEMENT, END_ELEMENT or NAMESPACE. On
+ an END_ELEMENT the count is of the namespaces that are about to go
+ out of scope.  This is the equivalent of the information reported
+ by SAX callback for an end element event.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the number of namespace declarations on this specific element.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getNamespacePrefix_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNamespacePrefix</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNamespacePrefix</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the prefix for the namespace declared at the
+ index.  Returns null if this is the default namespace
+ declaration.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the namespace declaration.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the namespace prefix.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getNamespaceURI_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNamespaceURI</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNamespaceURI</span>(prefix
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Return the uri for the given prefix.
+ The uri returned depends on the current state of the processor.
+
+ <p/><strong>NOTE:</strong>The 'xml' prefix is bound as defined in
+ <a href="http://www.w3.org/TR/REC-xml-names/#ns-using">Namespaces in XML</a>
+ specification to "http://www.w3.org/XML/1998/namespace".
+
+ <p/><strong>NOTE:</strong> The 'xmlns' prefix must be resolved to following namespace
+ <a href="http://www.w3.org/2000/xmlns/">http://www.w3.org/2000/xmlns/</a></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">prefix</span>
+						 - 
+						<span class="parameterDesc">The prefix to lookup, may not be null</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the uri bound to the given prefix or null if it is not bound</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getNamespaceURI_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNamespaceURI</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNamespaceURI</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the uri for the namespace declared at the
+ index.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the namespace declaration.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the namespace uri.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getNamespaceURI_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNamespaceURI</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNamespaceURI</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">If the current event is a START_ELEMENT or END_ELEMENT  this method
+ returns the URI of the prefix or the default namespace.
+ Returns null if the event does not have a prefix.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the URI bound to this elements prefix, the default namespace, or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getPIData_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPIData</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPIData</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the data section of a processing instruction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the data or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getPITarget_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPITarget</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPITarget</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the target of a processing instruction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the target or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getPrefix_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPrefix</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPrefix</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the prefix of the current event or null if the event does not have a prefix</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the prefix or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getText_DetailAnchor"></a>
+                    <div class="detailName 
+						">getText</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getText</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the current value of the parse event as a string,
+ this returns the string value of a CHARACTERS event,
+ returns the value of a COMMENT, the replacement value
+ for an ENTITY_REFERENCE, the string value of a CDATA section,
+ the string value for a SPACE event,
+ or the String value of the internal subset of the DTD.
+ If an ENTITY_REFERENCE has been resolved, any character data
+ will be reported as CHARACTERS events.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current text or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getTextLength_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTextLength</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTextLength</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the length of the sequence of characters for this
+ Text event within the text character array.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the length of the sequence of characters for this Text event within the text character array.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getTextStart_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTextStart</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTextStart</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the offset into the text character array where the first
+ character (of this text event) is stored.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the offset into the text character array where the first character (of this text event) is stored.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getVersion_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVersion</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVersion</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the xml version declared on the xml declaration.
+ Returns null if none was declared.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the XML version or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_getXMLObject_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getXMLObject</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getXMLObject</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Reads a sub-tree of the XML document and parses it as XML object.
+ <p/>
+ The stream must be positioned on a START_ELEMENT. Do not call the method
+ when the stream is positioned at document's root element. This would
+ cause the whole document to be parsed into a single XML what may lead to
+ an out-of-memory condition. Instead use #next() to navigate to
+ sub-elements and invoke getXMLObject() there. Do not keep references to
+ more than the currently processed XML to keep memory consumption low. The
+ method reads the stream up to the matching END_ELEMENT. When the method
+ returns the current event is the END_ELEMENT event.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_io_XMLStreamReader.html#dw_io_XMLStreamReader_readXMLObject_DetailAnchor">readXMLObject()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_hasName_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasName</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the current event has a name (is a START_ELEMENT or END_ELEMENT)</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the current event has a name, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_hasNext_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasNext</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasNext</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if there are more parsing events and false
+ if there are no more events.  This method will return
+ false if the current state of the XMLStreamReader is
+ END_DOCUMENT</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if there are more events, false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_hasText_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasText</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasText</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Indicates if the current event has text.
+ The following events have text:
+ CHARACTERS,DTD ,ENTITY_REFERENCE, COMMENT, SPACE.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the current event has text, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_isAttributeSpecified_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAttributeSpecified</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAttributeSpecified</span>(index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if this
+ attribute was created by default.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the position of the attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this is a default attribute, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_isCharacters_DetailAnchor"></a>
+                    <div class="detailName 
+						">isCharacters</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isCharacters</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the cursor points to a character data event.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the cursor points to character data, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_isEndElement_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEndElement</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEndElement</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the cursor points to an end tag.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the cursor points to an end tag, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_isStandalone_DetailAnchor"></a>
+                    <div class="detailName 
+						">isStandalone</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isStandalone</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Get the standalone declaration from the xml declaration.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this is standalone, or false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_isStartElement_DetailAnchor"></a>
+                    <div class="detailName 
+						">isStartElement</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isStartElement</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the cursor points to a start tag.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the cursor points to a start tag, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_isWhiteSpace_DetailAnchor"></a>
+                    <div class="detailName 
+						">isWhiteSpace</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isWhiteSpace</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the cursor points to a character data event
+ that consists of all whitespace.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the cursor points to all whitespace, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_next_DetailAnchor"></a>
+                    <div class="detailName 
+						">next</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">next</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Get next parsing event - a processor may return all contiguous
+ character data in a single chunk, or it may split it into several chunks.
+ If the property javax.xml.stream.isCoalescing is set to true
+ element content must be coalesced and only one CHARACTERS event
+ must be returned for contiguous element content or
+ CDATA Sections.
+
+ By default entity references must be
+ expanded and reported transparently to the application.
+ An exception will be thrown if an entity reference cannot be expanded.
+ If element content is empty (i.e. content is "") then no CHARACTERS event will be reported.
+
+ <p/>Given the following XML:<br/>
+ &lt;foo&gt;&lt;!--description--&gt;content text&lt;!&#91;CDATA&#91;&lt;greeting&gt;Hello&lt;/greeting&gt;&#93;&#93;&gt;other content&lt;/foo&gt;<br/>
+ The behavior of calling next() when being on foo will be:<br/>
+ 1- the comment (COMMENT)<br/>
+ 2- then the characters section (CHARACTERS)<br/>
+ 3- then the CDATA section (another CHARACTERS)<br/>
+ 4- then the next characters section (another CHARACTERS)<br/>
+ 5- then the END_ELEMENT<br/>
+
+ <p/><b>NOTE:</b> empty element (such as &lt;tag/>) will be reported
+  with  two separate events: START_ELEMENT, END_ELEMENT - This preserves
+   parsing equivalency of empty element to &lt;tag&gt;&lt;/tag&gt;.
+
+ This method will throw an IllegalStateException if it is called after hasNext() returns false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the integer code corresponding to the current parse event</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_nextTag_DetailAnchor"></a>
+                    <div class="detailName 
+						">nextTag</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">nextTag</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Skips any white space (isWhiteSpace() returns true), COMMENT,
+ or PROCESSING_INSTRUCTION,
+ until a START_ELEMENT or END_ELEMENT is reached.
+ If other than white space characters, COMMENT, PROCESSING_INSTRUCTION, START_ELEMENT, END_ELEMENT
+ are encountered, an exception is thrown. This method should
+ be used when processing element-only content separated by white space.
+
+ <br /> Precondition: none
+ <br /> Postcondition: the current event is START_ELEMENT or END_ELEMENT
+ and cursor may have moved over any whitespace event.
+
+ <br />Essentially it does the following (implementations are free to optimized
+ but must do equivalent processing):
+
+ <pre>
+ int eventType = next();
+ while ( (eventType == XMLStreamConstants.CHARACTERS &amp;&amp; isWhiteSpace() )
+       || (eventType == XMLStreamConstants.CDATA &amp;&amp; isWhiteSpace())
+       || eventType == XMLStreamConstants.SPACE
+       || eventType == XMLStreamConstants.PROCESSING_INSTRUCTION
+       || eventType == XMLStreamConstants.COMMENT )
+ {
+     eventType = next();
+ }
+ if ( eventType != XMLStreamConstants.START_ELEMENT &amp;&amp; eventType != XMLStreamConstants.END_ELEMENT )
+ {
+     throw new String XMLStreamException( "expected start or end tag", getLocation() );
+ }
+ return eventType;
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the event type of the element read (START_ELEMENT or END_ELEMENT)</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_readElementText_DetailAnchor"></a>
+                    <div class="detailName 
+						">readElementText</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">readElementText</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Reads the content of a text-only element, an exception is thrown if this is not a text-only element. This method
+ always returns coalesced content. <br />
+ Precondition: the current event is START_ELEMENT. <br />
+ Postcondition: the current event is the corresponding END_ELEMENT. <br />
+ The method does the following (implementations are free to be optimized but must do equivalent processing):
+
+ <pre>
+ if ( getEventType() != XMLStreamConstants.START_ELEMENT )
+ {
+     throw new XMLStreamException( "parser must be on START_ELEMENT to read next text", getLocation() );
+ }
+ int eventType = next();
+ StringBuffer content = new StringBuffer();
+ while ( eventType != XMLStreamConstants.END_ELEMENT )
+ {
+     if ( eventType == XMLStreamConstants.CHARACTERS || eventType == XMLStreamConstants.CDATA
+         || eventType == XMLStreamConstants.SPACE || eventType == XMLStreamConstants.ENTITY_REFERENCE )
+     {
+         buf.append( getText() );
+     }
+     else if ( eventType == XMLStreamConstants.PROCESSING_INSTRUCTION || eventType == XMLStreamConstants.COMMENT )
+     {
+         // skipping
+     }
+     else if ( eventType == XMLStreamConstants.END_DOCUMENT )
+     {
+         throw new XMLStreamException( "unexpected end of document when reading element text content", this );
+     }
+     else if ( eventType == XMLStreamConstants.START_ELEMENT )
+     {
+         throw new XMLStreamException( "element text content may not contain START_ELEMENT", getLocation() );
+     }
+     else
+     {
+         throw new XMLStreamException( "Unexpected event type " + eventType, getLocation() );
+     }
+     eventType = next();
+ }
+ return buf.toString();
+ </pre></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_readXMLObject_DetailAnchor"></a>
+                    <div class="detailName 
+						">readXMLObject</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">readXMLObject</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Reads a sub-tree of the XML document and parses it as XML object.
+ <p/>
+ The stream must be positioned on a START_ELEMENT. Do not call the method
+ when the stream is positioned at document's root element. This would
+ cause the whole document to be parsed into a single XML what may lead to
+ an out-of-memory condition. Instead use #next() to navigate to
+ sub-elements and invoke getXMLObject() there. Do not keep references to
+ more than the currently processed XML to keep memory consumption low. The
+ method reads the stream up to the matching END_ELEMENT. When the method
+ returns the current event is the END_ELEMENT event.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_require_Number_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">require</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">require</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, namespaceURI
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, localName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Test if the current event is of the given type and if the namespace and name match the current
+ namespace and name of the current event.  If the namespaceURI is null it is not checked for equality,
+ if the localName is null it is not checked for equality.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the event type</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespaceURI</span>
+						 - 
+						<span class="parameterDesc">the uri of the event, may be null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">localName</span>
+						 - 
+						<span class="parameterDesc">the localName of the event, may be null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_XMLStreamReader_standaloneSet_DetailAnchor"></a>
+                    <div class="detailName 
+						">standaloneSet</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">standaloneSet</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if standalone was set in the document.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if standalone was set in the document, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,542 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet Search</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet Search</div>
+            <div class="topLevelDescription">This pipelet executes either a product or content search, as specified by the configuration parameters, and returns a corresponding ProductSearchModel or ContentSearchModel. The SearchPhrase parameter can be used with either search.  The FolderID and ContentID parameters are specific to the content search.  All other parameters are specific to the product search. Product search refinements are filtered by session currency.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Search</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DisallowOfflineCategory</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+If set to true, the pipelet checks if the passed cgid parameter represents an offline category. In this case, it is treated like an invalid cgid. If set to false, the pipelet will execute the search also in offline categories.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RecursiveCategorySearch</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If set to true, the pipelet will execute a recursive category search. Otherwise, the pipelet will only search within the selected category. Default is 'false'.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RecursiveFolderSearch</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If set to true, the pipelet will execute a recursive folder search. Otherwise, the pipelet will only search within the selected folder. Default is 'false'.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SearchContent</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If set to true, the pipelet will execute a content search and returns the ContentSearchModel. Default is 'true'.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SearchProduct</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If set to true, the pipelet will execute a product search and returns the ProductSearchModel. Default is 'true'.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SearchPhrase</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The search phrase used in this search. The search query parser uses the following operators:
+
+<ul>
+<li>PHRASE operator (""), e.g. "cream cheese", "John Lennon"</li>
+<li>NOT operator (-), e.g. -cargo (will not return results containing "cargo")</li>
+<li>WILDCARD operator (*), e.g. sho* (will return results containing "shoulder", "shoes" and "shoot")</li>
+</ul>
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy1</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If specified, the search result is sorted by the specified criteria. The supplied value can either be the id of a defined sorting attribute, e.g. "name" or "brand". To sort by price, value "price" must be specified.  For backward compatibility, names of search index sort fields can still be specified, such as  "price-sort" or "name-sort".
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy3</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If specified, the search result is additionally sorted by the specified criteria. The supplied value can either be the id of a defined sorting attribute, e.g. "name" or "brand". To sort by price, value "price" must be specified.  For backward compatibility, names of search index sort fields can still be specified, such as  "price-sort" or "name-sort".
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy2</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If specified, the search result is additionally sorted by the specified criteria. The supplied value can either be the id of a defined sorting attribute, e.g. "name" or "brand". To sort by price, value "price" must be specified.  For backward compatibility, names of search index sort fields can still be specified, such as  "price-sort" or "name-sort".
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy1Direction</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Sort ascending (1) or descending (2).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy2Direction</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Sort ascending (1) or descending (2).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy3Direction</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Sort ascending (1) or descending (2).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PriceMax</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Maximum price condition. Only products whose price is less than this value are included in the result. Products whose prices are equal to or above this value are excluded from the result.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PriceMin</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Minimum product price condition.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy1Name</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy1Phrase</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy1Min</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy1Max</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy2Name</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy2Phrase</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy2Min</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy2Max</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy3Name</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy3Phrase</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy3Min</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy3Max</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy4Name</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy4Phrase</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy4Min</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy4Max</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy5Name</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy5Phrase</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy5Min</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineBy5Max</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CategoryID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FolderID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ContentID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineByNamePrefix</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The URL parameter prefix used to provide names of refinement attributes. The prefix is followed by a running number to connect it to the value of the attribute to refine on (e.g. prefn1=myAttribute&amp;prefv1=myValue).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineByPhrasePrefix</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The URL parameter prefix used to provide values for a search refinement. The prefix is followed by a running number to connect it to the name of the attribute to refine on (e.g. prefn1=myAttribute&amp;prefv1=myValue).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineByMinPrefix</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefineByMaxPrefix</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OrderableProductsOnly</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Optional control flag which determines if unorderable products (i.e products with ATS = 0) should be excluded from search results.  Pass a value of true in order to exclude unorderable products, and false to include them.  If no value is passed, then the default search preference controls the behavior.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortingRuleID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID of a sorting rule to use to sort the products in the search results.  If no ID is provided, the default sorting rule is used for the given category, or the root category if no category is provided.  This property is ignored for a content search.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PromotionID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Optional promotion id to filter products in the search results. Multiple promotion id's must be encoded by the pipe symbol ('|'). Note: The search supports up to 30 promotion id's. If the value string contains more than 30 id's only the first 30 will be considered.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PromotionProductType</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The type of product to filter by when searching by promotion ID. Allowed values are ProductSearchModel.PROMOTION_PRODUCT_TYPE_ALL, ProductSearchModel.PROMOTION_PRODUCT_TYPE_QUALIFYING, and ProductSearchModel.PROMOTION_PRODUCT_TYPE_DISCOUNTED. If null is passed, or an invalid value is passed, the search will use ProductSearchModel.PROMOTION_PRODUCT_TYPE_ALL.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">TrackingEmptySearchesEnabled</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Set it to be true or null to enable tracking empty searches for predictive intelligence use. Set it to be false to disable tracking empty searches.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortingOptionID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+ The ID of a sorting option to use to sort the products in the search results. Will not be used if a sorting rule is set.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductSearchModel</span>
+					&nbsp;:&nbsp;
+					ProductSearchModel
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ContentSearchModel</span>
+					&nbsp;:&nbsp;
+					ContentSearchModel
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

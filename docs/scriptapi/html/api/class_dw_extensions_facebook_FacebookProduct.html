@@ -1,0 +1,2666 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class FacebookProduct</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.facebook.FacebookProduct">
+            <a name="dw.extensions.facebook.FacebookProduct"></a>
+            <div class="packageName">dw.extensions.facebook</div>
+            <div class="className
+					">	
+        	
+				Class FacebookProduct</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.facebook.FacebookProduct
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a row in the Facebook catalog feed export.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AGE_GROUP_ADULT_DetailAnchor"></a>AGE_GROUP_ADULT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"adult"
+                        <div class="description">Indicates that the product is for adults.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AGE_GROUP_INFANT_DetailAnchor"></a>AGE_GROUP_INFANT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"infant"
+                        <div class="description">Indicates that the product is for infant children.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AGE_GROUP_KIDS_DetailAnchor"></a>AGE_GROUP_KIDS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"kids"
+                        <div class="description">Indicates that the product is for children.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AGE_GROUP_NEWBORN_DetailAnchor"></a>AGE_GROUP_NEWBORN
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"newborn"
+                        <div class="description">Indicates that the product is for newborn children.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AGE_GROUP_TODDLER_DetailAnchor"></a>AGE_GROUP_TODDLER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"toddler"
+                        <div class="description">Indicates that the product is for toddler children.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AVAILABILITY_AVAILABLE_FOR_ORDER_DetailAnchor"></a>AVAILABILITY_AVAILABLE_FOR_ORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"available for order"
+                        <div class="description">Indicates that the product can be ordered for later shipment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AVAILABILITY_IN_STOCK_DetailAnchor"></a>AVAILABILITY_IN_STOCK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"in stock"
+                        <div class="description">Indicates that the product is available to ship immediately.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AVAILABILITY_OUT_OF_STOCK_DetailAnchor"></a>AVAILABILITY_OUT_OF_STOCK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"out of stock"
+                        <div class="description">Indicates that the product is out of stock.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_AVAILABILITY_PREORDER_DetailAnchor"></a>AVAILABILITY_PREORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"preorder"
+                        <div class="description">Indicates that the product will be available in the future.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_CONDITION_NEW_DetailAnchor"></a>CONDITION_NEW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"new"
+                        <div class="description">Indicates that the product is new.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_CONDITION_REFURBISHED_DetailAnchor"></a>CONDITION_REFURBISHED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"refurbished"
+                        <div class="description">Indicates that the product is used but has been refurbished.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_CONDITION_USED_DetailAnchor"></a>CONDITION_USED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"used"
+                        <div class="description">Indicates that the product has been used.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_GENDER_FEMALE_DetailAnchor"></a>GENDER_FEMALE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"female"
+                        <div class="description">Indicates that the product is for females.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_GENDER_MALE_DetailAnchor"></a>GENDER_MALE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"male"
+                        <div class="description">Indicates that the product is for males.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_GENDER_UNISEX_DetailAnchor"></a>GENDER_UNISEX
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"unisex"
+                        <div class="description">Indicates that the product is for both males and females.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_SIZE_UNIT_CM_DetailAnchor"></a>SHIPPING_SIZE_UNIT_CM
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"cm"
+                        <div class="description">Indicates that the product is measured in centimeters.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_SIZE_UNIT_FT_DetailAnchor"></a>SHIPPING_SIZE_UNIT_FT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"ft"
+                        <div class="description">Indicates that the product is measured in feet.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_SIZE_UNIT_IN_DetailAnchor"></a>SHIPPING_SIZE_UNIT_IN
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"in"
+                        <div class="description">Indicates that the product is measured in inches.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_SIZE_UNIT_M_DetailAnchor"></a>SHIPPING_SIZE_UNIT_M
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"m"
+                        <div class="description">Indicates that the product is measured in meters.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_G_DetailAnchor"></a>SHIPPING_WEIGHT_UNIT_G
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"g"
+                        <div class="description">Indicates that the product is weighed in grams.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_KG_DetailAnchor"></a>SHIPPING_WEIGHT_UNIT_KG
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"kg"
+                        <div class="description">Indicates that the product is weighed in kilograms.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_LB_DetailAnchor"></a>SHIPPING_WEIGHT_UNIT_LB
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"lb"
+                        <div class="description">Indicates that the product is weighed in pounds.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_OZ_DetailAnchor"></a>SHIPPING_WEIGHT_UNIT_OZ
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"oz"
+                        <div class="description">Indicates that the product is weighed in ounces.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ageGroup
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The age group for the Facebook product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>availability
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The availability of the Facebook product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>brand
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook brand of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>color
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook color value label of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>condition
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The condition of the Facebook product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customLabel0
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook custom label 0 value of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customLabel1
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook custom label 1 value of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customLabel2
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook custom label 2 value of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customLabel3
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook custom label 3 value of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customLabel4
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook custom label 4 value of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The description of the Facebook product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>expirationDate
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                        <div class="description">The Facebook expiration date of the product. If the product is expired it will not be shown.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>gender
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The gender for the Facebook product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>googleProductCategory
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The category of this product in the Google category taxonomy. If the value is longer than 250 characters
+ it is truncated.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>gtin
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook GTIN of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the Facebook product. This is the same as the ID of the Demandware product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>imageLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+                        <div class="description">A list containing the URLs of the images to show in Facebook for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>itemGroupID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The ID of the Facebook item group for the product, that is, its master product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>link
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                        <div class="description">The URL of the Demandware storefront link to the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>material
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook material value label of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>mpn
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook MPN of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pattern
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook pattern value label of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>price
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                        <div class="description">The price to show in Facebook for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook product type. This is the retailer-defined category of the item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>salePrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                        <div class="description">The sale price to show in Facebook for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>salePriceEffectiveDateEnd
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                        <div class="description">The end date of the Facebook sale price of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>salePriceEffectiveDateStart
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                        <div class="description">The start date of the Facebook sale price of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingHeight
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The shipping height of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingLength
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The shipping length of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingSizeUnit
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The shipping size unit of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingWeight
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                        <div class="description">The shipping weight for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingWidth
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The shipping width of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>size
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Facebook size value label of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>title
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The title of the Facebook product.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getAgeGroup_DetailAnchor"><span class="">getAgeGroup</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the age group for the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getAvailability_DetailAnchor"><span class="">getAvailability</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the availability of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getBrand_DetailAnchor"><span class="">getBrand</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook brand of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getColor_DetailAnchor"><span class="">getColor</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook color value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getCondition_DetailAnchor"><span class="">getCondition</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the condition of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getCustomLabel0_DetailAnchor"><span class="">getCustomLabel0</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook custom label 0 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getCustomLabel1_DetailAnchor"><span class="">getCustomLabel1</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook custom label 1 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getCustomLabel2_DetailAnchor"><span class="">getCustomLabel2</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook custom label 2 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getCustomLabel3_DetailAnchor"><span class="">getCustomLabel3</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook custom label 3 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getCustomLabel4_DetailAnchor"><span class="">getCustomLabel4</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook custom label 4 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the description of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getExpirationDate_DetailAnchor"><span class="">getExpirationDate</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the Facebook expiration date of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getGender_DetailAnchor"><span class="">getGender</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the gender for the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getGoogleProductCategory_DetailAnchor"><span class="">getGoogleProductCategory</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the category of this product in the Google category taxonomy.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getGtin_DetailAnchor"><span class="">getGtin</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook GTIN of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getImageLinks_DetailAnchor"><span class="">getImageLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns a list containing the URLs of the images to show in Facebook for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getItemGroupID_DetailAnchor"><span class="">getItemGroupID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the Facebook item group for the product, that is, its master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getLink_DetailAnchor"><span class="">getLink</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns the URL of the Demandware storefront link to the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getMaterial_DetailAnchor"><span class="">getMaterial</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook material value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getMpn_DetailAnchor"><span class="">getMpn</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook MPN of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getPattern_DetailAnchor"><span class="">getPattern</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook pattern value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getPrice_DetailAnchor"><span class="">getPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the price to show in Facebook for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getProductType_DetailAnchor"><span class="">getProductType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook product type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getSalePrice_DetailAnchor"><span class="">getSalePrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the sale price to show in Facebook for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getSalePriceEffectiveDateEnd_DetailAnchor"><span class="">getSalePriceEffectiveDateEnd</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the end date of the Facebook sale price of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getSalePriceEffectiveDateStart_DetailAnchor"><span class="">getSalePriceEffectiveDateStart</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the start date of the Facebook sale price of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getShippingHeight_DetailAnchor"><span class="">getShippingHeight</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the shipping height of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getShippingLength_DetailAnchor"><span class="">getShippingLength</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the shipping length of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getShippingSizeUnit_DetailAnchor"><span class="">getShippingSizeUnit</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the shipping size unit of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getShippingWeight_DetailAnchor"><span class="">getShippingWeight</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the shipping weight for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getShippingWidth_DetailAnchor"><span class="">getShippingWidth</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the shipping width of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getSize_DetailAnchor"><span class="">getSize</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Facebook size value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_getTitle_DetailAnchor"><span class="">getTitle</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the title of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setAgeGroup_String_DetailAnchor"><span class="">setAgeGroup</span></a></span>(ageGroup
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the age group for the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setAvailability_String_DetailAnchor"><span class="">setAvailability</span></a></span>(availability
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the availability of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setBrand_String_DetailAnchor"><span class="">setBrand</span></a></span>(brand
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook brand of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setColor_String_DetailAnchor"><span class="">setColor</span></a></span>(color
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook color value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setCondition_String_DetailAnchor"><span class="">setCondition</span></a></span>(condition
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the condition of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setCustomLabel0_String_DetailAnchor"><span class="">setCustomLabel0</span></a></span>(customLabel0
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook custom label 0 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setCustomLabel1_String_DetailAnchor"><span class="">setCustomLabel1</span></a></span>(customLabel1
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook custom label 1 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setCustomLabel2_String_DetailAnchor"><span class="">setCustomLabel2</span></a></span>(customLabel2
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook custom label 2 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setCustomLabel3_String_DetailAnchor"><span class="">setCustomLabel3</span></a></span>(customLabel3
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook custom label 3 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setCustomLabel4_String_DetailAnchor"><span class="">setCustomLabel4</span></a></span>(customLabel4
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook custom label 4 value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setDescription_String_DetailAnchor"><span class="">setDescription</span></a></span>(description
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the description of the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setExpirationDate_Date_DetailAnchor"><span class="">setExpirationDate</span></a></span>(expirationDate
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook expiration date of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setGender_String_DetailAnchor"><span class="">setGender</span></a></span>(gender
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the gender for the Facebook product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setGoogleProductCategory_String_DetailAnchor"><span class="">setGoogleProductCategory</span></a></span>(googleProductCategory
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the category of this product in the Google category taxonomy.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setGtin_String_DetailAnchor"><span class="">setGtin</span></a></span>(gtin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook GTIN of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setImageLinks_List_DetailAnchor"><span class="">setImageLinks</span></a></span>(imageLinks
+								 : 	
+								 
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the list of URLs of images to show in Facebook for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setItemGroupID_String_DetailAnchor"><span class="">setItemGroupID</span></a></span>(itemGroupID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the ID of the Facebook item group for the product, that is, its master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setLink_URL_DetailAnchor"><span class="">setLink</span></a></span>(link
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the URL of the Demandware storefront link to the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setMaterial_String_DetailAnchor"><span class="">setMaterial</span></a></span>(material
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook material value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setMpn_String_DetailAnchor"><span class="">setMpn</span></a></span>(mpn
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook MPN of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setPattern_String_DetailAnchor"><span class="">setPattern</span></a></span>(pattern
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook pattern value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setPrice_Money_DetailAnchor"><span class="">setPrice</span></a></span>(price
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the price to show in Facebook for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setProductType_String_DetailAnchor"><span class="">setProductType</span></a></span>(productType
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook product type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setSalePrice_Money_DetailAnchor"><span class="">setSalePrice</span></a></span>(salePrice
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the sale price to show in Facebook for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setSalePriceEffectiveDateEnd_Date_DetailAnchor"><span class="">setSalePriceEffectiveDateEnd</span></a></span>(salePriceEffectiveDateEnd
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the end date of the Facebook sale price of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setSalePriceEffectiveDateStart_Date_DetailAnchor"><span class="">setSalePriceEffectiveDateStart</span></a></span>(salePriceEffectiveDateStart
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the start date of the Facebook sale price of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setShippingHeight_Number_DetailAnchor"><span class="">setShippingHeight</span></a></span>(shippingHeight
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the shipping height of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setShippingLength_Number_DetailAnchor"><span class="">setShippingLength</span></a></span>(shippingLength
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the shipping length of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setShippingSizeUnit_String_DetailAnchor"><span class="">setShippingSizeUnit</span></a></span>(shippingSizeUnit
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the shipping size unit of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setShippingWeight_Quantity_DetailAnchor"><span class="">setShippingWeight</span></a></span>(shippingWeight
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the shipping weight for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setShippingWidth_Number_DetailAnchor"><span class="">setShippingWidth</span></a></span>(shippingWidth
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the shipping width of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setSize_String_DetailAnchor"><span class="">setSize</span></a></span>(size
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Facebook size value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookProduct_setTitle_String_DetailAnchor"><span class="">setTitle</span></a></span>(title
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the title of the Facebook product.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getAgeGroup_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAgeGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAgeGroup</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the age group for the Facebook product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product age group</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getAvailability_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAvailability</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAvailability</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the availability of the Facebook product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product availability</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getBrand_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBrand</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBrand</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook brand of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the brand</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getColor_DetailAnchor"></a>
+                    <div class="detailName 
+						">getColor</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getColor</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook color value label of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the color value label</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getCondition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCondition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCondition</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the condition of the Facebook product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product condition</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getCustomLabel0_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomLabel0</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomLabel0</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook custom label 0 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom label 0 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getCustomLabel1_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomLabel1</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomLabel1</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook custom label 1 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom label 1 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getCustomLabel2_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomLabel2</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomLabel2</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook custom label 2 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom label 2 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getCustomLabel3_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomLabel3</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomLabel3</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook custom label 3 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom label 3 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getCustomLabel4_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomLabel4</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomLabel4</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook custom label 4 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom label 4 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the description of the Facebook product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product description</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getExpirationDate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExpirationDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExpirationDate</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook expiration date of the product. If the product is expired it will not be shown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the expiration date</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getGender_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGender</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGender</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the gender for the Facebook product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product gender</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getGoogleProductCategory_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGoogleProductCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGoogleProductCategory</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the category of this product in the Google category taxonomy. If the value is longer than 250 characters
+ it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the category of this product in the Google category taxonomy</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getGtin_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGtin</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGtin</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook GTIN of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the GTIN</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the Facebook product. This is the same as the ID of the Demandware product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product ID</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getImageLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImageLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImageLinks</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns a list containing the URLs of the images to show in Facebook for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the URLs of the images</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getItemGroupID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItemGroupID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItemGroupID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the Facebook item group for the product, that is, its master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of the Facebook item group</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getLink_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLink</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLink</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns the URL of the Demandware storefront link to the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the URL of the storefront link</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getMaterial_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaterial</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaterial</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook material value label of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the material value label</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getMpn_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMpn</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMpn</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook MPN of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the MPN</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getPattern_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPattern</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPattern</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook pattern value label of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the pattern value label</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the price to show in Facebook for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price to show in Facebook</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getProductType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook product type. This is the retailer-defined category of the item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the Facebook product type</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getSalePrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSalePrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSalePrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the sale price to show in Facebook for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sale price to show in Facebook</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getSalePriceEffectiveDateEnd_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSalePriceEffectiveDateEnd</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSalePriceEffectiveDateEnd</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the end date of the Facebook sale price of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the end date of the Facebook sale price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getSalePriceEffectiveDateStart_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSalePriceEffectiveDateStart</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSalePriceEffectiveDateStart</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the start date of the Facebook sale price of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the start date of the Facebook sale price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getShippingHeight_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingHeight</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingHeight</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the shipping height of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping height</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingLength_DetailAnchor">getShippingLength()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingWidth_DetailAnchor">getShippingWidth()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingSizeUnit_DetailAnchor">getShippingSizeUnit()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getShippingLength_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingLength</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingLength</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the shipping length of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping length</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingWidth_DetailAnchor">getShippingWidth()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingHeight_DetailAnchor">getShippingHeight()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingSizeUnit_DetailAnchor">getShippingSizeUnit()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getShippingSizeUnit_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingSizeUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingSizeUnit</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the shipping size unit of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping size unit</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingLength_DetailAnchor">getShippingLength()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingWidth_DetailAnchor">getShippingWidth()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingHeight_DetailAnchor">getShippingHeight()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getShippingWeight_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingWeight</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingWeight</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the shipping weight for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping weight</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getShippingWidth_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingWidth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingWidth</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the shipping width of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping width</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingLength_DetailAnchor">getShippingLength()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingHeight_DetailAnchor">getShippingHeight()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_getShippingSizeUnit_DetailAnchor">getShippingSizeUnit()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getSize_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSize</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Facebook size value label of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the size value label</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_getTitle_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTitle</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the title of the Facebook product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product title</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setAgeGroup_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setAgeGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setAgeGroup</span>(ageGroup
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the age group for the Facebook product. Possible values are
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AGE_GROUP_ADULT_DetailAnchor">AGE_GROUP_ADULT</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AGE_GROUP_INFANT_DetailAnchor">AGE_GROUP_INFANT</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AGE_GROUP_KIDS_DetailAnchor">AGE_GROUP_KIDS</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AGE_GROUP_NEWBORN_DetailAnchor">AGE_GROUP_NEWBORN</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AGE_GROUP_TODDLER_DetailAnchor">AGE_GROUP_TODDLER</a>, or <code>null</code>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ageGroup</span>
+						 - 
+						<span class="parameterDesc">the ageGroup to set for this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setAvailability_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setAvailability</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setAvailability</span>(availability
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the availability of the Facebook product. Possible values are
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AVAILABILITY_AVAILABLE_FOR_ORDER_DetailAnchor">AVAILABILITY_AVAILABLE_FOR_ORDER</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AVAILABILITY_IN_STOCK_DetailAnchor">AVAILABILITY_IN_STOCK</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AVAILABILITY_OUT_OF_STOCK_DetailAnchor">AVAILABILITY_OUT_OF_STOCK</a>, or
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_AVAILABILITY_PREORDER_DetailAnchor">AVAILABILITY_PREORDER</a>
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">availability</span>
+						 - 
+						<span class="parameterDesc">the availability status to set for this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setBrand_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setBrand</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setBrand</span>(brand
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook brand of the product. If the value is longer than 70 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">brand</span>
+						 - 
+						<span class="parameterDesc">Facebook brand, up to 70 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setColor_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setColor</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setColor</span>(color
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook color value label of the product. If the value is longer than 100 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">color</span>
+						 - 
+						<span class="parameterDesc">Facebook color value label, up to 100 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setCondition_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCondition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCondition</span>(condition
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the condition of the Facebook product. Possible values are
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_CONDITION_NEW_DetailAnchor">CONDITION_NEW</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_CONDITION_REFURBISHED_DetailAnchor">CONDITION_REFURBISHED</a>, or
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_CONDITION_USED_DetailAnchor">CONDITION_USED</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">condition</span>
+						 - 
+						<span class="parameterDesc">the condition status to set for this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setCustomLabel0_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomLabel0</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomLabel0</span>(customLabel0
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook custom label 0 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customLabel0</span>
+						 - 
+						<span class="parameterDesc">custom label 0 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setCustomLabel1_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomLabel1</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomLabel1</span>(customLabel1
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook custom label 1 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customLabel1</span>
+						 - 
+						<span class="parameterDesc">custom label 1 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setCustomLabel2_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomLabel2</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomLabel2</span>(customLabel2
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook custom label 2 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customLabel2</span>
+						 - 
+						<span class="parameterDesc">custom label 2 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setCustomLabel3_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomLabel3</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomLabel3</span>(customLabel3
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook custom label 3 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customLabel3</span>
+						 - 
+						<span class="parameterDesc">custom label 3 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setCustomLabel4_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomLabel4</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomLabel4</span>(customLabel4
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook custom label 4 value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customLabel4</span>
+						 - 
+						<span class="parameterDesc">custom label 4 value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setDescription_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setDescription</span>(description
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the description of the Facebook product. If the value is longer than 5000 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">description</span>
+						 - 
+						<span class="parameterDesc">product description, up to 5000 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setExpirationDate_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setExpirationDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setExpirationDate</span>(expirationDate
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook expiration date of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expirationDate</span>
+						 - 
+						<span class="parameterDesc">Facebook expiration date</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setGender_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGender</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGender</span>(gender
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the gender for the Facebook product. Possible values are
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_GENDER_MALE_DetailAnchor">GENDER_MALE</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_GENDER_FEMALE_DetailAnchor">GENDER_FEMALE</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_GENDER_UNISEX_DetailAnchor">GENDER_UNISEX</a>, or <code>null</code>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">gender</span>
+						 - 
+						<span class="parameterDesc">the gender to set for this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setGoogleProductCategory_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGoogleProductCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGoogleProductCategory</span>(googleProductCategory
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the category of this product in the Google category taxonomy.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">googleProductCategory</span>
+						 - 
+						<span class="parameterDesc">Google product category</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setGtin_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGtin</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGtin</span>(gtin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook GTIN of the product. If the value is longer than 70 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">gtin</span>
+						 - 
+						<span class="parameterDesc">Facebook GTIN, up to 70 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setImageLinks_List_DetailAnchor"></a>
+                    <div class="detailName 
+						">setImageLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setImageLinks</span>(imageLinks
+								 : 
+								 
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the list of URLs of images to show in Facebook for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">imageLinks</span>
+						 - 
+						<span class="parameterDesc">links to the product images</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setItemGroupID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setItemGroupID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setItemGroupID</span>(itemGroupID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the ID of the Facebook item group for the product, that is, its master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">itemGroupID</span>
+						 - 
+						<span class="parameterDesc">ID of Facebook item group</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setLink_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">setLink</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setLink</span>(link
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the URL of the Demandware storefront link to the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">link</span>
+						 - 
+						<span class="parameterDesc">Demandware storefront link to the product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setMaterial_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMaterial</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMaterial</span>(material
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook material value label of the product. If the value is longer than 200 characters it is
+ truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">material</span>
+						 - 
+						<span class="parameterDesc">Facebook material value label, up to 200 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setMpn_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMpn</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMpn</span>(mpn
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook MPN of the product. If the value is longer than 70 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mpn</span>
+						 - 
+						<span class="parameterDesc">Facebook MPN, up to 70 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setPattern_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPattern</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPattern</span>(pattern
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook pattern value label of the product. If the value is longer than 100 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pattern</span>
+						 - 
+						<span class="parameterDesc">Facebook pattern value label, up to 100 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setPrice_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPrice</span>(price
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the price to show in Facebook for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">price</span>
+						 - 
+						<span class="parameterDesc">Facebook price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setProductType_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProductType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setProductType</span>(productType
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook product type. If the value is longer than 750 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productType</span>
+						 - 
+						<span class="parameterDesc">Facebook product type, up to 750 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setSalePrice_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSalePrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSalePrice</span>(salePrice
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the sale price to show in Facebook for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">salePrice</span>
+						 - 
+						<span class="parameterDesc">Facebook sale price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setSalePriceEffectiveDateEnd_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSalePriceEffectiveDateEnd</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSalePriceEffectiveDateEnd</span>(salePriceEffectiveDateEnd
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the end date of the Facebook sale price of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">salePriceEffectiveDateEnd</span>
+						 - 
+						<span class="parameterDesc">end date of Facebook sale price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setSalePriceEffectiveDateStart_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSalePriceEffectiveDateStart</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSalePriceEffectiveDateStart</span>(salePriceEffectiveDateStart
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the start date of the Facebook sale price of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">salePriceEffectiveDateStart</span>
+						 - 
+						<span class="parameterDesc">start date of Facebook sale price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setShippingHeight_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingHeight</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingHeight</span>(shippingHeight
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the shipping height of the product. If the value is negative it is truncated to 0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingHeight</span>
+						 - 
+						<span class="parameterDesc">shipping height, may not be negative</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingLength_Number_DetailAnchor">setShippingLength(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingWidth_Number_DetailAnchor">setShippingWidth(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingSizeUnit_String_DetailAnchor">setShippingSizeUnit(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setShippingLength_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingLength</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingLength</span>(shippingLength
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the shipping length of the product. If the value is negative it is truncated to 0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingLength</span>
+						 - 
+						<span class="parameterDesc">shipping length, may not be negative</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingWidth_Number_DetailAnchor">setShippingWidth(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingHeight_Number_DetailAnchor">setShippingHeight(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingSizeUnit_String_DetailAnchor">setShippingSizeUnit(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setShippingSizeUnit_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingSizeUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingSizeUnit</span>(shippingSizeUnit
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the shipping size unit of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingSizeUnit</span>
+						 - 
+						<span class="parameterDesc">shipping size unit</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingLength_Number_DetailAnchor">setShippingLength(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingWidth_Number_DetailAnchor">setShippingWidth(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingHeight_Number_DetailAnchor">setShippingHeight(Number)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setShippingWeight_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingWeight</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingWeight</span>(shippingWeight
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the shipping weight for the product. Possible unit values are
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_LB_DetailAnchor">SHIPPING_WEIGHT_UNIT_LB</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_OZ_DetailAnchor">SHIPPING_WEIGHT_UNIT_OZ</a>,
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_G_DetailAnchor">SHIPPING_WEIGHT_UNIT_G</a>, or
+ <a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_SHIPPING_WEIGHT_UNIT_KG_DetailAnchor">SHIPPING_WEIGHT_UNIT_KG</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingWeight</span>
+						 - 
+						<span class="parameterDesc">product shipping weight</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setShippingWidth_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingWidth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingWidth</span>(shippingWidth
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the shipping width of the product. If the value is negative it is truncated to 0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingWidth</span>
+						 - 
+						<span class="parameterDesc">shipping width, may not be negative</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingLength_Number_DetailAnchor">setShippingLength(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingHeight_Number_DetailAnchor">setShippingHeight(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_facebook_FacebookProduct.html#dw_extensions_facebook_FacebookProduct_setShippingSizeUnit_String_DetailAnchor">setShippingSizeUnit(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setSize_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSize</span>(size
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Facebook size value label of the product. If the value is longer than 100 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">size</span>
+						 - 
+						<span class="parameterDesc">Facebook size value label, up to 100 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookProduct_setTitle_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setTitle</span>(title
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the title of the Facebook product. If the value is longer than 100 characters it is truncated.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">title</span>
+						 - 
+						<span class="parameterDesc">product title, up to 100 characters</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

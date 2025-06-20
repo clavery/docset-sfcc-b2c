@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ExportCustomObjects</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    ExportCustomObjects</div>
+            <div class="topLevelDescription">Exports custom objects of a specified type and scope.</div>
+            <div class="topLevelDescription">
+     The scope of the job flow (Organization or Sites) must match the scope of the custom object type.
+ 
+  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Organization or Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomObjectTypeID</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The ID of the custom object type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Export file name and path relative to 'IMPEX/src'. Required if not using FileNamePrefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileNamePrefix</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Prefix for the export file. A timestamp is appended and site information as applicable. To order the files chronologically, sort alphanumerically. Path is relative to 'IMPEX/src' and can include a subdirectory. Required if not using ExportFile.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OverwriteExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">If selected, the option overwrites an existing file. If not selected and a file exists, the job step exits and reports an error.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Export finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">There is (1) no custom object type that matches the specified ID, (2) the scope of the flow is 'Organization', but the scope of the specified type is 'Site', or (3) the export failed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet UpdateSearchIndex</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet UpdateSearchIndex</div>
+            <div class="topLevelDescription">This pipelet updates search indexes for all sites and allowed locales of your organization. Search indexes can be rebuilt completely or updated incrementally. The indexing can be configured to run synchronous or asynchronous. The pipelet cannot be used to trigger full or incremental updates of a shared search availability index by custom jobs. This is because the search availability index is updated automatically and incrementally when inventory records are updated or orders are placed in the storefront.
+The index is updated when inventory records are updated in Business Manager or via import.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Search</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Index</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The index selector determines which index type (product, content, synonym, suggest or availability) is being updated by the pipelet. The selected index is updated in all allowed site locales automatically.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">Active Data Indexes</div>
+                    <div class="parameterDetail
+										">Product Availability Indexes</div>
+                    <div class="parameterDetail
+										">Content Search Indexes</div>
+                    <div class="parameterDetail
+										">Product Search Indexes</div>
+                    <div class="parameterDetail
+										 dep">Ranking Indexes (deprecated)</div>
+                    <div class="parameterDetail
+										">Suggest Indexes</div>
+                    <div class="parameterDetail
+										">Synonym Indexes</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">IndexerMode</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The indexer mode determines whether the pipelet triggers the indexing to run in the background (Asynchronous) or waits for the indexing to complete (Synchronous).
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">Asynchronous</div>
+                    <div class="parameterDetail
+										">Synchronous</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">IndexerType</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The indexer type determines whether an index is rebuild from scratch (Full) or only updated with object changes (Incremental).
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">Full Index Rebuild</div>
+                    <div class="parameterDetail
+										">Incremental Index Update</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">IndexScope</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The index scope selector determines if the selected index is to be updated within all sites of the current organization or within the current jobs scoped site.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">AllSites</div>
+                    <div class="parameterDetail
+										">CurrentSite</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

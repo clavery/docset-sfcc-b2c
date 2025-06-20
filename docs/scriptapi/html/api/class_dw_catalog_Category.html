@@ -1,0 +1,2160 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Category</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.Category">
+            <a name="dw.catalog.Category"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class Category</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.catalog.Category
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a category in a product catalog.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_Category_DISPLAY_MODE_INDIVIDUAL_DetailAnchor"></a>DISPLAY_MODE_INDIVIDUAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">Constant representing the Variation Group Display Mode individual setting.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_Category_DISPLAY_MODE_MERGED_DetailAnchor"></a>DISPLAY_MODE_MERGED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">Constant representing the Variation Group Display Mode merged setting.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allRecommendations
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All outgoing recommendations for this category.  The
+ recommendations are sorted by their explicitly set order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>categoryAssignments
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of category assignments of the category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>defaultSortingRule
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_SortingRule.html"><span class="">SortingRule</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The default sorting rule configured for this category,
+ or <code>null</code> if there is no default rule to be applied for it.
+
+ This method returns the default rule for the parent category if this
+ category inherits one.  The parent category may inherit its default
+ rule from its parent, and so on, up to the root category.
+
+ This method returns <code>null</code> if no ancestor category for this
+ category has a default rule.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The description of the catalog category for the current locale.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>displayMode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The Variation Groups Display Mode of the category or null if no display mode is defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>displayName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The display name of the of the catalog category for the current locale.
+
+ This value is intended to be used as the
+ external visible name of the catalog category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The id of the category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>image
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The image reference of this catalog category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>incomingCategoryLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category
+ is the target.  If the source category of a link belongs to a different
+ catalog than the catalog owning this category, it is not returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>online
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The value indicating whether the catalog category is "currently
+ online".  A category is currently online if its online flag equals true
+ and the current site date is within the date range defined by the
+ onlineFrom and onlineTo attributes.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineCategoryAssignments
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of category assignments of the category where the
+ referenced product is currently online. When checking the online status
+ of the product, the online flag and the online from &amp; to dates are taken
+ into account. Online flag, online from &amp; to dates set for the current site
+ takes precedence over the default values.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineFlag
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The online status flag of the category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineFrom
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The date from which the category is online or valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineIncomingCategoryLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for
+ which this category is the target. If the source category of a link
+ belongs to a different catalog than the catalog owning this category, it
+ is not returned. Additionally, this method will only return a link if the
+ source category is currently online. A category is currently online if
+ its online flag equals true and the current site date is within the date
+ range defined by the onlineFrom and onlineTo attributes.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineOutgoingCategoryLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for
+ which this category is the source. If the target category of a link
+ belongs to a different catalog than the catalog owning this category, it
+ is not returned. Additionally, this method will only return a link if the
+ target category is currently online. A category is currently online if
+ its online flag equals true and the current site date is within the date
+ range defined by the onlineFrom and onlineTo attributes.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineProducts
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns online products assigned to this category.
+ Offline products are not included in the returned collection.
+ When checking the online status of the product,
+ the online flag and the online from &amp; to dates are taken into account.
+ Online flag, online from &amp; to dates set for the current site takes precedence
+ over the default values. <br/>
+
+ The order of products in the returned collection corresponds to the
+ defined explicit sorting of products in this category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineSubCategories
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A sorted collection of currently online subcategories of this
+ catalog category.
+ <ul>
+  <li>
+   A category is currently online if its online flag
+   equals true and the current site date is within the date range defined by
+   the onlineFrom and onlineTo attributes.
+  </li>
+  <li>
+   The returned collection is sorted by position. Subcategories marked as
+   "unsorted" always appear after those marked as "sorted" but are otherwise
+   not in any guaranteed order.
+  </li>
+  <li>
+    The returned collection contains direct subcategories only.
+   </li>
+ </ul></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineTo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The date until which the category is online or valid.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderableRecommendations
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A list of outgoing recommendations for this category. This method
+ behaves similarly to <a href="class_dw_catalog_Category.html#dw_catalog_Category_getRecommendations_DetailAnchor">getRecommendations()</a> but additionally filters out
+ recommendations for which the target product is unorderable according to
+ its product availability model.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>outgoingCategoryLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category
+ is the source.  If the target category of a link belongs to a different
+ catalog than the catalog owning this category, it is not returned.
+ The collection of links is sorted by the explicitly defined order
+ for this category with unsorted links appearing at the end.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageDescription
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The page description of this category for the default locale or null if not defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageKeywords
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The page keywords of this category for the default locale or null if not defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageTitle
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The page title of this category for the default locale or null if not defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageURL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The page URL property of this category or null if not defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>parent
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Category.html"><span class="">Category</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The parent of this category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productAttributeModel
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductAttributeModel.html"><span class="">ProductAttributeModel</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns this category's ProductAttributeModel, which makes access to the
+ category's attribute information convenient. The model is calculated
+ based on the attribute definitions assigned to this category and the
+ global attribute definitions for the object type 'Product'.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>products
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All products assigned to this category.
+ The order of products in the returned collection corresponds to the
+ defined explicit sorting of products in this category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>recommendations
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The outgoing recommendations for this category.  If this category
+ is not in the site catalog, or there is no site catalog, an empty
+ collection is returned.  Only recommendations for which the target
+ product exists and is assigned to the site catalog are returned.  The
+ recommendations are sorted by their explicitly set order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>root
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the category is the root category of its catalog.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>searchPlacement
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The search placement of the category or null of no search placement is defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>searchRank
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The search rank of the category or null of no search rank is defined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>siteMapChangeFrequency
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The category's sitemap change frequency.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>siteMapIncluded
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The category's sitemap inclusion.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>siteMapPriority
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The category's sitemap priority.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>subCategories
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A sorted collection of the subcategories of this catalog category,
+ including both online and offline subcategories.
+ <ul>
+  <li>
+   The returned collection is sorted by position. Subcategories marked as
+   "unsorted" always appear after those marked as "sorted" but are otherwise
+   not in any guaranteed order.
+  </li>
+  <li>
+   The returned collection contains direct subcategories only.
+  </li>
+ </ul></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>template
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The template property value , which is the file name of the template
+ used to display the catalog category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>thumbnail
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The thumbnail image reference of this catalog category.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>topLevel
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if the category is a top level category, but not the root
+ category.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getAllRecommendations_DetailAnchor"><span class="">getAllRecommendations</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all outgoing recommendations for this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getAllRecommendations_Number_DetailAnchor"><span class="">getAllRecommendations</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all outgoing recommendations for this category which are of the specified type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getCategoryAssignments_DetailAnchor"><span class="">getCategoryAssignments</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of category assignments of the category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getDefaultSortingRule_DetailAnchor"><span class="">getDefaultSortingRule</span></a></span>()
+						: 
+					<a href="class_dw_catalog_SortingRule.html"><span class="">SortingRule</span></a></span>
+                    <div class="description">Returns the default sorting rule configured for this category, or <code>null</code> if there is no default rule to be applied for it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the description of the catalog category for the current locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getDisplayMode_DetailAnchor"><span class="">getDisplayMode</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the Variation Groups Display Mode of the category or null if no display mode is defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getDisplayName_DetailAnchor"><span class="">getDisplayName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the display name of the of the catalog category for the current locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the id of the category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getImage_DetailAnchor"><span class="">getImage</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the image reference of this catalog category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getIncomingCategoryLinks_DetailAnchor"><span class="">getIncomingCategoryLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category is the target.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getIncomingCategoryLinks_Number_DetailAnchor"><span class="">getIncomingCategoryLinks</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category is the target and which are of the specified type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineCategoryAssignments_DetailAnchor"><span class="">getOnlineCategoryAssignments</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of category assignments of the category where the referenced product is currently online.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineFlag_DetailAnchor"><span class="">getOnlineFlag</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the online status flag of the category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineFrom_DetailAnchor"><span class="">getOnlineFrom</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the date from which the category is online or valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineIncomingCategoryLinks_DetailAnchor"><span class="">getOnlineIncomingCategoryLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category is the target.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineOutgoingCategoryLinks_DetailAnchor"><span class="">getOnlineOutgoingCategoryLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category is the source.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineProducts_DetailAnchor"><span class="">getOnlineProducts</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns online products assigned to this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineSubCategories_DetailAnchor"><span class="">getOnlineSubCategories</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of currently online subcategories of this catalog category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOnlineTo_DetailAnchor"><span class="">getOnlineTo</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the date until which the category is online or valid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOrderableRecommendations_DetailAnchor"><span class="">getOrderableRecommendations</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a list of outgoing recommendations for this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOrderableRecommendations_Number_DetailAnchor"><span class="">getOrderableRecommendations</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a list of outgoing recommendations for this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOutgoingCategoryLinks_DetailAnchor"><span class="">getOutgoingCategoryLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category is the source.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getOutgoingCategoryLinks_Number_DetailAnchor"><span class="">getOutgoingCategoryLinks</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category is the source and which are of the specified type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getPageDescription_DetailAnchor"><span class="">getPageDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the page description of this category for the default locale or null if not defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getPageKeywords_DetailAnchor"><span class="">getPageKeywords</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the page keywords of this category for the default locale or null if not defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getPageTitle_DetailAnchor"><span class="">getPageTitle</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the page title of this category for the default locale or null if not defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getPageURL_DetailAnchor"><span class="">getPageURL</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the page URL property of this category or null if not defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getParent_DetailAnchor"><span class="">getParent</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Category.html"><span class="">Category</span></a></span>
+                    <div class="description">Returns the parent of this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getProductAttributeModel_DetailAnchor"><span class="">getProductAttributeModel</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductAttributeModel.html"><span class="">ProductAttributeModel</span></a></span>
+                    <div class="description">Returns this category's ProductAttributeModel, which makes access to the category's attribute information convenient.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getProducts_DetailAnchor"><span class="">getProducts</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all products assigned to this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getRecommendations_DetailAnchor"><span class="">getRecommendations</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the outgoing recommendations for this category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getRecommendations_Number_DetailAnchor"><span class="">getRecommendations</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the outgoing recommendations for this category which are of the specified type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getSearchPlacement_DetailAnchor"><span class="">getSearchPlacement</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the search placement of the category or null of no search placement is defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getSearchRank_DetailAnchor"><span class="">getSearchRank</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the search rank of the category or null of no search rank is defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getSiteMapChangeFrequency_DetailAnchor"><span class="">getSiteMapChangeFrequency</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the category's sitemap change frequency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getSiteMapIncluded_DetailAnchor"><span class="">getSiteMapIncluded</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the category's sitemap inclusion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getSiteMapPriority_DetailAnchor"><span class="">getSiteMapPriority</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the category's sitemap priority.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getSubCategories_DetailAnchor"><span class="">getSubCategories</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of the subcategories of this catalog category, including both online and offline subcategories.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getTemplate_DetailAnchor"><span class="">getTemplate</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the template property value , which is the file name of the template used to display the catalog category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_getThumbnail_DetailAnchor"><span class="">getThumbnail</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the thumbnail image reference of this catalog category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_hasOnlineProducts_DetailAnchor"><span class="">hasOnlineProducts</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this catalog category has any online products assigned.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_hasOnlineSubCategories_DetailAnchor"><span class="">hasOnlineSubCategories</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this catalog category has any online subcategories.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_isDirectSubCategoryOf_Category_DetailAnchor"><span class="">isDirectSubCategoryOf</span></a></span>(parent
+								 : 	
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this category is a direct sub-category of the provided category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_isOnline_DetailAnchor"><span class="">isOnline</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the value indicating whether the catalog category is "currently online".</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_isRoot_DetailAnchor"><span class="">isRoot</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the category is the root category of its catalog.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_isSubCategoryOf_Category_DetailAnchor"><span class="">isSubCategoryOf</span></a></span>(ancestor
+								 : 	
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this category is a sub-category of the provided category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_isTopLevel_DetailAnchor"><span class="">isTopLevel</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the category is a top level category, but not the root category.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_setDisplayMode_Number_DetailAnchor"><span class="">setDisplayMode</span></a></span>(displayMode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the category's Variation Groups Display Mode.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_setSearchPlacement_Number_DetailAnchor"><span class="">setSearchPlacement</span></a></span>(placement
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the category's search placement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Category_setSearchRank_Number_DetailAnchor"><span class="">setSearchRank</span></a></span>(rank
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the category's search rank.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getAllRecommendations_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllRecommendations</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all outgoing recommendations for this category.  The
+ recommendations are sorted by their explicitly set order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of recommendations, never null but possibly empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getAllRecommendations_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllRecommendations</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all outgoing recommendations for this category which are of the
+ specified type. The recommendations are sorted by their explicitly set
+ order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the recommendation type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of recommendations, never null but possibly empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getCategoryAssignments_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCategoryAssignments</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCategoryAssignments</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of category assignments of the category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of category assignments of the category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getDefaultSortingRule_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDefaultSortingRule</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDefaultSortingRule</span>()
+					 : 
+					<a href="class_dw_catalog_SortingRule.html"><span class="">SortingRule</span></a>
+                    </div>
+                    <div class="description">Returns the default sorting rule configured for this category,
+ or <code>null</code> if there is no default rule to be applied for it.
+
+ This method returns the default rule for the parent category if this
+ category inherits one.  The parent category may inherit its default
+ rule from its parent, and so on, up to the root category.
+
+ This method returns <code>null</code> if no ancestor category for this
+ category has a default rule.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the default SortingRule or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the description of the catalog category for the current locale.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The value of the property for the current locale, or null if it wasn't found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getDisplayMode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDisplayMode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDisplayMode</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the Variation Groups Display Mode of the category or null if no display mode is defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'displayMode' which is either <a href="class_dw_catalog_Category.html#dw_catalog_Category_DISPLAY_MODE_MERGED_DetailAnchor">DISPLAY_MODE_MERGED</a> or <a href="class_dw_catalog_Category.html#dw_catalog_Category_DISPLAY_MODE_INDIVIDUAL_DetailAnchor">DISPLAY_MODE_INDIVIDUAL</a> or null if category is set to inherit the display mode.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getDisplayName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDisplayName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDisplayName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the display name of the of the catalog category for the current locale.
+
+ This value is intended to be used as the
+ external visible name of the catalog category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The value of the property for the current locale, or null if it wasn't found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the id of the category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the id of the category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getImage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the image reference of this catalog category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the image reference for this category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getIncomingCategoryLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getIncomingCategoryLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getIncomingCategoryLinks</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category
+ is the target.  If the source category of a link belongs to a different
+ catalog than the catalog owning this category, it is not returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects, possibly empty but not null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getIncomingCategoryLinks_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getIncomingCategoryLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getIncomingCategoryLinks</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category
+ is the target and which are of the specified type.  If the source
+ category of a link belongs to a different catalog than the catalog owning
+ this category, it is not returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the link type type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects, possibly empty but not null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineCategoryAssignments_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineCategoryAssignments</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineCategoryAssignments</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of category assignments of the category where the
+ referenced product is currently online. When checking the online status
+ of the product, the online flag and the online from &amp; to dates are taken
+ into account. Online flag, online from &amp; to dates set for the current site
+ takes precedence over the default values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of online category assignments of the category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineFlag_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineFlag</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineFlag</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the online status flag of the category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the online status flag of the category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineFrom_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineFrom</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineFrom</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the date from which the category is online or valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the date from which the category is online or valid.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineIncomingCategoryLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineIncomingCategoryLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineIncomingCategoryLinks</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for
+ which this category is the target. If the source category of a link
+ belongs to a different catalog than the catalog owning this category, it
+ is not returned. Additionally, this method will only return a link if the
+ source category is currently online. A category is currently online if
+ its online flag equals true and the current site date is within the date
+ range defined by the onlineFrom and onlineTo attributes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects, possibly empty but not null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineOutgoingCategoryLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineOutgoingCategoryLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineOutgoingCategoryLinks</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for
+ which this category is the source. If the target category of a link
+ belongs to a different catalog than the catalog owning this category, it
+ is not returned. Additionally, this method will only return a link if the
+ target category is currently online. A category is currently online if
+ its online flag equals true and the current site date is within the date
+ range defined by the onlineFrom and onlineTo attributes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects, possibly empty but not null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineProducts_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineProducts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineProducts</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns online products assigned to this category.
+ Offline products are not included in the returned collection.
+ When checking the online status of the product,
+ the online flag and the online from &amp; to dates are taken into account.
+ Online flag, online from &amp; to dates set for the current site takes precedence
+ over the default values. <br/>
+
+ The order of products in the returned collection corresponds to the
+ defined explicit sorting of products in this category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of online products of this category.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_Category.html#dw_catalog_Category_hasOnlineProducts_DetailAnchor">hasOnlineProducts()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineSubCategories_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineSubCategories</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineSubCategories</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of currently online subcategories of this
+ catalog category.
+ <ul>
+  <li>
+   A category is currently online if its online flag
+   equals true and the current site date is within the date range defined by
+   the onlineFrom and onlineTo attributes.
+  </li>
+  <li>
+   The returned collection is sorted by position. Subcategories marked as
+   "unsorted" always appear after those marked as "sorted" but are otherwise
+   not in any guaranteed order.
+  </li>
+  <li>
+    The returned collection contains direct subcategories only.
+   </li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of currently online subcategories.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_Category.html#dw_catalog_Category_hasOnlineSubCategories_DetailAnchor">hasOnlineSubCategories()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOnlineTo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineTo</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the date until which the category is online or valid.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the date until which the category is online or valid.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOrderableRecommendations_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderableRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderableRecommendations</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a list of outgoing recommendations for this category. This method
+ behaves similarly to <a href="class_dw_catalog_Category.html#dw_catalog_Category_getRecommendations_DetailAnchor">getRecommendations()</a> but additionally filters out
+ recommendations for which the target product is unorderable according to
+ its product availability model.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of recommendations, never null but possibly empty.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isOrderable_DetailAnchor">ProductAvailabilityModel.isOrderable()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOrderableRecommendations_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderableRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderableRecommendations</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a list of outgoing recommendations for this category. This method
+ behaves similarly to <a href="class_dw_catalog_Category.html#dw_catalog_Category_getRecommendations_Number_DetailAnchor">getRecommendations(Number)</a> but additionally
+ filters out recommendations for which the target product is unorderable
+ according to its product availability model.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the recommendation type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of recommendations, never null but possibly empty.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isOrderable_DetailAnchor">ProductAvailabilityModel.isOrderable()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOutgoingCategoryLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOutgoingCategoryLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOutgoingCategoryLinks</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category
+ is the source.  If the target category of a link belongs to a different
+ catalog than the catalog owning this category, it is not returned.
+ The collection of links is sorted by the explicitly defined order
+ for this category with unsorted links appearing at the end.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects, possibly empty but not null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getOutgoingCategoryLinks_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOutgoingCategoryLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOutgoingCategoryLinks</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects for which this category
+ is the source and which are of the specified type.  If the target
+ category of a link belongs to a different catalog than the catalog owning
+ this category, it is not returned.  The collection of links is sorted by
+ the explicitly defined order for this category with unsorted links
+ appearing at the end.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the link type type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of <a href="class_dw_catalog_CategoryLink.html">CategoryLink</a> objects, possibly empty but not null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getPageDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the page description of this category for the default locale or null if not defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'pageDescription'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getPageKeywords_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageKeywords</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageKeywords</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the page keywords of this category for the default locale or null if not defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'pageKeywords'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getPageTitle_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageTitle</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the page title of this category for the default locale or null if not defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'pageTitle'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getPageURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageURL</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the page URL property of this category or null if not defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'pageURL'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getParent_DetailAnchor"></a>
+                    <div class="detailName 
+						">getParent</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getParent</span>()
+					 : 
+					<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>
+                    </div>
+                    <div class="description">Returns the parent of this category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a CatalogCategory instance representing the parent of this CatalogCategory or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getProductAttributeModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductAttributeModel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductAttributeModel</span>()
+					 : 
+					<a href="class_dw_catalog_ProductAttributeModel.html"><span class="">ProductAttributeModel</span></a>
+                    </div>
+                    <div class="description">Returns this category's ProductAttributeModel, which makes access to the
+ category's attribute information convenient. The model is calculated
+ based on the attribute definitions assigned to this category and the
+ global attribute definitions for the object type 'Product'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ProductAttributeModel for this category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getProducts_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProducts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProducts</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all products assigned to this category.
+ The order of products in the returned collection corresponds to the
+ defined explicit sorting of products in this category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of all products of this category.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_Category.html#dw_catalog_Category_getOnlineProducts_DetailAnchor">getOnlineProducts()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getRecommendations_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRecommendations</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the outgoing recommendations for this category.  If this category
+ is not in the site catalog, or there is no site catalog, an empty
+ collection is returned.  Only recommendations for which the target
+ product exists and is assigned to the site catalog are returned.  The
+ recommendations are sorted by their explicitly set order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of recommendations, never null but possibly empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getRecommendations_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRecommendations</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the outgoing recommendations for this category which are of the
+ specified type.  Behaves the same as <a href="class_dw_catalog_Category.html#dw_catalog_Category_getRecommendations_DetailAnchor">getRecommendations()</a> but
+ additionally filters by recommendation type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the recommendation type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of recommendations, never null but possibly empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getSearchPlacement_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSearchPlacement</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSearchPlacement</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the search placement of the category or null of no search placement is defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'searchPlacement'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getSearchRank_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSearchRank</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSearchRank</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the search rank of the category or null of no search rank is defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'searchRank'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getSiteMapChangeFrequency_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSiteMapChangeFrequency</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSiteMapChangeFrequency</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the category's sitemap change frequency.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'siteMapChangeFrequency'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getSiteMapIncluded_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSiteMapIncluded</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSiteMapIncluded</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the category's sitemap inclusion.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'siteMapIncluded'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getSiteMapPriority_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSiteMapPriority</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSiteMapPriority</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the category's sitemap priority.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute 'siteMapPriority'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getSubCategories_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSubCategories</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSubCategories</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of the subcategories of this catalog category,
+ including both online and offline subcategories.
+ <ul>
+  <li>
+   The returned collection is sorted by position. Subcategories marked as
+   "unsorted" always appear after those marked as "sorted" but are otherwise
+   not in any guaranteed order.
+  </li>
+  <li>
+   The returned collection contains direct subcategories only.
+  </li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of the subcategories.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_Category.html#dw_catalog_Category_getOnlineSubCategories_DetailAnchor">getOnlineSubCategories()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getTemplate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTemplate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTemplate</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the template property value , which is the file name of the template
+ used to display the catalog category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the property 'template'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_getThumbnail_DetailAnchor"></a>
+                    <div class="detailName 
+						">getThumbnail</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getThumbnail</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the thumbnail image reference of this catalog category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the thumbnail image reference for this category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_hasOnlineProducts_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasOnlineProducts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasOnlineProducts</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this catalog category has any online products assigned.
+ When checking the online status of the product,
+ the online flag and the online from &amp; to dates are taken into account.
+ Online flag, online from &amp; to dates set for the current site takes precedence
+ over the default values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true, if this category has at least one online product assigned, false otherwise.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_Category.html#dw_catalog_Category_getOnlineProducts_DetailAnchor">getOnlineProducts()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_hasOnlineSubCategories_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasOnlineSubCategories</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasOnlineSubCategories</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this catalog category has any online subcategories.
+ <ul>
+  <li>
+   A category is currently online if its online flag
+   equals true and the current site date is within the date range defined by
+   the onlineFrom and onlineTo attributes.
+  </li>
+  <li>
+   Only direct subcategories are considered.
+  </li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true, if this category has at least one online subcategory, false otherwise.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_Category.html#dw_catalog_Category_getOnlineSubCategories_DetailAnchor">getOnlineSubCategories()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_isDirectSubCategoryOf_Category_DetailAnchor"></a>
+                    <div class="detailName 
+						">isDirectSubCategoryOf</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isDirectSubCategoryOf</span>(parent
+								 : 
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this category is a direct sub-category of the provided
+ category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">parent</span>
+						 - 
+						<span class="parameterDesc">The parent category, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if this category is a direct sub-category of parent, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_isOnline_DetailAnchor"></a>
+                    <div class="detailName 
+						">isOnline</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isOnline</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the value indicating whether the catalog category is "currently
+ online".  A category is currently online if its online flag equals true
+ and the current site date is within the date range defined by the
+ onlineFrom and onlineTo attributes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the category is currently online, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_isRoot_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRoot</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRoot</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the category is the root category of its catalog.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">'true' if the category is the root category of its catalog, 'false' otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_isSubCategoryOf_Category_DetailAnchor"></a>
+                    <div class="detailName 
+						">isSubCategoryOf</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isSubCategoryOf</span>(ancestor
+								 : 
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this category is a sub-category of the provided category.
+ This can be either a direct or an indirect sub-category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ancestor</span>
+						 - 
+						<span class="parameterDesc">The ancestor category, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this category is a sub-category of ancestor, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_isTopLevel_DetailAnchor"></a>
+                    <div class="detailName 
+						">isTopLevel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isTopLevel</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the category is a top level category, but not the root
+ category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if the category is a direct sub-category of the root category, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_setDisplayMode_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setDisplayMode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setDisplayMode</span>(displayMode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the category's Variation Groups Display Mode.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">displayMode</span>
+						 - 
+						<span class="parameterDesc">The category's variation groups display mode which is either <a href="class_dw_catalog_Category.html#dw_catalog_Category_DISPLAY_MODE_MERGED_DetailAnchor">DISPLAY_MODE_MERGED</a> or <a href="class_dw_catalog_Category.html#dw_catalog_Category_DISPLAY_MODE_INDIVIDUAL_DetailAnchor">DISPLAY_MODE_INDIVIDUAL</a> or null if category is set to inherit the display mode.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_setSearchPlacement_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSearchPlacement</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSearchPlacement</span>(placement
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the category's search placement.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">placement</span>
+						 - 
+						<span class="parameterDesc">The category's search placement.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Category_setSearchRank_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSearchRank</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSearchRank</span>(rank
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the category's search rank.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rank</span>
+						 - 
+						<span class="parameterDesc">The category's search rank.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

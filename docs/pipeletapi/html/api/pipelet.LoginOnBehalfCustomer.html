@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet LoginOnBehalfCustomer</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet LoginOnBehalfCustomer</div>
+            <div class="topLevelDescription">This pipelet logs the specified customer into the current session if the current agent user has the functional permission 'Login_On_Behalf' in the current site. The dwcustomer cookie will not be set.<br/>
+The error exit is taken:<br/>
+<ul>
+<li>if the pipelet isn't used in the storefront context</li>
+<li>if the given customer is not a registered customer (anonymous)</li>
+<li>if the given customer is not registered for the current site</li>
+<li>if the given customer is disabled</li>
+<li>if there is no agent user at the current session</li>
+<li>if the agent user is not logged in</li>
+<li>if the agent user has not the functional permission Login_On_Behalf</li>
+</ul>
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Customer</span>
+					&nbsp;:&nbsp;
+					Customer
+							(Required)
+						</span>
+                    <div class="description">
+The customer, which should be logged in on behalf of a user agent.
+
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

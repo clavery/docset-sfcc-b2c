@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet GetBrands</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet GetBrands</div>
+            <div class="topLevelDescription">This pipelet returns the list of brands for all products in the site catalog. The objects in the list have three attributes: "value" is the internal value that is used to reference the brand, "displayValue" is the full brand name, and "count" is the number of products with this brand. "Value" and "displayValue" are currently always identical. To access the attributes in a script or template, use e.g. brands[0].displayValue to get the displayValue for the first brand in the list.
+
+Please note that the pipelet is based on search and search refinement definitions. Specifically, a pre-condition for the successful execution of the pipelet is a refinement definition for the product attribute 'brand'.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Catalog</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Brands</span>
+					&nbsp;:&nbsp;
+					ArrayList
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

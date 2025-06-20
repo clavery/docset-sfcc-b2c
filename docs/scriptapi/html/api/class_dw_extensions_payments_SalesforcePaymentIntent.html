@@ -1,0 +1,503 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SalesforcePaymentIntent</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.payments.SalesforcePaymentIntent">
+            <a name="dw.extensions.payments.SalesforcePaymentIntent"></a>
+            <div class="packageName">dw.extensions.payments</div>
+            <div class="className
+					">	
+        	
+				Class SalesforcePaymentIntent</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.payments.SalesforcePaymentIntent
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description"><p>
+ Salesforce Payments representation of a payment intent object. See Salesforce Payments documentation for how
+ to gain access and configure it for use on your sites.
+ </p>
+ <p>
+ A payment intent is automatically created when a shopper is ready to pay for items in their basket. It becomes
+ confirmed when the shopper provides information to the payment provider that is acceptable to authorize payment for a
+ given amount. Once that information has been provided it becomes available as the payment method associated with the
+ payment intent.
+ </p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_OFF_SESSION_DetailAnchor"></a>SETUP_FUTURE_USAGE_OFF_SESSION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"off_session"
+                        <div class="description">Represents the payment method setup future usage is off session.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_ON_SESSION_DetailAnchor"></a>SETUP_FUTURE_USAGE_ON_SESSION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"on_session"
+                        <div class="description">Represents the payment method setup future usage is on session.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>amount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The amount of this payment intent.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>cancelable
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns <code>true</code> if this payment intent has a status which indicates it can be canceled,
+ or <code>false</code> if its status does not indicate it can be canceled.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>clientSecret
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The client secret of this payment intent.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>confirmed
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns <code>true</code> if this payment intent has been confirmed, or <code>false</code> if not.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The identifier of this payment intent.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>paymentMethod
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The payment method for this payment intent, or <code>null</code> if none has been established.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>refundable
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns <code>true</code> if this payment intent has a status and other state which indicate it can be refunded,
+ or <code>false</code> if it cannot be refunded.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>setupFutureUsage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_OFF_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_OFF_SESSION</a> or <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_ON_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_ON_SESSION</a> to indicate how the payment
+ intent can be used in the future or returns <code>null</code> if future usage is not set up.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getAmount_DetailAnchor"><span class="">getAmount</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the amount of this payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getClientSecret_DetailAnchor"><span class="">getClientSecret</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the client secret of this payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the identifier of this payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getPaymentInstrument_Basket_DetailAnchor"><span class="">getPaymentInstrument</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a></span>
+                    <div class="description">Returns the payment instrument for this payment intent in the given basket, or <code>null</code> if the given basket has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getPaymentInstrument_Order_DetailAnchor"><span class="">getPaymentInstrument</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a></span>
+                    <div class="description">Returns the payment instrument for this payment intent in the given order, or <code>null</code> if the given order has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getPaymentMethod_DetailAnchor"><span class="">getPaymentMethod</span></a></span>()
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a></span>
+                    <div class="description">Returns the payment method for this payment intent, or <code>null</code> if none has been established.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_getSetupFutureUsage_DetailAnchor"><span class="">getSetupFutureUsage</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_OFF_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_OFF_SESSION</a> or <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_ON_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_ON_SESSION</a> to indicate how the payment intent can be used in the future or returns <code>null</code> if future usage is not set up.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_isCancelable_DetailAnchor"><span class="">isCancelable</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns <code>true</code> if this payment intent has a status which indicates it can be canceled, or <code>false</code> if its status does not indicate it can be canceled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_isConfirmed_DetailAnchor"><span class="">isConfirmed</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns <code>true</code> if this payment intent has been confirmed, or <code>false</code> if not.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentIntent_isRefundable_DetailAnchor"><span class="">isRefundable</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns <code>true</code> if this payment intent has a status and other state which indicate it can be refunded, or <code>false</code> if it cannot be refunded.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getAmount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAmount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAmount</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the amount of this payment intent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment intent amount</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getClientSecret_DetailAnchor"></a>
+                    <div class="detailName 
+						">getClientSecret</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getClientSecret</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the client secret of this payment intent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment intent client secret</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the identifier of this payment intent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment intent identifier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getPaymentInstrument_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentInstrument</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentInstrument</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>
+                    </div>
+                    <div class="description">Returns the payment instrument for this payment intent in the given basket, or <code>null</code> if the given
+ basket has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">basket</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">basket payment instrument</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getPaymentInstrument_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentInstrument</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentInstrument</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>
+                    </div>
+                    <div class="description">Returns the payment instrument for this payment intent in the given order, or <code>null</code> if the given
+ order has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">order payment instrument</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getPaymentMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentMethod</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentMethod</span>()
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>
+                    </div>
+                    <div class="description">Returns the payment method for this payment intent, or <code>null</code> if none has been established.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_getSetupFutureUsage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSetupFutureUsage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSetupFutureUsage</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_OFF_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_OFF_SESSION</a> or <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_ON_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_ON_SESSION</a> to indicate how the payment
+ intent can be used in the future or returns <code>null</code> if future usage is not set up.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">setup future usage or <code>null</code> if future usage is not set up</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_setSetupFutureUsage_Boolean_DetailAnchor">SalesforcePaymentRequest.setSetupFutureUsage(Boolean)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_OFF_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_OFF_SESSION</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_ON_SESSION_DetailAnchor">SETUP_FUTURE_USAGE_ON_SESSION</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_isCancelable_DetailAnchor"></a>
+                    <div class="detailName 
+						">isCancelable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isCancelable</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns <code>true</code> if this payment intent has a status which indicates it can be canceled,
+ or <code>false</code> if its status does not indicate it can be canceled.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if this payment intent has a status which indicates it can be canceled</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_isConfirmed_DetailAnchor"></a>
+                    <div class="detailName 
+						">isConfirmed</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isConfirmed</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns <code>true</code> if this payment intent has been confirmed, or <code>false</code> if not.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if this payment intent has been confirmed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentIntent_isRefundable_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefundable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefundable</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns <code>true</code> if this payment intent has a status and other state which indicate it can be refunded,
+ or <code>false</code> if it cannot be refunded.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if this payment intent has a status and other state which indicate it can be refunded</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

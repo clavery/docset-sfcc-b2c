@@ -1,0 +1,346 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SearchRefinementValue</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.SearchRefinementValue">
+            <a name="dw.catalog.SearchRefinementValue"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class SearchRefinementValue</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.SearchRefinementValue
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents the value of a product or content search refinement.</div>
+                    <div class="subclasses">
+                        <div class="subclass">
+	    	All Known Subclasses
+    	</div>
+                        <div class="subclasses">
+                            <a href="class_dw_content_ContentSearchRefinementValue.html"><span class="parameterName">ContentSearchRefinementValue</span></a>, <a href="class_dw_catalog_ProductSearchRefinementValue.html"><span class="parameterName">ProductSearchRefinementValue</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The optional refinement value description in the current locale.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>displayValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The refinement display value. For attribute refinements, this is
+ the appropriate display value based on optional value display names
+ within the object attribute definition. If no display name is defined,
+ the value itself is returned. For category refinements, this is the
+ display name of the category in the current locale. For price
+ refinements, this is a string representation of the range appropriate for
+ display.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>hitCount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The hit count value.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The refinement value's ID. For attribute refinements, this will
+ be the ID of the corresponding
+ <a href="class_dw_object_ObjectAttributeDefinition.html">ObjectAttributeDefinition</a>. This ID is included in the
+ querystring parameter names returned by the URL-generating methods of
+ <a href="class_dw_catalog_SearchModel.html">SearchModel</a>. For price and category refinements, this
+ value will be empty.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>presentationID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The optional presentation ID associated with this refinement
+ value. The presentation ID can be used, for example, to associate an ID
+ with an HTML widget.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>value
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The refinement value. For attribute refinements, this is the
+ attribute value if the refinement values are unbucketed, or the bucket
+ display name if the values are bucketed. This value is included in the
+ querystring parameter values returned by the URL-generating methods of
+ <a href="class_dw_catalog_SearchModel.html">SearchModel</a>. For price refinements, the value will be
+ a string representation of the price range lower bound. For category
+ refinements, the value will be a category ID.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    
+    			To get an instance of this class, use one of the subclass constructors. 
+    		 </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchRefinementValue_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the optional refinement value description in the current locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchRefinementValue_getDisplayValue_DetailAnchor"><span class="">getDisplayValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the refinement display value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchRefinementValue_getHitCount_DetailAnchor"><span class="">getHitCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the hit count value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchRefinementValue_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the refinement value's ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchRefinementValue_getPresentationID_DetailAnchor"><span class="">getPresentationID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the optional presentation ID associated with this refinement value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchRefinementValue_getValue_DetailAnchor"><span class="">getValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the refinement value.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchRefinementValue_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the optional refinement value description in the current locale.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the optional refinement value description in the current locale, or null if none is defined.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchRefinementValue_getDisplayValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDisplayValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDisplayValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the refinement display value. For attribute refinements, this is
+ the appropriate display value based on optional value display names
+ within the object attribute definition. If no display name is defined,
+ the value itself is returned. For category refinements, this is the
+ display name of the category in the current locale. For price
+ refinements, this is a string representation of the range appropriate for
+ display.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the refinement display value in the current locale.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchRefinementValue_getHitCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHitCount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHitCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the hit count value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the hit count value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchRefinementValue_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the refinement value's ID. For attribute refinements, this will
+ be the ID of the corresponding
+ <a href="class_dw_object_ObjectAttributeDefinition.html">ObjectAttributeDefinition</a>. This ID is included in the
+ querystring parameter names returned by the URL-generating methods of
+ <a href="class_dw_catalog_SearchModel.html">SearchModel</a>. For price and category refinements, this
+ value will be empty.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the refinement value's ID.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchRefinementValue_getPresentationID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPresentationID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPresentationID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the optional presentation ID associated with this refinement
+ value. The presentation ID can be used, for example, to associate an ID
+ with an HTML widget.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the presentation ID, or null if none is defined.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchRefinementValue_getValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the refinement value. For attribute refinements, this is the
+ attribute value if the refinement values are unbucketed, or the bucket
+ display name if the values are bucketed. This value is included in the
+ querystring parameter values returned by the URL-generating methods of
+ <a href="class_dw_catalog_SearchModel.html">SearchModel</a>. For price refinements, the value will be
+ a string representation of the price range lower bound. For category
+ refinements, the value will be a category ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the refinement value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

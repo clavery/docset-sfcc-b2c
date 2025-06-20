@@ -1,0 +1,632 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class HTTPServiceDefinition</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.svc.HTTPServiceDefinition">
+            <a name="dw.svc.HTTPServiceDefinition"></a>
+            <div class="packageName">dw.svc</div>
+            <div class="className
+					 dep">	
+        	
+				Class HTTPServiceDefinition</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_svc_ServiceDefinition.html">dw.svc.ServiceDefinition</a>
+                </div>
+                <div style="position:relative;left:5%;">
+                    <img src="images/inherit.gif">dw.svc.HTTPServiceDefinition
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents an HTTP Service Definition.
+ <p>
+ The HTTP Service will use the return value of the createRequest callback as the request body (if supported by the
+ HTTP method). If this is an array of non-null <a href="class_dw_net_HTTPRequestPart.html">HTTPRequestPart</a> objects, then a multi-part request will
+ be formed. Otherwise the object is converted to a String and used.
+ <p>
+ See also <a href="class_TopLevel_XML.html#TopLevel_XML_toXMLString_DetailAnchor">XML.toXMLString()</a> and <a href="class_TopLevel_JSON.html#TopLevel_JSON_stringify_Object_DetailAnchor">JSON.stringify(Object)</a>, which must be
+ explicitly called if needed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					No longer available as of version 19.10.
+				</div>
+                    </div>
+                    <div class="subclasses">
+                        <div class="subclass">
+	    	All Known Subclasses
+    	</div>
+                        <div class="subclasses">
+                            <a href="class_dw_svc_HTTPFormServiceDefinition.html"><span class="parameterName">HTTPFormServiceDefinition</span></a>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This class is only used with the deprecated <a href="class_dw_svc_ServiceRegistry.html">ServiceRegistry</a>. Use the <a href="class_dw_svc_LocalServiceRegistry.html">LocalServiceRegistry</a> instead, which allows configuration on the <a href="class_dw_svc_HTTPService.html">HTTPService</a> directly.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>authentication
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The authentication type.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>cachingTTL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The caching time to live value.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>encoding
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The request body encoding to declare.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>outFile
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_io_File.html"><span class="">File</span></a>
+                        <div class="description">The output file, or null if there is none.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>requestMethod
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The request method.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    
+    			To get an instance of this class, use one of the subclass constructors. 
+    		 </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_addHeader_String_String_DetailAnchor"><span class="">addHeader</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, val
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Adds an HTTP Header.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_addParam_String_String_DetailAnchor"><span class="">addParam</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, val
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Adds a query parameter that will be appended to the URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_getAuthentication_DetailAnchor"><span class="">getAuthentication</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the authentication type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_getCachingTTL_DetailAnchor"><span class="">getCachingTTL</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the caching time to live value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_getEncoding_DetailAnchor"><span class="">getEncoding</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the request body encoding to declare.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_getOutFile_DetailAnchor"><span class="">getOutFile</span></a></span>()
+						: 
+					<a href="class_dw_io_File.html"><span class="">File</span></a></span>
+                    <div class="description">Returns the output file, or null if there is none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_getRequestMethod_DetailAnchor"><span class="">getRequestMethod</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the request method.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_setAuthentication_String_DetailAnchor"><span class="">setAuthentication</span></a></span>(authentication
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Sets the type of authentication.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_setCachingTTL_Number_DetailAnchor"><span class="">setCachingTTL</span></a></span>(ttl
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Enables caching for GET requests.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_setEncoding_String_DetailAnchor"><span class="">setEncoding</span></a></span>(encoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Sets the encoding of the request body (if any).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_setOutFile_File_DetailAnchor"><span class="">setOutFile</span></a></span>(outFile
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Sets the output file in which to write the HTTP response body.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_HTTPServiceDefinition_setRequestMethod_String_DetailAnchor"><span class="">setRequestMethod</span></a></span>(requestMethod
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a></span>
+                    <div class="description">Sets the HTTP request method.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_svc_ServiceDefinition.html"><span class="">ServiceDefinition</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_configure_Object_DetailAnchor"><span class="">configure</span></a>, <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_getConfiguration_DetailAnchor"><span class="">getConfiguration</span></a>, <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_getServiceName_DetailAnchor"><span class="">getServiceName</span></a>, <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_isMock_DetailAnchor"><span class="">isMock</span></a>, <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_isThrowOnError_DetailAnchor"><span class="">isThrowOnError</span></a>, <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_setMock_DetailAnchor"><span class="">setMock</span></a>, <a href="class_dw_svc_ServiceDefinition.html#dw_svc_ServiceDefinition_setThrowOnError_DetailAnchor"><span class="">setThrowOnError</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_addHeader_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addHeader</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addHeader</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, val
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Adds an HTTP Header.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">Header name.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">val</span>
+						 - 
+						<span class="parameterDesc">Header value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this HTTP Service Definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_addParam_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addParam</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addParam</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, val
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Adds a query parameter that will be appended to the URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">Parameter name.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">val</span>
+						 - 
+						<span class="parameterDesc">Parameter value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this HTTP Service Definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_getAuthentication_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAuthentication</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAuthentication</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the authentication type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Authentication type.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_getCachingTTL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCachingTTL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCachingTTL</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the caching time to live value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The caching time to live value in seconds.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_svc_HTTPServiceDefinition.html#dw_svc_HTTPServiceDefinition_setCachingTTL_Number_DetailAnchor">setCachingTTL(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_getEncoding_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEncoding</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEncoding</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the request body encoding to declare.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Request encoding.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_getOutFile_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOutFile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOutFile</span>()
+					 : 
+					<a href="class_dw_io_File.html"><span class="">File</span></a>
+                    </div>
+                    <div class="description">Returns the output file, or null if there is none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Output file or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_getRequestMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRequestMethod</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRequestMethod</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the request method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">HTTP Request method.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_setAuthentication_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setAuthentication</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setAuthentication</span>(authentication
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Sets the type of authentication. Valid values include "BASIC" and "NONE".
+ <p>
+ The default value is BASIC.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authentication</span>
+						 - 
+						<span class="parameterDesc">Type of authentication.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this HTTP Service Definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_setCachingTTL_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCachingTTL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCachingTTL</span>(ttl
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Enables caching for GET requests.
+ <p>
+ This only caches status codes 2xx with a content length and size of less than 50k that are not immediately
+ written to file. The URL and the user name are used as cache keys. The total size of cacheable content and the
+ number of cached items is limited and automatically managed by the system.
+ <p>
+ Cache control information sent by the remote server is ignored.
+ <p>
+ Caching HTTP responses should be done very carefully. It is important to ensure that the response really depends
+ only on the URL and doesn't contain any remote state information or time information which is independent of the
+ URL. It is also important to verify that the application sends exactly the same URL multiple times.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ttl</span>
+						 - 
+						<span class="parameterDesc">The time to live for the cached content in seconds. A value of 0 or less disables caching.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_net_HTTPClient.html#dw_net_HTTPClient_enableCaching_Number_DetailAnchor">HTTPClient.enableCaching(Number)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_setEncoding_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEncoding</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEncoding</span>(encoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Sets the encoding of the request body (if any).
+ <p>
+ The default value is UTF-8.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">Encoding of the request body.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this HTTP Service Definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_setOutFile_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOutFile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOutFile</span>(outFile
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Sets the output file in which to write the HTTP response body.
+ <p>
+ The default behavior is to not write a file.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">outFile</span>
+						 - 
+						<span class="parameterDesc">Output file, or null to disable.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this HTTP Service Definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_HTTPServiceDefinition_setRequestMethod_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRequestMethod</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setRequestMethod</span>(requestMethod
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_HTTPServiceDefinition.html"><span class="">HTTPServiceDefinition</span></a>
+                    </div>
+                    <div class="description">Sets the HTTP request method.
+ <p>
+ Valid values include GET, PUT, POST, and DELETE.
+ <p>
+ The default value is POST.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">requestMethod</span>
+						 - 
+						<span class="parameterDesc">HTTP request method.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this HTTP Service Definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

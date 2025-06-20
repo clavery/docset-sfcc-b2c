@@ -1,0 +1,1487 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SOAPUtil</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.rpc.SOAPUtil">
+            <a name="dw.rpc.SOAPUtil"></a>
+            <div class="packageName">dw.rpc</div>
+            <div class="className
+					 dep">	
+        	
+				Class SOAPUtil</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.rpc.SOAPUtil
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Utility class for working with SOAP web services.  This class provides
+ methods for setting SOAP headers and a set of constants representing the
+ supported header names.<br>
+ If you want to use ws-security features, such as signing and encryption,
+ with your RPC-style SOAP web service, use this class to construct a HashMap with
+ security constants and values.<br>
+ <b>Note:</b> this method handles sensitive security-related data.
+ Pay special attention to PCI DSS v3. requirements 2, 4, and 12.
+ The following example configures the ws-security actions taken for the request and response to a web service.
+  <br><pre><code>
+ importPackage( dw.system );
+ importPackage( dw.util );
+ importPackage( dw.rpc );
+
+
+ function execute( args : PipelineDictionary ) : Number
+ {
+     var WSU_NS : String = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd";
+
+     try
+     {
+
+     // define a map with all the secrets
+     var secretsMap   : Map = new HashMap();
+     secretsMap.put("myclientkey", "ckpass");
+     secretsMap.put("myservicekey", "ckpass");
+     secretsMap.put("username", "password");
+
+     var requestCfg   : Map = new HashMap();
+
+     // define the ws actions to be performed
+     requestCfg.put(SOAPUtil.WS_ACTION, SOAPUtil.WS_USERNAME_TOKEN + " " +
+                                        SOAPUtil.WS_TIMESTAMP + " " +
+                                        SOAPUtil.WS_SIGNATURE + " " +
+                                        SOAPUtil.WS_ENCRYPT);
+     requestCfg.put(SOAPUtil.WS_USER, "username");
+     requestCfg.put(SOAPUtil.WS_PASSWORD_TYPE, SOAPUtil.WS_PW_DIGEST );
+     requestCfg.put(SOAPUtil.WS_SIG_DIGEST_ALGO, "http://www.w3.org/2001/04/xmlenc#sha256" );
+
+     // define signature properties
+     // the keystore file has the basename of the WSDL file and the
+     // file extension based on the keystore type (e.g. HelloWorld.jks).
+     // The keystore file has to be placed beside the WSDL file.
+     requestCfg.put(SOAPUtil.WS_SIG_PROP_KEYSTORE_TYPE, "jks");
+     requestCfg.put(SOAPUtil.WS_SIG_PROP_KEYSTORE_PW, "cspass");
+     requestCfg.put(SOAPUtil.WS_SIG_PROP_KEYSTORE_ALIAS, "myclientkey");
+
+     requestCfg.put(SOAPUtil.WS_SIGNATURE_USER, "myclientkey");
+
+     // define enrcryption properties
+     requestCfg.put(SOAPUtil.WS_ENC_PROP_KEYSTORE_TYPE, "jks");
+     requestCfg.put(SOAPUtil.WS_ENC_PROP_KEYSTORE_PW, "cspass");
+     requestCfg.put(SOAPUtil.WS_ENC_PROP_KEYSTORE_ALIAS, "myservicekey");
+
+     requestCfg.put(SOAPUtil.WS_ENCRYPTION_USER, "myservicekey");
+     requestCfg.put(SOAPUtil.WS_SIGNATURE_PARTS, "{Element}{http://schemas.xmlsoap.org/soap/envelope/}Body");
+     requestCfg.put(SOAPUtil.WS_ENCRYPTION_PARTS,"{Element}{" + WSU_NS + "}
+      Timestamp;"+"{Content}{http://schemas.xmlsoap.org/soap/envelope/}Body");
+
+     // set the secrets for the callback
+     requestCfg.put(SOAPUtil.WS_SECRETS_MAP, secretsMap);
+
+     var responseCfg : Map = new HashMap();
+
+     // define the ws actions to be performed for the response
+     responseCfg.put(SOAPUtil.WS_ACTION, SOAPUtil.WS_TIMESTAMP + " " +
+                                         SOAPUtil.WS_SIGNATURE + " " +
+                                         SOAPUtil.WS_ENCRYPT);
+
+     // define signature properties
+     responseCfg.put(SOAPUtil.WS_SIG_PROP_KEYSTORE_TYPE, "jks");
+     responseCfg.put(SOAPUtil.WS_SIG_PROP_KEYSTORE_PW, "cspass");
+     responseCfg.put(SOAPUtil.WS_SIG_PROP_KEYSTORE_ALIAS, "myservicekey");
+
+     responseCfg.put(SOAPUtil.WS_SIGNATURE_USER, "myservicekey");
+
+     // define decryption properties
+     responseCfg.put(SOAPUtil.WS_ENC_PROP_KEYSTORE_TYPE, "jks");
+     responseCfg.put(SOAPUtil.WS_ENC_PROP_KEYSTORE_PW, "cspass");
+     responseCfg.put(SOAPUtil.WS_ENC_PROP_KEYSTORE_ALIAS, "myclientkey");
+
+     responseCfg.put(SOAPUtil.WS_ENCRYPTION_USER, "myclientkey");
+
+     // set the secrets for the callback
+     responseCfg.put(SOAPUtil.WS_SECRETS_MAP, secretsMap);
+
+     // get the service and stub
+     var helloWorldService : WebReference = webreferences.HelloWorld;
+     var stub : Stub = helloWorldService.defaultService;
+     // set the security
+     SOAPUtil.setWSSecurityConfig(stub, requestCfg, responseCfg);
+         //var h : Hello = new helloWorldService.Hello();
+         var h = new helloWorldService.com.support.ws.security.test.Hello2();
+
+         h.setName('Send Text from client Axis ...');
+
+         // call the web service
+         var response  = stub.hello2(h);
+         //var response = stub.hello(h);
+         var result = response.getHello2Return();
+
+
+     args.OutStr = result;
+     Logger.error("Hello World We Are SIGNED old version Send Text from client ...", result);
+
+     return PIPELET_NEXT;
+
+     }
+     catch (e)
+     {
+         Logger.error("Error in helloWorldRpc.ds is: " + e);
+         return PIPELET_ERROR;
+     }
+
+ }
+ </code></pre><br></div>
+                    <div class="subclasses"></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This class is deprecated, please use webreferences2 instead (see also <a href="class_dw_ws_WSUtil.html">WSUtil</a>).</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_rpc_Stub.html">Stub</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_rpc_WebReference.html">WebReference</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ACTION_DetailAnchor"></a>WS_ACTION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"action"
+                        <div class="description">WS-Security action property name.
+ Allowed property values are WS_NO_SECURITY, WS_TIMESTAMP, WS_ENCRYPT, WS_SIGNATURE, WS_USERNAME_TOKEN or
+ a space separated String with multiple values.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ENC_PROP_KEYSTORE_ALIAS_DetailAnchor"></a>WS_ENC_PROP_KEYSTORE_ALIAS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystoreAlias"
+                        <div class="description">WS-Security encryption: the encryption/decryption keystore alias name</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ENC_PROP_KEYSTORE_PW_DetailAnchor"></a>WS_ENC_PROP_KEYSTORE_PW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystorePassword"
+                        <div class="description">WS-Security encryption: the encryption/decryption keystore password</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ENC_PROP_KEYSTORE_TYPE_DetailAnchor"></a>WS_ENC_PROP_KEYSTORE_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystoreType"
+                        <div class="description">WS-Security encryption: the encryption/decryption keystore type ( jks or pkcs12 ),
+                         default is jks.
+ <br><b>Note:</b> the keystore file must have the basename of the WSDL file and the
+ file extension based on the keystore type. For example: MyService.jks.
+ The keystore file must be placed in the same cartridge directory
+ as the WSDL file.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ENCRYPT_DetailAnchor"></a>WS_ENCRYPT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Encrypt"
+                        <div class="description">WS-Security action: encrypt the message.
+ The encryption-specific parameters define how to encrypt, which keys
+ to use, and other parameters.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ENCRYPTION_PARTS_DetailAnchor"></a>WS_ENCRYPTION_PARTS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"encryptionParts"
+                        <div class="description">WS-Security encryption: defines which parts of the request are encrypted.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_ENCRYPTION_USER_DetailAnchor"></a>WS_ENCRYPTION_USER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"encryptionUser"
+                        <div class="description">WS-Security encryption: the user's name for encryption.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_NO_SECURITY_DetailAnchor"></a>WS_NO_SECURITY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NoSecurity"
+                        <div class="description">WS-Security action: no security</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_PASSWORD_TYPE_DetailAnchor"></a>WS_PASSWORD_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"passwordType"
+                        <div class="description">WS-Security password type: parameter for UsernameToken action to define the encoding
+ of the password. Allowed values are PW_DIGEST or PW_TEXT.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_PW_DIGEST_DetailAnchor"></a>WS_PW_DIGEST
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PasswordDigest"
+                        <div class="description">WS-Security password of type digest: use a password digest to send the password information.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_PW_TEXT_DetailAnchor"></a>WS_PW_TEXT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PasswordText"
+                        <div class="description">WS-Security password of type text: send the password information in clear text.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SECRETS_MAP_DetailAnchor"></a>WS_SECRETS_MAP
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SecretsMap"
+                        <div class="description">A secrets map with the username/password entries is needed to create the password
+ callback object.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIG_DIGEST_ALGO_DetailAnchor"></a>WS_SIG_DIGEST_ALGO
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureDigestAlgorithm"
+                        <div class="description">WS-Security signature: sets the signature digest algorithm to use.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIG_PROP_KEYSTORE_ALIAS_DetailAnchor"></a>WS_SIG_PROP_KEYSTORE_ALIAS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystoreAlias"
+                        <div class="description">WS-Security signature: the signature keystore alias name</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIG_PROP_KEYSTORE_PW_DetailAnchor"></a>WS_SIG_PROP_KEYSTORE_PW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystorePassword"
+                        <div class="description">WS-Security signature: the signature keystore password.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIG_PROP_KEYSTORE_TYPE_DetailAnchor"></a>WS_SIG_PROP_KEYSTORE_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystoreType"
+                        <div class="description">WS-Security: the signature keystore type ( jks or pkcs12 ). The default is jks.
+ <br><b>Note:</b> The keystore file must have the basename of the WSDL file and the
+ file extension of the keystore type. For example: MyService.jks.
+ The keystore file must be placed in the same cartridge directory
+ as the WSDL file.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIGNATURE_DetailAnchor"></a>WS_SIGNATURE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Signature"
+                        <div class="description">WS-Security action: sign the message.
+ The signature-specific parameters define how to sign, which keys
+ to use, and other parameters.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIGNATURE_PARTS_DetailAnchor"></a>WS_SIGNATURE_PARTS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureParts"
+                        <div class="description">WS-Security signature: defines which parts of the request are signed.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_SIGNATURE_USER_DetailAnchor"></a>WS_SIGNATURE_USER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureUser"
+                        <div class="description">WS-Security signature: the user's name for signature.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_TIMESTAMP_DetailAnchor"></a>WS_TIMESTAMP
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Timestamp"
+                        <div class="description">WS-Security action: add a timestamp to the security header.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_USER_DetailAnchor"></a>WS_USER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"user"
+                        <div class="description">WS-Security user name.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_SOAPUtil_WS_USERNAME_TOKEN_DetailAnchor"></a>WS_USERNAME_TOKEN
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"UsernameToken"
+                        <div class="description">WS-Security action: add a UsernameToken identification.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_rpc_SOAPUtil_SOAPUtil_DetailAnchor"><span class="">SOAPUtil</span></a></span>()</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_getHTTPRequestHeader_Object_String_DetailAnchor"><span class="">getHTTPRequestHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTTP request header property value using the specified key.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_getHTTPResponseHeader_Object_String_DetailAnchor"><span class="">getHTTPResponseHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTTP response header property value using the specified key.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets a new SOAPHeaderElement in the SOAP request with the namespace of the XML content.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_Boolean_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Sets a new SOAPHeaderElement in the SOAP request with the namespace of the XML content.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_String_String_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places the given XML into it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_String_String_Boolean_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places the given XML into it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_String_String_Boolean_String_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean, actor
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places the given XML into it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_String_Object_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places the given XML into it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_String_Object_Boolean_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places the given XML into it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHeader_Object_String_String_Object_Boolean_String_DetailAnchor"><span class="">setHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean, actor
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places the given XML into it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setHTTPRequestHeader_Object_String_String_DetailAnchor"><span class="">setHTTPRequestHeader</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets an HTTP request header property using the specified key and value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_rpc_SOAPUtil_setWSSecurityConfig_Object_Object_Object_DetailAnchor"><span class="">setWSSecurityConfig</span></a></span>(svc
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, requestConfigMap
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, responseConfigMap
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the WS-Security configuration for the request and response based on the constants defined.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_SOAPUtil_DetailAnchor"></a>
+                    <div class="detailName 
+						">SOAPUtil</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">SOAPUtil</span>()
+                    </div>
+                    <div class="description"></div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_getHTTPRequestHeader_Object_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getHTTPRequestHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">getHTTPRequestHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTTP request header property value using the specified key. Null is returned
+ if the key does not represent an HTTP header property.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService().</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the header property key.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTTP request header property value using the specified key or null.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_getHTTPResponseHeader_Object_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getHTTPResponseHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">getHTTPResponseHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTTP response header property value using the specified key. Null is returned
+ if the key does not represent an HTTP response header property.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService().</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the header property key.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTTP response header property value using the specified key or null.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets a new SOAPHeaderElement in the SOAP request with the namespace of
+ the XML content.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a string with arbitrary XML content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets a new SOAPHeaderElement in the SOAP request  with the namespace of
+ the XML content.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a string with arbitrary XML content</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">sets the SOAP header attribute 'mustUnderstand'</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places
+ the given XML into it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace of the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the element name for the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a string with arbitrary XML content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_String_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places
+ the given XML into it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace of the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the element name for the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a string with arbitrary XML content</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">sets the SOAP header attribute mustUnderstand</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_String_String_Boolean_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 
+								 
+								boolean, actor
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places
+ the given XML into it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace of the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the element name for the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a string with arbitrary XML content</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">sets the SOAP header attribute mustUnderstand</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">actor</span>
+						 - 
+						<span class="parameterDesc">the SOAP actor, which should be set for this header element. null removes any actor.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places
+ the given XML into it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace of the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the element name for the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a E4X XML object</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_String_Object_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, mustUnderstand
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places
+ the given XML into it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace of the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the element name for the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a E4X XML object</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">sets the SOAP header attribute mustUnderstand</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHeader_Object_String_String_Object_Boolean_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, mustUnderstand
+								 : 
+								 
+								boolean, actor
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Creates a new SOAPHeaderElement with the name and namespace and places
+ the given XML into it.
+ <br><pre><code>
+ var usernameToken : XML =
+   &lt;wsse:UsernameToken xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"&gt;
+       &lt;wsse:Username&gt;{merchantID}&lt;/wsse:Username&gt;
+       &lt;wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"&gt;
+           {merchantPassword}
+       &lt;/wsse:Password&gt;
+   &lt;/wsse:UsernameToken&gt;
+ SOAPUtil.setHeader( service, "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd",
+  "Security", usernameToken, true, null
+ </code> </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace of the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the element name for the header element</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">a E4X XML object</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">sets the SOAP header attribute 'mustUnderstand'</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">actor</span>
+						 - 
+						<span class="parameterDesc">the SOAP actor, which should be set for this header element. null removes any actor.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setHTTPRequestHeader_Object_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHTTPRequestHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setHTTPRequestHeader</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets an HTTP request header property using the specified key and value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService().</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the header property key.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the header property value. If the value is null, the property identified by the key is removed from the HTTP request header.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_SOAPUtil_setWSSecurityConfig_Object_Object_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setWSSecurityConfig</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">setWSSecurityConfig</span>(svc
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, requestConfigMap
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, responseConfigMap
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the WS-Security configuration for the request and response based on the
+ constants defined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">svc</span>
+						 - 
+						<span class="parameterDesc">a service stub returned from getService()</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">requestConfigMap</span>
+						 - 
+						<span class="parameterDesc">the WS-Security request config</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">responseConfigMap</span>
+						 - 
+						<span class="parameterDesc">the WS-Security response config</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

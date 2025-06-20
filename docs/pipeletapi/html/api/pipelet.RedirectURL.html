@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet RedirectURL</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet RedirectURL</div>
+            <div class="topLevelDescription">The pipelet translates a URL, which is typically a legacy URL from an existing site, to a new URL suitable for a redirect.  If no mapping is found, then the pipelet ends with an ERROR. The original URL as seen by the web server is appended on the query string. The pipelet automatically gets the request and extracts the original URL. This avoids issues with URL and parameter encoding.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Util</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Location</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The URL which was calculated to be the redirect URL. The Location parameter can be directly used as value for an HTTP redirect location.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OriginalURL</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The original URL given a query string of the request.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet AddProductToProductList</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet AddProductToProductList</div>
+            <div class="topLevelDescription">Add a ProductListItem of type PRODUCT to the ProductList, which is associated with the specified Product. Quantity defaults to 1.  Priority defaults to 0.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ProductList</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DisallowRepeats</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+If set to true, the pipelet will not create a new ProductListItem if the specified Product is already in ProductList. Instead, the existing list item will be returned. If set to false, the pipelet will always create a new ProductListItem.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Product</span>
+					&nbsp;:&nbsp;
+					Product
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductList</span>
+					&nbsp;:&nbsp;
+					ProductList
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Quantity</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Defaults to 1.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductOptionModel</span>
+					&nbsp;:&nbsp;
+					ProductOptionModel
+							(Optional)
+						</span>
+                    <div class="description">
+
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Priority</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Defaults to 0.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductListItem</span>
+					&nbsp;:&nbsp;
+					ProductListItem
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

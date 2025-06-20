@@ -1,0 +1,1649 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductList</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.customer.ProductList">
+            <a name="dw.customer.ProductList"></a>
+            <div class="packageName">dw.customer</div>
+            <div class="className
+					">	
+        	
+				Class ProductList</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.customer.ProductList
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a list of products (and optionally a gift certificate) that is
+ typically maintained by a customer.  This class can be used to implement
+ a number of different storefront features, e.g. shopping list, wish list and gift registry.
+ A product list is always owned by a customer. The owner can be anonymous or a registered customer.
+ The owner can be the person for which items from that list will be purchased (wish list).
+ Or it can be a person who maintains the list, for example a gift registry, on behalf of the bridal couple.
+ Each product list can have a registrant and a co-registrant. A registrant is typically associated with an event related product list
+ such as a gift registry. It holds information about a person associated with the
+ event such as a bride or groom.
+ A shipping address can be associated with this product list to ship the items,
+ e.g. to an event location. A post-event shipping address can be associated to
+ ship items to which could not be delivered on event date.
+ The product list can also hold information about the event date and event location.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_EXPORT_STATUS_EXPORTED_DetailAnchor"></a>EXPORT_STATUS_EXPORTED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">Constant for when Export Status is Exported</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_EXPORT_STATUS_NOTEXPORTED_DetailAnchor"></a>EXPORT_STATUS_NOTEXPORTED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">Constant for when Export Status is Not Exported</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_TYPE_CUSTOM_1_DetailAnchor"></a>TYPE_CUSTOM_1
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;100
+                        <div class="description">Constant representing a custom list type attribute.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_TYPE_CUSTOM_2_DetailAnchor"></a>TYPE_CUSTOM_2
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;101
+                        <div class="description">Constant representing a custom list type attribute.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_TYPE_CUSTOM_3_DetailAnchor"></a>TYPE_CUSTOM_3
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;102
+                        <div class="description">Constant representing a custom list type attribute.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_TYPE_GIFT_REGISTRY_DetailAnchor"></a>TYPE_GIFT_REGISTRY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;11
+                        <div class="description">Constant representing the gift registry type attribute.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_TYPE_SHOPPING_LIST_DetailAnchor"></a>TYPE_SHOPPING_LIST
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;12
+                        <div class="description">Constant representing the shopping list type attribute.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductList_TYPE_WISH_LIST_DetailAnchor"></a>TYPE_WISH_LIST
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;10
+                        <div class="description">Constant representing the wish list registry type attribute.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>anonymous
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if this product list is owned by an anonymous customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>coRegistrant
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ProductListRegistrant assigned to the coRegistrant attribute or null
+ if this list has no co-registrant.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>currentShippingAddress
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">This is a helper method typically used with an event related list.
+ It provides the appropriate shipping address based on the eventDate.
+ If the current date is after the eventDate, then the postEventShippingAddress
+ is returned, otherwise the shippingAddress is returned.  If the eventDate
+ is null, then null is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">A description text that, for example, explains the purpose of this product list.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>eventCity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">For event related uses (e.g. gift registry), this holds the event city.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>eventCountry
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">For event related uses (e.g. gift registry), this holds the event country.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>eventDate
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                        <div class="description">For event related uses (e.g. gift registry), this holds the date
+ of the event.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>eventState
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">For event related uses (e.g. gift registry), this holds the event state.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>eventType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">For event related uses (e.g. gift registry), this holds the type
+ of event, e.g. Wedding, Baby Shower.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>exportStatus
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The export status of the product list.<br/>
+ Possible values are: <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_EXPORT_STATUS_NOTEXPORTED_DetailAnchor">EXPORT_STATUS_NOTEXPORTED</a>,
+ <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_EXPORT_STATUS_EXPORTED_DetailAnchor">EXPORT_STATUS_EXPORTED</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftCertificateItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The item in the list that represents a gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The unique system generated ID of the object.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>items
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection containing all items in the list.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>lastExportTime
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The date where this product list has been exported successfully
+ the last time.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The name of this product list given by its owner.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>owner
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer that created and owns the product list.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>postEventShippingAddress
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>
+                        <div class="description">The shipping address for purchases made after the event date.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection containing all items in the list that reference products.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>public
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">A flag, typically used to determine if the object is searchable
+ by other customers.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>publicItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection containing all items in the list that are flagged as public.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>purchases
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The aggregated purchases from all the individual items.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>registrant
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ProductListRegistrant assigned to the registrant attribute or null
+ if this list has no registrant.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingAddress
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>
+                        <div class="description">Return the address that should be used as the shipping address for purchases
+ made from the list.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>type
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An int representing the type of object (e.g. wish list,
+ gift registry). This is set at object creation time.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_createCoRegistrant_DetailAnchor"><span class="">createCoRegistrant</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a></span>
+                    <div class="description">Create a ProductListRegistrant and assign it to the coRegistrant attribute of the list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_createGiftCertificateItem_DetailAnchor"><span class="">createGiftCertificateItem</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a></span>
+                    <div class="description">Create an item in the list that represents a gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_createProductItem_Product_DetailAnchor"><span class="">createProductItem</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+						: 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a></span>
+                    <div class="description">Create an item in the list that references the specified product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_createRegistrant_DetailAnchor"><span class="">createRegistrant</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a></span>
+                    <div class="description">Create a ProductListRegistrant and assign it to the registrant attribute of the list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getCoRegistrant_DetailAnchor"><span class="">getCoRegistrant</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a></span>
+                    <div class="description">Returns the ProductListRegistrant assigned to the coRegistrant attribute or null if this list has no co-registrant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getCurrentShippingAddress_DetailAnchor"><span class="">getCurrentShippingAddress</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a></span>
+                    <div class="description">This is a helper method typically used with an event related list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a description text that, for example, explains the purpose of this product list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getEventCity_DetailAnchor"><span class="">getEventCity</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">For event related uses (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getEventCountry_DetailAnchor"><span class="">getEventCountry</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">For event related uses (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getEventDate_DetailAnchor"><span class="">getEventDate</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">For event related uses (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getEventState_DetailAnchor"><span class="">getEventState</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">For event related uses (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getEventType_DetailAnchor"><span class="">getEventType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">For event related uses (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getExportStatus_DetailAnchor"><span class="">getExportStatus</span></a></span>()
+						: 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a></span>
+                    <div class="description">Returns the export status of the product list.<br/> Possible values are: <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_EXPORT_STATUS_NOTEXPORTED_DetailAnchor">EXPORT_STATUS_NOTEXPORTED</a>, <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_EXPORT_STATUS_EXPORTED_DetailAnchor">EXPORT_STATUS_EXPORTED</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getGiftCertificateItem_DetailAnchor"><span class="">getGiftCertificateItem</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a></span>
+                    <div class="description">Returns the item in the list that represents a gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the unique system generated ID of the object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getItem_String_DetailAnchor"><span class="">getItem</span></a></span>(ID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a></span>
+                    <div class="description">Returns the item from the list that has the specified ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getItems_DetailAnchor"><span class="">getItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing all items in the list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getLastExportTime_DetailAnchor"><span class="">getLastExportTime</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the date where this product list has been exported successfully the last time.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of this product list given by its owner.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getOwner_DetailAnchor"><span class="">getOwner</span></a></span>()
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Returns the customer that created and owns the product list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getPostEventShippingAddress_DetailAnchor"><span class="">getPostEventShippingAddress</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a></span>
+                    <div class="description">Returns the shipping address for purchases made after the event date.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getProductItems_DetailAnchor"><span class="">getProductItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing all items in the list that reference products.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getPublicItems_DetailAnchor"><span class="">getPublicItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing all items in the list that are flagged as public.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getPurchases_DetailAnchor"><span class="">getPurchases</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the aggregated purchases from all the individual items.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getRegistrant_DetailAnchor"><span class="">getRegistrant</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a></span>
+                    <div class="description">Returns the ProductListRegistrant assigned to the registrant attribute or null if this list has no registrant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getShippingAddress_DetailAnchor"><span class="">getShippingAddress</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a></span>
+                    <div class="description">Return the address that should be used as the shipping address for purchases made from the list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_getType_DetailAnchor"><span class="">getType</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns an int representing the type of object (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_isAnonymous_DetailAnchor"><span class="">isAnonymous</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this product list is owned by an anonymous customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_isPublic_DetailAnchor"><span class="">isPublic</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">A flag, typically used to determine if the object is searchable by other customers.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_removeCoRegistrant_DetailAnchor"><span class="">removeCoRegistrant</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Removes the ProductListRegistrant assigned to the coRegistrant attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_removeItem_ProductListItem_DetailAnchor"><span class="">removeItem</span></a></span>(item
+								 : 	
+								 
+								<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the specified item from the list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_removeRegistrant_DetailAnchor"><span class="">removeRegistrant</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Removes the ProductListRegistrant assigned to the registrant attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setDescription_String_DetailAnchor"><span class="">setDescription</span></a></span>(description
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the description of this product list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setEventCity_String_DetailAnchor"><span class="">setEventCity</span></a></span>(eventCity
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the event city to which this product list is related.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setEventCountry_String_DetailAnchor"><span class="">setEventCountry</span></a></span>(eventCountry
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the event country to which this product list is related.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setEventDate_Date_DetailAnchor"><span class="">setEventDate</span></a></span>(eventDate
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the date of the event to which this product list is related.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setEventState_String_DetailAnchor"><span class="">setEventState</span></a></span>(eventState
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the event state to which this product list is related.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setEventType_String_DetailAnchor"><span class="">setEventType</span></a></span>(eventType
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the event type for which this product list was created by the owner.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setName_String_DetailAnchor"><span class="">setName</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the name of this product list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setPostEventShippingAddress_CustomerAddress_DetailAnchor"><span class="">setPostEventShippingAddress</span></a></span>(address
+								 : 	
+								 
+								<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>)
+						: 
+					void</span>
+                    <div class="description">This is typically used by an event related list (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setPublic_Boolean_DetailAnchor"><span class="">setPublic</span></a></span>(flag
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Makes this product list visible to other customers or hides it.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductList_setShippingAddress_CustomerAddress_DetailAnchor"><span class="">setShippingAddress</span></a></span>(address
+								 : 	
+								 
+								<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>)
+						: 
+					void</span>
+                    <div class="description">Associate an address, used as the shipping address for purchases made from the list.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_createCoRegistrant_DetailAnchor"></a>
+                    <div class="detailName 
+						">createCoRegistrant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createCoRegistrant</span>()
+					 : 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a>
+                    </div>
+                    <div class="description">Create a ProductListRegistrant and assign it to the coRegistrant attribute
+ of the list.  An exception is thrown if the list already has a coRegistrant
+ assigned to it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the created ProductListRegistrant instance.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            CreateException						
+						 - 
+						 <span class="parameterDesc">if one already exists</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_createGiftCertificateItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">createGiftCertificateItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createGiftCertificateItem</span>()
+					 : 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+                    </div>
+                    <div class="description">Create an item in the list that represents a gift certificate.
+ A list may only contain a single gift certificate, so an exception
+ is thrown if one already exists in the list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the created item.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            CreateException						
+						 - 
+						 <span class="parameterDesc">if a gift certificate item already exists in the list.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_createProductItem_Product_DetailAnchor"></a>
+                    <div class="detailName 
+						">createProductItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createProductItem</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+					 : 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+                    </div>
+                    <div class="description">Create an item in the list that references the specified product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">the product to use to create the list item.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the created item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_createRegistrant_DetailAnchor"></a>
+                    <div class="detailName 
+						">createRegistrant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createRegistrant</span>()
+					 : 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a>
+                    </div>
+                    <div class="description">Create a ProductListRegistrant and assign it to the registrant attribute
+ of the list.  An exception is thrown if the list already has a registrant
+ assigned to it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the created ProductListRegistrant instance.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            CreateException						
+						 - 
+						 <span class="parameterDesc">if one already exists</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getCoRegistrant_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCoRegistrant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCoRegistrant</span>()
+					 : 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a>
+                    </div>
+                    <div class="description">Returns the ProductListRegistrant assigned to the coRegistrant attribute or null
+ if this list has no co-registrant.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ProductListRegistrant assigned to the coRegistrant attribute or null if this list has no co-registrant.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getCurrentShippingAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCurrentShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCurrentShippingAddress</span>()
+					 : 
+					<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>
+                    </div>
+                    <div class="description">This is a helper method typically used with an event related list.
+ It provides the appropriate shipping address based on the eventDate.
+ If the current date is after the eventDate, then the postEventShippingAddress
+ is returned, otherwise the shippingAddress is returned.  If the eventDate
+ is null, then null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the appropriate address, as described above.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a description text that, for example, explains the purpose of this product list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a description text explaining the purpose of this product list. Returns an empty string if the description is not set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getEventCity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEventCity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEventCity</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">For event related uses (e.g. gift registry), this holds the event city.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the event city. The event city or an empty string if no event city is set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getEventCountry_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEventCountry</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEventCountry</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">For event related uses (e.g. gift registry), this holds the event country.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the event country. The event country or an empty string if no event country is set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getEventDate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEventDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEventDate</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">For event related uses (e.g. gift registry), this holds the date
+ of the event.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the date of the event.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getEventState_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEventState</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEventState</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">For event related uses (e.g. gift registry), this holds the event state.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the event state. The event state or an empty string if no event state is set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getEventType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEventType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEventType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">For event related uses (e.g. gift registry), this holds the type
+ of event, e.g. Wedding, Baby Shower.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the type of event. Returns an empty string, if not set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getExportStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExportStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExportStatus</span>()
+					 : 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                    </div>
+                    <div class="description">Returns the export status of the product list.<br/>
+ Possible values are: <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_EXPORT_STATUS_NOTEXPORTED_DetailAnchor">EXPORT_STATUS_NOTEXPORTED</a>,
+ <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_EXPORT_STATUS_EXPORTED_DetailAnchor">EXPORT_STATUS_EXPORTED</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Product list export status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getGiftCertificateItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftCertificateItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftCertificateItem</span>()
+					 : 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+                    </div>
+                    <div class="description">Returns the item in the list that represents a gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the gift certificate item, or null if it doesn't exist.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the unique system generated ID of the object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getItem_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItem</span>(ID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+                    </div>
+                    <div class="description">Returns the item from the list that has the specified ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ID</span>
+						 - 
+						<span class="parameterDesc">the product list item identifier.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the specified item, or null if it's not found in the list.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing all items in the list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all items.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getLastExportTime_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLastExportTime</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLastExportTime</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the date where this product list has been exported successfully
+ the last time.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The time of the last successful export or null if this product list was not exported yet.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of this product list given by its owner.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the name of this product list. Returns an empty string if the name is not set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getOwner_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOwner</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOwner</span>()
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Returns the customer that created and owns the product list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Owning customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getPostEventShippingAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPostEventShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPostEventShippingAddress</span>()
+					 : 
+					<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>
+                    </div>
+                    <div class="description">Returns the shipping address for purchases made after the event date.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping address for purchases made after the event date. Returns null if no post-event shipping address is associated.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getProductItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing all items in the list that reference products.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all product items.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getPublicItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPublicItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPublicItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing all items in the list that are flagged as public.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all public items.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getPurchases_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPurchases</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPurchases</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the aggregated purchases from all the individual items.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">purchases</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getRegistrant_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRegistrant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRegistrant</span>()
+					 : 
+					<a href="class_dw_customer_ProductListRegistrant.html"><span class="">ProductListRegistrant</span></a>
+                    </div>
+                    <div class="description">Returns the ProductListRegistrant assigned to the registrant attribute or null
+ if this list has no registrant.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ProductListRegistrant assigned to the registrant attribute or null if this list has no registrant.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getShippingAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingAddress</span>()
+					 : 
+					<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>
+                    </div>
+                    <div class="description">Return the address that should be used as the shipping address for purchases
+ made from the list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping address. The shipping address of this list or null if no address is associated.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_getType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getType</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns an int representing the type of object (e.g. wish list,
+ gift registry). This is set at object creation time.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the type of object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_isAnonymous_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAnonymous</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAnonymous</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this product list is owned by an anonymous customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the owner of this product list is anonymous, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_isPublic_DetailAnchor"></a>
+                    <div class="detailName 
+						">isPublic</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isPublic</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">A flag, typically used to determine if the object is searchable
+ by other customers.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the product list is public. False otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_removeCoRegistrant_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeCoRegistrant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeCoRegistrant</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the ProductListRegistrant assigned to the coRegistrant attribute.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_removeItem_ProductListItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeItem</span>(item
+								 : 
+								 
+								<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the specified item from the list.  This will also cause
+ all purchase information associated with that item to be removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">item</span>
+						 - 
+						<span class="parameterDesc">The item to remove.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_removeRegistrant_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeRegistrant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeRegistrant</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the ProductListRegistrant assigned to the registrant attribute.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setDescription_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setDescription</span>(description
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the description of this product list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">description</span>
+						 - 
+						<span class="parameterDesc">The description of this product list. The description can have up to 256 characters, longer descriptions get truncated. If an empty string is provided, the description gets set to null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setEventCity_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEventCity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEventCity</span>(eventCity
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the event city to which this product list is related.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">eventCity</span>
+						 - 
+						<span class="parameterDesc">The event city can have up to 256 characters, longer event city get truncated. If an empty string is provided, the event city gets set to null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setEventCountry_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEventCountry</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEventCountry</span>(eventCountry
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the event country to which this product list is related.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">eventCountry</span>
+						 - 
+						<span class="parameterDesc">The event country can have up to 256 characters, longer event country get truncated. If an empty string is provided, the event country gets set to null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setEventDate_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEventDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEventDate</span>(eventDate
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the date of the event to which this product list is related.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">eventDate</span>
+						 - 
+						<span class="parameterDesc">The event date or null if no event date should be available.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setEventState_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEventState</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEventState</span>(eventState
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the event state to which this product list is related.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">eventState</span>
+						 - 
+						<span class="parameterDesc">The event state can have up to 256 characters, longer event state get truncated. If an empty string is provided, the event state gets set to null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setEventType_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEventType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEventType</span>(eventType
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the event type for which this product list was created by the owner.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">eventType</span>
+						 - 
+						<span class="parameterDesc">The event type can have up to 256 characters, longer event type get truncated. If an empty string is provided, the event type gets set to null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setName_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setName</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the name of this product list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of this product list. The name can have up to 256 characters, longer names get truncated. If an empty string is provided, the name gets set to null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setPostEventShippingAddress_CustomerAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPostEventShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPostEventShippingAddress</span>(address
+								 : 
+								 
+								<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">This is typically used by an event related list (e.g. gift registry) to
+ specify a shipping address for purchases made after the event date.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">address</span>
+						 - 
+						<span class="parameterDesc">The shipping address.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setPublic_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPublic</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPublic</span>(flag
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Makes this product list visible to other customers or hides it.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">flag</span>
+						 - 
+						<span class="parameterDesc">If true, this product list becomes visible to other customers. If false, this product list can only be seen and searched by its owner.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductList_setShippingAddress_CustomerAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingAddress</span>(address
+								 : 
+								 
+								<a href="class_dw_customer_CustomerAddress.html"><span class="">CustomerAddress</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Associate an address, used as the shipping address for purchases
+ made from the list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">address</span>
+						 - 
+						<span class="parameterDesc">The shipping address.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

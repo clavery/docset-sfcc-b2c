@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet ReserveInventoryForOrder</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet ReserveInventoryForOrder</div>
+            <div class="topLevelDescription"><p>This pipelet is used in the order creation pipeline to reserve inventory for all products contained in the specified Basket. The pipelet should be executed before any order creation actions - such as payment authorization - take place, and ensures that all products are still available once the order is actually being created (pipelet CreateOrder). Inventory transactions are automatically finalized by pipelet CreateOrder, i.e. reservations are converted into actual bookings. If CreateOrder is not called for a basket with reserved inventory items, reservations for this basket will automatically expire after 10 minutes. Also, if the pipelet is called for a basket that already has reserved inventory items, all previous reservations are removed and new reservations are made. Inventory reservations do not count towards the current stock level. So the only use case for this pipelet should be the inventory reservation in context of an order creation.</p>
+<p>For product bundles, inventory is reserved for all bundled products. If the bundle has its own inventory record, inventory is also reserved for the bundle itself.</p>
+<p>The following conditions must be met for the pipelet to succeed, otherwise the pipelet will return on the ERROR exit:</p><ul>
+<li>an inventory list must be assigned to the current site</li>
+<li>all products in the basket must exist, and must not be of type Master or ProductSet</li>
+<li>each product line item must have a valid quantity</li>
+<li>each product must have an inventory record, or the inventory list must define that products w/o inventory record are available by default</li>
+<li>the allocation amount must be sufficient for each product, unless the product has perpetual availability</li></ul>
+<p>The pipelet must not be enclosed in any pipeline transaction, otherwise it will throw an exception.</p>
+<p>This pipelet must not be used with CreateOrder2 pipelet or dw.order.OrderMgr#createOrder() in the same request.</p>
+<p>Since API version 10.6 if an order is being replaced, only the delta amounts (positive and negative) are reserved for the basket.</p>
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Order</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Basket</span>
+					&nbsp;:&nbsp;
+					Basket
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

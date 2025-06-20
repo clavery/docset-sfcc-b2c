@@ -1,0 +1,566 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class TrackingInfo</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.TrackingInfo">
+            <a name="dw.order.TrackingInfo"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class TrackingInfo</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_Extensible.html">dw.object.Extensible</a>
+                </div>
+                <div style="position:relative;left:5%;">
+                    <img src="images/inherit.gif">dw.order.TrackingInfo
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Provides basic information about a tracking info. An instance is identified by an ID and can be referenced from n ShippingOrderItems
+ using <a href="class_dw_order_TrackingRef.html">TrackingRef</a>s. This also allows one <a href="class_dw_order_ShippingOrderItem.html">ShippingOrderItem</a> to be associated with n TrackingInfo.</div>
+                    <div class="subclasses"></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ShippingOrder.html#dw_order_ShippingOrder_addTrackingInfo_String_DetailAnchor">ShippingOrder.addTrackingInfo(String)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ShippingOrderItem.html#dw_order_ShippingOrderItem_addTrackingRef_String_Quantity_DetailAnchor">ShippingOrderItem.addTrackingRef(String, Quantity)</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>carrier
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Get the Carrier.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>carrierService
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Get the service(ship method) of the used carrier.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the mandatory identifier for this tracking information. The id allows the tracking information to be referenced from
+ <a href="class_dw_order_TrackingRef.html">TrackingRef</a>s. To support short shipping a shipping-order-item can manage a list of
+ TrackingRefs, each with an optional quantity value allowing individual items to ship in multiple
+ parcels with known item quantity in each.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shipDate
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                        <div class="description">Get the ship date.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingOrder
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Gets the shipping order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>trackingNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Get the tracking number.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>trackingRefs
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Gets the tracking refs (shipping order items) which are assigned to this tracking info.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>warehouseID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Get the id of the shipping warehouse.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getCarrier_DetailAnchor"><span class="">getCarrier</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the Carrier.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getCarrierService_DetailAnchor"><span class="">getCarrierService</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the service(ship method) of the used carrier.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the mandatory identifier for this tracking information.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getShipDate_DetailAnchor"><span class="">getShipDate</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Get the ship date.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getShippingOrder_DetailAnchor"><span class="">getShippingOrder</span></a></span>()
+						: 
+					<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a></span>
+                    <div class="description">Gets the shipping order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getTrackingNumber_DetailAnchor"><span class="">getTrackingNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the tracking number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getTrackingRefs_DetailAnchor"><span class="">getTrackingRefs</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Gets the tracking refs (shipping order items) which are assigned to this tracking info.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_getWarehouseID_DetailAnchor"><span class="">getWarehouseID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the id of the shipping warehouse.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_setCarrier_String_DetailAnchor"><span class="">setCarrier</span></a></span>(carrier
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the Carrier.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_setCarrierService_String_DetailAnchor"><span class="">setCarrierService</span></a></span>(carrierService
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the service(ship method) of the used carrier.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_setShipDate_Date_DetailAnchor"><span class="">setShipDate</span></a></span>(shipDate
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the ship date.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_setTrackingNumber_String_DetailAnchor"><span class="">setTrackingNumber</span></a></span>(trackingNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the TrackingNumber.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_TrackingInfo_setWarehouseID_String_DetailAnchor"><span class="">setWarehouseID</span></a></span>(warehouseID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the id of the shipping warehouse.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_Extensible.html"><span class="">Extensible</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_Extensible.html#dw_object_Extensible_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_Extensible.html#dw_object_Extensible_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getCarrier_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCarrier</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCarrier</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the Carrier.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the Carrier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getCarrierService_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCarrierService</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCarrierService</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the service(ship method) of the used carrier.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the carrier service (ship method)</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the mandatory identifier for this tracking information. The id allows the tracking information to be referenced from
+ <a href="class_dw_order_TrackingRef.html">TrackingRef</a>s. To support short shipping a shipping-order-item can manage a list of
+ TrackingRefs, each with an optional quantity value allowing individual items to ship in multiple
+ parcels with known item quantity in each.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the id</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ShippingOrder.html#dw_order_ShippingOrder_addTrackingInfo_String_DetailAnchor">ShippingOrder.addTrackingInfo(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getShipDate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShipDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShipDate</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Get the ship date.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ship date</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getShippingOrder_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingOrder</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingOrder</span>()
+					 : 
+					<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>
+                    </div>
+                    <div class="description">Gets the shipping order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getTrackingNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTrackingNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTrackingNumber</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the tracking number.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the TrackingNumber</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getTrackingRefs_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTrackingRefs</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTrackingRefs</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Gets the tracking refs (shipping order items) which are assigned to this tracking info.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the tracking refs (shipping order items) which are assigned to this tracking info.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_getWarehouseID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getWarehouseID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getWarehouseID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the id of the shipping warehouse.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the id of the shipping warehouse</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_setCarrier_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCarrier</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCarrier</span>(carrier
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the Carrier.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">carrier</span>
+						 - 
+						<span class="parameterDesc">the Carrier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_setCarrierService_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCarrierService</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCarrierService</span>(carrierService
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the service(ship method) of the used carrier.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">carrierService</span>
+						 - 
+						<span class="parameterDesc">the carrier service, eg. the ship method</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_setShipDate_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShipDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShipDate</span>(shipDate
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the ship date.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipDate</span>
+						 - 
+						<span class="parameterDesc">the ship date</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_setTrackingNumber_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setTrackingNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setTrackingNumber</span>(trackingNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the TrackingNumber.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">trackingNumber</span>
+						 - 
+						<span class="parameterDesc">the TrackingNumber</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_TrackingInfo_setWarehouseID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setWarehouseID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setWarehouseID</span>(warehouseID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the id of the shipping warehouse.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">warehouseID</span>
+						 - 
+						<span class="parameterDesc">the id of the shipping warehouse</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

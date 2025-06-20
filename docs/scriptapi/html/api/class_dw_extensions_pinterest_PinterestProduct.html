@@ -1,0 +1,1419 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PinterestProduct</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.pinterest.PinterestProduct">
+            <a name="dw.extensions.pinterest.PinterestProduct"></a>
+            <div class="packageName">dw.extensions.pinterest</div>
+            <div class="className
+					">	
+        	
+				Class PinterestProduct</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.pinterest.PinterestProduct
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a row in the Pinterest catalog feed export.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestProduct_AVAILABILITY_IN_STOCK_DetailAnchor"></a>AVAILABILITY_IN_STOCK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"in stock"
+                        <div class="description">Indicates that the product is in stock.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestProduct_AVAILABILITY_OUT_OF_STOCK_DetailAnchor"></a>AVAILABILITY_OUT_OF_STOCK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"out of stock"
+                        <div class="description">Indicates that the product is not in stock.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestProduct_AVAILABILITY_PREORDER_DetailAnchor"></a>AVAILABILITY_PREORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"preorder"
+                        <div class="description">Indicates that the product is availabile in preorder.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestProduct_CONDITION_NEW_DetailAnchor"></a>CONDITION_NEW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"new"
+                        <div class="description">Indicates that the product has never been used.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestProduct_CONDITION_REFURBISHED_DetailAnchor"></a>CONDITION_REFURBISHED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"refurbished"
+                        <div class="description">Indicates that the product has been used but refurbished.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestProduct_CONDITION_USED_DetailAnchor"></a>CONDITION_USED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"used"
+                        <div class="description">Indicates that the product has been used.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>availability
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The availability of the Pinterest product. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_AVAILABILITY_IN_STOCK_DetailAnchor">AVAILABILITY_IN_STOCK</a> or
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_AVAILABILITY_OUT_OF_STOCK_DetailAnchor">AVAILABILITY_OUT_OF_STOCK</a>.
+ <p/></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>brand
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest brand of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>color
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest color value label of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>colorHex
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest color hex value of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>colorImage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                        <div class="description">The URL of the image to show in Pinterest for the product color (swatch).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>condition
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The condition of the Pinterest product. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_NEW_DetailAnchor">CONDITION_NEW</a>,
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_REFURBISHED_DetailAnchor">CONDITION_REFURBISHED</a>, or
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_USED_DetailAnchor">CONDITION_USED</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest description of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>googleProductCategory
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The category of this product in the Google category taxonomy.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>gtin
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest GTIN of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the Pinterest product. This is the same as the ID of the Demandware product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>imageLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+                        <div class="description">A list containing the URLs of the image to show in Pinterest for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>itemGroupID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The ID of the Pinterest item group for the product, that is, its master product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>itemGroupLink
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                        <div class="description">The URL of the Pinterest item group for the product, that is, the link to its master product in the
+ Demandware storefront.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>link
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                        <div class="description">The URL of the Demandware storefront link to the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maxPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                        <div class="description">The maximum price to show in Pinterest for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                        <div class="description">The minimum price to show in Pinterest for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>price
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                        <div class="description">The price to show in Pinterest for the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productCategory
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest category path of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returnPolicy
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest return policy of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>size
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest size value label of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>title
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The Pinterest title of the product.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getAvailability_DetailAnchor"><span class="">getAvailability</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the availability of the Pinterest product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getBrand_DetailAnchor"><span class="">getBrand</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest brand of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getColor_DetailAnchor"><span class="">getColor</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest color value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getColorHex_DetailAnchor"><span class="">getColorHex</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest color hex value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getColorImage_DetailAnchor"><span class="">getColorImage</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns the URL of the image to show in Pinterest for the product color (swatch).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getCondition_DetailAnchor"><span class="">getCondition</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the condition of the Pinterest product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest description of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getGoogleProductCategory_DetailAnchor"><span class="">getGoogleProductCategory</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the category of this product in the Google category taxonomy.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getGtin_DetailAnchor"><span class="">getGtin</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest GTIN of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the Pinterest product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getImageLinks_DetailAnchor"><span class="">getImageLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns a list containing the URLs of the image to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getItemGroupID_DetailAnchor"><span class="">getItemGroupID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the Pinterest item group for the product, that is, its master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getItemGroupLink_DetailAnchor"><span class="">getItemGroupLink</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns the URL of the Pinterest item group for the product, that is, the link to its master product in the Demandware storefront.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getLink_DetailAnchor"><span class="">getLink</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns the URL of the Demandware storefront link to the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getMaxPrice_DetailAnchor"><span class="">getMaxPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the maximum price to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getMinPrice_DetailAnchor"><span class="">getMinPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the minimum price to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getPrice_DetailAnchor"><span class="">getPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the price to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getProductCategory_DetailAnchor"><span class="">getProductCategory</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest category path of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getReturnPolicy_DetailAnchor"><span class="">getReturnPolicy</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest return policy of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getSize_DetailAnchor"><span class="">getSize</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest size value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_getTitle_DetailAnchor"><span class="">getTitle</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Pinterest title of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setAvailability_String_DetailAnchor"><span class="">setAvailability</span></a></span>(availability
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the availability of the Pinterest product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setBrand_String_DetailAnchor"><span class="">setBrand</span></a></span>(brand
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest brand of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setColor_String_DetailAnchor"><span class="">setColor</span></a></span>(color
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest color value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setColorHex_String_DetailAnchor"><span class="">setColorHex</span></a></span>(colorHex
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest color hex value of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setColorImage_URL_DetailAnchor"><span class="">setColorImage</span></a></span>(colorImage
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the URL of the image to show in Pinterest for the product color (swatch).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setCondition_String_DetailAnchor"><span class="">setCondition</span></a></span>(condition
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the condition of the Pinterest product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setDescription_String_DetailAnchor"><span class="">setDescription</span></a></span>(description
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest description of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setGoogleProductCategory_String_DetailAnchor"><span class="">setGoogleProductCategory</span></a></span>(googleProductCategory
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the category of this product in the Google category taxonomy.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setGtin_String_DetailAnchor"><span class="">setGtin</span></a></span>(gtin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest GTIN of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setImageLinks_List_DetailAnchor"><span class="">setImageLinks</span></a></span>(imageLinks
+								 : 	
+								 
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the list of URLs of images to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setItemGroupID_String_DetailAnchor"><span class="">setItemGroupID</span></a></span>(itemGroupID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the ID of the Pinterest item group for the product, that is, its master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setItemGroupLink_URL_DetailAnchor"><span class="">setItemGroupLink</span></a></span>(itemGroupLink
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the URL of the Pinterest item group for the product, that is, the link to its master product in the Demandware storefront.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setLink_URL_DetailAnchor"><span class="">setLink</span></a></span>(link
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the URL of the Demandware storefront link to the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setMaxPrice_Money_DetailAnchor"><span class="">setMaxPrice</span></a></span>(maxPrice
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the maximum price to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setMinPrice_Money_DetailAnchor"><span class="">setMinPrice</span></a></span>(minPrice
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the minimum price to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setPrice_Money_DetailAnchor"><span class="">setPrice</span></a></span>(price
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the price to show in Pinterest for the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setProductCategory_String_DetailAnchor"><span class="">setProductCategory</span></a></span>(productCategory
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest category path of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setReturnPolicy_String_DetailAnchor"><span class="">setReturnPolicy</span></a></span>(returnPolicy
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest return policy of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setSize_String_DetailAnchor"><span class="">setSize</span></a></span>(size
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest size value label of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestProduct_setTitle_String_DetailAnchor"><span class="">setTitle</span></a></span>(title
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Pinterest title of the product.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getAvailability_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAvailability</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAvailability</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the availability of the Pinterest product. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_AVAILABILITY_IN_STOCK_DetailAnchor">AVAILABILITY_IN_STOCK</a> or
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_AVAILABILITY_OUT_OF_STOCK_DetailAnchor">AVAILABILITY_OUT_OF_STOCK</a>.
+ <p/></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getBrand_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBrand</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBrand</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest brand of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getColor_DetailAnchor"></a>
+                    <div class="detailName 
+						">getColor</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getColor</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest color value label of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getColorHex_DetailAnchor"></a>
+                    <div class="detailName 
+						">getColorHex</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getColorHex</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest color hex value of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getColorImage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getColorImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getColorImage</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns the URL of the image to show in Pinterest for the product color (swatch).</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getCondition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCondition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCondition</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the condition of the Pinterest product. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_NEW_DetailAnchor">CONDITION_NEW</a>,
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_REFURBISHED_DetailAnchor">CONDITION_REFURBISHED</a>, or
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_USED_DetailAnchor">CONDITION_USED</a>.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest description of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getGoogleProductCategory_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGoogleProductCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGoogleProductCategory</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the category of this product in the Google category taxonomy.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getGtin_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGtin</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGtin</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest GTIN of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the Pinterest product. This is the same as the ID of the Demandware product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product ID</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getImageLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImageLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImageLinks</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns a list containing the URLs of the image to show in Pinterest for the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getItemGroupID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItemGroupID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItemGroupID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the Pinterest item group for the product, that is, its master product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getItemGroupLink_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItemGroupLink</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItemGroupLink</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns the URL of the Pinterest item group for the product, that is, the link to its master product in the
+ Demandware storefront.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getLink_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLink</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLink</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns the URL of the Demandware storefront link to the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getMaxPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the maximum price to show in Pinterest for the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getMinPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the minimum price to show in Pinterest for the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the price to show in Pinterest for the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getProductCategory_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductCategory</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest category path of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getReturnPolicy_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturnPolicy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturnPolicy</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest return policy of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getSize_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSize</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest size value label of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_getTitle_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTitle</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Pinterest title of the product.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setAvailability_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setAvailability</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setAvailability</span>(availability
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the availability of the Pinterest product. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_AVAILABILITY_IN_STOCK_DetailAnchor">AVAILABILITY_IN_STOCK</a> or
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_AVAILABILITY_OUT_OF_STOCK_DetailAnchor">AVAILABILITY_OUT_OF_STOCK</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">availability</span>
+						 - 
+						<span class="parameterDesc">the availability status to set for this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setBrand_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setBrand</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setBrand</span>(brand
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest brand of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">brand</span>
+						 - 
+						<span class="parameterDesc">Pinterest brand</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setColor_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setColor</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setColor</span>(color
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest color value label of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">color</span>
+						 - 
+						<span class="parameterDesc">Pinterest color value label</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setColorHex_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setColorHex</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setColorHex</span>(colorHex
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest color hex value of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">colorHex</span>
+						 - 
+						<span class="parameterDesc">Pinterest color hex value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setColorImage_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">setColorImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setColorImage</span>(colorImage
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the URL of the image to show in Pinterest for the product color (swatch).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">colorImage</span>
+						 - 
+						<span class="parameterDesc">link to Pinterest color image</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setCondition_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCondition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCondition</span>(condition
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the condition of the Pinterest product. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_NEW_DetailAnchor">CONDITION_NEW</a>,
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_REFURBISHED_DetailAnchor">CONDITION_REFURBISHED</a>, or
+ <a href="class_dw_extensions_pinterest_PinterestProduct.html#dw_extensions_pinterest_PinterestProduct_CONDITION_USED_DetailAnchor">CONDITION_USED</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">condition</span>
+						 - 
+						<span class="parameterDesc">the condition status to set for this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setDescription_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setDescription</span>(description
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest description of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">description</span>
+						 - 
+						<span class="parameterDesc">Pinterest description</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setGoogleProductCategory_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGoogleProductCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGoogleProductCategory</span>(googleProductCategory
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the category of this product in the Google category taxonomy.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">googleProductCategory</span>
+						 - 
+						<span class="parameterDesc">Google product category</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setGtin_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGtin</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGtin</span>(gtin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest GTIN of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">gtin</span>
+						 - 
+						<span class="parameterDesc">Pinterest GTIN</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setImageLinks_List_DetailAnchor"></a>
+                    <div class="detailName 
+						">setImageLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setImageLinks</span>(imageLinks
+								 : 
+								 
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the list of URLs of images to show in Pinterest for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">imageLinks</span>
+						 - 
+						<span class="parameterDesc">links to the product images</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setItemGroupID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setItemGroupID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setItemGroupID</span>(itemGroupID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the ID of the Pinterest item group for the product, that is, its master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">itemGroupID</span>
+						 - 
+						<span class="parameterDesc">ID of Pinterest item group</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setItemGroupLink_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">setItemGroupLink</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setItemGroupLink</span>(itemGroupLink
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the URL of the Pinterest item group for the product, that is, the link to its master product in the
+ Demandware storefront.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">itemGroupLink</span>
+						 - 
+						<span class="parameterDesc">link to the Pinterest item group</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setLink_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">setLink</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setLink</span>(link
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the URL of the Demandware storefront link to the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">link</span>
+						 - 
+						<span class="parameterDesc">Demandware storefront link to the product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setMaxPrice_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMaxPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMaxPrice</span>(maxPrice
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the maximum price to show in Pinterest for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxPrice</span>
+						 - 
+						<span class="parameterDesc">Pinterest maximum price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setMinPrice_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMinPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMinPrice</span>(minPrice
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the minimum price to show in Pinterest for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">minPrice</span>
+						 - 
+						<span class="parameterDesc">Pinterest minimum price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setPrice_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPrice</span>(price
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the price to show in Pinterest for the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">price</span>
+						 - 
+						<span class="parameterDesc">Pinterest price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setProductCategory_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProductCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setProductCategory</span>(productCategory
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest category path of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productCategory</span>
+						 - 
+						<span class="parameterDesc">Pinterest category path</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setReturnPolicy_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setReturnPolicy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setReturnPolicy</span>(returnPolicy
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest return policy of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">returnPolicy</span>
+						 - 
+						<span class="parameterDesc">Pinterest return policy</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setSize_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSize</span>(size
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest size value label of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">size</span>
+						 - 
+						<span class="parameterDesc">Pinterest size value label</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestProduct_setTitle_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setTitle</span>(title
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Pinterest title of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">title</span>
+						 - 
+						<span class="parameterDesc">Pinterest title</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

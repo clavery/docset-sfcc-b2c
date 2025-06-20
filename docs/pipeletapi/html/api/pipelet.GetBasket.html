@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet GetBasket</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet GetBasket</div>
+            <div class="topLevelDescription">Returns the basket of the current user. Based on the selected basket persistence, the pipelet can restore the basket of a previous user session. If the current storefront user is not identical with the user associated with the restored basket, all personal data, such as addresses, payment settings or redeemed coupons, are removed from the basket.
+The configuration parameter 'Create' can be set to 'true' to create a new basket if no existing basket is found. If no basket is found or created, the pipelet returns on the ERROR exit.
+See detailed description of basket persistence options in the Business Manager preferences section.
+The storefront session's currency will be compared with the basket's currency. If they do not match: The basket's currency will be changed to that of the session, all payment instruments and shipping methods in the basket will be removed (since they are currency-specific). In the typical scenario, the scripts in the pipeline after the GetBasket pipelet will do all the recalculations so the prices and basket totals will be correct in the newly changed currency.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Create</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description"></div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Basket</span>
+					&nbsp;:&nbsp;
+					Basket
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">StoredBasket</span>
+					&nbsp;:&nbsp;
+					Basket
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Represents the basket instance that was stored for the registered user during a previous session, but not restored by 'GetBasket' since a new basket was carried over in the current session.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

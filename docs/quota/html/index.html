@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>API and Object Quotas</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+    </head>
+    <body>
+        <div>
+            <span class="newTitle">API and Object Quotas</span>
+            <p>
+                <b>What are quotas?</b>
+            </p>
+            <p>
+            The B2C Commerce Platform was designed to be used as an ecommerce system. With that usage scenario in mind, certain 
+            constraints and limits were set during design and implementation to ensure the efficiency and stability of solutions 
+            built on top of the platform. These limits concern memory usage, resource consumption, API calls, and the number of 
+            business objects.
+        </p>
+            <p>
+            Quotas are part of the B2C Commerce Platform. They are used to monitor platform resource usage in custom code. 
+            Platform resources include memory, application server threads, database table sizes, and so on. Typically, when a 
+            quota is exceeded, custom code is using platform capabilities inefficiently, and a more efficient solution is 
+            possible.
+        </p>
+            <p>
+                <b>What happens when a quota is exceeded?</b>
+            </p>
+            <p>
+                            A quota is either "enforced" or "not enforced." If an enforced quota is exceeded, an exception is thrown, which 
+            prevents the current operation from completing. The exception cannot and should not be caught within the 
+            customization. The design criteria must be avoidance of quota violations. Examples for quota violations are:
+            
+                <ol>
+                    <li>a Collection with too many elements was created in memory, or</li>
+                    <li>too many persistent objects of a certain type were created in an instance.</li>
+                </ol>
+            </p>
+            <p>
+            If an enforced quota is exceeded in a storefront request, the general error page appears. If an enforced quota is 
+            exceeded during a standard import, a Data Warning or Data Error is reported. If a quota is not enforced, the platform
+            does not take an action when the limit is exceeded.
+        </p>
+            <p>
+            B2C Commerce plans to enforce all quotas in the future.
+        </p>
+            <p>
+                <b>How "safe" is my implementation?</b>
+            </p>
+            <p>
+            Information on API and object usage levels, number of violations on a particular instance, and which quotas are 
+            enforced, can all be found in Business Manager (Administration &gt; Operations &gt; Quota Status). Business Manager shows 
+            quota usage/violations since server restart or within the last 24 hours.
+        </p>
+            <p>
+            Some quotas also specify a warning threshold, to give you an early indication that a quota limit may soon be 
+            exceeded.
+        </p>
+            <p>
+            When the warning threshold is exceeded and when the quota limit is exceeded, messages are written to the quota log 
+            files. This happens for all quotas, enforced and unenforced. The log files are written to the log files folder and 
+            have the prefix "quota". Keep in mind that quota log files are written with a time delay. The log files contain 
+            information about where the quota violation occurred. Also, they may contain information about quotas that do not 
+            appear in Business Manager. These are experimental quotas, still under review by B2C Commerce, and not enforced; you 
+            can safely ignore them.
+        </p>
+            <p>
+                <b>Quota reference</b>
+            </p>
+            <p>
+                                        Quotas can be grouped into API and Object quotas. The following pages contain detailed information about the individual quotas:
+                        
+                <ul>
+                    <li>
+                        <a href="API_Quotas.html">API Quotas
+                                </a>
+                    </li>
+                    <li>
+                        <a href="Object_Quotas.html">Object Quotas
+                                </a>
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

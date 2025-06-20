@@ -1,0 +1,717 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ShippingOrderHooks</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.hooks.ShippingOrderHooks">
+            <a name="dw.order.hooks.ShippingOrderHooks"></a>
+            <div class="packageName">dw.order.hooks</div>
+            <div class="className
+					">	
+        	
+				Class ShippingOrderHooks</div>
+            <div class="hierarchy">
+                <div style="position:relative;left:1%;">
+                    <img src="images/inherit.gif">dw.order.hooks.ShippingOrderHooks
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This interface represents all script hooks that can be registered around
+ shipping order lifecycle. It contains the extension points (hook names), and
+ the functions that are called by each extension point. A function must be
+ defined inside a JavaScript source and must be exported. The script with the
+ exported hook function must be located inside a site cartridge. Inside the
+ site cartridge a 'package.json' file with a 'hooks' entry must exist.
+ <p>
+ "hooks": "./hooks.json"
+ </p>
+ The hooks entry links to a json file, relative to the 'package.json' file.
+ This file lists all registered hooks inside the hooks property:
+ <p>
+
+ <pre>
+ "hooks": [
+      {"name": "dw.order.shippingorder.updateShippingOrderItem", "script": "./shippingOrderUpdate.ds"},
+ ]
+ </pre>
+
+ </p>
+ A hook entry has a 'name' and a 'script' property.
+ <ul>
+ <li>The 'name' contains the extension point, the hook name.</li>
+ <li>The 'script' contains the script relative to the hooks file, with the
+ exported hook function.</li>
+ </ul>
+ <p/>
+ Order post-processing APIs (gillian) are now inactive by default and will throw
+ an exception if accessed. Activation needs preliminary approval by Product Management.
+ Please contact support in this case. Existing customers using these APIs are not
+ affected by this change and can use the APIs until further notice.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointAfterStatusChange_DetailAnchor"></a>extensionPointAfterStatusChange
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.afterStatusChange"
+                        <div class="description">The extension point name dw.order.shippingorder.afterStatusChange.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor"></a>extensionPointChangeStatus
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.changeStatus"
+                        <div class="description">The extension point name dw.order.shippingorder.changeStatus.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointCreateShippingOrders_DetailAnchor"></a>extensionPointCreateShippingOrders
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.createShippingOrders"
+                        <div class="description">The extension point name dw.order.shippingorder.createShippingOrders.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointNotifyStatusChange_DetailAnchor"></a>extensionPointNotifyStatusChange
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.notifyStatusChange"
+                        <div class="description">The extension point name dw.order.shippingorder.notifyStatusChange.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointPrepareCreateShippingOrders_DetailAnchor"></a>extensionPointPrepareCreateShippingOrders
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.prepareCreateShippingOrders"
+                        <div class="description">The extension point name
+ dw.order.shippingorder.prepareCreateShippingOrders.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor"></a>extensionPointResolveShippingOrder
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.resolveShippingOrder"
+                        <div class="description">The extension point name dw.order.shippingorder.resolveShippingOrder .</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderCancelled_DetailAnchor"></a>extensionPointShippingOrderCancelled
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.setShippingOrderCancelled"
+                        <div class="description">The extension point name dw.order.shippingorder.setShippingOrderCancelled.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderShipped_DetailAnchor"></a>extensionPointShippingOrderShipped
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.setShippingOrderShipped"
+                        <div class="description">The extension point name dw.order.shippingorder.setShippingOrderShipped.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderWarehouse_DetailAnchor"></a>extensionPointShippingOrderWarehouse
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.setShippingOrderWarehouse"
+                        <div class="description">The extension point name dw.order.shippingorder.setShippingOrderWarehouse.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor"></a>extensionPointUpdateShippingOrderItem
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.shippingorder.updateShippingOrderItem"
+                        <div class="description">The extension point name dw.order.shippingorder.updateShippingOrderItem.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_afterStatusChange_ShippingOrder_DetailAnchor"><span class="">afterStatusChange</span></a></span>(shippingOrder
+								 : 	
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">After Status change hook.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_changeStatus_ShippingOrder_ShippingOrderWO_DetailAnchor"><span class="">changeStatus</span></a></span>(shippingOrder
+								 : 	
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>, updateData
+								 : 	
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Change the status of a shipping order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_createShippingOrders_Order_DetailAnchor"><span class="">createShippingOrders</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called during shipping order creation for an order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_notifyStatusChange_ShippingOrder_DetailAnchor"><span class="">notifyStatusChange</span></a></span>(shippingOrder
+								 : 	
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Notify Status change hook.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_prepareCreateShippingOrders_Order_DetailAnchor"><span class="">prepareCreateShippingOrders</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called before shipping order creation for an order takes place.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_resolveShippingOrder_ShippingOrderWO_DetailAnchor"><span class="">resolveShippingOrder</span></a></span>(updateData
+								 : 	
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a></span>
+                    <div class="description">Resolve the shipping order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_setShippingOrderCancelled_ShippingOrderWO_DetailAnchor"><span class="">setShippingOrderCancelled</span></a></span>(updateData
+								 : 	
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a></span>
+                    <div class="description">Change the status of a shipping order to cancelled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_setShippingOrderShipped_ShippingOrderWO_DetailAnchor"><span class="">setShippingOrderShipped</span></a></span>(updateData
+								 : 	
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a></span>
+                    <div class="description">Change the status of a shipping order to shipped.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_setShippingOrderWarehouse_ShippingOrderWO_DetailAnchor"><span class="">setShippingOrderWarehouse</span></a></span>(updateData
+								 : 	
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+						: 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a></span>
+                    <div class="description">Change the status of a shipping order to warehouse.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_ShippingOrderHooks_updateShippingOrderItem_ShippingOrder_ShippingOrderItemWO_DetailAnchor"><span class="">updateShippingOrderItem</span></a></span>(shippingOrder
+								 : 	
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>, updateItem
+								 : 	
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrderItem.html" target="_blank"><span class="">ShippingOrderItem</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Updates the status of a shipping order item.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_afterStatusChange_ShippingOrder_DetailAnchor"></a>
+                    <div class="detailName 
+						">afterStatusChange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">afterStatusChange</span>(shippingOrder
+								 : 
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">After Status change hook.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointAfterStatusChange_DetailAnchor">extensionPointAfterStatusChange</a>.
+
+ The implementation of this hook is optional. If defined the hook is
+ called after <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a> or respectively after
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderShipped_DetailAnchor">extensionPointShippingOrderShipped</a>,
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderCancelled_DetailAnchor">extensionPointShippingOrderCancelled</a> or
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderWarehouse_DetailAnchor">extensionPointShippingOrderWarehouse</a>
+
+ Runs inside of a transaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingOrder</span>
+						 - 
+						<span class="parameterDesc">the shipping order to be updated</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resulting status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_changeStatus_ShippingOrder_ShippingOrderWO_DetailAnchor"></a>
+                    <div class="detailName 
+						">changeStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">changeStatus</span>(shippingOrder
+								 : 
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>, updateData
+								 : 
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Change the status of a shipping order.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a>.
+
+ Runs inside a transaction together with the hooks
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor">extensionPointResolveShippingOrder</a>
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor">extensionPointUpdateShippingOrderItem</a>.
+ <p>
+ Runs after the iteration over the input's items collection as the last
+ step in this transaction. The implementation of this hook is mandatory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingOrder</span>
+						 - 
+						<span class="parameterDesc">the shipping order to be updated</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">updateData</span>
+						 - 
+						<span class="parameterDesc">the input data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resulting status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_createShippingOrders_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">createShippingOrders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createShippingOrders</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called during shipping order creation for an order.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointCreateShippingOrders_DetailAnchor">extensionPointCreateShippingOrders</a>. It is responsible for
+ creating shipping orders and its items for the order. Preparations for
+ shipping order creation can be done before in hook
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointPrepareCreateShippingOrders_DetailAnchor">extensionPointPrepareCreateShippingOrders</a>.
+
+ Runs inside of a transaction. The implementation of this hook is
+ mandatory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order to create shipping orders for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resulting status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_notifyStatusChange_ShippingOrder_DetailAnchor"></a>
+                    <div class="detailName 
+						">notifyStatusChange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">notifyStatusChange</span>(shippingOrder
+								 : 
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Notify Status change hook.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointNotifyStatusChange_DetailAnchor">extensionPointNotifyStatusChange</a>.
+
+ The implementation of this hook is optional. If defined the hook is
+ called after <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointAfterStatusChange_DetailAnchor">extensionPointAfterStatusChange</a> as the last step
+ in the shipping order update process.
+
+ Runs outside of a transaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingOrder</span>
+						 - 
+						<span class="parameterDesc">the shipping order to be updated</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resulting status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_prepareCreateShippingOrders_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">prepareCreateShippingOrders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">prepareCreateShippingOrders</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called before shipping order creation for an order takes place. Typically
+ the hook is used to check the payment authorization status of the order.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointPrepareCreateShippingOrders_DetailAnchor">extensionPointPrepareCreateShippingOrders</a>.
+
+ Runs inside its own transaction. The value of the return status is used
+ to control whether hook <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_createShippingOrders_Order_DetailAnchor">createShippingOrders(Order)</a> is called
+ for the order or not. The implementation of this hook is mandatory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order to create shipping orders for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK successful preparation - continue with shipping order creation for this order.</li> <li>Status.ERROR failed preparation - skip shipping order creation for this order.</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_resolveShippingOrder_ShippingOrderWO_DetailAnchor"></a>
+                    <div class="detailName 
+						">resolveShippingOrder</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">resolveShippingOrder</span>(updateData
+								 : 
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>
+                    </div>
+                    <div class="description">Resolve the shipping order. Will be called as first step of the update.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor">extensionPointResolveShippingOrder</a>.
+
+ Runs inside a transaction together with the hooks
+
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor">extensionPointUpdateShippingOrderItem</a>
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a>. The implementation of this hook is
+ mandatory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">updateData</span>
+						 - 
+						<span class="parameterDesc">the input data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping order to update</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_setShippingOrderCancelled_ShippingOrderWO_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingOrderCancelled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingOrderCancelled</span>(updateData
+								 : 
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a>
+                    </div>
+                    <div class="description">Change the status of a shipping order to cancelled.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderCancelled_DetailAnchor">extensionPointShippingOrderCancelled</a>.
+
+ This is an optional hook that can be implemented to have full control
+ over status change to destination status Cancelled. The following hooks
+ will be skipped if an implementation for this hook is registered:
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor">extensionPointResolveShippingOrder</a>,
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor">extensionPointUpdateShippingOrderItem</a>,
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a>.
+
+ Runs inside of a transaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">updateData</span>
+						 - 
+						<span class="parameterDesc">the input data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the changed order or {code}null{code}</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_setShippingOrderShipped_ShippingOrderWO_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingOrderShipped</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingOrderShipped</span>(updateData
+								 : 
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a>
+                    </div>
+                    <div class="description">Change the status of a shipping order to shipped.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderShipped_DetailAnchor">extensionPointShippingOrderShipped</a>.
+
+ This is an optional hook that can be implemented to have full control
+ over status change to destination status Shipped. The following hooks
+ will be skipped if an implementation for this hook is registered:
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor">extensionPointResolveShippingOrder</a>
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor">extensionPointUpdateShippingOrderItem</a>,
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a>.
+
+ Runs inside of a transaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">updateData</span>
+						 - 
+						<span class="parameterDesc">the input data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the changed order or {code}null{code}</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_setShippingOrderWarehouse_ShippingOrderWO_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingOrderWarehouse</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingOrderWarehouse</span>(updateData
+								 : 
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrder.html" target="_blank"><span class="">ShippingOrder</span></a>)
+					 : 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a>
+                    </div>
+                    <div class="description">Change the status of a shipping order to warehouse.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointShippingOrderWarehouse_DetailAnchor">extensionPointShippingOrderWarehouse</a>.
+
+ This is an optional hook that can be implemented to have full control
+ over status change to destination status Warehouse. The following hooks
+ will be skipped if an implementation for this hook is registered:
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor">extensionPointResolveShippingOrder</a>,
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor">extensionPointUpdateShippingOrderItem</a>,
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a>.
+
+ Runs inside of a transaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">updateData</span>
+						 - 
+						<span class="parameterDesc">the input data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the changed order or {code}null{code}</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_ShippingOrderHooks_updateShippingOrderItem_ShippingOrder_ShippingOrderItemWO_DetailAnchor"></a>
+                    <div class="detailName 
+						">updateShippingOrderItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">updateShippingOrderItem</span>(shippingOrder
+								 : 
+								 
+								<a href="class_dw_order_ShippingOrder.html"><span class="">ShippingOrder</span></a>, updateItem
+								 : 
+								 
+								<a href="https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp?topic=%2Fhelp%2FOCAPI%2F24.7%2Fdata%2FDocuments%2FShippingOrderItem.html" target="_blank"><span class="">ShippingOrderItem</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Updates the status of a shipping order item.
+ <p>
+ The function is called by extension point
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointUpdateShippingOrderItem_DetailAnchor">extensionPointUpdateShippingOrderItem</a>.
+
+ Runs inside a transaction together with the hooks
+
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointResolveShippingOrder_DetailAnchor">extensionPointResolveShippingOrder</a>
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_extensionPointChangeStatus_DetailAnchor">extensionPointChangeStatus</a>. The implementation of this hook is
+ mandatory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingOrder</span>
+						 - 
+						<span class="parameterDesc">the shipping order</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">updateItem</span>
+						 - 
+						<span class="parameterDesc">the input data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resulting status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

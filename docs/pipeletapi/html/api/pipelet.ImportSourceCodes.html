@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet ImportSourceCodes</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet ImportSourceCodes</div>
+            <div class="topLevelDescription">Imports Source-Code Groups from the given ImportFile in the specified mode.
+<p/>The result of the import operation is represented by the Status 
+output property. The pipelet will return to the error connector if a process 
+error occurred when executing the import.  A process error is one which 
+prevents or interrupts the basic execution of the import.  An example of a 
+process error is when the specified import file does not exist on the file 
+system.  Client code should consult the Status object details to determine if 
+there were any problems importing the individual data within the import file.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ImpEx</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ImportFile</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Import file path.  This path must be relative to the 'src' subdirectory within the top-level IMPEX directory.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ImportMode</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Import mode.  Possible values are MERGE, UPDATE, DELETE, REPLACE.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorCode</span>
+					&nbsp;:&nbsp;
+					Integer
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Import status code.  Zero represents an import without process errors.  Any other value indicates an error.  This value will always be the same as the number after the "IMPEX-" prefix in Status.code.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorMsg</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status message associated with the status code.  This value will be the same as Status.message.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">LogFileName</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The name of the log file.  This file is located in the 'log' subdirectory of the IMPEX area.  This value will always be the same as the detail LogFileName in the returned Status object.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status object representing the result of the import operation.  The status property (Status.status) will be set to 0 if the import executed without any process errors or 1 otherwise.  The code property (Status.code) will be set to one of the following values:<br/>
+<br/>
+IMPEX-0   = The import completed without any process errors.<br/>
+IMPEX-100 = One or more input parameters given were null.<br/>
+IMPEX-103 = The given ImportFile does not exist.<br/>
+IMPEX-104 = The given ImportMode is not supported.<br/>
+IMPEX-105 = The path of the given ImportFile is invalid, e.g. the path cannot contain "../".<br/>
+IMPEX-120 = Not able to lock the required resource(s).<br/>
+IMPEX-121 = Not able to unlock the resource(s).<br/>
+IMPEX-130 = All XML parsing related errors will cause this error.  It could be malformed XML or a problem with the XML parser engine.<br/>
+IMPEX-170 = Encountered an internal fatal error.  Additional information is in the details of the Status object.<br/>
+IMPEX-171 = System IO error.<br/>
+IMPEX-172 = System file input stream close error.<br/>
+IMPEX-173 = System input parameter is invalid.<br/>
+<br/>
+The status object will always have the following detail:<br/>
+<br/>
+LogFileName = (String) The log file name in which the import logged all debug, warning, and error messages.<br/>
+<br/>
+If the import executed without any process errors, the status object will also contain the following details:<br/>
+<br/>
+DataErrorCount = (Integer) The number of data-related errors that occurred during the import.<br/>
+DataWarningCount = (Integer) The number of data-related warnings that occurred during the import.<br/>
+<br/>
+Client code should consult these details to determine whether there were any problems with the data in the import file and take appropriate action.  The values can be retrieved using the syntax:  "Status.details.DataErrorCount" and "Status.details.DataWarningCount"
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

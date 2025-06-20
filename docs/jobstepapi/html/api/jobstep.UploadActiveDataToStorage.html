@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        UploadActiveDataToStorage</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    UploadActiveDataToStorage</div>
+            <div class="topLevelDescription">Upload current site's active data to storage system.</div>
+            <div class="topLevelDescription">
+    
+     This step uploads active data from an old site to storage system during a site move if active data is required to migrate to the new site.
+
+     Before this step can run, put the old site in 'Maintenance' mode for at least 90 minutes. This lets the old site fully process active data before the migration happens.
+
+     When the job finishes, copy the storage folder name from the job log.
+ 
+  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">TargetRealm</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The 4-letter target realm where the Active Data is intended to be downloaded by the DownoadActiveDataFromStorage step.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Used when the migration finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Used when the migration failed. Check the dedicated job log file for the affected job execution for details.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

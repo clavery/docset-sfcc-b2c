@@ -1,0 +1,759 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class MediaFile</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.content.MediaFile">
+            <a name="dw.content.MediaFile"></a>
+            <div class="packageName">dw.content</div>
+            <div class="className
+					">	
+        	
+				Class MediaFile</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.content.MediaFile
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class represents references to media content (such as images)
+ located within Commerce Cloud Digital or on external systems.<p/>
+
+ Parameter <code>transform</code>:<p/>
+
+ Some methods allow the specification of image transformation parameters. Image
+ transformation is only performed if the Dynamic Imaging Service (DIS) is available
+ for the Commerce Cloud Digital instance, otherwise a standard static content URL
+ is returned. The to-be-transformed image needs to be hosted on Commerce Cloud
+ Digital.<p/>
+
+ Image transformation parameters are specified as JavaScript object literal. They
+ are translated into URL parameters. See <a href="https://help.salesforce.com/s/articleView?id=cc.b2c_creating_image_transformation_urls.htm">Create Image Transformation URLs.</a><p/>
+
+ <table>
+ <tr>
+     <th>Type of transformation</th>
+     <th>Parameters</th>
+     <th>Description</th>
+ </tr>
+ <tr>
+     <td>Scale an image</td>
+     <td>
+         <code>scaleWidth</code><br/>
+         <code>scaleHeight</code><br/>
+         <code>scaleMode</code>
+     </td>
+     <td>
+         The <code>scaleWidth</code> and <code>scaleHeight</code> parameters
+         are both integers; setting one of these parameters triggers a
+         scaling operation. If both are provided, the one that scales the
+         image less is used to calculate the scale factor. The image is then
+         automatically cropped accord to the second dimension, with a
+         centered position of the cropped area. If the parameter would scale
+         the image larger, only this operation is applied, if the image
+         remains within acceptable pixel dimensions.<p/>
+
+         Note: <code>scaleMode</code> can only be used in combination with <code>scaleHeight</code> and <code>scaleWidth</code>.<p/>
+
+         The <code>scaleMode</code> parameter can be set to <code>cut</code>
+         or <code>fit</code>. The default <code>scaleMode</code> is
+         <code>cut</code>, the behavior of which is explained above. If you
+         specify <code>fit</code> as the <code>scaleMode</code>, the system
+         scales the image into the given box of dimensions while keeping the
+         aspect ratio (possibly resulting in a smaller image in one
+         dimension).
+     </td>
+ </tr>
+ <tr>
+     <td>Overlay an image</td>
+     <td>
+         <code>imageX</code><br/>
+         <code>imageY</code><br/>
+         <code>imageURI</code>
+     </td>
+     <td>
+         The <code>imageX</code> and <code>imageY</code> parameters are both
+         integers. Valid values for these parameters are 0 or greater.<p/>
+
+         Supported formats are <code>png</code>, <code>jpg</code>, <code>jp2</code>, and
+         <code>gif</code>.<p/>
+
+         The <code>imageURI</code> parameter can be set to the absolute path
+         of the overlaid image. The value of the <code>imageURI</code>
+         parameter must be given in proper URL encoding, and it cannot exceed
+         400 characters in length. The path may include query string
+         parameters, which supports dynamically generating the overlaid image
+         itself through this service; that is, the overlaid image can itself
+         be a transformed image.<p/>
+
+         If the overlaid image extends over the primary image's boundaries,
+         the overlaid image is cropped so that it fits directly over the
+         primary image.
+     </td>
+ </tr>
+ <tr>
+     <td>Crop an image</td>
+     <td>
+         <code>cropX</code><br/>
+         <code>cropY</code><br/>
+         <code>cropWidth</code><br/>
+         <code>cropHeight</code>
+     </td>
+     <td>
+         The <code>cropX</code>, <code>cropY</code>, <code>cropWidth</code>,
+         <code>cropHeight</code> parameters are integers. All four parameters
+         must be specified to trigger a cropping operation.<p/>
+
+         Valid values for the <code>cropX</code> and <code>cropY</code>
+         parameters are 0 or greater. If the crop location defined by
+         <code>cropX</code> and <code>cropY</code> is outside the image area,
+         nothing is cropped.<p/>
+
+         Valid values for the <code>cropWidth</code> and
+         <code>cropHeight</code> parameters are 10 or greater. If the
+         <code>cropWidth</code> and <code>cropHeight</code> parameters
+         specify a size that is greater than the original image, the crop
+         area is reduced to the actual image area. If <code>cropWidth</code>
+         and <code>cropHeight</code> are 0 or less, no transformation is
+         applied.
+     </td>
+ </tr>
+ <tr>
+     <td>Format an image</td>
+     <td><code>format</code></td>
+     <td>
+         The <code>format</code> parameter specifies the target format of
+         image. Supported formats are <code>png</code>, <code>jpg</code>, <code>jp2</code>, and
+         <code>gif</code>. If no target format is specified, no format
+         conversion is performed.<p/>
+
+         The attribute value must reference the source image. Source image's
+         format is recognized by the file extension which must be
+         <code>tif</code>, <code>tiff</code>, <code>jpg</code>,
+         <code>jpeg</code>, <code>png</code>, or <code>gif</code>.<p/>
+
+         In the generated URL the file extension of the target format is used
+         in the URL path. This is to make sure the image is loaded from an
+         URL with a matching file extension. The source format is provided as
+         URL parameter.
+     </td>
+ </tr>
+ <tr>
+     <td>Adjust image compression quality</td>
+     <td><code>quality</code></td>
+     <td>
+         The <code>quality</code> parameter specifies a quality setting for <code>jpg</code> and <code>jp2</code> images,
+         and specifies the compression level for <code>png</code> images.<p/>
+
+         For <code>jpg</code> and <code>jp2</code> images, you can set values from 1–100 for the highest quality.
+         The default quality is 80. If you're not changing the default quality, you don't need to pass in a value.<p/>
+
+         For <code>png</code> images, the quality setting has no effect on the appearance of the <code>png</code>, since the compression is always lossless.
+         Instead you can use the quality setting to set the zlib compression level and filter-type for PNG images.
+         The tens digit sets the zlib compression level(1-9). The ones digit sets the filter type.<p/>
+
+         If the <code>png</code> setting is not present or set to 0, it uses a default value of 75.
+         If this setting is set to 100, it actually equals the quality setting 90.
+     </td>
+ </tr>
+ <tr>
+     <td>Adjust Metadata stripping</td>
+     <td><code>strip</code></td>
+     <td>
+         The <code>strip</code> parameter specifies if metadata like EXIF and color profiles is
+         stripped from the image during transformation.<p/>
+
+         Valid values for the <code>strip</code> parameter are between <code>true</code> and <code>false</code>.
+         The default is <code>true</code>
+     </td>
+ </tr>
+ <tr>
+     <td>Change background color</td>
+     <td><code>bgcolor(color) or bgcolor(color+alpha)</code></td>
+     <td>
+         The <code>bgcolor</code> parameter specifies the background color for images that support transparency
+         as well as JPEG images when being converted from a format that supports transparency.
+         Optionally, alpha setting for PNG images are also supported.<p/>
+
+         <code>bgcolor</code> expects a 6 digit hexadecimal value of RGB with an optional
+         two hexadecimal characters representing alpha value that determines transparency.<p/>
+
+         FF0000 = Red<p/>
+
+         FF000077 = Red with 50% transparency<p/>
+
+         Alpha values are optional. When the alpha value is omitted, the resulting color is opaque.
+         Alpha values are only valid when the image output format is PNG.
+     </td>
+ </tr>
+ </table>
+
+ Example:<p/>
+    The following code<p/>
+    <code>var url = product.getImage('thumbnail', 0).getImageURL({scaleWidth: 100, format: 'jpg'});</code><p/>
+    will produce an image transformation URL like<p/>
+    <code>http://&lt;image server host name&gt;/.../on/demandware.static/.../&lt;path to image&gt;/image.jpg?sw=100&sfrm=png</code>.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>absURL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An absolute URL to the referenced media file. The
+ protocol for the reference is the current protocol of the current
+ HTTP request.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>alt
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The alternative text assigned to the media file in current
+ requests locale. If no alternative text was assigned or if no defaulting
+ rule was defined, the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>httpsURL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An absolute URL to the referenced media file. The
+ protocol is https.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>httpURL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An absolute URL to the referenced media file. The
+ protocol is http.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>title
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The title assigned to the media file in current requests locale.
+ If no title was assigned or if no defaulting rule was defined, the
+ method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>url
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An URL to the referenced media file. The
+ returned URL is a relative URL.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_content_MediaFile.html#dw_content_MediaFile_getURL_DetailAnchor">getURL()</a> instead.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>URL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_URL.html"><span class="">URL</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An URL to the referenced media file. The
+ returned URL is a relative URL.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>viewType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The view type annotation for the media file. The method returns
+ null, if the media file has no view type annotation.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getAbsImageURL_Object_DetailAnchor"><span class="">getAbsImageURL</span></a></span>(transform
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL to the referenced image file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getAbsURL_DetailAnchor"><span class="">getAbsURL</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an absolute URL to the referenced media file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getAlt_DetailAnchor"><span class="">getAlt</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the alternative text assigned to the media file in current requests locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getHttpImageURL_Object_DetailAnchor"><span class="">getHttpImageURL</span></a></span>(transform
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL to the referenced image file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getHttpsImageURL_Object_DetailAnchor"><span class="">getHttpsImageURL</span></a></span>(transform
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL to the referenced image file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getHttpsURL_DetailAnchor"><span class="">getHttpsURL</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an absolute URL to the referenced media file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getHttpURL_DetailAnchor"><span class="">getHttpURL</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an absolute URL to the referenced media file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getImageURL_Object_DetailAnchor"><span class="">getImageURL</span></a></span>(transform
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL to the referenced image file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getTitle_DetailAnchor"><span class="">getTitle</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the title assigned to the media file in current requests locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_content_MediaFile_getUrl_DetailAnchor"><span class="">getUrl</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL to the referenced media file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getURL_DetailAnchor"><span class="">getURL</span></a></span>()
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL to the referenced media file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_content_MediaFile_getViewType_DetailAnchor"><span class="">getViewType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the view type annotation for the media file.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getAbsImageURL_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAbsImageURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAbsImageURL</span>(transform
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL to the referenced image file. Image transformation
+ can be applied to the image. The protocol for the reference is the
+ current protocol of the current HTTP request.
+
+ Image transformation can only be applied to images that are hosted on
+ Commerce Cloud Digital.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transform</span>
+						 - 
+						<span class="parameterDesc">Object with transformation parameters (see class header)</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an absolute URL to the referenced media file. The protocol for the reference is the current protocol of the current HTTP request. If the referenced media file is hosted externally, an URL to the external file is returned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getAbsURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAbsURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAbsURL</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an absolute URL to the referenced media file. The
+ protocol for the reference is the current protocol of the current
+ HTTP request.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an absolute URL to the referenced media file. The protocol for the reference is the current protocol of the current HTTP request.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getAlt_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAlt</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAlt</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the alternative text assigned to the media file in current
+ requests locale. If no alternative text was assigned or if no defaulting
+ rule was defined, the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the alternative text annotated to this media file or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getHttpImageURL_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHttpImageURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHttpImageURL</span>(transform
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL to the referenced image file. Image transformation
+ can be applied to the image. The protocol is http.
+
+ Image transformation can only be applied to images that are hosted on
+ Commerce Cloud Digital.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transform</span>
+						 - 
+						<span class="parameterDesc">Object with transformation parameters (see class header)</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an absolute URL to the referenced media file. The protocol is http. If the referenced media file is hosted externally, an URL to the external file is returned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getHttpsImageURL_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHttpsImageURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHttpsImageURL</span>(transform
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL to the referenced image file. Image transformation
+ can be applied to the image. The protocol is https.
+
+ Image transformation can only be applied to images that are hosted on
+ Commerce Cloud Digital.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transform</span>
+						 - 
+						<span class="parameterDesc">Object with transformation parameters (see class header)</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an absolute URL to the referenced media file. The protocol is https. If the referenced media file is hosted externally, an URL to the external file is returned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getHttpsURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHttpsURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHttpsURL</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an absolute URL to the referenced media file. The
+ protocol is https.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an absolute URL to the referenced media file. The protocol is https.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getHttpURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHttpURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHttpURL</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an absolute URL to the referenced media file. The
+ protocol is http.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an absolute URL to the referenced media file. The protocol is http.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getImageURL_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImageURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImageURL</span>(transform
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL to the referenced image file. Image transformation
+ can be applied to the image.
+
+ Image transformation can only be applied to images that are hosted on
+ Commerce Cloud Digital.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transform</span>
+						 - 
+						<span class="parameterDesc">Object with transformation parameters (see class header)</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL to the referenced media file. The returned URL is a relative URL. If the referenced media file is hosted externally, an URL to the external file is returned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getTitle_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTitle</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the title assigned to the media file in current requests locale.
+ If no title was assigned or if no defaulting rule was defined, the
+ method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the title annotated to this media file or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getUrl_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getUrl</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getUrl</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL to the referenced media file. The
+ returned URL is a relative URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_content_MediaFile.html#dw_content_MediaFile_getURL_DetailAnchor">getURL()</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL to the referenced media file. The returned URL is a relative URL.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getURL</span>()
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL to the referenced media file. The
+ returned URL is a relative URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL to the referenced media file. The returned URL is a relative URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_content_MediaFile_getViewType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getViewType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getViewType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the view type annotation for the media file. The method returns
+ null, if the media file has no view type annotation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the view type annotated to this media file or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

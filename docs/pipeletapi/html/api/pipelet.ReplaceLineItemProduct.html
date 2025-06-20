@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet ReplaceLineItemProduct</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet ReplaceLineItemProduct</div>
+            <div class="topLevelDescription">Replaces the current product of the specified product line item with the specified product.
+The following rules apply:
+- Preserve line item attributes UUID, Quantity, CategoryID, ExternalLineItemStatus, ExternalLineItemText, isGift, GiftMessage, Position, Parent, Shipment
+- Replace product-specific attributes ProductID, ProductName, MinOrderQuantity, StepQuantity, ManufacturerName, ManufacturerSKU
+- Remove all price adjustments related to the product line item
+- Remove the shipping line item related to the product line item
+- Remove all bundled line items of current product, and add bundled line items if new product is a bundle
+- Remove all option line items of current product, and add option line items if new product is an option product; use default option selections
+- Set all price attributes to N/A
+- Preserve all custom attributes of line item, but override order-required attributes with values from new product
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductLineItem</span>
+					&nbsp;:&nbsp;
+					ProductLineItem
+							(Required)
+						</span>
+                    <div class="description">
+The product line item.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">NewProduct</span>
+					&nbsp;:&nbsp;
+					Product
+							(Required)
+						</span>
+                    <div class="description">
+The new product.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Quantity</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+The quantity of the product line item after replacement.  If not passed, the current quantity is preserved.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductOptionModel</span>
+					&nbsp;:&nbsp;
+					ProductOptionModel
+							(Optional)
+						</span>
+                    <div class="description">
+The option model of the product that is to be added to the basket.  If not passed, default option selections of new product are used.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

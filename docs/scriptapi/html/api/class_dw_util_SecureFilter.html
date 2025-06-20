@@ -1,0 +1,952 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SecureFilter</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.util.SecureFilter">
+            <a name="dw.util.SecureFilter"></a>
+            <div class="packageName">dw.util</div>
+            <div class="className
+					">	
+        	
+				Class SecureFilter</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.util.SecureFilter
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">SecureFilter contains many methods for manipulating untrusted data Strings
+ into RFC-Compliant Strings for a given context by removing "bad" data from
+ the untrusted data.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forHtmlContent_String_DetailAnchor"><span class="">forHtmlContent</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in a general HTML context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forHtmlInDoubleQuoteAttribute_String_DetailAnchor"><span class="">forHtmlInDoubleQuoteAttribute</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in an HTML Attribute guarded by a double quote.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forHtmlInSingleQuoteAttribute_String_DetailAnchor"><span class="">forHtmlInSingleQuoteAttribute</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in an HTML Attribute guarded by a single quote.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forHtmlUnquotedAttribute_String_DetailAnchor"><span class="">forHtmlUnquotedAttribute</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in an HTML Attribute left unguarded.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forJavaScriptInAttribute_String_DetailAnchor"><span class="">forJavaScriptInAttribute</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in JavaScript inside an HTML attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forJavaScriptInBlock_String_DetailAnchor"><span class="">forJavaScriptInBlock</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in JavaScript inside an HTML block.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forJavaScriptInHTML_String_DetailAnchor"><span class="">forJavaScriptInHTML</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in JavaScript inside an HTML context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forJavaScriptInSource_String_DetailAnchor"><span class="">forJavaScriptInSource</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in JavaScript inside a JavaScript source file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forJSONValue_String_DetailAnchor"><span class="">forJSONValue</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in a JSON Object Value to prevent escaping into a trusted context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forUriComponent_String_DetailAnchor"><span class="">forUriComponent</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use as a component of a URI.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forUriComponentStrict_String_DetailAnchor"><span class="">forUriComponentStrict</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use as a component of a URI.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forXmlCommentContent_String_DetailAnchor"><span class="">forXmlCommentContent</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in an XML comments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forXmlContent_String_DetailAnchor"><span class="">forXmlContent</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in a general XML context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forXmlInDoubleQuoteAttribute_String_DetailAnchor"><span class="">forXmlInDoubleQuoteAttribute</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in an XML attribute guarded by a double quote.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_SecureFilter_forXmlInSingleQuoteAttribute_String_DetailAnchor"><span class="">forXmlInSingleQuoteAttribute</span></a></span>(input
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description"><p> Filters illegal characters from a given input for use in an XML attribute guarded by a single quote.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forHtmlContent_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forHtmlContent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forHtmlContent</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in a general HTML
+ context. E.g. text content and text attributes. This method takes the
+ UNION of allowed characters among all contexts, so may be more
+ imprecise that the more specific contexts. Generally, this method is
+ preferred unless you specifically understand the context in which
+ untrusted data will be output.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;div&gt;${SecureFilter.forHtmlContent(unsafeData)}&lt;/div&gt;
+
+ &lt;input value="${SecureFilter.forHtmlContent(unsafeData)}" /&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forHtmlInDoubleQuoteAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forHtmlInDoubleQuoteAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forHtmlInDoubleQuoteAttribute</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in an HTML
+ Attribute guarded by a double quote. This method is preferred if you
+ understand exactly how the output of this will be used in the HTML
+ document.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;div id="${SecureFilter.forHtmlInDoubleQuoteAttribute(unsafeData)}"&gt;&lt;/div&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forHtmlInSingleQuoteAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forHtmlInSingleQuoteAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forHtmlInSingleQuoteAttribute</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in an HTML
+ Attribute guarded by a single quote. This method is preferred if you
+ understand exactly how the output of this will be used in the HTML
+ document.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;div id='${SecureFilter.forHtmlInSingleQuoteAttribute(unsafeData)}'&gt;&lt;/div&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filterd, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forHtmlUnquotedAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forHtmlUnquotedAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forHtmlUnquotedAttribute</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in an HTML
+ Attribute left unguarded. This method is preferred if you understand
+ exactly how the output of this will be used in the HTML document.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;div id=${SecureFilter.forHtmlUnquotedAttribute(unsafeData)}&gt;&lt;/div&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forJavaScriptInAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forJavaScriptInAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forJavaScriptInAttribute</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in JavaScript
+ inside an HTML attribute. This method is preferred if you understand
+ exactly how the output of the will be used in the page
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;button onclick="alert('${SecureFilter.forJavaScriptInAttribute(unsafeData)}');"&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forJavaScriptInBlock_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forJavaScriptInBlock</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forJavaScriptInBlock</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in JavaScript
+ inside an HTML block. This method is preferred if you understand
+ exactly how the output of the will be used in the page
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;script type="text/javascript"&gt;
+     var data = "${SecureFilter.forJavaScriptInBlock(unsafeData)}";
+ &lt;/script&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forJavaScriptInHTML_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forJavaScriptInHTML</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forJavaScriptInHTML</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in JavaScript
+ inside an HTML context. This method takes the UNION of allowed
+ characters among the other contexts, so may be more imprecise that the
+ more specific contexts. Generally, this method is preferred unless you
+ specifically understand the context in which untrusted data will be
+ output.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;script type="text/javascript"&gt;
+     var data = "${SecureFilter.forJavaScriptInHTML(unsafeData)}";
+ &lt;/script&gt;
+
+ &lt;button onclick="alert('${SecureFilter.forJavaScriptInHTML(unsafeData)}');"&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forJavaScriptInSource_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forJavaScriptInSource</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forJavaScriptInSource</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in JavaScript
+ inside a JavaScript source file. This method is preferred if you
+ understand exactly how the output of the will be used in the page
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;...inside foobar.js...&gt;
+ var data = "${SecureFilter.forJavaScriptInSource(unsafeData)}";
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forJSONValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forJSONValue</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forJSONValue</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in a JSON Object
+ Value to prevent escaping into a trusted context.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ var json = {"trusted_data" : SecureFilter.forJSONValue(unsafeData)};
+ return JSON.stringify(json);
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">ed input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forUriComponent_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forUriComponent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forUriComponent</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use as a component
+ of a URI. This is equivalent to javascript's filterURIComponent and
+ does a realistic job of encoding.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;a href="http://host.com?value=${SecureFilter.forUriComponent(unsafeData)}"/&gt;
+ </pre>
+
+ <b>Allows:</b>
+ <pre>A-Z, a-z, 0-9, -, _, ., ~, !, *, ', (, )</pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forUriComponentStrict_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forUriComponentStrict</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forUriComponentStrict</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use as a component
+ of a URI. This is a strict filter and fully complies with RFC3986.
+ </p>
+
+ <b>Example Usage:</b>
+ <pre>
+ &lt;a href="http://host.com?value=${SecureFilter.forUriComponentStrict(unsafeData)}"/&gt;
+ </pre>
+
+ <b>Allows:</b>
+ <pre>A-Z, a-z, 0-9, -, _, ., ~</pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forXmlCommentContent_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forXmlCommentContent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forXmlCommentContent</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in an XML
+ comments. This method is preferred if you understand the context in
+ which untrusted data will be output.
+ </p>
+
+ <b>Note: It is recommended that you use a real parser, as this method
+ can be misused, but is left here if a parser is unavailable to you</b>
+ <br>
+ <b>Example Usage:</b>
+ <pre>
+ &lt;!-- ${SecureFilter.forXmlCommentContent(unsafeData)} --&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forXmlContent_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forXmlContent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forXmlContent</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in a general XML
+ context. E.g. text content and text attributes. This method takes the
+ UNION of allowed characters between the other contexts, so may be more
+ imprecise that the more specific contexts. Generally, this method is
+ preferred unless you specifically understand the context in which
+ untrusted data will be output.
+ </p>
+
+ <b>Note: It is recommended that you use a real parser, as this method
+ can be misused, but is left here if a parser is unavailable to you</b>
+ <br>
+ <b>Example Usage:</b>
+ <pre>
+ &lt;foo&gt;${SecureFilter.forXmlContent(unsafeData)}&lt;/foo&gt;
+
+ &lt;bar attr="${SecureFilter.forXmlContent(unsafeData)}"&gt;&lt;/bar&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forXmlInDoubleQuoteAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forXmlInDoubleQuoteAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forXmlInDoubleQuoteAttribute</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in an XML
+ attribute guarded by a double quote. This method is preferred if you
+ understand the context in which untrusted data will be output.
+ </p>
+
+ <b>Note: It is recommended that you use a real parser, as this method
+ can be misused, but is left here if a parser is unavailable to you</b>
+ <br>
+ <b>Example Usage:</b>
+ <pre>
+ &lt;bar attr="${SecureFilter.forXmlInDoubleQuoteAttribute(unsafeData)}"&gt;&lt;/bar&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_SecureFilter_forXmlInSingleQuoteAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">forXmlInSingleQuoteAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">forXmlInSingleQuoteAttribute</span>(input
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description"><p>
+ Filters illegal characters from a given input for use in an XML
+ attribute guarded by a single quote. This method is preferred if you
+ understand the context in which untrusted data will be output.
+ </p>
+
+ <b>Note: It is recommended that you use a real parser, as this method
+ can be misused, but is left here if a parser is unavailable to you</b>
+ <br>
+ <b>Example Usage:</b>
+ <pre>
+ &lt;bar attr='${SecureFilter.forXmlInSingleQuoteAttribute(unsafeData)}'&gt;&lt;/bar&gt;
+ </pre>
+
+ <b>Flow:</b>
+ <ul>
+ <li>Allow AlphaNumerics and some Special characters</li>
+ <li>Remove all other characters</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">input</span>
+						 - 
+						<span class="parameterDesc">untrusted input to be filtered, if necessary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a properly filtered string for the given input</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

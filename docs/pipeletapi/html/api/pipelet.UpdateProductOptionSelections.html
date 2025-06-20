@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet UpdateProductOptionSelections</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet UpdateProductOptionSelections</div>
+            <div class="topLevelDescription">The purpose of this pipelet is to process option value selections, and calculate and return the ProductOptionModels for one or multiple products.
+Option value selections must be specified as HTTP parameters in the following form: {prefix_}{pid}_optionID={optionValueID}. A custom prefix can be set using the 'CustomPrefix" parameter. Otherwise, the default prefix 'dwopt_' is used.
+{pid} is the product id. Example: dwopt_PN00049_memory=2GB.
+
+For each product specified as {pid}, a ProductOptionModel instance is created and returned as an element of the 'ProductOptionModels' hashmap output parameter. The pipelet validates both option id and option value id and selects the option in the related ProductOptionModel instance. If an option is not specified as HTTP parameter, or the specified optionValueID is invalid, the default option value of this option is selected. Invalid optionIDs are silently ignored.
+
+The pipelet returns a map of ProductOptionModels with the product instance as the key and the ProductOptionModel as the value. 
+
+For compatibility reasons, the pipelet does still accept an individual product instance as input parameter. If specified, the pipelet returns the ProductOptionModel for this product as 'ProductOptionModel' and also as element of the 'ProductOptionModels' hashmap parameter.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Catalog</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Product</span>
+					&nbsp;:&nbsp;
+					Product
+							(Optional)
+						</span>
+                    <div class="description">
+An optional product instance for which the ProductOptionModel should be updated.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomFormPrefix</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+By default, the pipelet processes form values with the prefix 'dwopt_'. This parameter allows you to specify a custom prefix. This can be useful to process multiple product configuration on one page. In this case, the pipelet could be executed in a loop, whereby the custom prefix could dynamically be build based on the product sku.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductOptionModel</span>
+					&nbsp;:&nbsp;
+					ProductOptionModel
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The updated ProductOptionModel for an individual product instance if it specified.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductOptionModels</span>
+					&nbsp;:&nbsp;
+					Map
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+A map of updated ProductOptionModels with product as key.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

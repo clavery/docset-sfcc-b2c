@@ -1,0 +1,1471 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class WSUtil</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.ws.WSUtil">
+            <a name="dw.ws.WSUtil"></a>
+            <div class="packageName">dw.ws</div>
+            <div class="className
+					">	
+        	
+				Class WSUtil</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.ws.WSUtil
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">A utility class for performing SOAP-based operations for Web Services
+ for use with <a href="class_dw_ws_WebReference2.html">WebReference2</a>. This class provides
+ methods for setting SOAP headers and a set of constants representing the
+ well-known supported header names. You also use this class to set connection and request
+ timeout values for Web Service calls.</div>
+                    <div class="subclasses"></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_KEY_ID_TYPE_DIRECT_REFERENCE_DetailAnchor"></a>KEY_ID_TYPE_DIRECT_REFERENCE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"DirectReference"
+                        <div class="description">This key identifier method is used when the X.509 Certificate is included in the message.
+ The certificate is Base-64 encoded and included in the request via a BinarySecurityToken element</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor">WS_ENC_KEY_ID</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_SIG_KEY_ID_DetailAnchor">WS_SIG_KEY_ID</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_KEY_ID_TYPE_ENC_KEY_SHA1_DetailAnchor"></a>KEY_ID_TYPE_ENC_KEY_SHA1
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"EncryptedKeySHA1"
+                        <div class="description">This Key Identifier method only applies for Encryption. Unlike the previous methods
+ it refers to the way the EncryptedData references the EncryptedKey Element,
+ rather than the way the EncryptedKey Element refers to the public key.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor">WS_ENC_KEY_ID</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_KEY_ID_TYPE_ISSUE_SERIAL_DetailAnchor"></a>KEY_ID_TYPE_ISSUE_SERIAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"IssuerSerial"
+                        <div class="description">This key identifier method means that the Issuer Name and Serial Number of a X.509
+ Certificate is included directly in the KeyInfo Element.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor">WS_ENC_KEY_ID</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_SIG_KEY_ID_DetailAnchor">WS_SIG_KEY_ID</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_KEY_ID_TYPE_SKI_IDENTIFIER_DetailAnchor"></a>KEY_ID_TYPE_SKI_IDENTIFIER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"SKIKeyIdentifier"
+                        <div class="description">This Key Identifier method refers to a Certificate via a Base-64 encoding of the
+ Subject Key Identifier.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor">WS_ENC_KEY_ID</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_SIG_KEY_ID_DetailAnchor">WS_SIG_KEY_ID</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_KEY_ID_TYPE_THUMBPRINT_DetailAnchor"></a>KEY_ID_TYPE_THUMBPRINT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Thumbprint"
+                        <div class="description">This Key Identifier method refers to the Certificate via a SHA-1 Thumbprint.
+ The certificate may or may not be included in the request.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor">WS_ENC_KEY_ID</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_SIG_KEY_ID_DetailAnchor">WS_SIG_KEY_ID</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_KEY_ID_TYPE_X509_KEY_IDENTIFIER_DetailAnchor"></a>KEY_ID_TYPE_X509_KEY_IDENTIFIER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"X509KeyIdentifier"
+                        <div class="description">This key identifier method is similar to KEY_ID_TYPE_DIRECT_REFERENCE, in that the certificate is
+ included in the request. However, instead of referring to a certificate, the certificate is
+ included directly in the KeyInfo element.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor">WS_ENC_KEY_ID</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_WS_SIG_KEY_ID_DetailAnchor">WS_SIG_KEY_ID</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ACTION_DetailAnchor"></a>WS_ACTION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"action"
+                        <div class="description">WS-Security action property name.
+ Allowed property values are WS_NO_SECURITY, WS_TIMESTAMP, WS_ENCRYPT,
+ WS_SIGNATURE, WS_USERNAME_TOKEN or a space separated list of these values.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENC_KEY_ID_DetailAnchor"></a>WS_ENC_KEY_ID
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"encryptionKeyIdentifier"
+                        <div class="description">Defines which key identifier type to use for encryption. Permissible
+ values are:
+ <ul>
+ <li><code>KEY_ID_TYPE_ISSUE_SERIAL</code>  (default value)</li>
+ <li><code>KEY_ID_TYPE_DIRECT_REFERENCE</code></li>
+ <li><code>KEY_ID_TYPE_X509_KEY_IDENTIFIER</code></li>
+ <li><code>KEY_ID_TYPE_THUMBPRINT</code></li>
+ <li><code>KEY_ID_TYPE_SKI_IDENTIFIER</code></li>
+ <li><code>KEY_ID_TYPE_ENC_KEY_SHA1</code></li>
+ </ul></div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_ISSUE_SERIAL_DetailAnchor">KEY_ID_TYPE_ISSUE_SERIAL</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_DIRECT_REFERENCE_DetailAnchor">KEY_ID_TYPE_DIRECT_REFERENCE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_X509_KEY_IDENTIFIER_DetailAnchor">KEY_ID_TYPE_X509_KEY_IDENTIFIER</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_THUMBPRINT_DetailAnchor">KEY_ID_TYPE_THUMBPRINT</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_SKI_IDENTIFIER_DetailAnchor">KEY_ID_TYPE_SKI_IDENTIFIER</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_ENC_KEY_SHA1_DetailAnchor">KEY_ID_TYPE_ENC_KEY_SHA1</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENC_PROP_KEYSTORE_ALIAS_DetailAnchor"></a>WS_ENC_PROP_KEYSTORE_ALIAS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystoreAlias"
+                        <div class="description">WS-Security Encryption: The encryption and decryption keystore alias name</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENC_PROP_KEYSTORE_PW_DetailAnchor"></a>WS_ENC_PROP_KEYSTORE_PW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystorePassword"
+                        <div class="description">WS-Security Encryption: The encryption and decryption keystore password</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENC_PROP_KEYSTORE_TYPE_DetailAnchor"></a>WS_ENC_PROP_KEYSTORE_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystoreType"
+                        <div class="description">WS-Security Encryption: The encryption/decryption keystore type ( jks or pkcs12 ),
+                         default is jks.
+ Note: The keystore file has the basename of the WSDL file and the
+ file extension based on the keystore type (e.g. MyService.jks).
+ The keystore file has to be placed in the same cartridge directory
+ as the WSDL file.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENCRYPT_DetailAnchor"></a>WS_ENCRYPT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Encrypt"
+                        <div class="description">WS-Security action: Encrypt the message.
+ The encryption specific parameters define how to encrypt.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENCRYPTION_PARTS_DetailAnchor"></a>WS_ENCRYPTION_PARTS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"encryptionParts"
+                        <div class="description">WS-Security Encryption: Defines which parts of the request shall be encrypted.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_ENCRYPTION_USER_DetailAnchor"></a>WS_ENCRYPTION_USER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"encryptionUser"
+                        <div class="description">WS-Security Encryption: The user's name for encryption.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_NO_SECURITY_DetailAnchor"></a>WS_NO_SECURITY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NoSecurity"
+                        <div class="description">WS-Security action: No security.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_PASSWORD_TYPE_DetailAnchor"></a>WS_PASSWORD_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"passwordType"
+                        <div class="description">WS-Security password type: Parameter for UsernameToken action to define the encoding
+ of the password. Allowed values are PW_DIGEST or PW_TEXT.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_PW_DIGEST_DetailAnchor"></a>WS_PW_DIGEST
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PasswordDigest"
+                        <div class="description">WS-Security password type "digest": Use a password digest to send the password information.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_PW_TEXT_DetailAnchor"></a>WS_PW_TEXT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PasswordText"
+                        <div class="description">WS-Security password type "text": Send the password information in clear.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SECRETS_MAP_DetailAnchor"></a>WS_SECRETS_MAP
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SecretsMap"
+                        <div class="description">A secrets map with the username and password entries needed to create the password
+ callback object.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIG_DIGEST_ALGO_DetailAnchor"></a>WS_SIG_DIGEST_ALGO
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureDigestAlgorithm"
+                        <div class="description">WS-Security Signature: Defines which signature digest algorithm to use.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIG_KEY_ID_DetailAnchor"></a>WS_SIG_KEY_ID
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureKeyIdentifier"
+                        <div class="description">Defines which key identifier type to use for signature.
+
+ Permissible values are:
+ <ul>
+ <li><code>KEY_ID_TYPE_ISSUE_SERIAL</code></li>
+ <li><code>KEY_ID_TYPE_DIRECT_REFERENCE</code> (default value)</li>
+ <li><code>KEY_ID_TYPE_X509_KEY_ID_IDENTIFIER</code></li>
+ <li><code>KEY_ID_TYPE_THUMBPRINT</code></li>
+ <li><code>KEY_ID_TYPE_SKI_IDENTIFIER</code></li>
+ </ul></div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_ISSUE_SERIAL_DetailAnchor">KEY_ID_TYPE_ISSUE_SERIAL</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_DIRECT_REFERENCE_DetailAnchor">KEY_ID_TYPE_DIRECT_REFERENCE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_X509_KEY_IDENTIFIER_DetailAnchor">KEY_ID_TYPE_X509_KEY_IDENTIFIER</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_THUMBPRINT_DetailAnchor">KEY_ID_TYPE_THUMBPRINT</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_KEY_ID_TYPE_SKI_IDENTIFIER_DetailAnchor">KEY_ID_TYPE_SKI_IDENTIFIER</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIG_PROP_KEYSTORE_ALIAS_DetailAnchor"></a>WS_SIG_PROP_KEYSTORE_ALIAS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystoreAlias"
+                        <div class="description">WS-Security Signature: The signature keystore alias name.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIG_PROP_KEYSTORE_PW_DetailAnchor"></a>WS_SIG_PROP_KEYSTORE_PW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystorePassword"
+                        <div class="description">WS-Security Signature: The signature keystore password.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIG_PROP_KEYSTORE_TYPE_DetailAnchor"></a>WS_SIG_PROP_KEYSTORE_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystoreType"
+                        <div class="description">WS-Security: The signature keystore type ( jks or pkcs12 ), default is jks.
+ Note: The keystore file has the basename of the WSDL file and the
+ file extension based on the keystore type (e.g. MyService.jks).
+ The keystore file has to be placed in the same cartridge directory
+ as the WSDL file.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIGNATURE_DetailAnchor"></a>WS_SIGNATURE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Signature"
+                        <div class="description">WS-Security action: Sign the message.
+ The signature specific parameters define how to sign and which keys
+ to use.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIGNATURE_PARTS_DetailAnchor"></a>WS_SIGNATURE_PARTS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureParts"
+                        <div class="description">WS-Security Signature: Defines which parts of the request shall be signed.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_SIGNATURE_USER_DetailAnchor"></a>WS_SIGNATURE_USER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"signatureUser"
+                        <div class="description">WS-Security Signature: The user's name for signature.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_TIMESTAMP_DetailAnchor"></a>WS_TIMESTAMP
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Timestamp"
+                        <div class="description">WS-Security action: Add a timestamp to the security header.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_USER_DetailAnchor"></a>WS_USER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"user"
+                        <div class="description">WS-Security user name.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_ws_WSUtil_WS_USERNAME_TOKEN_DetailAnchor"></a>WS_USERNAME_TOKEN
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"UsernameToken"
+                        <div class="description">WS-Security action: Add a UsernameToken identification.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_ws_WSUtil_WSUtil_DetailAnchor"><span class="">WSUtil</span></a></span>()</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_addSOAPHeader_Object_Object_Boolean_String_DetailAnchor"><span class="">addSOAPHeader</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean, actor
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a header element to the SOAP Header.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_addSOAPHeader_Object_String_Boolean_String_DetailAnchor"><span class="">addSOAPHeader</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 	
+								 
+								boolean, actor
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a header element to the SOAP Header.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_clearSOAPHeaders_Object_DetailAnchor"><span class="">clearSOAPHeaders</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes all SOAP header elements from the port's request context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_createHolder_Object_DetailAnchor"><span class="">createHolder</span></a></span>(element
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Creates an javax.xml.ws.Holder instance that wraps the specified element.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_getConnectionTimeout_Object_DetailAnchor"><span class="">getConnectionTimeout</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the connection timeout value for the port.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_getHTTPRequestHeader_Object_String_DetailAnchor"><span class="">getHTTPRequestHeader</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTTP request header property value using the specified key.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_getProperty_String_Object_DetailAnchor"><span class="">getProperty</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the value of the SOAP request property using the specified key on a port returned from one of the WebReference2 getService methods.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_getRequestTimeout_Object_DetailAnchor"><span class="">getRequestTimeout</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the read timeout value for a request made on the specified port.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_getResponseProperty_String_Object_DetailAnchor"><span class="">getResponseProperty</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the property value using the specified key and on a port returned from one of the WebReference2 getService methods.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_isAllowChunking_Object_DetailAnchor"><span class="">isAllowChunking</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the HTTP request may be chunked, false otherwise</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setAllowChunking_Object_Boolean_DetailAnchor"><span class="">setAllowChunking</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, allow
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Indicate that HTTP chunked Transfer-Encoding may be used.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setConnectionTimeout_Number_Object_DetailAnchor"><span class="">setConnectionTimeout</span></a></span>(timeoutInMilliseconds
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the connection timeout for the port.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setHTTPRequestHeader_Object_String_String_DetailAnchor"><span class="">setHTTPRequestHeader</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets an HTTP request header property using the specified key and value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setProperty_String_Object_Object_DetailAnchor"><span class="">setProperty</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the SOAP request property using the specified key and value on a port returned from one of the WebReference2 getService() methods.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setRequestTimeout_Number_Object_DetailAnchor"><span class="">setRequestTimeout</span></a></span>(timeoutInMilliseconds
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the read timeout value for a request made on the specified port.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setUserNamePassword_String_String_Object_DetailAnchor"><span class="">setUserNamePassword</span></a></span>(userName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the user name and password to use with Basic authentication.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_ws_WSUtil_setWSSecurityConfig_Object_Object_Object_DetailAnchor"><span class="">setWSSecurityConfig</span></a></span>(port
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, requestConfigMap
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, responseConfigMap
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the WS-Security configuration for the request and response based on the constants defined (see above).</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_WSUtil_DetailAnchor"></a>
+                    <div class="detailName 
+						">WSUtil</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">WSUtil</span>()
+                    </div>
+                    <div class="description"></div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_addSOAPHeader_Object_Object_Boolean_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addSOAPHeader</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">addSOAPHeader</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, mustUnderstand
+								 : 
+								 
+								boolean, actor
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a header element to the SOAP Header. Each header element should be XML and
+ it should typically contain a namespace URI.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">the port.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">the header element XML. The XML should contain a namespace URI.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">directs target endpoint to validate payload.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">actor</span>
+						 - 
+						<span class="parameterDesc">an URI that identifies that intended recipient of this header element.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_addSOAPHeader_Object_String_Boolean_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addSOAPHeader</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">addSOAPHeader</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, xml
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, mustUnderstand
+								 : 
+								 
+								boolean, actor
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a header element to the SOAP Header. Each header element should be XML and
+ it should typically contain a namespace URI.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">the port.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">xml</span>
+						 - 
+						<span class="parameterDesc">the header element XML as a String. The XML should contain a namespace URI.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mustUnderstand</span>
+						 - 
+						<span class="parameterDesc">directs target endpoint to validate payload.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">actor</span>
+						 - 
+						<span class="parameterDesc">an URI that identifies that intended recipient of this header element.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_clearSOAPHeaders_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">clearSOAPHeaders</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">clearSOAPHeaders</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes all SOAP header elements from the port's request context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_createHolder_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">createHolder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createHolder</span>(element
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Creates an javax.xml.ws.Holder instance that wraps the specified element. When a WSDL operation is
+ defined to have an input and output message using the same type, the operation may require the operation's
+ object to be wrapped in a holder.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">element</span>
+						 - 
+						<span class="parameterDesc">the element to be wrapped in the Holder.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the holder.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_getConnectionTimeout_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getConnectionTimeout</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getConnectionTimeout</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the connection timeout value for the port.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the connection timeout value.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_getHTTPRequestHeader_Object_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHTTPRequestHeader</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getHTTPRequestHeader</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTTP request header property value using the specified key. Null is returned
+ if the key does not represent an HTTP header property.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the header property key.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTTP request header property value using the specified key or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_getProperty_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProperty</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getProperty</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the value of the SOAP request property using the specified key on a port
+ returned from one of the WebReference2 getService methods. The property
+ keys are defined as constants in <a href="class_dw_ws_Port.html">Port</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the key to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">the port on which the property is set.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the property using the specified key and port.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_getRequestTimeout_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRequestTimeout</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getRequestTimeout</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the read timeout value for a request made on the specified port.
+ If the request exceeds the timeout value, an error is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the request timeout value for the port.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_getResponseProperty_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getResponseProperty</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getResponseProperty</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the property value using the specified key and on a port returned from one of
+ the WebReference2 getService methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the key to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">the port on which the property is set</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the property using the specified key and port.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_isAllowChunking_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAllowChunking</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">isAllowChunking</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the HTTP request may be chunked, false otherwise</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns true if the HTTP request may be chunked and false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setAllowChunking_Object_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setAllowChunking</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setAllowChunking</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, allow
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Indicate that HTTP chunked Transfer-Encoding may be used.
+ <p>
+ The default behavior is true. If false then the request will not
+ be chunked and the Content-Length will always be sent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">allow</span>
+						 - 
+						<span class="parameterDesc">true to enable chunking, false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setConnectionTimeout_Number_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setConnectionTimeout</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setConnectionTimeout</span>(timeoutInMilliseconds
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the connection timeout for the port.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">timeoutInMilliseconds</span>
+						 - 
+						<span class="parameterDesc">the connection timeout.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setHTTPRequestHeader_Object_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setHTTPRequestHeader</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setHTTPRequestHeader</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets an HTTP request header property using the specified key and value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the header property key.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the header property value. If the value is null, the property identified by the key is removed from the HTTP request header.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setProperty_String_Object_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProperty</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setProperty</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the SOAP request property using the specified key and value on a port
+ returned from one of the WebReference2 getService() methods. The property
+ keys are defined as constants in <a href="class_dw_ws_Port.html">Port</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">the key to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">the port on which the property is set.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setRequestTimeout_Number_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRequestTimeout</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setRequestTimeout</span>(timeoutInMilliseconds
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the read timeout value for a request made on the specified port.
+ If the request exceeds the timeout value, an error is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">timeoutInMilliseconds</span>
+						 - 
+						<span class="parameterDesc">the timeout.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setUserNamePassword_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setUserNamePassword</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setUserNamePassword</span>(userName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the user name and password to use with Basic authentication. For stronger
+ authentication, use the <a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_setWSSecurityConfig_Object_Object_Object_DetailAnchor">setWSSecurityConfig(Object, Object, Object)</a> method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">userName</span>
+						 - 
+						<span class="parameterDesc">the user name.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">the password.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WSUtil.html#dw_ws_WSUtil_setWSSecurityConfig_Object_Object_Object_DetailAnchor">setWSSecurityConfig(Object, Object, Object)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_ws_WSUtil_setWSSecurityConfig_Object_Object_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setWSSecurityConfig</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setWSSecurityConfig</span>(port
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, requestConfigMap
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, responseConfigMap
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the WS-Security configuration for the request and response based on the
+ constants defined (see above).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">port</span>
+						 - 
+						<span class="parameterDesc">a port returned from one of the WebReference2 getService methods.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">requestConfigMap</span>
+						 - 
+						<span class="parameterDesc">the WS-Security request configuration.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">responseConfigMap</span>
+						 - 
+						<span class="parameterDesc">the WS-Security response configuration.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_WebReference2.html">WebReference2</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_ws_Port.html">Port</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

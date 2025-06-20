@@ -1,0 +1,257 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet ExportCatalog</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet ExportCatalog</div>
+            <div class="topLevelDescription">Exports selective information in the specified Catalog.  
+This pipelet offers fine grained control over the information which gets 
+exported through the ExportXXX input parameters.  Additionally, it offers 
+the ability to export a specific list of categories and/or products.  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ImpEx</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Catalog</span>
+					&nbsp;:&nbsp;
+					Catalog
+							(Required)
+						</span>
+                    <div class="description">
+The catalog to export.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportFile</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Export file path.  This path is relative to the 'src' subdirectory within the top-level IMPEX directory.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Categories</span>
+					&nbsp;:&nbsp;
+					Iterator
+							(Optional)
+						</span>
+                    <div class="description">
+Optional list of categories to export.  If this parameter is provided, only the categories in the list are exported.  If ExportSubCategories parameter is set to true, then all sub-categories of these categories are exported as well.  If this parameter is empty or is not given, then the following rules apply:
+1-all categories of the given catalog are exported.
+2-The ExportSubCategories parameter is ignored.
+Categories in the list which do not belong to the given catalog and duplicate categories are ignored.  Note that the exported categories determine which category assignments and possibly which products are exported.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportProducts</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether products are exported or not.  If this parameter is set to true and a specific list of products is passed in the Products parameter, then those products will be exported.  If this parameter is set to true but the Products parameter is not given, then only products bound to exported categories will be exported.  In both cases, only products that are owned by the given Catalog parameter are exported.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportCategories</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether categories should be exported or not.  This parameter is not entirely independent of other parameters because exported categories determine which category assignments and possibly which products are exported.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportSubCategories</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether to export sub-categories of the exported categories.  This parameter is only meaningful if a specific list of categories is passed in the Categories parameter. Otherwise all catalog categories are exported.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OverwriteExportFile</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Optional flag indicating whether to overwrite an existing export file or not.  true=overwrite (default), false=don't overwrite.  Default is true.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportCategoryAssignments</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether category assignments of the exported categories are exported or not.  Only category assignments that are owned by the given Catalog parameter and are bound to an exported category are exported.  Category assignments that are not owned by the given Catalog are ignored even if they are bounded to the exported categories.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportRecommendations</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether recommendations should be exported or not.  Only recommendations owned by the given catalog are exported.  Recommendations that are not owned by the given catalog are ignored even if they refer to exported products or categories.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportProductOptions</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether shared product options should be exported as part of the catalog export.  Product options that are defined in the scope of a single product will always be exported as part of the product itself.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportVariationAttributes</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Default=true.
+
+Parameter indicating whether shared variation attributes should be exported as part of the catalog export. Variation attributes that are defined in the scope of a single product will always be exported as part of the product itself.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Products</span>
+					&nbsp;:&nbsp;
+					Iterator
+							(Optional)
+						</span>
+                    <div class="description">
+Optional list of products to export.  If this parameter is provided, only the products in the list are exported.  If this parameter is empty or is not given, then only products bound to exported categories are exported.  In either case, products in the list which do not belong to the given catalog are ignored.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorCode</span>
+					&nbsp;:&nbsp;
+					Integer
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Export status code.  Zero represents an export without process errors.  Any other value indicates an error.  This value will always be the same as the number after the "IMPEX-" prefix in Status.code.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorMsg</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status message associated with the status code.  This value will be the same as Status.message.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">LogFileName</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The name of the log file.  This file is located in the 'log' subdirectory of the IMPEX area.  This value will always be the same as the detail LogFileName in the returned Status object.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status object representing the result of the export operation.  The status property (Status.status) will be set to 0 if the export executed without any process errors or 1 otherwise.  The code property (Status.code) will be set to one of the following values:<br/>
+<br/>
+IMPEX-100 = One or more input parameters given were null.<br/>
+IMPEX-102 = The given ExportFile exists and the OverwriteExportFile flag is false.<br/>
+IMPEX-105 = The path of the given ImportFile is invalid, e.g. the path cannot contain "../".<br/>
+IMPEX-150 = The 'Catalog' input parameter is missing.<br/>
+IMPEX-156 = There is no data to export.<br/>
+IMPEX-170 = Encountered an internal fatal error.  Additional information is in the details of the Status object.<br/>
+IMPEX-171 = System IO error.<br/>
+IMPEX-173 = System input parameter is invalid.<br/>
+<br/>
+The status object will always have the following detail:<br/>
+<br/>
+LogFileName = (String) The log file name in which the import logged all debug, warning, and error messages.<br/>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

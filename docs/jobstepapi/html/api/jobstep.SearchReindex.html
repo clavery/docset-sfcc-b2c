@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        SearchReindex</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    SearchReindex</div>
+            <div class="topLevelDescription">Rebuilds or updates search indexes. The number of search indexes that can be rebuilt or updated in parallel is globally limited. If the limit is exceeded, any rebuild or update action will be queued and executed once resources are available again.</div>
+            <div class="topLevelDescription"></div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Active data search index</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Reindex active data search indexes.</div>
+                    <div class="description">
+                                                Default Value:
+                                                false</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Content search index</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Reindex content search indexes.</div>
+                    <div class="description">
+                                                Default Value:
+                                                false</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Indexer Type</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">Determines whether to rebuild or update incrementally.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                Full Index Rebuild, Incremental Index Update</div>
+                    <div class="description">
+                                                Default Value:
+                                                Full Index Rebuild</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Product related search indexes</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Reindex product related search indexes which contain 'Product', 'Suggest' and 'Synonym' search indexes.</div>
+                    <div class="description">
+                                                Default Value:
+                                                false</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Used when search reindex finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Used when search reindex failed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

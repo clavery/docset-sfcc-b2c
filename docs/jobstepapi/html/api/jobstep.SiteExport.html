@@ -1,0 +1,290 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        SiteExport</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    SiteExport</div>
+            <div class="topLevelDescription">Exports site data.</div>
+            <div class="topLevelDescription">
+    
+ <p>
+ The DataUnits parameter defines which objects are included in the export. Its function is similar to the Data Units
+ to Export field on the Business Manager Site Import & Export page. The parameter requires a string in JSON format
+ that describes the data to be exported. Units not included in the JSON are not included in the export. The JSON
+ syntax and data unit names are validated when you add the step to the job. If an object name is not found, a log
+ message is written during run time. The following is an example of JSON for DataUnits.
+ </p>
+
+ <pre>
+ <code>
+ {
+   "export_data_units_configuration" : {
+   "sites" : {
+        "siteDEMO" : {
+            "active_data_feeds": true,
+            "cache_settings": true,
+            "campaigns_and_promotions": true,
+            "content": true,
+            "coupons": true,
+            "customer_cdn_settings": true,
+            "customer_groups": true,
+            "custom_objects": true,
+            "dynamic_file_resources": true,
+            "distributed_commerce_extensions": true,
+            "ocapi_settings": true,
+            "payment_methods": true,
+            "payment_processors": true,
+            "redirect_urls": true,
+            "search_settings": true,
+            "shipping": true,
+            "site_descriptor": true,
+            "site_preferences": true,
+            "static_dynamic_alias_mappings": true,
+            "sitemap_settings": true,
+            "slots": true,
+            "sorting_rules": true,
+            "source_codes": true,
+            "stores": true,
+            "tax": true,
+            "url_rules": true,
+            "gift_certificates": true
+        },
+        "otherSiteDEMO" : {
+            "all": true
+        }
+    },
+    "libraries" : {
+      "libDEMO" : true
+    },
+    "library_static_resources" : {
+      "siteDEMO" : true,
+      "sharedLibraryDemo" : true
+    },
+    "catalogs" : {
+      "catalogDEMO" : true
+    },
+    "catalog_static_resources" : {
+      "catalogStaticResDEMO" : true
+    },
+    "price_books" : {
+      "pricebookDEMO" : true
+    },
+    "inventory_lists" : {
+      "all" : true
+    },
+    "customer_lists" : {
+      "siteDEMO" : true
+    },
+    "assignments" : {
+      "assignmentDEMO" : true
+    },
+    "global_data" : {
+        "preferences": true,
+        "global_custom_objects": true,
+        "job_schedules": true,
+        "job_schedules_deprecated": true,
+        "meta_data": true,
+        "static_resources": true,
+        "users": true,
+        "access_roles": true,
+        "geolocations": true,
+        "custom_quota_settings": true,
+        "oauth_providers": true,
+        "ocapi_settings": true,
+        "webdav_client_permissions": true,
+        "services": true,
+        "csc_settings": true,
+        "page_meta_tags": true,
+        "price_adjustment_limits": true,
+        "csrf_whitelists": true,
+        "sorting_rules": true,
+        "system_type_definitions": true,
+        "custom_types": true,
+        "custom_preference_groups": true
+    }
+  }
+}
+ </code>
+ </pre>
+ <ul>
+ <li>export_data_units_configuration: Highest level array of the JSON.</li>
+ <li>sites: Site-specific data to export. You can export individual sites by specifying their names, or all sites
+ using the keyword all. You can specify which sub-data units to include in the export, or specify all to include all
+ sub-data units for that site. The sub-data units are:
+ <ul>
+ <li>ab_tests</li>
+ <li>active_data_feeds</li>
+ <li>cache_settings</li>
+ <li>campaigns_and_promotions</li>
+ <li>content</li>
+ <li>coupons</li>
+ <li>customer_cdn_settings</li>
+ <li>customer_groups</li>
+ <li>custom_objects</li>
+ <li>distributed_commerce_extensions</li>
+ <li>dynamic_file_resources</li>
+ <li>gift_certificates</li>
+ <li>ocapi_settings</li>
+ <li>payment_methods</li>
+ <li>payment_processors</li>
+ <li>redirect_urls</li>
+ <li>search_settings</li>
+ <li>site_descriptor</li>
+ <li>site_preferences</li>
+ <li>static_dynamic_alias_mappings</li>
+ <li>sitemap_settings</li>
+ <li>slots</li>
+ <li>sorting_rules</li>
+ <li>source_codes</li>
+ <li>stores</li>
+ <li>tax</li>
+ <li>url_rules</li>
+ </ul>
+ </li>
+ <li>libraries: Shared libraries. To export only certain libraries, specify the library names. To export all shared
+ libraries, use the keyword all.</li>
+ <li>library_static_resources: Content images of private site libraries or shared libraries. To export the content
+ images of only certain sites, specify the site names. To export content images of shared libraries, specify the
+ shared library names. To export the content images for all sites and shared libraries, use the keyword all.</li>
+ <li>catalogs: Catalogs. To export only certain catalogs, specify the catalog names. To export all catalogs, use the
+ keyword all.</li>
+ <li>catalog_static_resources: Product images. To export only certain product images, specify the catalog names. To
+ export product images of all catalogs, use the keyword all.</li>
+ <li>price_books: Price books. To export only certain price books, specify the price book names. To export all price
+ books, use the keyword all.</li>
+ <li>inventory_lists: Inventory lists. To export only certain inventory lists, specify the inventory list names. To
+ export all inventory lists, use the keyword all.</li>
+ <li>customer_lists: Customer lists. To export the customer lists of only certain sites, specify the site names. 1To
+ export the customer lists for all sites, use the keyword all.</li>
+ <li>assignments: Assignments. To export only certain assignments, specify the assignment names. To export all
+ assignments, use the keyword all.</li>
+ <li>global data: Global data to export. Use the keyword all to include all global units. The global units are:
+ <ul>
+ <li>access_roles</li>
+ <li>csc_settings</li>
+ <li>csrf_whitelists: Where possible, we changed noninclusive terms to align with our company value of Equality.
+ Because changing terms in our code can break current implementations, we maintained this object name.</li>
+ <li>custom_preference_groups</li>
+ <li>custom_quota_settings</li>
+ <li>custom_types</li>
+ <li>geolocations</li>
+ <li>global_custom_objects</li>
+ <li>job_schedules</li>
+ <li>job_schedules_deprecated</li>
+ <li>meta_data</li>
+ <li>oauth_providers</li>
+ <li>ocapi_settings</li>
+ <li>page_meta_tags</li>
+ <li>preferences</li>
+ <li>price_adjustment_limits</li>
+ <li>services</li>
+ <li>sorting_rules</li>
+ <li>static_resources</li>
+ <li>system_type_definitions</li>
+ <li>users</li>
+ <li>webdav_client_permissions</li>
+ </ul>
+ </li>
+ </ul>
+ 
+  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Organization</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DataUnits</span>
+                                            &nbsp;:&nbsp;
+                                            JSONString
+                                                    (Required)
+                                                </span>
+                    <div class="description">String in JSON format that describes the data to be exported.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Export file name and path relative to 'IMPEX/src/instance'. Required if not using FileNamePrefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileNamePrefix</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Prefix for the export file. Can include a path relative to 'IMPEX/src/instance'. The timestamp is appended. To order the files chronologically, sort alphabetically. Required if not using ExportFile.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OverwriteExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Required)
+                                                </span>
+                    <div class="description">If selected, the option overwrites an existing file. If not selected and a file exists, the job exits and reports an error.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SaveOnRealm</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Required)
+                                                </span>
+                    <div class="description">If selected, the export file will be saved in the global realm directory.</div>
+                    <div class="description">
+                                                Default Value:
+                                                false</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Export finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Export failed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

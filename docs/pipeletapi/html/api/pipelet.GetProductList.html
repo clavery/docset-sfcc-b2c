@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet GetProductList</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet GetProductList</div>
+            <div class="topLevelDescription">Return a ProductList as specified by the input parameters.
+
+If a ProductListID is provided, then the corresponding ProductList is returned. If none is found, then the ERROR connector is taken.
+
+I addition, this pipelet currently supports the following deprecated functionality.  If a Customer is provided, then the pipelet will return the first ProductList (in no particular order) owned by that Customer.  If none are found, then the pipelet will look at the Create configuration parameter.  If Create is set to true, then a new ProductList of the specified Type is created and returned.  Otherwise the ERROR connector is taken.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ProductList</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="parameterTitle">Create</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+deprecated
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="parameterTitle">Type</span>
+					&nbsp;:&nbsp;
+					Integer
+							(Optional)
+						</span>
+                    <div class="description">
+deprecated
+
+The type of the product list to find, or create if one is to be created, e.g. dw.customer.ProductList.TYPE_WISH_LIST.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="parameterTitle">Customer</span>
+					&nbsp;:&nbsp;
+					Customer
+							(Optional)
+						</span>
+                    <div class="description">
+deprecated
+
+The owner of the ProductList.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductListID</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The identifier of the  ProductList.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductList</span>
+					&nbsp;:&nbsp;
+					ProductList
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

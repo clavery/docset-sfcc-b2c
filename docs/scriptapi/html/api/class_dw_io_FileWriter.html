@@ -1,0 +1,393 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class FileWriter</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.io.FileWriter">
+            <a name="dw.io.FileWriter"></a>
+            <div class="packageName">dw.io</div>
+            <div class="className
+					">	
+        	
+				Class FileWriter</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_io_Writer.html">dw.io.Writer</a>
+                </div>
+                <div style="position:relative;left:5%;">
+                    <img src="images/inherit.gif">dw.io.FileWriter
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Convenience class for writing character files.
+ <p/>
+ Files are stored in a shared file system where multiple processes could
+ access the same file. The client code is responsible for ensuring that no
+ more than one process writes to a file at a given time.
+ <p/>
+ <b>Note:</b> when this class is used with sensitive data, be careful in persisting sensitive information to disk.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>lineSeparator
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Get the current line separator (e.g. '\n' or '\r\n'), if no value is set the system default '\n' will be used.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_FileWriter_File_DetailAnchor"><span class="">FileWriter</span></a></span>(file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>)</span>
+                    <div class="description">Constructs the writer for the specified file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_FileWriter_File_Boolean_DetailAnchor"><span class="">FileWriter</span></a></span>(file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>, append
+									 : 
+									
+									boolean)</span>
+                    <div class="description">Constructs the writer for the specified file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_FileWriter_File_String_DetailAnchor"><span class="">FileWriter</span></a></span>(file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>, encoding
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Constructs the writer for the specified file with the specified encoding.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_FileWriter_File_String_Boolean_DetailAnchor"><span class="">FileWriter</span></a></span>(file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>, encoding
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, append
+									 : 
+									
+									boolean)</span>
+                    <div class="description">Constructs the writer for the specified file with the specified encoding.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_close_DetailAnchor"><span class="">close</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Closes the writer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_getLineSeparator_DetailAnchor"><span class="">getLineSeparator</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the current line separator (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_setLineSeparator_String_DetailAnchor"><span class="">setLineSeparator</span></a></span>(lineSeparator
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the line separator (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_FileWriter_writeLine_String_DetailAnchor"><span class="">writeLine</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Writes the specified line and appends the line separator.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_io_Writer.html"><span class="">Writer</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_io_Writer.html#dw_io_Writer_close_DetailAnchor"><span class="">close</span></a>, <a href="class_dw_io_Writer.html#dw_io_Writer_flush_DetailAnchor"><span class="">flush</span></a>, <a href="class_dw_io_Writer.html#dw_io_Writer_write_String_DetailAnchor"><span class="">write</span></a>, <a href="class_dw_io_Writer.html#dw_io_Writer_write_String_Number_Number_DetailAnchor"><span class="">write</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_FileWriter_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">FileWriter</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">FileWriter</span>(file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+                    </div>
+                    <div class="description">Constructs the writer for the specified file. Uses "UTF-8" as encoding.
+ <p>
+ To release system resources, close the writer by calling <a href="class_dw_io_FileWriter.html#dw_io_FileWriter_close_DetailAnchor">close()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">the file object to write to.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_FileWriter_File_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">FileWriter</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">FileWriter</span>(file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, append
+								 : 
+								 					
+								boolean)
+                    </div>
+                    <div class="description">Constructs the writer for the specified file. Optional file append mode
+ is supported. Uses "UTF-8" as encoding.
+ <p>
+ To release system resources, close the writer by calling <a href="class_dw_io_FileWriter.html#dw_io_FileWriter_close_DetailAnchor">close()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">the file object to write to.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">append</span>
+						 - 
+						<span class="parameterDesc">flag, whether the file should be written in append mode</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_FileWriter_File_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">FileWriter</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">FileWriter</span>(file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, encoding
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Constructs the writer for the specified file with the specified encoding.
+ <p>
+ To release system resources, close the writer by calling <a href="class_dw_io_FileWriter.html#dw_io_FileWriter_close_DetailAnchor">close()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">the file object to write to.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">the character encoding to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_FileWriter_File_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">FileWriter</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">FileWriter</span>(file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, encoding
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, append
+								 : 
+								 					
+								boolean)
+                    </div>
+                    <div class="description">Constructs the writer for the specified file with the specified encoding.
+ Optional file append mode is supported.
+ <p>
+ To release system resources, close the writer by calling <a href="class_dw_io_FileWriter.html#dw_io_FileWriter_close_DetailAnchor">close()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">the file object to write to.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">the character encoding to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">append</span>
+						 - 
+						<span class="parameterDesc">flag indicating whether the file should be written in append mode.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_close_DetailAnchor"></a>
+                    <div class="detailName 
+						">close</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">close</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Closes the writer.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_getLineSeparator_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLineSeparator</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLineSeparator</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the current line separator (e.g. '\n' or '\r\n'), if no value is set the system default '\n' will be used.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_setLineSeparator_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setLineSeparator</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setLineSeparator</span>(lineSeparator
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the line separator (e.g. '\n' or '\r\n'), if no value is set the system default '\n' will be used.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">lineSeparator</span>
+						 - 
+						<span class="parameterDesc">that will be written at the end of each line</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_FileWriter_writeLine_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">writeLine</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">writeLine</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes the specified line and appends the line separator.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the line to write to the file.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

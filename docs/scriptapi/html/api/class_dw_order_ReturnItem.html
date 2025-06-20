@@ -1,0 +1,739 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ReturnItem</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.ReturnItem">
+            <a name="dw.order.ReturnItem"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class ReturnItem</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_Extensible.html">dw.object.Extensible</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_order_AbstractItem.html">dw.order.AbstractItem</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.order.ReturnItem
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">An item of a <a href="class_dw_order_Return.html">Return</a>, created using <a href="class_dw_order_Return.html#dw_order_Return_createItem_String_DetailAnchor">Return.createItem(String)</a>.
+ Represents a physically returned order line item. Please refer to the documentation of <a href="class_dw_order_hooks_ReturnHooks.html">ReturnHooks</a>
+ for further information.
+ <br>
+ When the related Return were set to status COMPLETED, only the the custom attributes of the return item can be changed.
+ <p/>
+ Order post-processing APIs (gillian) are now inactive by default and will throw
+ an exception if accessed. Activation needs preliminary approval by Product Management.
+ Please contact support in this case. Existing customers using these APIs are not
+ affected by this change and can use the APIs until further notice.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>basePrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Price of a single unit before discount application.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>note
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Return the note for this return item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>parentItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ReturnItem.html"><span class="">ReturnItem</span></a>
+                        <div class="description">Returns null or the parent item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>reasonCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                        <div class="description">The reason code for return item. The list of reason codes can be updated
+ by updating meta-data for ReturnItem.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returnCaseItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ReturnCaseItem.html"><span class="">ReturnCaseItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The return case item related to this item. Should never return null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returnedQuantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                        <div class="description">The <a href="class_dw_value_Quantity.html">Quantity</a> returned. This may return an N/A quantity.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returnNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The mandatory returnNumber of the <a href="class_dw_order_Return.html">Return</a> to which this item belongs.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_addTaxItem_Decimal_TaxGroup_DetailAnchor"><span class="">addTaxItem</span></a></span>(amount
+								 : 	
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>, taxGroup
+								 : 	
+								 
+								<a href="class_dw_order_TaxGroup.html"><span class="">TaxGroup</span></a>)
+						: 
+					<a href="class_dw_order_TaxItem.html"><span class="">TaxItem</span></a></span>
+                    <div class="description">Create a new <a href="class_dw_order_TaxItem.html"> tax-item</a> and add to this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_applyPriceRate_Decimal_Decimal_Boolean_DetailAnchor"><span class="">applyPriceRate</span></a></span>(factor
+								 : 	
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>, divisor
+								 : 	
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>, roundUp
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Apply a rate of (factor / divisor) to the prices in this item, with the option to half round up or half round down to the nearest cent if necessary.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getBasePrice_DetailAnchor"><span class="">getBasePrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Price of a single unit before discount application.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getNote_DetailAnchor"><span class="">getNote</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Return the note for this return item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getParentItem_DetailAnchor"><span class="">getParentItem</span></a></span>()
+						: 
+					<a href="class_dw_order_ReturnItem.html"><span class="">ReturnItem</span></a></span>
+                    <div class="description">Returns null or the parent item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getReasonCode_DetailAnchor"><span class="">getReasonCode</span></a></span>()
+						: 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a></span>
+                    <div class="description">Returns the reason code for return item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getReturnCaseItem_DetailAnchor"><span class="">getReturnCaseItem</span></a></span>()
+						: 
+					<a href="class_dw_order_ReturnCaseItem.html"><span class="">ReturnCaseItem</span></a></span>
+                    <div class="description">Returns the return case item related to this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getReturnedQuantity_DetailAnchor"><span class="">getReturnedQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">The <a href="class_dw_value_Quantity.html">Quantity</a> returned.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_getReturnNumber_DetailAnchor"><span class="">getReturnNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">The mandatory returnNumber of the <a href="class_dw_order_Return.html">Return</a> to which this item belongs.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_setNote_String_DetailAnchor"><span class="">setNote</span></a></span>(note
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets a note for this return item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_setParentItem_ReturnItem_DetailAnchor"><span class="">setParentItem</span></a></span>(parentItem
+								 : 	
+								 
+								<a href="class_dw_order_ReturnItem.html"><span class="">ReturnItem</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set a parent item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_setReasonCode_String_DetailAnchor"><span class="">setReasonCode</span></a></span>(reasonCode
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the reason code.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_setReturnedQuantity_Quantity_DetailAnchor"><span class="">setReturnedQuantity</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the <a href="class_dw_value_Quantity.html">Quantity</a> returned.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_setTaxBasis_Money_DetailAnchor"><span class="">setTaxBasis</span></a></span>(taxBasis
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the tax-basis price for this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnItem_setTaxItems_Collection_DetailAnchor"><span class="">setTaxItems</span></a></span>(taxItems
+								 : 	
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the tax-items for this item.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_order_AbstractItem.html"><span class="">AbstractItem</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getGrossPrice_DetailAnchor"><span class="">getGrossPrice</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getItemID_DetailAnchor"><span class="">getItemID</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getLineItem_DetailAnchor"><span class="">getLineItem</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getNetPrice_DetailAnchor"><span class="">getNetPrice</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getOrderItem_DetailAnchor"><span class="">getOrderItem</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getOrderItemID_DetailAnchor"><span class="">getOrderItemID</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getTax_DetailAnchor"><span class="">getTax</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getTaxBasis_DetailAnchor"><span class="">getTaxBasis</span></a>, <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getTaxItems_DetailAnchor"><span class="">getTaxItems</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_Extensible.html"><span class="">Extensible</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_Extensible.html#dw_object_Extensible_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_Extensible.html#dw_object_Extensible_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_addTaxItem_Decimal_TaxGroup_DetailAnchor"></a>
+                    <div class="detailName 
+						">addTaxItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addTaxItem</span>(amount
+								 : 
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>, taxGroup
+								 : 
+								 
+								<a href="class_dw_order_TaxGroup.html"><span class="">TaxGroup</span></a>)
+					 : 
+					<a href="class_dw_order_TaxItem.html"><span class="">TaxItem</span></a>
+                    </div>
+                    <div class="description">Create a new <a href="class_dw_order_TaxItem.html"> tax-item</a> and add to this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">amount to assign to the tax-item</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">taxGroup</span>
+						 - 
+						<span class="parameterDesc">the <a href="class_dw_order_TaxGroup.html">TaxGroup</a> to which the item belongs</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new tax-item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_applyPriceRate_Decimal_Decimal_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">applyPriceRate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">applyPriceRate</span>(factor
+								 : 
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>, divisor
+								 : 
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>, roundUp
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Apply a rate of (factor / divisor) to the prices in this item, with the option to half round up or half round down to the
+ nearest cent if necessary.
+ <p/><i>Examples</i>:
+ <br/><table><tr><th align=right>TaxBasis before</th><th align=right>factor</th><th align=right>divisor</th><th>roundup</th><th align=middle>Calculation</th><th align=middle>TaxBasis after</th></tr>
+ <tr><td align=right>$10.00</td><td align=right>1</td><td align=right>2</td><td align=middle>true</td><td align=right>10*1/2=</td><td align=right>$5.00</td></tr>
+ <tr><td align=right>$10.00</td><td align=right>9</td><td align=right>10</td><td align=middle>true</td><td align=right>10*9/10=</td><td align=right>$9.00</td></tr>
+ <tr><td align=right>$10.00</td><td align=right>1</td><td align=right>3</td><td align=middle>true</td><td align=right>10*1/3=3.3333=</td><td align=right>$3.33</td></tr>
+ <tr><td align=right> $2.47</td><td align=right>1</td><td align=right>2</td><td align=middle>true</td><td align=right>2.47*1/2=1.235=</td><td align=right>$1.24</td></tr>
+ <tr><td align=right> $2.47</td><td align=right>1</td><td align=right>2</td><td align=middle>false</td><td align=right>2.47*1/2=1.235=</td><td align=right>$1.23</td></tr>
+ </table>
+ <p/><i>Which prices are updated?</i>:
+ <br/>The rate described above is applied to tax-basis and tax then the net-price and gross-price are recalculated by adding / subtracting
+ depending on whether the order is based on net price.
+ <p/><i>Example (order based on net price)</i>
+ <br/>New TaxBasis:$10.00, Tax:$1.00, NetPrice=TaxBasis=$10.00, GrossPrice=TaxBasis+Tax=$11.00
+ <p/><i>Example (order based on gross price)</i>
+ <br/>New TaxBasis:$10.00, Tax:$1.00, NetPrice=TaxBasis-tax=$9.00, GrossPrice=TaxBasis=$10.00</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">factor</span>
+						 - 
+						<span class="parameterDesc">factor used to calculate rate</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">divisor</span>
+						 - 
+						<span class="parameterDesc">divisor used to calculate rate</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">roundUp</span>
+						 - 
+						<span class="parameterDesc">whether to round up or down on 0.5</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getTaxBasis_DetailAnchor">AbstractItem.getTaxBasis()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getTax_DetailAnchor">AbstractItem.getTax()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getNetPrice_DetailAnchor">AbstractItem.getNetPrice()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getGrossPrice_DetailAnchor">AbstractItem.getGrossPrice()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_TaxMgr.html#dw_order_TaxMgr_getTaxationPolicy_DetailAnchor">TaxMgr.getTaxationPolicy()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getBasePrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBasePrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBasePrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Price of a single unit before discount application.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Price of a single unit before discount application.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getNote_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNote</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNote</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Return the note for this return item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the note or <code>null</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getParentItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getParentItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getParentItem</span>()
+					 : 
+					<a href="class_dw_order_ReturnItem.html"><span class="">ReturnItem</span></a>
+                    </div>
+                    <div class="description">Returns null or the parent item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">null or the parent item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getReasonCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReasonCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReasonCode</span>()
+					 : 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                    </div>
+                    <div class="description">Returns the reason code for return item. The list of reason codes can be updated
+ by updating meta-data for ReturnItem.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the return reason code</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getReturnCaseItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturnCaseItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturnCaseItem</span>()
+					 : 
+					<a href="class_dw_order_ReturnCaseItem.html"><span class="">ReturnCaseItem</span></a>
+                    </div>
+                    <div class="description">Returns the return case item related to this item. Should never return null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the return case item related to this item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getReturnedQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturnedQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturnedQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">The <a href="class_dw_value_Quantity.html">Quantity</a> returned. This may return an N/A quantity.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the quantity returned, may be N/A</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_getReturnNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturnNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturnNumber</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">The mandatory returnNumber of the <a href="class_dw_order_Return.html">Return</a> to which this item belongs.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the returnNumber of the Return to which this item belongs</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_setNote_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setNote</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setNote</span>(note
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets a note for this return item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">note</span>
+						 - 
+						<span class="parameterDesc">the note for this return item to set</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_setParentItem_ReturnItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">setParentItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setParentItem</span>(parentItem
+								 : 
+								 
+								<a href="class_dw_order_ReturnItem.html"><span class="">ReturnItem</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set a parent item. The parent item must belong to the same
+ <a href="class_dw_order_Return.html">Return</a>. An infinite parent-child loop is disallowed
+ as is a parent-child depth greater than 10. Setting a parent item
+ indicates a dependency of the child item on the parent item, and can be
+ used to form a parallel structure to that accessed using
+ <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getParent_DetailAnchor">ProductLineItem.getParent()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">parentItem</span>
+						 - 
+						<span class="parameterDesc">The parent item, null is allowed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_setReasonCode_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setReasonCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setReasonCode</span>(reasonCode
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the reason code. The list of reason codes can be updated by updating meta-data for ReturnItem.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">reasonCode</span>
+						 - 
+						<span class="parameterDesc">the reason code to set</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_setReturnedQuantity_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">setReturnedQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setReturnedQuantity</span>(quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the <a href="class_dw_value_Quantity.html">Quantity</a> returned. Passing null results in an exception being thrown.
+ The quantity must be higher than zero and not be higher than the remaining quantity to return.
+
+ <p/>The item prices are recalculated in this method as described in <a href="class_dw_order_ReturnItem.html#dw_order_ReturnItem_applyPriceRate_Decimal_Decimal_Boolean_DetailAnchor">applyPriceRate(Decimal, Decimal, Boolean)</a>
+ with the <code>quantity</code> argument as the factor, and ordered quantity as divisor
+ and <code>true</code> as the roundup parameter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">the quantity returned, null not allowed</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getReturnedQuantity_DetailAnchor">OrderItem.getReturnedQuantity()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getQuantity_DetailAnchor">ProductLineItem.getQuantity()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_setTaxBasis_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">setTaxBasis</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setTaxBasis</span>(taxBasis
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the tax-basis price for this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">taxBasis</span>
+						 - 
+						<span class="parameterDesc">the tax basis value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnItem_setTaxItems_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">setTaxItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setTaxItems</span>(taxItems
+								 : 
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the tax-items for this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">taxItems</span>
+						 - 
+						<span class="parameterDesc">items</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ReturnItem.html#dw_order_ReturnItem_addTaxItem_Decimal_TaxGroup_DetailAnchor">addTaxItem(Decimal, TaxGroup)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_TaxGroup.html#dw_order_TaxGroup_create_String_String_String_Decimal_DetailAnchor">TaxGroup.create(String, String, String, Decimal)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

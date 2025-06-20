@@ -1,0 +1,889 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class HttpParameter</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.web.HttpParameter">
+            <a name="dw.web.HttpParameter"></a>
+            <div class="packageName">dw.web</div>
+            <div class="className
+					">	
+        	
+				Class HttpParameter</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.web.HttpParameter
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents an HTTP parameter.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>booleanValue
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The value of the current HttpParameter attribute as a boolean. If
+ there is more than one value defined, only the first one is returned. For an
+ undefined attribute it returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>dateValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value of the current HttpParameter attribute as a date. If
+ there is more than one value defined, only the first one is returned. For
+ an undefined attribute and if attribute is not a date it return null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>doubleValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value of the current HttpParameter attribute as a number. If
+ there is more than one value defined, only the first one is returned. For
+ an undefined attribute it returns 0.0.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>empty
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if there is a value for the http parameter attribute
+ and whether the value is empty.
+ A value is treated as empty if it's not blank.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>intValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value of the current HttpParameter attribute as int. If there
+ is more than one value defined, only the first one is returned. For an
+ undefined attribute it returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>rawValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The raw value for this HttpParameter instance.
+ The raw value is the not trimmed String value of this HTTP parameter.
+ If there is more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns a null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>rawValues
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A Collection of all raw values for this HTTP parameter.
+ The raw value is the not trimmed String value of this HTTP parameter.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>stringValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value of the current HttpParameter attribute. If there is
+ more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns a null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>stringValues
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A Collection of all defined values for this HTTP parameter.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>submitted
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the parameter was submitted. This is equivalent to the
+ check, whether the parameter has a value.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>value
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value of the current HttpParameter attribute. If there is
+ more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>values
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A Collection of all defined values for this current HTTP parameter.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_containsStringValue_String_DetailAnchor"><span class="">containsStringValue</span></a></span>(value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the given value is part of the actual values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getBooleanValue_DetailAnchor"><span class="">getBooleanValue</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a boolean.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getBooleanValue_Boolean_DetailAnchor"><span class="">getBooleanValue</span></a></span>(defaultValue
+								 : 	
+								 
+								boolean)
+						: 
+					boolean</span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a boolean.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getDateValue_DetailAnchor"><span class="">getDateValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a date.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getDateValue_Date_DetailAnchor"><span class="">getDateValue</span></a></span>(defaultValue
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a date.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getDoubleValue_DetailAnchor"><span class="">getDoubleValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getDoubleValue_Number_DetailAnchor"><span class="">getDoubleValue</span></a></span>(defaultValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getIntValue_DetailAnchor"><span class="">getIntValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as int.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getIntValue_Number_DetailAnchor"><span class="">getIntValue</span></a></span>(defaultValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute as an integer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getRawValue_DetailAnchor"><span class="">getRawValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the raw value for this HttpParameter instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getRawValues_DetailAnchor"><span class="">getRawValues</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a Collection of all raw values for this HTTP parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getStringValue_DetailAnchor"><span class="">getStringValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getStringValue_String_DetailAnchor"><span class="">getStringValue</span></a></span>(defaultValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getStringValues_DetailAnchor"><span class="">getStringValues</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a Collection of all defined values for this HTTP parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getValue_DetailAnchor"><span class="">getValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_getValues_DetailAnchor"><span class="">getValues</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a Collection of all defined values for this current HTTP parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_isChecked_String_DetailAnchor"><span class="">isChecked</span></a></span>(value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the given String is an actual value of this http parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_isEmpty_DetailAnchor"><span class="">isEmpty</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if there is a value for the http parameter attribute and whether the value is empty.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_isSubmitted_DetailAnchor"><span class="">isSubmitted</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the parameter was submitted.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_HttpParameter_toString_DetailAnchor"><span class="">toString</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value of the current HttpParameter attribute.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_containsStringValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">containsStringValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">containsStringValue</span>(value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the given value is part of the actual values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to check.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the value is among the actual values, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getBooleanValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBooleanValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBooleanValue</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a boolean. If
+ there is more than one value defined, only the first one is returned. For an
+ undefined attribute it returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value as a boolean or null of no value is available.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getBooleanValue_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBooleanValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBooleanValue</span>(defaultValue
+								 : 
+								 
+								boolean)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a boolean. If there
+ is more than one value defined, only the first one is returned. For an
+ undefined attribute it returns the given default value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultValue</span>
+						 - 
+						<span class="parameterDesc">the default value to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the parameter or the default value if empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getDateValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDateValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDateValue</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a date. If
+ there is more than one value defined, only the first one is returned. For
+ an undefined attribute and if attribute is not a date it return null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value as date or null if empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getDateValue_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDateValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDateValue</span>(defaultValue
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a date. If
+ there is more than one value defined, only the first one is returned. For
+ an undefined attribute it returns the given default value and if
+ the attributes is not a date it returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultValue</span>
+						 - 
+						<span class="parameterDesc">the default value to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the data value of the attribute or the default value if empty</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getDoubleValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDoubleValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDoubleValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a number. If
+ there is more than one value defined, only the first one is returned. For
+ an undefined attribute it returns 0.0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value as double or null if the parameter has no value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getDoubleValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDoubleValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDoubleValue</span>(defaultValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as a number. If
+ there is more than one value defined, only the first one is returned. For
+ an undefined attribute it returns the given default value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultValue</span>
+						 - 
+						<span class="parameterDesc">the default value to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value as double or the default value if empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getIntValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getIntValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getIntValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as int. If there
+ is more than one value defined, only the first one is returned. For an
+ undefined attribute it returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value as an integer or null of no value is available.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getIntValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getIntValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getIntValue</span>(defaultValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute as an integer. If there
+ is more than one value defined, only the first one is returned. For an
+ undefined attribute it returns the given default value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultValue</span>
+						 - 
+						<span class="parameterDesc">the default value to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the parameter or the default value if empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getRawValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRawValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRawValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the raw value for this HttpParameter instance.
+ The raw value is the not trimmed String value of this HTTP parameter.
+ If there is more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns a null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value or null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_web_HttpParameter.html#dw_web_HttpParameter_getStringValue_DetailAnchor">getStringValue()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getRawValues_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRawValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRawValues</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a Collection of all raw values for this HTTP parameter.
+ The raw value is the not trimmed String value of this HTTP parameter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the raw values as a Collection of String, might be empty</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_web_HttpParameter.html#dw_web_HttpParameter_getStringValues_DetailAnchor">getStringValues()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getStringValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStringValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStringValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute. If there is
+ more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns a null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getStringValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStringValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStringValue</span>(defaultValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute. If there is
+ more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns the given default value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultValue</span>
+						 - 
+						<span class="parameterDesc">the default value to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value or the default value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getStringValues_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStringValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStringValues</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a Collection of all defined values for this HTTP parameter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual values as Collection.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute. If there is
+ more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_getValues_DetailAnchor"></a>
+                    <div class="detailName 
+						">getValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getValues</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a Collection of all defined values for this current HTTP parameter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual values as Collection.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_web_HttpParameter.html#dw_web_HttpParameter_getStringValues_DetailAnchor">getStringValues()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_isChecked_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isChecked</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isChecked</span>(value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the given String is an actual value of this http parameter.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to check.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the value is among the actual values, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_isEmpty_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEmpty</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEmpty</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if there is a value for the http parameter attribute
+ and whether the value is empty.
+ A value is treated as empty if it's not blank.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if a value is empty, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_isSubmitted_DetailAnchor"></a>
+                    <div class="detailName 
+						">isSubmitted</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isSubmitted</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the parameter was submitted. This is equivalent to the
+ check, whether the parameter has a value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if a value is there, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_HttpParameter_toString_DetailAnchor"></a>
+                    <div class="detailName 
+						">toString</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">toString</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value of the current HttpParameter attribute. If there is
+ more than one value defined, only the first one is returned. For an
+ undefined attribute the method returns an empty string.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the actual value or an empty String.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

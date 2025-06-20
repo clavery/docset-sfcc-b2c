@@ -1,0 +1,933 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Basket</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.Basket">
+            <a name="dw.order.Basket"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class Basket</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%">
+                    <img src="images/inherit.gif"><a href="class_dw_order_LineItemCtnr.html">dw.order.LineItemCtnr</a>
+                </div>
+                <div style="position:relative;left:9%;">
+                    <img src="images/inherit.gif">dw.order.Basket
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The Basket class represents a shopping cart.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>agentBasket
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns if the basket was created by an agent.
+ <p>
+ An agent basket is created by an agent on behalf of the customer in comparison to a storefront basket which is
+ created by the customer e.g. in the storefront. An agent basket can be created with
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createAgentBasket_DetailAnchor">BasketMgr.createAgentBasket()</a>.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>inventoryReservationExpiry
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The timestamp when the inventory for this basket expires.
+ <p>
+ It will return <code>null</code> for the following reasons:
+ <ul>
+ <li>No reservation for the basket was done</li>
+ <li>Reservation is outdated meaning the timestamp is in the past</li>
+ </ul>
+ </p>
+ <p>
+ Please note that the expiry timestamp will not always be valid for the whole basket. It will not be valid for
+ new items added or items whose quantity has changed after the reservation was done.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderBeingEdited
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_Order.html"><span class="">Order</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The order that this basket represents if the basket is being used to edit an order, otherwise this method
+ returns null. Baskets created via <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a> will create a reference
+ to the order that was used to create this basket (please check limitations around basket accessibility in
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a>).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderNoBeingEdited
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of the order that this basket represents if the basket is being used to edit an order,
+ otherwise this method returns null. Baskets created via <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a>
+ will create a reference to the order that was used to create this basket (please check limitations around basket
+ accessibility in <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a>).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>taxRoundedAtGroup
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Use this method to check if the Basket was calculated with grouped taxation calculation.
+ <p>
+ If the tax is rounded on group level, the tax is applied to the summed-up tax basis for each tax rate.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>temporary
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns if the basket is temporary.
+ <p>
+ Temporary baskets are separate from shopper storefront and agent baskets, and are intended for use to perform
+ calculations or create an order without disturbing a shopper's open storefront basket. A temporary basket can be
+ created with <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createTemporaryBasket_DetailAnchor">BasketMgr.createTemporaryBasket()</a>.
+ </p></div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_getInventoryReservationExpiry_DetailAnchor"><span class="">getInventoryReservationExpiry</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the timestamp when the inventory for this basket expires.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_getOrderBeingEdited_DetailAnchor"><span class="">getOrderBeingEdited</span></a></span>()
+						: 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a></span>
+                    <div class="description">Returns the order that this basket represents if the basket is being used to edit an order, otherwise this method returns null.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_getOrderNoBeingEdited_DetailAnchor"><span class="">getOrderNoBeingEdited</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the number of the order that this basket represents if the basket is being used to edit an order, otherwise this method returns null.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_isAgentBasket_DetailAnchor"><span class="">isAgentBasket</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns if the basket was created by an agent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_isTaxRoundedAtGroup_DetailAnchor"><span class="">isTaxRoundedAtGroup</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Use this method to check if the Basket was calculated with grouped taxation calculation.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_isTemporary_DetailAnchor"><span class="">isTemporary</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns if the basket is temporary.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_releaseInventory_DetailAnchor"><span class="">releaseInventory</span></a></span>()
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Releases all inventory previously reserved for this basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_reserveInventory_DetailAnchor"><span class="">reserveInventory</span></a></span>()
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Reserves inventory for all items in this basket for 10 minutes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_reserveInventory_Number_DetailAnchor"><span class="">reserveInventory</span></a></span>(reservationDurationInMinutes
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Reserves inventory for all items in this basket for a specified amount of minutes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_reserveInventory_Number_Boolean_DetailAnchor"><span class="">reserveInventory</span></a></span>(reservationDurationInMinutes
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, removeIfNotAvailable
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Reserves inventory for all items in this basket for a specified amount of minutes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_setBusinessType_Number_DetailAnchor"><span class="">setBusinessType</span></a></span>(aType
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the type of the business this order has been placed in.<br/> Possible values are <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_BUSINESS_TYPE_B2C_DetailAnchor">LineItemCtnr.BUSINESS_TYPE_B2C</a> or <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_BUSINESS_TYPE_B2B_DetailAnchor">LineItemCtnr.BUSINESS_TYPE_B2B</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_setChannelType_Number_DetailAnchor"><span class="">setChannelType</span></a></span>(aType
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the channel type in which sales channel this order has been created.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_Basket_setCustomerNo_String_DetailAnchor"><span class="">setCustomerNo</span></a></span>(customerNo
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the customer number of the customer associated with this container.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_startCheckout_DetailAnchor"><span class="">startCheckout</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Register a "start checkout" event for the current basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Basket_updateCurrency_DetailAnchor"><span class="">updateCurrency</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Updates the basket currency if different to session currency, otherwise does nothing.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_addNote_String_String_DetailAnchor"><span class="">addNote</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createBillingAddress_DetailAnchor"><span class="">createBillingAddress</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createBonusProductLineItem_BonusDiscountLineItem_Product_ProductOptionModel_Shipment_DetailAnchor"><span class="">createBonusProductLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createCouponLineItem_String_Boolean_DetailAnchor"><span class="">createCouponLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createCouponLineItem_String_DetailAnchor"><span class="">createCouponLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createGiftCertificateLineItem_Number_String_DetailAnchor"><span class="">createGiftCertificateLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createGiftCertificatePaymentInstrument_String_Money_DetailAnchor"><span class="">createGiftCertificatePaymentInstrument</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createPaymentInstrument_String_Money_DetailAnchor"><span class="">createPaymentInstrument</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createPaymentInstrumentFromWallet_CustomerPaymentInstrument_Money_DetailAnchor"><span class="">createPaymentInstrumentFromWallet</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createPriceAdjustment_String_DetailAnchor"><span class="">createPriceAdjustment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createPriceAdjustment_String_Discount_DetailAnchor"><span class="">createPriceAdjustment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createProductLineItem_String_Quantity_Shipment_DetailAnchor"><span class="">createProductLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createProductLineItem_String_Shipment_DetailAnchor"><span class="">createProductLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createProductLineItem_ProductListItem_Shipment_DetailAnchor"><span class="">createProductLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createProductLineItem_Product_ProductOptionModel_Shipment_DetailAnchor"><span class="">createProductLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createShipment_String_DetailAnchor"><span class="">createShipment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createShippingPriceAdjustment_String_DetailAnchor"><span class="">createShippingPriceAdjustment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedMerchandizeTotalGrossPrice_DetailAnchor"><span class="">getAdjustedMerchandizeTotalGrossPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedMerchandizeTotalNetPrice_DetailAnchor"><span class="">getAdjustedMerchandizeTotalNetPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedMerchandizeTotalPrice_DetailAnchor"><span class="">getAdjustedMerchandizeTotalPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedMerchandizeTotalPrice_Boolean_DetailAnchor"><span class="">getAdjustedMerchandizeTotalPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedMerchandizeTotalTax_DetailAnchor"><span class="">getAdjustedMerchandizeTotalTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedShippingTotalGrossPrice_DetailAnchor"><span class="">getAdjustedShippingTotalGrossPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedShippingTotalNetPrice_DetailAnchor"><span class="">getAdjustedShippingTotalNetPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedShippingTotalPrice_DetailAnchor"><span class="">getAdjustedShippingTotalPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAdjustedShippingTotalTax_DetailAnchor"><span class="">getAdjustedShippingTotalTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAllGiftCertificateLineItems_DetailAnchor"><span class="">getAllGiftCertificateLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAllLineItems_DetailAnchor"><span class="">getAllLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAllProductLineItems_DetailAnchor"><span class="">getAllProductLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAllProductLineItems_String_DetailAnchor"><span class="">getAllProductLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAllProductQuantities_DetailAnchor"><span class="">getAllProductQuantities</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getAllShippingPriceAdjustments_DetailAnchor"><span class="">getAllShippingPriceAdjustments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getBillingAddress_DetailAnchor"><span class="">getBillingAddress</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getBonusDiscountLineItems_DetailAnchor"><span class="">getBonusDiscountLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getBonusLineItems_DetailAnchor"><span class="">getBonusLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getBusinessType_DetailAnchor"><span class="">getBusinessType</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getChannelType_DetailAnchor"><span class="">getChannelType</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCouponLineItem_String_DetailAnchor"><span class="">getCouponLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCouponLineItems_DetailAnchor"><span class="">getCouponLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCurrencyCode_DetailAnchor"><span class="">getCurrencyCode</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCustomer_DetailAnchor"><span class="">getCustomer</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCustomerEmail_DetailAnchor"><span class="">getCustomerEmail</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCustomerName_DetailAnchor"><span class="">getCustomerName</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getCustomerNo_DetailAnchor"><span class="">getCustomerNo</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getDefaultShipment_DetailAnchor"><span class="">getDefaultShipment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getEtag_DetailAnchor"><span class="">getEtag</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificateLineItems_DetailAnchor"><span class="">getGiftCertificateLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificateLineItems_String_DetailAnchor"><span class="">getGiftCertificateLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificatePaymentInstruments_DetailAnchor"><span class="">getGiftCertificatePaymentInstruments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificatePaymentInstruments_String_DetailAnchor"><span class="">getGiftCertificatePaymentInstruments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificateTotalGrossPrice_DetailAnchor"><span class="">getGiftCertificateTotalGrossPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificateTotalNetPrice_DetailAnchor"><span class="">getGiftCertificateTotalNetPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificateTotalPrice_DetailAnchor"><span class="">getGiftCertificateTotalPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getGiftCertificateTotalTax_DetailAnchor"><span class="">getGiftCertificateTotalTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getMerchandizeTotalGrossPrice_DetailAnchor"><span class="">getMerchandizeTotalGrossPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getMerchandizeTotalNetPrice_DetailAnchor"><span class="">getMerchandizeTotalNetPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getMerchandizeTotalPrice_DetailAnchor"><span class="">getMerchandizeTotalPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getMerchandizeTotalTax_DetailAnchor"><span class="">getMerchandizeTotalTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getNotes_DetailAnchor"><span class="">getNotes</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getPaymentInstrument_DetailAnchor"><span class="">getPaymentInstrument</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getPaymentInstruments_DetailAnchor"><span class="">getPaymentInstruments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getPaymentInstruments_String_DetailAnchor"><span class="">getPaymentInstruments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getPriceAdjustmentByPromotionID_String_DetailAnchor"><span class="">getPriceAdjustmentByPromotionID</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getPriceAdjustments_DetailAnchor"><span class="">getPriceAdjustments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getProductLineItems_DetailAnchor"><span class="">getProductLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getProductLineItems_String_DetailAnchor"><span class="">getProductLineItems</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getProductQuantities_DetailAnchor"><span class="">getProductQuantities</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getProductQuantities_Boolean_DetailAnchor"><span class="">getProductQuantities</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getProductQuantityTotal_DetailAnchor"><span class="">getProductQuantityTotal</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShipment_String_DetailAnchor"><span class="">getShipment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShipments_DetailAnchor"><span class="">getShipments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShippingPriceAdjustmentByPromotionID_String_DetailAnchor"><span class="">getShippingPriceAdjustmentByPromotionID</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShippingPriceAdjustments_DetailAnchor"><span class="">getShippingPriceAdjustments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShippingTotalGrossPrice_DetailAnchor"><span class="">getShippingTotalGrossPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShippingTotalNetPrice_DetailAnchor"><span class="">getShippingTotalNetPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShippingTotalPrice_DetailAnchor"><span class="">getShippingTotalPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getShippingTotalTax_DetailAnchor"><span class="">getShippingTotalTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getTaxTotalsPerTaxRate_DetailAnchor"><span class="">getTaxTotalsPerTaxRate</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getTotalGrossPrice_DetailAnchor"><span class="">getTotalGrossPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getTotalNetPrice_DetailAnchor"><span class="">getTotalNetPrice</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_getTotalTax_DetailAnchor"><span class="">getTotalTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_isExternallyTaxed_DetailAnchor"><span class="">isExternallyTaxed</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_isTaxRoundedAtGroup_DetailAnchor"><span class="">isTaxRoundedAtGroup</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeAllPaymentInstruments_DetailAnchor"><span class="">removeAllPaymentInstruments</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeBonusDiscountLineItem_BonusDiscountLineItem_DetailAnchor"><span class="">removeBonusDiscountLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeCouponLineItem_CouponLineItem_DetailAnchor"><span class="">removeCouponLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeGiftCertificateLineItem_GiftCertificateLineItem_DetailAnchor"><span class="">removeGiftCertificateLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeNote_Note_DetailAnchor"><span class="">removeNote</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removePaymentInstrument_PaymentInstrument_DetailAnchor"><span class="">removePaymentInstrument</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removePriceAdjustment_PriceAdjustment_DetailAnchor"><span class="">removePriceAdjustment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeProductLineItem_ProductLineItem_DetailAnchor"><span class="">removeProductLineItem</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeShipment_Shipment_DetailAnchor"><span class="">removeShipment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_removeShippingPriceAdjustment_PriceAdjustment_DetailAnchor"><span class="">removeShippingPriceAdjustment</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_setCustomerEmail_String_DetailAnchor"><span class="">setCustomerEmail</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_setCustomerName_String_DetailAnchor"><span class="">setCustomerName</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_updateOrderLevelPriceAdjustmentTax_DetailAnchor"><span class="">updateOrderLevelPriceAdjustmentTax</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_updateTotals_DetailAnchor"><span class="">updateTotals</span></a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_verifyPriceAdjustmentLimits_DetailAnchor"><span class="">verifyPriceAdjustmentLimits</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_getInventoryReservationExpiry_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInventoryReservationExpiry</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInventoryReservationExpiry</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the timestamp when the inventory for this basket expires.
+ <p>
+ It will return <code>null</code> for the following reasons:
+ <ul>
+ <li>No reservation for the basket was done</li>
+ <li>Reservation is outdated meaning the timestamp is in the past</li>
+ </ul>
+ </p>
+ <p>
+ Please note that the expiry timestamp will not always be valid for the whole basket. It will not be valid for
+ new items added or items whose quantity has changed after the reservation was done.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the inventory reservation expiry timestamp or <code>null</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_getOrderBeingEdited_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderBeingEdited</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderBeingEdited</span>()
+					 : 
+					<a href="class_dw_order_Order.html"><span class="">Order</span></a>
+                    </div>
+                    <div class="description">Returns the order that this basket represents if the basket is being used to edit an order, otherwise this method
+ returns null. Baskets created via <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a> will create a reference
+ to the order that was used to create this basket (please check limitations around basket accessibility in
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a>).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the order that this basket represents if the basket is being used to edit an order, otherwise this method returns null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_getOrderNoBeingEdited_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderNoBeingEdited</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderNoBeingEdited</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the number of the order that this basket represents if the basket is being used to edit an order,
+ otherwise this method returns null. Baskets created via <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a>
+ will create a reference to the order that was used to create this basket (please check limitations around basket
+ accessibility in <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor">BasketMgr.createBasketFromOrder(Order)</a>).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of the order that this basket represents if the basket is being used to edit an order, otherwise this method returns null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_isAgentBasket_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAgentBasket</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAgentBasket</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns if the basket was created by an agent.
+ <p>
+ An agent basket is created by an agent on behalf of the customer in comparison to a storefront basket which is
+ created by the customer e.g. in the storefront. An agent basket can be created with
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createAgentBasket_DetailAnchor">BasketMgr.createAgentBasket()</a>.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if the basket was created by an agent otherwise <code>false</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_isTaxRoundedAtGroup_DetailAnchor"></a>
+                    <div class="detailName 
+						">isTaxRoundedAtGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isTaxRoundedAtGroup</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Use this method to check if the Basket was calculated with grouped taxation calculation.
+ <p>
+ If the tax is rounded on group level, the tax is applied to the summed-up tax basis for each tax rate.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if the Basket was calculated with grouped taxation</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_isTemporary_DetailAnchor"></a>
+                    <div class="detailName 
+						">isTemporary</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isTemporary</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns if the basket is temporary.
+ <p>
+ Temporary baskets are separate from shopper storefront and agent baskets, and are intended for use to perform
+ calculations or create an order without disturbing a shopper's open storefront basket. A temporary basket can be
+ created with <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createTemporaryBasket_DetailAnchor">BasketMgr.createTemporaryBasket()</a>.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if the basket is temporary otherwise <code>false</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_releaseInventory_DetailAnchor"></a>
+                    <div class="detailName 
+						">releaseInventory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">releaseInventory</span>()
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Releases all inventory previously reserved for this basket.
+ <p>
+ The method implements its own transaction handling. Calling the method from inside a transaction is disallowed
+ and results in an exception being thrown. This behavior differs when calling the method from an <b>OCAPI
+ hook</b>. OCAPI hooks handle transactions themselves, so in this case there is also no need to do any transaction
+ handling, but to ensure the shortest possible locking of the inventory this method should only be called <i>as
+ the last step</i> in the OCAPI hook.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a Status instance with - Status.OK if release inventory was successful, otherwise Status.ERROR.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_reserveInventory_DetailAnchor"></a>
+                    <div class="detailName 
+						">reserveInventory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">reserveInventory</span>()
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Reserves inventory for all items in this basket for 10 minutes. Any reservations created by previous calls of
+ this method will be reset to 10 minutes.
+ </p>
+ <p>
+ The method can be used to reserve basket items before checkout to ensure that inventory is still available at the
+ time an order is created from the basket using <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a>. If all or some
+ basket items are not reserved before creating an order, <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a> will
+ validate item availability and will fail if any item is unavailable. Calling this method in the same request as
+ <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a> is unnecessary and discouraged for performance reasons.
+ </p>
+ <p>
+ The maximum quantity that can be reserved at one time is equal to the ATS (Available To Sell) quantity. (See
+ <a href="class_dw_catalog_ProductInventoryRecord.html#dw_catalog_ProductInventoryRecord_getATS_DetailAnchor">ProductInventoryRecord.getATS()</a>.)
+ </p>
+ <p>
+ When using B2C Commerce inventory, reserving basket inventory does not reduce ATS. In this case, converting the
+ basket to an order reduces ATS by the reserved amount. For example, consider a product with an ATS quantity of 5
+ and no reservations. If a basket reserves a quantity of 3, then other baskets still see an ATS of 5 but can only
+ reserve a quantity of 2.
+ </p>
+ <p>
+ When using Omnichannel Inventory, reserving basket inventory reduces ATS. In this case, converting the basket to
+ an order doesn't reduce ATS. In the previous example, after the first basket reserved a quantity of 3, other
+ baskets would see an ATS of 2.
+ </p>
+ <p>
+ Reservations can only be made for products with an inventory record. The reservation of product bundles is
+ controlled by the <i>Use Bundle Inventory Only</i> setting on the inventory list. The setting allows inventory to
+ be reserved for just the bundle or for the bundle and its bundled products.
+ </p>
+ <p>
+ The following conditions must be met for the method to succeed:
+ <ul>
+ <li>an inventory list must be assigned to the current site</li>
+ <li>all products in the basket must exist, and must not be of type Master or ProductSet</li>
+ <li>each product line item must have a valid quantity</li>
+ <li>each product must have an inventory record, or the inventory list must define that products without inventory
+ record are available by default</li>
+ <li>the reservation must succeed for each item as described above.</li>
+ </ul>
+ </p>
+ <p>
+ The method implements its own transaction handling. Calling the method from inside a transaction is disallowed
+ and results in an exception being thrown. This behavior differs when calling the method from an <b>OCAPI
+ hook</b>. OCAPI hooks handle transactions themselves, so in this case there is also no need to do any transaction
+ handling, but to ensure the shortest possible locking of the inventory this method should only be called <i>as
+ the last step</i> in the OCAPI hook.
+ </p>
+ <p>
+ If the reservation fails with an ERROR status, existing valid reservations for the basket will remain unchanged
+ but no new reservations will be made. This might lead to a partially reserved basket.
+ </p>
+ <p>
+ Behaves same as <code>reserveInventory( null, false );</code>.
+ </p>
+ <p>
+ This method must not be used with
+ <ul>
+ <li>the <b>CreateOrder2</b> pipelet, or</li>
+ <li><a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a>, or</li>
+ <li><a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_String_DetailAnchor">OrderMgr.createOrder(Basket, String)</a></li>
+ </ul>
+ in the same request.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a Status instance with - Status.OK if all items could be reserved, otherwise Status.ERROR meaning no items were reserved.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_reserveInventory_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">reserveInventory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">reserveInventory</span>(reservationDurationInMinutes
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Reserves inventory for all items in this basket for a specified amount of minutes. Any reservations created by
+ previous calls of this method will be reset to that amount of minutes.
+ </p>
+ <p>
+ The method can be used to reserve basket items before checkout to ensure that inventory is still available at the
+ time an order is created from the basket using <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a>. If all or some
+ basket items are not reserved before creating an order, <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a> will
+ validate item availability and will fail if any item is unavailable. Calling this method in the same request as
+ <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a> is unnecessary and discouraged for performance reasons.
+ </p>
+ <p>
+ The maximum quantity that can be reserved at one time is equal to the ATS (Available To Sell) quantity. (See
+ <a href="class_dw_catalog_ProductInventoryRecord.html#dw_catalog_ProductInventoryRecord_getATS_DetailAnchor">ProductInventoryRecord.getATS()</a>.)
+ </p>
+ <p>
+ When using B2C Commerce inventory, reserving basket inventory does not reduce ATS. In this case, converting the
+ basket to an order reduces ATS by the reserved amount. For example, consider a product with an ATS quantity of 5
+ and no reservations. If a basket reserves a quantity of 3, then other baskets still see an ATS of 5 but can only
+ reserve a quantity of 2.
+ </p>
+ <p>
+ When using Omnichannel Inventory, reserving basket inventory reduces ATS. In this case, converting the basket to
+ an order doesn't reduce ATS. In the previous example, after the first basket reserved a quantity of 3, other
+ baskets would see an ATS of 2.
+ </p>
+ <p>
+ Reservations can only be made for products with an inventory record. The reservation of product bundles is
+ controlled by the <i>Use Bundle Inventory Only</i> setting on the inventory list. The setting allows inventory to
+ be reserved for just the bundle or for the bundle and its bundled products.
+ </p>
+ <p>
+ The following conditions must be met for the method to succeed:
+ <ul>
+ <li>an inventory list must be assigned to the current site</li>
+ <li>all products in the basket must exist, and must not be of type Master or ProductSet</li>
+ <li>each product line item must have a valid quantity</li>
+ <li>each product must have an inventory record, or the inventory list must define that products without inventory
+ record are available by default</li>
+ <li>the reservation must succeed for each item as described above.</li>
+ </ul>
+ </p>
+ <p>
+ The method implements its own transaction handling. Calling the method from inside a transaction is disallowed
+ and results in an exception being thrown. This behavior differs when calling the method from an <b>OCAPI
+ hook</b>. OCAPI hooks handle transactions themselves, so in this case there is also no need to do any transaction
+ handling, but to ensure the shortest possible locking of the inventory this method should only be called <i>as
+ the last step</i> in the OCAPI hook.
+ </p>
+ <p>
+ <a href="class_dw_order_Basket.html#dw_order_Basket_getInventoryReservationExpiry_DetailAnchor">getInventoryReservationExpiry()</a> can be used to determine when the expiration will expire.
+ </p>
+ <p>
+ If the reservation fails with an ERROR status, existing valid reservations for the basket will remain unchanged
+ but no new reservations will be made. This might lead to a partially reserved basket.
+ </p>
+ <p>
+ Behaves same as <code>reserveInventory( reservationDurationInMinutes, false );</code>.
+ </p>
+ <p>
+ This method must not be used with
+ <ul>
+ <li>the <b>CreateOrder2</b> pipelet, or</li>
+ <li><a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a>, or</li>
+ <li><a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_String_DetailAnchor">OrderMgr.createOrder(Basket, String)</a></li>
+ </ul>
+ in the same request.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">reservationDurationInMinutes</span>
+						 - 
+						<span class="parameterDesc">reservation duration in minutes, specifying how long the reservation will last. The maximum value for the reservation duration is 240 minutes.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a Status instance with - Status.OK if all items could be reserved, otherwise Status.ERROR meaning no items were reserved.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_reserveInventory_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">reserveInventory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">reserveInventory</span>(reservationDurationInMinutes
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, removeIfNotAvailable
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Reserves inventory for all items in this basket for a specified amount of minutes. Any reservations created by
+ previous calls of this method will be reset to that amount of minutes.
+ </p>
+ <p>
+ The method can be used to reserve basket items before checkout to ensure that inventory is still available at the
+ time an order is created from the basket using <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a>. If all or some
+ basket items are not reserved before creating an order, <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a> will
+ validate item availability and will fail if any item is unavailable. Calling this method in the same request as
+ <a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a> is unnecessary and discouraged for performance reasons.
+ </p>
+ <p>
+ The maximum quantity that can be reserved at one time is equal to the ATS (Available To Sell) quantity. (See
+ <a href="class_dw_catalog_ProductInventoryRecord.html#dw_catalog_ProductInventoryRecord_getATS_DetailAnchor">ProductInventoryRecord.getATS()</a>.)
+ </p>
+ <p>
+ When using B2C Commerce inventory, reserving basket inventory does not reduce ATS. In this case, converting the
+ basket to an order reduces ATS by the reserved amount. For example, consider a product with an ATS quantity of 5
+ and no reservations. If a basket reserves a quantity of 3, then other baskets still see an ATS of 5 but can only
+ reserve a quantity of 2.
+ </p>
+ <p>
+ When using Omnichannel Inventory, reserving basket inventory reduces ATS. In this case, converting the basket to
+ an order doesn't reduce ATS. In the previous example, after the first basket reserved a quantity of 3, other
+ baskets would see an ATS of 2.
+ </p>
+ <p>
+ Reservations can only be made for products with an inventory record. The reservation of product bundles is
+ controlled by the <i>Use Bundle Inventory Only</i> setting on the inventory list. The setting allows inventory to
+ be reserved for just the bundle or for the bundle and its bundled products.
+ </p>
+ <p>
+ The following conditions must be met for the method to succeed:
+ <ul>
+ <li>an inventory list must be assigned to the current site</li>
+ <li>all products in the basket must exist, and must not be of type Master or ProductSet</li>
+ <li>each product line item must have a valid quantity</li>
+ <li>each product must have an inventory record, or the inventory list must define that products without inventory
+ record are available by default</li>
+ <li>the reservation must succeed for each item as described above or <code>removeIfNotAvailable</code> is set to
+ <code>true</code></li>
+ </ul>
+ </p>
+ <p>
+ The method implements its own transaction handling. Calling the method from inside a transaction is disallowed
+ and results in an exception being thrown. This behavior differs when calling the method from an <b>OCAPI
+ hook</b>. OCAPI hooks handle transactions themselves, so in this case there is also no need to do any transaction
+ handling, but to ensure the shortest possible locking of the inventory this method should only be called <i>as
+ the last step</i> in the OCAPI hook.
+ </p>
+ <p>
+ <a href="class_dw_order_Basket.html#dw_order_Basket_getInventoryReservationExpiry_DetailAnchor">getInventoryReservationExpiry()</a> can be used to determine when the expiration will expire.
+ </p>
+ <p>
+ If the reservation fails with an ERROR status, existing valid reservations for the basket will remain unchanged
+ but no new reservations will be made. This might lead to a partially reserved basket.
+ </p>
+ <p>
+ If the reservation succeeds with an OK status and <code>removeIfNotAvailable</code> is <code>true</code>, basket
+ line items quantities might have been changed or line items might have been removed. The returned
+ <a href="class_dw_system_Status.html">Status</a> object will contain information about the changes. Possible values for
+ <a href="class_dw_system_StatusItem.html#dw_system_StatusItem_getCode_DetailAnchor">StatusItem.getCode()</a> are:
+ <ul>
+ <li>BUNDLE_REMOVED - a bundle item was removed completely</li>
+ <li>ITEM_REMOVED - a product line item was removed completely</li>
+ <li>ITEM_QUANTITY_REDUCED - the quantity of a line item was reduced</li>
+ </ul>
+ <a href="class_dw_system_StatusItem.html#dw_system_StatusItem_getDetails_DetailAnchor">StatusItem.getDetails()</a> will contain for each item the <b>sku</b> and <b>uuid</b> of the item
+ which was changed/removed.
+ </p>
+ <p>
+ This method must not be used with
+ <ul>
+ <li>the <b>CreateOrder2</b> pipelet, or</li>
+ <li><a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_DetailAnchor">OrderMgr.createOrder(Basket)</a>, or</li>
+ <li><a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_createOrder_Basket_String_DetailAnchor">OrderMgr.createOrder(Basket, String)</a></li>
+ </ul>
+ in the same request.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">reservationDurationInMinutes</span>
+						 - 
+						<span class="parameterDesc">reservation duration in minutes, specifying how long the reservation will last. The maximum value for the reservation duration is 240 minutes.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">removeIfNotAvailable</span>
+						 - 
+						<span class="parameterDesc">if <code>true</code> is specified it will not fail if not the full quantity of the items can be reserved. Item quantity will be reduced to the quantity that could be reserved. Item will be removed if not at least quantity 1 for the item could be reserved. Different to that if a bundle line item cannot be reserved completely it will be removed including dependent line item (bundled items).</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a Status instance with - Status.OK meaning reservation process was successful. In case of <code>removeIfNotAvailable</code> is true, status might contain status items (<a href="class_dw_system_Status.html#dw_system_Status_getItems_DetailAnchor">Status.getItems()</a>) for each item that needed to be changed or removed. In the worst case this could result in an empty basket and no items reserved. A Status instance with - Status.ERROR will be returned if <code>removeIfNotAvailable</code> is false and not all items could be reserved fully or any unexpected error occurred.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_setBusinessType_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setBusinessType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setBusinessType</span>(aType
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the type of the business this order has been placed in.<br/>
+ Possible values are <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_BUSINESS_TYPE_B2C_DetailAnchor">LineItemCtnr.BUSINESS_TYPE_B2C</a> or <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_BUSINESS_TYPE_B2B_DetailAnchor">LineItemCtnr.BUSINESS_TYPE_B2B</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">aType</span>
+						 - 
+						<span class="parameterDesc">the business type to set for this basket</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_setChannelType_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setChannelType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setChannelType</span>(aType
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the channel type in which sales channel this order has been created. This can be used to distinguish order
+ placed through e.g. Storefront, Call Center or Marketplace.<br/>
+ Possible values are <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_STOREFRONT_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_STOREFRONT</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_CALLCENTER_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_CALLCENTER</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_MARKETPLACE_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_MARKETPLACE</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_DSS_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_DSS</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_STORE_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_STORE</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_PINTEREST_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_PINTEREST</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_TWITTER_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_TWITTER</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_FACEBOOKADS_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_FACEBOOKADS</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_SUBSCRIPTIONS_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_SUBSCRIPTIONS</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_ONLINERESERVATION_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_ONLINERESERVATION</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_INSTAGRAMCOMMERCE_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_INSTAGRAMCOMMERCE</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_GOOGLE_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_GOOGLE</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_YOUTUBE_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_YOUTUBE</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_TIKTOK_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_TIKTOK</a>,
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_SNAPCHAT_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_SNAPCHAT</a>, <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_WHATSAPP_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_WHATSAPP</a> The
+ value for <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_CHANNEL_TYPE_CUSTOMERSERVICECENTER_DetailAnchor">LineItemCtnr.CHANNEL_TYPE_CUSTOMERSERVICECENTER</a> is also available, but it can not be
+ set by the scripting API, it is set only internally.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">aType</span>
+						 - 
+						<span class="parameterDesc">the channel type to set for this basket</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_setCustomerNo_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setCustomerNo</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setCustomerNo</span>(customerNo
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the customer number of the customer associated with this container.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The method has been deprecated. Please use <a href="class_dw_order_Order.html#dw_order_Order_setCustomer_Customer_DetailAnchor">Order.setCustomer(Customer)</a> instead for registered customer. For guest customer the customerNo is usually generated during order creation and the attribute is set at order level.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customerNo</span>
+						 - 
+						<span class="parameterDesc">the customer number of the customer associated with this container.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_startCheckout_DetailAnchor"></a>
+                    <div class="detailName 
+						">startCheckout</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">startCheckout</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Register a "start checkout" event for the current basket. This event is tracked for AB test statistics
+ but otherwise has no effect on the basket. The system will register at most one checkout per basket per session.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Basket_updateCurrency_DetailAnchor"></a>
+                    <div class="detailName 
+						">updateCurrency</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">updateCurrency</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Updates the basket currency if different to session currency, otherwise does nothing.
+ <p>
+ Use <a href="class_dw_system_Session.html#dw_system_Session_setCurrency_Currency_DetailAnchor">Session.setCurrency(Currency)</a> to set the currency for the session. To reflect the session
+ currency change to the basket you need to update the basket with this method. This ensures that any upcoming
+ basket recalculation, which is based on the session currency, matches the basket currency.
+ </p>
+
+ <pre>
+ ...
+     if (basket.getBillingAddress().getCountryCode() == 'DE'){
+       var newCurrency : Currency = Currency.getCurrency('EUR');
+       session.setCurrency( newCurrency );
+       basket.updateCurrency();
+     }
+     customBasketRecalculate();
+ ...
+ </pre></div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

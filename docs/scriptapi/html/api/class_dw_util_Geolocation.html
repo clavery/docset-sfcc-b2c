@@ -1,0 +1,578 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Geolocation</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.util.Geolocation">
+            <a name="dw.util.Geolocation"></a>
+            <div class="packageName">dw.util</div>
+            <div class="className
+					">	
+        	
+				Class Geolocation</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.util.Geolocation
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Read-only class representing a position on the earth (latitude and longitude)
+ and information associated with that location (e.g. country, city, etc). The
+ Commerce Cloud Digital system can provide geolocation information for a Request
+ and this information can be used in customer group segmentation rules.
+ <p/>
+ Note: This class is not related to the store locator API (i.e. the
+ GetNearestStores pipelet) which uses a static set of store locations loaded
+ into the system by the merchant.
+ <p/>
+ This product includes GeoLite2 data created by MaxMind, available from <a
+ href="http://www.maxmind.com">http://www.maxmind.com</a>.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>available
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if a valid GeoLocation was found for the IP address
+ (meaning at least Latitude and Longitude were found), false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>city
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the city name in English associated with this location.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>countryCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the ISO country code associated with this location.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>countryName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the country name in English that the system associates with this location on the
+ earth.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>latitude
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the latitude coordinate associated with this location which is a
+ number between -90.0 and +90.0.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>longitude
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the longitude coordinate associated with this location which is a
+ number between -180.0 and +180.0.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>metroCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the metro code associated with this location.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>postalCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the postal code associated with this location.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>regionCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the region (e.g. province or state) code for this location.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>regionName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the region (e.g. province in state) name in English that the system
+ associates with this location.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_Geolocation_String_String_String_String_String_String_String_Number_Number_DetailAnchor"><span class="">Geolocation</span></a></span>(countryCode
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, countryName
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, regionCode
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, regionName
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, metroCode
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, city
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, postalCode
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, latitude
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, longitude
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)</span>
+                    <div class="description">Constructor for a Geolocation object</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getCity_DetailAnchor"><span class="">getCity</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the city name in English associated with this location.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getCountryCode_DetailAnchor"><span class="">getCountryCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the ISO country code associated with this location.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getCountryName_DetailAnchor"><span class="">getCountryName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the country name in English that the system associates with this location on the earth.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getLatitude_DetailAnchor"><span class="">getLatitude</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Get the latitude coordinate associated with this location which is a number between -90.0 and +90.0.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getLongitude_DetailAnchor"><span class="">getLongitude</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Get the longitude coordinate associated with this location which is a number between -180.0 and +180.0.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getMetroCode_DetailAnchor"><span class="">getMetroCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the metro code associated with this location.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getPostalCode_DetailAnchor"><span class="">getPostalCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the postal code associated with this location.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getRegionCode_DetailAnchor"><span class="">getRegionCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the region (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_getRegionName_DetailAnchor"><span class="">getRegionName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the region (e.g.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Geolocation_isAvailable_DetailAnchor"><span class="">isAvailable</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if a valid GeoLocation was found for the IP address (meaning at least Latitude and Longitude were found), false otherwise.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_Geolocation_String_String_String_String_String_String_String_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">Geolocation</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">Geolocation</span>(countryCode
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, countryName
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, regionCode
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, regionName
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, metroCode
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, city
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, postalCode
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, latitude
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, longitude
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+                    </div>
+                    <div class="description">Constructor for a Geolocation object</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">countryCode</span>
+						 - 
+						<span class="parameterDesc">the ISO country code associated with this location. The <a href="http://en.wikipedia.org/wiki/ISO_3166-1">two-character ISO 3166-1 alpha code</a> for the country.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">countryName</span>
+						 - 
+						<span class="parameterDesc">the country name in English that the system associates with this location on the earth.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">regionCode</span>
+						 - 
+						<span class="parameterDesc">the region (e.g. province or state) code for this location. This is a string up to three characters long containing the subdivision portion of the <a href="http://en.wikipedia.org/wiki/ISO_3166-2">code</a>.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">regionName</span>
+						 - 
+						<span class="parameterDesc">the region (e.g. province in state) name in English that the system associates with this location.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">metroCode</span>
+						 - 
+						<span class="parameterDesc">the metro code associated with this location. The metro code of the location if the location is in the US. See the <a href="https://developers.google.com/adwords/api/docs/appendix/cities-DMAregions"> Google AdWords API</a> for values</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">city</span>
+						 - 
+						<span class="parameterDesc">the city name in English associated with this location.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">postalCode</span>
+						 - 
+						<span class="parameterDesc">the postal code associated with this location.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">latitude</span>
+						 - 
+						<span class="parameterDesc">the latitude coordinate associated with this location which is a number between -90.0 and +90.0.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">longitude</span>
+						 - 
+						<span class="parameterDesc">the longitude coordinate associated with this location which is a number between -180.0 and +180.0.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getCity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCity</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the city name in English associated with this location.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the city that the system associates with this location on the earth.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getCountryCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCountryCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCountryCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the ISO country code associated with this location.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The <a href="http://en.wikipedia.org/wiki/ISO_3166-1">two-character ISO 3166-1 alpha code</a> for the country.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getCountryName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCountryName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCountryName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the country name in English that the system associates with this location on the
+ earth.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the country name that the system associates with this location on the earth.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getLatitude_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLatitude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLatitude</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Get the latitude coordinate associated with this location which is a
+ number between -90.0 and +90.0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The latitude of the location as a floating point number.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getLongitude_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLongitude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLongitude</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Get the longitude coordinate associated with this location which is a
+ number between -180.0 and +180.0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The longitude of the location as a floating point number.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getMetroCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMetroCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMetroCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the metro code associated with this location.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The metro code of the location if the location is in the US. See the <a href= "https://developers.google.com/adwords/api/docs/appendix/cities-DMAregions" >Google AdWords API</a> for returned values.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getPostalCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPostalCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPostalCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the postal code associated with this location.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The postal code of the location. Postal codes are not available for all countries. In some countries, this will only contain part of the postal code.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getRegionCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRegionCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRegionCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the region (e.g. province or state) code for this location.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This is a string up to three characters long containing the subdivision portion of the <a href="http://en.wikipedia.org/wiki/ISO_3166-2">code</a>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_getRegionName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRegionName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRegionName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the region (e.g. province in state) name in English that the system
+ associates with this location.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the region name that the system associates with this location on the earth.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Geolocation_isAvailable_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAvailable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAvailable</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if a valid GeoLocation was found for the IP address
+ (meaning at least Latitude and Longitude were found), false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">'true' if a valid GeoLocation was found for the IP address (meaning at least Latitude and Longitude were found), false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,320 @@
+/* body { 
+	font-family: Arial, Verdana, sans serif;
+	font-size: small; 
+} */
+
+.className {
+	margin: 0px 0px 0px 4px; 
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.classSummary {
+	margin: 10px 2px 2px 4px; 
+}
+
+.classSummaryDetail {
+	margin: 4px 0px 0px 20px; 
+}
+
+.dep {
+	text-decoration: line-through; 
+}
+
+.description {
+
+	/* top right bottom left */
+	margin: 8px 0px 4px 20px;
+
+}
+
+.detailItem {
+	/* top right bottom left */
+	margin: 4px 4px 4px 4px;
+}
+
+.detailName {
+
+	/* top right bottom left */
+	margin: 20px 4px 20px 0px;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.detailSignature {
+	/* top right bottom left */
+	margin: 10px 4px 4px 0px;
+	font-family: monospace;
+	font-size: 0.9em;
+}
+
+.classSection {
+	/* top right bottom left */
+	margin: 4px 10px 0px 20px; 
+}
+
+.emphasis {
+	font-weight: bold;
+}
+
+.banner {
+	/* top right bottom left */
+	margin: 10px 10px 10px 10px; 
+	background: #EEEEFF;
+}
+.bannerItem {
+	float: left;
+	background: #EEEEFF;
+	margin: 10px 10px 10px 10px; 
+	color: black;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+.bannerItem a {
+
+	font-weight: bold;
+	font-family:Arial,Helvetica,sans-serif;
+	text-decoration : underline;
+}
+
+.header {
+
+	padding: 4px;
+	background: #CCCCFF;
+	font-weight: bold;
+	font-size: 1.5em;
+	
+	border:solid;
+	border-width:1;
+	border-color:gray;
+}
+
+.classHeader {
+
+	padding: 4px;
+	background: #CCCEFF;
+	font-weight: bold;
+	font-size: 1.2em;
+	
+	border:solid;
+	border-width:1;
+	border-color:gray;
+}
+
+.subHeader {
+
+	padding: 4px;
+	background: #EEEEFF;
+	font-weight: bold;
+	border:solid;
+	border-width:1;
+	border-color:gray;
+}
+
+.hierarchy {
+	margin: 10px 2px 2px 4px; 
+}
+
+.packageName {
+	margin: 20px 0px 0px 4px; 
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.parameters {
+
+	/* top right bottom left */
+	margin: 20px 4px 4px 40px;
+
+}
+
+.parameterDetail {
+	/* top right bottom left */
+	margin: 4px 4px 4px 40px;
+}
+
+.parameterName {
+
+	font-family: monospace;
+	font-weight: lighter;
+	font-size: 0.9em;
+}
+
+.parameterTitle {
+
+	font-weight: bold;
+}
+
+.section {
+	/* top right bottom left */
+	margin: 10px 0px 0px 0px;
+}
+
+.summaryItem {
+
+	padding: 4px;
+	background: #FFFFFF;
+	font-size: 0.9em;
+	border:solid;
+	border-width:1;
+	border-color:gray;
+	border-top:none;
+}
+
+<!-- styles used in packageList.html -->
+
+.title {
+	margin: 22px 4px 4px 4px;
+	font-family:sans-serif;
+	font-weight:bold;
+}
+
+.allClasses {
+	margin: 8px 4px 4px 4px;
+	font-family:sans-serif;
+	font-size:0.9em;
+}
+
+.packageTitle {
+	margin: 20px 4px 4px 4px;
+	font-family:sans-serif;
+	font-size:0.9em;
+}
+
+.packagesName {
+	margin: 0px 0px 0px 4px;
+	font-family:sans-serif;
+	font-size:0.9em;
+}
+
+.classTitle {
+	margin: 15px 4px 4px 4px;
+	font-family:sans-serif;
+	font-size:0.9em;
+	font-weight:bold;
+}
+
+.classesName {
+	margin: 0px 0px 0px 4px;
+	font-family:sans-serif;
+	font-size:0.9em;
+}
+
+.packageGroup {
+	font-size:1.4em;
+	font-weight:bold;
+	margin: 4px 0px 10px 0px;
+}
+
+.packageClass {
+
+}
+
+.packageHeader {
+	font-size: 2.0em;
+
+}
+
+.topLevelDescription {
+	font-size:1.0em;
+	font-weight:normal;
+	margin: 1em 1em 1em 1em;
+}
+
+.outer {
+	margin: 0% 0% 0% 0%;
+	height:auto;
+}
+
+
+.left {
+		float:left;
+		width:35%;
+		height:auto;
+		padding: 4px;
+		border:solid;
+		border-width:1;
+		border-color:gray;
+		border-top:none;
+		background: #FFFFFF;
+	}
+
+.body {
+		float:left;
+		width:65%;
+		height:auto;
+		padding: 4px;
+		border:solid;
+		border-width:1;
+		border-color:gray;
+		border-top:none;
+		border-left:none;
+	}
+	
+.indexSection {
+	margin: 22px 22px 22px 22px;
+	font-family:sans-serif;
+	font-weight:bold;
+}
+
+.alignRight {
+  float: right;
+}
+.alignLeft {
+   float: left;
+}
+
+.copyright {
+    margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family:sans-serif;
+	font-size:0.9em;
+}
+
+.subclass {
+	margin: 0px 0px 0px 8px; 
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.subclasses {
+	/* top right bottom left */
+	margin: 8px 0px 4px 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+#page {
+      Min-height: 100%;
+      position:relative;
+}
+ 
+#main {
+      Padding-bottom: 75px;   /* This value is the height of your footer */
+}
+ 
+#footer {
+      Position: absolute;
+      Width: 100%;
+      Bottom: 0;
+      Height: 75px;  /* This value is the height of your footer */
+}
+
+
+table {border-collapse:collapse; width:100%;}
+table td {border:1px solid #CCCCCC; padding: 4px;}
+table td.summary {width:75%;}
+thead td {background: #C0C0C0; }
+table td.behavior {width:40%;}
+.newTitle {
+	font-size:1.3em;
+	font-weight:bold;	
+}
+.relation {
+	font-size:1.1em;
+	font-weight:bold;	
+}
+

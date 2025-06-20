@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet VerifyCreditCard</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet VerifyCreditCard</div>
+            <div class="topLevelDescription">Deprecated. Do not use this pipelet. Use the VerifyPaymentCard pipelet instead.<br/> 
+
+Verifies that the supplied CardNumber has a valid checksum and that the supplied ExpirationMonth and ExpirationYear fields specify a valid date in the future. If not then the the pipelet exits with an ERROR. The Status contains the error status of the validation and an additional error code.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">Deprecated. Do not use this pipelet. Use the VerifyPaymentCard pipelet instead.</div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket (deprecated)</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CardNumber</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The number of the credit card.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExpirationMonth</span>
+					&nbsp;:&nbsp;
+					Number
+							(Required)
+						</span>
+                    <div class="description">
+The expiration month of the card.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExpirationYear</span>
+					&nbsp;:&nbsp;
+					Number
+							(Required)
+						</span>
+                    <div class="description">
+The expiration year of the card.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The status of the validation. Can be one of the following:<br/><br/>
+
+OK - dw.system.Status.OK
+ERROR - dw.system.Status.ERROR
+
+Additionally a status code is provided in case an the status ERROR is returned. The status code can be one of the following:
+
+CREDITCARD_100 - Credit card number invalid
+CREDITCARD_110 - Credit card expired
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

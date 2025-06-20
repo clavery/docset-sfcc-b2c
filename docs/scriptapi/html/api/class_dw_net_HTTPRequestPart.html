@@ -1,0 +1,749 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class HTTPRequestPart</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.net.HTTPRequestPart">
+            <a name="dw.net.HTTPRequestPart"></a>
+            <div class="packageName">dw.net</div>
+            <div class="className
+					">	
+        	
+				Class HTTPRequestPart</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.net.HTTPRequestPart
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This represents a part in a multi-part HTTP POST request.
+ <p>
+ A part always has a name and value. The value may be a String, Bytes, or the contents of a File.
+ <p>
+ A character encoding may be specified for any of these, and the content type and a file name may additionally be
+ specified for the Bytes and File types.
+ <p/>
+ <b>Note:</b> when this class is used with sensitive data, be careful in persisting sensitive information.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>bytesValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the Bytes value of the part.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>contentType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The content type of this part.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>encoding
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the charset to be used to encode the string.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>fileName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the file name to use when sending a file part.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>fileValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_io_File.html"><span class="">File</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the file value of the part.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the name of the part.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>stringValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the string value of the part.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_String_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Construct a part representing a simple string name/value pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_String_String_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Construct a part representing a simple string name/value pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_File_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>)</span>
+                    <div class="description">Construct a part representing a name/File pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_Bytes_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, data
+									 : 
+									
+									<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>)</span>
+                    <div class="description">Construct a part representing a name/bytes pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_Bytes_String_String_String_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, data
+									 : 
+									
+									<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, contentType
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, fileName
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Construct a part representing a name/File pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_File_String_String_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>, contentType
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Construct a part representing a name/File pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_HTTPRequestPart_String_File_String_String_String_DetailAnchor"><span class="">HTTPRequestPart</span></a></span>(name
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+									 : 
+									
+									<a href="class_dw_io_File.html"><span class="">File</span></a>, contentType
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, fileName
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Construct a part representing a name/File pair.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getBytesValue_DetailAnchor"><span class="">getBytesValue</span></a></span>()
+						: 
+					<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a></span>
+                    <div class="description">Get the Bytes value of the part.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getContentType_DetailAnchor"><span class="">getContentType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the content type of this part.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getEncoding_DetailAnchor"><span class="">getEncoding</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the charset to be used to encode the string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getFileName_DetailAnchor"><span class="">getFileName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the file name to use when sending a file part.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getFileValue_DetailAnchor"><span class="">getFileValue</span></a></span>()
+						: 
+					<a href="class_dw_io_File.html"><span class="">File</span></a></span>
+                    <div class="description">Get the file value of the part.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the name of the part.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPRequestPart_getStringValue_DetailAnchor"><span class="">getStringValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Get the string value of the part.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a simple string name/value pair. The HTTP
+ message uses "US-ASCII" as the default character set for the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the part.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The string to post.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a simple string name/value pair. The HTTP
+ message uses the specified encoding or "US-ASCII" if null is passed
+ for the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the part.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The string to post.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">The charset to be used to encode the string, if null the default is used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a name/File pair. The HTTP message will use
+ "application/octet-stream" as the content type and "ISO-8859-1" as the character
+ set for the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the file part</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to post</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_Bytes_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, data
+								 : 
+								 					
+								<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a name/bytes pair. The HTTP message will use
+ "application/octet-stream" as the content type without a character set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the file part</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">data</span>
+						 - 
+						<span class="parameterDesc">The bytes to post</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_Bytes_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, data
+								 : 
+								 					
+								<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, contentType
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, fileName
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a name/File pair.
+ <p>
+ <ul>
+ <li>If both contentType and encoding are null, then the part will be defaulted to use "application/octet-stream"
+ as the content-type without an encoding.
+ <li>If only the encoding is null, then the contentType will be used without an encoding.
+ <li>If only the contentType is null, then it will be defaulted to "text/plain".
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the file part</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">data</span>
+						 - 
+						<span class="parameterDesc">The bytes to post</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">contentType</span>
+						 - 
+						<span class="parameterDesc">The content type for this part, if null or blank the default is used.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">the charset encoding for this part, if null or blank the default is used.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">fileName</span>
+						 - 
+						<span class="parameterDesc">The file name to use in the Mime header, or null to not use one.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_File_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, contentType
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a name/File pair.
+ <p>
+ <ul>
+ <li>If both contentType and encoding are null, then the part will be defaulted to use "application/octet-stream"
+ as the content-type and "ISO-8859-1" as the encoding.
+ <li>If only the encoding is null, then the contentType will be used without an encoding.
+ <li>If only the contentType is null, then it will be defaulted to "text/plain".
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the file part</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to post</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">contentType</span>
+						 - 
+						<span class="parameterDesc">The content type for this part, if null or blank the default is used.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">the charset encoding for this part, if null or blank the default is used</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_HTTPRequestPart_String_File_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPRequestPart</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPRequestPart</span>(name
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 					
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, contentType
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, fileName
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Construct a part representing a name/File pair.
+ <p>
+ <ul>
+ <li>If both contentType and encoding are null, then the part will be defaulted to use "application/octet-stream"
+ as the content-type and "ISO-8859-1" as the encoding.
+ <li>If only the encoding is null, then the contentType will be used without an encoding.
+ <li>If only the contentType is null, then it will be defaulted to "text/plain".
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the file part</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to post</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">contentType</span>
+						 - 
+						<span class="parameterDesc">The content type for this part, if null or blank the default is used.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">the charset encoding for this part, if null or blank the default is used</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">fileName</span>
+						 - 
+						<span class="parameterDesc">The file name to use in the Mime header, or null to use the name of the given file.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getBytesValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBytesValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBytesValue</span>()
+					 : 
+					<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    </div>
+                    <div class="description">Get the Bytes value of the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The Bytes value, or null if this part is not a Bytes part.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getContentType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getContentType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getContentType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the content type of this part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The content type, or null if content type was not specified.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getEncoding_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEncoding</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEncoding</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the charset to be used to encode the string.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The charset, or null if charset was not specified.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getFileName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFileName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFileName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the file name to use when sending a file part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">File name to use in the Mime header, or null for default behavior.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getFileValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFileValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFileValue</span>()
+					 : 
+					<a href="class_dw_io_File.html"><span class="">File</span></a>
+                    </div>
+                    <div class="description">Get the file value of the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The file value, or null if this part is not a file part.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the name of the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The part name, never null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPRequestPart_getStringValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStringValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStringValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Get the string value of the part.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The string value, or null if this part is not a string part.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

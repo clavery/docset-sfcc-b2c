@@ -1,0 +1,912 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Store</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.Store">
+            <a name="dw.catalog.Store"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class Store</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.catalog.Store
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a store in Commerce Cloud Digital.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>address1
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The address1 of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>address2
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The address2 of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>city
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The city of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>countryCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The countryCode of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>demandwarePosEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The demandwarePosEnabled flag for the store.
+ Indicates that this store uses Commerce Cloud Store for point-of-sale.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_Store.html#dw_catalog_Store_isPosEnabled_DetailAnchor">isPosEnabled()</a> instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>email
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The email of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>fax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The fax of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>image
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The store image.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>inventoryList
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The inventory list the store is associated with. If the
+ store is not associated with a inventory list, or the inventory list does not
+ exist, the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>inventoryListID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The inventory list id the store is associated with. If the
+ store is not associated with a inventory list, or the inventory list does not
+ exist, the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>latitude
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The latitude of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>longitude
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The longitude of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The name of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>phone
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The phone of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>posEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The posEnabled flag for the Store.
+ Indicates that this store uses Commerce Cloud Store for point-of-sale.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>postalCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The postalCode of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>stateCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The stateCode of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storeEvents
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The storeEvents of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storeGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All the store groups this store belongs to.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storeHours
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The storeHours of the store.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storeLocatorEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The storeLocatorEnabled flag for the store.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getAddress1_DetailAnchor"><span class="">getAddress1</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the address1 of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getAddress2_DetailAnchor"><span class="">getAddress2</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the address2 of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getCity_DetailAnchor"><span class="">getCity</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the city of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getCountryCode_DetailAnchor"><span class="">getCountryCode</span></a></span>()
+						: 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a></span>
+                    <div class="description">Returns the countryCode of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getEmail_DetailAnchor"><span class="">getEmail</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the email of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getFax_DetailAnchor"><span class="">getFax</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the fax of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getImage_DetailAnchor"><span class="">getImage</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the store image.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getInventoryList_DetailAnchor"><span class="">getInventoryList</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a></span>
+                    <div class="description">Returns the inventory list the store is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getInventoryListID_DetailAnchor"><span class="">getInventoryListID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the inventory list id the store is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getLatitude_DetailAnchor"><span class="">getLatitude</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the latitude of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getLongitude_DetailAnchor"><span class="">getLongitude</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the longitude of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getPhone_DetailAnchor"><span class="">getPhone</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the phone of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getPostalCode_DetailAnchor"><span class="">getPostalCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the postalCode of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getStateCode_DetailAnchor"><span class="">getStateCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the stateCode of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getStoreEvents_DetailAnchor"><span class="">getStoreEvents</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the storeEvents of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getStoreGroups_DetailAnchor"><span class="">getStoreGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all the store groups this store belongs to.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_getStoreHours_DetailAnchor"><span class="">getStoreHours</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the storeHours of the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_Store_isDemandwarePosEnabled_DetailAnchor"><span class="">isDemandwarePosEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the demandwarePosEnabled flag for the store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_isPosEnabled_DetailAnchor"><span class="">isPosEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the posEnabled flag for the Store.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Store_isStoreLocatorEnabled_DetailAnchor"><span class="">isStoreLocatorEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the storeLocatorEnabled flag for the store.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getAddress1_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAddress1</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAddress1</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the address1 of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">address1 of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getAddress2_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAddress2</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAddress2</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the address2 of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">address2 of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getCity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCity</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the city of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">city of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getCountryCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCountryCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCountryCode</span>()
+					 : 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                    </div>
+                    <div class="description">Returns the countryCode of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">countryCode of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getEmail_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEmail</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEmail</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the email of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">email of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getFax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFax</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the fax of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">fax of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">ID of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getImage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the store image.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the store image.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getInventoryList_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInventoryList</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInventoryList</span>()
+					 : 
+					<a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a>
+                    </div>
+                    <div class="description">Returns the inventory list the store is associated with. If the
+ store is not associated with a inventory list, or the inventory list does not
+ exist, the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">ProductInventoryList or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getInventoryListID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInventoryListID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInventoryListID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the inventory list id the store is associated with. If the
+ store is not associated with a inventory list, or the inventory list does not
+ exist, the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the inventory list id</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getLatitude_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLatitude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLatitude</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the latitude of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">latitude of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getLongitude_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLongitude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLongitude</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the longitude of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">longitude of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">name of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getPhone_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPhone</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPhone</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the phone of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">phone of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getPostalCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPostalCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPostalCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the postalCode of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">postalCode of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getStateCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStateCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStateCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the stateCode of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">stateCode of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getStoreEvents_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStoreEvents</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStoreEvents</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the storeEvents of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">storeEvents of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getStoreGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStoreGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStoreGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all the store groups this store belongs to.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">collection of store groups</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_getStoreHours_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStoreHours</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStoreHours</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the storeHours of the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">storeHours of the store</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_isDemandwarePosEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">isDemandwarePosEnabled</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">isDemandwarePosEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the demandwarePosEnabled flag for the store.
+ Indicates that this store uses Commerce Cloud Store for point-of-sale.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_Store.html#dw_catalog_Store_isPosEnabled_DetailAnchor">isPosEnabled()</a> instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the demandwarePosEnabled flag</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_isPosEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isPosEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isPosEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the posEnabled flag for the Store.
+ Indicates that this store uses Commerce Cloud Store for point-of-sale.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the posEnabled flag</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Store_isStoreLocatorEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isStoreLocatorEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isStoreLocatorEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the storeLocatorEnabled flag for the store.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the storeLocatorEnabled flag</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

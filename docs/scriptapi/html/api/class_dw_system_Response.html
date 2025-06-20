@@ -1,0 +1,992 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Response</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.system.Response">
+            <a name="dw.system.Response"></a>
+            <div class="packageName">dw.system</div>
+            <div class="className
+					">	
+        	
+				Class Response</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.system.Response
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents an HTTP response in Commerce Cloud Digital. An instance of this class is implicitly available within
+ Digital script under the variable "response". The Response object can be used to set cookies and specific HTTP
+ headers, for directly accessing the output stream or for sending redirects.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_ACCESS_CONTROL_ALLOW_CREDENTIALS_DetailAnchor"></a>ACCESS_CONTROL_ALLOW_CREDENTIALS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Access-Control-Allow-Credentials"
+                        <div class="description">An allowed header name constant for Access-Control-Allow-Credentials</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_ACCESS_CONTROL_ALLOW_HEADERS_DetailAnchor"></a>ACCESS_CONTROL_ALLOW_HEADERS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Access-Control-Allow-Headers"
+                        <div class="description">An allowed header name constant for Access-Control-Allow-Headers</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_ACCESS_CONTROL_ALLOW_METHODS_DetailAnchor"></a>ACCESS_CONTROL_ALLOW_METHODS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Access-Control-Allow-Methods"
+                        <div class="description">An allowed header name constant for Access-Control-Allow-Methods</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_ACCESS_CONTROL_ALLOW_ORIGIN_DetailAnchor"></a>ACCESS_CONTROL_ALLOW_ORIGIN
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Access-Control-Allow-Origin"
+                        <div class="description">An allowed header name constant for Access-Control-Allow-Origin</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_ACCESS_CONTROL_EXPOSE_HEADERS_DetailAnchor"></a>ACCESS_CONTROL_EXPOSE_HEADERS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Access-Control-Expose-Headers"
+                        <div class="description">An allowed header name constant for Access-Control-Expose-Headers</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_ALLOW_DetailAnchor"></a>ALLOW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Allow"
+                        <div class="description">An allowed header name constant for Allow</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_DISPOSITION_DetailAnchor"></a>CONTENT_DISPOSITION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-Disposition"
+                        <div class="description">An allowed header name constant for Content-Disposition</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_LANGUAGE_DetailAnchor"></a>CONTENT_LANGUAGE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-Language"
+                        <div class="description">An allowed header name constant for Content-Language</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_LOCATION_DetailAnchor"></a>CONTENT_LOCATION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-Location"
+                        <div class="description">An allowed header name constant for Content-Location</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_MD5_DetailAnchor"></a>CONTENT_MD5
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-MD5"
+                        <div class="description">An allowed header name constant for Content-MD5</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_SECURITY_POLICY_DetailAnchor"></a>CONTENT_SECURITY_POLICY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-Security-Policy"
+                        <div class="description">An allowed header name constant for Content-Security-Policy.
+ <p/>
+ Note: The Commerce Cloud platform can override this header for tools like the Storefront Toolkit.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_SECURITY_POLICY_REPORT_ONLY_DetailAnchor"></a>CONTENT_SECURITY_POLICY_REPORT_ONLY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-Security-Policy-Report-Only"
+                        <div class="description">An allowed header name constant for Content-Security-Policy-Report-Only.
+ <p/>
+ You can set this response header only for storefront requests. Report recipient can't be a B2C Commerce system.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CONTENT_TYPE_DetailAnchor"></a>CONTENT_TYPE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Content-Type"
+                        <div class="description">An allowed header name constant for Content-Type</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CROSS_ORIGIN_EMBEDDER_POLICY_DetailAnchor"></a>CROSS_ORIGIN_EMBEDDER_POLICY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Cross-Origin-Embedder-Policy"
+                        <div class="description">An allowed header name constant for Cross-Origin-Embedder-Policy</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CROSS_ORIGIN_EMBEDDER_POLICY_REPORT_ONLY_DetailAnchor"></a>CROSS_ORIGIN_EMBEDDER_POLICY_REPORT_ONLY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Cross-Origin-Embedder-Policy-Report-Only"
+                        <div class="description">An allowed header name constant for Cross-Origin-Embedder-Policy-Report-Only.
+ <p/>
+ You can set this response header only for storefront requests. Report recipient can't be a B2C Commerce system.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CROSS_ORIGIN_OPENER_POLICY_DetailAnchor"></a>CROSS_ORIGIN_OPENER_POLICY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Cross-Origin-Opener-Policy"
+                        <div class="description">An allowed header name constant for Cross-Origin-Opener-Policy</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CROSS_ORIGIN_OPENER_POLICY_REPORT_ONLY_DetailAnchor"></a>CROSS_ORIGIN_OPENER_POLICY_REPORT_ONLY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Cross-Origin-Opener-Policy-Report-Only"
+                        <div class="description">An allowed header name constant for Cross-Origin-Opener-Policy-Report-Only.
+ <p/>
+ You can set this response header only for storefront requests. Report recipient can't be a B2C Commerce system.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_CROSS_ORIGIN_RESOURCE_POLICY_DetailAnchor"></a>CROSS_ORIGIN_RESOURCE_POLICY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Cross-Origin-Resource-Policy"
+                        <div class="description">An allowed header name constant for Cross-Origin-Resource-Policy</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_LINK_DetailAnchor"></a>LINK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Link"
+                        <div class="description">An allowed header name constant for Link</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_LOCATION_DetailAnchor"></a>LOCATION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Location"
+                        <div class="description">An allowed header name constant for Location</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_PERMISSIONS_POLICY_DetailAnchor"></a>PERMISSIONS_POLICY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Permissions-Policy"
+                        <div class="description">An allowed header name constant for Permissions-Policy</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_PLATFORM_FOR_PRIVACY_PREFERENCES_PROJECT_DetailAnchor"></a>PLATFORM_FOR_PRIVACY_PREFERENCES_PROJECT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"P3P"
+                        <div class="description">An allowed header name constant for Platform for Privacy Preferences Project</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_REFERRER_POLICY_DetailAnchor"></a>REFERRER_POLICY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Referrer-Policy"
+                        <div class="description">An allowed header name constant for Referrer-Policy</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_REFRESH_DetailAnchor"></a>REFRESH
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Refresh"
+                        <div class="description">An allowed header name constant for Refresh</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_RETRY_AFTER_DetailAnchor"></a>RETRY_AFTER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Retry-After"
+                        <div class="description">An allowed header name constant for Retry-After</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_SERVICE_WORKER_ALLOWED_DetailAnchor"></a>SERVICE_WORKER_ALLOWED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"service-worker-allowed"
+                        <div class="description">An allowed header name constant for service-worker-allowed</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_VARY_DetailAnchor"></a>VARY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"Vary"
+                        <div class="description">An allowed header name constant for Vary</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_CONTENT_TYPE_OPTIONS_DetailAnchor"></a>X_CONTENT_TYPE_OPTIONS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"X-Content-Type-Options"
+                        <div class="description">An allowed header name constant for X-Content-Type-Options</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_FRAME_OPTIONS_DetailAnchor"></a>X_FRAME_OPTIONS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"X-FRAME-OPTIONS"
+                        <div class="description">An allowed header name constant for X-FRAME-OPTIONS.
+ <p/>
+ Note: The Commerce Cloud platform can override this header for tools like the Storefront Toolkit.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_FRAME_OPTIONS_ALLOW_FROM_DetailAnchor"></a>X_FRAME_OPTIONS_ALLOW_FROM
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"ALLOW-FROM"
+                        <div class="description">An allowed value ALLOW-FROM for X-FRAME-OPTIONS</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_FRAME_OPTIONS_DENY_VALUE_DetailAnchor"></a>X_FRAME_OPTIONS_DENY_VALUE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"DENY"
+                        <div class="description">An allowed value DENY for X-FRAME-OPTIONS</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_FRAME_OPTIONS_SAMEORIGIN_VALUE_DetailAnchor"></a>X_FRAME_OPTIONS_SAMEORIGIN_VALUE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"SAMEORIGIN"
+                        <div class="description">An allowed value SAME-ORIGIN value for X-FRAME-OPTIONS</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_ROBOTS_TAG_DetailAnchor"></a>X_ROBOTS_TAG
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"X-Robots-Tag"
+                        <div class="description">An allowed header name constant for X-Robots-Tag</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Response_X_XSS_PROTECTION_DetailAnchor"></a>X_XSS_PROTECTION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"X-XSS-Protection"
+                        <div class="description">An allowed header name constant for X-XSS-Protection</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>writer
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_io_PrintWriter.html"><span class="">PrintWriter</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A print writer which can be used to print content directly to the response.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_addHttpCookie_Cookie_DetailAnchor"><span class="">addHttpCookie</span></a></span>(cookie
+								 : 	
+								 
+								<a href="class_dw_web_Cookie.html"><span class="">Cookie</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds the specified cookie to the outgoing response.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_addHttpHeader_String_String_DetailAnchor"><span class="">addHttpHeader</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a response header with the given name and value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_containsHttpHeader_String_DetailAnchor"><span class="">containsHttpHeader</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Checks whether the response message header has a field with the specified name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_getWriter_DetailAnchor"><span class="">getWriter</span></a></span>()
+						: 
+					<a href="class_dw_io_PrintWriter.html"><span class="">PrintWriter</span></a></span>
+                    <div class="description">Returns a print writer which can be used to print content directly to the response.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_redirect_URL_DetailAnchor"><span class="">redirect</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sends a temporary redirect response (HTTP status 302) to the client for the specified redirect location URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_redirect_URL_Number_DetailAnchor"><span class="">redirect</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, status
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sends a redirect response with the given status to the client for the specified redirect location URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_redirect_String_DetailAnchor"><span class="">redirect</span></a></span>(location
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sends a temporary redirect response (HTTP status 302) to the client for the specified redirect location URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_redirect_String_Number_DetailAnchor"><span class="">redirect</span></a></span>(location
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, status
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sends a redirect response with the given status to the client for the specified redirect location URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_redirect_URLRedirect_DetailAnchor"><span class="">redirect</span></a></span>(redirect
+								 : 	
+								 
+								<a href="class_dw_web_URLRedirect.html"><span class="">URLRedirect</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sends a redirect response with the given status to the client for the specified redirect location URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setBuffered_Boolean_DetailAnchor"><span class="">setBuffered</span></a></span>(buffered
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Sets whether the output should be buffered or streamed directly to the client.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setContentType_String_DetailAnchor"><span class="">setContentType</span></a></span>(contentType
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the content type for this response.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setExpires_Number_DetailAnchor"><span class="">setExpires</span></a></span>(expires
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the cache expiration time for the response.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setExpires_Date_DetailAnchor"><span class="">setExpires</span></a></span>(expires
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Convenience method for <a href="class_dw_system_Response.html#dw_system_Response_setExpires_Number_DetailAnchor">setExpires(Number)</a> which takes a Date object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setHttpHeader_String_String_DetailAnchor"><span class="">setHttpHeader</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a response header with the given name and value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setStatus_Number_DetailAnchor"><span class="">setStatus</span></a></span>(status
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the HTTP response code.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Response_setVaryBy_String_DetailAnchor"><span class="">setVaryBy</span></a></span>(varyBy
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Marks the response as personalized with the given variant identifier.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_addHttpCookie_Cookie_DetailAnchor"></a>
+                    <div class="detailName 
+						">addHttpCookie</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addHttpCookie</span>(cookie
+								 : 
+								 
+								<a href="class_dw_web_Cookie.html"><span class="">Cookie</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds the specified cookie to the outgoing response. This method can be called multiple times to set more than one
+ cookie. If a cookie with the same cookie name, domain and path is set multiple times for the same response, only
+ the last set cookie with this name is sent to the client. This method can be used to set, update or delete
+ cookies at the client. If the cookie doesn't exist at the client, it is set initially. If a cookie with the same
+ name, domain and path already exists at the client, it is updated. A cookie can be deleted at the client by
+ submitting a cookie with the maxAge attribute set to 0 (see <code>Cookie.setMaxAge()
+ </code> for more information).
+
+ <pre>
+ <u>Example, how a cookie can be deleted at the client:</u><br/>
+ var cookie : Cookie = new Cookie("SomeName", "Simple Value");<br/>
+ cookie.setMaxAge(0);<br/>
+ response.addHttpCookie(cookie);<br/>
+ </pre>
+
+ You can't set a cookie's SameSite attribute using the API. The server sets SameSite to None if either the
+ developer sets the cookie's Secure flag or the global security preference Enforce HTTPS is enabled, in which case
+ the Secure flag is also set. Otherwise, the server doesn't set the SameSite attribute and the browser uses its
+ own default SameSite setting. The SameSite attribute is not sent with a cookie if the server detects that the
+ client doesn't correctly interpret the attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">cookie</span>
+						 - 
+						<span class="parameterDesc">a Cookie object</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_addHttpHeader_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addHttpHeader</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addHttpHeader</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a response header with the given name and value. This method allows response headers to have multiple
+ values.
+ <p/>
+ For public headers, only the names listed in the "Constants" section are allowed. Custom header names must begin
+ with the prefix "X-SF-CC-" and can contain only alphanumeric characters, dash, and underscore.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name to use for the response header.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_containsHttpHeader_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">containsHttpHeader</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">containsHttpHeader</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Checks whether the response message header has a field with the specified name.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_getWriter_DetailAnchor"></a>
+                    <div class="detailName 
+						">getWriter</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getWriter</span>()
+					 : 
+					<a href="class_dw_io_PrintWriter.html"><span class="">PrintWriter</span></a>
+                    </div>
+                    <div class="description">Returns a print writer which can be used to print content directly to the response.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_redirect_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">redirect</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">redirect</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sends a temporary redirect response (HTTP status 302) to the client for the specified redirect location URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the URL object for the target location, must be not null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_redirect_URL_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">redirect</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">redirect</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, status
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sends a redirect response with the given status to the client for the specified redirect location URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the URL object with the redirect location, must be not null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">the status code for this redirect, must be 301, 302 or 307</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_redirect_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">redirect</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">redirect</span>(location
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sends a temporary redirect response (HTTP status 302) to the client for the specified redirect location URL. The
+ target location must be a relative or an absolute URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">location</span>
+						 - 
+						<span class="parameterDesc">the target location as a string, must be not empty</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_redirect_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">redirect</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">redirect</span>(location
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, status
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sends a redirect response with the given status to the client for the specified redirect location URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">location</span>
+						 - 
+						<span class="parameterDesc">the redirect location, must be not empty</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">the status code for this redirect, must be 301, 302 or 307</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_redirect_URLRedirect_DetailAnchor"></a>
+                    <div class="detailName 
+						">redirect</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">redirect</span>(redirect
+								 : 
+								 
+								<a href="class_dw_web_URLRedirect.html"><span class="">URLRedirect</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sends a redirect response with the given status to the client for the specified redirect location URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">redirect</span>
+						 - 
+						<span class="parameterDesc">the URLRedirect object with the location and status, must be not null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setBuffered_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setBuffered</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setBuffered</span>(buffered
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets whether the output should be buffered or streamed directly to the client. By default, buffering is enabled.
+ The mode can only be changed before anything has been written to the response. Switching buffering off and using
+ streaming mode is recommended for sending large responses.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">buffered</span>
+						 - 
+						<span class="parameterDesc">if true, buffering is used, if false the response will be streamed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setContentType_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setContentType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setContentType</span>(contentType
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the content type for this response. This method may only be called before any output is written to the
+ response.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">contentType</span>
+						 - 
+						<span class="parameterDesc">the MIME type of the content, like "text/html", "application/json" etc.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setExpires_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setExpires</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setExpires</span>(expires
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the cache expiration time for the response. The response will only be cached if caching was not disabled
+ previously. By default, responses are not cached. This method can be called multiple times during request
+ processing. If caching is enabled, the lowest expiration time, resulting from the invocations of the method
+ becomes the cache expiration time. This is only used for HTTP requests. Streamed responses cannot be cached. This
+ method is an alternative for setting the cache time using the &lt;iscache&gt; tag in ISML templates.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expires</span>
+						 - 
+						<span class="parameterDesc">the expiration time in milliseconds since January 1, 1970, 00:00:00 GMT</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setExpires_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setExpires</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setExpires</span>(expires
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Convenience method for <a href="class_dw_system_Response.html#dw_system_Response_setExpires_Number_DetailAnchor">setExpires(Number)</a> which takes a Date object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expires</span>
+						 - 
+						<span class="parameterDesc">a Date object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setHttpHeader_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setHttpHeader</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setHttpHeader</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a response header with the given name and value. If one or more value(s) have already been set, the new
+ value overwrites the previous one. The <a href="class_dw_system_Response.html#dw_system_Response_containsHttpHeader_String_DetailAnchor">containsHttpHeader(String)</a> method can be used to test for the
+ presence of a header before setting its value.
+ <p/>
+ For public headers, only the names listed in the "Constants" section are allowed. Custom header names must begin
+ with the prefix "X-SF-CC-" and can contain only alphanumeric characters, dash, and underscore.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name to use for the response header.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setStatus_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStatus</span>(status
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the HTTP response code.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">a standard-conform HTTP status code, for example 200 for "OK"</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Response_setVaryBy_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setVaryBy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setVaryBy</span>(varyBy
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Marks the response as personalized with the given variant identifier. Commerce Cloud Digital identifies unique
+ pages based on a combination of pricebook, promotion, sorting rule and A/B test segments, caches the different
+ variants of the page, and then delivers the correct version to the user. If a page is personalized by means other
+ than pricebook, promotion, sorting rule and A/B test, the page must not be cached, because the wrong variants of
+ the page would be delivered to the user. For performance reasons, a page should only be marked as personalized if
+ it really is. Otherwise, the performance can unnecessarily degrade.
+ <p>
+ This method has the same effect as using &lt;iscache varyby="price_promotion" /&gt; tag in an ISML template. Once
+ the vary-by value was set, either using this method or by the &lt;iscache&gt; tag in a template, the entire
+ response is treated as personalized.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">varyBy</span>
+						 - 
+						<span class="parameterDesc">the variation criteria, currently only "price_promotion" is supported, any other value has no effect</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

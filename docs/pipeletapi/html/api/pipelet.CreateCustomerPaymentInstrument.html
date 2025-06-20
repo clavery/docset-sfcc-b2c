@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateCustomerPaymentInstrument</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet CreateCustomerPaymentInstrument</div>
+            <div class="topLevelDescription">Creates a persistent CustomerPaymentInstrument for the specified Customer.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PaymentMethod</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The type of payment instrument.
+See dw.order.PaymentInstrument constants.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Customer</span>
+					&nbsp;:&nbsp;
+					Customer
+							(Required)
+						</span>
+                    <div class="description">
+Customer to create payment instrument for. Must represent registered customer, otherwise pipelet throws exception.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PaymentInstrument</span>
+					&nbsp;:&nbsp;
+					CustomerPaymentInstrument
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+A newly created CustomerPaymentInstrument associated with the passed in basket.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

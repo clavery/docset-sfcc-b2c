@@ -1,0 +1,237 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ExportOrders</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    ExportOrders</div>
+            <div class="topLevelDescription">Exports all orders matching the selected criteria using Search Service, with a maximum of 1000 orders per run. After an order has been exported successfully, its export status is EXPORTED. If an order did not export successfully, its order export status is FAILED. This job step is intended to export orders at recurring intervals. To include all orders that are ready to be exported (up to 1000), set the filter criteria to Export Status = READY FOR EXPORT.</div>
+            <div class="topLevelDescription"></div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Canceled</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Include orders in order status CANCELED.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Completed</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Include orders in order status COMPLETED.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Confirmation Status</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The confirmation status.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                All, Not Confirmed, Confirmed</div>
+                    <div class="description">
+                                                Default Value:
+                                                All</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Created</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Deprecated. Created orders cannot be exported.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Export Status</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The export status. Recommendation is to use READY FOR EXPORT to signal the export is needed.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                All, Not Exported, Exported, Ready for Export, Export Failed</div>
+                    <div class="description">
+                                                Default Value:
+                                                Ready for Export</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Export file name and path relative to 'IMPEX/src'. Required if not using FileNamePrefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Failed</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Deprecated. Failed orders cannot be exported.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileNamePrefix</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Prefix for the export file. A timestamp is appended and site information as applicable. To order the files chronologically, sort alphanumerically. Path is relative to 'IMPEX/src' and can include a subdirectory. Required if not using ExportFile.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">New</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Include orders in order status NEW.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Open</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Include orders in order status OPEN.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OverwriteExportFile</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">If selected, the option overwrites an existing file. If not selected and a file exists, the job step exits and reports an error.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Payment Status</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The payment status.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                All, Not Paid, Partially Paid, Paid</div>
+                    <div class="description">
+                                                Default Value:
+                                                All</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Replaced</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Include orders in order status REPLACED.</div>
+                    <div class="description">
+                                                Default Value:
+                                                true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Shipment Status</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The shipment status.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                All, Not Shipped, Partially Shipped, Shipped</div>
+                    <div class="description">
+                                                Default Value:
+                                                All</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Use Order Export Delay</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">See 'Order Export Delay' at 'Site Preferences' -&gt; 'Order Preferences' -&gt; 'Order Export Settings'</div>
+                    <div class="description">
+                                                Default Value:
+                                                false</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Step exit status used when the export finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Step exit status used when the export failed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

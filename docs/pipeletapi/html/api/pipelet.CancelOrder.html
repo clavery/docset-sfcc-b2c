@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CancelOrder</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet CancelOrder</div>
+            <div class="topLevelDescription">This pipelet cancels a previously created order. If the previously created order has been exported or is already canceled, this pipelet ends on the error transition with an appropriate status code. See OrderProcessStatusCodes for a list of possible status code values. Since api version 2.10.6 this pipelet updates the level of the finalized inventory so that the items in the order are returned.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Order</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CancelGiftCertificateOrders</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Used to control if the pipelet will cancel orders that contain gift certificate line items. If set to true, the specified order will be cancelled regardless of whether it contains gift certificate line items or not. Note that the gift certificate(s) that have been created for the order will not be deleted by this pipelet. If set to false, the specified order won't be cancelled if it contains any gift certificate line items, and the pipelet will return at the ERROR exit. If the parameter is undefined, false will be used as the default.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CancelCode</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+A code to use to identify why the order was canceled.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CancelDescription</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+A string that describes why the order was canceled.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Order</span>
+					&nbsp;:&nbsp;
+					Order
+							(Required)
+						</span>
+                    <div class="description">
+The order that you want to cancel.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CancelOrderStatus</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The status of the operation. See OrderProcessStatusCodes for a list of possible status values.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

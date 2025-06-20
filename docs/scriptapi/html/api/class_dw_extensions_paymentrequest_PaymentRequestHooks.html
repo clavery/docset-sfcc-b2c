@@ -1,0 +1,563 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PaymentRequestHooks</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.paymentrequest.PaymentRequestHooks">
+            <a name="dw.extensions.paymentrequest.PaymentRequestHooks"></a>
+            <div class="packageName">dw.extensions.paymentrequest</div>
+            <div class="className
+					 dep">	
+        	
+				Class PaymentRequestHooks</div>
+            <div class="hierarchy">
+                <div style="position:relative;left:1%;">
+                    <img src="images/inherit.gif">dw.extensions.paymentrequest.PaymentRequestHooks
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">PaymentRequestHooks interface containing extension points for customizing Payment Requests.
+ <p/>
+ These hooks are executed in a transaction.
+ <p/>
+ The extension points (hook names), and the functions that are called by each extension point. A function must be
+ defined inside a JavaScript source and must be exported. The script with the exported hook function must be located
+ inside a site cartridge. Inside the site cartridge a 'package.json' file with a 'hooks' entry must exist.
+ <p/>
+
+ <pre>
+ "hooks": "./hooks.json"
+ </pre>
+
+ The hooks entry links to a json file, relative to the 'package.json' file. This file lists all registered hooks
+ inside the hooks property:
+ <p/>
+
+ <pre>
+ "hooks": [
+      {"name": "dw.extensions.paymentrequest.getPaymentRequest", "script": "./paymentrequest.ds"}
+      {"name": "dw.extensions.paymentrequest.shippingAddressChange", "script": "./paymentrequest.ds"}
+ ]
+ </pre>
+ <p/>
+ A hook entry has a 'name' and a 'script' property.
+ <ul>
+ <li>The 'name' contains the extension point, the hook name.</li>
+ <li>The 'script' contains the script relative to the hooks file, with the exported hook function.</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Salesforce Payments includes support for Google Pay</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_paymentrequest_PaymentRequestHooks_extensionPointAbort_DetailAnchor"></a>extensionPointAbort
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.paymentrequest.abort"
+                        <div class="description">The extension point name dw.extensions.paymentrequest.abort.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_paymentrequest_PaymentRequestHooks_extensionPointGetPaymentRequest_DetailAnchor"></a>extensionPointGetPaymentRequest
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.paymentrequest.getPaymentRequest"
+                        <div class="description">The extension point name dw.extensions.paymentrequest.getPaymentRequest.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_paymentrequest_PaymentRequestHooks_extensionPointPaymentAcceptedAuthorizeOrderPayment_DetailAnchor"></a>extensionPointPaymentAcceptedAuthorizeOrderPayment
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.paymentrequest.paymentAccepted.authorizeOrderPayment"
+                        <div class="description">The extension point name dw.extensions.paymentrequest.paymentAccepted.authorizeOrderPayment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_paymentrequest_PaymentRequestHooks_extensionPointPaymentAcceptedPlaceOrder_DetailAnchor"></a>extensionPointPaymentAcceptedPlaceOrder
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.paymentrequest.paymentAccepted.placeOrder"
+                        <div class="description">The extension point name .</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_paymentrequest_PaymentRequestHooks_extensionPointShippingAddressChange_DetailAnchor"></a>extensionPointShippingAddressChange
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.paymentrequest.shippingAddressChange"
+                        <div class="description">The extension point name .</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_paymentrequest_PaymentRequestHooks_extensionPointShippingOptionChange_DetailAnchor"></a>extensionPointShippingOptionChange
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.paymentrequest.shippingOptionChange"
+                        <div class="description">The extension point name dw.extensions.paymentrequest.shippingOptionChange.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_paymentrequest_PaymentRequestHooks_abort_Basket_DetailAnchor"><span class="">abort</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a></span>
+                    <div class="description"><p> Called after the Payment Request user interface was canceled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_paymentrequest_PaymentRequestHooks_authorizeOrderPayment_Order_Object_DetailAnchor"><span class="">authorizeOrderPayment</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, response
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Called after the shopper accepts the Payment Request payment for the given order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_paymentrequest_PaymentRequestHooks_getPaymentRequest_Basket_Object_DetailAnchor"><span class="">getPaymentRequest</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, parameters
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a></span>
+                    <div class="description"><p> Called to get the <code>PaymentRequest</code> constructor parameters for the given basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_paymentrequest_PaymentRequestHooks_placeOrder_Order_DetailAnchor"><span class="">placeOrder</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a></span>
+                    <div class="description"><p> Called after payment has been authorized and the given Payment Request order is ready to be placed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_paymentrequest_PaymentRequestHooks_shippingAddressChange_Basket_Object_DetailAnchor"><span class="">shippingAddressChange</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, details
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a></span>
+                    <div class="description"><p> Called after handling the Payment Request <code>shippingaddresschange</code> event for the given basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_paymentrequest_PaymentRequestHooks_shippingOptionChange_Basket_ShippingMethod_Object_DetailAnchor"><span class="">shippingOptionChange</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, shippingMethod
+								 : 	
+								 
+								<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>, details
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a></span>
+                    <div class="description"><p> Called after handling the Payment Request <code>shippingoptionchange</code> event for the given basket.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_paymentrequest_PaymentRequestHooks_abort_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">abort</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">abort</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called after the Payment Request user interface was canceled. The given basket is the one that was passed to other
+ hooks earlier in the Payment Request checkout process.
+ </p>
+ <p>
+ It is not guaranteed that this hook will be executed for all Payment Request user interfaces canceled by shoppers or
+ otherwise ended without a successful order. Calls to this hook are provided on a best-effort basis.
+ </p>
+ <p>
+ If the returned result includes a redirect URL, the shopper browser will be navigated to that URL if possible. It
+ is not guaranteed that the response with the hook result will be handled in the shopper browser in all cases.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">the basket that was being checked out using Payment Request</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_paymentrequest_PaymentRequestHooks_authorizeOrderPayment_Order_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">authorizeOrderPayment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">authorizeOrderPayment</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, response
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called after the shopper accepts the Payment Request payment for the given order. Basket customer information,
+ billing address, and/or shipping address for the default shipment will have already been updated to reflect the
+ available contact information provided by Payment Request. Any preexisting payment instruments on the basket will
+ have been removed, and a single <code>DW_ANDROID_PAY</code> payment instrument added for the total amount. The
+ given order will have been created from this updated basket.
+ </p>
+ <p>
+ The purpose of this hook is to authorize the Payment Request payment for the order. If a non-error status is returned
+ that means that you have successfully authorized the payment with your payment service provider. Your hook
+ implementation must set the necessary payment status and transaction identifier data on the order as returned by
+ the provider.
+ </p>
+ <p>
+ Return an error status to indicate a problem, including unsuccessful authorization.
+ </p>
+ <p>
+ See the <a href="https://www.w3.org/TR/payment-request">Payment Request API</a> for more information.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order paid using Payment Request</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">response</span>
+						 - 
+						<span class="parameterDesc">response to the accepted <code>PaymentRequest</code></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null status ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_paymentrequest_PaymentRequestHooks_getPaymentRequest_Basket_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentRequest</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentRequest</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, parameters
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called to get the <code>PaymentRequest</code> constructor parameters for the given basket. You can
+ set properties in the given <code>parameters</code> object to extend or override default properties set
+ automatically based on the Google Pay configuration for your site.
+ </p>
+ <p>
+ The <code>parameters</code> object will contain the following properties by default:
+ <ul>
+ <li><code>methodData</code> - array containing payment methods the web site accepts</li>
+ <li><code>details</code> - information about the transaction that the user is being asked to complete</li>
+ <li><code>options</code> - information about what options the web page wishes to use from the payment request system</li>
+ </ul>
+ </p>
+ <p>
+ Return a result with an error status to indicate a problem.
+ </p>
+ <p>
+ If the returned result includes a redirect URL, the shopper browser will be navigated to that URL if the Payment
+ Request user interaction is canceled.
+ </p>
+ <p>
+ See the <a href="https://www.w3.org/TR/payment-request">Payment Request API</a> for more information.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">the basket for the Payment Request request</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">parameters</span>
+						 - 
+						<span class="parameterDesc">object containing <code>PaymentRequest</code> constructor parameters</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_paymentrequest_PaymentRequestHooks_placeOrder_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">placeOrder</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">placeOrder</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called after payment has been authorized and the given Payment Request order is ready to be placed. The purpose of
+ this hook is to place the order, or return a redirect URL that results in the order being placed when the shopper
+ browser is navigated to it.
+ </p>
+ <p>
+ The default implementation of this hook returns a redirect to <code>COPlaceOrder-Submit</code> with URL
+ parameters <code>order_id</code> set to <a href="class_dw_order_Order.html#dw_order_Order_getOrderNo_DetailAnchor">Order.getOrderNo()</a> and <code>order_token</code> set to
+ <a href="class_dw_order_Order.html#dw_order_Order_getOrderToken_DetailAnchor">Order.getOrderToken()</a> which corresponds to SiteGenesis-based implementations. Your hook
+ implementation should return a result with a different redirect URL as necessary to place the order and show an
+ order confirmation.
+ </p>
+ <p>
+ Alternatively, your hook implementation itself can place the order and return a result with a redirect URL to an
+ order confirmation page that does not place the order. This is inconsistent with SiteGenesis-based
+ implementations so is not the default.
+ </p>
+ <p>
+ Return an error status to indicate a problem. If the returned result includes a redirect URL, the shopper browser
+ will be navigated to that URL if the Payment Request user interface is canceled.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order paid using PaymentRequest</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_paymentrequest_PaymentRequestHooks_shippingAddressChange_Basket_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">shippingAddressChange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">shippingAddressChange</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, details
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called after handling the Payment Request <code>shippingaddresschange</code> event for the given basket. Basket
+ customer information and/or shipping address for the default shipment will have already been updated to reflect
+ the available shipping address information provided by Payment Request. The basket will have already been
+ calculated before this hook is called.
+ </p>
+ <p>
+ Return a result with an error status to indicate a problem.
+ </p>
+ <p>
+ If the returned result includes a redirect URL, the shopper browser will be navigated to that URL if the Payment
+ Request user interface is canceled.
+ </p>
+ <p>
+ See the <a href="https://www.w3.org/TR/payment-request">Payment Request API</a> for more information.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">the basket being checked out using Payment Request</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">details</span>
+						 - 
+						<span class="parameterDesc">updated <code>PaymentRequest</code> object details</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_paymentrequest_PaymentRequestHooks_shippingOptionChange_Basket_ShippingMethod_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">shippingOptionChange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">shippingOptionChange</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, shippingMethod
+								 : 
+								 
+								<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>, details
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_extensions_paymentrequest_PaymentRequestHookResult.html"><span class="">PaymentRequestHookResult</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called after handling the Payment Request <code>shippingoptionchange</code> event for the given basket. The given
+ shipping method will have already been set on the basket. The basket will have already been calculated before
+ this hook is called.
+ </p>
+ <p>
+ Return a result with an error status to indicate a problem.
+ </p>
+ <p>
+ If the returned result includes a redirect URL, the shopper browser will be navigated to that URL if the
+ Payment Request user interface is canceled.
+ </p>
+ <p>
+ See the <a href="https://www.w3.org/TR/payment-request">Payment Request API</a> for more information.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">the basket being checked out using Payment Request</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingMethod</span>
+						 - 
+						<span class="parameterDesc">the shipping method that was selected</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">details</span>
+						 - 
+						<span class="parameterDesc">updated <code>PaymentRequest</code> object details</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

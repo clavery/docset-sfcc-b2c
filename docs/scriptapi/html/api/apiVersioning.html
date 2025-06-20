@@ -1,0 +1,968 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+API Versioning and the Script API
+</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">API Versioning</div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="section">
+            <span class="className">
+API Versioning and the Script API
+</span>
+        </div>
+        <div class="section">
+The following are the Script API calls that are affected by API Versioning. 
+API Versioning allows a single method to have different behavior depending on the 
+compatibility mode in affect for the active code version directory. You specify the 
+active directory and compatibility mode in the Business Manager.
+</div>
+        <div class="section">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="section">
+                <div class="header">
+API Versioned Methods
+</div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decrypt_2_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decrypt_3_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decrypt_2_String_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decrypt_3_String_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decryptBytes_2_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decryptBytes_3_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decryptBytes_2_Bytes_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_decryptBytes_3_Bytes_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encrypt_2_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encrypt_3_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encrypt_2_String_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encrypt_3_String_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encryptBytes_2_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encryptBytes_3_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encryptBytes_2_Bytes_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encryptBytes_3_Bytes_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.Cipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_TopLevel_global.html#TopLevel_global_parseInt_2_String_DetailAnchor"><span class="">TopLevel.global.parseInt</span></a></span>(s
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					: 
+				<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    <div class="description">
+					API Versioned from version 16.1. 
+				ECMAScript 5 compliance: removed support for octal numbers.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_template_ISML.html#dw_template_ISML_renderTemplate_2_String_DetailAnchor"><span class="">dw.template.ISML.renderTemplate</span></a></span>(template
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					: 
+				void
+                    <div class="description">
+					API Versioned from version 17.7. 
+				Keeps template arguments in a local pipeline dictionary scope. This avoids side-effects on other templates.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_template_ISML.html#dw_template_ISML_renderTemplate_2_String_Object_DetailAnchor"><span class="">dw.template.ISML.renderTemplate</span></a></span>(template
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, templateArgs
+							 : 	
+							 
+							<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					: 
+				void
+                    <div class="description">
+					API Versioned from version 17.7. 
+				Keeps template arguments in a local pipeline dictionary scope. This avoids side-effects on other templates.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_util_Map.html#dw_util_Map_values_2_DetailAnchor"><span class="">dw.util.Map.values</span></a></span>()
+					: 
+				<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    <div class="description">
+					API Versioned from version 16.1. 
+				Returns a view on the values of this map like keySet() and entrySet() do. Former version returned a shallow copy of this.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_order_Order.html#dw_order_Order_getOrderExportXML_2_String_String_DetailAnchor"><span class="">dw.order.Order.getOrderExportXML</span></a></span>(encryptionAlgorithm
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, encryptionKey
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 22.7. 
+				strict encryption argument checks; no null or otherwise invalid values allowed</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_system_Pipeline.html#dw_system_Pipeline_execute_String_DetailAnchor"><span class="">dw.system.Pipeline.execute</span></a></span>(pipeline
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					: 
+				<a href="class_dw_system_PipelineDictionary.html"><span class="">PipelineDictionary</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				New convenience method for easier migration of pipeline-based systems to JavaScript controllers.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_system_Pipeline.html#dw_system_Pipeline_execute_String_Object_DetailAnchor"><span class="">dw.system.Pipeline.execute</span></a></span>(pipeline
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+							 : 	
+							 
+							<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					: 
+				<a href="class_dw_system_PipelineDictionary.html"><span class="">PipelineDictionary</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				New convenience method for easier migration of pipeline-based systems to JavaScript controllers.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_catalog_Product.html#dw_catalog_Product_setOnlineFlag_2_Boolean_DetailAnchor"><span class="">dw.catalog.Product.setOnlineFlag</span></a></span>(online
+							 : 	
+							 
+							boolean)
+					: 
+				void
+                    <div class="description">
+					API Versioned from version 10.6. 
+				In prior versions this method set the online status flag global, instead of site specific.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_catalog_Product.html#dw_catalog_Product_setSearchableFlag_2_Boolean_DetailAnchor"><span class="">dw.catalog.Product.setSearchableFlag</span></a></span>(searchable
+							 : 	
+							 
+							boolean)
+					: 
+				void
+                    <div class="description">
+					API Versioned from version 10.6. 
+				In prior versions this method set the searchable flag global, instead of site specific.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_catalog_Product.html#dw_catalog_Product_setSearchPlacement_2_Number_DetailAnchor"><span class="">dw.catalog.Product.setSearchPlacement</span></a></span>(placement
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				void
+                    <div class="description">
+					API Versioned from version 10.6. 
+				In prior versions this method set the search placement classification global, instead of site specific.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_catalog_Product.html#dw_catalog_Product_setSearchRank_2_Number_DetailAnchor"><span class="">dw.catalog.Product.setSearchRank</span></a></span>(rank
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				void
+                    <div class="description">
+					API Versioned from version 10.6. 
+				In prior versions this method set the search rank global, instead of site specific.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getDisplayValue_2_ObjectAttributeDefinition_DetailAnchor"><span class="">dw.catalog.ProductAttributeModel.getDisplayValue</span></a></span>(definition
+							 : 	
+							 
+							<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					: 
+				<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    <div class="description">
+					API Versioned from version 10.6. 
+				In prior versions this method returned a String with the image path or a String with the HTML source</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getValue_2_ObjectAttributeDefinition_DetailAnchor"><span class="">dw.catalog.ProductAttributeModel.getValue</span></a></span>(definition
+							 : 	
+							 
+							<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					: 
+				<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    <div class="description">
+					API Versioned from version 10.6. 
+				In prior versions this method returned a String with the image path or a String with the HTML source.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_formatNumber_2_Number_String_DetailAnchor"><span class="">dw.util.StringUtils.formatNumber</span></a></span>(number
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 18.10. 
+				In prior versions this method did fall back to Java formatting rules, instead of using the definitions in regional settings.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_formatNumber_2_Number_String_String_DetailAnchor"><span class="">dw.util.StringUtils.formatNumber</span></a></span>(number
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 18.10. 
+				In prior versions this method did fall back to Java formatting rules, instead of using the definitions in regional settings.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decrypt_2_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decrypt_3_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decrypt_2_String_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decrypt_3_String_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decrypt</span></a></span>(base64Msg
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decryptBytes_2_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decryptBytes_3_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decryptBytes_2_Bytes_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_decryptBytes_3_Bytes_KeyRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.decryptBytes</span></a></span>(encryptedBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, privateKey
+							 : 	
+							 
+							<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encrypt_2_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encrypt_3_String_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encrypt_2_String_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encrypt_3_String_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encrypt</span></a></span>(message
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encryptBytes_2_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encryptBytes_3_Bytes_String_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, key
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encryptBytes_2_Bytes_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 15.5. 
+				Requires Base64-encryption for the salt parameter.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="emphasis"><a href="class_dw_crypto_WeakCipher.html#dw_crypto_WeakCipher_encryptBytes_3_Bytes_CertificateRef_String_String_Number_DetailAnchor"><span class="">dw.crypto.WeakCipher.encryptBytes</span></a></span>(messageBytes
+							 : 	
+							 
+							<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>, publicKey
+							 : 	
+							 
+							<a href="class_dw_crypto_CertificateRef.html"><span class="">CertificateRef</span></a>, transformation
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, saltOrIV
+							 : 	
+							 
+							<a href="class_TopLevel_String.html"><span class="">String</span></a>, iterations
+							 : 	
+							 
+							<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					: 
+				<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    <div class="description">
+					API Versioned from version 16.2. 
+				Does not use a default initialization vector.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

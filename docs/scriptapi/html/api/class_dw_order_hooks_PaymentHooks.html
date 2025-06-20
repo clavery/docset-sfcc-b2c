@@ -1,0 +1,573 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PaymentHooks</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.hooks.PaymentHooks">
+            <a name="dw.order.hooks.PaymentHooks"></a>
+            <div class="packageName">dw.order.hooks</div>
+            <div class="className
+					">	
+        	
+				Class PaymentHooks</div>
+            <div class="hierarchy">
+                <div style="position:relative;left:1%;">
+                    <img src="images/inherit.gif">dw.order.hooks.PaymentHooks
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This interface represents all script hooks that can be registered to
+ customize the order center payment functionality. It contains the extension
+ points (hook names), and the functions that are called by each extension
+ point. A function must be defined inside a JavaScript source and must be
+ exported. The script with the exported hook function must be located inside a
+ site cartridge. Inside the site cartridge a 'package.json' file with a
+ 'hooks' entry must exist.
+ <p>
+ "hooks": "./hooks.json"
+ </p>
+ The hooks entry links to a json file, relative to the 'package.json' file.
+ This file lists all registered hooks inside the hooks property:
+ <p>
+
+ <pre>
+ "hooks": [
+      {"name": "dw.order.payment.authorize", "script": "./authorize.js"},
+      {"name": "dw.order.payment.validateAuthorization", "script": "./validateAuthorization.js"},
+ ]
+ </pre>
+
+ </p>
+ A hook entry has a 'name' and a 'script' property.
+ <ul>
+ <li>The 'name' contains the extension point, the hook name.</li>
+ <li>The 'script' contains the script relative to the hooks file, with the
+ exported hook function.</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointAuthorize_DetailAnchor"></a>extensionPointAuthorize
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.authorize"
+                        <div class="description">The extension point name dw.order.payment.authorize.
+ <br/> This hook is optional.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointAuthorizeCreditCard_DetailAnchor"></a>extensionPointAuthorizeCreditCard
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.authorizeCreditCard"
+                        <div class="description">The extension point name dw.order.payment.authorizeCreditCard.
+ <br/> This hook is optional.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointCapture_DetailAnchor"></a>extensionPointCapture
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.capture"
+                        <div class="description">The extension point name dw.order.payment.capture.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointReauthorize_DetailAnchor"></a>extensionPointReauthorize
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.reauthorize"
+                        <div class="description">The extension point name dw.order.payment.reauthorize.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointRefund_DetailAnchor"></a>extensionPointRefund
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.refund"
+                        <div class="description">The extension point name dw.order.payment.refund.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointReleaseAuthorization_DetailAnchor"></a>extensionPointReleaseAuthorization
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.releaseAuthorization"
+                        <div class="description">The extension point name dw.order.payment.releaseAuthorization.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_PaymentHooks_extensionPointValidateAuthorization_DetailAnchor"></a>extensionPointValidateAuthorization
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.payment.validateAuthorization"
+                        <div class="description">The extension point name dw.order.payment.validateAuthorization.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_authorize_Order_OrderPaymentInstrument_DetailAnchor"><span class="">authorize</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, paymentDetails
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointAuthorize_DetailAnchor">extensionPointAuthorize</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_authorizeCreditCard_Order_OrderPaymentInstrument_String_DetailAnchor"><span class="">authorizeCreditCard</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, paymentDetails
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, cvn
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointAuthorizeCreditCard_DetailAnchor">extensionPointAuthorizeCreditCard</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_capture_Invoice_DetailAnchor"><span class="">capture</span></a></span>(invoice
+								 : 	
+								 
+								<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointCapture_DetailAnchor">extensionPointCapture</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_reauthorize_Order_DetailAnchor"><span class="">reauthorize</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointReauthorize_DetailAnchor">extensionPointReauthorize</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_refund_Invoice_DetailAnchor"><span class="">refund</span></a></span>(invoice
+								 : 	
+								 
+								<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointRefund_DetailAnchor">extensionPointRefund</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_releaseAuthorization_Order_DetailAnchor"><span class="">releaseAuthorization</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointReleaseAuthorization_DetailAnchor">extensionPointReleaseAuthorization</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_PaymentHooks_validateAuthorization_Order_DetailAnchor"><span class="">validateAuthorization</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointValidateAuthorization_DetailAnchor">extensionPointValidateAuthorization</a>.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_authorize_Order_OrderPaymentInstrument_DetailAnchor"></a>
+                    <div class="detailName 
+						">authorize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">authorize</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, paymentDetails
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointAuthorize_DetailAnchor">extensionPointAuthorize</a>. Custom payment authorization - modify the
+ order as needed.
+
+ <ul>
+ <li>Prerequisite: An order has been created using the data api or via the storefront.</li>
+ <li>Return Status.OK: Corresponding payment transaction is marked as authorized (usually a custom property is used for this).</li>
+ <li>Return Status.ERROR: Order is held, authorization needs to be repeated.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentDetails</span>
+						 - 
+						<span class="parameterDesc">specified payment details</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK successful authorization.</li> <li>Status.ERROR authorization failed.</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_authorizeCreditCard_Order_OrderPaymentInstrument_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">authorizeCreditCard</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">authorizeCreditCard</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, paymentDetails
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, cvn
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point
+ <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointAuthorizeCreditCard_DetailAnchor">extensionPointAuthorizeCreditCard</a>. Custom payment authorization
+ of a credit card - modify the order as needed.
+
+
+ <ul>
+ <li>Prerequisite: An order has been created using the data api or via the
+ storefront.</li>
+ <li>Return Status.OK: Corresponding payment transaction is marked as
+ authorized (usually a custom property is used for this).</li>
+ <li>Return Status.ERROR: Order is held, authorization needs to be
+ repeated.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentDetails</span>
+						 - 
+						<span class="parameterDesc">specified payment details</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">cvn</span>
+						 - 
+						<span class="parameterDesc">the credit card verification number</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK successful authorization.</li> <li>Status.ERROR authorization failed.</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_capture_Invoice_DetailAnchor"></a>
+                    <div class="detailName 
+						">capture</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">capture</span>(invoice
+								 : 
+								 
+								<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointCapture_DetailAnchor">extensionPointCapture</a>. Custom payment capture - modify the order as needed.
+
+ <p/><ul><li>Prerequisite:
+ <br/>[ either ] As a result of shipping (or part-shipping) a shipping -order the warehouse updates the status of the shipping-order
+ resulting in the creation of an unpaid debit invoice (the creation of the invoice is usually handled in
+ <a href="class_dw_order_hooks_ShippingOrderHooks.html#dw_order_hooks_ShippingOrderHooks_changeStatus_ShippingOrder_ShippingOrderWO_DetailAnchor">ShippingOrderHooks.changeStatus(ShippingOrder, ShippingOrderWO)</a>).
+ <br/>[ or ] A unpaid debit invoice has been created using the data api. </li>
+ <li>Context: An unpaid debit invoice is passed to the payment system for capture. The capture attempt can either succeed (complete
+ invoice amount captured) or fail. As a result the invoice status is updated by ordercenter for further processing. See <a href="class_dw_order_Invoice.html">Invoice</a>.</li>
+ <li>Hook responsibility: The hook should attempt to capture the amount located in invoice.grandTotal.grossPrice. When successful,
+ the capture hook should also update the invoice by calling
+ <a href="class_dw_order_Invoice.html#dw_order_Invoice_addCaptureTransaction_OrderPaymentInstrument_Money_DetailAnchor">Invoice.addCaptureTransaction(OrderPaymentInstrument, Money)</a>
+ which serves to record the capturedAmount and associate the invoice with the payment-transaction.</li>
+ <li>Return Status.OK: Indicates capture succeeded: Order Center sets the Invoice status to <a href="class_dw_order_Invoice.html#dw_order_Invoice_STATUS_PAID_DetailAnchor">Invoice.STATUS_PAID</a>.</li>
+ <li>Return Status.ERROR: Indicates capture failed: Order Center sets the Invoice status to <a href="class_dw_order_Invoice.html#dw_order_Invoice_STATUS_FAILED_DetailAnchor">Invoice.STATUS_FAILED</a> for
+ further processing.</li>
+ <li>Post processing:  When the capture hook returns with success, order center not only sets the relevant invoice status, but also
+ sets the relevant capturedAmount values on the invoice item. Returning success means the entire invoice total has been captured, so each item
+ within the invoice can also be marked as completely captured. Note the script implementing the hook can take responsibility for this if desired
+ order center will not overwrite existing values, but normally the standard implementation fits. As a result each invoice item and the related
+ order item can return a capturedAmount, useful for calculating possible refunds. </li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">invoice</span>
+						 - 
+						<span class="parameterDesc">the invoice</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK for successful capture of entire invoice amount.</li> <li>Status.ERROR capture failed</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_reauthorize_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">reauthorize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">reauthorize</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointReauthorize_DetailAnchor">extensionPointReauthorize</a>. Custom payment authorization - modify the
+ order as needed.
+
+ <ul>
+ <li>Prerequisite:
+ <br/>[ either ] Based on a selected <a href="class_dw_order_Order.html">Order</a>, a <a href="class_dw_order_ShippingOrder.html">ShippingOrder</a> (which represents the whole or part of the order which can be shipped)
+ is to be created ready for export to the warehouse system.
+ <br/>[ or ] A <a href="class_dw_order_ShippingOrder.html">ShippingOrder</a> is to be directly created using the data api.</li>
+ <li>Context: The related order is passed to the payment hook to check its authorization has not become invalid. Two hooks are called:
+ <br/>a. <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_validateAuthorization_Order_DetailAnchor">validateAuthorization(Order)</a> is used to check the orders authorization is still valid
+ <br/>b. <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_reauthorize_Order_DetailAnchor">reauthorize(Order)</a> is called if step a. returns Error
+ </li>
+ <li>Return Status.OK: Corresponding payment transaction is marked as authorized (usually a custom property is used for this).
+ If the order had been previously authorized, the custom property values may be overwritten during reauthorization.</li>
+ <li>Return Status.ERROR: Order is held, authorization needs to be repeated.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK successful authorization.</li> <li>Status.ERROR authorization failed</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_refund_Invoice_DetailAnchor"></a>
+                    <div class="detailName 
+						">refund</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">refund</span>(invoice
+								 : 
+								 
+								<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointRefund_DetailAnchor">extensionPointRefund</a>. Custom payment refund - modify the order as needed.
+
+ <p/><ul><li>Prerequisite:
+ <br/>[ either ] Goods returned by the customer result in the creation of one or more return documents, resulting in the creation of an
+ unpaid customer credit invoice (the creation of the invoice is usually handled in <a href="class_dw_order_hooks_ReturnHooks.html#dw_order_hooks_ReturnHooks_changeStatus_Return_ReturnWO_DetailAnchor">ReturnHooks.changeStatus(Return, ReturnWO)</a>).
+ <br/>[ or ] An unpaid customer credit invoice is created using the data api (perhaps as a result of the creation of a customer appeasement).</li>
+ <li>Context: An unpaid credit invoice is passed to the payment system for refund. The refund attempt can either succeed (complete
+ invoice amount refunded) or fail. As a result the invoice status is updated by ordercenter for further processing. See <a href="class_dw_order_Invoice.html">Invoice</a>.</li>
+ <li>Hook responsibility: The hook should attempt to refund the amount located in invoice.grandTotal.grossPrice. When successful,
+ the refund hook should also update the invoice by calling
+ <a href="class_dw_order_Invoice.html#dw_order_Invoice_addRefundTransaction_OrderPaymentInstrument_Money_DetailAnchor">Invoice.addRefundTransaction(OrderPaymentInstrument, Money)</a>
+ which serves to record the refundedAmount and associate the invoice with the payment-transaction.</li>
+ <li>Return Status.OK: Indicates refund succeeded: Order Center sets the Invoice status to <a href="class_dw_order_Invoice.html#dw_order_Invoice_STATUS_PAID_DetailAnchor">Invoice.STATUS_PAID</a>.</li>
+ <li>Return Status.ERROR: Indicates refund failed: Order Center sets the Invoice status to <a href="class_dw_order_Invoice.html#dw_order_Invoice_STATUS_FAILED_DetailAnchor">Invoice.STATUS_FAILED</a> for
+ further processing.</li>
+ <li>Post processing:  When the refund hook returns with success, order center not only sets the relevant invoice status, but also
+ sets the relevant refundAmount values on the invoice item. Returning success means the entire invoice total has been refunded, so each item
+ within the invoice can also be marked as completely refunded. Note the script implementing the hook can take responsibility for this if desired
+ order center will not overwrite existing values, but normally the standard implementation fits. As a result each invoice item and the related
+ order item can return a refundedAmount, useful for calculating further possible refunds. </li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">invoice</span>
+						 - 
+						<span class="parameterDesc">the invoice</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK for successful refund of entire invoice amount.</li> <li>Status.ERROR refund failed</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_releaseAuthorization_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">releaseAuthorization</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">releaseAuthorization</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointReleaseAuthorization_DetailAnchor">extensionPointReleaseAuthorization</a>.
+ Custom payment release authorization - modify the order as needed.
+
+ <p/><ul><li>Prerequisite: an authorized order is updated resulting in a need to release the remaining authorization. This happens when:
+ <br/>- order is cancelled
+ <br/>- order is complete after remaining order items are cancelled.</li>
+ <li>Return Status.OK - successful release authorization </li>
+ <li>Return Status.ERROR - failed release authorization </li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK for successful release authorization.</li> <li>Status.ERROR failed release authorization</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_PaymentHooks_validateAuthorization_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">validateAuthorization</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">validateAuthorization</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">The function is called by extension point <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_extensionPointValidateAuthorization_DetailAnchor">extensionPointValidateAuthorization</a>. Custom payment authorization - modify the
+ order as needed.
+
+ <ul><li>Context: This hook is called to validate whether a payment authorization exists for the order. It should usually check:
+ <br/>- Whether the authorize or reauthorize hook was previously successfully executed for the order, e.g. by checking whether custom property has been previously set.
+ <br/>- Whether an existing authorization has expired e.g. by comparing a timestamp set on authorization with the current time.</li>
+ <li>Return Status.OK: indicates the order has a valid payment authorization.</li>
+ <li>Return Status.ERROR: indicates <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_reauthorize_Order_DetailAnchor">reauthorize(Order)</a> should be called.</li>
+ </ul>See <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_reauthorize_Order_DetailAnchor">reauthorize(Order)</a> for more details.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><ul> <li>Status.OK order has a valid payment authorization.</li> <li>Status.ERROR order has no valid payment authorization, <a href="class_dw_order_hooks_PaymentHooks.html#dw_order_hooks_PaymentHooks_reauthorize_Order_DetailAnchor">reauthorize(Order)</a> should be called</li> </ul></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

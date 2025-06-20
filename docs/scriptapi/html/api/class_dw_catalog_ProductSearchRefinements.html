@@ -1,0 +1,513 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductSearchRefinements</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.ProductSearchRefinements">
+            <a name="dw.catalog.ProductSearchRefinements"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class ProductSearchRefinements</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_catalog_SearchRefinements.html">dw.catalog.SearchRefinements</a>
+                </div>
+                <div style="position:relative;left:5%;">
+                    <img src="images/inherit.gif">dw.catalog.ProductSearchRefinements
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class provides an interface to refinement options for the product
+ search. In a typical usage, the client application UI displays the search
+ refinements along with the search results and allows customers to "refine"
+ the results (i.e. limit the results that are shown) by specifying additional
+ product criteria, or "relax" (i.e. broaden) the results after previously
+ refining. The four types of product search refinements are:
+
+ <ul>
+ <li><b>Refine By Category:</b> Limit the products to those assigned to
+ specific child/ancestor categories of the search category.</li>
+ <li><b>Refine By Attribute:</b> Limit the products to those with specific
+ values for a given attribute. Values may be grouped into "buckets" so that a
+ given set of values are represented as a single refinement option.</li>
+ <li><b>Refine By Price:</b> Limit the products to those whose prices fall in
+ a specific range.</li>
+ <li><b>Refine By Promotion:</b> Limit the products to those which are related
+ to a specific promotion.</li>
+ </ul>
+
+ Rendering a product search refinement UI typically begins with iterating the
+ refinement definitions for the search result. Call
+ <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getRefinementDefinitions_DetailAnchor">SearchRefinements.getRefinementDefinitions()</a> or
+ <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getAllRefinementDefinitions_DetailAnchor">SearchRefinements.getAllRefinementDefinitions()</a> to
+ retrieve the appropriate collection of refinement definitions. For each
+ definition, display the available refinement values by calling
+ <a href="class_dw_catalog_ProductSearchRefinements.html#dw_catalog_ProductSearchRefinements_getAllRefinementValues_ProductSearchRefinementDefinition_DetailAnchor">getAllRefinementValues(ProductSearchRefinementDefinition)</a>. Depending
+ on the type of the refinement definition, the application must use slightly
+ different logic to display the refinement widgets. For all 4 types, methods
+ in <a href="class_dw_catalog_ProductSearchModel.html">ProductSearchModel</a> are used to generate URLs to render
+ hyperlinks in the UI. When clicked, these links trigger a call to the Search
+ pipelet which in turn applies the appropriate filters to the native search
+ result.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>categoryRefinementDefinition
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The appropriate category refinement definition based on the search
+ result. The category refinement definition returned will be the first that
+ can be found traversing the category tree upward starting at the deepest
+ common category of the search result.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priceRefinementDefinition
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The appropriate price refinement definition based on the search
+ result. The price refinement definition returned will be the first that
+ can be found traversing the category tree upward starting at the deepest
+ common category of the search result.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>promotionRefinementDefinition
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The appropriate promotion refinement definition based on the search
+ result. The promotion refinement definition returned will be the first that
+ can be found traversing the category tree upward starting at the deepest
+ common category of the search result.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getAllRefinementValues_ProductSearchRefinementDefinition_DetailAnchor"><span class="">getAllRefinementValues</span></a></span>(definition
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of refinement values for the passed refinement definition.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getCategoryRefinementDefinition_DetailAnchor"><span class="">getCategoryRefinementDefinition</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a></span>
+                    <div class="description">Returns the appropriate category refinement definition based on the search result.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getNextLevelCategoryRefinementValues_Category_DetailAnchor"><span class="">getNextLevelCategoryRefinementValues</span></a></span>(category
+								 : 	
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns category refinement values based on the current search result filtered such that only category refinements representing children of the given category are present.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getPriceRefinementDefinition_DetailAnchor"><span class="">getPriceRefinementDefinition</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a></span>
+                    <div class="description">Returns the appropriate price refinement definition based on the search result.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getPromotionRefinementDefinition_DetailAnchor"><span class="">getPromotionRefinementDefinition</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a></span>
+                    <div class="description">Returns the appropriate promotion refinement definition based on the search result.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getRefinementValue_ProductSearchRefinementDefinition_String_DetailAnchor"><span class="">getRefinementValue</span></a></span>(definition
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductSearchRefinementValue.html"><span class="">ProductSearchRefinementValue</span></a></span>
+                    <div class="description">Returns the refinement value (incl.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getRefinementValue_String_String_DetailAnchor"><span class="">getRefinementValue</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductSearchRefinementValue.html"><span class="">ProductSearchRefinementValue</span></a></span>
+                    <div class="description">Returns the refinement value (incl.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchRefinements_getRefinementValues_ProductSearchRefinementDefinition_DetailAnchor"><span class="">getRefinementValues</span></a></span>(definition
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of refinement values for the given refinement definition.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_catalog_SearchRefinements.html"><span class="">SearchRefinements</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getAllRefinementDefinitions_DetailAnchor"><span class="">getAllRefinementDefinitions</span></a>, <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getAllRefinementValues_String_DetailAnchor"><span class="">getAllRefinementValues</span></a>, <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getAllRefinementValues_String_Number_Number_DetailAnchor"><span class="">getAllRefinementValues</span></a>, <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getRefinementDefinitions_DetailAnchor"><span class="">getRefinementDefinitions</span></a>, <a href="class_dw_catalog_SearchRefinements.html#dw_catalog_SearchRefinements_getRefinementValues_String_Number_Number_DetailAnchor"><span class="">getRefinementValues</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getAllRefinementValues_ProductSearchRefinementDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllRefinementValues</span>(definition
+								 : 
+								 
+								<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of refinement values for the passed
+ refinement definition. The returned collection includes all refinement
+ values for which the hit count is greater than 0 within the search result
+ when the passed refinement definition is excluded from filtering the
+ search hits but all other refinement filters are still applied. This
+ method is useful for rendering broadening options for definitions that
+ the search is currently refined by. If the search is not currently
+ restricted by the passed refinement definition, then this method will
+ return the same result as
+ <a href="class_dw_catalog_ProductSearchRefinements.html#dw_catalog_ProductSearchRefinements_getRefinementValues_ProductSearchRefinementDefinition_DetailAnchor">getRefinementValues(ProductSearchRefinementDefinition)</a>.
+ <p/>
+ For attribute-based refinement definitions, the returned collection
+ depends upon how the "value set" property is configured. (Category and
+ price refinement definitions do not have such a property.) If this
+ property is set to "search result values", the behavior is as described
+ above. If this property is set to "all values of category", then the
+ returned collection will also include all refinement values for products
+ in the category subtree rooted at the search definition's category. This
+ setting is useful for refinements whose visualization is supposed to
+ remain constant for a certain subtree of a catalog (e.g. color pickers or
+ size charts). These additional values are independent of the search
+ result and do not contribute towards the value hit counts. If the search
+ result is further refined by one of these values, it is possible to get
+ an empty search result. Except for this one case this method does NOT
+ return refinement values independent of the search result.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">definition</span>
+						 - 
+						<span class="parameterDesc">The refinement definition to return refinement values for. Must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The collection of ProductSearchRefinementValue instances, sorted according to the settings of the refinement definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getCategoryRefinementDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCategoryRefinementDefinition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCategoryRefinementDefinition</span>()
+					 : 
+					<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the appropriate category refinement definition based on the search
+ result. The category refinement definition returned will be the first that
+ can be found traversing the category tree upward starting at the deepest
+ common category of the search result.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The category refinement definition or <code>null</code> if none can be found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getNextLevelCategoryRefinementValues_Category_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNextLevelCategoryRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNextLevelCategoryRefinementValues</span>(category
+								 : 
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns category refinement values based on the current search result
+ filtered such that only category refinements representing children of the
+ given category are present. If no category is given, the method uses the
+ catalog's root category. The refinement value product counts represent
+ all hits contained in the catalog tree starting at the corresponding
+ child category.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">category</span>
+						 - 
+						<span class="parameterDesc">The category to return child category refinement values for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The refinement values for all child categories of the given category.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getPriceRefinementDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceRefinementDefinition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceRefinementDefinition</span>()
+					 : 
+					<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the appropriate price refinement definition based on the search
+ result. The price refinement definition returned will be the first that
+ can be found traversing the category tree upward starting at the deepest
+ common category of the search result.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The price refinement definition or <code>null</code> if none can be found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getPromotionRefinementDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPromotionRefinementDefinition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPromotionRefinementDefinition</span>()
+					 : 
+					<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the appropriate promotion refinement definition based on the search
+ result. The promotion refinement definition returned will be the first that
+ can be found traversing the category tree upward starting at the deepest
+ common category of the search result.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The promotion refinement definition or <code>null</code> if none can be found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getRefinementValue_ProductSearchRefinementDefinition_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRefinementValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRefinementValue</span>(definition
+								 : 
+								 
+								<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductSearchRefinementValue.html"><span class="">ProductSearchRefinementValue</span></a>
+                    </div>
+                    <div class="description">Returns the refinement value (incl. product hit count) for the given
+ refinement definition and the given (selected) value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">definition</span>
+						 - 
+						<span class="parameterDesc">The definition to return the refinement for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to return the refinement for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The refinement value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getRefinementValue_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRefinementValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRefinementValue</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductSearchRefinementValue.html"><span class="">ProductSearchRefinementValue</span></a>
+                    </div>
+                    <div class="description">Returns the refinement value (incl. product hit count) for the given
+ refinement attribute and the given (selected) value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to return the refinement for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The refinement value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchRefinements_getRefinementValues_ProductSearchRefinementDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRefinementValues</span>(definition
+								 : 
+								 
+								<a href="class_dw_catalog_ProductSearchRefinementDefinition.html"><span class="">ProductSearchRefinementDefinition</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of refinement values for the given refinement
+ definition. The returned refinement values only include those that are
+ part of the actual search result (i.e. hit count will always be > 0).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">definition</span>
+						 - 
+						<span class="parameterDesc">The refinement definition to return refinement values for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The collection of refinement values sorted according to the settings of the definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

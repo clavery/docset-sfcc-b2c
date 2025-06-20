@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet Script</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet Script</div>
+            <div class="topLevelDescription">This pipelet executes a Commerce Cloud Digital script.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Scripting</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OnError</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Whether to follow the error exit of the pipelet if an error occurs during script execution, or to throw an exception.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">Exception</div>
+                    <div class="parameterDetail
+										">PIPELET_ERROR</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ScriptFile</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+File name of the actual script, relative to the 'scripts' folder in a cartridge, in the format "[cartridge name]:[script file name]".  The [cartridge name] and colon are optional, and if not provided, the cartridge containing the pipeline is used by default.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Timeout</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Timeout in seconds for this script. The default is 30 seconds within storefront requests and 15 minutes within jobs. The maximum upper limit when executing within a job is 60 minutes. The maximum upper limit when executing within a storefront request is 5 minutes.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Transactional</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Whether or not to execute the script in the context of a transaction.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ScriptLog</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Log generated while running the script.  This is not a log file name, but rather the actual contents of the log.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

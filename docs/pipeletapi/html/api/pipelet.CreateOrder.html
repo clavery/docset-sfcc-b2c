@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateOrder</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet CreateOrder</div>
+            <div class="topLevelDescription">This pipelet creates and places an Order from the specified Basket. An optional OrderNo can be specified. Otherwise,
+the pipelet generates and assigns a number for the new order.<p/>
+
+If the order could be created successfully, the basket is marked for removal.<p/>
+
+This pipelet does not create an order and ends on the ERROR exit if any of the following conditions are encountered:
+<ul><li>specified order no is already assigned to an existing order</li>
+<li>basket neither contains a product nor a gift certificate line item (basket is empty)</li>
+<li>any of the totals (net, gross, tax) of the basket is N/A</li>
+<li>any campaign-based coupon in the basket is invalid (see <i>dw.order.CouponLineItem.isValid()</i>)</li>
+<li>the basket represents an order being edited, but the order has been already been replaced by another order</li>
+<li>the basket represents an order being edited, but the customer associated with the original order is not the same as the current customer</li></ul><p/>
+
+The pipelet ignores all empty shipments of the basket. A shipment is empty if
+<ul><li>it contains no product or gift certificate line items</li>
+<li>all total prices (net, gross, tax) are 0.0</li></ul><p/>
+ 
+If the basket contains ProductLineItems with associated ProductListItems, the pipelet updates the purchase
+history of these ProductListItems. For example, if the basket contains items added from a GiftRegistry,
+the purchase history of the respective GiftRegistry items is updated.<p/>
+ 
+If the basket represents an order that is being edited, this pipelet:
+<ul><li>1. Creates a new Order from the basket.</li>
+<li>2. Updates the original Order with the Order that replaced it.</li>
+<li>3. Sets the status of the original order to 'replaced'.</li></ul>
+<p>
+Please note that this pipelet might result in an order with a different customer ID than the originating registered
+customer attached to the session. This happens if a registered customer logs in with the "RememberMe" flag set to true,
+but is later logged out (either explicitly, or automatically via session expiration) before calling this pipelet. This is
+due to the internal order creation logic, which creates a new guest customer and attaches it to the order in such cases.
+To avoid this situation, have your custom code verify that the customer is authenticated before it calls this pipelet.
+</p>
+<p>The inventory items reserved previously for the order are finalized when the transaction is committed.
+Since api version 2.10.6 this is only the delta changes compared with an order being replaced.</p>
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Order</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CreateCustomerNo</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+If set to 'true', the pipelet creates a customer number and assigns it to the new order if the order is placed by an anonymous customer. If set to 'false' or not set, no customer number is created.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">Don't create customer no</div>
+                    <div class="parameterDetail
+										">Create customer no</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Basket</span>
+					&nbsp;:&nbsp;
+					Basket
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OrderNo</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Optional order no. If not specified, the pipelet creates an order no.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Order</span>
+					&nbsp;:&nbsp;
+					Order
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

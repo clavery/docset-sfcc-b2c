@@ -1,0 +1,888 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductListItem</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.customer.ProductListItem">
+            <a name="dw.customer.ProductListItem"></a>
+            <div class="packageName">dw.customer</div>
+            <div class="className
+					">	
+        	
+				Class ProductListItem</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.customer.ProductListItem
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">An item in a product list.  Types of items are:<br/>
+ <ul>
+ <li>An item that references a product via the product's SKU.</li>
+ <li>An item that represents a gift certificate.</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductListItem_TYPE_GIFT_CERTIFICATE_DetailAnchor"></a>TYPE_GIFT_CERTIFICATE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2
+                        <div class="description">Constant representing a gift certificate list item type.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_customer_ProductListItem_TYPE_PRODUCT_DetailAnchor"></a>TYPE_PRODUCT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">Constant representing a product list item type.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The unique system generated ID of the object.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>list
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_ProductList.html"><span class="">ProductList</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The product list that this item belongs to.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priority
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">Specify the priority level for the item.  Typically the lower the
+ number, the higher the priority. This can be used by the owner of the product list
+ to express which items he/she likes to get purchased first.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>product
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+                        <div class="description">The referenced product for this item.  The reference is made
+ via the product ID attribute.  This method returns null if there is
+ no such product in the system or if the product exists but is not
+ assigned to the site catalog.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the product referenced by this item.
+ This attribute is set when a product is assigned via setProduct().
+ It is possible for the ID to reference a product that doesn't exist
+ anymore.  In this case getProduct() would return null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productOptionModel
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>
+                        <div class="description">The ProductOptionModel for the product associated with this item,
+ or null if there is no valid product associated with this item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>public
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">A flag, typically used to determine whether the item should display
+ in a customer's view of the list (as opposed to the list owner's view).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>purchasedQuantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The sum of the quantities of all the individual purchase records
+ for this item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>purchasedQuantityValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value part of the underlying purchased quantity object, as distinct
+ from the unit.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>purchases
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All purchases made for this item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>quantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                        <div class="description">The quantity of the item.
+ The quantity is the number of products or gift certificates
+ that get shipped when purchasing this product list item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>quantityValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The value part of the underlying quantity object, as distinct
+ from the unit.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>type
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The type of this product list item.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_createPurchase_Number_String_DetailAnchor"><span class="">createPurchase</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, purchaserName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_ProductListItemPurchase.html"><span class="">ProductListItemPurchase</span></a></span>
+                    <div class="description">Create a purchase record for this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the unique system generated ID of the object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getList_DetailAnchor"><span class="">getList</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductList.html"><span class="">ProductList</span></a></span>
+                    <div class="description">Returns the product list that this item belongs to.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getPriority_DetailAnchor"><span class="">getPriority</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Specify the priority level for the item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getProduct_DetailAnchor"><span class="">getProduct</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a></span>
+                    <div class="description">Returns the referenced product for this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getProductID_DetailAnchor"><span class="">getProductID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the product referenced by this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getProductOptionModel_DetailAnchor"><span class="">getProductOptionModel</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a></span>
+                    <div class="description">Returns the ProductOptionModel for the product associated with this item, or null if there is no valid product associated with this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getPurchasedQuantity_DetailAnchor"><span class="">getPurchasedQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the sum of the quantities of all the individual purchase records for this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getPurchasedQuantityValue_DetailAnchor"><span class="">getPurchasedQuantityValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value part of the underlying purchased quantity object, as distinct from the unit.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getPurchases_DetailAnchor"><span class="">getPurchases</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all purchases made for this item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getQuantity_DetailAnchor"><span class="">getQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the quantity of the item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getQuantityValue_DetailAnchor"><span class="">getQuantityValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value part of the underlying quantity object, as distinct from the unit.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_getType_DetailAnchor"><span class="">getType</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the type of this product list item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_isPublic_DetailAnchor"><span class="">isPublic</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">A flag, typically used to determine whether the item should display in a customer's view of the list (as opposed to the list owner's view).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_setPriority_Number_DetailAnchor"><span class="">setPriority</span></a></span>(priority
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Specify the priority level for the item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_customer_ProductListItem_setProduct_Product_DetailAnchor"><span class="">setProduct</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the referenced product for this item by storing the product's id.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_setProductOptionModel_ProductOptionModel_DetailAnchor"><span class="">setProductOptionModel</span></a></span>(productOptionModel
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>)
+						: 
+					void</span>
+                    <div class="description">Store a product option model with this object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_setPublic_Boolean_DetailAnchor"><span class="">setPublic</span></a></span>(flag
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Typically used to determine if the item is visible to other customers.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_customer_ProductListItem_setQuantity_Quantity_DetailAnchor"><span class="">setQuantity</span></a></span>(value
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the quantity of the item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_ProductListItem_setQuantityValue_Number_DetailAnchor"><span class="">setQuantityValue</span></a></span>(value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the value part of the underlying quantity object, as distinct from the unit.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_createPurchase_Number_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createPurchase</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createPurchase</span>(quantity
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, purchaserName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_ProductListItemPurchase.html"><span class="">ProductListItemPurchase</span></a>
+                    </div>
+                    <div class="description">Create a purchase record for this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">The number of items purchased.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">purchaserName</span>
+						 - 
+						<span class="parameterDesc">The name of the purchaser.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the purchase record.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the unique system generated ID of the object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getList_DetailAnchor"></a>
+                    <div class="detailName 
+						">getList</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getList</span>()
+					 : 
+					<a href="class_dw_customer_ProductList.html"><span class="">ProductList</span></a>
+                    </div>
+                    <div class="description">Returns the product list that this item belongs to.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the list.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getPriority_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriority</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriority</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Specify the priority level for the item.  Typically the lower the
+ number, the higher the priority. This can be used by the owner of the product list
+ to express which items he/she likes to get purchased first.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the specified priority level.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProduct</span>()
+					 : 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+                    </div>
+                    <div class="description">Returns the referenced product for this item.  The reference is made
+ via the product ID attribute.  This method returns null if there is
+ no such product in the system or if the product exists but is not
+ assigned to the site catalog.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product referenced by this item, or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getProductID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the product referenced by this item.
+ This attribute is set when a product is assigned via setProduct().
+ It is possible for the ID to reference a product that doesn't exist
+ anymore.  In this case getProduct() would return null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product ID, or null if none exists.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getProductOptionModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductOptionModel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductOptionModel</span>()
+					 : 
+					<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>
+                    </div>
+                    <div class="description">Returns the ProductOptionModel for the product associated with this item,
+ or null if there is no valid product associated with this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the associated ProductOptionModel or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getPurchasedQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPurchasedQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPurchasedQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the sum of the quantities of all the individual purchase records
+ for this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sum of the quantities of all the individual purchase records for this item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getPurchasedQuantityValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPurchasedQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPurchasedQuantityValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value part of the underlying purchased quantity object, as distinct
+ from the unit.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value part of the underlying purchased quantity object, as distinct from the unit.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getPurchases_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPurchases</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPurchases</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all purchases made for this item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the collection of purchase records for this item. Returns an empty list if this item has not been purchased yet.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the quantity of the item.
+ The quantity is the number of products or gift certificates
+ that get shipped when purchasing this product list item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the quantity of the item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getQuantityValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getQuantityValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value part of the underlying quantity object, as distinct
+ from the unit.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value part of the underlying quantity object, as distinct from the unit.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_getType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getType</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the type of this product list item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a code that specifies the type of item (i.e. product or gift certificate).</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_isPublic_DetailAnchor"></a>
+                    <div class="detailName 
+						">isPublic</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isPublic</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">A flag, typically used to determine whether the item should display
+ in a customer's view of the list (as opposed to the list owner's view).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the item is public.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_setPriority_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPriority</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPriority</span>(priority
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Specify the priority level for the item.  Typically the lower the
+ number, the higher the priority. This can be used by the owner of the product list
+ to express which items he/she likes to get purchased first.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priority</span>
+						 - 
+						<span class="parameterDesc">The new priority level.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_setProduct_Product_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setProduct</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setProduct</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the referenced product for this item by storing the product's id.
+ If null is specified, then the id is set to null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_customer_ProductList.html#dw_customer_ProductList_createProductItem_Product_DetailAnchor">ProductList.createProductItem(Product)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">The referenced product for this item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_setProductOptionModel_ProductOptionModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProductOptionModel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setProductOptionModel</span>(productOptionModel
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Store a product option model with this object.  This stores a copy
+ of the specified model, rather than an assocation to the same instance.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productOptionModel</span>
+						 - 
+						<span class="parameterDesc">The object to store.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_setPublic_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPublic</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPublic</span>(flag
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Typically used to determine if the item is visible to other customers.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">flag</span>
+						 - 
+						<span class="parameterDesc">If true, this product list becomes visible to other customers. If false, this product list can only be seen by the owner of the product list.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_setQuantity_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setQuantity</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setQuantity</span>(value
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the quantity of the item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_customer_ProductListItem.html#dw_customer_ProductListItem_setQuantityValue_Number_DetailAnchor">setQuantityValue(Number)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the new quantity of the item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_ProductListItem_setQuantityValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setQuantityValue</span>(value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the value part of the underlying quantity object, as distinct from
+ the unit.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

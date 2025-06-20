@@ -1,0 +1,920 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PromotionMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.campaign.PromotionMgr">
+            <a name="dw.campaign.PromotionMgr"></a>
+            <div class="packageName">dw.campaign</div>
+            <div class="className
+					">	
+        	
+				Class PromotionMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.campaign.PromotionMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description"><a href="class_dw_campaign_PromotionMgr.html">PromotionMgr</a> is used to access campaigns and promotion
+ definitions, display active or upcoming promotions in a storefront, and to
+ calculate and apply promotional discounts to line item containers.
+ <p/>
+ To access campaign and promotion definitions, use methods
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getCampaigns_DetailAnchor">getCampaigns()</a>, <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getCampaign_String_DetailAnchor">getCampaign(String)</a>,
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getPromotions_DetailAnchor">getPromotions()</a> and <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getPromotion_String_DetailAnchor">getPromotion(String)</a>.
+ <p/>
+ To display active or upcoming promotions in the storefront, e.g. on product
+ pages, various methods are provided. <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActivePromotions_DetailAnchor">getActivePromotions()</a> returns
+ a <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> with all enabled promotions scheduled for <i>now</i>.
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActiveCustomerPromotions_DetailAnchor">getActiveCustomerPromotions()</a> returns a <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> with
+ all enabled promotions scheduled for <i>now</i> and applicable for the
+ session currency, current customer and active source code.
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getUpcomingPromotions_Number_DetailAnchor">getUpcomingPromotions(Number)</a> returns a <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> with all
+ promotions that are enabled, not scheduled for <i>now</i>, but scheduled for
+ any time between <i>now</i> and <i>now + previewTime(hours)</i>.
+ <p/>
+ Applying promotions to line item containers is a 3-step process, and
+ <a href="class_dw_campaign_PromotionMgr.html">PromotionMgr</a> provides methods supporting each of these steps.
+ Convenience methods can be used that execute all three steps at once,
+ or the steps can be executed individually if you need to customize
+ the output of the steps due to specific business rules. <br/>
+ <ul>
+ <li>Step 1 - calculate active customer promotions: Determine the active
+ promotions for the session currency, current customer, source code and redeemed coupons.</li>
+ <li>Step 2 - calculate applicable discounts: Based on the active promotions
+ determined in step 1, applicable discounts are calculated.</li>
+ <li>Step 3 - apply discounts: applicable discounts are applied to a line
+ item container by creating price adjustment line items.</li>
+ </ul>
+ <p/>
+ The simpliest way to execute steps 1-3 is to use method
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_applyDiscounts_LineItemCtnr_DetailAnchor">applyDiscounts(LineItemCtnr)</a>. The method identifies all active
+ customer promotions, calculates and applies applicable discounts.
+ <p/>
+ Due to specific business rules it might be necessary to manipulate
+ the set of applicable discounts calculated by the promotion engine
+ before applying them to the line item container. To implement such a scenario,
+ you want to use method <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_DetailAnchor">getDiscounts(LineItemCtnr)</a>, which
+ identifies all active customer promotions, and calculates and returns
+ applicable discounts in an instance of <a href="class_dw_campaign_DiscountPlan.html">DiscountPlan</a>. The discount
+ plan contains a description for all applicable discounts for the specified line
+ item container, and you can remove discounts from it if necessary.
+ The customized discount plan can then be passed on for application by
+ using method <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_applyDiscounts_DiscountPlan_DetailAnchor">applyDiscounts(DiscountPlan)</a>.
+ <p/>
+ Due to specific business rules it might be necessary to manipulate the
+ set of active customer promotions before calculating applicable discounts
+ from it. For example, you might want to add promotions to the
+ plan or remove promotions from it.
+ You want to use method <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActiveCustomerPromotions_DetailAnchor">getActiveCustomerPromotions()</a> and
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActiveCustomerPromotions_Boolean_DetailAnchor">getActiveCustomerPromotions(Boolean)</a>, which
+ identifies all active customer promotions and returns an instance of
+ <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>. You can add promotions to the promotion plan
+ or remove promotions from the plan. The customized promotion plan can then be
+ passed on to calculate applicable discounts by using method
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_PromotionPlan_DetailAnchor">getDiscounts(LineItemCtnr, PromotionPlan)</a>.<br/>
+ <p/></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>activeCustomerPromotions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All promotions scheduled for <i>now</i> and applicable for the
+ session currency, current customer, source code, or presented coupons.<br/>
+
+ The active promotions are returned in an instance of
+ <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>. The promotion plan contains all
+ promotions assigned to any customer group of the current customer, the
+ current source code, or coupons in the current session basket.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>activePromotions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All promotions scheduled for <i>now</i>, and applicable for the
+ session currency but regardless of current customer or source code.<br/>
+ The active promotions are returned in an instance of <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>campaigns
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All campaigns of the current site in no specific order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>promotions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All promotions of the current site in no specific order.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_applyDiscounts_LineItemCtnr_DetailAnchor"><span class="">applyDiscounts</span></a></span>(lineItemCtnr
+								 : 	
+								 
+								<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>)
+						: 
+					void</span>
+                    <div class="description">Identifies active promotions, calculates the applicable discounts from these promotions and applies these discounts to the specified line item container.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_applyDiscounts_DiscountPlan_DetailAnchor"><span class="">applyDiscounts</span></a></span>(discountPlan
+								 : 	
+								 
+								<a href="class_dw_campaign_DiscountPlan.html"><span class="">DiscountPlan</span></a>)
+						: 
+					void</span>
+                    <div class="description">Applies the discounts contained in the specified discount plan to the line item container associated with the discount plan.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getActiveCustomerPromotions_DetailAnchor"><span class="">getActiveCustomerPromotions</span></a></span>()
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions scheduled for <i>now</i> and applicable for the session currency, current customer, source code, or presented coupons.<br/> The active promotions are returned in an instance of <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getActiveCustomerPromotions_Boolean_DetailAnchor"><span class="">getActiveCustomerPromotions</span></a></span>(ignoreCouponCondition
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions scheduled for <i>now</i> and applicable for the session currency, current customer, source code, or presented coupons.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getActiveCustomerPromotionsForCampaign_Campaign_Date_Date_DetailAnchor"><span class="">getActiveCustomerPromotionsForCampaign</span></a></span>(campaign
+								 : 	
+								 
+								<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>, from
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, to
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions assigned to the passed campaign, which are active at some point within the specified date range, and are applicable for the current customer, source code, or presented coupons.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getActivePromotions_DetailAnchor"><span class="">getActivePromotions</span></a></span>()
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions scheduled for <i>now</i>, and applicable for the session currency but regardless of current customer or source code.<br/> The active promotions are returned in an instance of <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getActivePromotionsForCampaign_Campaign_Date_Date_DetailAnchor"><span class="">getActivePromotionsForCampaign</span></a></span>(campaign
+								 : 	
+								 
+								<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>, from
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, to
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions assigned to the passed campaign which are active at some point within the specified date range.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getCampaign_String_DetailAnchor"><span class="">getCampaign</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a></span>
+                    <div class="description">Returns the campaign identified by the specified ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getCampaigns_DetailAnchor"><span class="">getCampaigns</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all campaigns of the current site in no specific order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_DetailAnchor"><span class="">getDiscounts</span></a></span>(lineItemCtnr
+								 : 	
+								 
+								<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>)
+						: 
+					<a href="class_dw_campaign_DiscountPlan.html"><span class="">DiscountPlan</span></a></span>
+                    <div class="description">Returns the discounts applicable for the current customer, active source code and specified line item container.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_PromotionPlan_DetailAnchor"><span class="">getDiscounts</span></a></span>(lineItemCtnr
+								 : 	
+								 
+								<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>, promotionPlan
+								 : 	
+								 
+								<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>)
+						: 
+					<a href="class_dw_campaign_DiscountPlan.html"><span class="">DiscountPlan</span></a></span>
+                    <div class="description">Returns the discounts applicable for the current customer, active source code and specified line item container, based on the specified promotion plan.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getPromotion_String_DetailAnchor"><span class="">getPromotion</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_campaign_Promotion.html"><span class="">Promotion</span></a></span>
+                    <div class="description">Returns the promotion identified by the specified ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getPromotions_DetailAnchor"><span class="">getPromotions</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all promotions of the current site in no specific order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getUpcomingCustomerPromotions_Number_DetailAnchor"><span class="">getUpcomingCustomerPromotions</span></a></span>(previewTime
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions currently inactive, but scheduled for any time between <i>now</i> and <i>now + previewTime(hours)</i>, and which are applicable based on the current customer, source code, and coupons in the current basket.<br/> The parameter <i>previewTime</i> specifies for how many hours promotions should be previewed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_campaign_PromotionMgr_getUpcomingPromotions_Number_DetailAnchor"><span class="">getUpcomingPromotions</span></a></span>(previewTime
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a></span>
+                    <div class="description">Returns all promotions currently inactive, but scheduled for any time between <i>now</i> and <i>now + previewTime(hours)</i>.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_applyDiscounts_LineItemCtnr_DetailAnchor"></a>
+                    <div class="detailName 
+						">applyDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">applyDiscounts</span>(lineItemCtnr
+								 : 
+								 
+								<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Identifies active promotions, calculates the applicable
+ discounts from these promotions and applies these discounts to the
+ specified line item container.
+ <p/>
+ As a result of this method, the specified line item container
+ contains price adjustments and/or bonus product line items for
+ all applicable discounts. The method also removes price
+ adjustment and/or bonus product line items from the line item
+ container if the related to promotions/discounts are no longer
+ applicable.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">lineItemCtnr</span>
+						 - 
+						<span class="parameterDesc">Line item ctnr to apply promotions on</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_applyDiscounts_DiscountPlan_DetailAnchor"></a>
+                    <div class="detailName 
+						">applyDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">applyDiscounts</span>(discountPlan
+								 : 
+								 
+								<a href="class_dw_campaign_DiscountPlan.html"><span class="">DiscountPlan</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Applies the discounts contained in the specified discount plan
+ to the line item container associated with the discount
+ plan. <br/>
+ <p/>
+ As a result of this method, the specified line item container
+ contains price adjustments and/or bonus product line items for
+ all discounts contained in the specified discount plan.
+ The method also removes price adjustment and/or bonus product line items
+ from the line item container if the specified discount plan does not
+ contain the related discount.
+ <p/>
+ <i>Note that the method does not evaluate if the discounts in the specified
+ discount plan are applicable nor that the promotions related to these
+ discounts are active.</i></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">discountPlan</span>
+						 - 
+						<span class="parameterDesc">Discount plan to apply to associated line item container</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_DetailAnchor">getDiscounts(LineItemCtnr)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_applyDiscounts_LineItemCtnr_DetailAnchor">applyDiscounts(LineItemCtnr)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getActiveCustomerPromotions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getActiveCustomerPromotions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getActiveCustomerPromotions</span>()
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions scheduled for <i>now</i> and applicable for the
+ session currency, current customer, source code, or presented coupons.<br/>
+
+ The active promotions are returned in an instance of
+ <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>. The promotion plan contains all
+ promotions assigned to any customer group of the current customer, the
+ current source code, or coupons in the current session basket.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> with active customer promotions</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActivePromotions_DetailAnchor">getActivePromotions()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getActiveCustomerPromotions_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getActiveCustomerPromotions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getActiveCustomerPromotions</span>(ignoreCouponCondition
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions scheduled for <i>now</i> and applicable for the
+ session currency, current customer, source code, or presented coupons. <br/>
+
+ The active promotions are returned in an instance of
+ <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>. The promotion plan contains all
+ promotions assigned to any customer group of the current customer, the
+ current source code, or coupons in the current session basket.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ignoreCouponCondition</span>
+						 - 
+						<span class="parameterDesc">true if coupon condition will be ignored when get active promotions.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> with active customer promotions</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getActiveCustomerPromotionsForCampaign_Campaign_Date_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">getActiveCustomerPromotionsForCampaign</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getActiveCustomerPromotionsForCampaign</span>(campaign
+								 : 
+								 
+								<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>, from
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, to
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions assigned to the passed campaign, which are active
+ at some point within the specified date range, and are applicable for the
+ current customer, source code, or presented coupons. A promotion must be
+ active for an actual time period within the passed date range, and not
+ just a single point.
+ <p/>
+ The passed campaign and dates must not be null or an exception is thrown.
+ It is valid for the from and to dates to be in the past. If an invalid
+ time range is specified (i.e. from is after to), the returned
+ PromotionPlan will be empty.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">campaign</span>
+						 - 
+						<span class="parameterDesc">The campaign, must not be null or an exception is thrown.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">from</span>
+						 - 
+						<span class="parameterDesc">The start of the date range to consider. If null, this signifies an open ended time period.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">to</span>
+						 - 
+						<span class="parameterDesc">The end of the date range to consider. If null, this signifies an open ended time period.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PromotionPlan with promotions matching all the criteria.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getActivePromotions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getActivePromotions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getActivePromotions</span>()
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions scheduled for <i>now</i>, and applicable for the
+ session currency but regardless of current customer or source code.<br/>
+ The active promotions are returned in an instance of <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> with active promotions</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActiveCustomerPromotions_DetailAnchor">getActiveCustomerPromotions()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getActivePromotionsForCampaign_Campaign_Date_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">getActivePromotionsForCampaign</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getActivePromotionsForCampaign</span>(campaign
+								 : 
+								 
+								<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>, from
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, to
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions assigned to the passed campaign which are active
+ at some point within the specified date range. A promotion must be active
+ for an actual time period within the passed date range, and not just a
+ single point. A promotion must be applicable for the session currency.
+ <p/>
+ This method considers only the enabled flags and time conditions of the
+ promotion and campaign. It does not consider whether the current customer
+ satisfies the qualifiers of the promotion (customer group, source code,
+ or coupon).
+ <p/>
+ The passed campaign and dates must not be null or an exception is thrown.
+ It is valid for the from and/or to dates to be in the past. If an invalid
+ time range is specified (i.e. from is after to), the returned
+ PromotionPlan will be empty.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">campaign</span>
+						 - 
+						<span class="parameterDesc">The campaign. Must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">from</span>
+						 - 
+						<span class="parameterDesc">The start of the date range to consider. Must not be null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">to</span>
+						 - 
+						<span class="parameterDesc">The end of the date range to consider. Must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PromotionPlan with promotions matching all the criteria.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getCampaign_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCampaign</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCampaign</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>
+                    </div>
+                    <div class="description">Returns the campaign identified by the specified ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">Campaign ID</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Campaign or null if not found</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getCampaigns_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCampaigns</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCampaigns</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all campaigns of the current site in no specific order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">All campaigns of current site</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getDiscounts</span>(lineItemCtnr
+								 : 
+								 
+								<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>)
+					 : 
+					<a href="class_dw_campaign_DiscountPlan.html"><span class="">DiscountPlan</span></a>
+                    </div>
+                    <div class="description">Returns the discounts applicable for the current customer, active
+ source code and specified line item container. <br/>
+
+ This method identifies all active  promotions assigned to the customer
+ groups of the current customer, the active source code and any coupon
+ contained in the specified line item container, and calculates applicable
+ discounts from these promotions.
+ <p/>
+ The applicable discounts are contained in the returned instance of
+ <a href="class_dw_campaign_DiscountPlan.html">DiscountPlan</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">lineItemCtnr</span>
+						 - 
+						<span class="parameterDesc">Line item container</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Discount plan with applicable discounts</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_PromotionPlan_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getDiscounts</span>(lineItemCtnr
+								 : 
+								 
+								<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>, promotionPlan
+								 : 
+								 
+								<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>)
+					 : 
+					<a href="class_dw_campaign_DiscountPlan.html"><span class="">DiscountPlan</span></a>
+                    </div>
+                    <div class="description">Returns the discounts applicable for the current customer, active
+ source code and specified line item container, based on the specified
+ promotion plan. <br/>
+
+ This method calculates applicable discounts from the promotions in the
+ specified promotion plan. Note that any promotion in the promotion
+ plan that is inactive, or not applicable for the current customer
+ or source code, is being ignored.
+ <p/>
+ The applicable discounts are contained in the returned instance of
+ <a href="class_dw_campaign_DiscountPlan.html">DiscountPlan</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">lineItemCtnr</span>
+						 - 
+						<span class="parameterDesc">Line item container</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionPlan</span>
+						 - 
+						<span class="parameterDesc">Promotion plan with active promotions</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Discount plan with applicable discounts</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getPromotion_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPromotion</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPromotion</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_campaign_Promotion.html"><span class="">Promotion</span></a>
+                    </div>
+                    <div class="description">Returns the promotion identified by the specified ID. The same logical
+ promotion may be assigned to multiple campaigns or AB-tests. In this
+ case, the system returns the instance of highest rank. Some attributes of
+ the returned Promotion may vary based on exactly which instance is
+ returned. This method returns null if there is no promotion in the system
+ with the given ID, or if a promotion with the given ID exists but it is
+ not assigned to any campaign or AB-test.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">Promotion ID</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Promotion or null if not found</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getPromotions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPromotions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPromotions</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all promotions of the current site in no specific order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">All promotions of current site</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getUpcomingCustomerPromotions_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUpcomingCustomerPromotions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getUpcomingCustomerPromotions</span>(previewTime
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions currently inactive, but scheduled
+ for any time between <i>now</i> and <i>now + previewTime(hours)</i>,
+ and which are applicable based on the current customer, source code, and
+ coupons in the current basket.<br/>
+ The parameter <i>previewTime</i> specifies for how many hours promotions
+ should be previewed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">previewTime</span>
+						 - 
+						<span class="parameterDesc">Preview time in hours</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PromotionPlan with active promotions</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActivePromotions_DetailAnchor">getActivePromotions()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_PromotionMgr_getUpcomingPromotions_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUpcomingPromotions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getUpcomingPromotions</span>(previewTime
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_campaign_PromotionPlan.html"><span class="">PromotionPlan</span></a>
+                    </div>
+                    <div class="description">Returns all promotions currently inactive, but scheduled
+ for any time between <i>now</i> and <i>now + previewTime(hours)</i>. <br/>
+ The upcoming promotions are returned in an instance of
+ <a href="class_dw_campaign_PromotionPlan.html">PromotionPlan</a> and might not necessarily be applicable for
+ the current customer or source code. <br/>
+ The parameter <i>previewTime</i> specifies for how many hours promotions
+ should be previewed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">previewTime</span>
+						 - 
+						<span class="parameterDesc">Preview time in hours</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PromotionPlan with active promotions</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getActivePromotions_DetailAnchor">getActivePromotions()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

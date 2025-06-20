@@ -1,0 +1,381 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet SearchSystemObject</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet SearchSystemObject</div>
+            <div class="topLevelDescription">
+<p>
+This pipelet searches for system object instances. The following system object types are supported:<ul>
+<li>GiftCertificate</li>
+<li>Order</li>
+<li>Profile</li>
+<li>SourceCodeGroup</li>
+<li>Store</li>
+<li>ProductList</li></ul>
+</p>
+
+<p>
+Output will be a SearchResult containing all object instances of the specified type that match the explicit SearchExpression OR the search criteria specified in Search*Key/Search*Value pairs.
+Please note: If search keys are specified by Search*Key parameters, the pipelet executes an ILIKE (case insensitive) query with right-hand wildcard on the values. This specific mode is typically for a "query by example" search in a user interface.
+</p>
+
+<p>
+If no search criteria is provided the pipelet returns all object instances of the specified object type.
+In either case, SearchResultCount contains the number of objects in the SearchResult.
+</p>
+
+<p>
+The identifier for an attribute to use in a query condition is always the ID of the attribute as defined in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g. <code>custom.color</code>), while for system attributes no prefix is used (e.g. <code>name</code>).
+</p>
+
+<p>
+Supported value types with sample expression values:<br/><ul>
+<li><i>String</i> <code>'String'</code></li>
+<li><i>Integer</i> <code>1, 3E4</code></li>
+<li><i>Number</i> <code>1.0, 3.99E5</code></li>
+<li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+<li><i>DateTime</i> <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+<li><i>Boolean</i> <code>true, false</code></li>
+<li><i>Email</i> <code>'search@demandware.com'</code></li>
+<li><i>Set of String</i> <code>'String'</code></li>
+<li><i>Set of Integer</i> <code>1, 3E4</code></li>
+<li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+<li><i>Enum of String</i> <code>'String'</code></li>
+<li><i>Enum of Integer</i> <code>1, 3E4</code></li></ul>
+The following types of attributes are not queryable:<br/><ul>
+<li><i>Image</i></li>
+<li><i>HTML</i></li>
+<li><i>Text</i></li>
+<li><i>Quantity</i></li>
+<li><i>Password</i></li></ul>
+</p>
+
+<p>
+Note, that some system attributes are not queryable by default regardless of the actual value type code.
+</p>
+
+<p>
+The following <b>operators</b> are supported in a condition:<br/><ul>
+<li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+<li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+<li><code>&lt;</code> Less than  - Integer, Number and Date types only</li>
+<li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+<li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+<li><code>&gt;=</code> Greater or equals than  - Integer, Number and Date types only</li>
+<li><code>LIKE</code> Like - String types and Email only; use if leading or trailing
+wildcards will be used to support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+<li><code>ILIKE</code> Caseindependent Like - String types and Email only, use to support
+case insensitive query (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for
+substring matching</li></ul>
+</p>
+
+<p>
+Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT' and nested using parenthesis e.g.
+<code>gender = {1} AND (age &gt;= {2} OR (NOT profession LIKE {3}))</code>.
+</p>
+
+<p>
+The pipelet provides a placeholder syntax to dynamically pass objects as search parameters. Each passed object is related to a placeholder in the SearchExpression configuration parameter. The placeholder must be an Integer that is surrounded by braces and relates to one of the input parameter Search*Value, e.g.
+<code>custom.dtvalue &lt;= {1}</code>.
+</p>
+
+<p>
+The <b>sorting</b> order and direction can be specified by SortExpression OR by using the SortBy* / SortBy*Direction pairs.
+Please note that specifying a localized custom attribute as the sorting attribute is not supported.
+</p>
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Search</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CaseSensitive</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+In case of a key/value based search definition the config value specifies whether a case sensitive or case insensitive LIKE is executed. Default is a case insensitive search.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ObjectType</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The sytem object type to search for.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">GiftCertificate</div>
+                    <div class="parameterDetail
+										">Order</div>
+                    <div class="parameterDetail
+										">ProductList</div>
+                    <div class="parameterDetail
+										">Profile</div>
+                    <div class="parameterDetail
+										">SourceCodeGroup</div>
+                    <div class="parameterDetail
+										">Store</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SearchExpression</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The expression defining the search conditions. Samples: "firstName like 'Fred*' AND lastName like 'Incognito*'", "creationDate &gt;= {1}", "email != NULL", "custom.ivalue = 1" The {1} points to an object value specified by dictionary-in parameter Search1Value.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortExpression</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The expression defining the sorting conditions. Samples: "custom.ivalue ASC", "lastName DESC", "custom.ivalue ASC, creationDate DESC"
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search1Key</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying the attribute to search for. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search1Value</span>
+					&nbsp;:&nbsp;
+					Object
+							(Optional)
+						</span>
+                    <div class="description">
+The value to search for, an object of type String, Number, Date or Boolean.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search2Key</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying the attribute to search for. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search2Value</span>
+					&nbsp;:&nbsp;
+					Object
+							(Optional)
+						</span>
+                    <div class="description">
+The value to search for, an object of type String, Number, Date or Boolean.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search3Key</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying the attribute to search for. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search3Value</span>
+					&nbsp;:&nbsp;
+					Object
+							(Optional)
+						</span>
+                    <div class="description">
+The value to search for, an object of type String, Number, Date or Boolean.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search4Key</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying the attribute to search for. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search4Value</span>
+					&nbsp;:&nbsp;
+					Object
+							(Optional)
+						</span>
+                    <div class="description">
+The value to search for, an object of type String, Number, Date or Boolean.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search5Key</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying the attribute to search for. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Search5Value</span>
+					&nbsp;:&nbsp;
+					Object
+							(Optional)
+						</span>
+                    <div class="description">
+The value to search for, an object of type String, Number, Date or Boolean.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy1</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying a sorting attribute. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy1Direction</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Specifies the sorting direction of the related sorting attribute. (1 = ASC, other value = DESC)
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy2</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying a sorting attribute. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy2Direction</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Specifies the sorting direction of the related sorting attribute. (1 = ASC, other value = DESC)
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy3</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The ID identifying a sorting attribute. Samples: "creationDate", "custom.dtvalue"
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SortBy3Direction</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Specifies the sorting direction of the related sorting attribute. (1 = ASC, other value = DESC)
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SearchResult</span>
+					&nbsp;:&nbsp;
+					Iterator
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The system object instances that match the search criteria.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SearchResultCount</span>
+					&nbsp;:&nbsp;
+					Integer
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The number of system object instances in the SearchResult.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,714 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class RESTResponseMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.system.RESTResponseMgr">
+            <a name="dw.system.RESTResponseMgr"></a>
+            <div class="packageName">dw.system</div>
+            <div class="className
+					">	
+        	
+				Class RESTResponseMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.system.RESTResponseMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class provides helper methods for creating REST error and success responses. It is mainly intended to be used to
+ build Custom REST APIs. But, any controller implementation planning to provide REST-like responses can use these
+ methods. If these methods are being used in the controllers, note that a few defaults like URL prefix for
+ <code>type</code> in <code>createError</code> methods will correspond to Custom REST APIs.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_RESTResponseMgr_RESTResponseMgr_DetailAnchor"><span class="">RESTResponseMgr</span></a></span>()</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createEmptySuccess_Number_DetailAnchor"><span class="">createEmptySuccess</span></a></span>(statusCode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_system_RESTSuccessResponse.html"><span class="">RESTSuccessResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createError_Number_DetailAnchor"><span class="">createError</span></a></span>(statusCode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createError_Number_String_DetailAnchor"><span class="">createError</span></a></span>(statusCode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createError_Number_String_String_DetailAnchor"><span class="">createError</span></a></span>(statusCode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, title
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createError_Number_String_String_String_DetailAnchor"><span class="">createError</span></a></span>(statusCode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, title
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, detail
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createScapiRemoteInclude_String_String_String_String_URLParameter_DetailAnchor"><span class="">createScapiRemoteInclude</span></a></span>(apiFamily
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, apiName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, apiVersion
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, resourcePath
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, params
+								 : 	
+								 
+								<a href="class_dw_web_URLParameter.html"><span class="">URLParameter</span></a>...)
+						: 
+					<a href="class_dw_system_RemoteInclude.html"><span class="">RemoteInclude</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RemoteInclude.html">RemoteInclude</a> object specific for the SCAPI include path.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createStorefrontControllerRemoteInclude_URLAction_URLParameter_DetailAnchor"><span class="">createStorefrontControllerRemoteInclude</span></a></span>(action
+								 : 	
+								 
+								<a href="class_dw_web_URLAction.html"><span class="">URLAction</span></a>, params
+								 : 	
+								 
+								<a href="class_dw_web_URLParameter.html"><span class="">URLParameter</span></a>...)
+						: 
+					<a href="class_dw_system_RemoteInclude.html"><span class="">RemoteInclude</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RemoteInclude.html">RemoteInclude</a> object specific for the Storefront Controller include path.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createSuccess_Object_Number_DetailAnchor"><span class="">createSuccess</span></a></span>(body
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, statusCode
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_system_RESTSuccessResponse.html"><span class="">RESTSuccessResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_RESTResponseMgr_createSuccess_Object_DetailAnchor"><span class="">createSuccess</span></a></span>(body
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_RESTSuccessResponse.html"><span class="">RESTSuccessResponse</span></a></span>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_RESTResponseMgr_DetailAnchor"></a>
+                    <div class="detailName 
+						">RESTResponseMgr</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">RESTResponseMgr</span>()
+                    </div>
+                    <div class="description"></div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createEmptySuccess_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">createEmptySuccess</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createEmptySuccess</span>(statusCode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_system_RESTSuccessResponse.html"><span class="">RESTSuccessResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object. This method is to be used in scenarios where response body
+ is not expected (e.g. statusCode is 204).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statusCode</span>
+						 - 
+						<span class="parameterDesc">The http status code of the response. The statusCode parameter should conform to RFC standards for a success.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">If the statusCode is not in the (100..299) range.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createError_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">createError</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createError</span>(statusCode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object. This method should be used when you have just the statusCode
+ of the error and want the type of error to be inferred.
+ <p/>
+ 'type' of the error is inferred from the status code as follows: <br/>
+ <ul>
+ <li><code>400</code> - <code>bad-request</code></li>
+ <li><code>401</code> - <code>unauthorized</code></li>
+ <li><code>403</code> - <code>forbidden</code></li>
+ <li><code>404</code> - <code>resource-not-found</code></li>
+ <li><code>409</code> - <code>conflict</code></li>
+ <li><code>412</code> - <code>precondition-failed</code></li>
+ <li><code>429</code> - <code>too-many-requests</code></li>
+ <li><code>500</code> - <code>internal-server-error</code></li>
+ <li><code>default</code> - <code>about:blank</code></li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statusCode</span>
+						 - 
+						<span class="parameterDesc">The error code of the response. The statusCode parameter should conform to RFC standards for an error.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">If the statusCode is not in the (400..599) range.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createError_Number_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createError</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createError</span>(statusCode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object. This method should be used when you want to omit 'title' and
+ 'detail' of the error. With this method, custom error codes and types apart from the standard ones can be
+ constructed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statusCode</span>
+						 - 
+						<span class="parameterDesc">The error code of the response. The statusCode parameter should conform to RFC standards for an error.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">Type of the error according to RFC 9457. We enforce the following restrictions on top of the RFC: <ul> <li>If the provided type is not an absolute URL, it will be prepended with <code>https://api.commercecloud.salesforce.com/documentation/error/v1/custom-errors/</code>.</li> <li>Custom error types are not allowed to have SYSTEM error type prefix: <code>https://api.commercecloud.salesforce.com/documentation/error/v1/errors/</code>.</li> </ul></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">If the statusCode is not in the (400..599) range or if the error type is not a valid URI or conflicts with the SYSTEM error type namespace.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createError_Number_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createError</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createError</span>(statusCode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, title
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object. This method should be used when you want to omit 'detail' of
+ the error but want to have valid 'statusCode', 'type' and 'title'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statusCode</span>
+						 - 
+						<span class="parameterDesc">The error code of the response. The statusCode parameter should conform to RFC standards for an error.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">Type of the error according to RFC 9457. We enforce the following restrictions on top of the RFC: <ul> <li>If the provided type is not an absolute URL, it will be prepended with <code>https://api.commercecloud.salesforce.com/documentation/error/v1/custom-errors/</code>.</li> <li>Custom error types are not allowed to have SYSTEM error type prefix: <code>https://api.commercecloud.salesforce.com/documentation/error/v1/errors/</code>.</li> </ul></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">title</span>
+						 - 
+						<span class="parameterDesc">Human-readable summary of the error type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">If the statusCode is not in the (400..599) range or if the error type is not a valid URI or conflicts with SYSTEM error type namespace.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createError_Number_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createError</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createError</span>(statusCode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, title
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, detail
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_RESTErrorResponse.html"><span class="">RESTErrorResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object. This method can be used to construct error responses with
+ valid 'statusCode', 'type', 'title' and 'detail'. If you want to omit title or detail, you can pass in
+ <code>null</code>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statusCode</span>
+						 - 
+						<span class="parameterDesc">The error code of the response. The statusCode parameter should conform to RFC standards for an error.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">Type of the error according to RFC 9457. We enforce the following restrictions on top of the RFC: <ul> <li>If the provided type is not an absolute URL, it will be prepended with <code>https://api.commercecloud.salesforce.com/documentation/error/v1/custom-errors/</code>.</li> <li>Custom error types are not allowed to have SYSTEM error type prefix: <code>https://api.commercecloud.salesforce.com/documentation/error/v1/errors/</code>.</li> </ul></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">title</span>
+						 - 
+						<span class="parameterDesc">Human-readable summary of the error type.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">detail</span>
+						 - 
+						<span class="parameterDesc">Human-readable explanation of the specific occurrence of the error.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTErrorResponse.html">RESTErrorResponse</a> object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">If the statusCode is not in the (400..599) range or if the error type is not a valid URI or conflicts with SYSTEM error type namespace.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createScapiRemoteInclude_String_String_String_String_URLParameter_DetailAnchor"></a>
+                    <div class="detailName 
+						">createScapiRemoteInclude</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createScapiRemoteInclude</span>(apiFamily
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, apiName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, apiVersion
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, resourcePath
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, params
+								 : 
+								 
+								<a href="class_dw_web_URLParameter.html"><span class="">URLParameter</span></a>...)
+					 : 
+					<a href="class_dw_system_RemoteInclude.html"><span class="">RemoteInclude</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RemoteInclude.html">RemoteInclude</a> object specific for the SCAPI include path.
+ <h3>Usage:</h3>
+ SCAPI remote include URL have following form:
+ <pre>BASE_PATH/{apiFamily}/{apiName}/{apiVersion}/organizations/ORG_ID/{resourcePath}[?params]</pre>
+ For the given SCAPI resource path:
+ <pre>BASE_PATH/product/shopper-products/v1/organizations/ORG_ID/categories/root?siteId=YourShopHere</pre>
+ RemoteInclude object can be constructed in a script like following:
+ <pre>
+ let include = dw.system.RESTResponseMgr.createScapiRemoteInclude("product", "shopper-products", "v1", "categories/root",
+     dw.web.URLParameter("siteId", "YourShopHere"));
+ </pre>
+ Please notice that <b>'BASE_PATH'</b> and <b>'ORG_ID'</b> are automatically resolved.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">apiFamily</span>
+						 - 
+						<span class="parameterDesc">an API Family name. <b>Example:</b> 'product'.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">apiName</span>
+						 - 
+						<span class="parameterDesc">an API Name. <b>Example:</b> 'shopper-products'.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">apiVersion</span>
+						 - 
+						<span class="parameterDesc">an API Version. <b>Example:</b> 'v1'.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">resourcePath</span>
+						 - 
+						<span class="parameterDesc">a Resource path. <b>Example:</b> 'categories/root'</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">params</span>
+						 - 
+						<span class="parameterDesc">a query parameters <i>(optional)</i></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a new instance of <a href="class_dw_system_RemoteInclude.html">RemoteInclude</a>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createStorefrontControllerRemoteInclude_URLAction_URLParameter_DetailAnchor"></a>
+                    <div class="detailName 
+						">createStorefrontControllerRemoteInclude</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createStorefrontControllerRemoteInclude</span>(action
+								 : 
+								 
+								<a href="class_dw_web_URLAction.html"><span class="">URLAction</span></a>, params
+								 : 
+								 
+								<a href="class_dw_web_URLParameter.html"><span class="">URLParameter</span></a>...)
+					 : 
+					<a href="class_dw_system_RemoteInclude.html"><span class="">RemoteInclude</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RemoteInclude.html">RemoteInclude</a> object specific for the Storefront Controller include path.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">a container to specify target controller. Hostnames in URL actions are ignored.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">params</span>
+						 - 
+						<span class="parameterDesc">a query parameters <i>(optional)</i>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a new instance of <a href="class_dw_system_RemoteInclude.html">RemoteInclude</a>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createSuccess_Object_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">createSuccess</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createSuccess</span>(body
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, statusCode
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_system_RESTSuccessResponse.html"><span class="">RESTSuccessResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">body</span>
+						 - 
+						<span class="parameterDesc">The body of the successful response. This should always be a valid JavaScript JSON object.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statusCode</span>
+						 - 
+						<span class="parameterDesc">The http status code of the response. The statusCode parameter should conform to RFC standards for a success.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">If the statusCode is not in the (100..299) range.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_RESTResponseMgr_createSuccess_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">createSuccess</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createSuccess</span>(body
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_RESTSuccessResponse.html"><span class="">RESTSuccessResponse</span></a>
+                    </div>
+                    <div class="description">Constructs a new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object. HTTP status code of the response will be defaulted to 200.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">body</span>
+						 - 
+						<span class="parameterDesc">The body of the successful response. This should always be a valid JavaScript JSON object.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A new <a href="class_dw_system_RESTSuccessResponse.html">RESTSuccessResponse</a> object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

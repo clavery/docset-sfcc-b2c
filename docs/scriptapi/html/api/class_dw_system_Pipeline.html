@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Pipeline</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.system.Pipeline">
+            <a name="dw.system.Pipeline"></a>
+            <div class="packageName">dw.system</div>
+            <div class="className
+					">	
+        	
+				Class Pipeline</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.system.Pipeline
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">A helper for executing pipelines from JavaScript. The main purpose for this API is to invoke process pipelines from
+ JavaScript controllers, e.g. pipelines that return with an end node and that do not perform user interactions.
+ Pipelines that span across multiple requests (e.g. that contain Interaction-Continue-Nodes) are not supported and may
+ not work as expected. The pipeline will be executed within the current request and not by a remote call, so this API
+ works roughly like a Call node in a pipeline. The called pipeline will get its own local pipeline dictionary. The
+ dictionary can be populated with initial values from an argument object. Any results from the pipeline can be read
+ from the pipeline dictionary that is returned by the <a href="class_dw_system_Pipeline.html#dw_system_Pipeline_execute_String_DetailAnchor">execute(String)</a> methods.
+ <p/>
+ If an exception occurs during the pipeline processing, the Error-branch of the pipeline will be called. If no error
+ handling exists for the pipeline, the exception will be propagated and can be handled by the script code.
+ <p/>
+ If the pipeline finishes with an End node, the name of the end node can be obtained from the returned pipeline
+ dictionary under the key 'EndNodeName'.
+ <p/>
+ Example:
+
+ <pre>
+ let Pipeline = require('dw/system/Pipeline');
+ let pdict = Pipeline.execute('MyPipeline-Start', {
+     MyArgString:     'someStringValue',
+     MyArgNumber:     12345,
+     MyArgBoolean:    true
+ });
+ let result = pdict.MyReturnValue;
+ </pre>
+
+ This feature requires an API version >=15.5.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_Pipeline_execute_String_DetailAnchor"><span class="">execute</span></a></span>(pipeline
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_PipelineDictionary.html"><span class="">PipelineDictionary</span></a></span>
+                    <div class="description">Executes a pipeline.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_Pipeline_execute_String_Object_DetailAnchor"><span class="">execute</span></a></span>(pipeline
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_PipelineDictionary.html"><span class="">PipelineDictionary</span></a></span>
+                    <div class="description">Executes a pipeline.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_Pipeline_execute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">execute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">execute</span>(pipeline
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_PipelineDictionary.html"><span class="">PipelineDictionary</span></a>
+                    </div>
+                    <div class="description">Executes a pipeline.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 15.5.
+				New convenience method for easier migration of pipeline-based systems to JavaScript controllers.</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pipeline</span>
+						 - 
+						<span class="parameterDesc">the pipeline identifier, must consist of the pipeline name and the start node name, like 'PipelineName-StartNodeName'</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the pipeline dictionary with the pipeline results</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Pipeline_execute_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">execute</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">execute</span>(pipeline
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_PipelineDictionary.html"><span class="">PipelineDictionary</span></a>
+                    </div>
+                    <div class="description">Executes a pipeline. The pipeline dictionary will be initialized with the provided arguments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 15.5.
+				New convenience method for easier migration of pipeline-based systems to JavaScript controllers.</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pipeline</span>
+						 - 
+						<span class="parameterDesc">the pipeline identifier, must consist of a pipeline name and a start node name, like 'PipelineName-StartNodeName'</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">an object whose properties represent the initial values of the pipeline dictionary</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the pipeline dictionary with the pipeline results</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

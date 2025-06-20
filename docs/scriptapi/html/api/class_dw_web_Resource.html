@@ -1,0 +1,393 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Resource</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.web.Resource">
+            <a name="dw.web.Resource"></a>
+            <div class="packageName">dw.web</div>
+            <div class="className
+					">	
+        	
+				Class Resource</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.web.Resource
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Library class which provides methods for retrieving messages from properties
+ resource bundles which contain locale-specific strings. When your program
+ needs a locale-specific String, it loads it from the resource bundle that is
+ appropriate for the user's current locale. In this way, the program code is
+ largely independent of the user's locale.
+ <p/>
+ In Commerce Cloud Digital, resources are associated with the templates of a cartridge.
+ These bundles consist of properties files with a common name defined in the
+ template/resources directory of a site cartridge. For example:
+
+ <ul>
+ <li>templates/resources/message.properties</li>
+ <li>templates/resources/message_en.properties</li>
+ <li>templates/resources/message_en_US.properties</li>
+ <li>templates/resources/message_de_DE.properties</li>
+ </ul>
+
+ Resource bundle lookup generally follows the same rules as the Java
+ ResourceBundle class, where the locale used for lookup is based on the
+ current request. See method javadoc for additional details.
+ <p/>
+ Properties resource files are assumed to use the UTF-8 character
+ encoding. Unicode escape sequences are also supported.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_web_Resource_msg_String_DetailAnchor"><span class="">msg</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the message from the default properties resource bundle (base name "message") corresponding to the specified key and the request locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_web_Resource_msg_String_String_DetailAnchor"><span class="">msg</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, defaultMessage
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the message from the default properties resource bundle (base name "message") corresponding to the specified key and the request locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_web_Resource_msg_String_String_String_DetailAnchor"><span class="">msg</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, bundleName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, defaultMessage
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the message from the specified properties resource bundle.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_web_Resource_msgf_String_String_String_Object_DetailAnchor"><span class="">msgf</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, bundleName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, defaultMessage
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the message from the specified properties resource bundle, with the provided arguments substituted for the message argument placeholders (specified using the Java MessageFormat approach).</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_web_Resource_msg_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">msg</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">msg</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the message from the default properties resource bundle (base
+ name "message") corresponding to the specified key and the request
+ locale.
+
+ This method is equivalent to msg(String, null).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">resource bundle message key</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resource bundle message or the key itself if no message is defined.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_web_Resource.html#dw_web_Resource_msg_String_String_DetailAnchor">msg(String, String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_Resource_msg_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">msg</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">msg</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, defaultMessage
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the message from the default properties resource bundle (base
+ name "message") corresponding to the specified key and the request
+ locale. If no message for the key is found, returns the default message
+ if it is not null, otherwise returns the key itself.
+
+ This method is equivalent to msg(key, null, defaultMessage).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">resource bundle message key</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultMessage</span>
+						 - 
+						<span class="parameterDesc">default message to return if no message corresponding to the key is found</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resource bundle message or default message</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_web_Resource.html#dw_web_Resource_msg_String_String_String_DetailAnchor">msg(String, String, String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_Resource_msg_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">msg</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">msg</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, bundleName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, defaultMessage
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the message from the specified properties resource bundle. The
+ resource bundle is located by iterating the site cartridges and looking
+ for a bundle with the specified name in the cartridge template/resources
+ directory. If it finds a bundle, it tries to return a message from the
+ bundle using standard Java ResourceBundle logic. If a message is found in
+ that cartridge's bundle, it is returned, otherwise, the next cartridge is
+ examined.
+
+ The method throws an exception if the key is null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">resource bundle message key</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">bundleName</span>
+						 - 
+						<span class="parameterDesc">base bundle name, if null, default bundle name, "message", is used</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultMessage</span>
+						 - 
+						<span class="parameterDesc">default message to return if no message corresponding to the key is found and defaultMessage is not null</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resource bundle message or default message</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_Resource_msgf_String_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">msgf</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">msgf</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, bundleName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, defaultMessage
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the message from the specified properties resource bundle, with
+ the provided arguments substituted for the message argument placeholders
+ (specified using the Java MessageFormat approach).
+
+ If null is passed for the varargs argument, this method is equivalent to
+ msg(key, bundleName, defaultMessage).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">resource bundle message key</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">bundleName</span>
+						 - 
+						<span class="parameterDesc">base bundle name, if null, default bundle name, "message", is used</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">defaultMessage</span>
+						 - 
+						<span class="parameterDesc">default message to return if no message corresponding to the key is found and defaultMessage is not null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional list of arguments or a collection, which are included into the result string</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the resource bundle message or default message</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_web_Resource.html#dw_web_Resource_msg_String_String_String_DetailAnchor">msg(String, String, String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

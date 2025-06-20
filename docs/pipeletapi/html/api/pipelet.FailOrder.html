@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet FailOrder</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet FailOrder</div>
+            <div class="topLevelDescription">Deprecated. Please use dw.order.OrderMgr#failOrder(dw.order.Order, boolean) instead.<br/>
+<p>This pipelet fails an unplaced order if payment could not be authorized. The specified Order must be in status CREATED, and will be set to status FAILED.</p>
+<p>Inventory transactions and coupon redemptions associated with the Order will be rolled back.</p>
+<p>If the order is failed in the same session in which it was created, the basket will be reopened such that it can be used for a subsequent order.</p>
+<p>The pipelet can be called within or outside of a storefront session, for example in a job pipeline.</p>
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">Deprecated. Please use dw.order.OrderMgr#failOrder(dw.order.Order, boolean) instead.</div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Order (deprecated)</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Order</span>
+					&nbsp;:&nbsp;
+					Order
+
+							(Optional)
+						</span>
+                    <div class="description">
+An Order in status CREATED.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

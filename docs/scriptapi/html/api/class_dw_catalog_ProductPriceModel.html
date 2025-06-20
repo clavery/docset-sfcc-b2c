@@ -1,0 +1,1596 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductPriceModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.ProductPriceModel">
+            <a name="dw.catalog.ProductPriceModel"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class ProductPriceModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.ProductPriceModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">ProductPriceModel provides methods to access all the
+ <a href="class_dw_catalog_PriceBook.html">PriceBook</a> information of a product. A ProductPriceModel
+ instance is retrieved by calling <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPriceModel_DetailAnchor">Product.getPriceModel()</a>
+ or <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPriceModel_ProductOptionModel_DetailAnchor">Product.getPriceModel(ProductOptionModel)</a> for a
+ specific product. The latter method will return a model which also includes
+ the additional option prices of an option product.
+ <p/>
+ When the current price of a product is accessed in the storefront via its
+ price model, a price lookup is performed. The high-level steps of this price
+ lookup are:
+
+ <ul>
+ <li>Get all price books applicable in the context of the current site, time,
+ session, customer, source code.</li>
+ <li>Identify all prices in the applicable price books and for a requested
+ quantity.</li>
+ <li>Calculate the best-price of all identified prices. The best-price is the
+ lowest price.</li>
+ </ul>
+
+ In more detail:
+ <p/>
+
+ <b>Identify applicable price books</b><br/>
+ <ul>
+ <li>If any price books are explicitly registered in the session (see pipelet
+ SetApplicablePriceBooks), use these price books and their direct parents for
+ price lookup. Ignore all inactive price books, price books not valid at the
+ current time, and price books with a currency other than the session currency.</li>
+ </ul>
+
+ <b>Otherwise:</b><br/>
+ <ul>
+ <li>If a valid source code is registered with the current session, get all
+ price books assigned to the source code and their parent price books. Ignore
+ all inactive price books, price books not valid at the current time, and
+ price books with a currency other than the session currency.</li>
+ <li>Get all price books assigned to site and their parent price books. Ignore
+ all inactive price books, price books not valid at the current time, and
+ price books with a currency other than the session currency.</li>
+ </ul>
+
+ <b>Identify all prices:</b><br/>
+ <ul>
+ <li>Get all price definitions for the product from all applicable price
+ books. Ignore price definitions not valid at the current time.</li>
+ <li>Convert any percentage price definition into a monetary amount. As the
+ base price for this calculation, the minimum product price for the minimum
+ order quantity of the product, including product options, is used.</li>
+ <li>Compare all prices and identify the lowest (= best) price.</li>
+ <li>Calculate best price for each defined price cut in the price table and
+ return price table.</li>
+ </ul>
+
+ <b>Variation Price Fallback:</b><br/>
+ <ul>
+ <li>If no applicable pricebooks for a variant is found, the price lookup gets
+ the price books from the variant's master product</li>
+ <li>A price books is also not applicable of the price definition for the
+ variant in the price book is not valid at the current time.</li>
+ </ul>
+
+ <p/>
+
+ Typically, in order to do a standard price lookup, it is only necessary to
+ call <code>Product.getPriceModel().getPrice()</code>. However, Commerce Cloud
+ Digital also supports tiered prices, meaning that higher quantities receive
+ a lower price. In this case, the merchant typically wants to display a table
+ of price points on product detail pages. Therefore, the ProductPriceModel
+ provides the method <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceTable_DetailAnchor">getPriceTable()</a> to retrieve a table of these prices.
+
+ <p/>
+
+ If a merchant wants to know not only what the price of a given product is,
+ but what price book the price was derived from, this class provides the
+ method <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceInfo_DetailAnchor">getPriceInfo()</a>. This class also provides methods to lookup
+ product prices in specific price books by name and quantity. See
+ <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a>.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>basePriceQuantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The quantity for which the base price is defined. This
+ is typically 1.0.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maxPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Calculates and returns the maximum price-book price of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPrice_DetailAnchor">getPrice()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.<p/>
+
+ <b>Warning:</b>  If the product represented by this model is a master
+ product with numerous variants, this method can be very expensive and
+ should be avoided.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maxPricePerUnit
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Calculates and returns the maximum price-book price per unit of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPricePerUnit_DetailAnchor">getPricePerUnit()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.
+
+ e.g.
+ suppose one master product mp (price = $6, unitQuantity = 2), it has 2 variants:
+ v1(price = $5, unitQuantity = 5), v2(price = $10, unitQuantity = 20).
+ The max price per unit of mp will be max($6/2, $5/5, $10/20) = $3</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Calculates and returns the minimum price-book price of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPrice_DetailAnchor">getPrice()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.<p/>
+
+ <b>Warning:</b>  If the product represented by this model is a master
+ product with numerous variants, this method can be very expensive and
+ should be avoided.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minPricePerUnit
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Calculates and returns the minimum price-book price per unit of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPricePerUnit_DetailAnchor">getPricePerUnit()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.
+
+ e.g.
+ suppose one master product mp (price = $6, unitQuantity = 2), it has 2 variants:
+ v1(price = $5, unitQuantity = 5), v2(price = $10, unitQuantity = 20).
+ The min price per unit of mp will be min($6/2, $5/5, $10/20) = $0.5</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>price
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The active price of a product, calculated based on base price quantity
+ 1.00. The price is returned for the currency of the current session.
+ <p/>
+ The price lookup is based on the configuration of price books. It depends
+ on various settings, such as which price books are active, or explicitly
+ set as applicable in the current session.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ If no price could be found, MONEY.NOT_AVAILABLE is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priceInfo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The active price info of a product, calculated based on base price
+ quantity 1.00. The price is returned for the currency of the current
+ session.
+ <p/>
+ This method is similar to <code>getPrice()</code> but instead of just
+ returning the price value, it returns a <code>ProductPriceInfo</code>
+ which contains additional information such as the PriceBook which defined
+ the price and the percentage discount this price point represents.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ If no price info could be found, null is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priceInfos
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All the eligible <code></>ProductPriceInfo</code></>(s), calculated based
+ on base price quantity 1.00. This will return an empty list if getPriceInfo() would return null, and if there is
+ only one price info in the collection it will be the same price info as getPriceInfo(). Two or more price infos
+ indicate that there are that many price books that meet the criteria for returning the price shown in the
+ storefront.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pricePerUnit
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The sales price per unit of a product, calculated based on base price
+ quantity 1.00.
+ <p>
+ The product sales price per unit is returned for the current session currency.
+ Hence, the using this method is only useful in storefront processes.
+ <p>
+ The price lookup is based on the configuration of price books. It depends
+ on various settings, such as which price books are active, or explicitly
+ set as applicable in the current session.
+ <p>
+ If no price could be found, MONEY.N_A is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priceRange
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if this product is a master product (or product set) and the
+ collection of online variants (or set products respectively) contains
+ products of different prices.<p/>
+
+ <b>Warning:</b>  If the product represented by this model is a master
+ product with numerous variants, this method can be very expensive and
+ should be avoided.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priceTable
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductPriceTable.html"><span class="">ProductPriceTable</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The product price table object. The price table represents a map
+ between order quantities and prices, and also provides % off information
+ to be shown to storefront customers. The price is returned for the
+ currency of the current session.
+ <p/>
+ Usually, the product price table is printed on product detail pages in
+ the storefront.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ All other methods of this class are based on the information in the
+ product price table.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getBasePriceQuantity_DetailAnchor"><span class="">getBasePriceQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the quantity for which the base price is defined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMaxPrice_DetailAnchor"><span class="">getMaxPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the maximum price-book price of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMaxPriceBookPrice_String_DetailAnchor"><span class="">getMaxPriceBookPrice</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the maximum price in a given price book of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMaxPriceBookPricePerUnit_String_DetailAnchor"><span class="">getMaxPriceBookPricePerUnit</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the maximum price per unit in a given price book of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMaxPricePerUnit_DetailAnchor"><span class="">getMaxPricePerUnit</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the maximum price-book price per unit of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMinPrice_DetailAnchor"><span class="">getMinPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the minimum price-book price of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMinPriceBookPrice_String_DetailAnchor"><span class="">getMinPriceBookPrice</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the minimum price in a given price book of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMinPriceBookPricePerUnit_String_DetailAnchor"><span class="">getMinPriceBookPricePerUnit</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the minimum price per unit in a given price book of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getMinPricePerUnit_DetailAnchor"><span class="">getMinPricePerUnit</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Calculates and returns the minimum price-book price per unit of all variants (for master products) or set-products (for product sets) for base quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPrice_DetailAnchor"><span class="">getPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the active price of a product, calculated based on base price quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPrice_Quantity_DetailAnchor"><span class="">getPrice</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the active price of a product, calculated based on the passed order quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor"><span class="">getPriceBookPrice</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the active price of the product in the specified price book for quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceBookPrice_String_Quantity_DetailAnchor"><span class="">getPriceBookPrice</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the active price of the product in the specified price book for the specified quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceBookPriceInfo_String_DetailAnchor"><span class="">getPriceBookPriceInfo</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a></span>
+                    <div class="description">This method acts similarly to <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a> but returns a ProductPriceInfo object wrapping the actual price with additional information.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceBookPriceInfo_String_Quantity_DetailAnchor"><span class="">getPriceBookPriceInfo</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a></span>
+                    <div class="description">This method acts similarly to <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_Quantity_DetailAnchor">getPriceBookPrice(String, Quantity)</a> but returns a ProductPriceInfo object wrapping the actual price with additional information.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_DetailAnchor"><span class="">getPriceBookPricePerUnit</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the active price per unit of the product in the specified price book for quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_Quantity_DetailAnchor"><span class="">getPriceBookPricePerUnit</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the active price per unit of the product in the specified price book for the specified quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceInfo_DetailAnchor"><span class="">getPriceInfo</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a></span>
+                    <div class="description">Returns the active price info of a product, calculated based on base price quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceInfo_Quantity_DetailAnchor"><span class="">getPriceInfo</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a></span>
+                    <div class="description">Returns the active price info of a product, calculated based on the passed order quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceInfos_DetailAnchor"><span class="">getPriceInfos</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all the eligible <code></>ProductPriceInfo</code></>(s), calculated based on base price quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPricePercentage_Money_Money_DetailAnchor"><span class="">getPricePercentage</span></a></span>(basePrice
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, comparePrice
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Calculates and returns the percentage off amount of the passed comparePrice to the passed basePrice.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPricePerUnit_DetailAnchor"><span class="">getPricePerUnit</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the sales price per unit of a product, calculated based on base price quantity 1.00.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPricePerUnit_Quantity_DetailAnchor"><span class="">getPricePerUnit</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the sales price per unit of a product, calculated based on the passed order quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_getPriceTable_DetailAnchor"><span class="">getPriceTable</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductPriceTable.html"><span class="">ProductPriceTable</span></a></span>
+                    <div class="description">Returns the product price table object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_isPriceRange_DetailAnchor"><span class="">isPriceRange</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this product is a master product (or product set) and the collection of online variants (or set products respectively) contains products of different prices.<p/> <b>Warning:</b> If the product represented by this model is a master product with numerous variants, this method can be very expensive and should be avoided.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductPriceModel_isPriceRange_String_DetailAnchor"><span class="">isPriceRange</span></a></span>(priceBookID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this product is a master product (or product set) and the collection of online variants (or set products respectively) contains products of different prices in the specified price book.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getBasePriceQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBasePriceQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBasePriceQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the quantity for which the base price is defined. This
+ is typically 1.0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the quantity for which the base price is defined.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMaxPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the maximum price-book price of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPrice_DetailAnchor">getPrice()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.<p/>
+
+ <b>Warning:</b>  If the product represented by this model is a master
+ product with numerous variants, this method can be very expensive and
+ should be avoided.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Maximum price of all online variants or set-products.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMaxPriceBookPrice_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxPriceBookPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxPriceBookPrice</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the maximum price in a given price book of all
+ variants (for master products) or set-products (for product sets) for
+ base quantity 1.00. This value can be used to display a range of prices
+ in storefront.
+
+ This method follows the same rules as
+ <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a> in determining the price book
+ price for each variant or set-product. If the product represented by this
+ model is not a master product or product set, then this method behaves
+ the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The maximum price across all subproducts in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMaxPriceBookPricePerUnit_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxPriceBookPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxPriceBookPricePerUnit</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the maximum price per unit in a given price book of all
+ variants (for master products) or set-products (for product sets) for
+ base quantity 1.00. This value can be used to display a range of price per units
+ in storefront.
+
+ This method follows the same rules as
+ <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_DetailAnchor">getPriceBookPricePerUnit(String)</a> in determining the price book
+ price for each variant or set-product. If the product represented by this
+ model is not a master product or product set, then this method behaves
+ the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_DetailAnchor">getPriceBookPricePerUnit(String)</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The maximum price per unit across all sub-products in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMaxPricePerUnit_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxPricePerUnit</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the maximum price-book price per unit of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPricePerUnit_DetailAnchor">getPricePerUnit()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.
+
+ e.g.
+ suppose one master product mp (price = $6, unitQuantity = 2), it has 2 variants:
+ v1(price = $5, unitQuantity = 5), v2(price = $10, unitQuantity = 20).
+ The max price per unit of mp will be max($6/2, $5/5, $10/20) = $3</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Maximum price per unit of all online variants or set-products.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMinPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the minimum price-book price of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPrice_DetailAnchor">getPrice()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.<p/>
+
+ <b>Warning:</b>  If the product represented by this model is a master
+ product with numerous variants, this method can be very expensive and
+ should be avoided.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Minimum price of all online variants or set-products.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMinPriceBookPrice_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinPriceBookPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinPriceBookPrice</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the minimum price in a given price book of all
+ variants (for master products) or set-products (for product sets) for
+ base quantity 1.00. This value can be used to display a range of prices
+ in storefront.
+
+ This method follows the same rules as
+ <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a> in determining the price book
+ price for each variant or set-product. If the product represented by this
+ model is not a master product or product set, then this method behaves
+ the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The minimum price across all subproducts in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMinPriceBookPricePerUnit_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinPriceBookPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinPriceBookPricePerUnit</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the minimum price per unit in a given price book of all
+ variants (for master products) or set-products (for product sets) for
+ base quantity 1.00. This value can be used to display a range of price per units
+ in storefront.
+
+ This method follows the same rules as
+ <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_DetailAnchor">getPriceBookPricePerUnit(String)</a> in determining the price book
+ price for each variant or set-product. If the product represented by this
+ model is not a master product or product set, then this method behaves
+ the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_DetailAnchor">getPriceBookPricePerUnit(String)</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The minimum price per unit across all sub-products in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getMinPricePerUnit_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinPricePerUnit</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the minimum price-book price per unit of all variants (for
+ master products) or set-products (for product sets) for base quantity
+ 1.00. This value can be used to display a range of prices in storefront.
+ If the product represented by this model is not a master product or
+ product set, then this method behaves the same as <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPricePerUnit_DetailAnchor">getPricePerUnit()</a>.
+ Only online products are considered. If the "orderable products only"
+ search preference is enabled for the current site, then only orderable
+ products are considered. For master products, only variants with all
+ variation attributes configured are considered.
+
+ e.g.
+ suppose one master product mp (price = $6, unitQuantity = 2), it has 2 variants:
+ v1(price = $5, unitQuantity = 5), v2(price = $10, unitQuantity = 20).
+ The min price per unit of mp will be min($6/2, $5/5, $10/20) = $0.5</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Minimum price of all online variants or set-products.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the active price of a product, calculated based on base price quantity
+ 1.00. The price is returned for the currency of the current session.
+ <p/>
+ The price lookup is based on the configuration of price books. It depends
+ on various settings, such as which price books are active, or explicitly
+ set as applicable in the current session.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ If no price could be found, MONEY.NOT_AVAILABLE is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product price.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPrice_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPrice</span>(quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the active price of a product, calculated based on the passed order
+ quantity. The price is returned for the currency of the current session.
+ <p/>
+ The price lookup is based on the configuration of price books. It depends
+ on various settings, such as which price books are active, or explicitly
+ set as applicable in the current session.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ If passed order quantity < 1 (and greater than zero), price for quantity
+ 1 is returned.
+ <p/>
+ If no price could be found, MONEY.NOT_AVAILABLE is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">Quantity price is requested for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product price.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceBookPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceBookPrice</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the active price of the product in the specified price book for
+ quantity 1.00.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ Money.NOT_AVAILABLE will be returned in any of the following cases:
+
+ <ul>
+ <li>priceBookID is null or does not identify a valid price book.</li>
+ <li>The price book has no price for the product.</li>
+ <li>None of the prices for the product in the price book is currently
+ active.</li>
+ <li>The currently active price entry is a percentage.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price of the product in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceBookPrice_String_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceBookPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceBookPrice</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the active price of the product in the specified price book for
+ the specified quantity.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ Money.NOT_AVAILABLE will be returned in any of the following cases:
+
+ <ul>
+ <li>priceBookID is null or does not identify a valid price book.</li>
+ <li>quantity is null.</li>
+ <li>The price book has no price for the product.</li>
+ <li>None of the prices for the product in the price book is currently
+ active.</li>
+ <li>The currently active price entry is a percentage.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">the specified quantity to find the price for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price of the product in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceBookPriceInfo_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceBookPriceInfo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceBookPriceInfo</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a>
+                    </div>
+                    <div class="description">This method acts similarly to <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_DetailAnchor">getPriceBookPrice(String)</a> but
+ returns a ProductPriceInfo object wrapping the actual price with
+ additional information.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product price info, or null if not found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceBookPriceInfo_String_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceBookPriceInfo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceBookPriceInfo</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a>
+                    </div>
+                    <div class="description">This method acts similarly to
+ <a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceBookPrice_String_Quantity_DetailAnchor">getPriceBookPrice(String, Quantity)</a> but returns a
+ ProductPriceInfo object wrapping the actual price with additional
+ information.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">Quantity price is requested for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product price info, or null if not found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceBookPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceBookPricePerUnit</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the active price per unit of the product in the specified price book for
+ quantity 1.00.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ Money.NOT_AVAILABLE will be returned in any of the following cases:
+
+ <ul>
+ <li>The priceBookID does not identify a valid price book.</li>
+ <li>The price book has no price for the product.</li>
+ <li>None of the prices for the product in the price book is currently
+ active.</li>
+ <li>The currently active price entry is a percentage.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price per unit of the product in the specified price book.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceBookPricePerUnit_String_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceBookPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceBookPricePerUnit</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the active price per unit of the product in the specified price book for
+ the specified quantity.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ Money.NOT_AVAILABLE will be returned in any of the following cases:
+
+ <ul>
+ <li>The priceBookID does not identify a valid price book.</li>
+ <li>The price book has no price for the product.</li>
+ <li>None of the prices for the product in the price book is currently
+ active.</li>
+ <li>The currently active price entry is a percentage.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">ID of price book the price is requested for, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">the specified quantity to find the price for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price per unit of the product in the specified price book for the specific quantity.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceInfo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceInfo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceInfo</span>()
+					 : 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a>
+                    </div>
+                    <div class="description">Returns the active price info of a product, calculated based on base price
+ quantity 1.00. The price is returned for the currency of the current
+ session.
+ <p/>
+ This method is similar to <code>getPrice()</code> but instead of just
+ returning the price value, it returns a <code>ProductPriceInfo</code>
+ which contains additional information such as the PriceBook which defined
+ the price and the percentage discount this price point represents.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ If no price info could be found, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product price info, or null if not found.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPrice_DetailAnchor">getPrice()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceInfo_Quantity_DetailAnchor">getPriceInfo(Quantity)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceInfo_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceInfo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceInfo</span>(quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductPriceInfo.html"><span class="">ProductPriceInfo</span></a>
+                    </div>
+                    <div class="description">Returns the active price info of a product, calculated based on the passed order
+ quantity. The price is returned for the currency of the current session.
+ <p/>
+ This method is similar to <code>getPrice(Quantity)</code> but instead of
+ just returning the price value, it returns a
+ <code>ProductPriceInfo</code> which contains additional information such
+ as the PriceBook which defined the price and the percentage discount this
+ price point represents.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ If no price info could be found, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">the quantity to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product price info, or null if not found.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPrice_Quantity_DetailAnchor">getPrice(Quantity)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceInfos_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceInfos</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceInfos</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all the eligible <code></>ProductPriceInfo</code></>(s), calculated based
+ on base price quantity 1.00. This will return an empty list if getPriceInfo() would return null, and if there is
+ only one price info in the collection it will be the same price info as getPriceInfo(). Two or more price infos
+ indicate that there are that many price books that meet the criteria for returning the price shown in the
+ storefront.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">any product price info that could be responsible for the storefront price, or empty collection if there were no product price infos this price model.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductPriceModel.html#dw_catalog_ProductPriceModel_getPriceInfo_DetailAnchor">getPriceInfo()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPricePercentage_Money_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getPricePercentage</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getPricePercentage</span>(basePrice
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, comparePrice
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Calculates and returns the percentage off amount of the passed
+ comparePrice to the passed basePrice.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_value_Money.html#dw_value_Money_percentLessThan_Money_DetailAnchor">Money.percentLessThan(Money)</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basePrice</span>
+						 - 
+						<span class="parameterDesc">The assumed 100% price amount</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">comparePrice</span>
+						 - 
+						<span class="parameterDesc">The price to compare to the basePrice</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The percentage between comparePrice and basePrice (e.g. 90%).</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPricePerUnit_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPricePerUnit</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the sales price per unit of a product, calculated based on base price
+ quantity 1.00.
+ <p>
+ The product sales price per unit is returned for the current session currency.
+ Hence, the using this method is only useful in storefront processes.
+ <p>
+ The price lookup is based on the configuration of price books. It depends
+ on various settings, such as which price books are active, or explicitly
+ set as applicable in the current session.
+ <p>
+ If no price could be found, MONEY.N_A is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product sales price per unit</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPricePerUnit_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPricePerUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPricePerUnit</span>(quantity
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the sales price per unit of a product, calculated based on the passed
+ order quantity.
+ <p>
+ The product sales price per unit is returned for the current session currency.
+ Hence, the using this method is only useful in storefront processes.
+ <p>
+ The price lookup is based on the configuration of price books. It depends
+ on various settings, such as which price books are active, or explicitely
+ set as applicable in the current session.
+ <p>
+ If no price could be found, MONEY.N_A is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">Quantity price is requested for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">product sales price per unit</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_getPriceTable_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceTable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceTable</span>()
+					 : 
+					<a href="class_dw_catalog_ProductPriceTable.html"><span class="">ProductPriceTable</span></a>
+                    </div>
+                    <div class="description">Returns the product price table object. The price table represents a map
+ between order quantities and prices, and also provides % off information
+ to be shown to storefront customers. The price is returned for the
+ currency of the current session.
+ <p/>
+ Usually, the product price table is printed on product detail pages in
+ the storefront.
+ <p/>
+ If the product represented by this model is an option product, option
+ prices will be added to the price book price if the price model was
+ initialized with an option model.
+ <p/>
+ All other methods of this class are based on the information in the
+ product price table.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the Product price table.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_isPriceRange_DetailAnchor"></a>
+                    <div class="detailName 
+						">isPriceRange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isPriceRange</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this product is a master product (or product set) and the
+ collection of online variants (or set products respectively) contains
+ products of different prices.<p/>
+
+ <b>Warning:</b>  If the product represented by this model is a master
+ product with numerous variants, this method can be very expensive and
+ should be avoided.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if this product has a range of prices, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductPriceModel_isPriceRange_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isPriceRange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isPriceRange</span>(priceBookID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this product is a master product (or product set) and the
+ collection of online variants (or set products respectively) contains
+ products of different prices in the specified price book.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceBookID</span>
+						 - 
+						<span class="parameterDesc">The ID of the price book.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if this product has a range of prices, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

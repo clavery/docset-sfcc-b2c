@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateGiftCertificate</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet CreateGiftCertificate</div>
+            <div class="topLevelDescription">CreateGiftCertificate attempts to create a GiftCertificate using the required and optional input parameters. If you pass in an ID (gift certificate code) to this pipelet, the ID will be used to create the Gift Certificate. Be aware that this ID must be unique for the current site. If it is not unique, the GiftCertificate will not be created. 
+
+If you pass a GiftCertificateLineItem to this pipelet, the ID of the newly created GiftCertificate will be set on the GiftCertificateLineItem via the setGiftCertificateId() method. </div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Order</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Amount</span>
+					&nbsp;:&nbsp;
+					Number
+							(Required)
+						</span>
+                    <div class="description">
+The amount of the gift certificate.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SenderName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The person that is sending the gift certificate.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RecipientName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Name of person receiving gift certificate
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RecipientEmail</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The email address of the person receiving the gift certificate.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">GiftCertificateLineItem</span>
+					&nbsp;:&nbsp;
+					GiftCertificateLineItem
+							(Optional)
+						</span>
+                    <div class="description">
+An instance of a GiftCertificateLineItem. If this line item is passed in to this pipelet, the Gift Certifcate number is set on the Gift Certificate Line Item.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Message</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+An optional message that will be inserted into the email sent to the recipient.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OrderNo</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The order number.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Use this parameter to specify the unique code for the new gift certificate. If parameter is not defined, the system will assign a code to the new gift certificate.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">GiftCertificate</span>
+					&nbsp;:&nbsp;
+					GiftCertificate
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The newly created Gift Certificate.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

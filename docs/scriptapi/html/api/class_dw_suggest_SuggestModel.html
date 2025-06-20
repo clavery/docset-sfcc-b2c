@@ -1,0 +1,824 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SuggestModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.suggest.SuggestModel">
+            <a name="dw.suggest.SuggestModel"></a>
+            <div class="packageName">dw.suggest</div>
+            <div class="className
+					">	
+        	
+				Class SuggestModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.suggest.SuggestModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The Suggest model provides methods and functions
+ to access search suggestions.
+ <p/>
+ The search suggestion feature basically covers two functional areas.
+ First is just to suggest words, based on the users input,
+ utilizing spell correction or prediction (also known as auto completion).
+ The second functional area is also often referred to as search-as-you-type,
+ where, based on the users input, specific items are
+ already looked up, before the user actually has completed typing a word
+ or even fired up the search.
+ <p/>
+ This model combines both functional areas and provides access to both - the
+ suggested words and the items found while using the predicted words.
+ <p/>
+ This model supports various types of items that are being suggested, like
+ products, categories, brands, content pages as well merchant provided search phrases.
+ For each type, there is a <a href="class_dw_suggest_Suggestions.html">Suggestions</a> implementation
+ available and accessible through this model: <a href="class_dw_suggest_ProductSuggestions.html">ProductSuggestions</a>,
+ <a href="class_dw_suggest_CategorySuggestions.html">CategorySuggestions</a>, <a href="class_dw_suggest_BrandSuggestions.html">BrandSuggestions</a>, <a href="class_dw_suggest_ContentSuggestions.html">ContentSuggestions</a>,
+ and <a href="class_dw_suggest_CustomSuggestions.html">CustomSuggestions</a>.
+ <p/>
+ For each type of suggestions, the actual suggested items (like
+ products) can by obtained, and, on the other hand, a list of terms
+ is provided which were used to lookup the found items.
+ The terms can be used to present a advanced user experience in the
+ storefront, e.g. show auto completed words, spell corrections and so on.
+ The SuggestModel script API will always create suggestions with Autocorrections
+ regardless of the value of "Search Autocorrections" search preference.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_suggest_SuggestModel_MAX_SUGGESTIONS_DetailAnchor"></a>MAX_SUGGESTIONS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;10
+                        <div class="description">The maximum number of suggestions that can be obtain from this model: <code>10</code></div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>brandSuggestions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_suggest_BrandSuggestions.html"><span class="">BrandSuggestions</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A <a href="class_dw_suggest_BrandSuggestions.html">BrandSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_BrandSuggestions.html">BrandSuggestions</a> container provides access to the found brands (if any) and
+ the terms suggested by the system with respect to the known product brands in the catalog.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>categorySuggestions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_suggest_CategorySuggestions.html"><span class="">CategorySuggestions</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A <a href="class_dw_suggest_CategorySuggestions.html">CategorySuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_CategorySuggestions.html">CategorySuggestions</a> container provides access to the found categories (if any) and
+ the terms suggested by the system with respect to the known categories in the catalog.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>contentSuggestions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_suggest_ContentSuggestions.html"><span class="">ContentSuggestions</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A <a href="class_dw_suggest_ContentSuggestions.html">ContentSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_ContentSuggestions.html">ContentSuggestions</a> container provides access to the found content pages (if any) and
+ the terms suggested by the system with respect to the known content in the library.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customSuggestions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_suggest_CustomSuggestions.html"><span class="">CustomSuggestions</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A <a href="class_dw_suggest_CustomSuggestions.html">CustomSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_CustomSuggestions.html">CustomSuggestions</a> container provides access to matching
+ custom phrases (if any) and the terms suggested
+ by the system with respect to the merchant provided custom phrases.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>filteredByFolder
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">The method returns true, if the search suggestions are filtered by the folder. If this returns true it is not
+ possible for search suggestions to contain Page Designer content as it belongs to no folder.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>popularSearchPhrases
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Use this method to obtain a list of search phrases
+ that currently are very popular among all users across the Site.
+
+ The search phrases are specific to the region (based on user's IP address),
+ language (locale) and the user's browser type (agent).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productSuggestions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_suggest_ProductSuggestions.html"><span class="">ProductSuggestions</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A <a href="class_dw_suggest_ProductSuggestions.html">ProductSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_ProductSuggestions.html">ProductSuggestions</a> container provides access to the found products (if any) and
+ the terms suggested by the system with respect to the known products in the catalog.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>recentSearchPhrases
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Use this method to obtain a list of personalized search phrases
+ that the current user entered recently.
+
+ The user is being identified by the CQuotient tracking cookie.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_SuggestModel_DetailAnchor"><span class="">SuggestModel</span></a></span>()</span>
+                    <div class="description">Constructs a new SuggestModel.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_addRefinementValues_String_String_DetailAnchor"><span class="">addRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a refinement for product suggestions.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getBrandSuggestions_DetailAnchor"><span class="">getBrandSuggestions</span></a></span>()
+						: 
+					<a href="class_dw_suggest_BrandSuggestions.html"><span class="">BrandSuggestions</span></a></span>
+                    <div class="description">Returns a <a href="class_dw_suggest_BrandSuggestions.html">BrandSuggestions</a> container for the current search phrase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getCategorySuggestions_DetailAnchor"><span class="">getCategorySuggestions</span></a></span>()
+						: 
+					<a href="class_dw_suggest_CategorySuggestions.html"><span class="">CategorySuggestions</span></a></span>
+                    <div class="description">Returns a <a href="class_dw_suggest_CategorySuggestions.html">CategorySuggestions</a> container for the current search phrase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getContentSuggestions_DetailAnchor"><span class="">getContentSuggestions</span></a></span>()
+						: 
+					<a href="class_dw_suggest_ContentSuggestions.html"><span class="">ContentSuggestions</span></a></span>
+                    <div class="description">Returns a <a href="class_dw_suggest_ContentSuggestions.html">ContentSuggestions</a> container for the current search phrase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getCustomSuggestions_DetailAnchor"><span class="">getCustomSuggestions</span></a></span>()
+						: 
+					<a href="class_dw_suggest_CustomSuggestions.html"><span class="">CustomSuggestions</span></a></span>
+                    <div class="description">Returns a <a href="class_dw_suggest_CustomSuggestions.html">CustomSuggestions</a> container for the current search phrase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getPopularSearchPhrases_DetailAnchor"><span class="">getPopularSearchPhrases</span></a></span>()
+						: 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a></span>
+                    <div class="description">Use this method to obtain a list of search phrases that currently are very popular among all users across the Site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getProductSuggestions_DetailAnchor"><span class="">getProductSuggestions</span></a></span>()
+						: 
+					<a href="class_dw_suggest_ProductSuggestions.html"><span class="">ProductSuggestions</span></a></span>
+                    <div class="description">Returns a <a href="class_dw_suggest_ProductSuggestions.html">ProductSuggestions</a> container for the current search phrase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_getRecentSearchPhrases_DetailAnchor"><span class="">getRecentSearchPhrases</span></a></span>()
+						: 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a></span>
+                    <div class="description">Use this method to obtain a list of personalized search phrases that the current user entered recently.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_isFilteredByFolder_DetailAnchor"><span class="">isFilteredByFolder</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">The method returns true, if the search suggestions are filtered by the folder.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_removeRefinementValues_String_String_DetailAnchor"><span class="">removeRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes a refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_setCategoryID_String_DetailAnchor"><span class="">setCategoryID</span></a></span>(categoryID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Apply a category ID to filter product, brand and category suggestions.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_setFilteredByFolder_Boolean_DetailAnchor"><span class="">setFilteredByFolder</span></a></span>(filteredByFolder
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Set a flag to indicate if the search suggestions filter for elements that do not belong to a folder.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor"><span class="">setMaxSuggestions</span></a></span>(maxSuggestions
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Use this method to setup the maximum number of returned suggested items.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_setRefinementValues_String_String_DetailAnchor"><span class="">setRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets product suggestion refinement values for an attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor"><span class="">setSearchPhrase</span></a></span>(searchPhrase
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the user input search phrase.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_SuggestModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">SuggestModel</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">SuggestModel</span>()
+                    </div>
+                    <div class="description">Constructs a new SuggestModel.</div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_addRefinementValues_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a refinement for product suggestions.
+ The method can be called to add an additional query
+ parameter specified as name-value pair. The values string may encode
+ multiple values delimited by the pipe symbol ('|').</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the refinement value to set</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getBrandSuggestions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBrandSuggestions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBrandSuggestions</span>()
+					 : 
+					<a href="class_dw_suggest_BrandSuggestions.html"><span class="">BrandSuggestions</span></a>
+                    </div>
+                    <div class="description">Returns a <a href="class_dw_suggest_BrandSuggestions.html">BrandSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_BrandSuggestions.html">BrandSuggestions</a> container provides access to the found brands (if any) and
+ the terms suggested by the system with respect to the known product brands in the catalog.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a brand suggestions container for the current search phrase, returns <code>null</code> for insufficient search input</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor">setMaxSuggestions(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor">setSearchPhrase(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getCategorySuggestions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCategorySuggestions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCategorySuggestions</span>()
+					 : 
+					<a href="class_dw_suggest_CategorySuggestions.html"><span class="">CategorySuggestions</span></a>
+                    </div>
+                    <div class="description">Returns a <a href="class_dw_suggest_CategorySuggestions.html">CategorySuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_CategorySuggestions.html">CategorySuggestions</a> container provides access to the found categories (if any) and
+ the terms suggested by the system with respect to the known categories in the catalog.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a category suggestions container for the current search phrase, returns <code>null</code> for insufficient search input</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor">setMaxSuggestions(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor">setSearchPhrase(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getContentSuggestions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getContentSuggestions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getContentSuggestions</span>()
+					 : 
+					<a href="class_dw_suggest_ContentSuggestions.html"><span class="">ContentSuggestions</span></a>
+                    </div>
+                    <div class="description">Returns a <a href="class_dw_suggest_ContentSuggestions.html">ContentSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_ContentSuggestions.html">ContentSuggestions</a> container provides access to the found content pages (if any) and
+ the terms suggested by the system with respect to the known content in the library.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a content suggestions container for the current search phrase, returns <code>null</code> for insufficient search input</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor">setMaxSuggestions(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor">setSearchPhrase(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getCustomSuggestions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomSuggestions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomSuggestions</span>()
+					 : 
+					<a href="class_dw_suggest_CustomSuggestions.html"><span class="">CustomSuggestions</span></a>
+                    </div>
+                    <div class="description">Returns a <a href="class_dw_suggest_CustomSuggestions.html">CustomSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_CustomSuggestions.html">CustomSuggestions</a> container provides access to matching
+ custom phrases (if any) and the terms suggested
+ by the system with respect to the merchant provided custom phrases.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a custom suggestions container for the current search phrase, returns <code>null</code> for insufficient search input</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor">setMaxSuggestions(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor">setSearchPhrase(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getPopularSearchPhrases_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPopularSearchPhrases</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPopularSearchPhrases</span>()
+					 : 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+                    </div>
+                    <div class="description">Use this method to obtain a list of search phrases
+ that currently are very popular among all users across the Site.
+
+ The search phrases are specific to the region (based on user's IP address),
+ language (locale) and the user's browser type (agent).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of personalized popular search phrases</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getProductSuggestions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductSuggestions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductSuggestions</span>()
+					 : 
+					<a href="class_dw_suggest_ProductSuggestions.html"><span class="">ProductSuggestions</span></a>
+                    </div>
+                    <div class="description">Returns a <a href="class_dw_suggest_ProductSuggestions.html">ProductSuggestions</a> container for the current search phrase.
+ The <a href="class_dw_suggest_ProductSuggestions.html">ProductSuggestions</a> container provides access to the found products (if any) and
+ the terms suggested by the system with respect to the known products in the catalog.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a product suggestions container for the current search phrase, returns <code>null</code> for insufficient search input</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor">setMaxSuggestions(Number)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor">setSearchPhrase(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_getRecentSearchPhrases_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRecentSearchPhrases</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRecentSearchPhrases</span>()
+					 : 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+                    </div>
+                    <div class="description">Use this method to obtain a list of personalized search phrases
+ that the current user entered recently.
+
+ The user is being identified by the CQuotient tracking cookie.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of recent search phrases of the current user</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_isFilteredByFolder_DetailAnchor"></a>
+                    <div class="detailName 
+						">isFilteredByFolder</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isFilteredByFolder</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">The method returns true, if the search suggestions are filtered by the folder. If this returns true it is not
+ possible for search suggestions to contain Page Designer content as it belongs to no folder.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if search suggestions are filtered by the folder of the content asset.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_removeRefinementValues_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes a refinement. The method can be called to remove previously added
+ refinement values. The values string may encode multiple values delimited
+ by the pipe symbol ('|').</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the refinement value to remove or null to remove all values</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_setCategoryID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCategoryID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCategoryID</span>(categoryID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Apply a category ID to filter product, brand and category suggestions.
+ <p/>
+ Suggested products, brands and categories, as well as corrected and completed
+ terms are specific to the given category or one of it's sub categories.
+ <p/>
+ For example, in the specified category "television", the search term "pla"
+ will be auto completed to "plasma" (instead of e.g. "player") and
+ only televisions will be included in the list of suggested products.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">categoryID</span>
+						 - 
+						<span class="parameterDesc">the category to filter suggestions for</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_setFilteredByFolder_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setFilteredByFolder</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setFilteredByFolder</span>(filteredByFolder
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set a flag to indicate if the search suggestions filter for elements that do not belong to a folder.
+ Must be set to false to return content assets that do not belong to any folder.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">filteredByFolder</span>
+						 - 
+						<span class="parameterDesc">filter the search suggestions by folder</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_setMaxSuggestions_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMaxSuggestions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMaxSuggestions</span>(maxSuggestions
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Use this method to setup the maximum number of returned suggested
+ items. For example, set this to 3 in order to only retrieve the
+ 3 most relevant suggested products.
+ <p/>
+ The maximum number of suggestions that can be queried are defined as <a href="class_dw_suggest_SuggestModel.html#dw_suggest_SuggestModel_MAX_SUGGESTIONS_DetailAnchor">MAX_SUGGESTIONS</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxSuggestions</span>
+						 - 
+						<span class="parameterDesc">the number of suggested items to be returned by this model instance</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_setRefinementValues_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets product suggestion refinement values for an attribute.
+ The method can be called to set
+ an additional query parameter specified as name-value pair. The value
+ string may encode multiple values delimited by the pipe symbol ('|').
+ Existing refinement values for the attribute will be removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the refinement values to set (delimited by '|') or null to remove all values</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_suggest_SuggestModel_setSearchPhrase_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSearchPhrase</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSearchPhrase</span>(searchPhrase
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the user input search phrase. This search phrase is being processed
+ by applying auto completion, spell correction and enhancement with alternative
+ similar search terms.
+ <p/>
+ The resulting search phrase is used to lookup the actual items,
+ like products or categories (search-as-you-type).
+ <p/>
+ In order to access the processed terms, one can use the
+ <a href="class_dw_suggest_SearchPhraseSuggestions.html#dw_suggest_SearchPhraseSuggestions_getSuggestedTerms_DetailAnchor">SearchPhraseSuggestions.getSuggestedTerms()</a> method of each of the respective
+ results returned by the methods in this model.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">searchPhrase</span>
+						 - 
+						<span class="parameterDesc">the user input search phrase</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_suggest_SearchPhraseSuggestions.html#dw_suggest_SearchPhraseSuggestions_getSuggestedTerms_DetailAnchor">SearchPhraseSuggestions.getSuggestedTerms()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

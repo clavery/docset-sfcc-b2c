@@ -1,0 +1,808 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class BasketMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.BasketMgr">
+            <a name="dw.order.BasketMgr"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class BasketMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.order.BasketMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Provides static helper methods for managing baskets.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>baskets
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Retrieve all open baskets for the logged in customer including the temporary baskets.
+ <p>
+ Restricted to agent scenario use cases: The returned list contains all agent baskets created with
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createAgentBasket_DetailAnchor">createAgentBasket()</a> and the current storefront basket which can also be retrieved with
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a>. This method will result in an exception if called by a user without permission
+ Create_Order_On_Behalf_Of or if no customer is logged in the session.
+ </p>
+ <p>
+ Please notice that baskets are invalidated after a certain amount of time and may not be returned anymore.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>currentBasket
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">This method returns the current valid basket of the session customer or <code>null</code> if no current valid
+ basket exists.
+ <p>
+ The methods <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> and <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor">getCurrentOrNewBasket()</a> work based on the selected basket
+ persistence, which can be configured in the Business Manager site preferences / baskets section. A basket is
+ valid for the configured basket lifetime.
+ </p>
+ <p>
+ The current basket, if one exists, is usually updated by the method. In particular the last-modified date is
+ updated. The lifetime of a basket can be extended in 2 ways:
+ <ul>
+ <li>The basket is modified in some way, e.g. a product is added resulting in the basket total being newly
+ calculated. This results in the basket lifetime being reset.</li>
+ <li>The basket has not been modified for 60 minutes, then using this method to access the basket will also reset
+ the basket lifetime.</li>
+ </ul>
+ </p>
+ <p>
+ Personal data held inside the basket such as addresses, email addresses and payment settings is associated with
+ the customer to whom the basket belongs. If the basket being updated belongs to a different customer this data is
+ removed. This happens when a registered customer logs in after having previously created a basket as an anonymous
+ customer. After the customer logs out, the previous basket is stored (where applicable) and the method returns
+ <code>null</code>. Personal data is also cleared when the session times out for an anonymous customer.
+ </p>
+ <p>
+ The following personal data is cleared.
+ <ul>
+ <li>product line items that were added from a wish list</li>
+ <li>shipping method</li>
+ <li>coupon line items</li>
+ <li>gift certificate line items</li>
+ <li>billing and shipping addresses</li>
+ <li>payment instruments</li>
+ <li>buyer email</li>
+ </ul>
+ If the session currency no longer matches the basket currency, the basket currency should be updated with
+ <a href="class_dw_order_Basket.html#dw_order_Basket_updateCurrency_DetailAnchor">Basket.updateCurrency()</a>.
+ </p>
+ <p>
+ Typical usage:
+
+ <pre>
+ var basket : Basket = BasketMgr.getCurrentBasket();
+ if (basket) {
+     // do something with basket
+ }
+ </pre>
+ </p>
+ <p>
+ Constraints:
+ <ul>
+ <li>The method only accesses the basket for the session customer, an exception is thrown when the session
+ customer is <code>null</code>.</li>
+ <li>Method <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor">getCurrentOrNewBasket()</a> only creates a basket when method <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> returns
+ <code>null</code>.</li>
+ </ul>
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>currentOrNewBasket
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">This method returns the current valid basket of the session customer or creates a new one if no current valid
+ basket exists. See <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> for more details.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storedBasket
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">This method returns the stored basket of the session customer or <code>null</code> if none is found. A stored
+ basket is returned in the following situation:
+ <ol>
+ <li>During one visit, a customer-X logs in and receives a basket-A.
+ <li>In a later visit, a second basket-B is created for an anonymous customer who then logs in as customer-X.
+ </ol>
+ In this case basket-B is reassigned to him and basket-A is accessible as the stored basket. Now it is possible to
+ merge the information from the stored basket to the active basket.
+ <p/>
+ A stored basket will exist only if the corresponding setting is selected in the Business Manager site
+ preferences' baskets section. A basket is valid for the configured basket lifetime.
+ <p/>
+ Typical usage:
+
+ <pre>
+ var currentBasket : Basket = BasketMgr.getCurrentOrNewBasket();
+ var storedBasket : Basket = BasketMgr.getStoredBasket();
+ if (storedBasket) {
+     // transfer all the data needed from the stored to the active basket
+ }
+ </pre>
+ <p/></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>temporaryBaskets
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Retrieve all open temporary baskets for the logged in customer.
+ <p>
+ Please notice that baskets are invalidated after a certain amount of time and may not be returned anymore.
+ </p></div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_createAgentBasket_DetailAnchor"><span class="">createAgentBasket</span></a></span>()
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">Creates a new agent basket for the current session customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor"><span class="">createBasketFromOrder</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">Creates a Basket from an existing Order for the purposes of changing an Order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_createTemporaryBasket_DetailAnchor"><span class="">createTemporaryBasket</span></a></span>()
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">Creates a new temporary basket for the current session customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_deleteBasket_Basket_DetailAnchor"><span class="">deleteBasket</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					void</span>
+                    <div class="description">Remove a customer basket including a temporary basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_deleteTemporaryBasket_Basket_DetailAnchor"><span class="">deleteTemporaryBasket</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					void</span>
+                    <div class="description">Remove a customer temporary basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getBasket_String_DetailAnchor"><span class="">getBasket</span></a></span>(uuid
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">This method returns a valid basket of the session customer or <code>null</code> if none is found.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getBaskets_DetailAnchor"><span class="">getBaskets</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Retrieve all open baskets for the logged in customer including the temporary baskets.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getCurrentBasket_DetailAnchor"><span class="">getCurrentBasket</span></a></span>()
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">This method returns the current valid basket of the session customer or <code>null</code> if no current valid basket exists.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor"><span class="">getCurrentOrNewBasket</span></a></span>()
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">This method returns the current valid basket of the session customer or creates a new one if no current valid basket exists.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getStoredBasket_DetailAnchor"><span class="">getStoredBasket</span></a></span>()
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">This method returns the stored basket of the session customer or <code>null</code> if none is found.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getTemporaryBasket_String_DetailAnchor"><span class="">getTemporaryBasket</span></a></span>(uuid
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
+                    <div class="description">This method returns a valid temporary basket of the session customer or <code>null</code> if none is found.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getTemporaryBaskets_DetailAnchor"><span class="">getTemporaryBaskets</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Retrieve all open temporary baskets for the logged in customer.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_createAgentBasket_DetailAnchor"></a>
+                    <div class="detailName 
+						">createAgentBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createAgentBasket</span>()
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">Creates a new agent basket for the current session customer.
+ <p>
+ By default only 4 open agent baskets are allowed per customer. If this is exceeded a
+ <a href="class_dw_order_CreateAgentBasketLimitExceededException.html">CreateAgentBasketLimitExceededException</a> will be thrown.
+ </p>
+ <p>
+ This method will result in an exception if called by a user without permission Create_Order_On_Behalf_Of or if no
+ customer is logged in the session.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the newly created basket for the customer which is logged in</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            CreateAgentBasketLimitExceededException						
+						 - 
+						 <span class="parameterDesc">indicates that no agent basket could be created because the agent basket limit is already exceeded</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_createBasketFromOrder_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">createBasketFromOrder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createBasketFromOrder</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">Creates a Basket from an existing Order for the purposes of changing an Order. When an Order is later created
+ from the Basket, the original Order is changed to status <a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_REPLACED_DetailAnchor">Order.ORDER_STATUS_REPLACED</a>. Restricted
+ to agent scenario use cases: In case a storefront customer is using it the created storefront basket cannot be
+ retrieved via
+ <ul>
+ <li><a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> (ScriptAPI),</li>
+ <li>GET /baskets/<basketid> (OCAPI) or</li>
+ <li>GetBasket (Pipelet).</li>
+ </ul>
+ Baskets containing an "orderNumberBeingEdited" are explicitly excluded from the list of baskets that can be
+ retrieved. Responsible for this behaviour (this kind of basket cannot be used as general purpose shopping
+ baskets) - see <a href="class_dw_order_Basket.html#dw_order_Basket_getOrderNoBeingEdited_DetailAnchor">Basket.getOrderNoBeingEdited()</a> / <a href="class_dw_order_Basket.html#dw_order_Basket_getOrderBeingEdited_DetailAnchor">Basket.getOrderBeingEdited()</a>.
+ <p/>
+ In case a Business Manager user is logged in into the session the basket will be marked as an agent basket. See
+ <a href="class_dw_order_Basket.html#dw_order_Basket_isAgentBasket_DetailAnchor">Basket.isAgentBasket()</a></>.
+ <p/>
+ Any inventory reservation associated with the order will be canceled either early when
+ <a href="class_dw_order_Basket.html#dw_order_Basket_reserveInventory_DetailAnchor">Basket.reserveInventory()</a> is called for the new basket or (later) when a new replacement order
+ is created from the basket. Consider reserving the basket following its creation.
+ <p/>
+ The method only succeeds for an Order
+ <ul>
+ <li>without gift certificates,</li>
+ <li>status is not cancelled,</li>
+ <li>was not previously replaced and</li>
+ <li>was not previously exported.</li>
+ </ul>
+ Failures are indicated by throwing an APIException of type CreateBasketFromOrderException which provides one of
+ these errorCodes:
+ <ul>
+ <li>Code <a href="class_dw_order_OrderProcessStatusCodes.html#dw_order_OrderProcessStatusCodes_ORDER_CONTAINS_GC_DetailAnchor">OrderProcessStatusCodes.ORDER_CONTAINS_GC</a> - the Order contains a gift certificate and
+ cannot be replaced.</li>
+ <li>Code <a href="class_dw_order_OrderProcessStatusCodes.html#dw_order_OrderProcessStatusCodes_ORDER_ALREADY_REPLACED_DetailAnchor">OrderProcessStatusCodes.ORDER_ALREADY_REPLACED</a> - the Order was already replaced.</li>
+ <li>Code <a href="class_dw_order_OrderProcessStatusCodes.html#dw_order_OrderProcessStatusCodes_ORDER_ALREADY_CANCELLED_DetailAnchor">OrderProcessStatusCodes.ORDER_ALREADY_CANCELLED</a> - the Order was cancelled.</li>
+ <li>Code <a href="class_dw_order_OrderProcessStatusCodes.html#dw_order_OrderProcessStatusCodes_ORDER_ALREADY_EXPORTED_DetailAnchor">OrderProcessStatusCodes.ORDER_ALREADY_EXPORTED</a> - the Order has already been
+ exported.</li>
+ </ul>
+ <p/>
+ Usage:
+
+ <pre>
+ var order : Order; // known
+ try
+ {
+   var basket : Basket = BasketMgr.createBasketFromOrder(order);
+ }
+ catch (e)
+ {
+   if (e instanceof APIException && e.type === 'CreateBasketFromOrderException')
+   {
+     // handle e.errorCode
+   }
+ }
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">Order to create a Basket for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a new Basket</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <a href="class_dw_order_CreateBasketFromOrderException.html"><span class="parameterName">CreateBasketFromOrderException</span></a>						
+						 - 
+						 <span class="parameterDesc">indicates the Order is in an invalid state.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_createTemporaryBasket_DetailAnchor"></a>
+                    <div class="detailName 
+						">createTemporaryBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createTemporaryBasket</span>()
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">Creates a new temporary basket for the current session customer. Temporary baskets are separate from shopper
+ storefront and agent baskets, and are intended for use to perform calculations or create an order without
+ disturbing a shopper's open storefront basket. Temporary baskets are automatically deleted after a time duration
+ of 15 minutes.
+ <p>
+ By default only 4 open temporary baskets are allowed per customer. If this is exceeded a
+ <a href="class_dw_order_CreateTemporaryBasketLimitExceededException.html">CreateTemporaryBasketLimitExceededException</a> will be thrown.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the newly created basket for the current session customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_deleteBasket_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">deleteBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">deleteBasket</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Remove a customer basket including a temporary basket.
+ <p>
+ This method will result in an exception if called by a user without permission Create_Order_On_Behalf_Of or if no
+ customer is logged in the session.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">the basket to be removed</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_customer_AgentUserMgr.html#dw_customer_AgentUserMgr_loginAgentUser_String_String_DetailAnchor">AgentUserMgr.loginAgentUser(String, String)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_customer_AgentUserMgr.html#dw_customer_AgentUserMgr_loginOnBehalfOfCustomer_Customer_DetailAnchor">AgentUserMgr.loginOnBehalfOfCustomer(Customer)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_deleteTemporaryBasket_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">deleteTemporaryBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">deleteTemporaryBasket</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Remove a customer temporary basket.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">the temporary basket to be removed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getBasket_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getBasket</span>(uuid
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">This method returns a valid basket of the session customer or <code>null</code> if none is found. This method can
+ also be used to get a temporary basket for the session customer.
+ <p/>
+ If the basket does not belong to the session customer, the method returns <code>null</code>.
+ <p/>
+ If the registered customer is not logged in, the method returns <code>null</code>.
+ <p/>
+ <p>
+ Restricted to agent scenario use cases: This method will result in an exception if called by a user without
+ permission Create_Order_On_Behalf_Of or if no customer is logged in the session.
+ </p>
+ The basket, if accessible, is usually updated in the same way as <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a>.
+ <p/>
+ If the session currency no longer matches the basket currency, the basket currency should be updated with
+ <a href="class_dw_order_Basket.html#dw_order_Basket_updateCurrency_DetailAnchor">Basket.updateCurrency()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">uuid</span>
+						 - 
+						<span class="parameterDesc">the id of the requested basket.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the basket or <code>null</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getBaskets_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBaskets</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getBaskets</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Retrieve all open baskets for the logged in customer including the temporary baskets.
+ <p>
+ Restricted to agent scenario use cases: The returned list contains all agent baskets created with
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createAgentBasket_DetailAnchor">createAgentBasket()</a> and the current storefront basket which can also be retrieved with
+ <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a>. This method will result in an exception if called by a user without permission
+ Create_Order_On_Behalf_Of or if no customer is logged in the session.
+ </p>
+ <p>
+ Please notice that baskets are invalidated after a certain amount of time and may not be returned anymore.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all open baskets</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getCurrentBasket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCurrentBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCurrentBasket</span>()
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">This method returns the current valid basket of the session customer or <code>null</code> if no current valid
+ basket exists.
+ <p>
+ The methods <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> and <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor">getCurrentOrNewBasket()</a> work based on the selected basket
+ persistence, which can be configured in the Business Manager site preferences / baskets section. A basket is
+ valid for the configured basket lifetime.
+ </p>
+ <p>
+ The current basket, if one exists, is usually updated by the method. In particular the last-modified date is
+ updated. The lifetime of a basket can be extended in 2 ways:
+ <ul>
+ <li>The basket is modified in some way, e.g. a product is added resulting in the basket total being newly
+ calculated. This results in the basket lifetime being reset.</li>
+ <li>The basket has not been modified for 60 minutes, then using this method to access the basket will also reset
+ the basket lifetime.</li>
+ </ul>
+ </p>
+ <p>
+ Personal data held inside the basket such as addresses, email addresses and payment settings is associated with
+ the customer to whom the basket belongs. If the basket being updated belongs to a different customer this data is
+ removed. This happens when a registered customer logs in after having previously created a basket as an anonymous
+ customer. After the customer logs out, the previous basket is stored (where applicable) and the method returns
+ <code>null</code>. Personal data is also cleared when the session times out for an anonymous customer.
+ </p>
+ <p>
+ The following personal data is cleared.
+ <ul>
+ <li>product line items that were added from a wish list</li>
+ <li>shipping method</li>
+ <li>coupon line items</li>
+ <li>gift certificate line items</li>
+ <li>billing and shipping addresses</li>
+ <li>payment instruments</li>
+ <li>buyer email</li>
+ </ul>
+ If the session currency no longer matches the basket currency, the basket currency should be updated with
+ <a href="class_dw_order_Basket.html#dw_order_Basket_updateCurrency_DetailAnchor">Basket.updateCurrency()</a>.
+ </p>
+ <p>
+ Typical usage:
+
+ <pre>
+ var basket : Basket = BasketMgr.getCurrentBasket();
+ if (basket) {
+     // do something with basket
+ }
+ </pre>
+ </p>
+ <p>
+ Constraints:
+ <ul>
+ <li>The method only accesses the basket for the session customer, an exception is thrown when the session
+ customer is <code>null</code>.</li>
+ <li>Method <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor">getCurrentOrNewBasket()</a> only creates a basket when method <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> returns
+ <code>null</code>.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current basket or <code>null</code> if no valid current basket exists.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCurrentOrNewBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCurrentOrNewBasket</span>()
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">This method returns the current valid basket of the session customer or creates a new one if no current valid
+ basket exists. See <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> for more details.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the basket, existing or newly created</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getStoredBasket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStoredBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getStoredBasket</span>()
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">This method returns the stored basket of the session customer or <code>null</code> if none is found. A stored
+ basket is returned in the following situation:
+ <ol>
+ <li>During one visit, a customer-X logs in and receives a basket-A.
+ <li>In a later visit, a second basket-B is created for an anonymous customer who then logs in as customer-X.
+ </ol>
+ In this case basket-B is reassigned to him and basket-A is accessible as the stored basket. Now it is possible to
+ merge the information from the stored basket to the active basket.
+ <p/>
+ A stored basket will exist only if the corresponding setting is selected in the Business Manager site
+ preferences' baskets section. A basket is valid for the configured basket lifetime.
+ <p/>
+ Typical usage:
+
+ <pre>
+ var currentBasket : Basket = BasketMgr.getCurrentOrNewBasket();
+ var storedBasket : Basket = BasketMgr.getStoredBasket();
+ if (storedBasket) {
+     // transfer all the data needed from the stored to the active basket
+ }
+ </pre>
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the stored basket or <code>null</code> if no valid stored basket exists.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getTemporaryBasket_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTemporaryBasket</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getTemporaryBasket</span>(uuid
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
+                    </div>
+                    <div class="description">This method returns a valid temporary basket of the session customer or <code>null</code> if none is found.
+ <p>
+ If the basket does not belong to the session customer, the method returns <code>null</code>.
+ </p>
+ <p>
+ If the basket is not a temporary basket, the method returns <code>null</code>.
+ </p>
+ <p>
+ The basket, if accessible, is usually updated in the same way as <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a>.
+ </p>
+ If the session currency no longer matches the basket currency, the basket currency should be updated with
+ <a href="class_dw_order_Basket.html#dw_order_Basket_updateCurrency_DetailAnchor">Basket.updateCurrency()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">uuid</span>
+						 - 
+						<span class="parameterDesc">the id of the requested temporary basket.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the temporary basket or <code>null</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_BasketMgr_getTemporaryBaskets_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTemporaryBaskets</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getTemporaryBaskets</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Retrieve all open temporary baskets for the logged in customer.
+ <p>
+ Please notice that baskets are invalidated after a certain amount of time and may not be returned anymore.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all open temporary baskets</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

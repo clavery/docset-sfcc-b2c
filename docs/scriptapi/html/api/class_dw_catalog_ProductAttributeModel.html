@@ -1,0 +1,636 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductAttributeModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.ProductAttributeModel">
+            <a name="dw.catalog.ProductAttributeModel"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class ProductAttributeModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.ProductAttributeModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Class representing the complete attribute model for products in the system.
+ An instance of this class provides methods to access the attribute
+ definitions and groups for the system object type 'Product' and perhaps
+ additional information depending on how the instance is obtained.
+ A ProductAttributeModel can be obtained in one of three ways:
+
+ <ul>
+ <li><b><a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_ProductAttributeModel_DetailAnchor">ProductAttributeModel()</a>:</b> When the no-arg constructor is
+ used the model represents:
+    <ul>
+    <li>the attribute groups of the system object type 'Product' (i.e. the
+    global product attribute groups) and their bound attributes</li>
+    </ul>
+ </li>
+ <li><b><a href="class_dw_catalog_Category.html#dw_catalog_Category_getProductAttributeModel_DetailAnchor">Category.getProductAttributeModel()</a>:</b> When the
+ attribute model for a Category is retrieved, the model represents:
+    <ul>
+    <li>the global product attribute groups</li>
+    <li>product attribute groups of the calling category</li>
+    <li>product attribute groups of any parent categories of the calling category</li>
+    </ul>
+ </li>
+ <li><b><a href="class_dw_catalog_Product.html#dw_catalog_Product_getAttributeModel_DetailAnchor">Product.getAttributeModel()</a>:</b> When the attribute
+ model for a Product is retrieved, the model represents:
+    <ul>
+    <li>the global product attribute groups</li>
+    <li>product attribute groups of the product's classification category</li>
+    <li>product attribute groups of any parent categories of the product's classification category</li>
+    </ul>
+ In this case, the model additionally provides access to the attribute values
+ of the product.  If the product lacks a classification category, then only
+ the global product attribute group is considered by the model.
+ </li>
+ </ul>
+
+ The ProductAttributeModel provides a generic way to display the attribute
+ values of a product on a product detail page organized into appropriate
+ visual groups.  This is typically done as follows:
+
+ <ul>
+ <li>On the product detail page, call
+ <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAttributeModel_DetailAnchor">Product.getAttributeModel()</a> to get the attribute model for
+ the product.</li>
+ <li>Call <a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getVisibleAttributeGroups_DetailAnchor">getVisibleAttributeGroups()</a> to get the groups that are
+ appropriate for this product and all other products assigned to the same
+ classification category.</li>
+ <li>Iterate the groups, and display each as a "group" in the UI.</li>
+ <li>Call <a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getVisibleAttributeDefinitions_ObjectAttributeGroup_DetailAnchor">getVisibleAttributeDefinitions(ObjectAttributeGroup)</a> for
+ each group. Iterate and display the attribute names using
+ <a href="class_dw_object_ObjectAttributeDefinition.html#dw_object_ObjectAttributeDefinition_getDisplayName_DetailAnchor">ObjectAttributeDefinition.getDisplayName()</a>.</li>
+ <li>For each attribute, get the product's display value(s) for that
+ attribute, using <code>getDisplayValue()</code>. This might require custom
+ display logic based on the type of attribute (strings, dates, multi-value
+ attributes, etc).</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>attributeGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A sorted collection of attribute groups of this model. The groups
+ returned depends on how this model is constructed and what it represents.
+ (See class-level documentation for details).
+ <p/>
+ The collection of returned groups is sorted first by scope and secondly
+ by explicit sort order. Global groups always appear before
+ category-specific groups in the list. Groups of parent categories always
+ appear before groups belonging to subcategories. At each scope, groups
+ have an explicit sort order which can be managed within the Business
+ Manager.
+ <p/>
+ When there are multiple attribute groups with the same ID, the following
+ rules apply:
+
+ <ul>
+ <li>If this model represents the global product attribute group only
+ (e.g. the no-arg constructor was used), duplicates cannot occur since
+ only one group can be defined with a given ID at that scope.</li>
+ <li>If this model is associated with specific categories (e.g. it is
+ constructed from a product with a classification category), then a
+ category product attribute group might have the same ID as a global
+ product attribute group. In this case, the category group overrides the
+ global one.</li>
+ <li>If a category and one of its ancestor categories both define a
+ product attribute group with the same ID, the sub-category group
+ overrides the parent group.</li>
+ </ul>
+
+ As a result of these rules, this method will never return two attribute
+ groups with the same ID.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderRequiredAttributeDefinitions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An unsorted collection of attribute definitions marked as
+ order-required. Order-required attributes are usually copied into order
+ line items.
+ <p/>
+ The returned attribute definitions are sorted according to the explicit
+ sort order defined for the attributes in the group. This is managed by
+ merchant in the Business Manager.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>visibleAttributeGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A sorted collection of visible attribute groups of this model.
+ This method is similar to <a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getAttributeGroups_DetailAnchor">getAttributeGroups()</a> but only includes
+ attribute groups containing at least one attribute definition that is
+ visible. See
+ <a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getVisibleAttributeDefinitions_ObjectAttributeGroup_DetailAnchor">getVisibleAttributeDefinitions(ObjectAttributeGroup)</a>.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_ProductAttributeModel_DetailAnchor"><span class="">ProductAttributeModel</span></a></span>()</span>
+                    <div class="description">Constructs a product attribute model that is not based on a product nor a category.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getAttributeDefinition_String_DetailAnchor"><span class="">getAttributeDefinition</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a></span>
+                    <div class="description">Returns the attribute definition with the given id from the product attribute model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getAttributeDefinitions_ObjectAttributeGroup_DetailAnchor"><span class="">getAttributeDefinitions</span></a></span>(group
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeGroup.html"><span class="">ObjectAttributeGroup</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of attribute definitions for the given attribute group.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getAttributeGroup_String_DetailAnchor"><span class="">getAttributeGroup</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_object_ObjectAttributeGroup.html"><span class="">ObjectAttributeGroup</span></a></span>
+                    <div class="description">Returns the attribute group with the given id from the product attribute model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getAttributeGroups_DetailAnchor"><span class="">getAttributeGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of attribute groups of this model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getDisplayValue_2_ObjectAttributeDefinition_DetailAnchor"><span class="">getDisplayValue</span></a></span>(definition
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the value that the underlying product defines for the given attribute definition in the current locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getOrderRequiredAttributeDefinitions_DetailAnchor"><span class="">getOrderRequiredAttributeDefinitions</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns an unsorted collection of attribute definitions marked as order-required.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getValue_2_ObjectAttributeDefinition_DetailAnchor"><span class="">getValue</span></a></span>(definition
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the attribute value for the specified attribute definition.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getVisibleAttributeDefinitions_ObjectAttributeGroup_DetailAnchor"><span class="">getVisibleAttributeDefinitions</span></a></span>(group
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeGroup.html"><span class="">ObjectAttributeGroup</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of all visible attribute definitions for the given attribute group.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAttributeModel_getVisibleAttributeGroups_DetailAnchor"><span class="">getVisibleAttributeGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a sorted collection of visible attribute groups of this model.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_ProductAttributeModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">ProductAttributeModel</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">ProductAttributeModel</span>()
+                    </div>
+                    <div class="description">Constructs a product attribute model that is not based on a product nor
+ a category. Therefore, the model only describes the product attributes
+ globally defined for the system object type 'Product'.</div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getAttributeDefinition_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeDefinition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeDefinition</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the attribute definition with the given id from the product attribute
+ model. If attribute definition does not exist, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">the identifier of the attribute definition.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">attribute definition or null if not exist</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getAttributeDefinitions_ObjectAttributeGroup_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeDefinitions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeDefinitions</span>(group
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeGroup.html"><span class="">ObjectAttributeGroup</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of attribute definitions for the given attribute
+ group. If no attribute definition exist for the group, an empty collection
+ is returned.
+ <p/>
+ The returned attribute definitions are sorted according to the explicit
+ sort order defined for the attributes in the group.  This is managed
+ by merchant in the Business Manager.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">group</span>
+						 - 
+						<span class="parameterDesc">the group whose attribute definitions are returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of ObjectAttributeDefinition instances.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getAttributeGroup_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeGroup</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_object_ObjectAttributeGroup.html"><span class="">ObjectAttributeGroup</span></a>
+                    </div>
+                    <div class="description">Returns the attribute group with the given id from the product attribute
+ model. If attribute group does not exist, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">the attribute group identifier.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the attribute group or null if not exist</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getAttributeGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAttributeGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAttributeGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of attribute groups of this model. The groups
+ returned depends on how this model is constructed and what it represents.
+ (See class-level documentation for details).
+ <p/>
+ The collection of returned groups is sorted first by scope and secondly
+ by explicit sort order. Global groups always appear before
+ category-specific groups in the list. Groups of parent categories always
+ appear before groups belonging to subcategories. At each scope, groups
+ have an explicit sort order which can be managed within the Business
+ Manager.
+ <p/>
+ When there are multiple attribute groups with the same ID, the following
+ rules apply:
+
+ <ul>
+ <li>If this model represents the global product attribute group only
+ (e.g. the no-arg constructor was used), duplicates cannot occur since
+ only one group can be defined with a given ID at that scope.</li>
+ <li>If this model is associated with specific categories (e.g. it is
+ constructed from a product with a classification category), then a
+ category product attribute group might have the same ID as a global
+ product attribute group. In this case, the category group overrides the
+ global one.</li>
+ <li>If a category and one of its ancestor categories both define a
+ product attribute group with the same ID, the sub-category group
+ overrides the parent group.</li>
+ </ul>
+
+ As a result of these rules, this method will never return two attribute
+ groups with the same ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">collection of all attribute groups.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getDisplayValue_2_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDisplayValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDisplayValue</span>(definition
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the value that the underlying product defines for the given
+ attribute definition in the current locale. In case the attribute definition
+ defines localized attribute values, the product's value is used as an id
+ to find the localized display value.
+
+ In case of an Image attribute this method returns a MediaFile instance.
+ In previous versions this method returned a String with the image path.
+ In case of an HTML attribute this method returns a MarkupText instance.
+ In previous versions this method returned a String with the HTML source.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 10.6.
+				In prior versions this method returned a String with the image path or a String with the HTML source</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">definition</span>
+						 - 
+						<span class="parameterDesc">the definition to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The localized product attribute display value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getOrderRequiredAttributeDefinitions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderRequiredAttributeDefinitions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderRequiredAttributeDefinitions</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns an unsorted collection of attribute definitions marked as
+ order-required. Order-required attributes are usually copied into order
+ line items.
+ <p/>
+ The returned attribute definitions are sorted according to the explicit
+ sort order defined for the attributes in the group. This is managed by
+ merchant in the Business Manager.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of order-required ObjectAttributeDefinition instances.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getValue_2_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getValue</span>(definition
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the attribute value for the specified attribute definition. If
+ the product does not define a value, null is returned.
+ <p/>
+ Note: this method may only be used where the attribute model was created
+ for a specific product; otherwise it will always return null.
+ <p/>
+ If the attribute is localized, the value for the current session locale
+ is returned.
+ <p/>
+ In case of an Image attribute this method returns a MediaFile instance.
+ In previous versions this method returned a String with the image path.
+ In case of an HTML attribute this method returns a MarkupText instance.
+ In previous versions this method returned a String with the HTML source.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 10.6.
+				In prior versions this method returned a String with the image path or a String with the HTML source.</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">definition</span>
+						 - 
+						<span class="parameterDesc">the attribute definition to use when locating and returning the value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">value the value associated with the object attribute definition.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getVisibleAttributeDefinitions_ObjectAttributeGroup_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVisibleAttributeDefinitions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVisibleAttributeDefinitions</span>(group
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeGroup.html"><span class="">ObjectAttributeGroup</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of all visible attribute definitions for the
+ given attribute group. If no visible attribute definition exist for the
+ group, an empty collection is returned.
+ <p/>
+ An attribute definition is considered visible if is marked as visible. If
+ the product attribute model is created for a specific product, the
+ product must also define a value for the attribute definition; else the
+ attribute definition is considered as invisible.
+ <p/>
+ The returned attribute definitions are sorted according to the explicit
+ sort order defined for the attributes in the group. This is managed by
+ merchant in the Business Manager.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">group</span>
+						 - 
+						<span class="parameterDesc">the group whose visible attribute definitions are returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of visible ObjectAttributeDefinition instances.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAttributeModel_getVisibleAttributeGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVisibleAttributeGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVisibleAttributeGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a sorted collection of visible attribute groups of this model.
+ This method is similar to <a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getAttributeGroups_DetailAnchor">getAttributeGroups()</a> but only includes
+ attribute groups containing at least one attribute definition that is
+ visible. See
+ <a href="class_dw_catalog_ProductAttributeModel.html#dw_catalog_ProductAttributeModel_getVisibleAttributeDefinitions_ObjectAttributeGroup_DetailAnchor">getVisibleAttributeDefinitions(ObjectAttributeGroup)</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">sorted collection of visible ObjectAttributeGroup instances.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

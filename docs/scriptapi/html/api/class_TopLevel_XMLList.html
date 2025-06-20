@@ -1,0 +1,877 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class XMLList</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_TopLevel.XMLList">
+            <a name="TopLevel.XMLList"></a>
+            <div class="packageName">TopLevel</div>
+            <div class="className
+					">	
+        	
+				Class XMLList</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">XMLList
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">An XMLList object is an ordered collection of properties.
+ A XMLList object represents a XML document, an XML fragment,
+ or an arbitrary collection of XML objects.
+ An individual XML object is the same thing as an XMLList
+ containing only that XML object. All operations available
+ for the XML object are also available for an XMLList object
+ that contains exactly one XML object.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_XMLList_Object_DetailAnchor"><span class="">XMLList</span></a></span>(value
+									 : 
+									
+									<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)</span>
+                    <div class="description">Creates a new XMLList object using the specified <i>value</i>.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_attribute_String_DetailAnchor"><span class="">attribute</span></a></span>(attributeName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns the attribute associated with this XMLList object that is identified by the specified name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_attributes_DetailAnchor"><span class="">attributes</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns an XMList of the attributes in this XMLList Object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_child_Object_DetailAnchor"><span class="">child</span></a></span>(propertyName
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns the children of the XMLList object based on the specified property name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_children_DetailAnchor"><span class="">children</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns an XMLList containing the children of this XMLList object, maintaing the sequence in which they appear.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_comments_DetailAnchor"><span class="">comments</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns the properties of the XMLList object that contain comments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_contains_XML_DetailAnchor"><span class="">contains</span></a></span>(value
+								 : 	
+								 
+								<a href="class_TopLevel_XML.html"><span class="">XML</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this XMLList object contains the specified XML object, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_copy_DetailAnchor"><span class="">copy</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns a deep copy of the this XMLList object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_descendants_DetailAnchor"><span class="">descendants</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>descendants()</i> method of each XML object in this XMLList object and returns an XMLList containing the results concatenated in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_descendants_String_DetailAnchor"><span class="">descendants</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>descendants(name)</i> method of each XML object in this XMLList object and returns an XMLList containing the results concatenated in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_elements_DetailAnchor"><span class="">elements</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>elements()</i> method in each XML object in this XMLList object and returns an XMLList containing the results concatenated in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_elements_Object_DetailAnchor"><span class="">elements</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>elements(name)</i> method in each of the XML objects in this XMLList object and returns an XMLList containing the results concatenated in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_hasComplexContent_DetailAnchor"><span class="">hasComplexContent</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns a Boolean value indicating whether this XMLList object contains complex content.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a></span>(prop
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns a Boolean value indicating whether this object has the property specified by <i>prop</i>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_hasSimpleContent_DetailAnchor"><span class="">hasSimpleContent</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns a Boolean value indicating whether this XML object contains simple content.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_length_DetailAnchor"><span class="">length</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of children in this XMLList object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_normalize_DetailAnchor"><span class="">normalize</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Puts all text nodes in this XMLList, all the XML objects it contains and the descendents of all the XML objects it contains into a normal form by merging adjacent text nodes and eliminating empty text nodes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_parent_DetailAnchor"><span class="">parent</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the parent of the XMLList object or null if the XMLList object does not have a parent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_processingInstructions_DetailAnchor"><span class="">processingInstructions</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>processingInstructions()</i> method of each XML object in this XMLList object and returns an XMList containing the results in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_processingInstructions_String_DetailAnchor"><span class="">processingInstructions</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>processingInstructions(name)</i> method of each XML object in this XMLList object and returns an XMList containing the results in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a></span>(property
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns a Boolean indicating whether the specified <i>property</i> will be included in the set of properties iterated over when this XML object is used in a <i>for..in</i> statement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_text_DetailAnchor"><span class="">text</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Calls the <i>text()</i> method of each XML object contained in this XMLList object and returns an XMLList containing the results concatenated in order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_toString_DetailAnchor"><span class="">toString</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the String representation of this XMLList object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_toXMLString_DetailAnchor"><span class="">toXMLString</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an XML-encoded String representation of the XMLList object by calling the <i>toXMLString</i> method on each property contained within this XMLList object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_XMLList_valueOf_DetailAnchor"><span class="">valueOf</span></a></span>()
+						: 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a></span>
+                    <div class="description">Returns this XMLList object.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_XMLList_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">XMLList</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">XMLList</span>(value
+								 : 
+								 					
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+                    </div>
+                    <div class="description">Creates a new XMLList object using the
+ specified <i>value</i>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_attribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">attribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">attribute</span>(attributeName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns the attribute associated with this XMLList object that
+ is identified by the specified name.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeName</span>
+						 - 
+						<span class="parameterDesc">the name of the attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value of the attribute as either an XMLList or an empty XMLList</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_attributes_DetailAnchor"></a>
+                    <div class="detailName 
+						">attributes</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">attributes</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns an XMList of the attributes in this XMLList Object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an XMList of the attributes in this XMLList Object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_child_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">child</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">child</span>(propertyName
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns the children of the XMLList object based on the specified
+ property name.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">propertyName</span>
+						 - 
+						<span class="parameterDesc">the property name representing the children of this XMLList object.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an XMLList of children that match the property name parameter.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_children_DetailAnchor"></a>
+                    <div class="detailName 
+						">children</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">children</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns an XMLList containing the children of this XMLList object, maintaing
+ the sequence in which they appear.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an XMLList containing the children of this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_comments_DetailAnchor"></a>
+                    <div class="detailName 
+						">comments</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">comments</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns the properties of the XMLList object that contain comments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">properties of the XMLList object that contain comments.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_contains_XML_DetailAnchor"></a>
+                    <div class="detailName 
+						">contains</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">contains</span>(value
+								 : 
+								 
+								<a href="class_TopLevel_XML.html"><span class="">XML</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this XMLList object contains the specified
+ XML object, false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the object to locate in this XMLList object.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this XMLList object contains the specified XML object, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_copy_DetailAnchor"></a>
+                    <div class="detailName 
+						">copy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">copy</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns a deep copy of the this XMLList object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the deep copy of the object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_descendants_DetailAnchor"></a>
+                    <div class="detailName 
+						">descendants</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">descendants</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>descendants()</i> method of each XML object in this XMLList
+ object and returns an XMLList containing the
+ results concatenated in order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of all descendents of the XML objects in this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_descendants_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">descendants</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">descendants</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>descendants(name)</i> method of each XML object in this XMLList
+ object and returns an XMLList containing the
+ results concatenated in order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name of the element to match. To return all descendents, use * as the <i>name</i> parameter.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of all descendents of the XML objects in this XMLList constrained by the <i>name</i> parameter.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_elements_DetailAnchor"></a>
+                    <div class="detailName 
+						">elements</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">elements</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>elements()</i> method in each XML object in this XMLList
+ object and returns an XMLList containing the results concatenated in order.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_elements_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">elements</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">elements</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>elements(name)</i> method in each of the XML objects in
+ this XMLList object and returns an XMLList containing the results
+ concatenated in order. <i>name</i> can be a
+ QName, String, or any other data type that will be converted
+ to a string prior to performing the search for elements of that
+ name.
+
+ To list all objects use * for the value of <i>name</i>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name of the elements to return.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of all elements of the XML objects in this XMLList constrained by the <i>name</i> parameter.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_hasComplexContent_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasComplexContent</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasComplexContent</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns a Boolean value indicating whether
+ this XMLList object contains complex content. An XMLList object is considered
+ to contain complex content if it is not empty, contains a single XML item
+ with complex content or contains elements.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a Boolean value indicating whether this XMLList object contains complex content.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_hasOwnProperty_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasOwnProperty</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasOwnProperty</span>(prop
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns a Boolean value indicating whether this object has the
+ property specified by <i>prop</i>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">prop</span>
+						 - 
+						<span class="parameterDesc">the property to locate.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the property exists, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_hasSimpleContent_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasSimpleContent</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasSimpleContent</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns a Boolean value indicating whether this XML object contains
+ simple content. An XMLList object is considered to contain simple
+ content if it is empty, contains a single XML item with simple
+ content or contains no elements.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a Boolean value indicating whether this XML object contains simple content.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_length_DetailAnchor"></a>
+                    <div class="detailName 
+						">length</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">length</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of children in this XMLList
+ object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of children in this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_normalize_DetailAnchor"></a>
+                    <div class="detailName 
+						">normalize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">normalize</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Puts all text nodes in this XMLList, all the XML objects it
+ contains and the descendents of all the XML objects it
+ contains into a normal form by merging adjacent text nodes
+ and eliminating empty text nodes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the XMLList object containing normailzed objects.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_parent_DetailAnchor"></a>
+                    <div class="detailName 
+						">parent</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">parent</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the parent of the XMLList object
+ or null if the XMLList object does not have
+ a parent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the parent of the XMLList object or null if the XMLList object does not have a parent.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_processingInstructions_DetailAnchor"></a>
+                    <div class="detailName 
+						">processingInstructions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">processingInstructions</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>processingInstructions()</i> method of each XML object
+ in this XMLList object and returns an XMList containing the results
+ in order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an XMLList contaiing the result of calling the <i>processingInstructions()</i> method of each XML object in this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_processingInstructions_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">processingInstructions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">processingInstructions</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>processingInstructions(name)</i> method of each XML object
+ in this XMLList object and returns an XMList containing the results
+ in order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name representing the processing-instructions you want to retreive.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an XMLList containing the result of calling the <i>processingInstructions(name)</i> method of each XML object in this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_propertyIsEnumerable_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">propertyIsEnumerable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">propertyIsEnumerable</span>(property
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns a Boolean indicating whether the specified
+ <i>property</i> will be included in the set of properties iterated
+ over when this XML object is used in a <i>for..in</i> statement.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">property</span>
+						 - 
+						<span class="parameterDesc">the property to test.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true when the property can be iterated in a <i>for..in</i> statement, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_text_DetailAnchor"></a>
+                    <div class="detailName 
+						">text</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">text</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Calls the <i>text()</i> method of each XML object contained
+ in this XMLList object and returns an XMLList containing
+ the results concatenated in order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the concatenated results of calling the <i>text()</i> method of every XML object contained in this XMLList.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_toString_DetailAnchor"></a>
+                    <div class="detailName 
+						">toString</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">toString</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the String representation of this XMLList object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the String representation of this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_toXMLString_DetailAnchor"></a>
+                    <div class="detailName 
+						">toXMLString</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">toXMLString</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an XML-encoded String representation of the XMLList object
+ by calling the <i>toXMLString</i> method on each property contained
+ within this XMLList object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an XML-encoded String representation of the XMLList object by calling the <i>toXMLString</i> method on each property contained within this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_XMLList_valueOf_DetailAnchor"></a>
+                    <div class="detailName 
+						">valueOf</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">valueOf</span>()
+					 : 
+					<a href="class_TopLevel_XMLList.html"><span class="">XMLList</span></a>
+                    </div>
+                    <div class="description">Returns this XMLList object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this XMLList object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

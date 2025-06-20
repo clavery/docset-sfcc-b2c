@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PinterestFeedHooks</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.pinterest.PinterestFeedHooks">
+            <a name="dw.extensions.pinterest.PinterestFeedHooks"></a>
+            <div class="packageName">dw.extensions.pinterest</div>
+            <div class="className
+					">	
+        	
+				Class PinterestFeedHooks</div>
+            <div class="hierarchy">
+                <div style="position:relative;left:1%;">
+                    <img src="images/inherit.gif">dw.extensions.pinterest.PinterestFeedHooks
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">PinterestFeedHooks interface containing extension points for customizing Pinterest export feeds.
+ <p/>
+ These hooks are not executed in a transaction.
+ <p/>
+ The extension points (hook names), and the functions that are called by each extension point. A function must be
+ defined inside a JavaScript source and must be exported. The script with the exported hook function must be located
+ inside a site cartridge. Inside the site cartridge a 'package.json' file with a 'hooks' entry must exist.
+ <p/>
+
+ <pre>
+ "hooks": "./hooks.json"
+ </pre>
+
+ The hooks entry links to a json file, relative to the 'package.json' file. This file lists all registered hooks
+ inside the hooks property:
+ <p/>
+
+ <pre>
+ "hooks": [
+      {"name": "dw.extensions.pinterest.feed.transformProduct", "script": "./hooks.ds"}
+ ]
+ </pre>
+ <p/>
+ A hook entry has a 'name' and a 'script' property.
+ <ul>
+ <li>The 'name' contains the extension point, the hook name.</li>
+ <li>The 'script' contains the script relative to the hooks file, with the exported hook function.</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestFeedHooks_extensionPointTransformAvailability_DetailAnchor"></a>extensionPointTransformAvailability
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.pinterest.feed.transformAvailability"
+                        <div class="description">The extension point name dw.extensions.pinterest.feed.transformAvailability.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestFeedHooks_extensionPointTransformProduct_DetailAnchor"></a>extensionPointTransformProduct
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.pinterest.feed.transformProduct"
+                        <div class="description">The extension point name dw.extensions.pinterest.feed.transformProduct.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestFeedHooks_transformAvailability_Product_PinterestAvailability_DetailAnchor"><span class="">transformAvailability</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, pinterestAvailability
+								 : 	
+								 
+								<a href="class_dw_extensions_pinterest_PinterestAvailability.html"><span class="">PinterestAvailability</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called after default transformation of given Demandware product to Pinterest availability as part of the availability feed export.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestFeedHooks_transformProduct_Product_PinterestProduct_DetailAnchor"><span class="">transformProduct</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, pinterestProduct
+								 : 	
+								 
+								<a href="class_dw_extensions_pinterest_PinterestProduct.html"><span class="">PinterestProduct</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called after default transformation of given Demandware product to Pinterest product as part of the catalog feed export.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestFeedHooks_transformAvailability_Product_PinterestAvailability_DetailAnchor"></a>
+                    <div class="detailName 
+						">transformAvailability</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">transformAvailability</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, pinterestAvailability
+								 : 
+								 
+								<a href="class_dw_extensions_pinterest_PinterestAvailability.html"><span class="">PinterestAvailability</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called after default transformation of given Demandware product to Pinterest availability as part of the
+ availability feed export.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">the Demandware product</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pinterestAvailability</span>
+						 - 
+						<span class="parameterDesc">the Pinterest representation of the product availability</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null Status ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestFeedHooks_transformProduct_Product_PinterestProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">transformProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">transformProduct</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, pinterestProduct
+								 : 
+								 
+								<a href="class_dw_extensions_pinterest_PinterestProduct.html"><span class="">PinterestProduct</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called after default transformation of given Demandware product to Pinterest product as part of the catalog feed
+ export.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">the Demandware product</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pinterestProduct</span>
+						 - 
+						<span class="parameterDesc">the Pinterest representation of the product</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null Status ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

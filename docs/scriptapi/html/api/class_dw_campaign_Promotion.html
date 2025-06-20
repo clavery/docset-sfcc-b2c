@@ -1,0 +1,1488 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Promotion</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.campaign.Promotion">
+            <a name="dw.campaign.Promotion"></a>
+            <div class="packageName">dw.campaign</div>
+            <div class="className
+					">	
+        	
+				Class Promotion</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.campaign.Promotion
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class represents a promotion in Commerce Cloud Digital. Examples of
+ promotions include:
+
+ <ul>
+ <li>"Get 20% off your order"</li>
+ <li>"$15 off a given product"</li>
+ <li>"free shipping for all orders over $50"</li>
+ <li>Get a bonus product with purchase of another product</li>
+ </ul>
+
+ The Promotion class provides access to the basic attributes of the promotion
+ such as name, callout message, and description, but the details of the
+ promotion rules are not available in the API due to their complexity.
+ <p/>
+ Commerce Cloud Digital allows merchants to create a single logical "promotion
+ rule" (e.g. "Get 20% off your order") and then assign it to one or more
+ "containers" where the supported container types are campaigns or AB-tests. A
+ Promotion represents a specific instance of a promotion rule assigned to a
+ container. Promotion rules themselves that are not assigned to any container
+ are inaccessible through the API. Each instance (i.e. assignment) can have
+ separate "qualifiers". Qualifiers are the customer groups, source code
+ groups, or coupons that trigger a given promotion for a customer.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_EXCLUSIVITY_CLASS_DetailAnchor"></a>EXCLUSIVITY_CLASS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CLASS"
+                        <div class="description">Constant representing promotion exclusivity of type <i>class</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_EXCLUSIVITY_GLOBAL_DetailAnchor"></a>EXCLUSIVITY_GLOBAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"GLOBAL"
+                        <div class="description">Constant representing promotion exclusivity of type <i>global</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_EXCLUSIVITY_NO_DetailAnchor"></a>EXCLUSIVITY_NO
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NO"
+                        <div class="description">Constant representing promotion exclusivity of type <i>no</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_PROMOTION_CLASS_ORDER_DetailAnchor"></a>PROMOTION_CLASS_ORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"ORDER"
+                        <div class="description">Constant representing promotion class of type <i>order</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_PROMOTION_CLASS_PRODUCT_DetailAnchor"></a>PROMOTION_CLASS_PRODUCT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PRODUCT"
+                        <div class="description">Constant representing promotion class of type <i>product</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_PROMOTION_CLASS_SHIPPING_DetailAnchor"></a>PROMOTION_CLASS_SHIPPING
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"SHIPPING"
+                        <div class="description">Constant representing promotion class of type <i>shipping</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_QUALIFIER_MATCH_MODE_ALL_DetailAnchor"></a>QUALIFIER_MATCH_MODE_ALL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"all"
+                        <div class="description">Constant indicating that that all qualifier conditions must be met in
+ order for this promotion to apply for a given customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_campaign_Promotion_QUALIFIER_MATCH_MODE_ANY_DetailAnchor"></a>QUALIFIER_MATCH_MODE_ANY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"any"
+                        <div class="description">Constant indicating that that at least one qualifier condition must be
+ met in order for this promotion to apply for a given customer.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>active
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if promotion is active, otherwise 'false'. <br/>
+ A promotion is active if its campaign is active, and the promotion
+ is enabled, and it is scheduled for <i>now</i>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>basedOnCoupon
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if the promotion is triggered by a coupon,
+ false otherwise.
+ <p/></div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnCoupons_DetailAnchor">isBasedOnCoupons()</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>basedOnCoupons
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if the promotion is triggered by coupons,
+ false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>basedOnCustomerGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if the promotion is triggered by customer groups,
+ false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>basedOnSourceCodes
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if the promotion is triggered by source codes,
+ false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>calloutMsg
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The callout message of the promotion.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>campaign
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The campaign this particular instance of the promotion is defined
+ in.
+ <p/>
+ Note: If this promotion is defined as part of an AB-test, then a Campaign
+ object will be returned, but it is a mock implementation, and not a true
+ Campaign. This behavior is required for backwards compatibility and
+ should not be relied upon as it may change in future releases.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>combinablePromotions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">The promotion's combinable promotions. Combinable promotions is a set of promotions or groups this
+ promotion can be combined with.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>conditionalDescription
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A description of the condition that must be met for this
+ promotion to be applicable.
+ <p/>
+ The method and the related attribute have been deprecated. Use the
+ <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getDetails_DetailAnchor">getDetails()</a> method instead.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getDetails_DetailAnchor">getDetails()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>coupons
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The coupons directly assigned to the promotion or assigned to the campaign of the promotion. <p/>
+ If the promotion is not based on coupons (see <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnCoupons_DetailAnchor">isBasedOnCoupons()</a>), or no coupons is assigned to the
+ promotion or its campaign, an empty collection is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>custom
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_object_CustomAttributes.html"><span class="">CustomAttributes</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The custom attributes for this extensible object.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customerGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer groups directly assigned to the promotion or assigned to the campaign of the promotion. <p/>
+ If the promotion is not based on customer groups (see <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnCustomerGroups_DetailAnchor">isBasedOnCustomerGroups()</a>), or no customer group is assigned to the
+ promotion or its campaign, an empty collection is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The description of the promotion.
+ <p/>
+ Method is deprecated and returns the same value as <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getCalloutMsg_DetailAnchor">getCalloutMsg()</a>.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getCalloutMsg_DetailAnchor">getCalloutMsg()</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>details
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The detailed description of the promotion.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>enabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if promotion is enabled, otherwise false.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>endDate
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The effective end date of this instance of the promotion. If no
+ explicit end date is defined for the promotion, the end date of the
+ containing Campaign or AB-test is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>exclusivity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The promotion's exclusivity specifying how the promotion can be
+ combined with other promotions.
+ Possible values are <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_EXCLUSIVITY_NO_DetailAnchor">EXCLUSIVITY_NO</a>, <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_EXCLUSIVITY_CLASS_DetailAnchor">EXCLUSIVITY_CLASS</a>
+ and <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_EXCLUSIVITY_GLOBAL_DetailAnchor">EXCLUSIVITY_GLOBAL</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The unique ID of the promotion.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>image
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The reference to the promotion image.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>lastModified
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The date that this object was last modified.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>mutuallyExclusivePromotions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">The promotion's mutually exclusive Promotions. Mutually exclusive Promotions is a set of promotions or
+ groups this promotion cannot be combined with.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The name of the promotion.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>promotionClass
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The promotion class indicating the general type of the promotion.
+ Possible values are <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_PROMOTION_CLASS_PRODUCT_DetailAnchor">PROMOTION_CLASS_PRODUCT</a>,
+ <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_PROMOTION_CLASS_ORDER_DetailAnchor">PROMOTION_CLASS_ORDER</a>, and <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_PROMOTION_CLASS_SHIPPING_DetailAnchor">PROMOTION_CLASS_SHIPPING</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>qualifierMatchMode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The qualifier matching mode specified by this promotion. A
+ promotion may have up to 3 qualifier conditions based on whether it is
+ customer-group based, coupon based, and/or source-code based. A promotion
+ may require for example that a customer belong to a certain customer
+ group and also have a certain coupon in the cart in order for the
+ promotion to apply. This method returns QUALIFIER_MATCH_MODE_ALL if it is
+ necessary that all the qualifier conditions are satisfied in order for
+ this promotion to apply for a given customer. Otherwise, this method
+ returns QUALIFIER_MATCH_MODE_ANY indicating that at least of the
+ qualifier conditions must be satisfied.
+ <p/>
+ Note: currently QUALIFIER_MATCH_MODE_ALL is only supported for promotions
+ assigned to campaigns, and not those assigned to AB-tests.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>rank
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The promotion's rank. Rank is a numeric attribute that you can specify.
+ Promotions with a defined rank are calculated before promotions without a defined rank.
+ If two promotions have a rank, the one with the lowest rank is calculated first.
+ For example, a promotion with rank 10 is calculated before one with rank 30.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>refinable
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if promotion is refinable, otherwise false.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sourceCodeGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The source code groups directly assigned to the promotion or assigned to the campaign of the promotion. <p/>
+ If the promotion is not based on source code groups (see <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnSourceCodes_DetailAnchor">isBasedOnSourceCodes()</a>), or no source code group is assigned to the
+ promotion or its campaign, an empty collection is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>startDate
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The effective start date of this instance of the promotion. If no
+ explicit start date is defined for this instance, the start date of the
+ containing Campaign or AB-test is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>tags
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+							&nbsp;(Read Only)
+                        <div class="description">The promotion's tags. Tags are a way of categorizing and organizing promotions. A promotion can have many
+ tags. Tags will be returned in alphabetical order.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getCalloutMsg_DetailAnchor"><span class="">getCalloutMsg</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the callout message of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getCampaign_DetailAnchor"><span class="">getCampaign</span></a></span>()
+						: 
+					<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a></span>
+                    <div class="description">Returns the campaign this particular instance of the promotion is defined in.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getCombinablePromotions_DetailAnchor"><span class="">getCombinablePromotions</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns the promotion's combinable promotions.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_campaign_Promotion_getConditionalDescription_DetailAnchor"><span class="">getConditionalDescription</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns a description of the condition that must be met for this promotion to be applicable.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getCoupons_DetailAnchor"><span class="">getCoupons</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the coupons directly assigned to the promotion or assigned to the campaign of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getCustom_DetailAnchor"><span class="">getCustom</span></a></span>()
+						: 
+					<a href="class_dw_object_CustomAttributes.html"><span class="">CustomAttributes</span></a></span>
+                    <div class="description">Returns the custom attributes for this extensible object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getCustomerGroups_DetailAnchor"><span class="">getCustomerGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the customer groups directly assigned to the promotion or assigned to the campaign of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_campaign_Promotion_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the description of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getDetails_DetailAnchor"><span class="">getDetails</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the detailed description of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getEndDate_DetailAnchor"><span class="">getEndDate</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the effective end date of this instance of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getExclusivity_DetailAnchor"><span class="">getExclusivity</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the promotion's exclusivity specifying how the promotion can be combined with other promotions.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the unique ID of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getImage_DetailAnchor"><span class="">getImage</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the reference to the promotion image.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getLastModified_DetailAnchor"><span class="">getLastModified</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the date that this object was last modified.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getMutuallyExclusivePromotions_DetailAnchor"><span class="">getMutuallyExclusivePromotions</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns the promotion's mutually exclusive Promotions.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getPromotionalPrice_Product_DetailAnchor"><span class="">getPromotionalPrice</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the promotional price for the specified product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getPromotionalPrice_Product_ProductOptionModel_DetailAnchor"><span class="">getPromotionalPrice</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, optionModel
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">This method follows the same logic as <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getPromotionalPrice_Product_DetailAnchor">getPromotionalPrice(Product)</a> but prices are calculated based on the option values selected in the specified option model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getPromotionClass_DetailAnchor"><span class="">getPromotionClass</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the promotion class indicating the general type of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getQualifierMatchMode_DetailAnchor"><span class="">getQualifierMatchMode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the qualifier matching mode specified by this promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getRank_DetailAnchor"><span class="">getRank</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the promotion's rank.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getSourceCodeGroups_DetailAnchor"><span class="">getSourceCodeGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the source code groups directly assigned to the promotion or assigned to the campaign of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getStartDate_DetailAnchor"><span class="">getStartDate</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the effective start date of this instance of the promotion.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_getTags_DetailAnchor"><span class="">getTags</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns the promotion's tags.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_isActive_DetailAnchor"><span class="">isActive</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if promotion is active, otherwise 'false'.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_campaign_Promotion_isBasedOnCoupon_DetailAnchor"><span class="">isBasedOnCoupon</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if the promotion is triggered by a coupon, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_isBasedOnCoupons_DetailAnchor"><span class="">isBasedOnCoupons</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if the promotion is triggered by coupons, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_isBasedOnCustomerGroups_DetailAnchor"><span class="">isBasedOnCustomerGroups</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if the promotion is triggered by customer groups, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_isBasedOnSourceCodes_DetailAnchor"><span class="">isBasedOnSourceCodes</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if the promotion is triggered by source codes, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_isEnabled_DetailAnchor"><span class="">isEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if promotion is enabled, otherwise false.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_Promotion_isRefinable_DetailAnchor"><span class="">isRefinable</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if promotion is refinable, otherwise false.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getCalloutMsg_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCalloutMsg</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCalloutMsg</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the callout message of the promotion.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Callout message of the promotion.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getCampaign_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCampaign</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCampaign</span>()
+					 : 
+					<a href="class_dw_campaign_Campaign.html"><span class="">Campaign</span></a>
+                    </div>
+                    <div class="description">Returns the campaign this particular instance of the promotion is defined
+ in.
+ <p/>
+ Note: If this promotion is defined as part of an AB-test, then a Campaign
+ object will be returned, but it is a mock implementation, and not a true
+ Campaign. This behavior is required for backwards compatibility and
+ should not be relied upon as it may change in future releases.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Campaign of the promotion.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getCombinablePromotions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCombinablePromotions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCombinablePromotions</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns the promotion's combinable promotions. Combinable promotions is a set of promotions or groups this
+ promotion can be combined with.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The promotion's set of combinable promotions.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getConditionalDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getConditionalDescription</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getConditionalDescription</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns a description of the condition that must be met for this
+ promotion to be applicable.
+ <p/>
+ The method and the related attribute have been deprecated. Use the
+ <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getDetails_DetailAnchor">getDetails()</a> method instead.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getDetails_DetailAnchor">getDetails()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Condition promotion description.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getCoupons_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCoupons</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCoupons</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the coupons directly assigned to the promotion or assigned to the campaign of the promotion. <p/>
+ If the promotion is not based on coupons (see <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnCoupons_DetailAnchor">isBasedOnCoupons()</a>), or no coupons is assigned to the
+ promotion or its campaign, an empty collection is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Coupons assigned to promotion in no particular order.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getCustom_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustom</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustom</span>()
+					 : 
+					<a href="class_dw_object_CustomAttributes.html"><span class="">CustomAttributes</span></a>
+                    </div>
+                    <div class="description">Returns the custom attributes for this extensible object.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getCustomerGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomerGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the customer groups directly assigned to the promotion or assigned to the campaign of the promotion. <p/>
+ If the promotion is not based on customer groups (see <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnCustomerGroups_DetailAnchor">isBasedOnCustomerGroups()</a>), or no customer group is assigned to the
+ promotion or its campaign, an empty collection is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Customer groups assigned to promotion in no particular order.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getDescription</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the description of the promotion.
+ <p/>
+ Method is deprecated and returns the same value as <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getCalloutMsg_DetailAnchor">getCalloutMsg()</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getCalloutMsg_DetailAnchor">getCalloutMsg()</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Description of the promotion.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getDetails_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDetails</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDetails</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the detailed description of the promotion.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Detailed promotion description.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getEndDate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEndDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEndDate</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the effective end date of this instance of the promotion. If no
+ explicit end date is defined for the promotion, the end date of the
+ containing Campaign or AB-test is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">End date of the promotion, or null if no end date is defined.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getExclusivity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExclusivity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExclusivity</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the promotion's exclusivity specifying how the promotion can be
+ combined with other promotions.
+ Possible values are <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_EXCLUSIVITY_NO_DetailAnchor">EXCLUSIVITY_NO</a>, <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_EXCLUSIVITY_CLASS_DetailAnchor">EXCLUSIVITY_CLASS</a>
+ and <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_EXCLUSIVITY_GLOBAL_DetailAnchor">EXCLUSIVITY_GLOBAL</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Promotion exclusivity</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the unique ID of the promotion.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">ID of the promotion.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getImage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the reference to the promotion image.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Image of the promotion.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getLastModified_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLastModified</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLastModified</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the date that this object was last modified.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the date that this object was last modified.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getMutuallyExclusivePromotions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMutuallyExclusivePromotions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMutuallyExclusivePromotions</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns the promotion's mutually exclusive Promotions. Mutually exclusive Promotions is a set of promotions or
+ groups this promotion cannot be combined with.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The promotion's set of mutually exclusive Promotions.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the promotion.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Name of the promotion.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getPromotionalPrice_Product_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPromotionalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPromotionalPrice</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the promotional price for the specified product. The promotional
+ price is only returned if the following conditions are met:
+
+ <ul>
+ <li>this promotion is a product promotion without purchase conditions,
+ i.e. is of type 'Without qualifying products'.</li>
+ <li>this promotion's discount is Discount.TYPE_AMOUNT,
+ Discount.TYPE_PERCENTAGE, Discount.TYPE_FIXED_PRICE, or
+ Discount.TYPE_PRICEBOOK_PRICE.</li>
+ <li>specified product is one of the discounted products of the
+ promotion.</li>
+ <li>the product has a valid sales price for quantity 1.0.</li>
+ </ul>
+
+ In all other cases, the method will return Money.NOT_AVAILABLE. It is
+ not required that this promotion be an active customer
+ promotion.
+
+ NOTE: the method might be extended in the future to support more
+ promotion types.
+
+ To calculate the promotional price, the method uses the current sales
+ price of the product for quantity 1.0, and applies the discount
+ associated with the promotion to this price. For example, if the product
+ price is $14.99, and the promotion discount is 10%, the method will
+ return $13.49. If the discount is $2 off, the method will return $12.99.
+ If the discount is $10.00 fixed price, the method will return $10.00.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">the product to calculate the discount for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price of the passed product after promotional discount is applied, or Money.NOT_AVAILABLE if any of the restrictions on product or promotion are not met.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getPromotionalPrice_Product_ProductOptionModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPromotionalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPromotionalPrice</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, optionModel
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">This method follows the same logic as
+ <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_getPromotionalPrice_Product_DetailAnchor">getPromotionalPrice(Product)</a> but prices are calculated based
+ on the option values selected in the specified option model.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">the product to calculate the discount for</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionModel</span>
+						 - 
+						<span class="parameterDesc">the option model to use when calculating</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the price of the passed product after promotional discount is applied, or Money.NOT_AVAILABLE if any of the restrictions on product or promotion are not met.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getPromotionClass_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPromotionClass</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPromotionClass</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the promotion class indicating the general type of the promotion.
+ Possible values are <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_PROMOTION_CLASS_PRODUCT_DetailAnchor">PROMOTION_CLASS_PRODUCT</a>,
+ <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_PROMOTION_CLASS_ORDER_DetailAnchor">PROMOTION_CLASS_ORDER</a>, and <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_PROMOTION_CLASS_SHIPPING_DetailAnchor">PROMOTION_CLASS_SHIPPING</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Promotion class or null if the promotion rule has not been configured.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getQualifierMatchMode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getQualifierMatchMode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getQualifierMatchMode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the qualifier matching mode specified by this promotion. A
+ promotion may have up to 3 qualifier conditions based on whether it is
+ customer-group based, coupon based, and/or source-code based. A promotion
+ may require for example that a customer belong to a certain customer
+ group and also have a certain coupon in the cart in order for the
+ promotion to apply. This method returns QUALIFIER_MATCH_MODE_ALL if it is
+ necessary that all the qualifier conditions are satisfied in order for
+ this promotion to apply for a given customer. Otherwise, this method
+ returns QUALIFIER_MATCH_MODE_ANY indicating that at least of the
+ qualifier conditions must be satisfied.
+ <p/>
+ Note: currently QUALIFIER_MATCH_MODE_ALL is only supported for promotions
+ assigned to campaigns, and not those assigned to AB-tests.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the qualifier matching mode specified by this promotion, either QUALIFIER_MATCH_MODE_ALL or QUALIFIER_MATCH_MODE_ANY.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getRank_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRank</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRank</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the promotion's rank. Rank is a numeric attribute that you can specify.
+ Promotions with a defined rank are calculated before promotions without a defined rank.
+ If two promotions have a rank, the one with the lowest rank is calculated first.
+ For example, a promotion with rank 10 is calculated before one with rank 30.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The promotion's rank.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getSourceCodeGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSourceCodeGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSourceCodeGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the source code groups directly assigned to the promotion or assigned to the campaign of the promotion. <p/>
+ If the promotion is not based on source code groups (see <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnSourceCodes_DetailAnchor">isBasedOnSourceCodes()</a>), or no source code group is assigned to the
+ promotion or its campaign, an empty collection is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Source code groups assigned to promotion in no particular order.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getStartDate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStartDate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStartDate</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the effective start date of this instance of the promotion. If no
+ explicit start date is defined for this instance, the start date of the
+ containing Campaign or AB-test is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Start date of the promotion, or null if no start date is defined.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_getTags_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTags</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTags</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns the promotion's tags. Tags are a way of categorizing and organizing promotions. A promotion can have many
+ tags. Tags will be returned in alphabetical order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The promotion's set of tags.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isActive_DetailAnchor"></a>
+                    <div class="detailName 
+						">isActive</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isActive</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if promotion is active, otherwise 'false'. <br/>
+ A promotion is active if its campaign is active, and the promotion
+ is enabled, and it is scheduled for <i>now</i>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is active, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isBasedOnCoupon_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">isBasedOnCoupon</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">isBasedOnCoupon</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if the promotion is triggered by a coupon,
+ false otherwise.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_campaign_Promotion.html#dw_campaign_Promotion_isBasedOnCoupons_DetailAnchor">isBasedOnCoupons()</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is triggered by coupon, otherwise false.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isBasedOnCoupons_DetailAnchor"></a>
+                    <div class="detailName 
+						">isBasedOnCoupons</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isBasedOnCoupons</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if the promotion is triggered by coupons,
+ false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is triggered by coupons, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isBasedOnCustomerGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">isBasedOnCustomerGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isBasedOnCustomerGroups</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if the promotion is triggered by customer groups,
+ false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is triggered by customer groups, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isBasedOnSourceCodes_DetailAnchor"></a>
+                    <div class="detailName 
+						">isBasedOnSourceCodes</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isBasedOnSourceCodes</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if the promotion is triggered by source codes,
+ false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is triggered by source codes, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if promotion is enabled, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is enabled, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_Promotion_isRefinable_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinable</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if promotion is refinable, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if promotion is refinable, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

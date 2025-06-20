@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet AddCouponToBasket2</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet AddCouponToBasket2</div>
+            <div class="topLevelDescription">Validates the supplied coupon code and, if the coupon code is valid, applies them to the basket.<br/>
+While applying the coupon code the pipelet adds a new CouponLineItem to the basket based on the supplied coupon code.
+The coupon code gets set at the CouponLineItem.<br/>
+A coupon code can be invalid because of the following reasons:<br/>
+<ul>
+<li>the coupon code is already added to the basket</li>
+<li>a coupon code of the same coupon is already in basket.<br/>
+Adding a single coupon code of this coupon is sufficient to enables a promotion.<br/>
+Adding another coupon code of the same coupon does not make sense since the promotion is already enabled by the previously added code.</li>
+<li>the numbers of redemptions of this coupon code is 1 and the code as already been redeemed.</li>
+<li>the numbers of redemptions of this coupon code is >1 and the maximum numbers of redemptions of this coupon code has already been reached.<br/>
+The pipelet includes the number of redemptions of this coupon code in past plus<br/>
+the number of redemptions of other coupon codes of the same coupon in the past.</li>
+<li>the maximum number of times this coupon can be redeemed per customer has already been reached.</li>
+<li>the maximum number of times this coupon can be redeemed by a customer within a given time period has already been reached.<br/>
+The pipelet includes the number of redemptions of this coupon code in past plus<br/>
+the number of redemptions of other coupon codes of the same coupon in the past.</li>
+<li>the coupon code is unknown to the system</li>
+<li>the coupon is not enabled</li>
+<li>there exists no active promotion to which the coupon is assigned</li>
+</ul>
+<br/>
+In this case, no CouponLineItem is added to the basket and the pipelet returns to the error connector.
+
+The returned "Status" object contains the details of why the coupon was invalid.
+
+Status:
+
+The status object representing a detailed result of the operation. The status property (Status.status) will be set to 0 if the coupon was successfully applied or 1 otherwise.  The code property (Status.code) will be set to one of the following values:<br/>
+<ul>
+<li>"OK" = The coupon was applied to the basket.</li>
+<li>CouponStatusCodes.COUPON_CODE_ALREADY_IN_BASKET = Indicates that coupon code has already been added to basket.</li>
+<li>CouponStatusCodes.COUPON_ALREADY_IN_BASKET = Indicates that another code of the same MultiCode/System coupon has already been added to basket.</li>
+<li>CouponStatusCodes.COUPON_CODE_ALREADY_REDEEMED = Indicates that code of MultiCode/System coupon has already been redeemed.</li>
+<li>CouponStatusCodes.COUPON_CODE_UNKNOWN = Indicates that coupon not found for given coupon code or that the code itself was not found.</li>
+<li>CouponStatusCodes.COUPON_DISABLED = Indicates that coupon is not enabled.</li>
+<li>CouponStatusCodes.REDEMPTION_LIMIT_EXCEEDED = Indicates that number of redemptions per code exceeded.</li>
+<li>CouponStatusCodes.CUSTOMER_REDEMPTION_LIMIT_EXCEEDED = Indicates that number of redemptions per code and customer exceeded.</li>
+<li>CouponStatusCodes.TIMEFRAME_REDEMPTION_LIMIT_EXCEEDED = Indicates that number of redemptions per code, customer and time exceeded.</li>
+<li>CouponStatusCodes.NO_ACTIVE_PROMOTION = Indicates that coupon is not assigned to an active promotion.</li>
+</ul></div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Basket</span>
+					&nbsp;:&nbsp;
+					LineItemCtnr
+							(Required)
+						</span>
+                    <div class="description">
+The basket to add the coupon to.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CouponCode</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The code of the coupon to add.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The status object representing a detailed result of the operation. The status property (Status.status) will be set to 0 if the coupon was successfully applied or 1 otherwise.  The code property (Status.code) will be set to one of the following values:<br/>
+<ul>
+<li>"OK" = The coupon was applied to the basket.</li>
+<li>CouponStatusCodes.COUPON_CODE_ALREADY_IN_BASKET = Indicates that coupon code has already been added to basket.</li>
+<li>CouponStatusCodes.COUPON_ALREADY_IN_BASKET = Indicates that another code of the same MultiCode/System coupon has already been added to basket.</li>
+<li>CouponStatusCodes.COUPON_CODE_ALREADY_REDEEMED = Indicates that code of MultiCode/System coupon has already been redeemed.</li>
+<li>CouponStatusCodes.COUPON_CODE_UNKNOWN = Indicates that coupon not found for given coupon code or that the code itself was not found.</li>
+<li>CouponStatusCodes.COUPON_DISABLED = Indicates that coupon is not enabled.</li>
+<li>CouponStatusCodes.COUPON_REDEMPTION_LIMIT_EXCEEDED = Indicates that number of redemptions per code exceeded.</li>
+<li>CouponStatusCodes.REDEMPTION_LIMIT_EXCEEDED = Indicates that number of redemptions per code and customer exceeded.</li>
+<li>CouponStatusCodes.TIMEFRAME_REDEMPTION_LIMIT_EXCEEDED = Indicates that number of redemptions per code, customer and time exceeded.</li>
+<li>CouponStatusCodes.NO_ACTIVE_PROMOTION = Indicates that coupon is not assigned to an active promotion.</li>
+</ul>
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CouponLineItem</span>
+					&nbsp;:&nbsp;
+					CouponLineItem
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The newly created coupon line item.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

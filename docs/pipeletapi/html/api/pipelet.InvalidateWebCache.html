@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet InvalidateWebCache</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet InvalidateWebCache</div>
+            <div class="topLevelDescription">
+Invalidates web page cache and/or static content cache (images, styles, etc.) of the specified site, the current site or of all sites.
+The page cache may be selectively invalidated by specifying a set of page cache partition IDs, which will invalidate
+only the page cache that matches the pipelines specified with the partitions.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Util</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">InvalidatePageCache</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+If true then all pages in the (pipeline) page cache are deleted, otherwise not. If the PageCachePartitionsIDs parameters is
+specified, only those partitions are invalidated, not the entire page cache.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">InvalidateStaticCache</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+If true then all files in the static content cache are deleted, otherwise not.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">SiteID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The id of the site whose caches are to be invalidated. If value "ALL" is given the caches of all sites (of this organization) are cleared.
+If omitted (or null specified) the caches of the current site are invalidated.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PageCachePartitionIDs</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+A comma separated list of page cache partition IDs to invalidate in the page cache.  If these are specified, only the portion of the page
+cache specified by the partitions is invalidated, as opposed to the entire page cache.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

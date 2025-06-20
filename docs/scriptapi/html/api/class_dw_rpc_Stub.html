@@ -1,0 +1,697 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Stub</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.rpc.Stub">
+            <a name="dw.rpc.Stub"></a>
+            <div class="packageName">dw.rpc</div>
+            <div class="className
+					 dep">	
+        	
+				Class Stub</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.rpc.Stub
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This is the base class for all service stubs accessible
+ through a WebReference object. The Stub provides access to the WSDL operations.
+ <p>
+ Demandware recommends a low timeout to ensure responsiveness
+ of the site and to avoid thread exhaustion. Use the Services module
+ in Business Manager to set timeout values, not the methods for this class.
+ The Services module provides better analytics and timeout management.
+ <p>
+ The default timeout, if not set, is 15 minutes when the web service is used in a job,
+ and 2 minutes otherwise. If the timeout of the calling script is lower,
+ the script timeout is used.
+ <br><pre><code>
+  // get WebReference
+     var webref : WebReference = webreferences.myWSDLname;
+  // get service stub
+     var stub : Stub = webref.defaultService;
+ </code></pre></div>
+                    <div class="subclasses"></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This class is deprecated, please use webreferences2 instead (see also <a href="class_dw_ws_Port.html">Port</a>).</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_rpc_WebReference.html">WebReference</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_rpc_SOAPUtil.html">SOAPUtil</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_Stub_CONNECTION_TIMEOUT_DetailAnchor"></a>CONNECTION_TIMEOUT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">This property allows the user to set the web service connection timeout value in milliseconds. By default,
+ the web service connection timeout is 5000 milliseconds (5 seconds). The minimum allowed value is 100 milliseconds
+ and the maximum allowed value is 15000 milliseconds (15 seconds). Demandware recommends setting timeout values
+ in Business Manager Services module as it provides better analytics and timeout management.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_Stub_ENDPOINT_ADDRESS_PROPERTY_DetailAnchor"></a>ENDPOINT_ADDRESS_PROPERTY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Standard property: target service endpoint address. The
+ URI scheme for the endpoint address specification must
+ correspond to the protocol/transport binding for this
+ stub class.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_Stub_PASSWORD_PROPERTY_DetailAnchor"></a>PASSWORD_PROPERTY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Standard property: password for authentication.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_Stub_SESSION_MAINTAIN_PROPERTY_DetailAnchor"></a>SESSION_MAINTAIN_PROPERTY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Standard property: this boolean property is used by a service
+ client to indicate whether or not it wants to participate in
+ a session with a service endpoint. If this property is set to
+ true, the service client indicates that it wants the session
+ to be maintained. If set to false, the session is not maintained.
+ The default value for this property is false.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_rpc_Stub_USERNAME_PROPERTY_DetailAnchor"></a>USERNAME_PROPERTY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Standard property: user name for authentication.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>password
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The password.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>timeout
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The current read timeout value in milliseconds for this Stub.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>username
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The user name.
+ <p>
+ <b>Note:</b> this method handles sensitive security-related data.
+ Pay special attention to PCI DSS v3. requirements 2, 4, and 12.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_rpc_Stub_Stub_DetailAnchor"><span class="">Stub</span></a></span>()</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub__getProperty_String_DetailAnchor"><span class="">_getProperty</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Gets the value of a specific configuration property.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub__setProperty_String_Object_DetailAnchor"><span class="">_setProperty</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the name and value of a configuration property for this Stub instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_getPassword_DetailAnchor"><span class="">getPassword</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the password.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_getTimeout_DetailAnchor"><span class="">getTimeout</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the current read timeout value in milliseconds for this Stub.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_getUsername_DetailAnchor"><span class="">getUsername</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the user name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_setHeader_String_String_Object_DetailAnchor"><span class="">setHeader</span></a></span>(namespace
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets an additional SOAP header value for the next operation.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_setPassword_String_DetailAnchor"><span class="">setPassword</span></a></span>(password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the password.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_setTimeout_Number_DetailAnchor"><span class="">setTimeout</span></a></span>(timeout
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the timeout in milliseconds for the next call through this Stub.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_rpc_Stub_setUsername_String_DetailAnchor"><span class="">setUsername</span></a></span>(username
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the user name.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_Stub_DetailAnchor"></a>
+                    <div class="detailName 
+						">Stub</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">Stub</span>()
+                    </div>
+                    <div class="description"></div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub__getProperty_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">_getProperty</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">_getProperty</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Gets the value of a specific configuration property.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">Name of the property whose value is to be retrieved</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Value of the configuration property</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub__setProperty_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">_setProperty</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">_setProperty</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the name and value of a configuration property
+ for this Stub instance. If the Stub instance contains
+ a value for the same property, the old value is replaced.
+ <p><b>Note:</b> the <code>_setProperty</code> method may not
+ perform a validity check on a configured property value. An
+ example is the standard property for the target service
+ endpoint address, which is not checked for validity in the
+ <code>_setProperty</code> method.
+ In this case, stub configuration errors are detected at
+ the remote method invocation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">Name of the configuration property</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">Value of the property</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_getPassword_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getPassword</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getPassword</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the password.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the password. <p> <b>Note:</b> this method handles sensitive security-related data. Pay special attention to PCI DSS v3. requirements 2, 4, and 12.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_getTimeout_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getTimeout</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getTimeout</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the current read timeout value in milliseconds for this Stub.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current timeout value for this Stub.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_getUsername_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getUsername</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getUsername</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the user name.
+ <p>
+ <b>Note:</b> this method handles sensitive security-related data.
+ Pay special attention to PCI DSS v3. requirements 2, 4, and 12.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the user name.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_setHeader_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setHeader</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setHeader</span>(namespace
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets an additional SOAP header value for the next
+ operation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">namespace</span>
+						 - 
+						<span class="parameterDesc">the namespace to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">the name of the header item.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value for the header item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_setPassword_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setPassword</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setPassword</span>(password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the password.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">the password to set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_setTimeout_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setTimeout</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setTimeout</span>(timeout
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the timeout in milliseconds for the next call through this Stub.
+
+ <p>This timeout value controls "read timeout" (how
+ long, after connecting, it will wait without any data being read).
+ To control "connection timeout" you use the <a href="class_dw_rpc_Stub.html#dw_rpc_Stub__setProperty_String_Object_DetailAnchor">_setProperty(String, Object)</a>
+ method where the name parameter is <a href="class_dw_rpc_Stub.html#dw_rpc_Stub_CONNECTION_TIMEOUT_DetailAnchor">CONNECTION_TIMEOUT</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">timeout</span>
+						 - 
+						<span class="parameterDesc">the timeout for the next call through this stub.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_rpc_Stub.html#dw_rpc_Stub__setProperty_String_Object_DetailAnchor">_setProperty(String, Object)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_rpc_Stub.html#dw_rpc_Stub_CONNECTION_TIMEOUT_DetailAnchor">CONNECTION_TIMEOUT</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_rpc_Stub_setUsername_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">setUsername</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">setUsername</span>(username
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the user name.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use webreferences2 instead</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">username</span>
+						 - 
+						<span class="parameterDesc">the user name to set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

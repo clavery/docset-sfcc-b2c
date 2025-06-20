@@ -1,0 +1,1993 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class CustomerMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.customer.CustomerMgr">
+            <a name="dw.customer.CustomerMgr"></a>
+            <div class="packageName">dw.customer</div>
+            <div class="className
+					">	
+        	
+				Class CustomerMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.customer.CustomerMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Provides helper methods for managing customers and customer
+ profiles.
+ <b>Note:</b> this class allows access to sensitive information through
+ operations that retrieve the Profile object.
+ Pay attention to appropriate legal and regulatory requirements related to this data.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customerGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer groups of the current site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>passwordConstraints
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerPasswordConstraints.html"><span class="">CustomerPasswordConstraints</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An instance of <a href="class_dw_customer_CustomerPasswordConstraints.html">CustomerPasswordConstraints</a>
+ for the customer list assigned to the current site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>registeredCustomerCount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of registered customers in the system. This number can be used for reporting
+ purposes.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>siteCustomerList
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerList.html"><span class="">CustomerList</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer list of the current site.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_authenticateCustomer_String_String_DetailAnchor"><span class="">authenticateCustomer</span></a></span>(login
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_AuthenticationStatus.html"><span class="">AuthenticationStatus</span></a></span>
+                    <div class="description">This method authenticates a customer using the supplied login and password.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_createCustomer_String_String_DetailAnchor"><span class="">createCustomer</span></a></span>(login
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Creates a new Customer using the supplied login, password.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_createCustomer_String_String_String_DetailAnchor"><span class="">createCustomer</span></a></span>(login
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, customerNo
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Creates a new Customer using the supplied login, password, and a customerNo.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_createExternallyAuthenticatedCustomer_String_String_DetailAnchor"><span class="">createExternallyAuthenticatedCustomer</span></a></span>(authenticationProviderId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Given an authentication provider Id and an external Id: creates a Customer record in the system if one does not exist already for the same 'authenticationProviderId' and 'externalId' pair.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_describeProfileType_DetailAnchor"><span class="">describeProfileType</span></a></span>()
+						: 
+					<a href="class_dw_object_ObjectTypeDefinition.html"><span class="">ObjectTypeDefinition</span></a></span>
+                    <div class="description">Returns the meta data for profiles.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getCustomerByCustomerNumber_String_DetailAnchor"><span class="">getCustomerByCustomerNumber</span></a></span>(customerNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Returns the customer with the specified customer number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getCustomerByLogin_String_DetailAnchor"><span class="">getCustomerByLogin</span></a></span>(login
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Returns the customer for the specified login name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getCustomerByToken_String_DetailAnchor"><span class="">getCustomerByToken</span></a></span>(token
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Returns the customer associated with the specified password reset token.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getCustomerGroup_String_DetailAnchor"><span class="">getCustomerGroup</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_CustomerGroup.html"><span class="">CustomerGroup</span></a></span>
+                    <div class="description">Returns the customer group with the specified ID or null if group does not exists.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getCustomerGroups_DetailAnchor"><span class="">getCustomerGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the customer groups of the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getCustomerList_String_DetailAnchor"><span class="">getCustomerList</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_CustomerList.html"><span class="">CustomerList</span></a></span>
+                    <div class="description">Returns the customer list identified by the specified ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getExternallyAuthenticatedCustomerProfile_String_String_DetailAnchor"><span class="">getExternallyAuthenticatedCustomerProfile</span></a></span>(authenticationProviderId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a></span>
+                    <div class="description">Given an authentication provider Id and external Id returns the Customer Profile in our system.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getPasswordConstraints_DetailAnchor"><span class="">getPasswordConstraints</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerPasswordConstraints.html"><span class="">CustomerPasswordConstraints</span></a></span>
+                    <div class="description">Returns an instance of <a href="class_dw_customer_CustomerPasswordConstraints.html">CustomerPasswordConstraints</a> for the customer list assigned to the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getProfile_String_DetailAnchor"><span class="">getProfile</span></a></span>(customerNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a></span>
+                    <div class="description">Returns the profile with the specified customer number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getRegisteredCustomerCount_DetailAnchor"><span class="">getRegisteredCustomerCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of registered customers in the system.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_getSiteCustomerList_DetailAnchor"><span class="">getSiteCustomerList</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerList.html"><span class="">CustomerList</span></a></span>
+                    <div class="description">Returns the customer list of the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_isAcceptablePassword_String_DetailAnchor"><span class="">isAcceptablePassword</span></a></span>(password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Checks if the given password matches the password constraints (for example password length) of the current site's assigned customerlist.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_isPasswordExpired_String_DetailAnchor"><span class="">isPasswordExpired</span></a></span>(login
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Checks if the password for the given customer is expired</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_loginCustomer_String_String_Boolean_DetailAnchor"><span class="">loginCustomer</span></a></span>(login
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, rememberMe
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">This method authenticates the current session using the supplied login and password.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_loginCustomer_AuthenticationStatus_Boolean_DetailAnchor"><span class="">loginCustomer</span></a></span>(authStatus
+								 : 	
+								 
+								<a href="class_dw_customer_AuthenticationStatus.html"><span class="">AuthenticationStatus</span></a>, rememberMe
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">This method logs in the authenticated customer (from a previous authenticateCustomer() call).</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_loginExternallyAuthenticatedCustomer_String_String_Boolean_DetailAnchor"><span class="">loginExternallyAuthenticatedCustomer</span></a></span>(authenticationProviderId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, rememberMe
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Logs in externally authenticated customer if it has already been created in the system and the profile is not disabled or locked</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_logoutCustomer_Boolean_DetailAnchor"><span class="">logoutCustomer</span></a></span>(rememberMe
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a></span>
+                    <div class="description">Logs out the customer currently logged into the storefront.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_processProfiles_Function_String_Object_DetailAnchor"><span class="">processProfiles</span></a></span>(processFunction
+								 : 	
+								 
+								<a href="class_TopLevel_Function.html"><span class="">Function</span></a>, queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					void</span>
+                    <div class="description">Executes a user-definable function on a set of customer profiles.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_queryProfile_String_Object_DetailAnchor"><span class="">queryProfile</span></a></span>(queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a></span>
+                    <div class="description"><p/>Searches for a single profile instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_queryProfiles_String_String_Object_DetailAnchor"><span class="">queryProfiles</span></a></span>(queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description">Searches for profile instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_queryProfiles_Map_String_DetailAnchor"><span class="">queryProfiles</span></a></span>(queryAttributes
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description"><p/>Searches for profile instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_removeCustomer_Customer_DetailAnchor"><span class="">removeCustomer</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					void</span>
+                    <div class="description">Logs out the supplied customer and deletes the customer record.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_removeCustomerTrackingData_Customer_DetailAnchor"><span class="">removeCustomerTrackingData</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes (asynchronously) tracking data for this customer (from external systems or data stores).</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor"><span class="">searchProfile</span></a></span>(queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a></span>
+                    <div class="description"><p/>Searches for a single profile instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_searchProfiles_String_String_Object_DetailAnchor"><span class="">searchProfiles</span></a></span>(queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description">Searches for profile instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_customer_CustomerMgr_searchProfiles_Map_String_DetailAnchor"><span class="">searchProfiles</span></a></span>(queryAttributes
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description"><p/>Searches for profile instances.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_authenticateCustomer_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">authenticateCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">authenticateCustomer</span>(login
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_AuthenticationStatus.html"><span class="">AuthenticationStatus</span></a>
+                    </div>
+                    <div class="description">This method authenticates a customer using the supplied login and password. It will not log in the customer into
+ the current session, but returns only a status indicating success or failure (with different error codes for the failure cases).
+ Upon successful authentication (status code 'AUTH_OK') the status object also holds the authenticated customer.
+ To continue the login process, call the loginCustomer(AuthenticationStatus, boolean) method.
+
+ This method verifies that the password for the customer is not expired. If it is expired the authentication will fail, with a status code of
+ ERROR_PASSWORD_EXPIRED. This allows the storefront to require the customer to change the password, and then the login can proceed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">login</span>
+						 - 
+						<span class="parameterDesc">Login name, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">Password, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the status of the authentication process</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_createCustomer_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createCustomer</span>(login
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Creates a new Customer using the supplied login, password. The system automatically assigns a customer number based on
+ the customer sequence numbers configured for the site or organization. The number is guaranteed to be unique, but is not guaranteed to be sequential.
+ It can be higher or lower than a previously created number. As a result, sorting customers by customer number is not guaranteed to sort them in their
+ order of creation.
+
+ <p/>The method throws an exception if any of the following conditions are encountered:
+ <ul>
+   <li>A Customer with the supplied Login already exists</li>
+   <li>The Login is not acceptable.</li>
+   <li>The Password is not acceptable.</li>
+   <li>The system cannot create the Customer.</li>
+ </ul>
+
+ <p/>A valid login name is between 1 and 256 characters in length (not counting leading or trailing whitespace), and may contain only the
+ following characters:
+ <ul>
+   <li>alphanumeric (Unicode letters or decimal digits)</li>
+   <li>space</li>
+   <li>period</li>
+   <li>dash</li>
+   <li>underscore</li>
+   <li>@</li>
+ </ul>
+
+<p/>Note: a storefront can be customized to provide further constraints on characters in a login name, but it cannot remove any constraints described above.
+
+<p/>If customers are created using this Script API call then any updated to the customer records should be done through Script API calls as well.
+ The customer records created with Script API call should not be updated with OCAPI calls as the email validation is handled
+ differently in these calls and may result in InvalidEmailException.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">login</span>
+						 - 
+						<span class="parameterDesc">The unique login name associated with the new customer and its profile, must not be null. If login is already in use, an exception will be thrown.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">Customer plain customer password, which is encrypted before it is stored at the profile, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">customer The new customer object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_createCustomer_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createCustomer</span>(login
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, customerNo
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Creates a new Customer using the supplied login, password, and a customerNo. If the customerNo is not specified,
+ the system automatically assigns a customer number based on the customer sequence numbers configured for the site or organization. An automatically assigned
+ number is guaranteed to be unique, but is not guaranteed to be sequential. It can be higher or lower than a previously created number. As a result, sorting
+ customers by customer number is not guaranteed to sort them in their order of creation.
+
+ <p/>The method throws an exception if any of the following conditions are encountered:
+ <ul>
+   <li>A Customer with the supplied Login already exists</li>
+   <li>A Customer with the explicitly provided or calculated customer number already exists.</li>
+   <li>The Login is not acceptable.</li>
+   <li>The Password is not acceptable.</li>
+   <li>The system cannot create the Customer.</li>
+ </ul>
+
+ <p/>A valid login name is between 1 and 256 characters in length (not counting leading or trailing whitespace), and may contain only the
+ following characters:
+ <ul>
+   <li>alphanumeric (Unicode letters or decimal digits)</li>
+   <li>space</li>
+   <li>period</li>
+   <li>dash</li>
+   <li>underscore</li>
+   <li>@</li>
+ </ul>
+
+ <p/>Note: a storefront can be customized to provide further constraints on characters in a login name, but it cannot remove any constraints described above.
+
+ <p/>A valid CustomerNo is between 1 and 100 characters in length (not counting leading or trailing whitespace). Commerce Cloud Digital recommends that a CustomerNo only
+ contain characters valid for URLs.
+
+ <p/>If customers are created using this Script API call then any updated to the customer records should be done through Script API calls as well.
+ The customer records created with Script API call should not be updated with OCAPI calls as the email validation is handled
+ differently in these calls and may result in InvalidEmailException.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">login</span>
+						 - 
+						<span class="parameterDesc">The unique login name associated with the new customer and its profile, must not be null. If login is already in use, an exception will be thrown.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">Customer plain customer password, which is encrypted before it is stored at the profile, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customerNo</span>
+						 - 
+						<span class="parameterDesc">The unique customerNo can be null, the system will then automatically assign a new value. If provided explicitly, the system will make sure that no other customer uses the same value and will throw an exception otherwise.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">customer The new customer object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_createExternallyAuthenticatedCustomer_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createExternallyAuthenticatedCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createExternallyAuthenticatedCustomer</span>(authenticationProviderId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Given an authentication provider Id and an external Id: creates a Customer record in the system if one does not
+ exist already for the same 'authenticationProviderId' and 'externalId' pair. If one already exists - it is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authenticationProviderId</span>
+						 - 
+						<span class="parameterDesc">the Id of the authentication provider as configured in Commerce Cloud Digital.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">externalId</span>
+						 - 
+						<span class="parameterDesc">the Id of the customer at the authentication provider. Each authentication provider generates these in a different way, they are unique within their system</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">On success: the created customer. On failure - null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_describeProfileType_DetailAnchor"></a>
+                    <div class="detailName 
+						">describeProfileType</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">describeProfileType</span>()
+					 : 
+					<a href="class_dw_object_ObjectTypeDefinition.html"><span class="">ObjectTypeDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the meta data for profiles.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the meta data for profiles.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getCustomerByCustomerNumber_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerByCustomerNumber</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomerByCustomerNumber</span>(customerNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Returns the customer with the specified customer number. If no customer with this customer number exists, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customerNumber</span>
+						 - 
+						<span class="parameterDesc">the customer number associated with the customer, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The customer if found, null otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getCustomerByLogin_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerByLogin</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomerByLogin</span>(login
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Returns the customer for the specified login name. If no customer with this login name exists, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">login</span>
+						 - 
+						<span class="parameterDesc">the unique login name associated with the customer, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The customer if found, null otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getCustomerByToken_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerByToken</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomerByToken</span>(token
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Returns the customer associated with the specified password reset token. A valid token is one that is associated
+ with a customer record and is not expired. Such a token can be generated by
+ <a href="class_dw_customer_Credentials.html#dw_customer_Credentials_createResetPasswordToken_DetailAnchor">Credentials.createResetPasswordToken()</a>. If the passed token is valid, the associated customer
+ is returned. Otherwise <code>null</code> is returned</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">token</span>
+						 - 
+						<span class="parameterDesc">password reset token</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The customer associated with the token. <code>Null</code> if the token is invalid.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getCustomerGroup_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerGroup</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomerGroup</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_CustomerGroup.html"><span class="">CustomerGroup</span></a>
+                    </div>
+                    <div class="description">Returns the customer group with the specified ID or null if group
+ does not exists.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">the customer group identifier.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Customer group for ID or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getCustomerGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerGroups</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomerGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the customer groups of the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Customer groups of current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getCustomerList_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerList</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomerList</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_CustomerList.html"><span class="">CustomerList</span></a>
+                    </div>
+                    <div class="description">Returns the customer list identified by the specified ID.
+ Returns null if no customer list with the specified id exists.
+ <p/>
+ Note: Typically the ID of an automatically created customer
+ list is equal to the ID of the site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">The ID of the customer list.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The CustomerList, or null if not found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getExternallyAuthenticatedCustomerProfile_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExternallyAuthenticatedCustomerProfile</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getExternallyAuthenticatedCustomerProfile</span>(authenticationProviderId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a>
+                    </div>
+                    <div class="description">Given an authentication provider Id and external Id returns the Customer Profile
+ in our system.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authenticationProviderId</span>
+						 - 
+						<span class="parameterDesc">the Id of the authentication provider as configured in Commerce Cloud Digital.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">externalId</span>
+						 - 
+						<span class="parameterDesc">the Id of the customer at the authentication provider. Each authentication provider generates these in a different way, they are unique within their system</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The Profile of the customer if found, null otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getPasswordConstraints_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPasswordConstraints</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPasswordConstraints</span>()
+					 : 
+					<a href="class_dw_customer_CustomerPasswordConstraints.html"><span class="">CustomerPasswordConstraints</span></a>
+                    </div>
+                    <div class="description">Returns an instance of <a href="class_dw_customer_CustomerPasswordConstraints.html">CustomerPasswordConstraints</a>
+ for the customer list assigned to the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">customer password constraints for current site</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getProfile_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProfile</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getProfile</span>(customerNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a>
+                    </div>
+                    <div class="description">Returns the profile with the specified customer number.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customerNumber</span>
+						 - 
+						<span class="parameterDesc">the customer number of the customer of the to be retrieved profile</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Profile for specified customer number</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getRegisteredCustomerCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRegisteredCustomerCount</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getRegisteredCustomerCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of registered customers in the system. This number can be used for reporting
+ purposes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of registered customers in the system.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_getSiteCustomerList_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSiteCustomerList</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getSiteCustomerList</span>()
+					 : 
+					<a href="class_dw_customer_CustomerList.html"><span class="">CustomerList</span></a>
+                    </div>
+                    <div class="description">Returns the customer list of the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The customer list assigned to the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_isAcceptablePassword_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAcceptablePassword</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">isAcceptablePassword</span>(password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Checks if the given password matches the password constraints (for example password length) of
+ the current site's assigned customerlist.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">the to be checked password</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the given password matches all required criteria</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_isPasswordExpired_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isPasswordExpired</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">isPasswordExpired</span>(login
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Checks if the password for the given customer is expired</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">login</span>
+						 - 
+						<span class="parameterDesc">the login for the customer to be checked</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the password is expired</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_loginCustomer_String_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">loginCustomer</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">loginCustomer</span>(login
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, rememberMe
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">This method authenticates the current session using the supplied login and password. If a different customer is currently authenticated in the session, then this
+ customer is "logged out" and her/his privacy and form data are deleted. If the authentication with the given credentials fails, then null is returned and no changes
+ to the session are made. The authentication will be sucessful even when the password of the customer is already expired (according to the customer list settings).
+
+ </p> If the input value "RememberMe" is set to true, this method stores a cookie on the customer's machine which will be used to identify the customer when the next
+ session is initiated.  The cookie is set to expire in 180 days (i.e. 6 months). Note that a customer who is remembered is not automatically authenticated and will
+ have to explicitly log in to access any personal information.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use authenticateCustomer(login, password) and loginCustomer(authStatus, rememberMe) instead since they correctly check for expired passwords</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">login</span>
+						 - 
+						<span class="parameterDesc">Login name, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">Password, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rememberMe</span>
+						 - 
+						<span class="parameterDesc">Boolean value indicating if the customer wants to be remembered on the current computer. If a value of true is supplied a cookie identifying the customer is stored upon successful login. If a value of false, or a null value, is supplied, then no cookie is stored and any existing cookie is removed.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Customer successfully authenticated customer. Null if the authentication with the given credentials fails.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_loginCustomer_AuthenticationStatus_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">loginCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">loginCustomer</span>(authStatus
+								 : 
+								 
+								<a href="class_dw_customer_AuthenticationStatus.html"><span class="">AuthenticationStatus</span></a>, rememberMe
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">This method logs in the authenticated customer (from a previous authenticateCustomer() call). If a different customer is currently authenticated in the session, then this
+ customer is "logged out" and all privacy-relevant data and all form data are deleted. If the previous authentication was not successful, then null is returned and no changes
+ to the session are made.
+
+ </p> If the input value "RememberMe" is set to true, this method stores a cookie on the customer's machine which will be used to identify the customer when the next
+ session is initiated.  The cookie is set to expire in 180 days (i.e. 6 months). Note that a customer who is remembered is not automatically authenticated and will
+ have to explicitly log in to access any personal information.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authStatus</span>
+						 - 
+						<span class="parameterDesc">the authentication status from the previous authenticateCustomer call</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rememberMe</span>
+						 - 
+						<span class="parameterDesc">Boolean value indicating if the customer wants to be remembered on the current computer. If a value of true is supplied a cookie identifying the customer is stored upon successful login. If a value of false, or a null value, is supplied, then no cookie is stored and any existing cookie is removed.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Customer successfully authenticated customer. Null if the authentication status was not indicating success of the authentication.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_loginExternallyAuthenticatedCustomer_String_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">loginExternallyAuthenticatedCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">loginExternallyAuthenticatedCustomer</span>(authenticationProviderId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, rememberMe
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Logs in externally authenticated customer if it has already been created in the system and the profile is not disabled or locked</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authenticationProviderId</span>
+						 - 
+						<span class="parameterDesc">the Id of the authentication provider as configured in Commerce Cloud Digital.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">externalId</span>
+						 - 
+						<span class="parameterDesc">the Id of the customer at the authentication provider.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rememberMe</span>
+						 - 
+						<span class="parameterDesc">whether to drop the remember me cookie</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Customer if found in the system and not disabled or locked. <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_getExternallyAuthenticatedCustomerProfile_String_String_DetailAnchor">getExternallyAuthenticatedCustomerProfile(String, String)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_logoutCustomer_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">logoutCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">logoutCustomer</span>(rememberMe
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>
+                    </div>
+                    <div class="description">Logs out the customer currently logged into the storefront. The boolean value "RememberMe" indicates, if the customer would like to be remembered on the current
+ browser. If a value of true is supplied, the customer authentication state is set to "not logged in" and additionally the following session data is removed: the customer
+ session private data, the form status data, dictionary information of interaction continue nodes, basket reference information, the secure token cookie. If the value is set
+ to false or null, the complete session dictionary is cleaned up. The customer and anonymous cookie are removed and a new session cookie is set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rememberMe</span>
+						 - 
+						<span class="parameterDesc">Boolean value indicating if the customer wants to be remembered on the current browser. If a value of true is supplied, the customer authentication state is set to "not logged in" and additionally the following session data is removed: the customer session private data, the form status data, dictionary information of interaction continue nodes, basket reference information, the secure token cookie. If the value is set to false or null, the complete session dictionary is cleaned up. The customer and anonymous cookie are removed and a new session cookie is set.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new customer identity after logout. If rememberMe is true, null is returned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_processProfiles_Function_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">processProfiles</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">processProfiles</span>(processFunction
+								 : 
+								 
+								<a href="class_TopLevel_Function.html"><span class="">Function</span></a>, queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">Executes a user-definable function on a set of customer profiles. This method is intended to be used in batch processes and jobs,
+ since it allows efficient processing of large result sets (which might take a while to process).
+
+ First, a search with the given parameters is executed. Then the given function is executed once for each profile of the search result.
+ The profile is handed over as the only parameter to this function.
+
+ <p/>The search can be configured using a simple query language, which
+ provides most common filter and operator functionality.
+
+ For a description of this query language, see the <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_queryProfile_String_Object_DetailAnchor">queryProfile(String, Object...)</a> method.
+
+ The callback function will be supplied with a single argument of type 'Profile'. When the callback function defines
+ additional arguments, they will be undefined when the function is called. When the callback function doesn't define
+ any arguments at all, it will be called anyway (no error will happen, but the function won't get a profile as parameter).
+
+ Error during execution of the callback function will be logged, and execution will continue with the next element from the
+ result set.
+
+ This method can be used as in this example (which counts the number of men):
+
+ <pre>
+         var count=0;
+         function callback(profile: Profile)
+         {
+             count++;
+             dw.system.Logger.debug("customer found: "+profile.customerNo)
+         }
+        CustomerMgr.processProfiles(callback, "gender=1");
+        dw.system.Logger.debug("found "+count+" men in customer list");
+     </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">processFunction</span>
+						 - 
+						<span class="parameterDesc">the function to execute for each profile</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the query string to use when searching for a profile.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the query string arguments.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_queryProfile_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">queryProfile</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">queryProfile</span>(queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a>
+                    </div>
+                    <div class="description"><p/>Searches for a single profile instance.
+
+ <p/>The search can be configured using a simple query language, which
+ provides most common filter and operator functionality.
+
+ <p/>The identifier for an <b>attribute</b>  to use in a query condition is always the
+ ID of the  attribute as defined in the type definition. For custom defined attributes
+ the prefix custom is required in the search term (e.g. <code>custom.color = {1}</code>),
+ while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+
+ <p/>Supported attribute value <b>types</b> with sample expression values:<ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i> <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li></ul><br/>
+ The following types of attributes are not queryable:<ul><br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li></ul><br/>
+ Note, that some system attributes are not queryable by default regardless of the
+ actual value type code.
+
+
+ <p/>The following <b>operators</b> are supported in a condition:<br/><ul>
+ <li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+ <li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+ <li><code>&lt;</code> Less than  - Integer, Number and Date types only</li>
+ <li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+ <li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+ <li><code>&gt;=</code> Greater or equals than  - Integer, Number and Date types only</li>
+ <li><code>LIKE</code> Like - String types and Email only; use if leading or trailing
+ wildcards will be used to support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+ <li><code>ILIKE</code> Caseindependent Like - String types and Email only, use to support
+ case insensitive query (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for
+ substring matching</li></ul>
+
+ <p/>Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT'
+ and nested using parenthesis e.g.
+ <code>gender = {1} AND (age >= {2} OR (NOT profession LIKE {3}))</code>.
+
+
+ <p/>The query language provides a placeholder syntax to pass objects as
+ additional search parameters. Each passed object is related to a
+ placeholder in the query string. The placeholder must be an Integer that
+ is surrounded by braces. The first Integer value must be '0', the second
+ '1' and so on, e.g.
+ <code>querySystemObjects("sample", "age = {0} or creationDate >= {1}", 18, date)</code>
+
+ <p>If there is more than one object matching the specified query criteria, the
+ result is not deterministic. In order to retrieve a single object from a sorted result
+ set it is recommended to use the following code:
+ <code>queryProfiles("", "custom.myAttr asc", null).first()</code>.
+ The method <code>first()</code> returns only the next element and closes the
+ iterator.
+ </p>
+ <p>
+ <b>This method is deprecated and will be removed in a future release.</b>
+ One of the following methods should be used instead:
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor">searchProfile(String, Object...)</a>,
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_Map_String_DetailAnchor">searchProfiles(Map, String)</a> and
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_String_String_Object_DetailAnchor">searchProfiles(String, String, Object...)</a> to search for customers and
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_processProfiles_Function_String_Object_DetailAnchor">processProfiles(Function, String, Object...)</a> to search and process customers in jobs.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor">searchProfile(String, Object...)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the query string to use when searching for a profile.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the query string arguments.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the profile which was found when executing the <code>queryString</code>.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_queryProfiles_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">queryProfiles</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">queryProfiles</span>(queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description">Searches for profile instances.
+
+ <p/>The search can be configured using a simple query language, which
+ provides most common filter and operator functionality.
+
+ For a description of this query language, see the <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_queryProfile_String_Object_DetailAnchor">queryProfile(String, Object...)</a> method.
+
+ <p>
+ <b>This method is deprecated and will be removed in a future release.</b>
+ One of the following methods should be used instead:
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor">searchProfile(String, Object...)</a>,
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_Map_String_DetailAnchor">searchProfiles(Map, String)</a> and
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_String_String_Object_DetailAnchor">searchProfiles(String, String, Object...)</a> to search for customers and
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_processProfiles_Function_String_Object_DetailAnchor">processProfiles(Function, String, Object...)</a> to search and process customers in jobs.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_String_String_Object_DetailAnchor">searchProfiles(String, String, Object...)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the actual query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional parameters for the query string.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_queryProfiles_Map_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">queryProfiles</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">queryProfiles</span>(queryAttributes
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description"><p/>Searches for profile instances.
+
+ <p/>The search can be configured with a map, which key-value pairs are
+ converted into a query expression. The key-value pairs are turned into a
+ sequence of '=' or 'like' conditions, which are combined with AND
+ statements.
+
+ <p/>Example:<br/>
+ A map with the key/value pairs: <i>'name'/'tom*', 'age'/66</i>
+ will be converted as follows: <code>"name like 'tom*' and age = 66"</code>
+
+ <p/>The identifier for an <b>attribute</b>  to use in a query condition is always the
+ ID of the  attribute as defined in the type definition. For custom defined attributes
+ the prefix custom is required in the search term (e.g. <code>custom.color = {1}</code>),
+ while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+
+ <p/>Supported attribute value <b>types</b> with sample expression values:<ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i> <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li></ul><br/>
+ The following types of attributes are not queryable:<ul><br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li></ul><br/>
+ Note, that some system attributes are not queryable by default regardless of the
+ actual value type code.
+
+
+ <p/>The <b>sorting</b> parameter is optional and may contain a comma separated list of
+ attribute names to sort by. Each sort attribute name may be followed by an
+ optional sort direction specifier ('asc' | 'desc'). Default sorting directions is
+ ascending, if no direction was specified.<br/>
+ Example: <code>age desc, name</code><br/>
+ Please note that specifying a localized custom attribute as the sorting attribute is
+ currently not supported.
+
+ <p>It is strongly recommended to call <code>close()</code> on the returned SeekableIterator
+ if not all of its elements are being retrieved. This will ensure the proper cleanup of system resources.
+ See <a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></p>
+
+ <p>
+ <b>This method is deprecated and will be removed in a future release.</b>
+ One of the following methods should be used instead:
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor">searchProfile(String, Object...)</a>,
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_Map_String_DetailAnchor">searchProfiles(Map, String)</a> and
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_String_String_Object_DetailAnchor">searchProfiles(String, String, Object...)</a> to search for customers and
+ <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_processProfiles_Function_String_Object_DetailAnchor">processProfiles(Function, String, Object...)</a> to search and process customers in jobs.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfiles_Map_String_DetailAnchor">searchProfiles(Map, String)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryAttributes</span>
+						 - 
+						<span class="parameterDesc">key-value pairs that define the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_removeCustomer_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeCustomer</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">removeCustomer</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Logs out the supplied customer and deletes the customer record. The customer must be a registered customer and the customer must currently be logged in. The customer must be
+ logged in for security reasons to ensure that only the customer itself can remove itself from the system. While logout the customers session is reset to an anonymous session and, if present, the "Remember me" cookie of the customer is removed.
+ Deleting the customer record includes the customer credentials, profile, address-book with all addresses, customer payment instruments, product lists and memberships in
+ customer groups. Orders placed by this customer won't be deleted. If the supplied customer is not a registered customer or is not logged in, the API throws an exception</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">The customer to remove, must not be null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_removeCustomerTrackingData_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeCustomerTrackingData</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">removeCustomerTrackingData</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes (asynchronously) tracking data for this customer (from external systems or data stores). This will not remove the
+ customer from the database, nor will it prevent tracking to start again in the future for this customer.
+
+ The customer is identified by login / email /customerNo / cookie when its a registered customer, and by cookie
+ when its an anonymous customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">the customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">searchProfile</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">searchProfile</span>(queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a>
+                    </div>
+                    <div class="description"><p/>Searches for a single profile instance.
+
+ <p/>The search can be configured using a simple query language, which
+ provides most common filter and operator functionality.
+
+ <p/>The identifier for an <b>attribute</b>  to use in a query condition is always the
+ ID of the  attribute as defined in the type definition. For custom defined attributes
+ the prefix custom is required in the search term (e.g. <code>custom.color = {1}</code>),
+ while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+
+ <p/>Supported attribute value <b>types</b> with sample expression values:<ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i> <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li></ul><br/>
+ The following types of attributes are not queryable:<ul><br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li></ul><br/>
+ Note, that some system attributes are not queryable by default regardless of the
+ actual value type code.
+
+
+ <p/>The following <b>operators</b> are supported in a condition:<br/><ul>
+ <li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+ <li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+ <li><code>&lt;</code> Less than  - Integer, Number and Date types only</li>
+ <li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+ <li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+ <li><code>&gt;=</code> Greater or equals than  - Integer, Number and Date types only</li>
+ <li><code>LIKE</code> Like - String types and Email only; use if leading or trailing
+ wildcards will be used to support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+ <li><code>ILIKE</code> Caseindependent Like - String types and Email only, use to support
+ case insensitive query (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for
+ substring matching</li></ul>
+
+ <p/>Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT'
+ and nested using parenthesis e.g.
+ <code>gender = {1} AND (age >= {2} OR (NOT profession LIKE {3}))</code>.
+
+
+ <p/>The query language provides a placeholder syntax to pass objects as
+ additional search parameters. Each passed object is related to a
+ placeholder in the query string. The placeholder must be an Integer that
+ is surrounded by braces. The first Integer value must be '0', the second
+ '1' and so on, e.g.
+ <code>querySystemObjects("sample", "age = {0} or creationDate >= {1}", 18, date)</code>
+
+
+ <p/>If there is more than one object matching the specified query criteria, the
+ result is not deterministic. In order to retrieve a single object from a sorted result
+ set it is recommended to use the following code:
+ <code>queryProfiles("", "custom.myAttr asc", null).first()</code>.
+ The method <code>first()</code> returns only the next element and closes the
+ iterator.
+
+ <p/>If the customer search API is configured to use the new Search Service, the following differences apply:<br/>
+ <ul>
+     <li>newly created customers might not be found immediately via the search service, and changes to existing
+     customers might also not be in effect immediately (there is a slight delay in updating the index)</li>
+     <li>wildcards will be filtered from the query (*, %, +) and replaced by spaces</li>
+     <li>LIKE and ILIKE queries will be executed as fulltext queries (working on whole words), not as substring searches</li>
+     <li>LIKE queries will always be case insensitive</li>
+     <li>using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending on how they are combined</li>
+     <li>using logical operators may result in degraded performance, depending on how they are combined</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the query string to use when searching for a profile.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the query string arguments.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the profile which was found when executing the <code>queryString</code>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_searchProfiles_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">searchProfiles</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">searchProfiles</span>(queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description">Searches for profile instances.
+
+ <p/>The search can be configured using a simple query language, which
+ provides most common filter and operator functionality.
+
+ For a description of this query language, see the <a href="class_dw_customer_CustomerMgr.html#dw_customer_CustomerMgr_searchProfile_String_Object_DetailAnchor">searchProfile(String, Object...)</a> method.
+
+ <p/>If the customer search API is configured to use the new Search Service, the following differences apply:<br/>
+ <ul>
+     <li>newly created customers might not be found immediately via the search service, and changes to existing
+     customers might also not be in effect immediately (there is a slight delay in updating the index)</li>
+     <li>the search will return only the first 1000 hits from the search result</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the actual query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional parameters for the query string.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_CustomerMgr_searchProfiles_Map_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">searchProfiles</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">searchProfiles</span>(queryAttributes
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description"><p/>Searches for profile instances.
+
+ <p/>The search can be configured with a map, which key-value pairs are
+ converted into a query expression. The key-value pairs are turned into a
+ sequence of '=' or 'like' conditions, which are combined with AND
+ statements.
+
+ <p/>Example:<br/>
+ A map with the key/value pairs: <i>'name'/'tom*', 'age'/66</i>
+ will be converted as follows: <code>"name like 'tom*' and age = 66"</code>
+
+ <p/>The identifier for an <b>attribute</b>  to use in a query condition is always the
+ ID of the  attribute as defined in the type definition. For custom defined attributes
+ the prefix custom is required in the search term (e.g. <code>custom.color = {1}</code>),
+ while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+
+ <p/>Supported attribute value <b>types</b> with sample expression values:<ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i> <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li></ul><br/>
+ The following types of attributes are not queryable:<ul><br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li></ul><br/>
+ Note, that some system attributes are not queryable by default regardless of the
+ actual value type code.
+
+
+ <p/>The <b>sorting</b> parameter is optional and may contain a comma separated list of
+ attribute names to sort by. Each sort attribute name may be followed by an
+ optional sort direction specifier ('asc' | 'desc'). Default sorting directions is
+ ascending, if no direction was specified.<br/>
+ Example: <code>age desc, name</code><br/>
+ Please note that specifying a localized custom attribute as the sorting attribute is
+ currently not supported.
+
+ <p>It is strongly recommended to call <code>close()</code> on the returned SeekableIterator
+ if not all of its elements are being retrieved. This will ensure the proper cleanup of system resources.</p>
+ <a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a>
+
+ <p/>If the customer search API is configured to use the new Search Service, the following differences apply:<br/>
+ <ul>
+     <li>newly created customers might not be found immediately via the search service, and changes to existing
+     customers might also not be in effect immediately (there is a slight delay in updating the index)</li>
+     <li>wildcards will be filtered from the query (*, %, +) and replaced by spaces</li>
+     <li>LIKE and ILIKE queries will be executed as fulltext queries (working on whole words), not as substring searches</li>
+     <li>LIKE queries will always be case insensitive</li>
+     <li>using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending on how they are combined</li>
+     <li>using logical operators may result in degraded performance, depending on how they are combined</li>
+     <li>the search will return only the first 1000 hits from the search result</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryAttributes</span>
+						 - 
+						<span class="parameterDesc">key-value pairs that define the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

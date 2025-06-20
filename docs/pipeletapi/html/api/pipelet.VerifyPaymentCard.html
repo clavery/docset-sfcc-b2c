@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet VerifyPaymentCard</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet VerifyPaymentCard</div>
+            <div class="topLevelDescription"><p>This pipelet is used to verify payment card information. It does several validations and returns a Status object. In case of invalid payment card information the Status object contains one or multiple status items. The following conditions must be met for the pipelet to succeed, otherwise the pipelet will return on the ERROR exit:</p>
+<ul><li>ExpirationMonth and ExpirationYear specify a valid date in future.</li>
+<li>CardNumber checksum algorithm (Luhn) finishes successfully. If enabled in payment card settings.</li>
+<li>CardNumber matches payment card length and prefix settings.</li>
+<li>CardSecurityCode length matches payment card security code length setting.</li></ul></div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Basket</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">VerifySecurityCode</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Required)
+						</span>
+                    <div class="description">
+Enables or disables the card security code verification. Note: This flag is ignored, if the card security code verification of this card type is disabled in Business Manager.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PaymentCard</span>
+					&nbsp;:&nbsp;
+					PaymentCard
+							(Required)
+						</span>
+                    <div class="description">
+The payment card to verify card information for.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CardNumber</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The card number of the payment card.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExpirationMonth</span>
+					&nbsp;:&nbsp;
+					Number
+							(Required)
+						</span>
+                    <div class="description">
+The expiration month of the payment card.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExpirationYear</span>
+					&nbsp;:&nbsp;
+					Number
+							(Required)
+						</span>
+                    <div class="description">
+The expiration year of the payment card.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CardSecurityCode</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The security code of the payment card.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+<p>The status of the verification. Can be one of the following:</p>
+<ul><li>OK - dw.system.Status.OK</li>
+<li>ERROR - dw.system.status.ERROR</li></ul>
+<p>Additionally one or multiple status codes are provided in case of status ERROR. The status codes can be of the following:</p>
+<ul><li>CREDITCARD_INVALID_CARD_NUMBER - Payment card number is invalid.</li>
+<li>CREDITCARD_INVALID_EXPIRATION_DATE - Payment card is expired.</li>
+<li>CREDITCARD_INVALID_SECURITY_CODE - Payment card security code length is invalid.</li></ul>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

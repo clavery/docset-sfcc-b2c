@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet ValidateActiveDataFile</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet ValidateActiveDataFile</div>
+            <div class="topLevelDescription">Validates the given active data CSV file and returns a status reporting the results of the validation. If the validation operation executed without any process error, regardless of whether or not the CSV file is valid, then the pipelet returns next.   If the given file does not exist in the given path the pipelet exits in a pipelet error. The status contains the status of the validation.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ImpEx</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">File</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The path to the active data CSV file to be validated. Note: The path need to be relative to "impex/src/".
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorCount</span>
+					&nbsp;:&nbsp;
+					Integer
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The number of validation errors that occured during the validation process.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">LogFileName</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The name of the log file that is created and used for the validation process.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status object representing the result of the validation operation.  The status property (Status.status) will be set to 0 if the validation executed without any process errors or 1 otherwise.  The code property (Status.code) will be set to one of the following values:<br/>
+<br/>
+IMPEX-0 = Successful.<br/>
+IMPEX-105 = CSV file not found.<br/>
+IMPEX-110 = I/O error occured when reading the CSV file.<br/>
+IMPEX-170 = General I/O error occurred.<br/>
+IMPEX-250 = Validation error.<br/>
+<br/>
+The Status object will always contain the following detail:<br/>
+<br/>
+"LogFileName" = (String) The log file name.<br/>
+<br/>
+If no process error occurred then the status object will also contain the following details:<br/>
+<br/>
+"ValidationErrorCount" = (Integer) The error count.<br/>
+"ValidationWarningCount" = (Integer) The warning count.<br/>
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">WarningCount</span>
+					&nbsp;:&nbsp;
+					Integer
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The number of validation warnings that occured during the validation process.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Statistics</span>
+					&nbsp;:&nbsp;
+					ActiveDataCSVStatistics
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Statistics describing the content of the CSV file that was validated.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

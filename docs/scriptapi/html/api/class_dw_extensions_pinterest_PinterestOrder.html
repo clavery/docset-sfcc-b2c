@@ -1,0 +1,428 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PinterestOrder</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.pinterest.PinterestOrder">
+            <a name="dw.extensions.pinterest.PinterestOrder"></a>
+            <div class="packageName">dw.extensions.pinterest</div>
+            <div class="className
+					">	
+        	
+				Class PinterestOrder</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.pinterest.PinterestOrder
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">An order that was placed through Pinterest.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_NOT_PAID_DetailAnchor"></a>PAYMENT_STATUS_NOT_PAID
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NOT_PAID"
+                        <div class="description">Indicates that payment has not been made.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PAID_DetailAnchor"></a>PAYMENT_STATUS_PAID
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PAID"
+                        <div class="description">Indicates that payment is complete.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PART_PAID_DetailAnchor"></a>PAYMENT_STATUS_PART_PAID
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PART_PAID"
+                        <div class="description">Indicates that payment is incomplete.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_BACKORDER_DetailAnchor"></a>STATUS_BACKORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"BACKORDER"
+                        <div class="description">Indicates an order on backorder.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_CANCELLED_DetailAnchor"></a>STATUS_CANCELLED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CANCELLED"
+                        <div class="description">Indicates an order that has been canceled.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_DELIVERED_DetailAnchor"></a>STATUS_DELIVERED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"DELIVERED"
+                        <div class="description">Indicates an order that has been delivered.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_IN_PROGRESS_DetailAnchor"></a>STATUS_IN_PROGRESS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"IN_PROGRESS"
+                        <div class="description">Indicates an order in progress.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_NEW_DetailAnchor"></a>STATUS_NEW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NEW"
+                        <div class="description">Indicates a new order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_RETURNED_DetailAnchor"></a>STATUS_RETURNED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"RETURNED"
+                        <div class="description">Indicates an order that has been returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_pinterest_PinterestOrder_STATUS_SHIPPED_DetailAnchor"></a>STATUS_SHIPPED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"SHIPPED"
+                        <div class="description">Indicates an order that has shipped.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>itemId
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The item ID for this Pinterest order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderNo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The order number for this Pinterest order. This is the same as the order number of the Demandware order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>paymentStatus
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The status of this Pinterest order. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PAID_DetailAnchor">PAYMENT_STATUS_PAID</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_NOT_PAID_DetailAnchor">PAYMENT_STATUS_NOT_PAID</a>,
+ or <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PART_PAID_DetailAnchor">PAYMENT_STATUS_PART_PAID</a>.
+ <p/></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>status
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The status of this Pinterest order. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_NEW_DetailAnchor">STATUS_NEW</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_IN_PROGRESS_DetailAnchor">STATUS_IN_PROGRESS</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_SHIPPED_DetailAnchor">STATUS_SHIPPED</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_BACKORDER_DetailAnchor">STATUS_BACKORDER</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_CANCELLED_DetailAnchor">STATUS_CANCELLED</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_DELIVERED_DetailAnchor">STATUS_DELIVERED</a>,
+ or <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_RETURNED_DetailAnchor">STATUS_RETURNED</a>.
+ <p/></div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_getItemId_DetailAnchor"><span class="">getItemId</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the item ID for this Pinterest order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_getOrderNo_DetailAnchor"><span class="">getOrderNo</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the order number for this Pinterest order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_getPaymentStatus_DetailAnchor"><span class="">getPaymentStatus</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the status of this Pinterest order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_getStatus_DetailAnchor"><span class="">getStatus</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the status of this Pinterest order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_setItemId_String_DetailAnchor"><span class="">setItemId</span></a></span>(itemId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the item ID for this Pinterest order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_setPaymentStatus_String_DetailAnchor"><span class="">setPaymentStatus</span></a></span>(status
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the status of this Pinterest order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_pinterest_PinterestOrder_setStatus_String_DetailAnchor"><span class="">setStatus</span></a></span>(status
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the status of this Pinterest order.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_getItemId_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItemId</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItemId</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the item ID for this Pinterest order.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_getOrderNo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderNo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderNo</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the order number for this Pinterest order. This is the same as the order number of the Demandware order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">order number</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_getPaymentStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentStatus</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the status of this Pinterest order. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PAID_DetailAnchor">PAYMENT_STATUS_PAID</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_NOT_PAID_DetailAnchor">PAYMENT_STATUS_NOT_PAID</a>,
+ or <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PART_PAID_DetailAnchor">PAYMENT_STATUS_PART_PAID</a>.
+ <p/></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_getStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatus</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the status of this Pinterest order. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_NEW_DetailAnchor">STATUS_NEW</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_IN_PROGRESS_DetailAnchor">STATUS_IN_PROGRESS</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_SHIPPED_DetailAnchor">STATUS_SHIPPED</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_BACKORDER_DetailAnchor">STATUS_BACKORDER</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_CANCELLED_DetailAnchor">STATUS_CANCELLED</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_DELIVERED_DetailAnchor">STATUS_DELIVERED</a>,
+ or <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_RETURNED_DetailAnchor">STATUS_RETURNED</a>.
+ <p/></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_setItemId_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setItemId</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setItemId</span>(itemId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the item ID for this Pinterest order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">itemId</span>
+						 - 
+						<span class="parameterDesc">item ID</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_setPaymentStatus_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPaymentStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPaymentStatus</span>(status
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the status of this Pinterest order. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PAID_DetailAnchor">PAYMENT_STATUS_PAID</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_NOT_PAID_DetailAnchor">PAYMENT_STATUS_NOT_PAID</a>,
+ or <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_PAYMENT_STATUS_PART_PAID_DetailAnchor">PAYMENT_STATUS_PART_PAID</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">the status to set for this order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_pinterest_PinterestOrder_setStatus_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStatus</span>(status
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the status of this Pinterest order. Possible values are
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_NEW_DetailAnchor">STATUS_NEW</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_IN_PROGRESS_DetailAnchor">STATUS_IN_PROGRESS</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_SHIPPED_DetailAnchor">STATUS_SHIPPED</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_BACKORDER_DetailAnchor">STATUS_BACKORDER</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_CANCELLED_DetailAnchor">STATUS_CANCELLED</a>,
+ <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_DELIVERED_DetailAnchor">STATUS_DELIVERED</a>,
+ or <a href="class_dw_extensions_pinterest_PinterestOrder.html#dw_extensions_pinterest_PinterestOrder_STATUS_RETURNED_DetailAnchor">STATUS_RETURNED</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">the status to set for this order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

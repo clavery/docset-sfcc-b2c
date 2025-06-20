@@ -1,0 +1,1744 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class StringUtils</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.util.StringUtils">
+            <a name="dw.util.StringUtils"></a>
+            <div class="packageName">dw.util</div>
+            <div class="className
+					">	
+        	
+				Class StringUtils</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.util.StringUtils
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">String utility class.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_util_StringUtils_ENCODE_TYPE_HTML_DetailAnchor"></a>ENCODE_TYPE_HTML
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">String encoding type HTML.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_encodeString_String_Number_DetailAnchor">encodeString(String, Number)</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_util_StringUtils_ENCODE_TYPE_WML_DetailAnchor"></a>ENCODE_TYPE_WML
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2
+                        <div class="description">String encoding type WML.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Don't use this constant anymore.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_encodeString_String_Number_DetailAnchor">encodeString(String, Number)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_util_StringUtils_ENCODE_TYPE_XML_DetailAnchor"></a>ENCODE_TYPE_XML
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">String encoding type XML.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_encodeString_String_Number_DetailAnchor">encodeString(String, Number)</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_util_StringUtils_TRUNCATE_CHAR_DetailAnchor"></a>TRUNCATE_CHAR
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"char"
+                        <div class="description">String truncate mode 'char'. Truncate string to the nearest character. Default mode if no truncate mode is specified.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_truncate_String_Number_String_String_DetailAnchor">truncate(String, Number, String, String)</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_util_StringUtils_TRUNCATE_SENTENCE_DetailAnchor"></a>TRUNCATE_SENTENCE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"sentence"
+                        <div class="description">String truncate mode 'sentence'. Truncate string to the nearest sentence.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_truncate_String_Number_String_String_DetailAnchor">truncate(String, Number, String, String)</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_util_StringUtils_TRUNCATE_WORD_DetailAnchor"></a>TRUNCATE_WORD
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"word"
+                        <div class="description">String truncate mode 'word'. Truncate string to the nearest word.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_StringUtils.html#dw_util_StringUtils_truncate_String_Number_String_String_DetailAnchor">truncate(String, Number, String, String)</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_decodeBase64_String_DetailAnchor"><span class="">decodeBase64</span></a></span>(base64
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Interprets a Base64 encoded string as byte stream of an UTF-8 encoded string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_decodeBase64_String_String_DetailAnchor"><span class="">decodeBase64</span></a></span>(base64
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, characterEncoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Interprets a Base64 encoded string as the byte stream representation of a string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_decodeString_String_Number_DetailAnchor"><span class="">decodeString</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Convert a given syntax-safe string to a string according to the selected character entity encoding type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_encodeBase64_String_DetailAnchor"><span class="">encodeBase64</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Encodes the byte representation of the given string as Base64.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_encodeBase64_String_String_DetailAnchor"><span class="">encodeBase64</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, characterEncoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Encodes the byte representation of the given string as Base64.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_encodeString_String_Number_DetailAnchor"><span class="">encodeString</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Convert a given string to a syntax-safe string according to the selected character entity encoding type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_format_String_Object_DetailAnchor"><span class="">format</span></a></span>(format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted string using the specified format and arguments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatCalendar_Calendar_DetailAnchor"><span class="">formatCalendar</span></a></span>(calendar
+								 : 	
+								 
+								<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a Calendar object with Calendar.INPUT_DATE_TIME_PATTERN format of the current request locale, for example "MM/dd/yyyy h:mm a" for the locale en_US.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatCalendar_Calendar_String_DetailAnchor"><span class="">formatCalendar</span></a></span>(calendar
+								 : 	
+								 
+								<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a Calendar object with the provided date format.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatCalendar_Calendar_String_Number_DetailAnchor"><span class="">formatCalendar</span></a></span>(calendar
+								 : 	
+								 
+								<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>, locale
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, pattern
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a Calendar object with the date format defined by the provided locale and Calendar pattern.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatDate_Date_DetailAnchor"><span class="">formatDate</span></a></span>(date
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a date with the default date format of the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatDate_Date_String_DetailAnchor"><span class="">formatDate</span></a></span>(date
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a date with the provided date format.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatDate_Date_String_String_DetailAnchor"><span class="">formatDate</span></a></span>(date
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a date with the provided date format in specified locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatInteger_Number_DetailAnchor"><span class="">formatInteger</span></a></span>(number
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted integer number using the default integer format of the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatMoney_Money_DetailAnchor"><span class="">formatMoney</span></a></span>(money
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Formats a Money Object with the default money format of the current request locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatNumber_Number_DetailAnchor"><span class="">formatNumber</span></a></span>(number
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted number using the default number format of the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatNumber_1_Number_String_DetailAnchor"><span class="">formatNumber</span></a></span>(number
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted string using the specified number and format.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatNumber_1_Number_String_String_DetailAnchor"><span class="">formatNumber</span></a></span>(number
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted number as a string using the specified number format in specified locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatNumber_2_Number_String_DetailAnchor"><span class="">formatNumber</span></a></span>(number
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted string using the specified number and format.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_formatNumber_2_Number_String_String_DetailAnchor"><span class="">formatNumber</span></a></span>(number
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a formatted number as a string using the specified number format in specified locale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_garble_String_String_Number_DetailAnchor"><span class="">garble</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, replaceChar
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, suffixLength
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Return a string in which specified number of characters in the suffix is not changed and the rest of the characters replaced with specified character.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_ltrim_String_DetailAnchor"><span class="">ltrim</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the string with leading white space removed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_pad_String_Number_DetailAnchor"><span class="">pad</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, width
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">This method provides cell padding functionality to the template.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_rtrim_String_DetailAnchor"><span class="">rtrim</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the string with trailing white space removed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_stringToHtml_String_DetailAnchor"><span class="">stringToHtml</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Convert a given string to an HTML-safe string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_stringToWml_String_DetailAnchor"><span class="">stringToWml</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Converts a given string to a WML-safe string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_stringToXml_String_DetailAnchor"><span class="">stringToXml</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Converts a given string to a XML-safe string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_trim_String_DetailAnchor"><span class="">trim</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the string with leading and trailing white space removed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_util_StringUtils_truncate_String_Number_String_String_DetailAnchor"><span class="">truncate</span></a></span>(str
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxLength
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, mode
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, suffix
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Truncate the string to the specified length using specified truncate mode.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_decodeBase64_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">decodeBase64</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">decodeBase64</span>(base64
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Interprets a Base64 encoded string as byte stream of an UTF-8 encoded string.
+
+ The method throws an IllegalArgumentException in case the encoding
+ failed because of a mismatch between the input string and the character encoding.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">base64</span>
+						 - 
+						<span class="parameterDesc">the Base64 encoded string - should not be empty or <code>null</code>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the decoded string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_decodeBase64_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">decodeBase64</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">decodeBase64</span>(base64
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, characterEncoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Interprets a Base64 encoded string as the byte stream representation of a string.
+ The given character encoding is used for decoding the byte stream into the
+ character representation.
+
+ The method throws an IllegalArgumentException in case the encoding
+ failed because of a mismatch between the input String and the character encoding.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">base64</span>
+						 - 
+						<span class="parameterDesc">the Base64 encoded string - should not be empty or <code>null</code>.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">characterEncoding</span>
+						 - 
+						<span class="parameterDesc">the character encoding to read the input string - should not be empty or <code>null</code>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the decoded string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_decodeString_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">decodeString</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">decodeString</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Convert a given syntax-safe string to a string according to the
+ selected character entity encoding type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">String to be decoded</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">decode type</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">decoded string</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_encodeBase64_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">encodeBase64</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">encodeBase64</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Encodes the byte representation of the given string as Base64.
+ The string is converted into the byte representation with UTF-8 encoding.
+
+ The method throws an IllegalArgumentException in case the encoding
+ failed because of a mismatch between the input string and the character encoding.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the string to encode - should not be empty or <code>null</code>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the encoded string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_encodeBase64_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">encodeBase64</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">encodeBase64</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, characterEncoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Encodes the byte representation of the given string as Base64.
+ The string is converted into the byte representation using the given
+ character encoding.
+
+ The method throws an IllegalArgumentException in case the encoding
+ failed because of a mismatch between the input string and the character encoding.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the string to encode - should not be empty or <code>null</code>.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">characterEncoding</span>
+						 - 
+						<span class="parameterDesc">the character encoding to read the input string - should not be empty or <code>null</code>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the encoded string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_encodeString_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">encodeString</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">encodeString</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Convert a given string to a syntax-safe string according to the
+ selected character entity encoding type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">String to be encoded</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">encode type</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">encoded string</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_format_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">format</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">format</span>(format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted string using the specified format and arguments.
+ The formatting string is a Java MessageFormat expression, e.g.
+ format( "Message: {0}, {1}", "test", 10 ) would result in "Message: test, 10".
+
+ If a Collection is passed as the only argument, the elements of this collection
+ are used as arguments for the formatting.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">Java like formatting string.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional list of arguments or a collection, which are included into the result string</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the formatted result string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatCalendar_Calendar_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatCalendar</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatCalendar</span>(calendar
+								 : 
+								 
+								<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a Calendar object with Calendar.INPUT_DATE_TIME_PATTERN format
+ of the current request locale, for example "MM/dd/yyyy h:mm a" for the
+ locale en_US. The used time zone is the time zone of the calendar object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">calendar</span>
+						 - 
+						<span class="parameterDesc">the calendar object.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of the formatted calendar object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatCalendar_Calendar_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatCalendar</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatCalendar</span>(calendar
+								 : 
+								 
+								<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a Calendar object with the provided date format. The format is a
+ Java date format, like "yyy-MM-dd". The used time zone is the time zone
+ of the calendar object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">calendar</span>
+						 - 
+						<span class="parameterDesc">the calendar object to be printed</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of the formatted calendar object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatCalendar_Calendar_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatCalendar</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatCalendar</span>(calendar
+								 : 
+								 
+								<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>, locale
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, pattern
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a Calendar object with the date format defined by the provided locale
+ and Calendar pattern.  The locale can be for instance the request.getLocale().
+ The used time  zone is the time zone of the calendar object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">calendar</span>
+						 - 
+						<span class="parameterDesc">the calendar object to be printed</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">locale</span>
+						 - 
+						<span class="parameterDesc">the locale, which defines the date format to be used</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pattern</span>
+						 - 
+						<span class="parameterDesc">the pattern is one of a calendar pattern e.g. SHORT_DATE_PATTERN as defined in the regional settings for the locale</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of the formatted calendar object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatDate_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">formatDate</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">formatDate</span>(date
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a date with the default date format of the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_util_StringUtils.html#dw_util_StringUtils_formatCalendar_Calendar_String_DetailAnchor">formatCalendar(Calendar, String)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">date</span>
+						 - 
+						<span class="parameterDesc">the date to format.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of the formatted date.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatDate_Date_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">formatDate</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">formatDate</span>(date
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a date with the provided date format. The format is the
+ Java date format, like "yyyy-MM-DD". The locale of the calling context
+ request is used in formatting.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_util_StringUtils.html#dw_util_StringUtils_formatCalendar_Calendar_String_DetailAnchor">formatCalendar(Calendar, String)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">date</span>
+						 - 
+						<span class="parameterDesc">the date to format.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of the formatted date.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatDate_Date_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">formatDate</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">formatDate</span>(date
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a date with the provided date format in specified locale. The format is
+ Java date format, like "yyyy-MM-DD".</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_util_StringUtils.html#dw_util_StringUtils_formatCalendar_Calendar_String_DetailAnchor">formatCalendar(Calendar, String)</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">date</span>
+						 - 
+						<span class="parameterDesc">the date to format.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">locale</span>
+						 - 
+						<span class="parameterDesc">the locale to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of the formatted date.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatInteger_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatInteger</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatInteger</span>(number
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted integer number using the default integer format of the current
+ site. The method can be also called to format a floating number as integer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">number</span>
+						 - 
+						<span class="parameterDesc">the number to format.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a formatted an integer number with the default integer format of the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatMoney_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatMoney</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatMoney</span>(money
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Formats a Money Object with the default money format of the current request locale.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">money</span>
+						 - 
+						<span class="parameterDesc">The Money instance that should be formatted.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The formatted String representation of the passed money. In case of an error the string 'N/A' is returned.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatNumber_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatNumber</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatNumber</span>(number
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted number using the default number format of the current site.
+
+ Decimal and grouping separators are used as specified in the locales regional settings.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">number</span>
+						 - 
+						<span class="parameterDesc">the number to format.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a formatted number using the default number format of the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatNumber_1_Number_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatNumber</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatNumber</span>(number
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted string using the specified number and format. The format is
+ Java number format, like "#,###.00". To format as an integer
+ number provide "0" as format string. The locale of the calling context
+ request is used in formatting.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					No longer available as of version 18.10.
+				</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">number</span>
+						 - 
+						<span class="parameterDesc">the number to format.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a formatted string using the specified number and format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatNumber_1_Number_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatNumber</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatNumber</span>(number
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted number as a string using the specified number format in specified locale. The format is
+ Java number format, like "#,###.00". To format as an integer
+ number provide "0" as format string.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					No longer available as of version 18.10.
+				</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">number</span>
+						 - 
+						<span class="parameterDesc">the number to format.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">locale</span>
+						 - 
+						<span class="parameterDesc">the locale to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a formatted number as a string using the specified number format in specified locale.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatNumber_2_Number_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatNumber</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatNumber</span>(number
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted string using the specified number and format. The format is
+ Java number format, like "#,###.00". To format as an integer
+ number provide "0" as format string. The locale of the calling context
+ request is used in formatting.
+
+ Decimal and grouping separators are used as specified in the locales regional settings (when configured, otherwise a fallback to the internal configuration is done).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 18.10.
+				In prior versions this method did fall back to Java formatting rules, instead of using the definitions in regional settings.</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">number</span>
+						 - 
+						<span class="parameterDesc">the number to format.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a formatted string using the specified number and format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_formatNumber_2_Number_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">formatNumber</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">formatNumber</span>(number
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, format
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, locale
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a formatted number as a string using the specified number format in specified locale. The format is
+ Java number format, like "#,###.00". To format as an integer
+ number provide "0" as format string.
+
+ Decimal and grouping separators are used as specified in the locales regional settings (when configured, otherwise a fallback to the internal configuration is done).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 18.10.
+				In prior versions this method did fall back to Java formatting rules, instead of using the definitions in regional settings.</div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">number</span>
+						 - 
+						<span class="parameterDesc">the number to format.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">format</span>
+						 - 
+						<span class="parameterDesc">the format to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">locale</span>
+						 - 
+						<span class="parameterDesc">the locale to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a formatted number as a string using the specified number format in specified locale.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_garble_String_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">garble</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">garble</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, replaceChar
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, suffixLength
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Return a string in which specified number of characters in the suffix is not changed
+ and the rest of the characters replaced with specified character.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">String to garble</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">replaceChar</span>
+						 - 
+						<span class="parameterDesc">character to use as a replacement</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">suffixLength</span>
+						 - 
+						<span class="parameterDesc">length of the suffix</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the garbled string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_ltrim_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">ltrim</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">ltrim</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the string with leading white space removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the String to remove characters from.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the string with leading white space removed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_pad_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">pad</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">pad</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, width
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">This method provides cell padding functionality to the template.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the string to process</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">width</span>
+						 - 
+						<span class="parameterDesc">The absolute value of this number defines the width of the cell. A possitive number forces left, a negative number right alignment. A '0' doesn't change the string.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the processed string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_rtrim_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">rtrim</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">rtrim</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the string with trailing white space removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the String to remove characters from.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the string with trailing white space removed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_stringToHtml_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">stringToHtml</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">stringToHtml</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Convert a given string to an HTML-safe string.
+ This method substitutes characters that conflict with HTML syntax
+ (&lt;,&gt;,&amp;,&quot;) and characters that are beyond the ASCII
+ chart (Unicode 160-255) to HTML 3.2 named character entities.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">String to be converted.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">converted string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_stringToWml_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">stringToWml</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">stringToWml</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Converts a given string to a WML-safe string.
+ This method substitutes characters that conflict with WML syntax
+ (&lt;,&gt;,&amp;,&apos;,&quot;$) to WML named character entities.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Don't use this method anymore</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">String to be converted.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the converted string.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_stringToXml_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">stringToXml</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">stringToXml</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Converts a given string to a XML-safe string.
+ This method substitutes characters that conflict with XML syntax
+ (&lt;,&gt;,&amp;,&apos;,&quot;) to XML named character entities.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">String to be converted.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the converted string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_trim_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">trim</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">trim</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the string with leading and trailing white space removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">the string to trim.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the string with leading and trailing white space removed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_StringUtils_truncate_String_Number_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">truncate</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">truncate</span>(str
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxLength
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, mode
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, suffix
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Truncate the string to the specified length using specified truncate mode. Optionally,
+ append suffix to truncated string.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">str</span>
+						 - 
+						<span class="parameterDesc">string to truncate</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxLength</span>
+						 - 
+						<span class="parameterDesc">maximum length of the truncated string, not including suffix</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">mode</span>
+						 - 
+						<span class="parameterDesc">truncate mode (TRUNCATE_CHAR, TRUNCATE_WORD, TRUNCATE_SENTENCE), if null TRUNCATE_CHAR is assumed</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">suffix</span>
+						 - 
+						<span class="parameterDesc">suffix append to the truncated string</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the truncated string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

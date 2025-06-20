@@ -1,0 +1,1653 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SalesforcePaymentRequest</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.payments.SalesforcePaymentRequest">
+            <a name="dw.extensions.payments.SalesforcePaymentRequest"></a>
+            <div class="packageName">dw.extensions.payments</div>
+            <div class="className
+					">	
+        	
+				Class SalesforcePaymentRequest</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.payments.SalesforcePaymentRequest
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description"><p>
+ Salesforce Payments request for a shopper to make payment. See Salesforce Payments documentation for how to
+ gain access and configure it for use on your sites.
+ </p>
+ <p>
+ A request is required to render payment methods and/or express checkout buttons using <code>&lt;ispayment&gt;</code>
+ or <code>&lt;isbuynow&gt;</code>. You can call methods on the payment request to configure which payment methods
+ and/or express checkout buttons may be presented, and customize their visual presentation.
+ </p>
+ <p>
+ When used with <code>&lt;isbuynow&gt;</code> you must provide the necessary data to prepare the shopper basket to buy
+ the product, and the necessary payment request options for the browser payment app.
+ </p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_AFTERPAY_CLEARPAY_MESSAGE_DetailAnchor"></a>ELEMENT_AFTERPAY_CLEARPAY_MESSAGE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"afterpayClearpayMessage"
+                        <div class="description">Element for the Stripe Afterpay/Clearpay message <code>"afterpayClearpayMessage"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_CARD_CVC_DetailAnchor"></a>ELEMENT_CARD_CVC
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"cardCvc"
+                        <div class="description">Element for the Stripe credit card CVC field <code>"cardCvc"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_CARD_EXPIRY_DetailAnchor"></a>ELEMENT_CARD_EXPIRY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"cardExpiry"
+                        <div class="description">Element for the Stripe credit card expiration date field <code>"cardExpiry"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_CARD_NUMBER_DetailAnchor"></a>ELEMENT_CARD_NUMBER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"cardNumber"
+                        <div class="description">Element for the Stripe credit card number field <code>"cardNumber"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_EPS_BANK_DetailAnchor"></a>ELEMENT_EPS_BANK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"epsBank"
+                        <div class="description">Element for the Stripe EPS bank selection field <code>"epsBank"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_IBAN_DetailAnchor"></a>ELEMENT_IBAN
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"iban"
+                        <div class="description">Element for the Stripe IBAN field <code>"iban"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_IDEAL_BANK_DetailAnchor"></a>ELEMENT_IDEAL_BANK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"idealBank"
+                        <div class="description">Element for the Stripe iDEAL bank selection field <code>"idealBank"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_PAYMENT_REQUEST_BUTTON_DetailAnchor"></a>ELEMENT_PAYMENT_REQUEST_BUTTON
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"paymentRequestButton"
+                        <div class="description">Element for the Stripe payment request button <code>"paymentRequestButton"</code>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_AFTERPAY_CLEARPAY_DetailAnchor"></a>ELEMENT_TYPE_AFTERPAY_CLEARPAY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"afterpay_clearpay"
+                        <div class="description">Element type name for Afterpay.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_AFTERPAY_CLEARPAY_MESSAGE_DetailAnchor"></a>ELEMENT_TYPE_AFTERPAY_CLEARPAY_MESSAGE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"afterpayclearpaymessage"
+                        <div class="description">Element type name for Afterpay/Clearpay message.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_APPLEPAY_DetailAnchor"></a>ELEMENT_TYPE_APPLEPAY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"applepay"
+                        <div class="description">Element type name for Apple Pay payment request buttons.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_BANCONTACT_DetailAnchor"></a>ELEMENT_TYPE_BANCONTACT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"bancontact"
+                        <div class="description">Element type name for Bancontact.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_CARD_DetailAnchor"></a>ELEMENT_TYPE_CARD
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"card"
+                        <div class="description">Element type name for credit cards.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_EPS_DetailAnchor"></a>ELEMENT_TYPE_EPS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"eps"
+                        <div class="description">Element type name for EPS.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_IDEAL_DetailAnchor"></a>ELEMENT_TYPE_IDEAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"ideal"
+                        <div class="description">Element type name for iDEAL.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_PAYMENTREQUEST_DetailAnchor"></a>ELEMENT_TYPE_PAYMENTREQUEST
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"paymentrequest"
+                        <div class="description">Element type name for other payment request buttons besides Apple Pay, like Google Pay.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_PAYPAL_DetailAnchor"></a>ELEMENT_TYPE_PAYPAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"paypal"
+                        <div class="description">Element type name for PayPal in multi-step checkout.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_PAYPAL_EXPRESS_DetailAnchor"></a>ELEMENT_TYPE_PAYPAL_EXPRESS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"paypalexpress"
+                        <div class="description">Element type name for PayPal in express checkout.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_PAYPAL_MESSAGE_DetailAnchor"></a>ELEMENT_TYPE_PAYPAL_MESSAGE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"paypalmessage"
+                        <div class="description">Element type name for the PayPal messages component.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_SEPA_DEBIT_DetailAnchor"></a>ELEMENT_TYPE_SEPA_DEBIT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"sepa_debit"
+                        <div class="description">Element type name for SEPA debit.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_VENMO_DetailAnchor"></a>ELEMENT_TYPE_VENMO
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"venmo"
+                        <div class="description">Element type name for Venmo in multi-step checkout.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_TYPE_VENMO_EXPRESS_DetailAnchor"></a>ELEMENT_TYPE_VENMO_EXPRESS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"venmoexpress"
+                        <div class="description">Element type name for Venmo in express checkout.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_SHIPPING_PREFERENCE_GET_FROM_FILE_DetailAnchor"></a>PAYPAL_SHIPPING_PREFERENCE_GET_FROM_FILE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"GET_FROM_FILE"
+                        <div class="description">PayPal application context <code>shipping_preference</code> value <code>"GET_FROM_FILE"</code>, to use the
+ customer-provided shipping address on the PayPal site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_SHIPPING_PREFERENCE_NO_SHIPPING_DetailAnchor"></a>PAYPAL_SHIPPING_PREFERENCE_NO_SHIPPING
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NO_SHIPPING"
+                        <div class="description">PayPal application context <code>shipping_preference</code> value <code>"NO_SHIPPING"</code>, to redact the
+ shipping address from the PayPal site. Recommended for digital goods.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_SHIPPING_PREFERENCE_SET_PROVIDED_ADDRESS_DetailAnchor"></a>PAYPAL_SHIPPING_PREFERENCE_SET_PROVIDED_ADDRESS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"SET_PROVIDED_ADDRESS"
+                        <div class="description">PayPal application context <code>shipping_preference</code> value <code>"SET_PROVIDED_ADDRESS"</code>, to use the
+ merchant-provided address. The customer cannot change this address on the PayPal site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_USER_ACTION_CONTINUE_DetailAnchor"></a>PAYPAL_USER_ACTION_CONTINUE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CONTINUE"
+                        <div class="description">PayPal application context <code>user_action</code> value <code>"CONTINUE"</code>. Use this option when the final
+ amount is not known when the checkout flow is initiated and you want to redirect the customer to the merchant
+ page without processing the payment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_USER_ACTION_PAY_NOW_DetailAnchor"></a>PAYPAL_USER_ACTION_PAY_NOW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PAY_NOW"
+                        <div class="description">PayPal application context <code>user_action</code> value <code>"PAY_NOW"</code>. Use this option when the final
+ amount is known when the checkout is initiated and you want to process the payment immediately when the customer
+ clicks Pay Now.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>basketData
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">A JS object containing the data used to prepare the shopper basket when a Buy Now button is tapped.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>billingDetails
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">A JS object containing the billing details to use when a Stripe PaymentMethod is created.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>cardCaptureAutomatic
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">Returns <code>true</code> if the credit card payment should be automatically captured at the time of the sale, or
+ <code>false</code> if the credit card payment should be captured later.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>exclude
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Set.html"><span class="">Set</span></a>
+							&nbsp;(Read Only)
+                        <div class="description"><p>
+ Returns a set containing the element types to be explicitly excluded from mounted components. See the element
+ type constants in this class for the full list of supported element types.
+ </p>
+ <p>
+ Note: if an element type is both explicitly included and excluded, it will not be presented.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The identifier of this payment request.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>include
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Set.html"><span class="">Set</span></a>
+							&nbsp;(Read Only)
+                        <div class="description"><p>
+ Returns a set containing the specific element types to include in mounted components. If the set is
+ empty then all applicable and enabled element types will be included by default. See the element type constants
+ in this class for the full list of supported element types.
+ </p>
+ <p>
+ Note: if an element type is both explicitly included and excluded, it will not be presented.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>selector
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The DOM element selector where to mount payment methods and/or express checkout buttons.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>setupFutureUsage
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">Returns <code>true</code> if the payment method should be always saved for future use off session, or
+ <code>false</code> if the payment method should be only saved for future use on session when appropriate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>statementDescriptor
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The complete description that appears on your customers' statements for payments made by this request, or
+ <code>null</code> if the default statement descriptor for your account will be used.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_SalesforcePaymentRequest_String_String_DetailAnchor"><span class="">SalesforcePaymentRequest</span></a></span>(id
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, selector
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Constructs a payment request using the given identifiers.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_addExclude_String_DetailAnchor"><span class="">addExclude</span></a></span>(elementType
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description"><p> Adds the given element type to explicitly exclude from mounted components.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_addInclude_String_DetailAnchor"><span class="">addInclude</span></a></span>(elementType
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description"><p> Adds the given element type to include in mounted components.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_calculatePaymentRequestOptions_Basket_Object_DetailAnchor"><span class="">calculatePaymentRequestOptions</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, options
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description"><p> Returns a JS object containing the payment request options to use when a Pay Now button is tapped, in the appropriate format for use in client side JavaScript, with data calculated from the given basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_format_Object_DetailAnchor"><span class="">format</span></a></span>(options
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description"><p> Returns a JS object containing the payment request options to use when a Buy Now button is tapped, in the appropriate format for use in client side JavaScript.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getBasketData_DetailAnchor"><span class="">getBasketData</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns a JS object containing the data used to prepare the shopper basket when a Buy Now button is tapped.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getBillingDetails_DetailAnchor"><span class="">getBillingDetails</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns a JS object containing the billing details to use when a Stripe PaymentMethod is created.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getCardCaptureAutomatic_DetailAnchor"><span class="">getCardCaptureAutomatic</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns <code>true</code> if the credit card payment should be automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be captured later.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getExclude_DetailAnchor"><span class="">getExclude</span></a></span>()
+						: 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a></span>
+                    <div class="description"><p> Returns a set containing the element types to be explicitly excluded from mounted components.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the identifier of this payment request.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getInclude_DetailAnchor"><span class="">getInclude</span></a></span>()
+						: 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a></span>
+                    <div class="description"><p> Returns a set containing the specific element types to include in mounted components.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getSelector_DetailAnchor"><span class="">getSelector</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the DOM element selector where to mount payment methods and/or express checkout buttons.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getSetupFutureUsage_DetailAnchor"><span class="">getSetupFutureUsage</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns <code>true</code> if the payment method should be always saved for future use off session, or <code>false</code> if the payment method should be only saved for future use on session when appropriate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_getStatementDescriptor_DetailAnchor"><span class="">getStatementDescriptor</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the complete description that appears on your customers' statements for payments made by this request, or <code>null</code> if the default statement descriptor for your account will be used.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setBasketData_Object_DetailAnchor"><span class="">setBasketData</span></a></span>(basketData
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description"><p> Sets the data used to prepare the shopper basket when a Buy Now button is tapped.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setBillingDetails_Object_DetailAnchor"><span class="">setBillingDetails</span></a></span>(billingDetails
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the billing details to use when a Stripe PaymentMethod is created.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setCardCaptureAutomatic_Boolean_DetailAnchor"><span class="">setCardCaptureAutomatic</span></a></span>(cardCaptureAutomatic
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Sets if the credit card payment should be automatically captured at the time of the sale.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setOptions_Object_DetailAnchor"><span class="">setOptions</span></a></span>(options
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description"><p> Sets the payment request options to use when a Buy Now button is tapped.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setPayPalButtonsOptions_Object_DetailAnchor"><span class="">setPayPalButtonsOptions</span></a></span>(options
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the the options to pass into the <code>paypal.Buttons</code> call.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setPayPalShippingPreference_String_DetailAnchor"><span class="">setPayPalShippingPreference</span></a></span>(shippingPreference
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the PayPal order application context <code>shipping_preference</code> value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setPayPalUserAction_String_DetailAnchor"><span class="">setPayPalUserAction</span></a></span>(userAction
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the PayPal order application context <code>user_action</code> value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setReturnController_String_DetailAnchor"><span class="">setReturnController</span></a></span>(returnController
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the controller to which to redirect when the shopper returns from a 3rd party payment website.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setSavePaymentMethodEnabled_Boolean_DetailAnchor"><span class="">setSavePaymentMethodEnabled</span></a></span>(savePaymentMethodEnabled
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Sets if mounted components may provide a control for the shopper to save their payment method for later use.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setSetupFutureUsage_Boolean_DetailAnchor"><span class="">setSetupFutureUsage</span></a></span>(setupFutureUsage
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Sets if the payment method should be always saved for future use off session.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setStatementDescriptor_String_DetailAnchor"><span class="">setStatementDescriptor</span></a></span>(statementDescriptor
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the complete description that appears on your customers' statements for payments made by this request.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setStripeCreateElementOptions_String_Object_DetailAnchor"><span class="">setStripeCreateElementOptions</span></a></span>(element
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, options
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the the options to pass into the Stripe <code>elements.create</code> call for the given element type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentRequest_setStripeElementsOptions_Object_DetailAnchor"><span class="">setStripeElementsOptions</span></a></span>(options
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the the options to pass into the <code>stripe.elements</code> call.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_SalesforcePaymentRequest_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">SalesforcePaymentRequest</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">SalesforcePaymentRequest</span>(id
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, selector
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Constructs a payment request using the given identifiers.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">identifier for payment request</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">selector</span>
+						 - 
+						<span class="parameterDesc">DOM element selector where to mount payment methods and/or express checkout buttons</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if id or selector is null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_addExclude_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addExclude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addExclude</span>(elementType
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>
+ Adds the given element type to explicitly exclude from mounted components. It is not necessary to explicitly
+ exclude element types that are not enabled for the site, or are not applicable for the current shopper and/or
+ their basket. See the element type constants in this class for the full list of supported element types.
+ </p>
+ <p>
+ Note: if an element type is both explicitly included and excluded, it will not be presented.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">elementType</span>
+						 - 
+						<span class="parameterDesc">element type</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_getExclude_DetailAnchor">getExclude()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_addInclude_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addInclude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addInclude</span>(elementType
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>
+ Adds the given element type to include in mounted components. Call this method to include only a specific list of
+ element types to be presented when applicable and enabled for the site. See the element type constants in this
+ class for the full list of supported element types.
+ </p>
+ <p>
+ Note: if an element type is both explicitly included and excluded, it will not be presented.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">elementType</span>
+						 - 
+						<span class="parameterDesc">element type</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_getInclude_DetailAnchor">getInclude()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_calculatePaymentRequestOptions_Basket_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">calculatePaymentRequestOptions</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">calculatePaymentRequestOptions</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, options
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description"><p>
+ Returns a JS object containing the payment request options to use when a Pay Now button is tapped, in the
+ appropriate format for use in client side JavaScript, with data calculated from the given basket. This method is
+ provided as a convenience to calculate updated payment request options when the shopper basket has changed. Data
+ in the given <code>options</code> object like <code>total</code>, <code>displayItems</code>, and
+ <code>shippingOptions</code> will be replaced in the returned object by values recalculated from the given
+ <code>basket</code> and applicable shipping methods.
+ </p>
+ <p>
+ The following example shows the resulting output for a basket and sample options.
+ </p>
+ <pre><code>
+SalesforcePaymentRequest.calculatePaymentRequestOptions(basket, {
+    requestPayerName: true,
+    requestPayerEmail: true,
+    requestPayerPhone: false,
+    requestShipping: true
+});
+ </code></pre>
+ <p>
+ returns
+ </p>
+ <pre><code>
+{
+    currency: 'gbp',
+    total: {
+        label: 'Total',
+        amount: '2644'
+    },
+    displayItems: [{
+        label: 'Subtotal',
+        amount: '1919'
+    }, {
+        label: 'Tax',
+        amount: '126'
+    }, {
+        label: 'Ground',
+        amount: '599'
+    }],
+    requestPayerName: true,
+    requestPayerEmail: true,
+    requestPayerPhone: false,
+    requestShipping: true,
+    shippingOptions: [{
+        id: 'GBP001',
+        label: 'Ground',
+        detail: 'Order received within 7-10 business days',
+        amount: '599'
+    },{
+        id: 'GBP002',
+        label: 'Express',
+        detail: 'Order received within 2-4 business days',
+        amount: '999'
+    }]
+}
+ </code></pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">No Comment In JavaDoc</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">options</span>
+						 - 
+						<span class="parameterDesc">JS object containing payment request options in B2C Commerce API standard format</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">JS object containing equivalent payment request options in Stripe JS API format</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_format_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">format</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">format</span>(options
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description"><p>
+ Returns a JS object containing the payment request options to use when a Buy Now button is tapped, in the
+ appropriate format for use in client side JavaScript. This method is provided as a convenience to adjust values
+ in B2C Commerce API standard formats to their equivalents as expected by Stripe JS APIs. The following example
+ shows options set in B2C Commerce API format, and the resulting output.
+ </p>
+ <pre><code>
+SalesforcePaymentRequest.format({
+    currency: 'GBP',
+    total: {
+        label: 'Total',
+        amount: '26.44'
+    },
+    displayItems: [{
+        label: 'Subtotal',
+        amount: '19.19'
+    }, {
+        label: 'Tax',
+        amount: '1.26'
+    }, {
+        label: 'Ground',
+        amount: '5.99'
+    }],
+    requestPayerPhone: false,
+    shippingOptions: [{
+        id: 'GBP001',
+        label: 'Ground',
+        detail: 'Order received within 7-10 business days',
+        amount: '5.99'
+    }]
+});
+ </code></pre>
+ <p>
+ returns
+ </p>
+ <pre><code>
+{
+    currency: 'gbp',
+    total: {
+        label: 'Total',
+        amount: '2644'
+    },
+    displayItems: [{
+        label: 'Subtotal',
+        amount: '1919'
+    }, {
+        label: 'Tax',
+        amount: '126'
+    }, {
+        label: 'Ground',
+        amount: '599'
+    }],
+    requestPayerPhone: false,
+    shippingOptions: [{
+        id: 'GBP001',
+        label: 'Ground',
+        detail: 'Order received within 7-10 business days',
+        amount: '599'
+    }]
+}
+ </code></pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">options</span>
+						 - 
+						<span class="parameterDesc">JS object containing payment request options in B2C Commerce API standard format</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">JS object containing equivalent payment request options in Stripe JS API format</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getBasketData_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBasketData</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBasketData</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns a JS object containing the data used to prepare the shopper basket when a Buy Now button is tapped.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">JS object containing the basket data</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_setBasketData_Object_DetailAnchor">setBasketData(Object)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getBillingDetails_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBillingDetails</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBillingDetails</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns a JS object containing the billing details to use when a Stripe PaymentMethod is created.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">JS object containing the billing details</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_setBillingDetails_Object_DetailAnchor">setBillingDetails(Object)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getCardCaptureAutomatic_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCardCaptureAutomatic</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCardCaptureAutomatic</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns <code>true</code> if the credit card payment should be automatically captured at the time of the sale, or
+ <code>false</code> if the credit card payment should be captured later.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if the credit card payment should be automatically captured at the time of the sale, <code>false</code> if the credit card payment should be captured later.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getExclude_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExclude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExclude</span>()
+					 : 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a>
+                    </div>
+                    <div class="description"><p>
+ Returns a set containing the element types to be explicitly excluded from mounted components. See the element
+ type constants in this class for the full list of supported element types.
+ </p>
+ <p>
+ Note: if an element type is both explicitly included and excluded, it will not be presented.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">set of element types</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_addExclude_String_DetailAnchor">addExclude(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the identifier of this payment request.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment request identifier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getInclude_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInclude</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInclude</span>()
+					 : 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a>
+                    </div>
+                    <div class="description"><p>
+ Returns a set containing the specific element types to include in mounted components. If the set is
+ empty then all applicable and enabled element types will be included by default. See the element type constants
+ in this class for the full list of supported element types.
+ </p>
+ <p>
+ Note: if an element type is both explicitly included and excluded, it will not be presented.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">set of element types</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_addInclude_String_DetailAnchor">addInclude(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getSelector_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelector</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelector</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the DOM element selector where to mount payment methods and/or express checkout buttons.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">DOM element selector</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getSetupFutureUsage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSetupFutureUsage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSetupFutureUsage</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns <code>true</code> if the payment method should be always saved for future use off session, or
+ <code>false</code> if the payment method should be only saved for future use on session when appropriate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if the payment method should be always saved for future use off session, <code>false</code> if the payment method should be only saved for future use on session when appropriate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_getStatementDescriptor_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatementDescriptor</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatementDescriptor</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the complete description that appears on your customers' statements for payments made by this request, or
+ <code>null</code> if the default statement descriptor for your account will be used.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">statement descriptor for payments made by this request, or <code>null</code> if the account default will be used</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setBasketData_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setBasketData</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setBasketData</span>(basketData
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>
+ Sets the data used to prepare the shopper basket when a Buy Now button is tapped. For convenience this method
+ accepts a JS object to set all of the following properties at once:
+ </p>
+ <ul>
+ <li><code>sku</code> - SKU of the product to add exclusively to the basket (required)</li>
+ <li><code>quantity</code> - integer quantity of the product, default is 1</li>
+ <li><code>shippingMethod</code> - ID of the shipping method to set on the shipment, default is the site default
+ shipping method for the basket currency</li>
+ <li><code>options</code> - JS array containing one JS object per selected product option, default is no selected options
+ <ul>
+ <li><code>id</code> - product option ID</li>
+ <li><code>valueId</code> - product option value ID</li>
+ </ul>
+ </ul>
+ <p>
+ The following example shows how to set all of the supported basket data.
+ </p>
+ <pre><code>
+request.setBasketData({
+    sku: 'tv-pdp-6010fdM',
+    quantity: 1,
+    shippingMethod: '001',
+    options: [{
+        id: 'tvWarranty',
+        valueId: '000'
+    }]
+});
+ </code></pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basketData</span>
+						 - 
+						<span class="parameterDesc">JS object containing the basket data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_getBasketData_DetailAnchor">getBasketData()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setBillingDetails_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setBillingDetails</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setBillingDetails</span>(billingDetails
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the billing details to use when a Stripe PaymentMethod is created. For convenience this method accepts a
+ JS object to set all details at once. The following example shows how to set details including address.
+ </p>
+ <pre><code>
+request.setBillingDetails({
+    address: {
+        city: 'Wien',
+        country: 'AT',
+        line1: 'Opernring 2',
+        postal_code: '1010'
+    },
+    email: 'jhummel@salesforce.com',
+    name: 'Johann Hummel'
+});
+ </code></pre>
+ <p>
+ For more information on the available billing details see the Stripe create PaymentMethod API
+ documentation.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">billingDetails</span>
+						 - 
+						<span class="parameterDesc">JS object containing the billing details</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setCardCaptureAutomatic_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCardCaptureAutomatic</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCardCaptureAutomatic</span>(cardCaptureAutomatic
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets if the credit card payment should be automatically captured at the time of the sale.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">cardCaptureAutomatic</span>
+						 - 
+						<span class="parameterDesc"><code>true</code> if the credit card payment should be automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be captured later.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setOptions_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOptions</span>(options
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>
+ Sets the payment request options to use when a Buy Now button is tapped. For convenience this method accepts a
+ JS object to set all options at once. The following example shows how to set options including currency,
+ labels, and amounts, in B2C Commerce API format.
+ </p>
+ <pre><code>
+request.setOptions({
+    currency: 'GBP',
+    total: {
+        label: 'Total',
+        amount: '26.44'
+    },
+    displayItems: [{
+        label: 'Subtotal',
+        amount: '19.19'
+    }, {
+        label: 'Tax',
+        amount: '1.26'
+    }, {
+        label: 'Ground',
+        amount: '5.99'
+    }],
+    requestPayerPhone: false,
+    shippingOptions: [{
+        id: 'GBP001',
+        label: 'Ground',
+        detail: 'Order received within 7-10 business days',
+        amount: '5.99'
+    }]
+});
+ </code></pre>
+ <p>
+ The <code>total</code> option must match the total that will result from preparing the shopper basket using the
+ data provided to <a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_setBasketData_Object_DetailAnchor">setBasketData(Object)</a> in this request. The <code>id</code> of each JS object in the
+ <code>shippingOptions</code> array must equal the ID of the corresponding site shipping method that the shopper
+ may select in the browser payment app.
+ </p>
+ <p>
+ For more information on the available payment request options see the Stripe Payment Request object API
+ documentation.
+ </p>
+ <p>
+ Note: The Stripe Payment Request <code>country</code> option will be set automatically to the country of the
+ Salesforce Payments account associated with the Commerce Cloud instance and is not included here.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">options</span>
+						 - 
+						<span class="parameterDesc">JS object containing the payment request options</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setPayPalButtonsOptions_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPayPalButtonsOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPayPalButtonsOptions</span>(options
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the the options to pass into the <code>paypal.Buttons</code> call. For more information see the PayPal
+ Buttons API documentation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">options</span>
+						 - 
+						<span class="parameterDesc">JS object containing the options</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setPayPalShippingPreference_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPayPalShippingPreference</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPayPalShippingPreference</span>(shippingPreference
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the PayPal order application context <code>shipping_preference</code> value. For more information see the
+ PayPal Orders API documentation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingPreference</span>
+						 - 
+						<span class="parameterDesc">constant indicating the shipping preference</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_SHIPPING_PREFERENCE_GET_FROM_FILE_DetailAnchor">PAYPAL_SHIPPING_PREFERENCE_GET_FROM_FILE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_SHIPPING_PREFERENCE_NO_SHIPPING_DetailAnchor">PAYPAL_SHIPPING_PREFERENCE_NO_SHIPPING</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_SHIPPING_PREFERENCE_SET_PROVIDED_ADDRESS_DetailAnchor">PAYPAL_SHIPPING_PREFERENCE_SET_PROVIDED_ADDRESS</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setPayPalUserAction_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPayPalUserAction</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPayPalUserAction</span>(userAction
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the PayPal order application context <code>user_action</code> value. For more information see the PayPal
+ Orders API documentation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">userAction</span>
+						 - 
+						<span class="parameterDesc">constant indicating the user action</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_USER_ACTION_CONTINUE_DetailAnchor">PAYPAL_USER_ACTION_CONTINUE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_PAYPAL_USER_ACTION_PAY_NOW_DetailAnchor">PAYPAL_USER_ACTION_PAY_NOW</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setReturnController_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setReturnController</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setReturnController</span>(returnController
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the controller to which to redirect when the shopper returns from a 3rd party payment website. Default is
+ the controller for the current page.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">returnController</span>
+						 - 
+						<span class="parameterDesc">return controller, such as <code>"Cart-Show"</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setSavePaymentMethodEnabled_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSavePaymentMethodEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSavePaymentMethodEnabled</span>(savePaymentMethodEnabled
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets if mounted components may provide a control for the shopper to save their payment method for later use. When
+ set to <code>false</code> no control will be provided. When set to <code>true</code> a control may be provided,
+ if applicable for the shopper and presented payment method, but is not guaranteed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">savePaymentMethodEnabled</span>
+						 - 
+						<span class="parameterDesc">if mounted components may provide a control for the shopper to save their payment method</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setSetupFutureUsage_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSetupFutureUsage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSetupFutureUsage</span>(setupFutureUsage
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets if the payment method should be always saved for future use off session.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">setupFutureUsage</span>
+						 - 
+						<span class="parameterDesc"><code>true</code> if the payment method should be always saved for future use off session, or <code>false</code> if the payment method should be only saved for future use on session when appropriate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setStatementDescriptor_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStatementDescriptor</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStatementDescriptor</span>(statementDescriptor
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the complete description that appears on your customers' statements for payments made by this request. Set
+ this to <code>null</code> to use the default statement descriptor for your account.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">statementDescriptor</span>
+						 - 
+						<span class="parameterDesc">statement descriptor for payments made by this request, or <code>null</code> to use the account default</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setStripeCreateElementOptions_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStripeCreateElementOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStripeCreateElementOptions</span>(element
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, options
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the the options to pass into the Stripe <code>elements.create</code> call for the given element type. For
+ more information see the Stripe Elements API documentation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">element</span>
+						 - 
+						<span class="parameterDesc">name of the Stripe element whose creation to configure</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">options</span>
+						 - 
+						<span class="parameterDesc">JS object containing the options</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_AFTERPAY_CLEARPAY_MESSAGE_DetailAnchor">ELEMENT_AFTERPAY_CLEARPAY_MESSAGE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_CARD_CVC_DetailAnchor">ELEMENT_CARD_CVC</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_CARD_EXPIRY_DetailAnchor">ELEMENT_CARD_EXPIRY</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_CARD_NUMBER_DetailAnchor">ELEMENT_CARD_NUMBER</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_EPS_BANK_DetailAnchor">ELEMENT_EPS_BANK</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_IBAN_DetailAnchor">ELEMENT_IBAN</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_IDEAL_BANK_DetailAnchor">ELEMENT_IDEAL_BANK</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentRequest.html#dw_extensions_payments_SalesforcePaymentRequest_ELEMENT_PAYMENT_REQUEST_BUTTON_DetailAnchor">ELEMENT_PAYMENT_REQUEST_BUTTON</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentRequest_setStripeElementsOptions_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStripeElementsOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStripeElementsOptions</span>(options
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the the options to pass into the <code>stripe.elements</code> call. For more information see the Stripe
+ Elements API documentation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">options</span>
+						 - 
+						<span class="parameterDesc">JS object containing the options</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

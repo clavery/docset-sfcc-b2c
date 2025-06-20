@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ImportKeyValueMapping</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    ImportKeyValueMapping</div>
+            <div class="topLevelDescription">Import or delete a key/value mapping in the Generic Mapping high-performance data store.</div>
+            <div class="topLevelDescription">
+     Key/value mappings are exposed through Script API class
+ dw.util.MappingMgr. See <a href="https://help.salesforce.com/s/articleView?id=cc.b2c_generic_mapping.htm">Generic Mapping</a>
+ 
+  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Organization</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AfterImportFileHandling</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">What to do with the import file after successful or failed import. The handling is not performed if ImportFailedHandling is ERROR and the file failed to validate. Ignored if using import mode 'Delete'.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                Keep, Delete, Archive, Archive Zipped</div>
+                    <div class="description">
+                                                Default Value:
+                                                Archive</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ArchiveFolder</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Folder to store archived import files. Used when 'AfterImportFileHandling' is 'Archive' or 'Archive Zipped'. Folder location relative to 'IMPEX' folder. If not defined, 'IMPEX/archive' is used. Ignored if using import mode 'Delete'.</div>
+                    <div class="description">
+                                                Default Value:
+                                                archive</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileNamePattern</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Regular expression pattern to select the import files, e.g. 'import_.*\.csv'. Matching files are imported in alphanumerical order. If not defined all files in working folder are imported. Ignored if using import mode 'Delete'.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ImportFailedHandling</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">WARN - Skip malformed files. Perform action specified by AfterImportFileHandling on files. Use Exit Status WARN. ERROR - If invalid file is found, do not perform action specified by AfterImportFileHandling and abort immediately with Exit Status ERROR. Ignored if using import mode 'Delete'.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                WARN, ERROR</div>
+                    <div class="description">
+                                                Default Value:
+                                                WARN</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ImportMode</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">Replace - Create new mapping or replace existing mapping, Merge - Create new mapping or update/create values in existing mapping, Delete - Delete specified mapping. All import file related parameters are ignored.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                Replace, Merge, Delete</div>
+                    <div class="description">
+                                                Default Value:
+                                                Replace</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">KeyCount</span>
+                                            &nbsp;:&nbsp;
+                                            Long
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Number of columns in CSV file that are composite key columns, from left to right. Default is 1, which indicates that the first column in CSV file is a key. All other columns are an aggregated list of values. Ignored if using import mode 'Delete'.</div>
+                    <div class="description">
+                                                Default Value:
+                                                1</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MappingName</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">Name used to access the mapping. Example: 'backend-to-web-skus' or 'web-products-to-backend'.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">WorkingFolder</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Folder containing import files, relative to 'IMPEX/src'. If not defined, working folder is 'IMPEX/src'. Ignored if using import mode 'Delete'.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Import or deletion finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">File validation problem and parameter 'ImportFailedHandling' is 'ERROR', or other persistent error.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">WARN</span></span>
+                    <div class="description">File validation problem and parameter 'ImportFailedHandling' is 'WARN'.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">NO_FILES_FOUND</span></span>
+                    <div class="description">No matching files were found.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

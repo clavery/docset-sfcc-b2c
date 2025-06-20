@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html>
+<head>
+<title>
+    B2C Commerce Script
+</title>
+<script type="text/javascript" src="api/js/dwapi.js"></script>
+</head>
+<frameset cols="20%,80%">
+	<frameset rows="30%,70%">
+		<frame src="api/packageList.html" name="packageListFrame" title="Packages" onload="updateFrame(this);">
+		<frame src="api/classList.html" name="classListFrame" title="Classes" onload="updateFrame(this);">
+	</frameset>
+	<frame src="api/overview.html" name="detailFrame" title="Package and Class descriptions" scrolling="yes" onload="updateFrame(this);">
+</frameset>
+</html>

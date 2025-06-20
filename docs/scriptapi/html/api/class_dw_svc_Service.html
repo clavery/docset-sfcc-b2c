@@ -1,0 +1,530 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Service</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.svc.Service">
+            <a name="dw.svc.Service"></a>
+            <div class="packageName">dw.svc</div>
+            <div class="className
+					">	
+        	
+				Class Service</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.svc.Service
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Base class of Services.
+ <p>
+ A service represents a call-specific configuration. Any configuration set here is local to the currently executing
+ call.
+ <p></div>
+                    <div class="subclasses">
+                        <div class="subclass">
+	    	All Known Subclasses
+    	</div>
+                        <div class="subclasses">
+                            <a href="class_dw_svc_FTPService.html"><span class="parameterName">FTPService</span></a>, <a href="class_dw_svc_HTTPFormService.html"><span class="parameterName">HTTPFormService</span></a>, <a href="class_dw_svc_HTTPService.html"><span class="parameterName">HTTPService</span></a>, <a href="class_dw_svc_SOAPService.html"><span class="parameterName">SOAPService</span></a>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_svc_LocalServiceRegistry.html">LocalServiceRegistry</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_svc_ServiceCallback.html">ServiceCallback</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>configuration
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_svc_ServiceConfig.html"><span class="">ServiceConfig</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The Service Configuration.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>credentialID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The ID of the currently associated Credential.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>mock
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">The status of whether this service is executing in mock mode.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>requestData
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The property that stores the object returned by createRequest.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>response
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The property that stores the object returned by the service.
+ <p>
+ This property is only useful after the service <a href="class_dw_svc_Service.html#dw_svc_Service_call_Object_DetailAnchor">call(Object...)</a> completes, and is the same as the object
+ inside the <a href="class_dw_svc_Result.html">Result</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>throwOnError
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">The status of whether this service will throw an error when encountering a problem.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>URL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The current URL, excluding any custom query parameters.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    
+    			To get an instance of this class, use one of the subclass constructors. 
+    		 </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_call_Object_DetailAnchor"><span class="">call</span></a></span>(args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_svc_Result.html"><span class="">Result</span></a></span>
+                    <div class="description">Invokes the service.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_getConfiguration_DetailAnchor"><span class="">getConfiguration</span></a></span>()
+						: 
+					<a href="class_dw_svc_ServiceConfig.html"><span class="">ServiceConfig</span></a></span>
+                    <div class="description">Returns the Service Configuration.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_getCredentialID_DetailAnchor"><span class="">getCredentialID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the currently associated Credential.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_getRequestData_DetailAnchor"><span class="">getRequestData</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the property that stores the object returned by createRequest.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_getResponse_DetailAnchor"><span class="">getResponse</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the property that stores the object returned by the service.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_getURL_DetailAnchor"><span class="">getURL</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the current URL, excluding any custom query parameters.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_isMock_DetailAnchor"><span class="">isMock</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the status of whether this service is executing in mock mode.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_isThrowOnError_DetailAnchor"><span class="">isThrowOnError</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns the status of whether this service will throw an error when encountering a problem.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_setCredentialID_String_DetailAnchor"><span class="">setCredentialID</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a></span>
+                    <div class="description">Override the Credential by the credential object with the given ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_setMock_DetailAnchor"><span class="">setMock</span></a></span>()
+						: 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a></span>
+                    <div class="description">Forces the mock mode to be enabled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_setThrowOnError_DetailAnchor"><span class="">setThrowOnError</span></a></span>()
+						: 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a></span>
+                    <div class="description">Forces a Service to throw an error when there is a problem instead of returning a Result with non-OK status.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_svc_Service_setURL_String_DetailAnchor"><span class="">setURL</span></a></span>(url
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a></span>
+                    <div class="description">Override the URL to the given value.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_call_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">call</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">call</span>(args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_svc_Result.html"><span class="">Result</span></a>
+                    </div>
+                    <div class="description">Invokes the service.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">Arguments to pass. If there is a single argument and that argument is an array, then each item in the array will become a separate argument. For example, the following results in three separate arguments to the service: <pre> svc.call( [1,2,3] ) </pre> and is functionally equivalent to <pre> svc.call( 1, 2, 3 ) </pre> This can be avoided by explicitly forming a <a href="class_dw_util_List.html">List</a>, enclosing the array in another array, or by sending a second argument. The following will all send the array as a List in the first argument. <pre> svc.call( ArrayList([1,2,3]) ) </pre> <pre> svc.call( [[1,2,3]] ) </pre> <pre> svc.call( [1,2,3], "" ) </pre> Another option is to change the definition of the associated <a href="class_dw_svc_ServiceCallback.html#dw_svc_ServiceCallback_createRequest_Service_Object_DetailAnchor">ServiceCallback.createRequest(Service, Object...)</a> to accept an object instead, and pass the array as a field of that object: <pre> svc.call( { 'data': [1,2,3] } ) </pre></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Result of the service.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_getConfiguration_DetailAnchor"></a>
+                    <div class="detailName 
+						">getConfiguration</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getConfiguration</span>()
+					 : 
+					<a href="class_dw_svc_ServiceConfig.html"><span class="">ServiceConfig</span></a>
+                    </div>
+                    <div class="description">Returns the Service Configuration.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Service Configuration.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_getCredentialID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCredentialID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCredentialID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the currently associated Credential.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Credential Name.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_getRequestData_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRequestData</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRequestData</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the property that stores the object returned by createRequest.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Object returned by createRequest.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_getResponse_DetailAnchor"></a>
+                    <div class="detailName 
+						">getResponse</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getResponse</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the property that stores the object returned by the service.
+ <p>
+ This property is only useful after the service <a href="class_dw_svc_Service.html#dw_svc_Service_call_Object_DetailAnchor">call(Object...)</a> completes, and is the same as the object
+ inside the <a href="class_dw_svc_Result.html">Result</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Object returned by the service.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_getURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getURL</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the current URL, excluding any custom query parameters.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_isMock_DetailAnchor"></a>
+                    <div class="detailName 
+						">isMock</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isMock</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the status of whether this service is executing in mock mode.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true for mock mode, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_isThrowOnError_DetailAnchor"></a>
+                    <div class="detailName 
+						">isThrowOnError</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isThrowOnError</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns the status of whether this service will throw an error when encountering a problem.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true to throw an error, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_setCredentialID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCredentialID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCredentialID</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a>
+                    </div>
+                    <div class="description">Override the Credential by the credential object with the given ID.
+ <p>
+ If the URL is also overridden, that URL will continue to override the URL in this credential.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">Credential ID. It must exist.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Service.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_setMock_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMock</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMock</span>()
+					 : 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a>
+                    </div>
+                    <div class="description">Forces the mock mode to be enabled.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Service.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_setThrowOnError_DetailAnchor"></a>
+                    <div class="detailName 
+						">setThrowOnError</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setThrowOnError</span>()
+					 : 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a>
+                    </div>
+                    <div class="description">Forces a Service to throw an error when there is a problem instead of returning a Result with non-OK status.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Service.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_svc_Service_setURL_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setURL</span>(url
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_svc_Service.html"><span class="">Service</span></a>
+                    </div>
+                    <div class="description">Override the URL to the given value. Any query parameters (if applicable) will be appended to this URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">Force the URL to the given value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Service.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

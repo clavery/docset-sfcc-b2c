@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet SendMail</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet SendMail</div>
+            <div class="topLevelDescription">This pipelet sends an email message which is formatted and constructed using an .isml template. Address data (from, to, cc, bcc) and the subject can be specified in either the pipeline dictionary or by using &lt;SUBJECT&gt;, &lt;FROM&gt;, &lt;TO&gt;, &lt;CC&gt;, &lt;BCC&gt; tags in the mail template. If both (template and dictionary) are specified, then the template values take precedence. It is not allowed to use remote includes (&lt;isinclude url="..."&gt;) or &lt;isslot&gt; within a mail template. The final email is put into an internal queue and is sent asynchronously. The pipelet always exits with NEXT.
+<p/><b>Note:</b> this pipelet allows access to sensitive financial and security information. Pay attention to appropriate legal and regulatory requirements.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Common</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MailFrom</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The sender's email address.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MailTemplate</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The template. which should be rendered and then be sent as email.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MailTo</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The email address to which the text of the rendered template should be send.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MailSubject</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The subject to be displayed in the email. A more flexible alternative is to define the subject using a <subject></subject> tag in the mail template itself.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">LocaleID</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The id of the locale that should be used for selecting the template. If the parameter is not present the pipelet uses the locale of the current request.  If the parameter is present, the locale of current request is temporarily set to the passed locale during the formatting of the email.  Developers should keep this in mind if resource bundle lookup is used to retrieve locale-sensitive strings within the template.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MailCC</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MailBCC</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+An optional BCC recipient of the email.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

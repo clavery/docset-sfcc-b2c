@@ -1,0 +1,768 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ReturnCase</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.ReturnCase">
+            <a name="dw.order.ReturnCase"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class ReturnCase</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_Extensible.html">dw.object.Extensible</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_order_AbstractItemCtnr.html">dw.order.AbstractItemCtnr</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.order.ReturnCase
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">All returns exist in the context of a ReturnCase, each <a href="class_dw_order_Order.html">Order</a>
+ can have any number of ReturnCases. <br/>
+ The ReturnCase has <a href="class_dw_order_ReturnCaseItem.html">ReturnCaseItem</a>s, each of which is associated with an
+ <a href="class_dw_order_OrderItem.html">OrderItem</a> (an extension to either a <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a> or a <a href="class_dw_order_ShippingLineItem.html">ShippingLineItem</a>). <br/>
+ Each ReturnCaseItem defines <a href="class_dw_order_ReturnCaseItem.html#dw_order_ReturnCaseItem_getAuthorizedQuantity_DetailAnchor">ReturnCaseItem.getAuthorizedQuantity()</a> representing the maximum
+ quantity expected to be returned. The ReturnCaseItem may be associated with
+ 0..n <a href="class_dw_order_ReturnItem.html">ReturnItem</a>s - ReturnItems are added to the ReturnCaseItem when
+ <a href="class_dw_order_Return.html">Return</a>s are created.
+ <p>
+ <i>Either</i> - a ReturnCase may be used as an RMA, in which case they are
+ created when a customer first shows a wish to return item(s). The customer
+ then includes the RMA number with the returned item(s). The Return created as
+ a result is then associated with the existing ReturnCase. <br/>
+ <i>Or</i> - a ReturnCase is automatically created as part of the return
+ creation, i.e. the customer returns some item(s) leading to a creation of
+ both a Return and an associated ReturnCase.
+ </p>
+ <p/>
+ The scripting api allows access to the ReturnCases, whether the ReturnCase is an RMA or not,
+ and the ReturnCase status. Both the ReturnCaseItems and any Returns
+ associated with the ReturnCase can be accessed.
+ <p/>
+ A ReturnCase has one of these status values:
+ <ul>
+ <li>NEW - the ReturnCase has been created and can be edited previous to
+ its authorization</li>
+ <li>CONFIRMED - the ReturnCase is CONFIRMED, can no longer be edited, no
+ Returns have been associated with it. Only a NEW- ReturnCase can be
+ CONFIRMED</li>
+ <li>PARTIAL_RETURNED - the ReturnCase has been associated with at least one Return,
+ but is not yet complete. Only a CONFIRMED- ReturnCase can be set to
+ PARTIAL_RETURNED</li>
+ <li>RETURNED - the ReturnCase has been associated with Returns which match
+ the expected authorized quantity. Only an CONFIRMED- or PARTIAL_RETURNED- return-case
+ can be set to RETURNED</li>
+ <li>CANCELLED - the ReturnCase has been cancelled (only a NEW- or
+ CONFIRMED- ReturnCase can be cancelled)</li>
+ </ul>
+ <p/>
+ Order post-processing APIs (gillian) are now inactive by default and will throw
+ an exception if accessed. Activation needs preliminary approval by Product Management.
+ Please contact support in this case. Existing customers using these APIs are not
+ affected by this change and can use the APIs until further notice.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_ORDERBY_ITEMID_DetailAnchor"></a>ORDERBY_ITEMID
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">Sorting by item id. Use with method <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getItems_DetailAnchor">getItems()</a> as an argument to method <a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_ORDERBY_ITEMPOSITION_DetailAnchor"></a>ORDERBY_ITEMPOSITION
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">Sorting by the position of the related oder item. Use with method <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getItems_DetailAnchor">getItems()</a> as an argument to method <a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_ORDERBY_UNSORTED_DetailAnchor"></a>ORDERBY_UNSORTED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">Unsorted , as it is. Use with method <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getItems_DetailAnchor">getItems()</a> as an argument to method <a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_QUALIFIER_PRODUCTITEMS_DetailAnchor"></a>QUALIFIER_PRODUCTITEMS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">Selects the product items. Use with method <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getItems_DetailAnchor">getItems()</a> as an argument to method <a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_select_Object_DetailAnchor">FilteringCollection.select(Object)</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_QUALIFIER_SERVICEITEMS_DetailAnchor"></a>QUALIFIER_SERVICEITEMS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">Selects for the service items. Use with method <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getItems_DetailAnchor">getItems()</a> as an argument to method <a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_select_Object_DetailAnchor">FilteringCollection.select(Object)</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_STATUS_CANCELLED_DetailAnchor"></a>STATUS_CANCELLED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CANCELLED"
+                        <div class="description">constant for ReturnCase Status CANCELLED</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_STATUS_CONFIRMED_DetailAnchor"></a>STATUS_CONFIRMED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CONFIRMED"
+                        <div class="description">constant for ReturnCase Status CONFIRMED</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_STATUS_NEW_DetailAnchor"></a>STATUS_NEW
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NEW"
+                        <div class="description">constant for ReturnCase Status NEW</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_STATUS_PARTIAL_RETURNED_DetailAnchor"></a>STATUS_PARTIAL_RETURNED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PARTIAL_RETURNED"
+                        <div class="description">constant for ReturnCase Status PARTIAL RETURNED</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_ReturnCase_STATUS_RETURNED_DetailAnchor"></a>STATUS_RETURNED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"RETURNED"
+                        <div class="description">constant for ReturnCase Status RETURNED</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>invoice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns null or the previously created <a href="class_dw_order_Invoice.html">Invoice</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>invoiceNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns null or the invoice-number.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>items
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_FilteringCollection.html"><span class="">FilteringCollection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Access the collection of <a href="class_dw_order_ReturnCaseItem.html">ReturnCaseItem</a>s.
+ <p/>
+ This <a href="class_dw_util_FilteringCollection.html">FilteringCollection</a> can be sorted / filtered using:
+ <ul>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_ORDERBY_ITEMID_DetailAnchor">ORDERBY_ITEMID</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a> with
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_ORDERBY_ITEMPOSITION_DetailAnchor">ORDERBY_ITEMPOSITION</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_ORDERBY_UNSORTED_DetailAnchor">ORDERBY_UNSORTED</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_select_Object_DetailAnchor">FilteringCollection.select(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_QUALIFIER_PRODUCTITEMS_DetailAnchor">QUALIFIER_PRODUCTITEMS</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_select_Object_DetailAnchor">FilteringCollection.select(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_QUALIFIER_SERVICEITEMS_DetailAnchor">QUALIFIER_SERVICEITEMS</a>
+ </ul></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returnCaseNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The mandatory return case number identifying this document.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>returns
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Return the collection of <a href="class_dw_order_Return.html">Return</a>s associated with this ReturnCase.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>RMA
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Return whether this is an RMA. This is specified when calling <a href="class_dw_order_Order.html#dw_order_Order_createReturnCase_String_Boolean_DetailAnchor">Order.createReturnCase(String, Boolean)</a>.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>status
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Gets the return case item status. The status of a ReturnCase is read-only and calculated from the status of
+ the associated <a href="class_dw_order_ReturnCaseItem.html">ReturnCaseItem</a>s.
+ <p>
+ The possible values are <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_NEW_DetailAnchor">STATUS_NEW</a>,<a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_CONFIRMED_DetailAnchor">STATUS_CONFIRMED</a>,
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_PARTIAL_RETURNED_DetailAnchor">STATUS_PARTIAL_RETURNED</a>, <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_RETURNED_DetailAnchor">STATUS_RETURNED</a>,
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_CANCELLED_DetailAnchor">STATUS_CANCELLED</a>.
+ <p/></div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_confirm_DetailAnchor"><span class="">confirm</span></a></span>()
+						: 
+					void</span>
+                    <div class="description"><p>Attempt to confirm the ReturnCase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_createInvoice_DetailAnchor"><span class="">createInvoice</span></a></span>()
+						: 
+					<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a></span>
+                    <div class="description">Creates a new <a href="class_dw_order_Invoice.html">Invoice</a> based on this ReturnCase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_createInvoice_String_DetailAnchor"><span class="">createInvoice</span></a></span>(invoiceNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a></span>
+                    <div class="description">Creates a new <a href="class_dw_order_Invoice.html">Invoice</a> based on this ReturnCase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_createItem_String_DetailAnchor"><span class="">createItem</span></a></span>(orderItemID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_ReturnCaseItem.html"><span class="">ReturnCaseItem</span></a></span>
+                    <div class="description">Creates a new item for a given order item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_createReturn_String_DetailAnchor"><span class="">createReturn</span></a></span>(returnNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_Return.html"><span class="">Return</span></a></span>
+                    <div class="description">Creates a new <a href="class_dw_order_Return.html">Return</a> with the given number and associates it with this ReturnCase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_createReturn_DetailAnchor"><span class="">createReturn</span></a></span>()
+						: 
+					<a href="class_dw_order_Return.html"><span class="">Return</span></a></span>
+                    <div class="description">Creates a new <a href="class_dw_order_Return.html">Return</a> with a generated number and associates it with this ReturnCase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_getInvoice_DetailAnchor"><span class="">getInvoice</span></a></span>()
+						: 
+					<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a></span>
+                    <div class="description">Returns null or the previously created <a href="class_dw_order_Invoice.html">Invoice</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_getInvoiceNumber_DetailAnchor"><span class="">getInvoiceNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns null or the invoice-number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_getItems_DetailAnchor"><span class="">getItems</span></a></span>()
+						: 
+					<a href="class_dw_util_FilteringCollection.html"><span class="">FilteringCollection</span></a></span>
+                    <div class="description">Access the collection of <a href="class_dw_order_ReturnCaseItem.html">ReturnCaseItem</a>s.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_getReturnCaseNumber_DetailAnchor"><span class="">getReturnCaseNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the mandatory return case number identifying this document.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_getReturns_DetailAnchor"><span class="">getReturns</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Return the collection of <a href="class_dw_order_Return.html">Return</a>s associated with this ReturnCase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_getStatus_DetailAnchor"><span class="">getStatus</span></a></span>()
+						: 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a></span>
+                    <div class="description">Gets the return case item status.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ReturnCase_isRMA_DetailAnchor"><span class="">isRMA</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Return whether this is an RMA.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_order_AbstractItemCtnr.html"><span class="">AbstractItemCtnr</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getCreatedBy_DetailAnchor"><span class="">getCreatedBy</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getGrandTotal_DetailAnchor"><span class="">getGrandTotal</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getItems_DetailAnchor"><span class="">getItems</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getModifiedBy_DetailAnchor"><span class="">getModifiedBy</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getOrder_DetailAnchor"><span class="">getOrder</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getProductSubtotal_DetailAnchor"><span class="">getProductSubtotal</span></a>, <a href="class_dw_order_AbstractItemCtnr.html#dw_order_AbstractItemCtnr_getServiceSubtotal_DetailAnchor"><span class="">getServiceSubtotal</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_Extensible.html"><span class="">Extensible</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_Extensible.html#dw_object_Extensible_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_Extensible.html#dw_object_Extensible_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_confirm_DetailAnchor"></a>
+                    <div class="detailName 
+						">confirm</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">confirm</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>Attempt to confirm the ReturnCase.</p>
+ <p>Without items the return case will be canceled</p>
+ <p>When confirmed, only the the custom attributes of its return case items can be changed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail">
+                            IllegalStateException						
+						 - 
+						 <span class="parameterDesc">thrown if Status is not <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_NEW_DetailAnchor">STATUS_NEW</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_createInvoice_DetailAnchor"></a>
+                    <div class="detailName 
+						">createInvoice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createInvoice</span>()
+					 : 
+					<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>
+                    </div>
+                    <div class="description">Creates a new <a href="class_dw_order_Invoice.html">Invoice</a> based on this
+ ReturnCase. The return-case-number will
+ be used as the invoice-number. The Invoice can then be
+ accessed using <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getInvoice_DetailAnchor">getInvoice()</a> or its number using
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getInvoiceNumber_DetailAnchor">getInvoiceNumber()</a>. The method must not be called more than once
+ for a ReturnCase, nor may 2 Invoices
+ exist with the same invoice-number.
+ <p/>
+ The new Invoice is a credit-invoice with a
+ <a href="class_dw_order_Invoice.html#dw_order_Invoice_STATUS_NOT_PAID_DetailAnchor">Invoice.STATUS_NOT_PAID</a> status, and will be passed to
+ the refund payment-hook in a separate database transaction for
+ processing.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">new invoice</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_createInvoice_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createInvoice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createInvoice</span>(invoiceNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>
+                    </div>
+                    <div class="description">Creates a new <a href="class_dw_order_Invoice.html">Invoice</a> based on this
+ ReturnCase. The invoice-number must be specified as an
+ argument. The Invoice can then be
+ accessed using <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getInvoice_DetailAnchor">getInvoice()</a> or its number using
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_getInvoiceNumber_DetailAnchor">getInvoiceNumber()</a>. The method must not be called more than once
+ for a ReturnCase, nor may 2 Invoices
+ exist with the same invoice-number.
+ <p/>
+ The new Invoice is a credit-invoice with a
+ <a href="class_dw_order_Invoice.html#dw_order_Invoice_STATUS_NOT_PAID_DetailAnchor">Invoice.STATUS_NOT_PAID</a> status, and will be passed to
+ the refund payment-hook in a separate database transaction for
+ processing.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">invoiceNumber</span>
+						 - 
+						<span class="parameterDesc">the invoice-number to be used for the invoice creation</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">new invoice</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_createItem_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createItem</span>(orderItemID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_ReturnCaseItem.html"><span class="">ReturnCaseItem</span></a>
+                    </div>
+                    <div class="description">Creates a new item for a given order item. Note: a ReturnCase may have
+ only one item per order item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">orderItemID</span>
+						 - 
+						<span class="parameterDesc">order item id</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">null or item for given order item</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">thrown if getItem(orderItem) returns non null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_createReturn_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createReturn</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createReturn</span>(returnNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_Return.html"><span class="">Return</span></a>
+                    </div>
+                    <div class="description">Creates a new <a href="class_dw_order_Return.html">Return</a> with the given number and associates it with this ReturnCase.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">returnNumber</span>
+						 - 
+						<span class="parameterDesc">return number to assign</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">new Return instance</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_createReturn_DetailAnchor"></a>
+                    <div class="detailName 
+						">createReturn</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createReturn</span>()
+					 : 
+					<a href="class_dw_order_Return.html"><span class="">Return</span></a>
+                    </div>
+                    <div class="description">Creates a new <a href="class_dw_order_Return.html">Return</a> with a generated number and associates it with this ReturnCase.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">new Return instance</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_getInvoice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInvoice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInvoice</span>()
+					 : 
+					<a href="class_dw_order_Invoice.html"><span class="">Invoice</span></a>
+                    </div>
+                    <div class="description">Returns null or the previously created <a href="class_dw_order_Invoice.html">Invoice</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">null or the previously created invoice.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_createInvoice_String_DetailAnchor">createInvoice(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_getInvoiceNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInvoiceNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInvoiceNumber</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns null or the invoice-number.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">null or the previously created invoice.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_createInvoice_String_DetailAnchor">createInvoice(String)</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_getItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getItems</span>()
+					 : 
+					<a href="class_dw_util_FilteringCollection.html"><span class="">FilteringCollection</span></a>
+                    </div>
+                    <div class="description">Access the collection of <a href="class_dw_order_ReturnCaseItem.html">ReturnCaseItem</a>s.
+ <p/>
+ This <a href="class_dw_util_FilteringCollection.html">FilteringCollection</a> can be sorted / filtered using:
+ <ul>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_ORDERBY_ITEMID_DetailAnchor">ORDERBY_ITEMID</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a> with
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_ORDERBY_ITEMPOSITION_DetailAnchor">ORDERBY_ITEMPOSITION</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_sort_Object_DetailAnchor">FilteringCollection.sort(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_ORDERBY_UNSORTED_DetailAnchor">ORDERBY_UNSORTED</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_select_Object_DetailAnchor">FilteringCollection.select(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_QUALIFIER_PRODUCTITEMS_DetailAnchor">QUALIFIER_PRODUCTITEMS</a>
+ <li><a href="class_dw_util_FilteringCollection.html#dw_util_FilteringCollection_select_Object_DetailAnchor">FilteringCollection.select(Object)</a> with <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_QUALIFIER_SERVICEITEMS_DetailAnchor">QUALIFIER_SERVICEITEMS</a>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the items</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_getReturnCaseNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturnCaseNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturnCaseNumber</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the mandatory return case number identifying this document.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the return case number</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_getReturns_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReturns</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReturns</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Return the collection of <a href="class_dw_order_Return.html">Return</a>s associated with this ReturnCase.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the collection of Returns.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_getStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatus</span>()
+					 : 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                    </div>
+                    <div class="description">Gets the return case item status. The status of a ReturnCase is read-only and calculated from the status of
+ the associated <a href="class_dw_order_ReturnCaseItem.html">ReturnCaseItem</a>s.
+ <p>
+ The possible values are <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_NEW_DetailAnchor">STATUS_NEW</a>,<a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_CONFIRMED_DetailAnchor">STATUS_CONFIRMED</a>,
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_PARTIAL_RETURNED_DetailAnchor">STATUS_PARTIAL_RETURNED</a>, <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_RETURNED_DetailAnchor">STATUS_RETURNED</a>,
+ <a href="class_dw_order_ReturnCase.html#dw_order_ReturnCase_STATUS_CANCELLED_DetailAnchor">STATUS_CANCELLED</a>.
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ReturnCase_isRMA_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRMA</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRMA</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Return whether this is an RMA. This is specified when calling <a href="class_dw_order_Order.html#dw_order_Order_createReturnCase_String_Boolean_DetailAnchor">Order.createReturnCase(String, Boolean)</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">whether this is an RMA.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

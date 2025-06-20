@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet LoginCustomer</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet LoginCustomer</div>
+            <div class="topLevelDescription">This pipelet authenticates the current session using the
+supplied Login and Password. If a different customer is
+currently authenticated in the session, then this
+customer is "logged out" and her/his privacy
+and form data are deleted. If the authentication with
+the given credentials fails, then the ERROR exit is
+taken and no changes to the session are made.
+<p/>
+If the optional input value "RememberMe" is supplied and set 
+to True, this pipelet stores a cookie on the customer's 
+machine which will be used to identify the customer when the 	
+next session is initiated.  The cookie is set to expire in 180 days 
+(i.e. 6 months).
+Note that a customer who is 
+remembered is not automatically authenticated and will have 
+to explicitly log in to access any personal information.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Login</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Login name.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Password</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Password
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RememberMe</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Optional Boolean value indicating if the customer wants to be remembered on the current computer.  If a value of True is supplied a cookie identifying the customer is stored upon successful login.  If a value of False, or a null value, is supplied, then no cookie is stored and any existing cookie is removed.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">LoginStatus</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+        A string containing a status code, indicating further details of authentication failure (or success). See dw.customer.AuthenticationStatus for further details.
+    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

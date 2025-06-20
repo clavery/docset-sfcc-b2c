@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class FacebookFeedHooks</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.facebook.FacebookFeedHooks">
+            <a name="dw.extensions.facebook.FacebookFeedHooks"></a>
+            <div class="packageName">dw.extensions.facebook</div>
+            <div class="className
+					">	
+        	
+				Class FacebookFeedHooks</div>
+            <div class="hierarchy">
+                <div style="position:relative;left:1%;">
+                    <img src="images/inherit.gif">dw.extensions.facebook.FacebookFeedHooks
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">FacebookFeedHooks interface containing extension points for customizing Facebook export feeds.
+ <p/>
+ These hooks are not executed in a transaction.
+ <p/>
+ The extension points (hook names), and the functions that are called by each extension point. A function must be
+ defined inside a JavaScript source and must be exported. The script with the exported hook function must be located
+ inside a site cartridge. Inside the site cartridge a 'package.json' file with a 'hooks' entry must exist.
+ <p/>
+
+ <pre>
+ "hooks": "./hooks.json"
+ </pre>
+
+ The hooks entry links to a json file, relative to the 'package.json' file. This file lists all registered hooks
+ inside the hooks property:
+ <p/>
+
+ <pre>
+ "hooks": [
+      {"name": "dw.extensions.facebook.feed.transformProduct", "script": "./hooks.ds"}
+ ]
+ </pre>
+ <p/>
+ A hook entry has a 'name' and a 'script' property.
+ <ul>
+ <li>The 'name' contains the extension point, the hook name.</li>
+ <li>The 'script' contains the script relative to the hooks file, with the exported hook function.</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_facebook_FacebookFeedHooks_extensionPointTransformProduct_DetailAnchor"></a>extensionPointTransformProduct
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.facebook.feed.transformProduct"
+                        <div class="description">The extension point name dw.extensions.facebook.feed.transformProduct.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_facebook_FacebookFeedHooks_transformProduct_Product_FacebookProduct_String_DetailAnchor"><span class="">transformProduct</span></a></span>(product
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, facebookProduct
+								 : 	
+								 
+								<a href="class_dw_extensions_facebook_FacebookProduct.html"><span class="">FacebookProduct</span></a>, feedId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Called after default transformation of given Demandware product to Facebook product as part of the catalog feed export.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_facebook_FacebookFeedHooks_transformProduct_Product_FacebookProduct_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">transformProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">transformProduct</span>(product
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, facebookProduct
+								 : 
+								 
+								<a href="class_dw_extensions_facebook_FacebookProduct.html"><span class="">FacebookProduct</span></a>, feedId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Called after default transformation of given Demandware product to Facebook product as part of the catalog feed
+ export.
+ </p>
+ <p>
+ To customize multiple feeds differently, for example if one is for Facebook Dynamic Ads and the other is for
+ Instagram Commerce, use the <code>feedId</code> parameter to determine which feed is being exported. If the same
+ customization should apply to all feeds, ignore the parameter.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">product</span>
+						 - 
+						<span class="parameterDesc">the Demandware product</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">facebookProduct</span>
+						 - 
+						<span class="parameterDesc">the Facebook representation of the product</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">feedId</span>
+						 - 
+						<span class="parameterDesc">the merchant-selected ID for the feed being exported</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null Status ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

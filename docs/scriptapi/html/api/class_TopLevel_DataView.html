@@ -1,0 +1,923 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class DataView</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_TopLevel.DataView">
+            <a name="TopLevel.DataView"></a>
+            <div class="packageName">TopLevel</div>
+            <div class="className
+					">	
+        	
+				Class DataView</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">DataView
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The DataView provides low level access to <a href="class_TopLevel_ArrayBuffer.html">ArrayBuffer</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">API Versioned:</span>
+                        <div class="parameterDetail">
+					From version 21.2.
+				</div>
+                    </div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="TopLevel_DataView_buffer_DetailAnchor"></a>buffer
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_ArrayBuffer.html"><span class="">ArrayBuffer</span></a>
+                        <div class="description">The array buffer referenced by this view.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="TopLevel_DataView_byteLength_DetailAnchor"></a>byteLength
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The number of bytes in the array buffer used by this view.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="TopLevel_DataView_byteOffset_DetailAnchor"></a>byteOffset
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The start offset for this view within the array buffer.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_DataView_ArrayBuffer_Number_Number_DetailAnchor"><span class="">DataView</span></a></span>(buffer
+									 : 
+									
+									<a href="class_TopLevel_ArrayBuffer.html"><span class="">ArrayBuffer</span></a>, byteOffset
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, byteLength
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)</span>
+                    <div class="description">Creates a data view on the given <a href="class_TopLevel_ArrayBuffer.html">ArrayBuffer</a>.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getFloat32_Number_Boolean_DetailAnchor"><span class="">getFloat32</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 32-bit floating point number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getFloat64_Number_Boolean_DetailAnchor"><span class="">getFloat64</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 64-bit floating point number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getInt16_Number_Boolean_DetailAnchor"><span class="">getInt16</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 16-bit signed integer number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getInt32_Number_Boolean_DetailAnchor"><span class="">getInt32</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 32-bit signed integer number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getInt8_Number_DetailAnchor"><span class="">getInt8</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 8-bit signed integer number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getUint16_Number_Boolean_DetailAnchor"><span class="">getUint16</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 16-bit unsigned integer number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getUint32_Number_Boolean_DetailAnchor"><span class="">getUint32</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 32-bit unsigned integer number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_getUint8_Number_DetailAnchor"><span class="">getUint8</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the 8-bit unsigned integer number at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setFloat32_Number_Number_Boolean_DetailAnchor"><span class="">setFloat32</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Writes a 32-bit floating point number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setFloat64_Number_Number_Boolean_DetailAnchor"><span class="">setFloat64</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Writes a 64-bit floating point number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setInt16_Number_Number_Boolean_DetailAnchor"><span class="">setInt16</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Writes a 16-bit signed integer number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setInt32_Number_Number_Boolean_DetailAnchor"><span class="">setInt32</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Writes a 32-bit signed integer number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setInt8_Number_Number_DetailAnchor"><span class="">setInt8</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Writes an 8-bit signed integer number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setUint16_Number_Number_Boolean_DetailAnchor"><span class="">setUint16</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Writes a 16-bit unsigned integer number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setUint32_Number_Number_Boolean_DetailAnchor"><span class="">setUint32</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Writes a 32-bit unsigned integer number into the byte array at the given offset.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#TopLevel_DataView_setUint8_Number_Number_DetailAnchor"><span class="">setUint8</span></a></span>(byteOffset
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Writes an 8-bit unsigned integer number into the byte array at the given offset.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_DataView_ArrayBuffer_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">DataView</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">DataView</span>(buffer
+								 : 
+								 					
+								<a href="class_TopLevel_ArrayBuffer.html"><span class="">ArrayBuffer</span></a>, byteOffset
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, byteLength
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+                    </div>
+                    <div class="description">Creates a data view on the given <a href="class_TopLevel_ArrayBuffer.html">ArrayBuffer</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">buffer</span>
+						 - 
+						<span class="parameterDesc">The array buffer storage object.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">Optional. The offset within the array buffer in bytes.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteLength</span>
+						 - 
+						<span class="parameterDesc">Optional. The number of bytes visible to this view.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getFloat32_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFloat32</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFloat32</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 32-bit floating point number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the number is stored in little-endian format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getFloat64_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFloat64</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFloat64</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 64-bit floating point number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the number is stored in little-endian format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getInt16_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInt16</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInt16</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 16-bit signed integer number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the number is stored in little-endian format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getInt32_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInt32</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInt32</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 32-bit signed integer number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the number is stored in little-endian format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getInt8_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInt8</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInt8</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 8-bit signed integer number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getUint16_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUint16</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUint16</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 16-bit unsigned integer number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the number is stored in little-endian format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getUint32_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUint32</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUint32</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 32-bit unsigned integer number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the number is stored in little-endian format.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_getUint8_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUint8</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUint8</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the 8-bit unsigned integer number at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setFloat32_Number_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setFloat32</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setFloat32</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes a 32-bit floating point number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the little-endian format is to be used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setFloat64_Number_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setFloat64</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setFloat64</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes a 64-bit floating point number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the little-endian format is to be used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setInt16_Number_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setInt16</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setInt16</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes a 16-bit signed integer number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the little-endian format is to be used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setInt32_Number_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setInt32</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setInt32</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes a 32-bit signed integer number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the little-endian format is to be used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setInt8_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setInt8</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setInt8</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes an 8-bit signed integer number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setUint16_Number_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setUint16</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setUint16</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes a 16-bit unsigned integer number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the little-endian format is to be used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setUint32_Number_Number_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setUint32</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setUint32</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, littleEndian
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes a 32-bit unsigned integer number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">littleEndian</span>
+						 - 
+						<span class="parameterDesc">Optional. Default is false. Use true if the little-endian format is to be used.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="TopLevel_DataView_setUint8_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setUint8</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setUint8</span>(byteOffset
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Writes an 8-bit unsigned integer number into the byte array at the given offset.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">byteOffset</span>
+						 - 
+						<span class="parameterDesc">The offset within the view.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be written.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

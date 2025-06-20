@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ImportContentSlots</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    ImportContentSlots</div>
+            <div class="topLevelDescription">Imports content slot configurations in the specified mode.</div>
+            <div class="topLevelDescription"></div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AfterImportFileHandling</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">What to do with the import file after successful or failed import. The handling is not performed if there was a locking problem, or if ImportFailedHandling is ERROR and the file failed to validate.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                Keep, Delete, Archive, Archive Zipped, Archive In Subfolders, Archive Overwrite Existing</div>
+                    <div class="description">
+                                                Default Value:
+                                                Archive</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ArchiveFolder</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Folder to store archived import files. Used when 'AfterImportFileHandling' is 'Archive' or 'Archive Zipped'. Folder location relative to 'IMPEX/' folder. If not defined 'IMPEX/archive/' is used.</div>
+                    <div class="description">
+                                                Default Value:
+                                                archive</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">FileNamePattern</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Regular expression pattern to select import files, e.g. 'import_.*\.xml'. Matching files are imported in alphanumerical order. If not defined all files in working folder are imported.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ImportFailedHandling</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The step exit status that will be used when the import process failed.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                ERROR, WARN</div>
+                    <div class="description">
+                                                Default Value:
+                                                WARN</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ImportMode</span>
+                                            &nbsp;:&nbsp;
+                                            ImportMode
+                                                    (Required)
+                                                </span>
+                    <div class="description">The import mode.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                Merge, Delete, Replace, Update</div>
+                    <div class="description">
+                                                Default Value:
+                                                Merge</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">NoFilesFoundHandling</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The step exit status that will be used when no matching files were found.</div>
+                    <div class="description">
+                                                Allowed Values:
+
+                                                OK, ERROR, WARN, NO_FILES_FOUND</div>
+                    <div class="description">
+                                                Default Value:
+                                                NO_FILES_FOUND</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">WorkingFolder</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">The folder that contains the import files, relative to the 'IMPEX/src/' folder. If not defined 'IMPEX/src/' is used as working folder.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Step exit status used when the import finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Step exit status used when the import failed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">NO_FILES_FOUND</span></span>
+                    <div class="description">Step exit status used when no files were found and parameter 'NoFilesFoundHandling' is 'NO_FILES_FOUND'.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">WARN</span></span>
+                    <div class="description">Step exit status used when the import was not successful and parameter 'ImportFailedHandling' or parameter 'NoFilesFoundHandling' is 'WARN'.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ApproachingDiscount</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.campaign.ApproachingDiscount">
+            <a name="dw.campaign.ApproachingDiscount"></a>
+            <div class="packageName">dw.campaign</div>
+            <div class="className
+					">	
+        	
+				Class ApproachingDiscount</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.campaign.ApproachingDiscount
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Transient class representing a discount that a <a href="class_dw_order_LineItemCtnr.html">LineItemCtnr</a>
+ "almost" qualifies for based on the amount of merchandise in it. Storefronts
+ can display information about approaching discounts to customers in order to
+ entice them to buy more merchandise.
+ <p/>
+ Approaching discounts are calculated on the basis of a
+ <a href="class_dw_campaign_DiscountPlan.html">DiscountPlan</a> instead of a LineItemCtnr itself. When one
+ of <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_DetailAnchor">PromotionMgr.getDiscounts(LineItemCtnr)</a> or
+ <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_PromotionPlan_DetailAnchor">PromotionMgr.getDiscounts(LineItemCtnr, PromotionPlan)</a> is
+ called, the promotions engine calculates the discounts the LineItemCtnr
+ receives based on the promotions in context, and also tries to determine the
+ discounts the LineItemCtnr would receive if additional merchandise were
+ added. DiscountPlan provides different methods to retrieve this approaching
+ discount info. Merchants can use these fine-grained methods to display
+ information about approaching order discounts on the cart page, and
+ approaching shipping discounts on the shipping method page during checkout,
+ for example.
+ <p/>
+ The merchant may include or exclude individual promotions from being included
+ in this list, and define distance thresholds when configuring their
+ promotions.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>conditionThreshold
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The amount of merchandise required in the cart in order to receive the
+ discount. For an order promotion "Get 15% off orders of $100 or more",
+ the condition threshold is $100.00.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>discount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The discount that the customer will receive if he adds more merchandise
+ to the cart. For an order promotion "Get 15% off orders of $100 or more",
+ the discount is a PercentageDiscount object.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>distanceFromConditionThreshold
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Convenience method that returns
+ <code>getConditionThreshold().subtract(getMerchandiseValue())</code></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>merchandiseTotal
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The amount of merchandise in the cart contributing towards the condition
+ threshold. This will always be less than the condition threshold.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_ApproachingDiscount_getConditionThreshold_DetailAnchor"><span class="">getConditionThreshold</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">The amount of merchandise required in the cart in order to receive the discount.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_ApproachingDiscount_getDiscount_DetailAnchor"><span class="">getDiscount</span></a></span>()
+						: 
+					<a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a></span>
+                    <div class="description">The discount that the customer will receive if he adds more merchandise to the cart.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_ApproachingDiscount_getDistanceFromConditionThreshold_DetailAnchor"><span class="">getDistanceFromConditionThreshold</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Convenience method that returns <code>getConditionThreshold().subtract(getMerchandiseValue())</code></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_ApproachingDiscount_getMerchandiseTotal_DetailAnchor"><span class="">getMerchandiseTotal</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">The amount of merchandise in the cart contributing towards the condition threshold.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_campaign_ApproachingDiscount_getConditionThreshold_DetailAnchor"></a>
+                    <div class="detailName 
+						">getConditionThreshold</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getConditionThreshold</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">The amount of merchandise required in the cart in order to receive the
+ discount. For an order promotion "Get 15% off orders of $100 or more",
+ the condition threshold is $100.00.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The amount of merchandise required in the cart in order to receive the discount.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_ApproachingDiscount_getDiscount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDiscount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDiscount</span>()
+					 : 
+					<a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a>
+                    </div>
+                    <div class="description">The discount that the customer will receive if he adds more merchandise
+ to the cart. For an order promotion "Get 15% off orders of $100 or more",
+ the discount is a PercentageDiscount object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The discount that the customer will receive if he adds more merchandise to the cart.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_ApproachingDiscount_getDistanceFromConditionThreshold_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDistanceFromConditionThreshold</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDistanceFromConditionThreshold</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Convenience method that returns
+ <code>getConditionThreshold().subtract(getMerchandiseValue())</code></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The amount of money needed to add to the order or shipment in order to receive the discount.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_ApproachingDiscount_getMerchandiseTotal_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMerchandiseTotal</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMerchandiseTotal</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">The amount of merchandise in the cart contributing towards the condition
+ threshold. This will always be less than the condition threshold.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The amount of merchandise in the cart contributing towards the condition threshold.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

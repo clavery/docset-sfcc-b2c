@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet GetReplicationStatus</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet GetReplicationStatus</div>
+            <div class="topLevelDescription">Deprecated. Do not use this pipelet. Replication tasks should be managed through the Business Manager.<br/>
+This pipelet retrieves the status of a replication process identified
+by its unique process id. It returns a status object containing
+detailed information.
+
+This pipelet can only be used on replication source systems (i.e. 
+the 'Staging' instance).
+
+The status object will be in state ERROR if no process could be
+found for the given id. Otherwise it will be in state OK and the
+code will be one of
+<UL>
+<LI>WAITING</LI>
+<LI>CANCELED</LI>
+<LI>RUNNING</LI>
+<LI>COMPLETED</LI>
+<LI>FAILED</LI>
+</UL>
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">Deprecated. Do not use this pipelet. Replication tasks should be managed through the Business Manager.</div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Replication (deprecated)</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ReplicationProcessID</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The id of the replication process which status is queried.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The status object containing detailed information about the replication porocess.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

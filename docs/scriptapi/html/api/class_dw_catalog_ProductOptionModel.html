@@ -1,0 +1,568 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductOptionModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.ProductOptionModel">
+            <a name="dw.catalog.ProductOptionModel"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class ProductOptionModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.ProductOptionModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class represents the option model of a specific product and
+ for a specific currency. It provides accessor methods to the configured
+ options and the values of those options. It has also methods to set a
+ specific selection of option values.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>options
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of product options.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_getOption_String_DetailAnchor"><span class="">getOption</span></a></span>(optionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a></span>
+                    <div class="description">Returns the product option for the specified ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_getOptions_DetailAnchor"><span class="">getOptions</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of product options.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_getOptionValue_ProductOption_String_DetailAnchor"><span class="">getOptionValue</span></a></span>(option
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, valueID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a></span>
+                    <div class="description">Returns the product option value object for the passed value id and in the context of the passed option.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_getOptionValues_ProductOption_DetailAnchor"><span class="">getOptionValues</span></a></span>(option
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of product option values for the specified product option.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_getPrice_ProductOptionValue_DetailAnchor"><span class="">getPrice</span></a></span>(optionValue
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the effective price of the specified option value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_getSelectedOptionValue_ProductOption_DetailAnchor"><span class="">getSelectedOptionValue</span></a></span>(option
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a></span>
+                    <div class="description">Returns the selected value for the specified product option.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_isSelectedOptionValue_ProductOption_ProductOptionValue_DetailAnchor"><span class="">isSelectedOptionValue</span></a></span>(option
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the specified option value is the one currently selected, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_setSelectedOptionValue_ProductOption_ProductOptionValue_DetailAnchor"><span class="">setSelectedOptionValue</span></a></span>(option
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+						: 
+					void</span>
+                    <div class="description">Updates the selection of the specified option based on the specified value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_url_String_Object_DetailAnchor"><span class="">url</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, varOptionAndValues
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns a URL that can be used to select one or more option values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductOptionModel_urlSelectOptionValue_String_ProductOption_ProductOptionValue_DetailAnchor"><span class="">urlSelectOptionValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, option
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an URL that can be used to select a specific value of a specific option.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_getOption_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOption</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOption</span>(optionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>
+                    </div>
+                    <div class="description">Returns the product option for the specified ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionID</span>
+						 - 
+						<span class="parameterDesc">the product option identifier.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product option for the specified ID.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_getOptions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptions</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of product options.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of Product Options.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_getOptionValue_ProductOption_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptionValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptionValue</span>(option
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, valueID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>
+                    </div>
+                    <div class="description">Returns the product option value object for the passed value id and in
+ the context of the passed option.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">option</span>
+						 - 
+						<span class="parameterDesc">The option to get the specified value for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">valueID</span>
+						 - 
+						<span class="parameterDesc">The id of the value to retrieve</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a value for the specified product option and value id</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_getOptionValues_ProductOption_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptionValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptionValues</span>(option
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of product option values for the
+ specified product option.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">option</span>
+						 - 
+						<span class="parameterDesc">the option for which we want to extract the collection of product option values.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of product option values for the specified product option.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_getPrice_ProductOptionValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPrice</span>(optionValue
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the effective price of the specified option value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionValue</span>
+						 - 
+						<span class="parameterDesc">the product option value to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the effective price of the specified option value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_getSelectedOptionValue_ProductOption_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelectedOptionValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelectedOptionValue</span>(option
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>
+                    </div>
+                    <div class="description">Returns the selected value for the specified product option. If no
+ option values was set as selected option explicitly, the method
+ returns the default option value for this option.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">option</span>
+						 - 
+						<span class="parameterDesc">The option to get the selected value for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a selected value for the specified product option.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_isSelectedOptionValue_ProductOption_ProductOptionValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">isSelectedOptionValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isSelectedOptionValue</span>(option
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the specified option value is the one currently selected,
+ false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">option</span>
+						 - 
+						<span class="parameterDesc">the product option.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the product option value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the specified option value is the one currently selected, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_setSelectedOptionValue_ProductOption_ProductOptionValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSelectedOptionValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSelectedOptionValue</span>(option
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Updates the selection of the specified option based on the specified value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">option</span>
+						 - 
+						<span class="parameterDesc">the option to update.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to use when updating the product option.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_url_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">url</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">url</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, varOptionAndValues
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns a URL that can be used to select one or more option values. The
+ optional <code>varOptionAndValues</code> argument can be empty, or can
+ contain one or more option / value pairs. This variable list must be even
+ in length, with options and values alternating. If the list is odd in
+ length, the last argument will be ignored. Options can be specified as
+ instances of ProductOption, or String option ID. Values can be specified
+ as instances of ProductOptionValue or as strings representing the value
+ ID. If a parameter is invalid, then the parameter pair is not included in
+ the generated URL. The returned URL will contain options and values
+ already selected in the product option model, as well as options and
+ values specified as method parameters. This includes option values
+ explicitly selected and implicitly selected by default.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">The pipeline action, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">varOptionAndValues</span>
+						 - 
+						<span class="parameterDesc">Variable length list of options and values.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The constructed URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductOptionModel_urlSelectOptionValue_String_ProductOption_ProductOptionValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlSelectOptionValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlSelectOptionValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, option
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOption.html"><span class="">ProductOption</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an URL that can be used to select a specific value of a specific
+ option.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the action to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">option</span>
+						 - 
+						<span class="parameterDesc">the option to use when constructing the URL.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to use when constructing the URL.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The constructed URL as string.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1475 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Variant</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.Variant">
+            <a name="dw.catalog.Variant"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class Variant</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%">
+                    <img src="images/inherit.gif"><a href="class_dw_catalog_Product.html">dw.catalog.Product</a>
+                </div>
+                <div style="position:relative;left:9%;">
+                    <img src="images/inherit.gif">dw.catalog.Variant
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a variant of a product variation. If the variant does not define an own value,
+ the value is retrieved by fallback from variation groups (sorted by their position) or the
+ variation master.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allProductLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All product links of the product variant. <br/>
+
+ If the variant does not define any product links, the product links are retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define any product links, the product links are
+ retrieved from the master product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>brand
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The brand of the product variant. <br/>
+
+ If the variant does not define an own value for 'brand', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'brand', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>classificationCategory
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Category.html"><span class="">Category</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The classification category of the product variant. <br/>
+
+ <b>Please note</b> that the classification category is always inherited
+ from the master and cannot be overridden by the variant.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>custom
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_object_CustomAttributes.html"><span class="">CustomAttributes</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The custom attributes of the variant. <br/>
+
+ Custom attributes are inherited from the master product and can
+ be overridden by the variant.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>EAN
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The EAN of the product variant. <br/>
+
+ If the variant does not define an own value for 'EAN', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'EAN', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>image
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The image of the product variant. <br/>
+
+ If the variant does not define an own value for 'image', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'image', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>longDescription
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The long description of the product variant. <br/>
+
+ If the variant does not define an own value for 'longDescription', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'longDescription', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>manufacturerName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The manufacturer name of the product variant. <br/>
+
+ If the variant does not define an own value for 'manufacturerName', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'manufacturerName', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>manufacturerSKU
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The manufacturer sku of the product variant. <br/>
+
+ If the variant does not define an own value for 'manufacturerSKU', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'manufacturerSKU', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>masterProduct
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ProductMaster for this mastered product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The name of the product variant. <br/>
+
+ If the variant does not define an own value for 'name', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'name', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineFrom
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The onlineFrom date of the product variant. <br/>
+
+ If the variant does not define an own value for 'onlineFrom', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'onlineFrom', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>onlineTo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The onlineTo date of the product variant. <br/>
+
+ If the variant does not define an own value for 'onlineTo', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'onlineTo', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>optionProduct
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if the variant has any options, otherwise 'false'.
+ Method also returns 'true' if the variant has not any options,
+ but the related variation groups (sorted by position) or
+ master product has options.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageDescription
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The pageDescription of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageDescription', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageDescription', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageKeywords
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The pageKeywords of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageKeywords', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageKeywords', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageTitle
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The pageTitle of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageTitle', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageTitle', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageURL
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The pageURL of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageURL', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageURL', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productLinks
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All product links of the product variant for which the target
+ product is assigned to the current site catalog. <br/>
+
+ If the variant does not define any product links, the product links are retrieved
+ from the assigned variation groups, sorted by their position
+
+ If none of the variation groups define any product links, the product links are retrieved
+ from the master product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shortDescription
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The short description of the product variant. <br/>
+
+ If the variant does not define an own value for 'shortDescription', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'shortDescription', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>taxClassID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The tax class id of the product variant. <br/>
+
+ If the variant does not define an own value for 'taxClassID', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'taxClassID', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>template
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The rendering template name of the product variant. <br/>
+
+ If the variant does not define an own value for 'template', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'template', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>thumbnail
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The thumbnail image of the product variant. <br/>
+
+ If the variant does not define an own value for 'thumbnail', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'thumbnail', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>unit
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The sales unit of the product variant as defined by the
+ master product. <br/>
+
+ If the variant does not define an own value for 'unit', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'unit', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>unitQuantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The unitQuantity of the product variant as defined by the
+ master product. <br/>
+
+ If the variant does not define an own value for 'unitQuantity', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'unitQuantity', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>UPC
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The UPC of the product variant. <br/>
+
+ If the variant does not define an own value for 'UPC', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'UPC', the value of
+ the master product is returned.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getAllProductLinks_DetailAnchor"><span class="">getAllProductLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all product links of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getAllProductLinks_Number_DetailAnchor"><span class="">getAllProductLinks</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all product links of the specified type of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getBrand_DetailAnchor"><span class="">getBrand</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the brand of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getClassificationCategory_DetailAnchor"><span class="">getClassificationCategory</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Category.html"><span class="">Category</span></a></span>
+                    <div class="description">Returns the classification category of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getCustom_DetailAnchor"><span class="">getCustom</span></a></span>()
+						: 
+					<a href="class_dw_object_CustomAttributes.html"><span class="">CustomAttributes</span></a></span>
+                    <div class="description">Returns the custom attributes of the variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getEAN_DetailAnchor"><span class="">getEAN</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the EAN of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getImage_DetailAnchor"><span class="">getImage</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the image of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getLongDescription_DetailAnchor"><span class="">getLongDescription</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the long description of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getManufacturerName_DetailAnchor"><span class="">getManufacturerName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the manufacturer name of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getManufacturerSKU_DetailAnchor"><span class="">getManufacturerSKU</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the manufacturer sku of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getMasterProduct_DetailAnchor"><span class="">getMasterProduct</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a></span>
+                    <div class="description">Returns the ProductMaster for this mastered product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getOnlineFrom_DetailAnchor"><span class="">getOnlineFrom</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the onlineFrom date of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getOnlineTo_DetailAnchor"><span class="">getOnlineTo</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the onlineTo date of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getPageDescription_DetailAnchor"><span class="">getPageDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the pageDescription of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getPageKeywords_DetailAnchor"><span class="">getPageKeywords</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the pageKeywords of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getPageTitle_DetailAnchor"><span class="">getPageTitle</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the pageTitle of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getPageURL_DetailAnchor"><span class="">getPageURL</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the pageURL of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getProductLinks_DetailAnchor"><span class="">getProductLinks</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all product links of the product variant for which the target product is assigned to the current site catalog.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getProductLinks_Number_DetailAnchor"><span class="">getProductLinks</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all product links of the specified type of the product variant for which the target product is assigned to the current site catalog.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getRecommendations_Number_DetailAnchor"><span class="">getRecommendations</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Retrieve the sorted collection of recommendations of the specified type for this product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getShortDescription_DetailAnchor"><span class="">getShortDescription</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the short description of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getTaxClassID_DetailAnchor"><span class="">getTaxClassID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the tax class id of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getTemplate_DetailAnchor"><span class="">getTemplate</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the rendering template name of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getThumbnail_DetailAnchor"><span class="">getThumbnail</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the thumbnail image of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getUnit_DetailAnchor"><span class="">getUnit</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the sales unit of the product variant as defined by the master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getUnitQuantity_DetailAnchor"><span class="">getUnitQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the unitQuantity of the product variant as defined by the master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_getUPC_DetailAnchor"><span class="">getUPC</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the UPC of the product variant.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_Variant_isOptionProduct_DetailAnchor"><span class="">isOptionProduct</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if the variant has any options, otherwise 'false'.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_catalog_Product.html#dw_catalog_Product_assignedToCategory_Category_DetailAnchor"><span class="">assignedToCategory</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getActiveData_DetailAnchor"><span class="">getActiveData</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllCategories_DetailAnchor"><span class="">getAllCategories</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllCategoryAssignments_DetailAnchor"><span class="">getAllCategoryAssignments</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllIncomingProductLinks_DetailAnchor"><span class="">getAllIncomingProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllIncomingProductLinks_Number_DetailAnchor"><span class="">getAllIncomingProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllProductLinks_DetailAnchor"><span class="">getAllProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllProductLinks_Number_DetailAnchor"><span class="">getAllProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllRecommendations_Catalog_DetailAnchor"><span class="">getAllRecommendations</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAllRecommendations_Catalog_Number_DetailAnchor"><span class="">getAllRecommendations</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAttributeModel_DetailAnchor"><span class="">getAttributeModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAvailabilityModel_DetailAnchor"><span class="">getAvailabilityModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAvailabilityModel_ProductInventoryList_DetailAnchor"><span class="">getAvailabilityModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getAvailableFlag_DetailAnchor"><span class="">getAvailableFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getBrand_DetailAnchor"><span class="">getBrand</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getBundledProductQuantity_Product_DetailAnchor"><span class="">getBundledProductQuantity</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getBundledProducts_DetailAnchor"><span class="">getBundledProducts</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getBundles_DetailAnchor"><span class="">getBundles</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getCategories_DetailAnchor"><span class="">getCategories</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getCategoryAssignment_Category_DetailAnchor"><span class="">getCategoryAssignment</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getCategoryAssignments_DetailAnchor"><span class="">getCategoryAssignments</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getClassificationCategory_DetailAnchor"><span class="">getClassificationCategory</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getEAN_DetailAnchor"><span class="">getEAN</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getID_DetailAnchor"><span class="">getID</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getImage_DetailAnchor"><span class="">getImage</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getImage_String_Number_DetailAnchor"><span class="">getImage</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getImage_String_DetailAnchor"><span class="">getImage</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getImages_String_DetailAnchor"><span class="">getImages</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getIncomingProductLinks_DetailAnchor"><span class="">getIncomingProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getIncomingProductLinks_Number_DetailAnchor"><span class="">getIncomingProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getLongDescription_DetailAnchor"><span class="">getLongDescription</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getManufacturerName_DetailAnchor"><span class="">getManufacturerName</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getManufacturerSKU_DetailAnchor"><span class="">getManufacturerSKU</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getMinOrderQuantity_DetailAnchor"><span class="">getMinOrderQuantity</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getName_DetailAnchor"><span class="">getName</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOnlineCategories_DetailAnchor"><span class="">getOnlineCategories</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOnlineFlag_DetailAnchor"><span class="">getOnlineFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOnlineFrom_DetailAnchor"><span class="">getOnlineFrom</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOnlineTo_DetailAnchor"><span class="">getOnlineTo</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOptionModel_DetailAnchor"><span class="">getOptionModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOrderableRecommendations_DetailAnchor"><span class="">getOrderableRecommendations</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getOrderableRecommendations_Number_DetailAnchor"><span class="">getOrderableRecommendations</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPageDescription_DetailAnchor"><span class="">getPageDescription</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPageKeywords_DetailAnchor"><span class="">getPageKeywords</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPageMetaTag_String_DetailAnchor"><span class="">getPageMetaTag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPageMetaTags_DetailAnchor"><span class="">getPageMetaTags</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPageTitle_DetailAnchor"><span class="">getPageTitle</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPageURL_DetailAnchor"><span class="">getPageURL</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPriceModel_DetailAnchor"><span class="">getPriceModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPriceModel_ProductOptionModel_DetailAnchor"><span class="">getPriceModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPrimaryCategory_DetailAnchor"><span class="">getPrimaryCategory</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getPrimaryCategoryAssignment_DetailAnchor"><span class="">getPrimaryCategoryAssignment</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getProductLinks_DetailAnchor"><span class="">getProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getProductLinks_Number_DetailAnchor"><span class="">getProductLinks</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getProductSetProducts_DetailAnchor"><span class="">getProductSetProducts</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getProductSets_DetailAnchor"><span class="">getProductSets</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getRecommendations_DetailAnchor"><span class="">getRecommendations</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getRecommendations_Number_DetailAnchor"><span class="">getRecommendations</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSearchableFlag_DetailAnchor"><span class="">getSearchableFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSearchableIfUnavailableFlag_DetailAnchor"><span class="">getSearchableIfUnavailableFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSearchPlacement_DetailAnchor"><span class="">getSearchPlacement</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSearchRank_DetailAnchor"><span class="">getSearchRank</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getShortDescription_DetailAnchor"><span class="">getShortDescription</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSiteMapChangeFrequency_DetailAnchor"><span class="">getSiteMapChangeFrequency</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSiteMapIncluded_DetailAnchor"><span class="">getSiteMapIncluded</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getSiteMapPriority_DetailAnchor"><span class="">getSiteMapPriority</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getStepQuantity_DetailAnchor"><span class="">getStepQuantity</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getStoreReceiptName_DetailAnchor"><span class="">getStoreReceiptName</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getStoreTaxClass_DetailAnchor"><span class="">getStoreTaxClass</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getTaxClassID_DetailAnchor"><span class="">getTaxClassID</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getTemplate_DetailAnchor"><span class="">getTemplate</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getThumbnail_DetailAnchor"><span class="">getThumbnail</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getUnit_DetailAnchor"><span class="">getUnit</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getUnitQuantity_DetailAnchor"><span class="">getUnitQuantity</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getUPC_DetailAnchor"><span class="">getUPC</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariants_DetailAnchor"><span class="">getVariants</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariationGroups_DetailAnchor"><span class="">getVariationGroups</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariationModel_DetailAnchor"><span class="">getVariationModel</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_includedInBundle_Product_DetailAnchor"><span class="">includedInBundle</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isAssignedToCategory_Category_DetailAnchor"><span class="">isAssignedToCategory</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isAssignedToSiteCatalog_DetailAnchor"><span class="">isAssignedToSiteCatalog</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isAvailable_DetailAnchor"><span class="">isAvailable</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isBundle_DetailAnchor"><span class="">isBundle</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isBundled_DetailAnchor"><span class="">isBundled</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isCategorized_DetailAnchor"><span class="">isCategorized</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isFacebookEnabled_DetailAnchor"><span class="">isFacebookEnabled</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isMaster_DetailAnchor"><span class="">isMaster</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isOnline_DetailAnchor"><span class="">isOnline</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isOptionProduct_DetailAnchor"><span class="">isOptionProduct</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isPinterestEnabled_DetailAnchor"><span class="">isPinterestEnabled</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isProduct_DetailAnchor"><span class="">isProduct</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isProductSet_DetailAnchor"><span class="">isProductSet</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isProductSetProduct_DetailAnchor"><span class="">isProductSetProduct</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isRetailSet_DetailAnchor"><span class="">isRetailSet</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isSearchable_DetailAnchor"><span class="">isSearchable</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isSiteProduct_DetailAnchor"><span class="">isSiteProduct</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isVariant_DetailAnchor"><span class="">isVariant</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_isVariationGroup_DetailAnchor"><span class="">isVariationGroup</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_setAvailableFlag_Boolean_DetailAnchor"><span class="">setAvailableFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_setOnlineFlag_2_Boolean_DetailAnchor"><span class="">setOnlineFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_setSearchableFlag_2_Boolean_DetailAnchor"><span class="">setSearchableFlag</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_setSearchPlacement_2_Number_DetailAnchor"><span class="">setSearchPlacement</span></a>, <a href="class_dw_catalog_Product.html#dw_catalog_Product_setSearchRank_2_Number_DetailAnchor"><span class="">setSearchRank</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getAllProductLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllProductLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllProductLinks</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all product links of the product variant. <br/>
+
+ If the variant does not define any product links, the product links are retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define any product links, the product links are
+ retrieved from the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">All product links of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getAllProductLinks_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllProductLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllProductLinks</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all product links of the specified type of the product variant. <br/>
+
+ If the variant does not define any product links of the specified type,
+ the product links are retrieved for the specified type from the assigned
+ variation groups, sorted by their position.
+
+ If none of the variation groups define any product links of the specified type,
+ the product links are retrieved for the specified type from the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">Type of the product link</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Product links of specified type of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getBrand_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBrand</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBrand</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the brand of the product variant. <br/>
+
+ If the variant does not define an own value for 'brand', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'brand', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The brand of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getClassificationCategory_DetailAnchor"></a>
+                    <div class="detailName 
+						">getClassificationCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getClassificationCategory</span>()
+					 : 
+					<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>
+                    </div>
+                    <div class="description">Returns the classification category of the product variant. <br/>
+
+ <b>Please note</b> that the classification category is always inherited
+ from the master and cannot be overridden by the variant.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The classification category as defined for the master product of the variant</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getCustom_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustom</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustom</span>()
+					 : 
+					<a href="class_dw_object_CustomAttributes.html"><span class="">CustomAttributes</span></a>
+                    </div>
+                    <div class="description">Returns the custom attributes of the variant. <br/>
+
+ Custom attributes are inherited from the master product and can
+ be overridden by the variant.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom attributes of the variant.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getEAN_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEAN</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEAN</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the EAN of the product variant. <br/>
+
+ If the variant does not define an own value for 'EAN', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'EAN', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The EAN of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getImage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the image of the product variant. <br/>
+
+ If the variant does not define an own value for 'image', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'image', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The image of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getLongDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLongDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLongDescription</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the long description of the product variant. <br/>
+
+ If the variant does not define an own value for 'longDescription', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'longDescription', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The long description of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getManufacturerName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getManufacturerName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getManufacturerName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the manufacturer name of the product variant. <br/>
+
+ If the variant does not define an own value for 'manufacturerName', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'manufacturerName', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The manufacturer name of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getManufacturerSKU_DetailAnchor"></a>
+                    <div class="detailName 
+						">getManufacturerSKU</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getManufacturerSKU</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the manufacturer sku of the product variant. <br/>
+
+ If the variant does not define an own value for 'manufacturerSKU', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'manufacturerSKU', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The manufacturer sku of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getMasterProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMasterProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMasterProduct</span>()
+					 : 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+                    </div>
+                    <div class="description">Returns the ProductMaster for this mastered product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ProductMaster of this mastered product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the product variant. <br/>
+
+ If the variant does not define an own value for 'name', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'name', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The name of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getOnlineFrom_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineFrom</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineFrom</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the onlineFrom date of the product variant. <br/>
+
+ If the variant does not define an own value for 'onlineFrom', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'onlineFrom', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The onlineFrom date of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getOnlineTo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOnlineTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOnlineTo</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the onlineTo date of the product variant. <br/>
+
+ If the variant does not define an own value for 'onlineTo', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'onlineTo', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The onlineTo date of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getPageDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the pageDescription of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageDescription', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageDescription', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The pageDescription of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getPageKeywords_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageKeywords</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageKeywords</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the pageKeywords of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageKeywords', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageKeywords', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The pageKeywords of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getPageTitle_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageTitle</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageTitle</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the pageTitle of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageTitle', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageTitle', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The pageTitle of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getPageURL_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageURL</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageURL</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the pageURL of the product variant. <br/>
+
+ If the variant does not define an own value for 'pageURL', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'pageURL', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The pageURL of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getProductLinks_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductLinks</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all product links of the product variant for which the target
+ product is assigned to the current site catalog. <br/>
+
+ If the variant does not define any product links, the product links are retrieved
+ from the assigned variation groups, sorted by their position
+
+ If none of the variation groups define any product links, the product links are retrieved
+ from the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Product links of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getProductLinks_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductLinks</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductLinks</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all product links of the specified type of the product variant
+ for which the target product is assigned to the current site catalog. <br/>
+
+ If the variant does not define any product links of the specified type,
+ the product links are retrieved for the specified type from the assigned
+ variation groups, sorted by their position
+
+ If none of the variation groups define any product links of the specified type,
+ the product links are retrieved for the specified type from the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">Type of the product link</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Product links of specified type of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getRecommendations_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRecommendations</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRecommendations</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Retrieve the sorted collection of recommendations of the specified type
+ for this product variant.  The types (cross-sell, up-sell, etc) are
+ enumerated in the <code>dw.catalog.Recommendation</code> class.  Only
+ recommendations which are stored in the current site catalog are returned.
+ Furthermore, a recommendation is only returned if the target of the
+ recommendation is assigned to the current site catalog.
+ <p/>
+
+ If the variant does not define any recommendations, recommendations are
+ retrieved from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define any recommendations, the recommendations
+ of the master are returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the recommendation type</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection, never null but possibly empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getShortDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShortDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShortDescription</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the short description of the product variant. <br/>
+
+ If the variant does not define an own value for 'shortDescription', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'shortDescription', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The short description of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getTaxClassID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTaxClassID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTaxClassID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the tax class id of the product variant. <br/>
+
+ If the variant does not define an own value for 'taxClassID', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'taxClassID', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The tax class id of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getTemplate_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTemplate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTemplate</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the rendering template name of the product variant. <br/>
+
+ If the variant does not define an own value for 'template', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'template', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The rendering template name of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getThumbnail_DetailAnchor"></a>
+                    <div class="detailName 
+						">getThumbnail</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getThumbnail</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the thumbnail image of the product variant. <br/>
+
+ If the variant does not define an own value for 'thumbnail', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'thumbnail', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The thumbnail image of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getUnit_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUnit</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the sales unit of the product variant as defined by the
+ master product. <br/>
+
+ If the variant does not define an own value for 'unit', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'unit', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The sales unit of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getUnitQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUnitQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUnitQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the unitQuantity of the product variant as defined by the
+ master product. <br/>
+
+ If the variant does not define an own value for 'unitQuantity', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'unitQuantity', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The unitQuantity of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_getUPC_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUPC</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUPC</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the UPC of the product variant. <br/>
+
+ If the variant does not define an own value for 'UPC', the value is retrieved
+ from the assigned variation groups, sorted by their position.
+
+ If none of the variation groups define a value for 'UPC', the value of
+ the master product is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The UPC of the variant, variation group or master</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_Variant_isOptionProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">isOptionProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isOptionProduct</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if the variant has any options, otherwise 'false'.
+ Method also returns 'true' if the variant has not any options,
+ but the related variation groups (sorted by position) or
+ master product has options.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the variant has any options, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

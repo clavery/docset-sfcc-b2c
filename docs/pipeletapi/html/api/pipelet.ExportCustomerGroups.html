@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet ExportCustomerGroups</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet ExportCustomerGroups</div>
+            <div class="topLevelDescription">Exports the customer groups.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ImpEx</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExportFile</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Export file path.  This path is relative to the 'src' subdirectory within the top-level IMPEX directory.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OverwriteExportFile</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Optional)
+						</span>
+                    <div class="description">
+Optional flag indicating whether to overwrite an existing export file or not.  true=overwrite (default), false=don't overwrite.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomerGroups</span>
+					&nbsp;:&nbsp;
+					Iterator
+							(Required)
+						</span>
+                    <div class="description">
+Customers Groups to export - an iterator of Customer Group objects.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorCode</span>
+					&nbsp;:&nbsp;
+					Integer
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Export status code.  Zero represents an export without process errors.  Any other value indicates an error.  This value will always be the same as the number after the "IMPEX-" prefix in Status.code.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorMsg</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status message associated with the status code.  This value will be the same as Status.message.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">LogFileName</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The name of the log file.  This file is located in the 'log' subdirectory of the IMPEX area.  This value will always be the same as the detail LogFileName in the returned Status object.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Status object representing the result of the export operation.  The status property (Status.status) will be set to 0 if the export executed without any process errors or 1 otherwise.  The code property (Status.code) will be set to one of the following values:<br/>
+<br/>
+IMPEX-0 = Successful.<br/>
+IMPEX-100 = One or more input parameters given were null.<br/>
+IMPEX-102 = The given ExportFile exists and the OverwriteExportFile flag is false.<br/>
+IMPEX-105 = The path of the given ImportFile is invalid, e.g. the path cannot contain "../".<br/>
+IMPEX-156 = There is no data to export.<br/>
+IMPEX-165 = The 'CustomerGroups' input parameter is missing.<br/>
+IMPEX-170 = Encountered an internal fatal error.  Additional information is in the details of the Status object.<br/>
+IMPEX-171 = System IO error.<br/>
+IMPEX-173 = System input parameter is invalid.<br/>
+<br/>
+The status object will always have the following detail:<br/>
+<br/>
+LogFileName = (String) The log file name in which the import logged all debug, warning, and error messages.<br/>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,613 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class DiscountPlan</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.campaign.DiscountPlan">
+            <a name="dw.campaign.DiscountPlan"></a>
+            <div class="packageName">dw.campaign</div>
+            <div class="className
+					">	
+        	
+				Class DiscountPlan</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.campaign.DiscountPlan
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">DiscountPlan represents a set of <a href="class_dw_campaign_Discount.html">Discount</a>s. Instances of the class are
+ returned by the <a href="class_dw_campaign_PromotionMgr.html">PromotionMgr</a> when requesting applicable discounts
+ for a specified set of promotions and a line item container
+ (see <a href="class_dw_campaign_PromotionMgr.html#dw_campaign_PromotionMgr_getDiscounts_LineItemCtnr_PromotionPlan_DetailAnchor">PromotionMgr.getDiscounts(LineItemCtnr, PromotionPlan)</a>).
+ <p/>
+ DiscountPlan provides methods to access the discounts contained in the plan,
+ add additional discounts to the plan (future) or remove discounts from the plan.</div>
+                    <div class="subclasses"></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_campaign_PromotionMgr.html">PromotionMgr</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>approachingOrderDiscounts
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Get the collection of order discounts that the LineItemCtnr "almost"
+ qualifies for based on the merchandise total in the cart. Nearness is
+ controlled by thresholds configured at the promotion level.
+ <p/>
+ The collection of returned approaching discounts is ordered by the
+ condition threshold of the promotion (e.g. "spend $100 and get 10% off"
+ discount is returned before "spend $150 and get 15% off" discount.) A
+ discount is not returned if it would be prevented from applying (because
+ of compatibility rules) by an order discount already in the DiscountPlan
+ or an approaching order discount with a lower condition threshold.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>bonusDiscounts
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All bonus discounts contained in the discount plan.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>lineItemCtnr
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns line item container associated with discount plan. <br/>
+ A discount plan is created from and associated with a line item container.
+ This method returns the line item container associated with this discount plan.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderDiscounts
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The percentage and amount order discounts contained in the
+ discount plan.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getApproachingOrderDiscounts_DetailAnchor"><span class="">getApproachingOrderDiscounts</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Get the collection of order discounts that the LineItemCtnr "almost" qualifies for based on the merchandise total in the cart.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getApproachingShippingDiscounts_Shipment_DetailAnchor"><span class="">getApproachingShippingDiscounts</span></a></span>(shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Get the collection of shipping discounts that the passed shipment "almost" qualifies for based on the merchandise total in the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getApproachingShippingDiscounts_Shipment_ShippingMethod_DetailAnchor"><span class="">getApproachingShippingDiscounts</span></a></span>(shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, shippingMethod
+								 : 	
+								 
+								<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Get the collection of shipping discounts that the passed shipment "almost" qualifies for based on the merchandise total in the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getApproachingShippingDiscounts_Shipment_Collection_DetailAnchor"><span class="">getApproachingShippingDiscounts</span></a></span>(shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, shippingMethods
+								 : 	
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Get the collection of shipping discounts that the passed shipment "almost" qualifies for based on the merchandise total in the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getBonusDiscounts_DetailAnchor"><span class="">getBonusDiscounts</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all bonus discounts contained in the discount plan.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getLineItemCtnr_DetailAnchor"><span class="">getLineItemCtnr</span></a></span>()
+						: 
+					<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a></span>
+                    <div class="description">Returns line item container associated with discount plan.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getOrderDiscounts_DetailAnchor"><span class="">getOrderDiscounts</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the percentage and amount order discounts contained in the discount plan.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getProductDiscounts_ProductLineItem_DetailAnchor"><span class="">getProductDiscounts</span></a></span>(productLineItem
+								 : 	
+								 
+								<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the percentage, amount and fix price discounts associated with the specified product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getProductShippingDiscounts_ProductLineItem_DetailAnchor"><span class="">getProductShippingDiscounts</span></a></span>(productLineItem
+								 : 	
+								 
+								<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the product-shipping discounts associated with the specified product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_getShippingDiscounts_Shipment_DetailAnchor"><span class="">getShippingDiscounts</span></a></span>(shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the percentage, amount and fix price discounts associated with the specified shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_campaign_DiscountPlan_removeDiscount_Discount_DetailAnchor"><span class="">removeDiscount</span></a></span>(discount
+								 : 	
+								 
+								<a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the specified discount from the discount plan.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getApproachingOrderDiscounts_DetailAnchor"></a>
+                    <div class="detailName 
+						">getApproachingOrderDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getApproachingOrderDiscounts</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Get the collection of order discounts that the LineItemCtnr "almost"
+ qualifies for based on the merchandise total in the cart. Nearness is
+ controlled by thresholds configured at the promotion level.
+ <p/>
+ The collection of returned approaching discounts is ordered by the
+ condition threshold of the promotion (e.g. "spend $100 and get 10% off"
+ discount is returned before "spend $150 and get 15% off" discount.) A
+ discount is not returned if it would be prevented from applying (because
+ of compatibility rules) by an order discount already in the DiscountPlan
+ or an approaching order discount with a lower condition threshold.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of approaching order discounts ordered by the condition threshold of the promotion ascending.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getApproachingShippingDiscounts_Shipment_DetailAnchor"></a>
+                    <div class="detailName 
+						">getApproachingShippingDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getApproachingShippingDiscounts</span>(shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Get the collection of shipping discounts that the passed shipment
+ "almost" qualifies for based on the merchandise total in the shipment.
+ Nearness is controlled by thresholds configured at the promotion level.
+ <p/>
+ The collection of returned approaching discounts is ordered by the
+ condition threshold of the promotion (e.g.
+ "spend $100 and get free standard shipping" discount is returned before
+ "spend $150 and get free standard shipping" discount.) A discount is not
+ returned if it would be prevented from applying (because of compatibility
+ rules) by a shipping discount already in the DiscountPlan or an
+ approaching shipping discount with a lower condition threshold.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">The shipment to calculate approaching discounts for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of approaching shipping discounts ordered by the condition threshold of the promotion ascending.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getApproachingShippingDiscounts_Shipment_ShippingMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">getApproachingShippingDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getApproachingShippingDiscounts</span>(shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, shippingMethod
+								 : 
+								 
+								<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Get the collection of shipping discounts that the passed shipment
+ "almost" qualifies for based on the merchandise total in the shipment.
+ Here "almost" is controlled by thresholds configured at the promotion
+ level.
+ <p/>
+ This method only returns discounts for shipping promotions which apply to
+ the passed shipping method.
+ <p/>
+ The collection of returned approaching discounts is ordered by the
+ condition threshold of the promotion (e.g.
+ "spend $100 and get free standard shipping" discount is returned before
+ "spend $150 and get free standard shipping" discount.) A discount is not
+ returned if it would be prevented from applying (because of compatibility
+ rules) by a shipping discount already in the DiscountPlan or an
+ approaching shipping discount with a lower condition threshold.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">The shipment to calculate approaching discounts for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingMethod</span>
+						 - 
+						<span class="parameterDesc">The shipping method to filter by.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of approaching shipping discounts ordered by the condition threshold of the promotion, ascending.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getApproachingShippingDiscounts_Shipment_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">getApproachingShippingDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getApproachingShippingDiscounts</span>(shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, shippingMethods
+								 : 
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Get the collection of shipping discounts that the passed shipment
+ "almost" qualifies for based on the merchandise total in the shipment.
+ Here "almost" is controlled by thresholds configured at the promotion
+ level.
+ <p/>
+ This method only returns discounts for shipping promotions which apply to
+ one of the passed shipping methods.
+ <p/>
+ The collection of returned approaching discounts is ordered by the
+ condition threshold of the promotion (e.g.
+ "spend $100 and get free standard shipping" discount is returned before
+ "spend $150 and get free standard shipping" discount.) A discount is not
+ returned if it would be prevented from applying (because of compatibility
+ rules) by a shipping discount already in the DiscountPlan or an
+ approaching shipping discount with a lower condition threshold.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">The shipment to calculate approaching discounts for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingMethods</span>
+						 - 
+						<span class="parameterDesc">The shipping methods to filter by.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of approaching shipping discounts ordered by the condition threshold of the promotion ascending.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getBonusDiscounts_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBonusDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBonusDiscounts</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all bonus discounts contained in the discount plan.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">All bonus discounts contained in discount plan</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getLineItemCtnr_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLineItemCtnr</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLineItemCtnr</span>()
+					 : 
+					<a href="class_dw_order_LineItemCtnr.html"><span class="">LineItemCtnr</span></a>
+                    </div>
+                    <div class="description">Returns line item container associated with discount plan. <br/>
+ A discount plan is created from and associated with a line item container.
+ This method returns the line item container associated with this discount plan.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Line item container associated with plan</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getOrderDiscounts_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderDiscounts</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the percentage and amount order discounts contained in the
+ discount plan.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Order discounts contained in the discount plan</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getProductDiscounts_ProductLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductDiscounts</span>(productLineItem
+								 : 
+								 
+								<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the percentage, amount and fix price discounts associated
+ with the specified product line item. If the specified product line
+ item is not contained in the discount plan, an empty collection is
+ returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productLineItem</span>
+						 - 
+						<span class="parameterDesc">Product line item</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Discounts associated with specified product line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getProductShippingDiscounts_ProductLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductShippingDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductShippingDiscounts</span>(productLineItem
+								 : 
+								 
+								<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the product-shipping discounts associated with the specified
+ product line item. If the specified product line item is not contained in
+ the discount plan, an empty collection is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productLineItem</span>
+						 - 
+						<span class="parameterDesc">Product line item</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Product-shipping discounts associated with specified product line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_getShippingDiscounts_Shipment_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingDiscounts</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingDiscounts</span>(shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the percentage, amount and fix price discounts associated with
+ the specified shipment. If the specified shipment is not contained in
+ the discount plan, an empty collection is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">the shipment for which to fetch discounts.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Discounts associated with specified shipment</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_campaign_DiscountPlan_removeDiscount_Discount_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeDiscount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeDiscount</span>(discount
+								 : 
+								 
+								<a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the specified discount from the discount plan. <br/>
+
+ This method should only be used for very simple discount scenarios. It
+ is not recommended to use the method in case of stacked discounts
+ (i.e. multiple order or product discounts), or complex discount types
+ like Buy X Get Y or Total Fixed Price, since correct re-calculation of the
+ discount plan based on the promotion rules is not guaranteed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">discount</span>
+						 - 
+						<span class="parameterDesc">Discount to be removed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

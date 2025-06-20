@@ -1,0 +1,1782 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class WebDAVClient</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.net.WebDAVClient">
+            <a name="dw.net.WebDAVClient"></a>
+            <div class="packageName">dw.net</div>
+            <div class="className
+					">	
+        	
+				Class WebDAVClient</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.net.WebDAVClient
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The WebDAVClient class supports the WebDAV methods GET, PUT, MKCOL, MOVE,
+ COPY, PROPFIND,OPTIONS and DELETE.
+ <p/>
+ <b>Note:</b> when this class is used with sensitive data, be careful in persisting sensitive information to disk.
+  The client can be used as shown in the following example:
+ <p/>
+ <pre>
+ var webdavClient : WebDAVClient = new WebDAVClient(&quot;http://mywebdav.server.com&quot;,&quot;myusername&quot;, &quot;mypassword&quot;);
+ var getString : String = webdavClient.get(&quot;myData.xml&quot;,&quot;UTF-8&quot;);
+ var message : String;
+
+ if (webdavClient.succeeded())
+ {
+      message = webDavClient.statusText;
+ }
+ else
+ {
+     // error handling
+     message=&quot;An error occured with status code &quot;+webdavClient.statusCode;
+ }
+
+ var data : XML = new XML(getString);
+ </pre>
+ <p/>
+ The WebDAV client supports the following authentication schemes:
+ <ul>
+ <li>Basic authentication</li>
+ <li>Digest authentication</li>
+ </ul>
+
+ The methods of this class do not generally throw exceptions if the underlying
+ WebDAV operation do not succeed.The result of a WebDAV operation can be
+ checked using the methods succeeded(), getStatusCode(), and getStatusText().
+ <p/>
+ Important note: This WebDAV client cannot be used to access the Commerce Cloud Digital
+ server via WebDAV protocol.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_DEFAULT_ENCODING_DetailAnchor"></a>DEFAULT_ENCODING
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"UTF-8"
+                        <div class="description">The default encoding character set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_DEFAULT_GET_FILE_SIZE_DetailAnchor"></a>DEFAULT_GET_FILE_SIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;5242880
+                        <div class="description">The default size for <code>get()</code> returning a File is 5MB.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_DEFAULT_GET_STRING_SIZE_DetailAnchor"></a>DEFAULT_GET_STRING_SIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2097152
+                        <div class="description">The default size for <code>get()</code> returning a String is 2MB.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_DEPTH_0_DetailAnchor"></a>DEPTH_0
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">The depth of searching a WebDAV destination using the PROPFIND method -
+ if that depth is given to the PROPFIND method as an input parameter the
+ destination will be searched only on the level of the given path and a
+ list of all containing files on that level will be returned [is not
+ supported by every server].</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_DEPTH_1_DetailAnchor"></a>DEPTH_1
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">The depth of searching a WebDAV destination using the PROPFIND method -
+ if that depth is given to the PROPFIND method as an input parameter the
+ destination will be searched until one level under the given path and a
+ list of all containing files in that two levels [/path and one level
+ underneath] will be returned [is not supported by every server].</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_DEPTH_INIFINITY_DetailAnchor"></a>DEPTH_INIFINITY
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2147483647
+                        <div class="description">The depth of searching a WebDAV destination using the PROPFIND method -
+ if that depth is given to the PROPFIND method as an input parameter the
+ destination will be fully searched and a list of all containing files
+ will be returned [is not supported by every server].</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_MAX_GET_FILE_SIZE_DetailAnchor"></a>MAX_GET_FILE_SIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;209715200
+                        <div class="description">The maximum size for <code>get()</code> returning a File is forty times
+ the default size for getting a file. The largest file allowed is 200MB.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_net_WebDAVClient_MAX_GET_STRING_SIZE_DetailAnchor"></a>MAX_GET_STRING_SIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;10485760
+                        <div class="description">The maximum size for <code>get()</code> returning a String is five
+ times the default size for getting a String. The largest String allowed
+ is 10MB.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allResponseHeaders
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_HashMap.html"><span class="">HashMap</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A <a href="class_dw_util_HashMap.html">HashMap</a> of all response headers.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>statusCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The status code after the execution of a method.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>statusText
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The status text after the execution of a method.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_WebDAVClient_String_String_String_DetailAnchor"><span class="">WebDAVClient</span></a></span>(rootUrl
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, username
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a new client for the use at a server which requires authentication.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_WebDAVClient_String_DetailAnchor"><span class="">WebDAVClient</span></a></span>(rootUrl
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a new client for the use at a server which does not require authentication.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_addRequestHeader_String_String_DetailAnchor"><span class="">addRequestHeader</span></a></span>(headerName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, headerValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a request header to the next WebDAV call.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_close_DetailAnchor"><span class="">close</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Closes the current connection to the server.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_copy_String_String_DetailAnchor"><span class="">copy</span></a></span>(origin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Copies a file on the server from one place <code>rootUrl</code>/<code>origin</code> to the other <code>rootUrl</code>/<code>destination</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_copy_String_String_Boolean_DetailAnchor"><span class="">copy</span></a></span>(origin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, overwrite
+								 : 	
+								 
+								boolean)
+						: 
+					boolean</span>
+                    <div class="description">Copies a file on the server from one place <code>rootUrl</code>/<code>origin</code> to the other <code>rootUrl</code>/<code>destination</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_copy_String_String_Boolean_Boolean_DetailAnchor"><span class="">copy</span></a></span>(origin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, overwrite
+								 : 	
+								 
+								boolean, shallow
+								 : 	
+								 
+								boolean)
+						: 
+					boolean</span>
+                    <div class="description">Copies a file on the server from one place <code>rootUrl</code>/<code>origin</code> to the other <code>rootUrl</code>/<code>destination</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_del_String_DetailAnchor"><span class="">del</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Deletes a file or directory from the remote server that can be found under <code>rootUrl</code>/<code>path</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_get_String_DetailAnchor"><span class="">get</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Reads the content of a remote file or directory that can be found under <code>rootUrl</code>/<code>path</code> and returns a string representation of the data found in the DEFAULT_ENCODING encoding.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_get_String_String_DetailAnchor"><span class="">get</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Reads the content of a remote file or directory that can be found under <code>rootUrl</code>/<code>path</code> and returns a string representation of the data found in the given <code>encoding</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_get_String_String_Number_DetailAnchor"><span class="">get</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxGetSize
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Reads the content of a remote file or directory that can be found under <code>rootUrl</code>/<code>path</code> and returns a string representation of the data found in the given <code>encoding</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_get_String_File_DetailAnchor"><span class="">get</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Reads the content of a remote file or directory that can be found under <code>rootUrl</code>/<code>path</code> in DEFAULT_ENCODING encoding and writes a <a href="class_dw_io_File.html">File</a> in the system's standard encoding, which is "UTF-8".</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_get_String_File_Number_DetailAnchor"><span class="">get</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, maxFileSize
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Reads the content of a remote file or directory that can be found under <code>rootUrl</code>/<code>path</code> in DEFAULT_ENCODING encoding and writes a <a href="class_dw_io_File.html">File</a> in the system's standard encoding, which is "UTF-8".</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_get_String_File_String_Number_DetailAnchor"><span class="">get</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, encoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxFileSize
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Reads the content of a remote file or directory that can be found under <code>rootUrl</code>/<code>path</code> in the passed encoding and writes a <a href="class_dw_io_File.html">File</a> in the system standard encoding, which is "UTF-8".</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_getAllResponseHeaders_DetailAnchor"><span class="">getAllResponseHeaders</span></a></span>()
+						: 
+					<a href="class_dw_util_HashMap.html"><span class="">HashMap</span></a></span>
+                    <div class="description">Returns a <a href="class_dw_util_HashMap.html">HashMap</a> of all response headers.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_getBinary_String_File_DetailAnchor"><span class="">getBinary</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Reads the content of a remote binary file that can be found under <code>rootUrl</code>/<code>path</code> and creates a local copy in <a href="class_dw_io_File.html">File</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_getBinary_String_File_Number_DetailAnchor"><span class="">getBinary</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, maxFileSize
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Reads the content of a remote binary file that can be found under <code>rootUrl</code>/<code>path</code> and creates a local copy in <a href="class_dw_io_File.html">File</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_getResponseHeader_String_DetailAnchor"><span class="">getResponseHeader</span></a></span>(header
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a specified response header - multiple headers are separated by CRLF.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_getStatusCode_DetailAnchor"><span class="">getStatusCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the status code after the execution of a method.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_getStatusText_DetailAnchor"><span class="">getStatusText</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the status text after the execution of a method.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_mkcol_String_DetailAnchor"><span class="">mkcol</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Creates a directory on the remote server on the location <code>rootUrl</code>/<code>path</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_move_String_String_DetailAnchor"><span class="">move</span></a></span>(origin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Moves a file on the server from one place <code>rootUrl</code> + "/" +<code>origin</code> to the other <code>rootUrl</code>/<code>destination</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_move_String_String_Boolean_DetailAnchor"><span class="">move</span></a></span>(origin
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, overwrite
+								 : 	
+								 
+								boolean)
+						: 
+					boolean</span>
+                    <div class="description">Moves a file on the server from one place <code>rootUrl</code>/<code>origin</code> to the other <code>rootUrl</code>/<code>destination</code> Can also be used to rename a remote file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_options_String_DetailAnchor"><span class="">options</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns a list of methods which can be executed on the server location <code>rootUrl</code>/<code>path</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_propfind_String_DetailAnchor"><span class="">propfind</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_net_WebDAVFileInfo.html"><span class="">WebDAVFileInfo</span></a>[]</span>
+                    <div class="description">Get file listing of a remote location.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_propfind_String_Number_DetailAnchor"><span class="">propfind</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, depth
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_net_WebDAVFileInfo.html"><span class="">WebDAVFileInfo</span></a>[]</span>
+                    <div class="description">Get file listing of a remote location.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_put_String_String_DetailAnchor"><span class="">put</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, content
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Puts content encoded with DEFAULT_ENCODING into a remote located file at <code>rootUrl</code>/<code>path</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_put_String_String_String_DetailAnchor"><span class="">put</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, content
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Puts content encoded with the passed encoding into a remote located file at <code>rootUrl</code>/<code>path</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_put_String_File_DetailAnchor"><span class="">put</span></a></span>(path
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Puts content out of a passed local file into a remote located file at <code>rootUrl</code>/<code>path</code>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_WebDAVClient_succeeded_DetailAnchor"><span class="">succeeded</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the last executed WebDAV method was executed successfully - otherwise false.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_WebDAVClient_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">WebDAVClient</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">WebDAVClient</span>(rootUrl
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, username
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, password
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a new client for the use at a server which requires
+ authentication.
+ The client supports the following authentication schemes:
+      - Basic authentication scheme
+      - Digest authentication scheme</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rootUrl</span>
+						 - 
+						<span class="parameterDesc">the url of the server one wants to connect to. All commands will be executed by the client relative to that url.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">username</span>
+						 - 
+						<span class="parameterDesc">username of the user for server authentication.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">password</span>
+						 - 
+						<span class="parameterDesc">password of the user for server authentication.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_WebDAVClient_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">WebDAVClient</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">WebDAVClient</span>(rootUrl
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a new client for the use at a server which does not require
+ authentication.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">rootUrl</span>
+						 - 
+						<span class="parameterDesc">the url of the server one wants to connect to. All commands will be executed by the client relative to that url.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_addRequestHeader_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addRequestHeader</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addRequestHeader</span>(headerName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, headerValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a request header to the next WebDAV call.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">headerName</span>
+						 - 
+						<span class="parameterDesc">name of the header.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">headerValue</span>
+						 - 
+						<span class="parameterDesc">value of the header.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_close_DetailAnchor"></a>
+                    <div class="detailName 
+						">close</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">close</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Closes the current connection to the server.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_copy_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">copy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">copy</span>(origin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Copies a file on the server from one place <code>rootUrl</code>/<code>origin</code>
+ to the other <code>rootUrl</code>/<code>destination</code>. If
+ <code>destination</code> already exists it gets overwritten. Returns
+ true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">origin</span>
+						 - 
+						<span class="parameterDesc">The origin where a file is located, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">destination</span>
+						 - 
+						<span class="parameterDesc">The destination where the file should be copied to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_copy_String_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">copy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">copy</span>(origin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, overwrite
+								 : 
+								 
+								boolean)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Copies a file on the server from one place <code>rootUrl</code>/<code>origin</code>
+ to the other <code>rootUrl</code>/<code>destination</code>. If
+ the passed parameter <code>overwrite</code> is true and
+ <code>destination</code> already exists it gets overwritten. Returns
+ true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">origin</span>
+						 - 
+						<span class="parameterDesc">The origin where a file is located, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">destination</span>
+						 - 
+						<span class="parameterDesc">The destination where the file should be copied to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">overwrite</span>
+						 - 
+						<span class="parameterDesc">A flag which determines whether the destination gets overwritten if it exists before copying.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_copy_String_String_Boolean_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">copy</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">copy</span>(origin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, overwrite
+								 : 
+								 
+								boolean, shallow
+								 : 
+								 
+								boolean)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Copies a file on the server from one place <code>rootUrl</code>/<code>origin</code>
+ to the other <code>rootUrl</code>/<code>destination</code>. If
+ the passed parameter <code>overwrite</code> is true and
+ <code>destination</code> already exists it gets overwritten. If the
+ passed parameter <code>shallow</code> is true a flat copy mechanism is
+ used.
+
+ Returns true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">origin</span>
+						 - 
+						<span class="parameterDesc">The origin where a file is located, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">destination</span>
+						 - 
+						<span class="parameterDesc">The destination where the file should be copied to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">overwrite</span>
+						 - 
+						<span class="parameterDesc">A flag which determines whether the destination gets overwritten if it exits before copying</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shallow</span>
+						 - 
+						<span class="parameterDesc">A flag which determines how to copy the given data.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_del_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">del</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">del</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Deletes a file or directory from the remote server that can be found
+ under <code>rootUrl</code>/<code>path</code>. Returns true if
+ succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the file or collection to delete, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_get_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Reads the content of a remote file or directory that can be found under
+ <code>rootUrl</code>/<code>path</code> and returns a string
+ representation of the data found in the DEFAULT_ENCODING encoding. If the
+ remote location is a directory the result depends on the server
+ configuration, some return an HTML formatted directory listing. Returns
+ at most DEFAULT_GET_STRING_SIZE bytes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the collection or file one wants to get, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the String representation of the data found on the given path.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_get_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Reads the content of a remote file or directory that can be found under
+ <code>rootUrl</code>/<code>path</code> and returns a string
+ representation of the data found in the given <code>encoding</code>. If
+ the remote location is a directory the result depends on the server
+ configuration, some return an HTML formatted directory listing. Returns
+ at most DEFAULT_GET_STRING_SIZE bytes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the collection or file one wants to get - relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">The encoding of the resulting String.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the String representation of the data found on the given path in the given encoding.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_get_String_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxGetSize
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Reads the content of a remote file or directory that can be found under
+ <code>rootUrl</code>/<code>path</code> and returns a string
+ representation of the data found in the given <code>encoding</code>. If
+ the remote location is a directory the result depends on the server
+ configuration, some return an HTML formatted directory listing. Returns
+ at most maxGetSize bytes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the collection or file one wants to get - relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">The encoding of the resulting String.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxGetSize</span>
+						 - 
+						<span class="parameterDesc">The maximum size of data in bytes. Not to exceed MAX_GET_STRING_SIZE.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns the String representation of the data found on the given path in the given encoding.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_get_String_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Reads the content of a remote file or directory that can be found under
+ <code>rootUrl</code>/<code>path</code> in DEFAULT_ENCODING
+ encoding and writes a <a href="class_dw_io_File.html">File</a> in the system's standard
+ encoding, which is "UTF-8". If the remote location is a directory the
+ result depends on the server configuration, some return an HTML formatted
+ directory listing. Receives at most DEFAULT_GET_FILE_SIZE bytes which
+ determines the file size of the local file. Returns true if succeeded
+ otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the collection or file one wants to get - relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to save the received data in.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_get_String_File_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, maxFileSize
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Reads the content of a remote file or directory that can be found under
+ <code>rootUrl</code>/<code>path</code> in DEFAULT_ENCODING
+ encoding and writes a <a href="class_dw_io_File.html">File</a> in the system's standard
+ encoding, which is "UTF-8". If the remote location is a directory the
+ result depends on the server configuration, some return an HTML formatted
+ directory listing. Receives at most maxFileSize bytes which determines
+ the file size of the local file. Returns true if succeeded, otherwise
+ false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the collection or file one wants to get - relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to save the received data in.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxFileSize</span>
+						 - 
+						<span class="parameterDesc">The maximum size of bytes to stream into the file. Not to exceed MAX_GET_FILE_SIZE.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_get_String_File_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, encoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxFileSize
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Reads the content of a remote file or directory that can be found under
+ <code>rootUrl</code>/<code>path</code> in the passed encoding and
+ writes a <a href="class_dw_io_File.html">File</a> in the system standard encoding, which is
+ "UTF-8". If the remote location is a directory the result depends on the
+ server configuration, some return an HTML formatted directory listing.
+ Receives at most maxFileSize bytes which determines the file size of the
+ local file. Returns true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path of the collection or file one wants to get - relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to save the received data in.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">The encoding to use when reading the remote file.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxFileSize</span>
+						 - 
+						<span class="parameterDesc">The maximum number of bytes to stream into the file. Not to exceed MAX_GET_FILE_SIZE.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">returns true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_getAllResponseHeaders_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllResponseHeaders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllResponseHeaders</span>()
+					 : 
+					<a href="class_dw_util_HashMap.html"><span class="">HashMap</span></a>
+                    </div>
+                    <div class="description">Returns a <a href="class_dw_util_HashMap.html">HashMap</a> of all response headers.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all headers in a <a href="class_dw_util_HashMap.html">HashMap</a>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_getBinary_String_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBinary</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBinary</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Reads the content of a remote binary file that can be found under
+ <code>rootUrl</code>/<code>path</code> and creates a local copy
+ in <a href="class_dw_io_File.html">File</a>. If the remote location is a directory the result
+ depends on the server configuration, some return an HTML formatted
+ directory listing. Copies at most DEFAULT_GET_FILE_SIZE bytes. Returns
+ true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path relative to <code>rootUrl</code> on the remote server including the file name.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The local file where the received binary data should be stored.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_getBinary_String_File_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBinary</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBinary</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>, maxFileSize
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Reads the content of a remote binary file that can be found under
+ <code>rootUrl</code>/<code>path</code> and creates a local copy
+ in <a href="class_dw_io_File.html">File</a>. If the remote location is a directory the result
+ depends on the server configuration, some return an HTML formatted
+ directory listing. Copies at most maxFileSize bytes. Returns true if
+ succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path relative to <code>rootUrl</code> on the remote server including the file name.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file local file where the received binary data should be stored.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxFileSize</span>
+						 - 
+						<span class="parameterDesc">The maximum number of bytes to stream into the file. Not to exceed MAX_GET_FILE_SIZE.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_getResponseHeader_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getResponseHeader</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getResponseHeader</span>(header
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a specified response header - multiple headers are separated by
+ CRLF.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">header</span>
+						 - 
+						<span class="parameterDesc">The name of the header.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The header - in case of multiple headers separated by CRLF.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_getStatusCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatusCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatusCode</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the status code after the execution of a method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the <code>statusCode</code>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_getStatusText_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatusText</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatusText</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the status text after the execution of a method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the <code>statusText</code>.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_mkcol_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">mkcol</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">mkcol</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Creates a directory on the remote server on the location
+ <code>rootUrl</code>/<code>path</code>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path relative to the <code>rootUrl</code> stated when instantiating the client where the new collection should be created.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_move_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">move</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">move</span>(origin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Moves a file on the server from one place <code>rootUrl</code> + "/" +<code>origin</code>
+ to the other <code>rootUrl</code>/<code>destination</code>. If
+ <code>destination</code> already exists it gets overwritten. Can also
+ be used to rename a remote file. Returns true if succeeded, otherwise
+ false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">origin</span>
+						 - 
+						<span class="parameterDesc">The origin where a file is located, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">destination</span>
+						 - 
+						<span class="parameterDesc">The destination where the file should be moved to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_move_String_String_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">move</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">move</span>(origin
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, destination
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, overwrite
+								 : 
+								 
+								boolean)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Moves a file on the server from one place <code>rootUrl</code>/<code>origin</code>
+ to the other <code>rootUrl</code>/<code>destination</code> Can
+ also be used to rename a remote file. If <code>overwrite</code> is true
+ and <code>destination</code> already exists it gets overwritten.
+ Returns true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">origin</span>
+						 - 
+						<span class="parameterDesc">The origin where a file is located, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">destination</span>
+						 - 
+						<span class="parameterDesc">The destination where the file should be moved to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">overwrite</span>
+						 - 
+						<span class="parameterDesc">A flag which determines whether the destination gets overwritten if it exists before moving.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_options_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">options</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">options</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns a list of methods which can be executed on the server location
+ <code>rootUrl</code>/<code>path</code>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path relative to the <code>rootUrl</code> stated when instantiating the client one wants to get the options for.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">list of WebDav methods which can be executed on the given path.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_propfind_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">propfind</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">propfind</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_net_WebDAVFileInfo.html"><span class="">WebDAVFileInfo</span></a>[]
+                    </div>
+                    <div class="description">Get file listing of a remote location.
+
+ Returns a list of <a href="class_dw_net_WebDAVFileInfo.html">WebDAVFileInfo</a> objects which contain
+ information about the files and directories located on
+ <code>rootUrl</code>/<code>path</code> and DEPTH_1 (1) level
+ underneath.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path relative to the <code>rootUrl</code> stated when instantiating the client where to get information about the containing files from.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an Array of <a href="class_dw_net_WebDAVFileInfo.html">WebDAVFileInfo</a> objects which hold information about the files located on the server at the location.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_propfind_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">propfind</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">propfind</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, depth
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_net_WebDAVFileInfo.html"><span class="">WebDAVFileInfo</span></a>[]
+                    </div>
+                    <div class="description">Get file listing of a remote location.
+
+ Returns a list of <a href="class_dw_net_WebDAVFileInfo.html">WebDAVFileInfo</a> objects which contain
+ information about the files and directories located on
+ <code>rootUrl</code>/<code>path</code> and the passed depth
+ underneath.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path relative to the <code>rootUrl</code> stated when instantiating the client where to get information about the containing files from.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">depth</span>
+						 - 
+						<span class="parameterDesc">The level starting from <code>rootUrl</code> down to which the file information gets collected.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an Array of <a href="class_dw_net_WebDAVFileInfo.html">WebDAVFileInfo</a> objects which hold information about the files located on the server at the location.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_put_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">put</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">put</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, content
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Puts content encoded with DEFAULT_ENCODING into a remote located file at
+ <code>rootUrl</code>/<code>path</code>. Returns true if
+ succeeded, otherwise false.
+ <p/>
+ If the content of a local file is to be uploaded, please use method
+ <a href="class_dw_net_WebDAVClient.html#dw_net_WebDAVClient_put_String_File_DetailAnchor">put(String, File)</a> instead.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path to put given content up to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">content</span>
+						 - 
+						<span class="parameterDesc">The content that has to be pushed on to the server.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_put_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">put</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">put</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, content
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, encoding
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Puts content encoded with the passed encoding into a remote located file
+ at <code>rootUrl</code>/<code>path</code>. Returns true if
+ succeeded, otherwise false.
+ <p/>
+ If the content of a local file is to be uploaded, please use method
+ <a href="class_dw_net_WebDAVClient.html#dw_net_WebDAVClient_put_String_File_DetailAnchor">put(String, File)</a> instead.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path to put a given content up to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">content</span>
+						 - 
+						<span class="parameterDesc">The content that has to be pushed on to a remote location.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">encoding</span>
+						 - 
+						<span class="parameterDesc">The encoding in which the data should be stored on the server.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_put_String_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">put</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">put</span>(path
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Puts content out of a passed local file into a remote located file
+ at <code>rootUrl</code>/<code>path</code>. This method performs
+ a binary file transfer. Returns true if succeeded, otherwise false.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">path</span>
+						 - 
+						<span class="parameterDesc">The path to put given content up to, relative to the <code>rootUrl</code> stated when instantiating the client.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to push up to the server.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if succeeded, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_WebDAVClient_succeeded_DetailAnchor"></a>
+                    <div class="detailName 
+						">succeeded</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">succeeded</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the last executed WebDAV method was executed successfully - otherwise false.
+ See the code snippet above for an example how to use the succeed() method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the last executed WebDAV method was successful - otherwise false.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_net_WebDAVClient.html">WebDAVClient</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

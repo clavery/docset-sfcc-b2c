@@ -1,0 +1,349 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SecureRandom</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.crypto.SecureRandom">
+            <a name="dw.crypto.SecureRandom"></a>
+            <div class="packageName">dw.crypto</div>
+            <div class="className
+					">	
+        	
+				Class SecureRandom</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.crypto.SecureRandom
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The SecureRandom class provides a cryptographically strong random number generator (RNG).
+ See the Internet Engineering Task Force (IETF) RFC 1750: <i>Randomness Recommendations for
+ Security</i> for more information.</a>
+
+ <p/> Typical callers of SecureRandom invoke the following methods to retrieve random bytes:
+
+ <pre>
+      Bytes bytes...
+      SecureRandom random = new SecureRandom();
+      Bytes nextBytes = random.nextBytes(bytes);
+ </pre>
+
+ or more convenient to get a Bytes with the demanded length
+
+ <pre>
+      int length = 32;
+      SecureRandom random = new SecureRandom();
+      Bytes nextBytes = random.nextBytes(length);
+ </pre>
+
+ dw.crypto.SecureRandom is intentionally an adapter for generating cryptographic hard random numbers.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_SecureRandom_DetailAnchor"><span class="">SecureRandom</span></a></span>()</span>
+                    <div class="description">Instantiates a new secure random.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_generateSeed_Number_DetailAnchor"><span class="">generateSeed</span></a></span>(numBytes
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a></span>
+                    <div class="description">Returns the given number of seed bytes, computed using the seed generation algorithm that this class uses to seed itself.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_nextBytes_Number_DetailAnchor"><span class="">nextBytes</span></a></span>(numBits
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a></span>
+                    <div class="description">Generates a user-specified number of random bytes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_nextInt_DetailAnchor"><span class="">nextInt</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_nextInt_Number_DetailAnchor"><span class="">nextInt</span></a></span>(upperBound
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns a pseudorandom, uniformly distributed int value between 0 (inclusive) and the specified value (exclusive), drawn from this random number generator's sequence.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_nextNumber_DetailAnchor"><span class="">nextNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the next pseudorandom, uniformly distributed Number value between 0.0 (inclusive) and 1.0 (exclusive) from this random number generator's sequence.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_crypto_SecureRandom_setSeed_Bytes_DetailAnchor"><span class="">setSeed</span></a></span>(seed
+								 : 	
+								 
+								<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>)
+						: 
+					void</span>
+                    <div class="description">Reseeds this random object.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_SecureRandom_DetailAnchor"></a>
+                    <div class="detailName 
+						">SecureRandom</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">SecureRandom</span>()
+                    </div>
+                    <div class="description">Instantiates a new secure random.</div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_generateSeed_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">generateSeed</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">generateSeed</span>(numBytes
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    </div>
+                    <div class="description">Returns the given number of seed bytes, computed using the seed
+ generation algorithm that this class uses to seed itself.  This
+ call may be used to seed other random number generators.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">numBytes</span>
+						 - 
+						<span class="parameterDesc">the number of seed bytes to generate.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the seed bytes.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_nextBytes_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">nextBytes</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">nextBytes</span>(numBits
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>
+                    </div>
+                    <div class="description">Generates a user-specified number of random bytes.
+
+ <p/> If a call to <code>setSeed</code> had not occurred previously,
+ the first call to this method forces this SecureRandom object
+ to seed itself.  This self-seeding will not occur if
+ <code>setSeed</code> was previously called.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">numBits</span>
+						 - 
+						<span class="parameterDesc">the demanded number of bits</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a randomly filled <a href="class_dw_util_Bytes.html">Bytes</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_nextInt_DetailAnchor"></a>
+                    <div class="detailName 
+						">nextInt</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">nextInt</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence. The general
+ contract of nextInt is that one int value is pseudorandomly generated and returned. All 2<sup>32
+ </sup> possible int values are produced with (approximately) equal probability.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the next pseudorandom, uniformly distributed int value from this random number generator's sequence</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_nextInt_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">nextInt</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">nextInt</span>(upperBound
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns a pseudorandom, uniformly distributed int value
+ between 0 (inclusive) and the specified value (exclusive), drawn from
+ this random number generator's sequence.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">upperBound</span>
+						 - 
+						<span class="parameterDesc">the bound on the random number to be returned. Must be positive.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the next pseudorandom, uniformly distributed int value between 0 (inclusive) and upperBound (exclusive) from this random number generator's sequence</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if n is not positive</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_nextNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">nextNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">nextNumber</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the next pseudorandom, uniformly distributed
+ Number value between 0.0 (inclusive) and 1.0 (exclusive) from this random number generator's sequence.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the next pseudorandom, uniformly distributed Number value between 0.0 and 1.0 from this random number generator's sequence</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_crypto_SecureRandom_setSeed_Bytes_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSeed</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSeed</span>(seed
+								 : 
+								 
+								<a href="class_dw_util_Bytes.html"><span class="">Bytes</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Reseeds this random object. The given seed supplements, rather than replaces, the existing seed. Thus, repeated calls are guaranteed never to reduce randomness.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">seed</span>
+						 - 
+						<span class="parameterDesc">the seed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

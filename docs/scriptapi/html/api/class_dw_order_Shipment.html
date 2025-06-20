@@ -1,0 +1,2048 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Shipment</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.Shipment">
+            <a name="dw.order.Shipment"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class Shipment</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.order.Shipment
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents an order shipment.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_order_Shipment_SHIPMENT_NOTSHIPPED_DetailAnchor"></a>SHIPMENT_NOTSHIPPED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">Shipment shipping status representing 'Not shipped'.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_order_Shipment.html#dw_order_Shipment_SHIPPING_STATUS_NOTSHIPPED_DetailAnchor">SHIPPING_STATUS_NOTSHIPPED</a> instead.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="dw_order_Shipment_SHIPMENT_SHIPPED_DetailAnchor"></a>SHIPMENT_SHIPPED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2
+                        <div class="description">Shipment shipping status representing 'Shipped'.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_order_Shipment.html#dw_order_Shipment_SHIPPING_STATUS_SHIPPED_DetailAnchor">SHIPPING_STATUS_SHIPPED</a> instead.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_Shipment_SHIPPING_STATUS_NOTSHIPPED_DetailAnchor"></a>SHIPPING_STATUS_NOTSHIPPED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">Shipment shipping status representing 'Not shipped'.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_Shipment_SHIPPING_STATUS_SHIPPED_DetailAnchor"></a>SHIPPING_STATUS_SHIPPED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2
+                        <div class="description">Shipment shipping status representing 'Shipped'.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedMerchandizeTotalGrossPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The adjusted total gross price, including tax, in the purchase currency. The adjusted total gross price
+ represents the sum of product prices and adjustments including tax, excluding services.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedMerchandizeTotalNetPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The adjusted net price, excluding tax, in the purchase currency. The adjusted net price represents the
+ the sum of product prices and adjustments, excluding services and tax.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedMerchandizeTotalPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The product total price after all product discounts. If the line item container is based on net pricing
+ the adjusted product total net price is returned. If the line item container is based on gross pricing the
+ adjusted product total gross price is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedMerchandizeTotalTax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total adjusted product tax in the purchase currency. The total adjusted product tax represents the
+ tax on products and adjustments, excluding services.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedShippingTotalGrossPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The adjusted sum of all shipping line items of the shipment, including shipping adjustuments and tax</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedShippingTotalNetPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The sum of all shipping line items of the shipment, including shipping adjustments, excluding tax.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedShippingTotalPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The adjusted shipping total price. If the line item container is based on net pricing the adjusted
+ shipping total net price is returned. If the line item container is based on gross pricing the adjusted shipping
+ total gross price is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedShippingTotalTax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The tax of all shipping line items of the shipment , including shipping adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All line items related to the shipment.
+ <p/>
+ The returned collection may include line items of the following types:
+ <ul>
+ <li><a href="class_dw_order_ProductLineItem.html">ProductLineItem</a></li>
+ <li><a href="class_dw_order_ShippingLineItem.html">ShippingLineItem</a></li>
+ <li><a href="class_dw_order_GiftCertificateLineItem.html">GiftCertificateLineItem</a></li>
+ <li><a href="class_dw_order_PriceAdjustment.html">PriceAdjustment</a></li>
+ </ul>
+ Their common type is <a href="class_dw_order_LineItem.html">LineItem</a>.
+ <p/>
+ Each <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a> in the collection may itself contain bundled or option product line items,
+ as well as a product-level shipping line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>default
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Return <code>true</code> if this shipment is the default shipment (shipment ID "me").</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>gift
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">Returns true if this line item represents a gift, false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftCertificateLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All gift certificate line items of the shipment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftMessage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The value set for gift message or null if no value set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of this shipment ("me" for the default shipment).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>merchandizeTotalGrossPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The gross product subtotal in the purchase currency. The gross product subtotal represents the sum of
+ product prices including tax, excluding services and adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>merchandizeTotalNetPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The net product subtotal, excluding tax, in the purchase currency. The net product subtotal represents
+ the sum of product prices, excluding services, adjustments, and tax.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>merchandizeTotalPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The product total price. If the line item container is based on net pricing the product total net
+ price is returned. If the line item container is based on gross pricing the product total gross price is
+ returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>merchandizeTotalPriceAdjustments
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of price adjustments that have been applied to the totals, such as a promotion on the
+ purchase value (i.e. $10 Off or 10% Off).</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Shipments cannot have product price adjustments, therefore this method will always return an empty collection</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>merchandizeTotalTax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total product tax in the purchase currency. The total product tax represents the tax on products,
+ excluding services and adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of all product line items related to this shipment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>proratedMerchandizeTotalPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total product price of the shipment, including product-level adjustments and prorating all
+ Buy-X-Get-Y and order-level adjustments, according to the scheme described in
+ <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>. For net pricing the net price is returned. For gross
+ pricing, the gross price is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shipmentNo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The shipment number for this shipment.
+ <p>
+ When an order is placed (<a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_placeOrder_Order_DetailAnchor">OrderMgr.placeOrder(Order)</a>) shipment number will be filled using a
+ sequence. Before order was placed <code>null</code> will be returned.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingAddress
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_OrderAddress.html"><span class="">OrderAddress</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The shipping address or null if none is set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of all shipping line items of the shipment, excluding any product-level shipping costs that
+ are associated with <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a>s of the shipment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingMethod
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>
+                        <div class="description">The shipping method or null if none is set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingMethodID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The shipping method ID or null if none is set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingPriceAdjustments
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of price adjustments that have been applied to the shipping costs of the shipment, for
+ example by the promotions engine.<br/>
+ Note that this method returns all shipping price adjustments in this shipment, regardless of which shipping line
+ item they belong to. Use <a href="class_dw_order_ShippingLineItem.html#dw_order_ShippingLineItem_getShippingPriceAdjustments_DetailAnchor">ShippingLineItem.getShippingPriceAdjustments()</a> to retrieve the shipping
+ price adjustments associated with a specific shipping line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingStatus
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                        <div class="description">The shipping status. Possible values are SHIPMENT_NOTSHIPPED or SHIPMENT_SHIPPED.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingTotalGrossPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The sum of all shipping line items of the shipment, including tax, excluding shipping adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingTotalNetPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The sum of all shipping line items of the shipment, excluding tax and adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingTotalPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The shipping total price. If the line item container is based on net pricing the shipping total net price
+ is returned. If the line item container is based on gross pricing the shipping total gross price is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingTotalTax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The tax of all shipping line items of the shipment before shipping adjustments have been applied.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>standardShippingLineItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Convenience method. Same as <code>getShippingLineItem(ShippingLineItem.STANDARD_SHIPPING_ID)</code></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>totalGrossPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total gross price of the shipment in the purchase currency. The total gross price is the sum of
+ product prices, service prices, adjustments, and tax.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>totalNetPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total net price of the shipment in the purchase currency. The total net price is the sum of product
+ prices, service prices, and adjustments, excluding tax.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>totalTax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total tax for the shipment in the purchase currency.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>trackingNumber
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The tracking number of this shipment.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_createShippingAddress_DetailAnchor"><span class="">createShippingAddress</span></a></span>()
+						: 
+					<a href="class_dw_order_OrderAddress.html"><span class="">OrderAddress</span></a></span>
+                    <div class="description">A shipment has initially no shipping address.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_createShippingLineItem_String_DetailAnchor"><span class="">createShippingLineItem</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a></span>
+                    <div class="description">Creates a new shipping line item for this shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_Shipment_createShippingPriceAdjustment_String_DetailAnchor"><span class="">createShippingPriceAdjustment</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a></span>
+                    <div class="description">Creates a shipping price adjustment to be applied to the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedMerchandizeTotalGrossPrice_DetailAnchor"><span class="">getAdjustedMerchandizeTotalGrossPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the adjusted total gross price, including tax, in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedMerchandizeTotalNetPrice_DetailAnchor"><span class="">getAdjustedMerchandizeTotalNetPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the adjusted net price, excluding tax, in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedMerchandizeTotalPrice_DetailAnchor"><span class="">getAdjustedMerchandizeTotalPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the product total price after all product discounts.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedMerchandizeTotalPrice_Boolean_DetailAnchor"><span class="">getAdjustedMerchandizeTotalPrice</span></a></span>(applyOrderLevelAdjustments
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total product price including product-level adjustments and, optionally, prorated order-level adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedMerchandizeTotalTax_DetailAnchor"><span class="">getAdjustedMerchandizeTotalTax</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total adjusted product tax in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedShippingTotalGrossPrice_DetailAnchor"><span class="">getAdjustedShippingTotalGrossPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the adjusted sum of all shipping line items of the shipment, including shipping adjustuments and tax</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedShippingTotalNetPrice_DetailAnchor"><span class="">getAdjustedShippingTotalNetPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the sum of all shipping line items of the shipment, including shipping adjustments, excluding tax.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedShippingTotalPrice_DetailAnchor"><span class="">getAdjustedShippingTotalPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the adjusted shipping total price.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAdjustedShippingTotalTax_DetailAnchor"><span class="">getAdjustedShippingTotalTax</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the tax of all shipping line items of the shipment , including shipping adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getAllLineItems_DetailAnchor"><span class="">getAllLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all line items related to the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getGiftCertificateLineItems_DetailAnchor"><span class="">getGiftCertificateLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all gift certificate line items of the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getGiftMessage_DetailAnchor"><span class="">getGiftMessage</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value set for gift message or null if no value set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of this shipment ("me" for the default shipment).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getMerchandizeTotalGrossPrice_DetailAnchor"><span class="">getMerchandizeTotalGrossPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the gross product subtotal in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getMerchandizeTotalNetPrice_DetailAnchor"><span class="">getMerchandizeTotalNetPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the net product subtotal, excluding tax, in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getMerchandizeTotalPrice_DetailAnchor"><span class="">getMerchandizeTotalPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the product total price.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_Shipment_getMerchandizeTotalPriceAdjustments_DetailAnchor"><span class="">getMerchandizeTotalPriceAdjustments</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of price adjustments that have been applied to the totals, such as a promotion on the purchase value (i.e.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getMerchandizeTotalTax_DetailAnchor"><span class="">getMerchandizeTotalTax</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total product tax in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getProductLineItems_DetailAnchor"><span class="">getProductLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of all product line items related to this shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getProratedMerchandizeTotalPrice_DetailAnchor"><span class="">getProratedMerchandizeTotalPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total product price of the shipment, including product-level adjustments and prorating all Buy-X-Get-Y and order-level adjustments, according to the scheme described in <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShipmentNo_DetailAnchor"><span class="">getShipmentNo</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the shipment number for this shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingAddress_DetailAnchor"><span class="">getShippingAddress</span></a></span>()
+						: 
+					<a href="class_dw_order_OrderAddress.html"><span class="">OrderAddress</span></a></span>
+                    <div class="description">Returns the shipping address or null if none is set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingLineItem_String_DetailAnchor"><span class="">getShippingLineItem</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a></span>
+                    <div class="description">Returns the shipping line item identified by the specified ID, or null if not found.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingLineItems_DetailAnchor"><span class="">getShippingLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of all shipping line items of the shipment, excluding any product-level shipping costs that are associated with <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a>s of the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingMethod_DetailAnchor"><span class="">getShippingMethod</span></a></span>()
+						: 
+					<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a></span>
+                    <div class="description">Returns the shipping method or null if none is set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingMethodID_DetailAnchor"><span class="">getShippingMethodID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the shipping method ID or null if none is set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_Shipment_getShippingPriceAdjustmentByPromotionID_String_DetailAnchor"><span class="">getShippingPriceAdjustmentByPromotionID</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a></span>
+                    <div class="description">Returns the shipping price adjustment associated with the specified promotion ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingPriceAdjustments_DetailAnchor"><span class="">getShippingPriceAdjustments</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of price adjustments that have been applied to the shipping costs of the shipment, for example by the promotions engine.<br/> Note that this method returns all shipping price adjustments in this shipment, regardless of which shipping line item they belong to.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingStatus_DetailAnchor"><span class="">getShippingStatus</span></a></span>()
+						: 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a></span>
+                    <div class="description">Returns the shipping status.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingTotalGrossPrice_DetailAnchor"><span class="">getShippingTotalGrossPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the sum of all shipping line items of the shipment, including tax, excluding shipping adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingTotalNetPrice_DetailAnchor"><span class="">getShippingTotalNetPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the sum of all shipping line items of the shipment, excluding tax and adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingTotalPrice_DetailAnchor"><span class="">getShippingTotalPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the shipping total price.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getShippingTotalTax_DetailAnchor"><span class="">getShippingTotalTax</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the tax of all shipping line items of the shipment before shipping adjustments have been applied.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getStandardShippingLineItem_DetailAnchor"><span class="">getStandardShippingLineItem</span></a></span>()
+						: 
+					<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a></span>
+                    <div class="description">Convenience method.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getTotalGrossPrice_DetailAnchor"><span class="">getTotalGrossPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total gross price of the shipment in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getTotalNetPrice_DetailAnchor"><span class="">getTotalNetPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total net price of the shipment in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getTotalTax_DetailAnchor"><span class="">getTotalTax</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the total tax for the shipment in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_getTrackingNumber_DetailAnchor"><span class="">getTrackingNumber</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the tracking number of this shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_isDefault_DetailAnchor"><span class="">isDefault</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Return <code>true</code> if this shipment is the default shipment (shipment ID "me").</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_isGift_DetailAnchor"><span class="">isGift</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this line item represents a gift, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_removeShippingLineItem_ShippingLineItem_DetailAnchor"><span class="">removeShippingLineItem</span></a></span>(shippingLineItem
+								 : 	
+								 
+								<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the specified shipping line item and any of its dependent shipping price adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_Shipment_removeShippingPriceAdjustment_PriceAdjustment_DetailAnchor"><span class="">removeShippingPriceAdjustment</span></a></span>(priceAdjustment
+								 : 	
+								 
+								<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the specified shipping price adjustment from the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_setGift_Boolean_DetailAnchor"><span class="">setGift</span></a></span>(isGift
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Controls if this line item is a gift or not.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_setGiftMessage_String_DetailAnchor"><span class="">setGiftMessage</span></a></span>(message
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the value to set for the gift message.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_setShippingMethod_ShippingMethod_DetailAnchor"><span class="">setShippingMethod</span></a></span>(method
+								 : 	
+								 
+								<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the specified shipping method for the specified shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_setShippingStatus_Number_DetailAnchor"><span class="">setShippingStatus</span></a></span>(status
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the shipping status of the shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_Shipment_setTrackingNumber_String_DetailAnchor"><span class="">setTrackingNumber</span></a></span>(aValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the tracking number of this shipment.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_createShippingAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">createShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createShippingAddress</span>()
+					 : 
+					<a href="class_dw_order_OrderAddress.html"><span class="">OrderAddress</span></a>
+                    </div>
+                    <div class="description">A shipment has initially no shipping address. This method creates a shipping address for the shipment and
+ replaces an existing shipping address.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new shipping address of the shipment</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_createShippingLineItem_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createShippingLineItem</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a>
+                    </div>
+                    <div class="description">Creates a new shipping line item for this shipment. If the specified ID is already assigned to any of the
+ existing shipping line items of the shipment, the method throws an exception.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">The id to use to locate the new shipping line item.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new shipping line item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_createShippingPriceAdjustment_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">createShippingPriceAdjustment</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">createShippingPriceAdjustment</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>
+                    </div>
+                    <div class="description">Creates a shipping price adjustment to be applied to the shipment. The price adjustment implicitly belongs to the
+ standard shipping line item if this line item exists, otherwise it belongs to the shipment itself.<br/>
+ The promotion ID is mandatory and must not be the ID of any actual promotion defined in Salesforce B2C
+ Commerce.<br/>
+ If there already exists a shipping price adjustment line item referring to the specified promotion ID, an
+ exception is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Deprecated in favor of <a href="class_dw_order_ShippingLineItem.html#dw_order_ShippingLineItem_createShippingPriceAdjustment_String_DetailAnchor">ShippingLineItem.createShippingPriceAdjustment(String)</a>, which explicitly relates the price adjustment to a shipping line item.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">Promotion ID</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new price adjustment line item.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedMerchandizeTotalGrossPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedMerchandizeTotalGrossPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedMerchandizeTotalGrossPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the adjusted total gross price, including tax, in the purchase currency. The adjusted total gross price
+ represents the sum of product prices and adjustments including tax, excluding services.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the adjusted total gross price, including tax, in the purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedMerchandizeTotalNetPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedMerchandizeTotalNetPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedMerchandizeTotalNetPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the adjusted net price, excluding tax, in the purchase currency. The adjusted net price represents the
+ the sum of product prices and adjustments, excluding services and tax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the adjusted net price, excluding tax, in the purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedMerchandizeTotalPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedMerchandizeTotalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedMerchandizeTotalPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the product total price after all product discounts. If the line item container is based on net pricing
+ the adjusted product total net price is returned. If the line item container is based on gross pricing the
+ adjusted product total gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">either the adjusted product total net or gross price.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedMerchandizeTotalPrice_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedMerchandizeTotalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedMerchandizeTotalPrice</span>(applyOrderLevelAdjustments
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total product price including product-level adjustments and, optionally, prorated order-level
+ adjustments. For net pricing the net price is returned. For gross pricing, the gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">applyOrderLevelAdjustments</span>
+						 - 
+						<span class="parameterDesc">If true, prorated order-level adjustments will be applied to total price</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Adjusted net or gross product total price</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_Shipment.html#dw_order_Shipment_getAdjustedMerchandizeTotalPrice_DetailAnchor">getAdjustedMerchandizeTotalPrice()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedMerchandizeTotalTax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedMerchandizeTotalTax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedMerchandizeTotalTax</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total adjusted product tax in the purchase currency. The total adjusted product tax represents the
+ tax on products and adjustments, excluding services.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the total tax in purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedShippingTotalGrossPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedShippingTotalGrossPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedShippingTotalGrossPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the adjusted sum of all shipping line items of the shipment, including shipping adjustuments and tax</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the adjusted sum of all shipping line items of the shipment, including shipping adjustuments and tax</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedShippingTotalNetPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedShippingTotalNetPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedShippingTotalNetPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the sum of all shipping line items of the shipment, including shipping adjustments, excluding tax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sum of all shipping line items of the shipment, including shipping adjustments, excluding tax.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedShippingTotalPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedShippingTotalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedShippingTotalPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the adjusted shipping total price. If the line item container is based on net pricing the adjusted
+ shipping total net price is returned. If the line item container is based on gross pricing the adjusted shipping
+ total gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">either the adjusted shipping total net or gross price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAdjustedShippingTotalTax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedShippingTotalTax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedShippingTotalTax</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the tax of all shipping line items of the shipment , including shipping adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the tax of all shipping line items of the shipment , including shipping adjustments.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getAllLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all line items related to the shipment.
+ <p/>
+ The returned collection may include line items of the following types:
+ <ul>
+ <li><a href="class_dw_order_ProductLineItem.html">ProductLineItem</a></li>
+ <li><a href="class_dw_order_ShippingLineItem.html">ShippingLineItem</a></li>
+ <li><a href="class_dw_order_GiftCertificateLineItem.html">GiftCertificateLineItem</a></li>
+ <li><a href="class_dw_order_PriceAdjustment.html">PriceAdjustment</a></li>
+ </ul>
+ Their common type is <a href="class_dw_order_LineItem.html">LineItem</a>.
+ <p/>
+ Each <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a> in the collection may itself contain bundled or option product line items,
+ as well as a product-level shipping line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all line items related to ths shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getGiftCertificateLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftCertificateLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftCertificateLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all gift certificate line items of the shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A collection of all GiftCertificateLineItems of the shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getGiftMessage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftMessage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftMessage</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value set for gift message or null if no value set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value set for gift message or null if no value set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of this shipment ("me" for the default shipment).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of this shipment</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getMerchandizeTotalGrossPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMerchandizeTotalGrossPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMerchandizeTotalGrossPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the gross product subtotal in the purchase currency. The gross product subtotal represents the sum of
+ product prices including tax, excluding services and adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the total gross price, including tax, in the purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getMerchandizeTotalNetPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMerchandizeTotalNetPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMerchandizeTotalNetPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the net product subtotal, excluding tax, in the purchase currency. The net product subtotal represents
+ the sum of product prices, excluding services, adjustments, and tax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the net price, excluding tax, in the purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getMerchandizeTotalPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMerchandizeTotalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMerchandizeTotalPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the product total price. If the line item container is based on net pricing the product total net
+ price is returned. If the line item container is based on gross pricing the product total gross price is
+ returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">either the product total net or gross price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getMerchandizeTotalPriceAdjustments_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getMerchandizeTotalPriceAdjustments</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getMerchandizeTotalPriceAdjustments</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of price adjustments that have been applied to the totals, such as a promotion on the
+ purchase value (i.e. $10 Off or 10% Off).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Shipments cannot have product price adjustments, therefore this method will always return an empty collection</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of price adjustments that have been applied to the totals, such as a promotion on the purchase value (i.e. $10 Off or 10% Off).</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getMerchandizeTotalTax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMerchandizeTotalTax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMerchandizeTotalTax</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total product tax in the purchase currency. The total product tax represents the tax on products,
+ excluding services and adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the total tax in purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getProductLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of all product line items related to this shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of all product line items related to this shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getProratedMerchandizeTotalPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProratedMerchandizeTotalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProratedMerchandizeTotalPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total product price of the shipment, including product-level adjustments and prorating all
+ Buy-X-Get-Y and order-level adjustments, according to the scheme described in
+ <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>. For net pricing the net price is returned. For gross
+ pricing, the gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Adjusted and prorated net or gross product total price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShipmentNo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShipmentNo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShipmentNo</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the shipment number for this shipment.
+ <p>
+ When an order is placed (<a href="class_dw_order_OrderMgr.html#dw_order_OrderMgr_placeOrder_Order_DetailAnchor">OrderMgr.placeOrder(Order)</a>) shipment number will be filled using a
+ sequence. Before order was placed <code>null</code> will be returned.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipment number for this shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingAddress_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingAddress</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingAddress</span>()
+					 : 
+					<a href="class_dw_order_OrderAddress.html"><span class="">OrderAddress</span></a>
+                    </div>
+                    <div class="description">Returns the shipping address or null if none is set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping address or null if none is set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingLineItem_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingLineItem</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a>
+                    </div>
+                    <div class="description">Returns the shipping line item identified by the specified ID, or null if not found.
+ <p/>
+ To get the standard shipping line item for this shipment, use the identifier
+ <a href="class_dw_order_ShippingLineItem.html#dw_order_ShippingLineItem_STANDARD_SHIPPING_ID_DetailAnchor">ShippingLineItem.STANDARD_SHIPPING_ID</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">the identifier to use to locate the shipping line item.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping line item identified by the specified ID, or null if not found.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of all shipping line items of the shipment, excluding any product-level shipping costs that
+ are associated with <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a>s of the shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of all shipping line items of the shipment, excluding any product-level shipping costs.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingMethod</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingMethod</span>()
+					 : 
+					<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>
+                    </div>
+                    <div class="description">Returns the shipping method or null if none is set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping method or null if none is set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingMethodID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingMethodID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingMethodID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the shipping method ID or null if none is set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping method ID or null if none is set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingPriceAdjustmentByPromotionID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getShippingPriceAdjustmentByPromotionID</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getShippingPriceAdjustmentByPromotionID</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>
+                    </div>
+                    <div class="description">Returns the shipping price adjustment associated with the specified promotion ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This item is deprecated.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">the promotion ID</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The price adjustment associated with the given promotion ID</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingPriceAdjustments_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingPriceAdjustments</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingPriceAdjustments</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of price adjustments that have been applied to the shipping costs of the shipment, for
+ example by the promotions engine.<br/>
+ Note that this method returns all shipping price adjustments in this shipment, regardless of which shipping line
+ item they belong to. Use <a href="class_dw_order_ShippingLineItem.html#dw_order_ShippingLineItem_getShippingPriceAdjustments_DetailAnchor">ShippingLineItem.getShippingPriceAdjustments()</a> to retrieve the shipping
+ price adjustments associated with a specific shipping line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of price adjustments that have been applied to the shipping costs of the shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingStatus</span>()
+					 : 
+					<a href="class_dw_value_EnumValue.html"><span class="">EnumValue</span></a>
+                    </div>
+                    <div class="description">Returns the shipping status. Possible values are SHIPMENT_NOTSHIPPED or SHIPMENT_SHIPPED.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping status. Possible values are SHIPMENT_NOTSHIPPED or SHIPMENT_SHIPPED.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingTotalGrossPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingTotalGrossPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingTotalGrossPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the sum of all shipping line items of the shipment, including tax, excluding shipping adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sum of all shipping line items of the shipment, including tax, excluding shipping adjustments.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingTotalNetPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingTotalNetPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingTotalNetPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the sum of all shipping line items of the shipment, excluding tax and adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sum of all shipping line items of the shipment, excluding tax and adjustments.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingTotalPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingTotalPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingTotalPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the shipping total price. If the line item container is based on net pricing the shipping total net price
+ is returned. If the line item container is based on gross pricing the shipping total gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">either the shipping total net or gross price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getShippingTotalTax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingTotalTax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingTotalTax</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the tax of all shipping line items of the shipment before shipping adjustments have been applied.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the tax of all shipping line items of the shipment before shipping adjustments have been applied.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getStandardShippingLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStandardShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStandardShippingLineItem</span>()
+					 : 
+					<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a>
+                    </div>
+                    <div class="description">Convenience method. Same as <code>getShippingLineItem(ShippingLineItem.STANDARD_SHIPPING_ID)</code></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The standard shipping line item, or null if it does not exist.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getTotalGrossPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTotalGrossPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTotalGrossPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total gross price of the shipment in the purchase currency. The total gross price is the sum of
+ product prices, service prices, adjustments, and tax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the grand total price gross of tax for the shipment, in purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getTotalNetPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTotalNetPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTotalNetPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total net price of the shipment in the purchase currency. The total net price is the sum of product
+ prices, service prices, and adjustments, excluding tax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the grand total price for the shipment net of tax, in purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getTotalTax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTotalTax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTotalTax</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the total tax for the shipment in the purchase currency.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the total tax for the shipment, in purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_getTrackingNumber_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTrackingNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTrackingNumber</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the tracking number of this shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the tracking number of this shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_isDefault_DetailAnchor"></a>
+                    <div class="detailName 
+						">isDefault</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isDefault</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Return <code>true</code> if this shipment is the default shipment (shipment ID "me").</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if this shipment is the default shipment</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_isGift_DetailAnchor"></a>
+                    <div class="detailName 
+						">isGift</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isGift</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this line item represents a gift, false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this line item represents a gift, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_removeShippingLineItem_ShippingLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeShippingLineItem</span>(shippingLineItem
+								 : 
+								 
+								<a href="class_dw_order_ShippingLineItem.html"><span class="">ShippingLineItem</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the specified shipping line item and any of its dependent shipping price adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shippingLineItem</span>
+						 - 
+						<span class="parameterDesc">The shipping line item to be removed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_removeShippingPriceAdjustment_PriceAdjustment_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">removeShippingPriceAdjustment</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">removeShippingPriceAdjustment</span>(priceAdjustment
+								 : 
+								 
+								<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the specified shipping price adjustment from the shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Deprecated in favor of <a href="class_dw_order_ShippingLineItem.html#dw_order_ShippingLineItem_removeShippingPriceAdjustment_PriceAdjustment_DetailAnchor">ShippingLineItem.removeShippingPriceAdjustment(PriceAdjustment)</a> since shipping price adjustments belong to a specific shipping line item.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceAdjustment</span>
+						 - 
+						<span class="parameterDesc">The price adjustment line item to remove</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_setGift_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGift</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGift</span>(isGift
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Controls if this line item is a gift or not.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">isGift</span>
+						 - 
+						<span class="parameterDesc">set to true if you want this line item to represent a gift.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_setGiftMessage_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGiftMessage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGiftMessage</span>(message
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the value to set for the gift message.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">message</span>
+						 - 
+						<span class="parameterDesc">the value to set for the gift message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_setShippingMethod_ShippingMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingMethod</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingMethod</span>(method
+								 : 
+								 
+								<a href="class_dw_order_ShippingMethod.html"><span class="">ShippingMethod</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the specified shipping method for the specified shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">method</span>
+						 - 
+						<span class="parameterDesc">the shipping method to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_setShippingStatus_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShippingStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShippingStatus</span>(status
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the shipping status of the shipment. <br/>
+ Possible values are <a href="class_dw_order_Shipment.html#dw_order_Shipment_SHIPPING_STATUS_NOTSHIPPED_DetailAnchor">SHIPPING_STATUS_NOTSHIPPED</a> or <a href="class_dw_order_Shipment.html#dw_order_Shipment_SHIPPING_STATUS_SHIPPED_DetailAnchor">SHIPPING_STATUS_SHIPPED</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">Shipment shipping status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_Shipment_setTrackingNumber_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setTrackingNumber</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setTrackingNumber</span>(aValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the tracking number of this shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">aValue</span>
+						 - 
+						<span class="parameterDesc">the tracking number of this shipment.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

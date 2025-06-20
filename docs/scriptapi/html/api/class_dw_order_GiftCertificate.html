@@ -1,0 +1,997 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class GiftCertificate</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.GiftCertificate">
+            <a name="dw.order.GiftCertificate"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class GiftCertificate</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.order.GiftCertificate
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a Gift Certificate that can be used to purchase
+ products.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_GiftCertificate_STATUS_ISSUED_DetailAnchor"></a>STATUS_ISSUED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">Represents a status of 'issued', which indicates that the Gift Certificate
+ has been created and that it can be used to purchase products.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_GiftCertificate_STATUS_PARTIALLY_REDEEMED_DetailAnchor"></a>STATUS_PARTIALLY_REDEEMED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2
+                        <div class="description">Represents a status of 'partially redeemed', which indicates that the Gift Certificate
+ has been used to purchase products, but that there is still a balance on
+ the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_GiftCertificate_STATUS_PENDING_DetailAnchor"></a>STATUS_PENDING
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">Represents a status of 'pending', which indicates that the Gift Certificate
+ has been created but that it cannot be used yet.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_GiftCertificate_STATUS_REDEEMED_DetailAnchor"></a>STATUS_REDEEMED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;3
+                        <div class="description">Represents a status of 'redeemed', which indicates that the Gift Certificate
+ has been used and no longer contains a balance.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>amount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The original amount on the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>balance
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The balance on the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The description string.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>enabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">Returns true if the Gift Certificate is enabled, false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftCertificateCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The code of the gift certificate. This redemption code is send to
+ gift certificate recipient.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The code of the gift certificate. This redemption code is send to
+ gift certificate recipient.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_order_GiftCertificate.html#dw_order_GiftCertificate_getGiftCertificateCode_DetailAnchor">getGiftCertificateCode()</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maskedGiftCertificateCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The masked gift certificate code with
+ all but the last 4 characters replaced with a '*' character.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>merchantID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The merchant ID of the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>message
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The message to include in the email of the person receiving
+ the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderNo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The order number</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>recipientEmail
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The email address of the person receiving
+ the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>recipientName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The name of the person receiving
+ the gift certificate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>senderName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The name of the person or organization that
+ sent the gift certificate or null if undefined.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>status
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The status where the possible values are
+ STATUS_PENDING, STATUS_ISSUED, STATUS_PARTIALLY_REDEEMED
+ or STATUS_REDEEMED.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getAmount_DetailAnchor"><span class="">getAmount</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the original amount on the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getBalance_DetailAnchor"><span class="">getBalance</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the balance on the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the description string.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getGiftCertificateCode_DetailAnchor"><span class="">getGiftCertificateCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the code of the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_GiftCertificate_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the code of the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getMaskedGiftCertificateCode_DetailAnchor"><span class="">getMaskedGiftCertificateCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the masked gift certificate code with all but the last 4 characters replaced with a '*' character.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getMaskedGiftCertificateCode_Number_DetailAnchor"><span class="">getMaskedGiftCertificateCode</span></a></span>(ignore
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the masked gift certificate code with all but the specified number of characters replaced with a '*' character.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getMerchantID_DetailAnchor"><span class="">getMerchantID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the merchant ID of the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getMessage_DetailAnchor"><span class="">getMessage</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the message to include in the email of the person receiving the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getOrderNo_DetailAnchor"><span class="">getOrderNo</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the order number</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getRecipientEmail_DetailAnchor"><span class="">getRecipientEmail</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the email address of the person receiving the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getRecipientName_DetailAnchor"><span class="">getRecipientName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the person receiving the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getSenderName_DetailAnchor"><span class="">getSenderName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the person or organization that sent the gift certificate or null if undefined.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_getStatus_DetailAnchor"><span class="">getStatus</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the status where the possible values are STATUS_PENDING, STATUS_ISSUED, STATUS_PARTIALLY_REDEEMED or STATUS_REDEEMED.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_isEnabled_DetailAnchor"><span class="">isEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the Gift Certificate is enabled, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setDescription_String_DetailAnchor"><span class="">setDescription</span></a></span>(description
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">An optional description that you can use to categorize the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setEnabled_Boolean_DetailAnchor"><span class="">setEnabled</span></a></span>(enabled
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Controls if the Gift Certificate is enabled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setMessage_String_DetailAnchor"><span class="">setMessage</span></a></span>(message
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the message to include in the email of the person receiving the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setOrderNo_String_DetailAnchor"><span class="">setOrderNo</span></a></span>(orderNo
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the order number</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setRecipientEmail_String_DetailAnchor"><span class="">setRecipientEmail</span></a></span>(recipientEmail
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the email address of the person receiving the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setRecipientName_String_DetailAnchor"><span class="">setRecipientName</span></a></span>(recipient
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the name of the person receiving the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setSenderName_String_DetailAnchor"><span class="">setSenderName</span></a></span>(sender
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the name of the person or organization that sent the gift certificate.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_GiftCertificate_setStatus_Number_DetailAnchor"><span class="">setStatus</span></a></span>(status
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the status of the gift certificate.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getAmount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAmount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAmount</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the original amount on the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the original amount on the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getBalance_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBalance</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBalance</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the balance on the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the balance on the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the description string.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the description.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getGiftCertificateCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftCertificateCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftCertificateCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the code of the gift certificate. This redemption code is send to
+ gift certificate recipient.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the code of the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getID</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the code of the gift certificate. This redemption code is send to
+ gift certificate recipient.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_order_GiftCertificate.html#dw_order_GiftCertificate_getGiftCertificateCode_DetailAnchor">getGiftCertificateCode()</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the code of the gift certificate.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getMaskedGiftCertificateCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaskedGiftCertificateCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaskedGiftCertificateCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the masked gift certificate code with
+ all but the last 4 characters replaced with a '*' character.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the masked gift certificate code.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getMaskedGiftCertificateCode_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaskedGiftCertificateCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaskedGiftCertificateCode</span>(ignore
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the masked gift certificate code with
+ all but the specified number of characters replaced with a '*' character.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ignore</span>
+						 - 
+						<span class="parameterDesc">the number of characters to leave unmasked.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the masked gift certificate code.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if ignore is negative.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getMerchantID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMerchantID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMerchantID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the merchant ID of the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the merchant ID of the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getMessage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMessage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMessage</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the message to include in the email of the person receiving
+ the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the message to include in the email of the person receiving the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getOrderNo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderNo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderNo</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the order number</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the order number</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getRecipientEmail_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRecipientEmail</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRecipientEmail</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the email address of the person receiving
+ the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the email address of the person receiving the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getRecipientName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRecipientName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRecipientName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the person receiving
+ the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the name of the person receiving the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getSenderName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSenderName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSenderName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the person or organization that
+ sent the gift certificate or null if undefined.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the name of the person or organization that sent the gift certificate or null if undefined.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_getStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatus</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the status where the possible values are
+ STATUS_PENDING, STATUS_ISSUED, STATUS_PARTIALLY_REDEEMED
+ or STATUS_REDEEMED.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the status.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_isEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the Gift Certificate is enabled, false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the Gift Certificate is enabled, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setDescription_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setDescription</span>(description
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">An optional description that you can use to categorize the
+ gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">description</span>
+						 - 
+						<span class="parameterDesc">additional description.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setEnabled_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEnabled</span>(enabled
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Controls if the Gift Certificate is enabled.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">enabled</span>
+						 - 
+						<span class="parameterDesc">if true, enables the Gift Certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setMessage_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMessage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMessage</span>(message
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the message to include in the email of the person receiving
+ the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">message</span>
+						 - 
+						<span class="parameterDesc">the message to include in the email of the person receiving the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setOrderNo_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOrderNo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOrderNo</span>(orderNo
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the order number</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">orderNo</span>
+						 - 
+						<span class="parameterDesc">the order number to be set</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setRecipientEmail_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRecipientEmail</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setRecipientEmail</span>(recipientEmail
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the email address of the person receiving
+ the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">recipientEmail</span>
+						 - 
+						<span class="parameterDesc">the email address of the person receiving the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setRecipientName_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRecipientName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setRecipientName</span>(recipient
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the name of the person receiving
+ the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">recipient</span>
+						 - 
+						<span class="parameterDesc">the name of the person receiving the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setSenderName_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSenderName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSenderName</span>(sender
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the name of the person or organization that
+ sent the gift certificate.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sender</span>
+						 - 
+						<span class="parameterDesc">the name of the person or organization that sent the gift certificate.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_GiftCertificate_setStatus_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStatus</span>(status
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the status of the gift certificate. <br/>
+ Possible values are: <a href="class_dw_order_GiftCertificate.html#dw_order_GiftCertificate_STATUS_ISSUED_DetailAnchor">STATUS_ISSUED</a>,
+ <a href="class_dw_order_GiftCertificate.html#dw_order_GiftCertificate_STATUS_PENDING_DetailAnchor">STATUS_PENDING</a>, <a href="class_dw_order_GiftCertificate.html#dw_order_GiftCertificate_STATUS_PARTIALLY_REDEEMED_DetailAnchor">STATUS_PARTIALLY_REDEEMED</a>
+ and <a href="class_dw_order_GiftCertificate.html#dw_order_GiftCertificate_STATUS_REDEEMED_DetailAnchor">STATUS_REDEEMED</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">Gift certificate status</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1126 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class FormField</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.web.FormField">
+            <a name="dw.web.FormField"></a>
+            <div class="packageName">dw.web</div>
+            <div class="className
+					">	
+        	
+				Class FormField</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_web_FormElement.html">dw.web.FormElement</a>
+                </div>
+                <div style="position:relative;left:5%;">
+                    <img src="images/inherit.gif">dw.web.FormField
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a field in a form.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>checked
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the current selected state of this field is checked. In case of
+ a boolean field the method directly represent the boolean value. In case
+ of a string or int field, the method returns true if the current value
+ matched with the value specified as "selected-value". In this way a
+ selected status can be as determined for non-boolean fields.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An optinal description for the field.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>error
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The error text that will be shown to the user when the field is
+ invalid. The error messages that may be returned by this method are
+ defined in the form field definition under the following attribute names:
+
+ <ul>
+ <li>missing-error</li>
+ <li>parse-error</li>
+ <li>range-error</li>
+ <li>value-error</li>
+ </ul>
+
+ The framework performs error checks in a specific order, and so if there
+ are multiple errors for a single FormField, the following sequence
+ defines which error is returned:
+
+ <ul>
+ <li>When submitting a form entry, whitespace is first trimmed from user
+ entry and the entry is parsed into native data type (boolean, date,
+ integer, number, or string). A regex, if defined, is also matched against
+ the input. If there is an error while parsing or matching with regex,
+ "parse-error" is set as error.</li>
+ <li>If field was marked as "mandatory" but there is no entry,
+ "missing-error" is returned</li>
+ <li>The min/max and minlength/maxlength checks are performed. If test
+ failed, "range-error" is returned.</li>
+ <li>value-error or form-error are returned when "invalidate()" was called
+ programatically (or pipelet InvalidateFormElement is used)</li>
+ </ul>
+
+ If the field is valid, this method returns null. If no error message was
+ specified in the form field definition, this method also returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<a name="dw_web_FormField_FIELD_TYPE_BOOLEAN_DetailAnchor"></a>FIELD_TYPE_BOOLEAN
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">indicates a boolean/checkbox field in the form definition</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<a name="dw_web_FormField_FIELD_TYPE_DATE_DetailAnchor"></a>FIELD_TYPE_DATE
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">indicates a date field in the form definition</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<a name="dw_web_FormField_FIELD_TYPE_INTEGER_DetailAnchor"></a>FIELD_TYPE_INTEGER
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">indicates an integer field in the form definition</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<a name="dw_web_FormField_FIELD_TYPE_NUMBER_DetailAnchor"></a>FIELD_TYPE_NUMBER
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">indicates a number field in the form definition</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<a name="dw_web_FormField_FIELD_TYPE_STRING_DetailAnchor"></a>FIELD_TYPE_STRING
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">indicates a string field in the form definition</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>htmlValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The current external string representation of the
+ value in this field.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>label
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An optional label text for the field.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>mandatory
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Indicates if the field is mandatory.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maxLength
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The maximum length for the form field. A maximum length can
+ be specified for all form data types, but is only used to validate fields
+ of type "string". For other data types the value is just provided as an
+ easy way to dynamically format the user interface. If not specified in
+ the form definition the default minimum length is Integer.MAX_VALUE.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maxValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The maximum value for a form field. A maximum value is only
+ applicable for fields with the data type "int", "number" and "date".
+ If a maximum value was not specified in the form definition the method
+ returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minLength
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The minimum length for the form field. A minimum length can
+ be specified for all form data types, but is only used to validate fields
+ of type "string". For other data types the value is just provided as an
+ easy way to dynamically format the user interface. If not specified in
+ the form definition the default minimum length is 0.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The minimum value for a form field. A minimum value is only
+ applicable for fields with the data type "int", "number" and "date".
+ If a minimum value was not specified in the form definition the method
+ returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>options
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_FormFieldOptions.html"><span class="">FormFieldOptions</span></a>
+                        <div class="description">A list of possible values for this field. The method
+ is typically used to render a selection list or to render radio buttons.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>regEx
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An optional regular expression pattern, which was set in the form
+ definition. A pattern is only used for validation only for string fields.
+ If no pattern was set, the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>selected
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the current selected state of this field is selected. In case of
+ a boolean field the method directly represent the boolean value. In case
+ of a string or int field, the method returns true if the current value
+ matched with the value specified as "selected-value". In this way a
+ selected status can be as determined for non-boolean fields.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>selectedOption
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_web_FormFieldOption.html"><span class="">FormFieldOption</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The selected options or null if the field has no option
+ or non is selected.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>selectedOptionObject
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The object that was optionally associated with the
+ currently selected option.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>type
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The method returns the type of the field. The type is one of the
+ FIELD_TYPE constants defined in this class.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>value
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                        <div class="description">The internal value representation, which can be a string, a
+ number, a boolean or a date.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an optinal description for the field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getError_DetailAnchor"><span class="">getError</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the error text that will be shown to the user when the field is invalid.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getHtmlValue_DetailAnchor"><span class="">getHtmlValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the current external string representation of the value in this field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getLabel_DetailAnchor"><span class="">getLabel</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an optional label text for the field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getMaxLength_DetailAnchor"><span class="">getMaxLength</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the maximum length for the form field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getMaxValue_DetailAnchor"><span class="">getMaxValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the maximum value for a form field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getMinLength_DetailAnchor"><span class="">getMinLength</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the minimum length for the form field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getMinValue_DetailAnchor"><span class="">getMinValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the minimum value for a form field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getOptions_DetailAnchor"><span class="">getOptions</span></a></span>()
+						: 
+					<a href="class_dw_web_FormFieldOptions.html"><span class="">FormFieldOptions</span></a></span>
+                    <div class="description">Returns a list of possible values for this field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getRegEx_DetailAnchor"><span class="">getRegEx</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an optional regular expression pattern, which was set in the form definition.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getSelectedOption_DetailAnchor"><span class="">getSelectedOption</span></a></span>()
+						: 
+					<a href="class_dw_web_FormFieldOption.html"><span class="">FormFieldOption</span></a></span>
+                    <div class="description">Returns the selected options or null if the field has no option or non is selected.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getSelectedOptionObject_DetailAnchor"><span class="">getSelectedOptionObject</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the object that was optionally associated with the currently selected option.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getType_DetailAnchor"><span class="">getType</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">The method returns the type of the field.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_getValue_DetailAnchor"><span class="">getValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the internal value representation, which can be a string, a number, a boolean or a date.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_isChecked_DetailAnchor"><span class="">isChecked</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the current selected state of this field is checked.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_isMandatory_DetailAnchor"><span class="">isMandatory</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Indicates if the field is mandatory.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_isSelected_DetailAnchor"><span class="">isSelected</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the current selected state of this field is selected.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_setHtmlValue_String_DetailAnchor"><span class="">setHtmlValue</span></a></span>(htmlValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">A form field has two value representations, the HTML value and the plain value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_setOptions_Map_DetailAnchor"><span class="">setOptions</span></a></span>(optionValues
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>)
+						: 
+					void</span>
+                    <div class="description">The method can be called to update an option list based on the given key and values in the given map.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_setOptions_Map_Number_Number_DetailAnchor"><span class="">setOptions</span></a></span>(optionValues
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, begin
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, end
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">The method can be called to update an option list based on the given key and values in the given map.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_setOptions_Iterator_Number_Number_DetailAnchor"><span class="">setOptions</span></a></span>(optionValues
+								 : 	
+								 
+								<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>, begin
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, end
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">The method can be called to update an option list based on the given iterator with objects.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_setOptions_Iterator_DetailAnchor"><span class="">setOptions</span></a></span>(optionValues
+								 : 	
+								 
+								<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>)
+						: 
+					void</span>
+                    <div class="description">The method can be called to update an option list based on the given iterator with objects.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_FormField_setValue_Object_DetailAnchor"><span class="">setValue</span></a></span>(value
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the typed value of the field.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_web_FormElement.html"><span class="">FormElement</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_web_FormElement.html#dw_web_FormElement_clearFormElement_DetailAnchor"><span class="">clearFormElement</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_getDynamicHtmlName_DetailAnchor"><span class="">getDynamicHtmlName</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_getFormId_DetailAnchor"><span class="">getFormId</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_getHtmlName_DetailAnchor"><span class="">getHtmlName</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_getParent_DetailAnchor"><span class="">getParent</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_getValidationResult_DetailAnchor"><span class="">getValidationResult</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_invalidateFormElement_DetailAnchor"><span class="">invalidateFormElement</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_invalidateFormElement_String_DetailAnchor"><span class="">invalidateFormElement</span></a>, <a href="class_dw_web_FormElement.html#dw_web_FormElement_isValid_DetailAnchor"><span class="">isValid</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an optinal description for the field.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an optional description for the field.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getError_DetailAnchor"></a>
+                    <div class="detailName 
+						">getError</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getError</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the error text that will be shown to the user when the field is
+ invalid. The error messages that may be returned by this method are
+ defined in the form field definition under the following attribute names:
+
+ <ul>
+ <li>missing-error</li>
+ <li>parse-error</li>
+ <li>range-error</li>
+ <li>value-error</li>
+ </ul>
+
+ The framework performs error checks in a specific order, and so if there
+ are multiple errors for a single FormField, the following sequence
+ defines which error is returned:
+
+ <ul>
+ <li>When submitting a form entry, whitespace is first trimmed from user
+ entry and the entry is parsed into native data type (boolean, date,
+ integer, number, or string). A regex, if defined, is also matched against
+ the input. If there is an error while parsing or matching with regex,
+ "parse-error" is set as error.</li>
+ <li>If field was marked as "mandatory" but there is no entry,
+ "missing-error" is returned</li>
+ <li>The min/max and minlength/maxlength checks are performed. If test
+ failed, "range-error" is returned.</li>
+ <li>value-error or form-error are returned when "invalidate()" was called
+ programatically (or pipelet InvalidateFormElement is used)</li>
+ </ul>
+
+ If the field is valid, this method returns null. If no error message was
+ specified in the form field definition, this method also returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the error text that will be shown to the user when the field is invalid.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getHtmlValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHtmlValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHtmlValue</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the current external string representation of the
+ value in this field.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current external string representation of the value in this field.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getLabel_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLabel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLabel</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an optional label text for the field.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an optional label text for the field.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getMaxLength_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxLength</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxLength</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the maximum length for the form field. A maximum length can
+ be specified for all form data types, but is only used to validate fields
+ of type "string". For other data types the value is just provided as an
+ easy way to dynamically format the user interface. If not specified in
+ the form definition the default minimum length is Integer.MAX_VALUE.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">maximum length or MAX_VALUE</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getMaxValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxValue</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the maximum value for a form field. A maximum value is only
+ applicable for fields with the data type "int", "number" and "date".
+ If a maximum value was not specified in the form definition the method
+ returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">maximum value or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getMinLength_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinLength</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinLength</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the minimum length for the form field. A minimum length can
+ be specified for all form data types, but is only used to validate fields
+ of type "string". For other data types the value is just provided as an
+ easy way to dynamically format the user interface. If not specified in
+ the form definition the default minimum length is 0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">minimum length or 0</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getMinValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinValue</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the minimum value for a form field. A minimum value is only
+ applicable for fields with the data type "int", "number" and "date".
+ If a minimum value was not specified in the form definition the method
+ returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">minimum value or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getOptions_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptions</span>()
+					 : 
+					<a href="class_dw_web_FormFieldOptions.html"><span class="">FormFieldOptions</span></a>
+                    </div>
+                    <div class="description">Returns a list of possible values for this field. The method
+ is typically used to render a selection list or to render radio buttons.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of possible values for this field.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getRegEx_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRegEx</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRegEx</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an optional regular expression pattern, which was set in the form
+ definition. A pattern is only used for validation only for string fields.
+ If no pattern was set, the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the regular expression used for validation or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getSelectedOption_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelectedOption</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelectedOption</span>()
+					 : 
+					<a href="class_dw_web_FormFieldOption.html"><span class="">FormFieldOption</span></a>
+                    </div>
+                    <div class="description">Returns the selected options or null if the field has no option
+ or non is selected.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the selected options or null if the field has no option or non is selected.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getSelectedOptionObject_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelectedOptionObject</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelectedOptionObject</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the object that was optionally associated with the
+ currently selected option.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the object that was optionally associated with the currently selected option.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getType</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">The method returns the type of the field. The type is one of the
+ FIELD_TYPE constants defined in this class.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the type of the form field</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_getValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getValue</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the internal value representation, which can be a string, a
+ number, a boolean or a date.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the internal value representation, which can be a string, a number, a boolean or a date.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_isChecked_DetailAnchor"></a>
+                    <div class="detailName 
+						">isChecked</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isChecked</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the current selected state of this field is checked. In case of
+ a boolean field the method directly represent the boolean value. In case
+ of a string or int field, the method returns true if the current value
+ matched with the value specified as "selected-value". In this way a
+ selected status can be as determined for non-boolean fields.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if current selected state of this field is checked.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_isMandatory_DetailAnchor"></a>
+                    <div class="detailName 
+						">isMandatory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isMandatory</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Indicates if the field is mandatory.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the field is mandatory, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_isSelected_DetailAnchor"></a>
+                    <div class="detailName 
+						">isSelected</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isSelected</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the current selected state of this field is selected. In case of
+ a boolean field the method directly represent the boolean value. In case
+ of a string or int field, the method returns true if the current value
+ matched with the value specified as "selected-value". In this way a
+ selected status can be as determined for non-boolean fields.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if current selected state of this field is checked.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_setHtmlValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setHtmlValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setHtmlValue</span>(htmlValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">A form field has two value representations, the HTML value and the plain
+ value. The HTML value is always a string representation of the field value.
+ The plain value is the fully typed and validated field value.
+
+ The sets the HTML value for a field. The method is typically called from
+ the HTTP POST processing framework. The method than parses, validates
+ and assigns the value to the typed field value (see getValue()). If the
+ value is invalid the typed field value is set to null and the valid
+ flag is set to false. The error property contains an error message
+ for the form.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">htmlValue</span>
+						 - 
+						<span class="parameterDesc">the HTML value to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_setOptions_Map_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOptions</span>(optionValues
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method can be called to update an option list based on the
+ given key and values in the given map.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionValues</span>
+						 - 
+						<span class="parameterDesc">a Map with the values for the option list</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_setOptions_Map_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOptions</span>(optionValues
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, begin
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, end
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method can be called to update an option list based on the
+ given key and values in the given map. The method also expects
+ and index range. This index range only makes sense when the Map is
+ a SortedMap.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionValues</span>
+						 - 
+						<span class="parameterDesc">a Map with the values for the option list.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">begin</span>
+						 - 
+						<span class="parameterDesc">the index of the first element to use as option value.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">end</span>
+						 - 
+						<span class="parameterDesc">the last of the last element to use as option value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_setOptions_Iterator_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOptions</span>(optionValues
+								 : 
+								 
+								<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>, begin
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, end
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method can be called to update an option list based on the
+ given iterator with objects. The option list is updated using
+ the bindings specified in the form definition. If no bindings are
+ specified in the form definition the elements are interpreted as
+ pure strings.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionValues</span>
+						 - 
+						<span class="parameterDesc">an iterator hows elements are used as option values</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">begin</span>
+						 - 
+						<span class="parameterDesc">the index of the first element to use as option value</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">end</span>
+						 - 
+						<span class="parameterDesc">the last of the last element to use as option value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_setOptions_Iterator_DetailAnchor"></a>
+                    <div class="detailName 
+						">setOptions</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setOptions</span>(optionValues
+								 : 
+								 
+								<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method can be called to update an option list based on the
+ given iterator with objects.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionValues</span>
+						 - 
+						<span class="parameterDesc">an iterator whose elements are used as option values</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_FormField_setValue_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setValue</span>(value
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the typed value of the field. The value is than immediately
+ formatted into the external string representation, which is availble
+ through the getHtmlValue() method. Also the valid flag is set
+ to true. The actual value is not validated against the rules defined
+ in the form definition. The method is typically used to directly set
+ a typed value and to circumvent the validation rules.
+
+ The type of the argument must match with the type of the field.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

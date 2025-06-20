@@ -1,0 +1,242 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet VSAuthorizeCreditCard</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet VSAuthorizeCreditCard</div>
+            <div class="topLevelDescription">Deprecated. Use a link partner cartridge instead.
+
+Performs a creditcard authorization against the verisign payment service.
+In case of technical errors the error exit will be activated.
+
+The pipelet expects these site preferences:
+VERISIGN_CREDIT.Vendor
+VERISIGN_CREDIT.Partner
+VERISIGN_CREDIT.User
+VERISIGN_CREDIT.Password
+VERISIGN_CREDIT.SendToProduction
+
+Additionally, systemsettings\config\verisign\verisign.properties must be configured properly.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail"></div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">VeriSign (deprecated)</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AuthorizationAmount</span>
+					&nbsp;:&nbsp;
+					Money
+							(Required)
+						</span>
+                    <div class="description">
+The amount to authorize.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">BillingAddress</span>
+					&nbsp;:&nbsp;
+					Address
+							(Required)
+						</span>
+                    <div class="description">
+Billing Address.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CVN</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The Credit Card Verification number. If null, no verification is performed.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ReferenceNumber</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Reference number, e.g. Order number.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CreditCardHolder</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Name of the Credit Card holder.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CreditCardNumber</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Number of the credit card.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CreditCardExpirationYear</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Expiration year of the credit card in the format 'yy'.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CreditCardExpirationMonth</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Expiration month of the credit card in the format 'mm'.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Result</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RespMsg</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PNRef</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The Transaction ID
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AVSAddr</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AuthCode</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AVSZip</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CVV2Match</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">IAVS</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CardSecure</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

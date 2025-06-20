@@ -1,0 +1,648 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Collection</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.util.Collection">
+            <a name="dw.util.Collection"></a>
+            <div class="packageName">dw.util</div>
+            <div class="className
+					">	
+        	
+				Class Collection</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.util.Collection
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a collection of objects.</div>
+                    <div class="subclasses">
+                        <div class="subclass">
+	    	All Known Subclasses
+    	</div>
+                        <div class="subclasses">
+                            <a href="class_dw_util_ArrayList.html"><span class="parameterName">ArrayList</span></a>, <a href="class_dw_util_FilteringCollection.html"><span class="parameterName">FilteringCollection</span></a>, <a href="class_dw_util_HashSet.html"><span class="parameterName">HashSet</span></a>, <a href="class_dw_util_LinkedHashSet.html"><span class="parameterName">LinkedHashSet</span></a>, <a href="class_dw_util_List.html"><span class="parameterName">List</span></a>, <a href="class_dw_util_Set.html"><span class="parameterName">Set</span></a>, <a href="class_dw_util_SortedSet.html"><span class="parameterName">SortedSet</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>empty
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if the collection is empty.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>length
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The length of the collection. This is similar to
+ to a ECMA array of 'products.length'.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    
+    			To get an instance of this class, use one of the subclass constructors. 
+    		 </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_add_Object_DetailAnchor"><span class="">add</span></a></span>(values
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					boolean</span>
+                    <div class="description">Adds the specified objects to the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_add1_Object_DetailAnchor"><span class="">add1</span></a></span>(object
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">The method adds a single object to the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_addAll_Collection_DetailAnchor"><span class="">addAll</span></a></span>(objs
+								 : 	
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Adds the collection of objects to the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_clear_DetailAnchor"><span class="">clear</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Clears the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_contains_Object_DetailAnchor"><span class="">contains</span></a></span>(obj
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the collection contains the specified object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_containsAll_Collection_DetailAnchor"><span class="">containsAll</span></a></span>(objs
+								 : 	
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the collection contains all of the objects in the specified collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_getLength_DetailAnchor"><span class="">getLength</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the length of the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_isEmpty_DetailAnchor"><span class="">isEmpty</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the collection is empty.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_iterator_DetailAnchor"><span class="">iterator</span></a></span>()
+						: 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a></span>
+                    <div class="description">Returns an iterator that can be used to access the members of the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_remove_Object_DetailAnchor"><span class="">remove</span></a></span>(obj
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Removes the specified object from the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_removeAll_Collection_DetailAnchor"><span class="">removeAll</span></a></span>(objs
+								 : 	
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Removes all of object in the specified object from the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_retainAll_Collection_DetailAnchor"><span class="">retainAll</span></a></span>(objs
+								 : 	
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Removes all of object in the collection that are not in the specified collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_size_DetailAnchor"><span class="">size</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the size of the collection.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_toArray_DetailAnchor"><span class="">toArray</span></a></span>()
+						: 
+					<a href="class_TopLevel_Array.html"><span class="">Array</span></a></span>
+                    <div class="description">Returns all elements of this collection in a newly created array.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_util_Collection_toArray_Number_Number_DetailAnchor"><span class="">toArray</span></a></span>(start
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, size
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Array.html"><span class="">Array</span></a></span>
+                    <div class="description">Returns a subset of the elements of this collection in a newly created array.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_add_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">add</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">add</span>(values
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Adds the specified objects to the collection. The method can also
+ be called with an ECMA array as argument.
+
+ If called with a single ECMA array as argument the individual elements of
+ that array are added to the collection. If the array object itself should
+ be added use the method add1().</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the values to add.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the values were added, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_add1_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">add1</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">add1</span>(object
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">The method adds a single object to the collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">object</span>
+						 - 
+						<span class="parameterDesc">the object to add.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the object was added, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_addAll_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">addAll</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addAll</span>(objs
+								 : 
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Adds the collection of objects to the collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">objs</span>
+						 - 
+						<span class="parameterDesc">the objects to add.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the objects were added, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_clear_DetailAnchor"></a>
+                    <div class="detailName 
+						">clear</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">clear</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Clears the collection.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_contains_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">contains</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">contains</span>(obj
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the collection contains the specified object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">obj</span>
+						 - 
+						<span class="parameterDesc">the object to locate in this collection.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the collection contains the specified object, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_containsAll_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">containsAll</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">containsAll</span>(objs
+								 : 
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the collection contains all of the objects
+ in the specified collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">objs</span>
+						 - 
+						<span class="parameterDesc">the collection of objects to locate in this collection.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the collection contains all of the specified objects, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_getLength_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLength</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLength</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the length of the collection. This is similar to
+ to a ECMA array of 'products.length'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the length of the collection.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_isEmpty_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEmpty</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEmpty</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the collection is empty.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the collection is empty, false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_iterator_DetailAnchor"></a>
+                    <div class="detailName 
+						">iterator</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">iterator</span>()
+					 : 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+                    </div>
+                    <div class="description">Returns an iterator that can be used to access
+ the members of the collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an iterator that can be used to access the members of the collection.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_remove_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">remove</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">remove</span>(obj
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Removes the specified object from the collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">obj</span>
+						 - 
+						<span class="parameterDesc">the object to remove.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the specified object was removed, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_removeAll_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeAll</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeAll</span>(objs
+								 : 
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Removes all of object in the specified object from the collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">objs</span>
+						 - 
+						<span class="parameterDesc">the collection of objects to remove.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the all of the specified objects were removed, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_retainAll_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">retainAll</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">retainAll</span>(objs
+								 : 
+								 
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Removes all of object in the collection that are not in the
+ specified collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">objs</span>
+						 - 
+						<span class="parameterDesc">the collection of objects to retain in the collection.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the collection retains all of the specified objects, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_size_DetailAnchor"></a>
+                    <div class="detailName 
+						">size</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">size</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the size of the collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the size of the collection.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_toArray_DetailAnchor"></a>
+                    <div class="detailName 
+						">toArray</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">toArray</span>()
+					 : 
+					<a href="class_TopLevel_Array.html"><span class="">Array</span></a>
+                    </div>
+                    <div class="description">Returns all elements of this collection in a newly created array. The returned array is independent of this collection and
+ can be modified without changing the collection. The elements in the array are in the same order as they are returned when
+ iterating over this collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a newly created array.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_util_Collection_toArray_Number_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">toArray</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">toArray</span>(start
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, size
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Array.html"><span class="">Array</span></a>
+                    </div>
+                    <div class="description">Returns a subset of the elements of this collection in a newly created array. The returned array is independent of this collection and
+ can be modified without changing the collection. The elements in the array are in the same order as they are returned when
+ iterating over this collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">start</span>
+						 - 
+						<span class="parameterDesc">the number of elements to iterate before adding elements to the array. Negative values are treated as 0.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">size</span>
+						 - 
+						<span class="parameterDesc">the maximum number of elements to add to the array. Nonpositive values always result in empty array.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a newly created array.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

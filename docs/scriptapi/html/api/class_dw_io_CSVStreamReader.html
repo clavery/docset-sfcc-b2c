@@ -1,0 +1,352 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class CSVStreamReader</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.io.CSVStreamReader">
+            <a name="dw.io.CSVStreamReader"></a>
+            <div class="packageName">dw.io</div>
+            <div class="className
+					">	
+        	
+				Class CSVStreamReader</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.io.CSVStreamReader
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The class supports reading a CSV file. The reader supports handling CSV
+ entries where the separator is contained in quotes and also CSV entries where
+ a quoted entry contains newline characters.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_CSVStreamReader_Reader_DetailAnchor"><span class="">CSVStreamReader</span></a></span>(ioreader
+									 : 
+									
+									<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>)</span>
+                    <div class="description">Creates a new CSVReader with a ',' as separator character and a '"' as quote character.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_CSVStreamReader_Reader_String_DetailAnchor"><span class="">CSVStreamReader</span></a></span>(ioreader
+									 : 
+									
+									<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>, separator
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a new CSVReader with the specified separator character and a '"' as quote character.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_CSVStreamReader_Reader_String_String_DetailAnchor"><span class="">CSVStreamReader</span></a></span>(ioreader
+									 : 
+									
+									<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>, separator
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, quote
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a new CSVReader with the specified separator character and the specified quote character.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_CSVStreamReader_Reader_String_String_Number_DetailAnchor"><span class="">CSVStreamReader</span></a></span>(ioreader
+									 : 
+									
+									<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>, separator
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, quote
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>, skip
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)</span>
+                    <div class="description">Creates a new CSVReader.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_close_DetailAnchor"><span class="">close</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Closes the underlying reader.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_readAll_DetailAnchor"><span class="">readAll</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns a list of lines representing the entire CSV file.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_io_CSVStreamReader_readNext_DetailAnchor"><span class="">readNext</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Returns the next line from the input stream.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_CSVStreamReader_Reader_DetailAnchor"></a>
+                    <div class="detailName 
+						">CSVStreamReader</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">CSVStreamReader</span>(ioreader
+								 : 
+								 					
+								<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>)
+                    </div>
+                    <div class="description">Creates a new CSVReader with a ',' as separator character and a '"' as
+ quote character. The reader doesn't skip any header lines.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ioreader</span>
+						 - 
+						<span class="parameterDesc">the reader to use.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_CSVStreamReader_Reader_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">CSVStreamReader</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">CSVStreamReader</span>(ioreader
+								 : 
+								 					
+								<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>, separator
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a new CSVReader with the specified separator character and a '"'
+ as quote character. The reader doesn't skip any header lines.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ioreader</span>
+						 - 
+						<span class="parameterDesc">the reader to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">separator</span>
+						 - 
+						<span class="parameterDesc">a string, which represents the separator character.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_CSVStreamReader_Reader_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">CSVStreamReader</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">CSVStreamReader</span>(ioreader
+								 : 
+								 					
+								<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>, separator
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quote
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a new CSVReader with the specified separator character and the
+ specified quote character. The reader doesn't skip any header lines.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ioreader</span>
+						 - 
+						<span class="parameterDesc">the reader to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">separator</span>
+						 - 
+						<span class="parameterDesc">a string, which represents the separator character.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quote</span>
+						 - 
+						<span class="parameterDesc">a string, which represents the quote character.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_CSVStreamReader_Reader_String_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">CSVStreamReader</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">CSVStreamReader</span>(ioreader
+								 : 
+								 					
+								<a href="class_dw_io_Reader.html"><span class="">Reader</span></a>, separator
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, quote
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, skip
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+                    </div>
+                    <div class="description">Creates a new CSVReader. The separator character, the quote character and
+ the number of header lines can be specified in the call.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">ioreader</span>
+						 - 
+						<span class="parameterDesc">the reader to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">separator</span>
+						 - 
+						<span class="parameterDesc">a string, which represents the separator character.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quote</span>
+						 - 
+						<span class="parameterDesc">a string, which represents the quote character.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">skip</span>
+						 - 
+						<span class="parameterDesc">the number of lines to skip at the beginning of the file.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_close_DetailAnchor"></a>
+                    <div class="detailName 
+						">close</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">close</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Closes the underlying reader.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_readAll_DetailAnchor"></a>
+                    <div class="detailName 
+						">readAll</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">readAll</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns a list of lines representing the entire CSV file. Each line is a
+ array of strings.
+ <p/>
+ Using this method on large feeds is inherently unsafe and may lead to an
+ out-of-memory condition. Instead use method <a href="class_dw_io_CSVStreamReader.html#dw_io_CSVStreamReader_readNext_DetailAnchor">readNext()</a> and
+ process entries line by line.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a list of lines representing the entire CSV file.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_io_CSVStreamReader_readNext_DetailAnchor"></a>
+                    <div class="detailName 
+						">readNext</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">readNext</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Returns the next line from the input stream. The line is returned as an
+ array of strings. The method returns null if the end of the stream is
+ reached.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the next line from the input stream as an array of strings.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

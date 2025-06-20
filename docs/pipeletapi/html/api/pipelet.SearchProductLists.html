@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet SearchProductLists</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet SearchProductLists</div>
+            <div class="topLevelDescription">Searches for ProductLists matching the specified input parameters.  This is useful in the storefront so customers can search for a product list such as a gift registry by the registrant name. The pipelet can be configured to search for only public product lists or all product lists, though the former is the appropriate option for the storefront.
+
+All input parameters are optional.  If no input parameters are specified, then an empty collection iterator is returned.  If a value is passed for an input parameter, the system performs a search on all product lists in the current site which the passed parameter value on that field.  For string fields EventName, RegistrantFirstName, RegistrantLastName, OwnerFirstName, OwnerLastName, and OwnerEmail, the search is implicitly a wildcard search and is case-insensitive.  Therefore, if the registrant of a product list has first name "John", this list will be matched by a search on the RegistrantFirstName field using values "John", "john", "Joh", "joh", or even "joh*".  Values "ohn" and "*ohn" will not match.  It is also possible to search by event date.  If a value is passed for the EventDate parameter, an exact date match is required.  Alternatively, it is possible to search by date range using EventMonth and EventYear.  Searches by location are possible using EventCity, EventState, and EventCountry.  These searches do not use wildcards and must match exactly.
+
+If values are passed for multiple parameters, they are joined together logically using an AND query (i.e. all criteria must be met).
+
+This pipelet is intended to be used in storefront, not in batch jobs.
+
+To lookup specific product lists by ID, use ProductListMgr instead of this pipelet.  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">ProductList</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PublicOnly</span>
+					&nbsp;:&nbsp;
+					Boolean
+							(Required)
+						</span>
+                    <div class="description">
+Specifies whether only public or non-public product lists will be found. Default is public.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">false</div>
+                    <div class="parameterDetail
+										">true</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventType</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The event type.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventDate</span>
+					&nbsp;:&nbsp;
+					Date
+							(Optional)
+						</span>
+                    <div class="description">
+The event date.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventCity</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The event city.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventState</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The event state.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventCountry</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The eventy country.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RegistrantFirstName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The first name of the registrant. The registrant name is not necessarily the owner of the product list. For example, a person (owner or customer) could create a product list on behalf of another person (registrant).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RegistrantLastName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The last name of the registrant. The registrant name is not necessarily the owner of the product list. For example, a person (owner or customer) could create a product list on behalf of another person (registrant).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Type</span>
+					&nbsp;:&nbsp;
+					Integer
+							(Optional)
+						</span>
+                    <div class="description">
+The type of ProductList to search for. Possible values are defined as static constants on ProductList, e.g. dw.customer.ProductList.TYPE_WISH_LIST.  If no type is provided, this pipelet will search for all types of ProductLists.
+
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventMonth</span>
+					&nbsp;:&nbsp;
+					Integer
+							(Optional)
+						</span>
+                    <div class="description">
+The event month.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventYear</span>
+					&nbsp;:&nbsp;
+					Integer
+							(Optional)
+						</span>
+                    <div class="description">
+The event year. If event month is specified and event year is not, the current year is used.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OwnerFirstName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The first name of the owner of the product list. The owner is different than the registrant in that a customer can create a product list on behalf of another person (the registrant).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OwnerLastName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The last name of the owner of the product list. The owner is different than the registrant in that a customer can create a product list on behalf of another person (the registrant).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OwnerEmail</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The email address of the owner of the product list. The owner is different than the registrant in that a customer can create a product list on behalf of another person (the registrant).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">EventName</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The name of the event.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductLists</span>
+					&nbsp;:&nbsp;
+					Iterator
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The search results.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

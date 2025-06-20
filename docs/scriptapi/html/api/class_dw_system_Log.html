@@ -1,0 +1,491 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Log</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.system.Log">
+            <a name="dw.system.Log"></a>
+            <div class="packageName">dw.system</div>
+            <div class="className
+					">	
+        	
+				Class Log</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.system.Log
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">A log4j like logger instance. To obtain such an instance, use the <a href="class_dw_system_Logger.html#dw_system_Logger_getRootLogger_DetailAnchor">Logger.getRootLogger()</a> or
+ <a href="class_dw_system_Logger.html#dw_system_Logger_getLogger_String_DetailAnchor">Logger.getLogger(String)</a> or <a href="class_dw_system_Logger.html#dw_system_Logger_getLogger_String_String_DetailAnchor">Logger.getLogger(String, String)</a> methods.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>debugEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">This method returns true if debug logging is enabled for this logging instance.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>errorEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">This method returns true if error logging is enabled for this logging instance.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>infoEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">This method returns true if information logging is enabled for this logging instance.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>NDC
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_system_LogNDC.html"><span class="">LogNDC</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The Nested Diagnostic Context for this script call.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>warnEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">This method returns true if warning logging is enabled for this logging instance.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_debug_String_Object_DetailAnchor"><span class="">debug</span></a></span>(msg
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					void</span>
+                    <div class="description">The method reports an debug level message.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_error_String_Object_DetailAnchor"><span class="">error</span></a></span>(msg
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					void</span>
+                    <div class="description">The method reports an error level message.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_fatal_String_Object_DetailAnchor"><span class="">fatal</span></a></span>(msg
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					void</span>
+                    <div class="description">The method reports an warning level message.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_Log_getNDC_DetailAnchor"><span class="">getNDC</span></a></span>()
+						: 
+					<a href="class_dw_system_LogNDC.html"><span class="">LogNDC</span></a></span>
+                    <div class="description">Returns the Nested Diagnostic Context for this script call.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_info_String_Object_DetailAnchor"><span class="">info</span></a></span>(msg
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					void</span>
+                    <div class="description">The method reports an information level message.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_isDebugEnabled_DetailAnchor"><span class="">isDebugEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">This method returns true if debug logging is enabled for this logging instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_isErrorEnabled_DetailAnchor"><span class="">isErrorEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">This method returns true if error logging is enabled for this logging instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_isInfoEnabled_DetailAnchor"><span class="">isInfoEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">This method returns true if information logging is enabled for this logging instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_isWarnEnabled_DetailAnchor"><span class="">isWarnEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">This method returns true if warning logging is enabled for this logging instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Log_warn_String_Object_DetailAnchor"><span class="">warn</span></a></span>(msg
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					void</span>
+                    <div class="description">The method reports an warning level message.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_debug_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">debug</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">debug</span>(msg
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method reports an debug level message. Arguments can be embedded into the message, e.g. like "Failure {0} in
+ {1}". The method implements the Java MessageFormat.format() syntax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">msg</span>
+						 - 
+						<span class="parameterDesc">the message to log.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the arguments to insert into the message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_error_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">error</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">error</span>(msg
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method reports an error level message. Arguments can be embedded into the message, e.g. like "Failure {0} in
+ {1}". The method implements the Java MessageFormat.format() syntax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">msg</span>
+						 - 
+						<span class="parameterDesc">the message to log.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the arguments to insert into the message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_fatal_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">fatal</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">fatal</span>(msg
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method reports an warning level message. Arguments can be embedded into the message, e.g. like "Failure {0}
+ in {1}". The method implements the Java MessageFormat.format() syntax. Note: Fatal log messages are always
+ enabled and optionally send via E-Mail.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">msg</span>
+						 - 
+						<span class="parameterDesc">the message to log.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the arguments to insert into the message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_getNDC_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNDC</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getNDC</span>()
+					 : 
+					<a href="class_dw_system_LogNDC.html"><span class="">LogNDC</span></a>
+                    </div>
+                    <div class="description">Returns the Nested Diagnostic Context for this script call.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the nested diagnostic context</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_info_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">info</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">info</span>(msg
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method reports an information level message. Arguments can be embedded into the message, e.g. like "Failure
+ {0} in {1}". The method implements the Java MessageFormat.format() syntax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">msg</span>
+						 - 
+						<span class="parameterDesc">the message to log.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the arguments to insert into the message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_isDebugEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isDebugEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isDebugEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">This method returns true if debug logging is enabled for this logging instance.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if logging of debug messages is enabled, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_isErrorEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isErrorEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isErrorEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">This method returns true if error logging is enabled for this logging instance.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if logging of error messages is enabled, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_isInfoEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isInfoEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isInfoEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">This method returns true if information logging is enabled for this logging instance.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if logging of information messages is enabled, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_isWarnEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isWarnEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isWarnEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">This method returns true if warning logging is enabled for this logging instance.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if logging of warning messages is enabled, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Log_warn_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">warn</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">warn</span>(msg
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method reports an warning level message. Arguments can be embedded into the message, e.g. like "Failure {0}
+ in {1}". The method implements the Java MessageFormat.format() syntax.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">msg</span>
+						 - 
+						<span class="parameterDesc">the message to log.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">the arguments to insert into the message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

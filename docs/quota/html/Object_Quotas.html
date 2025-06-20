@@ -1,0 +1,1252 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Object Quotas</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+    </head>
+    <body>
+        <div>
+            <span class="newTitle">
+                        Object Quotas
+                    </span>
+            <p>
+            Object quotas and object relationship quotas define a limit on the number of objects. Object quotas typically limit
+            the number of objects of a particular type per B2C Commerce instance. Object relationship quotas limit the number of
+            objects that may be associated with one object of that type.
+        </p>
+            <p>
+                            Object quotas are organized into the following functional categories:
+            
+                <ul>
+                    <li>
+                        <a href="#category_A/B Test">A/B Test</a>
+                    </li>
+                    <li>
+                        <a href="#category_Catalog">Catalog</a>
+                    </li>
+                    <li>
+                        <a href="#category_Checkout">Checkout</a>
+                    </li>
+                    <li>
+                        <a href="#category_Content">Content</a>
+                    </li>
+                    <li>
+                        <a href="#category_Customer">Customer</a>
+                    </li>
+                    <li>
+                        <a href="#category_Custom Objects">Custom Objects</a>
+                    </li>
+                    <li>
+                        <a href="#category_Inventory">Inventory</a>
+                    </li>
+                    <li>
+                        <a href="#category_Mapping">Mapping</a>
+                    </li>
+                    <li>
+                        <a href="#category_Marketing">Marketing</a>
+                    </li>
+                    <li>
+                        <a href="#category_Page Meta Tags">Page Meta Tags</a>
+                    </li>
+                    <li>
+                        <a href="#category_Price">Price</a>
+                    </li>
+                    <li>
+                        <a href="#category_Private Keys and Certificates">Private Keys and Certificates</a>
+                    </li>
+                    <li>
+                        <a href="#category_Redirect URLs">Redirect URLs</a>
+                    </li>
+                    <li>
+                        <a href="#category_Sites and Users">Sites and Users</a>
+                    </li>
+                    <li>
+                        <a href="#category_System Notification">System Notification</a>
+                    </li>
+                </ul>
+            </p>
+            <div class="section">
+                <a name="category_A/B Test"></a>
+                <div class="header">A/B Test Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Segments per A/B Test"></a>Segments per A/B Test
+                        </p>
+                        <p>
+            The Segments per A/B Test object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ABTestPO.relation.abTestGroupPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of segments in an A/B test. The control group is counted as a segment.
+            
+                            </li>
+                            <li>
+                                <b>Limit:</b> 5
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Catalog"></a>
+                <div class="header">Catalog Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Categorization Rules per Category"></a>Categorization Rules per Category
+                        </p>
+                        <p>
+            The Categorization Rules per Category object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CatalogCategoryPO.relation.categorizationRulePOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of categorization rules for a category.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 5
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Incoming Category Links per Category"></a>Incoming Category Links per Category
+                        </p>
+                        <p>
+            The Incoming Category Links per Category object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CatalogCategoryPO.relation.incomingCategoryLinks
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of links to a category.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 50 (warning at 30)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Outgoing Category Links per Category"></a>Outgoing Category Links per Category
+                        </p>
+                        <p>
+            The Outgoing Category Links per Category object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CatalogCategoryPO.relation.outgoingCategoryLinks
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of links from a category.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 50 (warning at 30)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Sub-Categories per Category"></a>Sub-Categories per Category
+                        </p>
+                        <p>
+            The Sub-Categories per Category object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CatalogCategoryPO.relation.subCategories
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of sub-categories for a category.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 1,000 (warning at 600)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Catalogs"></a>Catalogs
+                        </p>
+                        <p>
+            The Catalogs object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CatalogPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of catalogs in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 200 (warning at 120)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Categorization Conditions per Categorization Rule"></a>Categorization Conditions per Categorization Rule
+                        </p>
+                        <p>
+            The Categorization Conditions per Categorization Rule object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CategorizationRulePO.relation.categorizationConditionPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of categorization conditions for a categorization rule.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Options per Product"></a>Options per Product
+                        </p>
+                        <p>
+            The Options per Product object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductPO.relation.productOptionBindingPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of options for a product.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 1,000 (warning at 600)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Outgoing Product Links per Product"></a>Outgoing Product Links per Product
+                        </p>
+                        <p>
+            The Outgoing Product Links per Product object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductPO.relation.outgoingProductLinks
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of outgoing links to other products.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 500 (warning at 300)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Products per Bundle"></a>Products per Bundle
+                        </p>
+                        <p>
+            The Products per Bundle object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductPO.relation.bundledProductAssignments
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of products in a product bundle.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 100 (warning at 60)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Products per Set"></a>Products per Set
+                        </p>
+                        <p>
+            The Products per Set object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductPO.relation.setProductAssignmentPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of products in a product set.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 100 (warning at 60)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Variations per Base Product"></a>Variations per Base Product
+                        </p>
+                        <p>
+            The Variations per Base Product object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductPO.relation.variationProductAssignmentPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of variations for a base product.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 1,000 (warning at 600)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Checkout"></a>
+                <div class="header">Checkout Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Coupon Line Items per Basket"></a>Coupon Line Items per Basket
+                        </p>
+                        <p>
+            The Coupon Line Items per Basket object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.BasketPO.relation.basketCouponLineItemPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of coupons in a basket.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 20
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Gift Certificate Line Items per Basket"></a>Gift Certificate Line Items per Basket
+                        </p>
+                        <p>
+            The Gift Certificate Line Items per Basket object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.BasketPO.relation.basketGiftCertificateLineItemPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of gift certificates in a basket.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 20
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Payment Instruments per Basket"></a>Payment Instruments per Basket
+                        </p>
+                        <p>
+            The Payment Instruments per Basket object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.BasketPO.relation.basketPaymentInstrumentPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of payment instruments in a basket.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 20
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Product Line Items per Basket"></a>Product Line Items per Basket
+                        </p>
+                        <p>
+            The Product Line Items per Basket object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.BasketPO.relation.basketProductLineItemPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum total number of independent and dependent product line items in a basket.
+            
+                            </li>
+                            <li>
+                                <b>Limit:</b> 400 (warning at 200)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Shipments per Basket"></a>Shipments per Basket
+                        </p>
+                        <p>
+            The Shipments per Basket object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.BasketPO.relation.basketLineItemGroupPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of shipments in a basket.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 20
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Shipping Line Items per Basket"></a>Shipping Line Items per Basket
+                        </p>
+                        <p>
+            The Shipping Line Items per Basket object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.BasketPO.relation.basketServiceLineItemPOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum total number of shipping line items and product shipping line items in a basket.
+            
+                            </li>
+                            <li>
+                                <b>Limit:</b> 70
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Shipping Methods"></a>Shipping Methods
+                        </p>
+                        <p>
+            The Shipping Methods object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ShippingMethodPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of shipping methods in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 250 (warning at 150)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Content"></a>
+                <div class="header">Content Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Content Objects"></a>Content Objects
+                        </p>
+                        <p>
+            The Content Objects object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ContentPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of content objects in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 100,000 (warning at 60,000)
+                            </li>
+                        </ul>
+                        <p>
+                The Content Objects object has the following quotas on object relations.
+            </p>
+                        <ul>
+                            <li>
+                                <b>Relation:</b> Assigned objects per content asset
+                                <ul>
+                                    <li>
+                                        <b>Log file ID:</b> object.ContentPO.relation.objectAssignments
+                                    </li>
+                                    <li>
+                                        <b>Description:</b> The maximum number of objects assigned to a content asset.
+                                    </li>
+                                    <li>
+                                        <b>Limit:</b> 100 (warning at 60)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Folders"></a>Folders
+                        </p>
+                        <p>
+            The Folders object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.FolderPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of content folders in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10,000 (warning at 6,000)
+                            </li>
+                        </ul>
+                        <p>
+                The Folders object has the following quotas on object relations.
+            </p>
+                        <ul>
+                            <li>
+                                <b>Relation:</b> Sub-Folders per Folder
+                                <ul>
+                                    <li>
+                                        <b>Log file ID:</b> object.FolderPO.relation.subFolderPOs
+                                    </li>
+                                    <li>
+                                        <b>Description:</b> The maximum number of sub-folders in a folder.
+                                    </li>
+                                    <li>
+                                        <b>Limit:</b> 1,000 (warning at 600)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Libraries"></a>Libraries
+                        </p>
+                        <p>
+            The Libraries object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.LibraryPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of content libraries in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 140 (warning at 100)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Slot Configurations"></a>Slot Configurations
+                        </p>
+                        <p>
+            The Slot Configurations object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.SlotConfigurationPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of slot configurations in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10,000 (warning at 6,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Customer"></a>
+                <div class="header">Customer Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Customer Groups"></a>Customer Groups
+                        </p>
+                        <p>
+            The Customer Groups object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CustomerGroupImpl
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of customer groups in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 500 (warning at 300)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Explicit Customer Groups per Customer"></a>Explicit Customer Groups per Customer
+                        </p>
+                        <p>
+            The Explicit Customer Groups per Customer object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CustomerImpl.relation.assignments
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of explicit customer groups a customer can be member of.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 50 (warning at 30)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Custom Objects"></a>
+                <div class="header">Custom Objects Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Non-Replicable Custom Objects"></a>Non-Replicable Custom Objects
+                        </p>
+                        <p>
+            The Non-Replicable Custom Objects object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.NonStageableCustomObjectPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of non-replicable custom objects in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 400,000 (warning at 240,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Object Type Definitions"></a>Object Type Definitions
+                        </p>
+                        <p>
+            The Object Type Definitions object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ObjectTypeDefinitionPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of business object definitions (system and custom objects).
+                            </li>
+                            <li>
+                                <b>Limit:</b> 300 (warning at 180)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Replicable Custom Objects"></a>Replicable Custom Objects
+                        </p>
+                        <p>
+            The Replicable Custom Objects object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.StageableCustomObjectPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of replicable custom objects in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 400,000 (warning at 240,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Inventory"></a>
+                <div class="header">Inventory Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_OCI Inventory Cache"></a>OCI Inventory Cache
+                        </p>
+                        <p>
+            The OCI Inventory Cache object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.InventoryDataPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of cached records in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 100,000,000 (warning at 80,000,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Product Inventory Lists"></a>Product Inventory Lists
+                        </p>
+                        <p>
+            The Product Inventory Lists object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductInventoryListPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of inventory lists in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10,000 (warning at 8,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Product Inventory Records"></a>Product Inventory Records
+                        </p>
+                        <p>
+            The Product Inventory Records object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ProductInventoryRecordPO
+                            </li>
+                            <li>
+                                <b>Description:</b> Quota limits for a product inventory record.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 50,000,000 (warning at 40,000,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Mapping"></a>
+                <div class="header">Mapping Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Mappings"></a>Mappings
+                        </p>
+                        <p>
+            The Mappings object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.NonStageableMapping
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of mapping records in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 20 (warning at 15)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Marketing"></a>
+                <div class="header">Marketing Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Assignments"></a>Assignments
+                        </p>
+                        <p>
+            The Assignments object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.ExperiencePO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of assignments in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 2,000 (warning at 1,200)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Coupon Definitions"></a>Coupon Definitions
+                        </p>
+                        <p>
+            The Coupon Definitions object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.CouponPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of coupon definitions in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 1,500 (warning at 900)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Promotions"></a>Promotions
+                        </p>
+                        <p>
+            The Promotions object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.PromotionPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of promotions in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10,000 (warning at 6,000)
+                            </li>
+                        </ul>
+                        <p>
+                The Promotions object is the parent of the following quotas:
+            </p>
+                        <ul>
+                            <li>
+                                <b>Quota:</b> Number of Active Promotions
+                                <ul>
+                                    <li>
+                                        <b>Log file ID:</b> object.PromotionPO.rule.activePromotions
+                                    </li>
+                                    <li>
+                                        <b>Description:</b> The maximum number of active promotions (enabled, assigned to campaign or A/B Test, and currently running) in an instance.
+                                    </li>
+                                    <li>
+                                        <b>Limit:</b> 1,000
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <b>Quota:</b> Number of Enabled Promotions
+                                <ul>
+                                    <li>
+                                        <b>Log file ID:</b> object.PromotionPO.rule.enabledPromotions
+                                    </li>
+                                    <li>
+                                        <b>Description:</b> The maximum number of enabled promotions in an instance.
+                                    </li>
+                                    <li>
+                                        <b>Limit:</b> 10,000 (warning at 6,000)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Source Code Groups"></a>Source Code Groups
+                        </p>
+                        <p>
+            The Source Code Groups object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.SourceCodeGroupPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of source code groups in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 5,000 (warning at 3,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Page Meta Tags"></a>
+                <div class="header">Page Meta Tags Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Page Meta Tag Rules"></a>Page Meta Tag Rules
+                        </p>
+                        <p>
+            The Page Meta Tag Rules object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.PageMetaTagRulePO
+                            </li>
+                            <li>
+                                <b>Description:</b> Quota limits for page meta tag rule objects.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 3,000 (warning at 2,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Price"></a>
+                <div class="header">Price Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Price Books"></a>Price Books
+                        </p>
+                        <p>
+            The Price Books object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.PriceBookPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of price books in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 3,500 (warning at 2,100)
+                            </li>
+                        </ul>
+                        <p>
+                The Price Books object is the parent of the following quotas:
+            </p>
+                        <ul>
+                            <li>
+                                <b>Quota:</b> Editable Price Books
+                                <ul>
+                                    <li>
+                                        <b>Log file ID:</b> object.PriceBookPO.rule.EditablePriceBooks
+                                    </li>
+                                    <li>
+                                        <b>Description:</b> The maximum number of editable price books in an instance.
+                                    </li>
+                                    <li>
+                                        <b>Limit:</b> 700 (warning at 420)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <b>Quota:</b> Read-Only Price Books
+                                <ul>
+                                    <li>
+                                        <b>Log file ID:</b> object.PriceBookPO.rule.ReadOnlyPriceBooks
+                                    </li>
+                                    <li>
+                                        <b>Description:</b> The maximum number of read-only price books in an instance.
+                                    </li>
+                                    <li>
+                                        <b>Limit:</b> 3,500 (warning at 2,100)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Scaled Prices per Product Price Table"></a>Scaled Prices per Product Price Table
+                        </p>
+                        <p>
+            The Scaled Prices per Product Price Table object relation quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.PriceScaleTablePO.relation.priceScalePOs
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of scaled prices per price book entry in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 20 (warning at 12)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Private Keys and Certificates"></a>
+                <div class="header">Private Keys and Certificates Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Private Keys and Certificates"></a>Private Keys and Certificates
+                        </p>
+                        <p>
+            The Private Keys and Certificates object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.KeystoreEntry
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of private keys and certificate entries for a site.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 50 (warning at 30)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Redirect URLs"></a>
+                <div class="header">Redirect URLs Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Redirect URLs"></a>Redirect URLs
+                        </p>
+                        <p>
+            The Redirect URLs object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.RedirectUrlPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of redirect URL records in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 25,000 (warning at 15,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_Sites and Users"></a>
+                <div class="header">Sites and Users Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Sites"></a>Sites
+                        </p>
+                        <p>
+            The Sites object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.RepositoryPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of sites in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 100 (warning at 60)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <a name="category_System Notification"></a>
+                <div class="header">System Notification Category
+                                    </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Connected Slack Workspaces"></a>Connected Slack Workspaces
+                        </p>
+                        <p>
+            The Connected Slack Workspaces object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.SlackWorkspace
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of connected Slack workspaces in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10 (warning at 7)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_Notification Target Channels"></a>Notification Target Channels
+                        </p>
+                        <p>
+            The Notification Target Channels object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.SystemNotificationChannelPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of notification target channels in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 100 (warning at 80)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <hr>
+                    <div class="section">
+                        <p class="className">
+                            <a name="object_System Notification Messages"></a>System Notification Messages
+                        </p>
+                        <p>
+            The System Notification Messages object quota consists of:
+        </p>
+                        <ul>
+                            <li>
+                                <b>Log file ID:</b> object.SystemNotificationPO
+                            </li>
+                            <li>
+                                <b>Description:</b> The maximum number of system notification messages in an instance.
+                            </li>
+                            <li>
+                                <b>Limit:</b> 10,000 (warning at 8,000)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

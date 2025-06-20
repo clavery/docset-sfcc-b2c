@@ -1,0 +1,731 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SystemObjectMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.object.SystemObjectMgr">
+            <a name="dw.object.SystemObjectMgr"></a>
+            <div class="packageName">dw.object</div>
+            <div class="className
+					">	
+        	
+				Class SystemObjectMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.object.SystemObjectMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Manager class which provides methods for querying of system objects with
+ meta data using the Commerce Cloud Digital query language. See individual API methods for
+ details on the query language.
+ <p/>
+ Note: Other manager classes such as <a href="class_dw_customer_CustomerMgr.html">CustomerMgr</a>,
+ <a href="class_dw_catalog_ProductMgr.html">ProductMgr</a>, etc provide more specific and fine-grained
+ querying methods that can not be achieved using the general query language.
+ <p/>
+ <p>The following system object types are supported:</p>
+ <ul>
+ <li>GiftCertificate</li>
+ <li>SourceCodeGroup</li>
+ <li>Store</li>
+ <li>ProductList</li>
+ </ul>
+ <p>Support for the following system object types is deprecated:</p>
+ <ul>
+ <li>Order</li>
+ <li>Profile</li>
+ </ul>
+ <p>Use the search methods from <a href="class_dw_customer_CustomerMgr.html">CustomerMgr</a> and <a href="class_dw_order_OrderMgr.html">OrderMgr</a>,
+ respectively for querying these types.</p>
+
+ To search for custom objects, use <a href="class_dw_object_CustomObjectMgr.html">CustomObjectMgr</a>.
+ <b>Note:</b> this class allows access to sensitive information through
+ operations that retrieve the Profile and Order objects.
+ Pay attention to appropriate legal and regulatory requirements related to this data.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_SystemObjectMgr_describe_String_DetailAnchor"><span class="">describe</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_object_ObjectTypeDefinition.html"><span class="">ObjectTypeDefinition</span></a></span>
+                    <div class="description">Returns the object type definition for the given system object type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_SystemObjectMgr_getAllSystemObjects_String_DetailAnchor"><span class="">getAllSystemObjects</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description">Returns all system objects of a specific type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_SystemObjectMgr_querySystemObject_String_String_Object_DetailAnchor"><span class="">querySystemObject</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a></span>
+                    <div class="description"><p> Searches for a single system object instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_SystemObjectMgr_querySystemObjects_String_String_String_Object_DetailAnchor"><span class="">querySystemObjects</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description"><p> Searches for system object instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_SystemObjectMgr_querySystemObjects_String_Map_String_DetailAnchor"><span class="">querySystemObjects</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryAttributes
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description"><p> Searches for system object instances.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_object_SystemObjectMgr_describe_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">describe</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">describe</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_object_ObjectTypeDefinition.html"><span class="">ObjectTypeDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the object type definition for the given system object type.
+
+ This method can be used for all system object types that are derived from ExtensibleObject.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">system object type whose type definition should be returned</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the matching object type definition or <code>null</code> in case no such type definition exists.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_SystemObjectMgr_getAllSystemObjects_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllSystemObjects</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getAllSystemObjects</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description">Returns all system objects of a specific type.
+ The following system object types are supported:<br/><ul>
+ <li>GiftCertificate</li>
+ <li>Order</li>
+ <li>Profile</li>
+ <li>SourceCodeGroup</li>
+ <li>Store</li>
+ <li>ProductList</li></ul>
+
+ <p>The method throws an exception in case of another system type.</p>
+
+ <p>It is strongly recommended to call <code>close()</code> on the returned SeekableIterator
+ if not all of its elements are being retrieved. This will ensure the proper cleanup of system resources.</p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">The name of the system object type. If a matching type definition cannot be found for the given type a MetaDataException will be thrown.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing all system objects of a specific type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_SystemObjectMgr_querySystemObject_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">querySystemObject</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">querySystemObject</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                    </div>
+                    <div class="description"><p>
+ Searches for a single system object instance. The following system object types are supported:<br/>
+ <ul>
+ <li>GiftCertificate</li>
+ <li>Order</li>
+ <li>Profile</li>
+ <li>SourceCodeGroup</li>
+ <li>Store</li>
+ <li>ProductList</li>
+ </ul>
+ </p>
+ <p>
+ The method throws an exception in case of another system type.
+ </p>
+ <p>
+ The search can be configured using a simple query language, which provides most common filter and operator
+ functionality.
+ </p>
+ <p>
+ The identifier for an <b>attribute</b> to use in a query condition is always the ID of the attribute as defined
+ in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g.
+ <code>custom.color = {1}</code>), while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+ </p>
+ <p>
+ Supported attribute value <b>types</b> with sample expression values:
+ <ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i>
+ <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li>
+ </ul>
+ <br/>
+ The following types of attributes are not queryable:
+ <ul>
+ <br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li>
+ </ul>
+ <br/>
+ Note, that some system attributes are not queryable by default regardless of the actual value type code.
+ </p>
+ <p>
+ The following <b>operators</b> are supported in a condition:<br/>
+ <ul>
+ <li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+ <li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+ <li><code>&lt;</code> Less than - Integer, Number and Date types only</li>
+ <li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+ <li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+ <li><code>&gt;=</code> Greater or equals than - Integer, Number and Date types only</li>
+ <li><code>LIKE</code> Like - String types and Email only; use if leading or trailing wildcards will be used to
+ support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+ <li><code>ILIKE</code> Caseindependent Like - String types and Email only, use to support case insensitive query
+ (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for substring matching</li>
+ </ul>
+ </p>
+ <p>
+ Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT' and nested using parenthesis e.g.
+ <code>gender = {1} AND (age >= {2} OR (NOT profession LIKE {3}))</code>.
+ </p>
+ <p>
+ The query language provides a placeholder syntax to pass objects as additional search parameters. Each passed
+ object is related to a placeholder in the query string. The placeholder must be an Integer that is surrounded by
+ braces. The first Integer value must be '0', the second '1' and so on, e.g.
+ <code>querySystemObjects("sample", "age = {0} or creationDate >= {1}", 18, date)</code>
+ </p>
+ <p>
+ If there is more than one object matching the specified query criteria, the result is not deterministic. In order
+ to retrieve a single object from a sorted result set it is recommended to use the following code:
+ <code>querySystemObjects("", "custom.myAttr asc", null).first()</code>. The method <code>first()</code> returns
+ only the next element and closes the iterator.
+ </p>
+ <p>
+ It is strongly recommended to call <code>close()</code> on the returned SeekableIterator if not all of its
+ elements are being processed. This will enable the cleanup of system resources.
+ </p>
+ <p>
+ This method does not consider locale specific attributes. It returns all objects by checking the default
+ non-localizable attributes. Any locale specific filtering after fetching the objects must be done by other custom
+ code.<br/>
+ Example: For store objects, such a locale specific filtering can be:
+ <ul>
+ <li>Get the store objects using this method with non-localized attributes query.</li>
+ <li>Access the <code>store.getCustom("myattr")</code>. It returns the localized value of the attribute.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the system object type for the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the actual query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional parameters for the queryString.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the system object defined by <code>type</code> which was found when executing the <code>queryString</code>.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_SystemObjectMgr_querySystemObjects_String_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">querySystemObjects</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">querySystemObjects</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description"><p>
+ Searches for system object instances. The following system object types are supported:<br/>
+ <ul>
+ <li>GiftCertificate</li>
+ <li>Order</li>
+ <li>Profile</li>
+ <li>SourceCodeGroup</li>
+ <li>Store</li>
+ <li>ProductList</li>
+ </ul>
+ </p>
+ <p>
+ The method throws an exception in case of another system type.
+ </p>
+ <p>
+ The search can be configured using a simple query language, which provides most common filter and operator
+ functionality.
+ </p>
+ <p>
+ The identifier for an <b>attribute</b> to use in a query condition is always the ID of the attribute as defined
+ in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g.
+ <code>custom.color = {1}</code>), while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+ </p>
+ <p>
+ Supported attribute value <b>types</b> with sample expression values:
+ <ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i>
+ <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li>
+ </ul>
+ <br/>
+ The following types of attributes are not queryable:
+ <ul>
+ <br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li>
+ </ul>
+ <br/>
+ Note, that some system attributes are not queryable by default regardless of the actual value type code.
+ </p>
+ <p>
+ The following <b>operators</b> are supported in a condition:<br/>
+ <ul>
+ <li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+ <li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+ <li><code>&lt;</code> Less than - Integer, Number and Date types only</li>
+ <li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+ <li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+ <li><code>&gt;=</code> Greater or equals than - Integer, Number and Date types only</li>
+ <li><code>LIKE</code> Like - String types and Email only; use if leading or trailing wildcards will be used to
+ support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+ <li><code>ILIKE</code> Caseindependent Like - String types and Email only, use to support case insensitive query
+ (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for substring matching</li>
+ </ul>
+ </p>
+ <p>
+ Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT' and nested using parenthesis e.g.
+ <code>gender = {1} AND (age >= {2} OR (NOT profession LIKE {3}))</code>.
+ </p>
+ <p>
+ The query language provides a placeholder syntax to pass objects as additional search parameters. Each passed
+ object is related to a placeholder in the query string. The placeholder must be an Integer that is surrounded by
+ braces. The first Integer value must be '0', the second '1' and so on, e.g.
+ <code>querySystemObjects("sample", "age = {0} or creationDate >= {1}", 18, date)</code>
+ </p>
+ <p>
+ The <b>sorting</b> parameter is optional and may contain a comma separated list of attribute names to sort by.
+ Each sort attribute name may be followed by an optional sort direction specifier ('asc' | 'desc'). Default
+ sorting directions is ascending, if no direction was specified.<br/>
+ Example: <code>age desc, name</code><br/>
+ Please note that specifying a localized custom attribute as the sorting attribute is currently not supported.
+ </p>
+ <p>
+ Sometimes it is desired to get all instances of specified type with a special sorting condition. This can be
+ easily done by providing the 'type' of the system object and the 'sortString' in combination with an empty
+ 'queryString', e.g. <code>querySystemObjects("sample", "", "ID asc")</code>
+ </p>
+ <p>
+ It is strongly recommended to call <code>close()</code> on the returned SeekableIterator if not all of its
+ elements are being retrieved. This will ensure the proper cleanup of system resources.
+ </p>
+ <p>
+ This method does not consider locale specific attributes. It returns all objects by checking the default
+ non-localizable attributes. Any locale specific filtering after fetching the objects must be done by other custom
+ code.<br/>
+ Example: For store objects, such a locale specific filtering can be:
+ <ul>
+ <li>Get the store objects using this method with non-localized attributes query.</li>
+ <li>Access the <code>store.getCustom("myattr")</code>. It returns the localized value of the attribute.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the system object type for the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the actual query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional parameters for the queryString.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_SystemObjectMgr_querySystemObjects_String_Map_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">querySystemObjects</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">querySystemObjects</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryAttributes
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description"><p>
+ Searches for system object instances. The following system object types are supported:<br/>
+ <ul>
+ <li>GiftCertificate</li>
+ <li>Order</li>
+ <li>Profile</li>
+ <li>SourceCodeGroup</li>
+ <li>Store</li>
+ <li>ProductList</li>
+ </ul>
+ </p>
+ <p>
+ The method throws an exception in case of another system type.
+ </p>
+ <p>
+ The search can be configured with a map, which key-value pairs are converted into a query expression. The
+ key-value pairs are turned into a sequence of '=' or 'like' conditions, which are combined with AND statements.
+ </p>
+ <p>
+ Example:<br/>
+ A map with the key/value pairs: <i>'name'/'tom*', 'age'/66</i> will be converted as follows:
+ <code>"name like 'tom*' and age = 66"</code>
+ </p>
+ <p>
+ The identifier for an <b>attribute</b> to use in a query condition is always the ID of the attribute as defined
+ in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g.
+ <code>custom.color = {1}</code>), while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+ </p>
+ <p>
+ Supported attribute value <b>types</b> with sample expression values:
+ <ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i>
+ <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li>
+ </ul>
+ <br/>
+ The following types of attributes are not queryable:
+ <ul>
+ <br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li>
+ </ul>
+ <br/>
+ Note, that some system attributes are not queryable by default regardless of the actual value type code.
+ </p>
+ <p>
+ The <b>sorting</b> parameter is optional and may contain a comma separated list of attribute names to sort by.
+ Each sort attribute name may be followed by an optional sort direction specifier ('asc' | 'desc'). Default
+ sorting directions is ascending, if no direction was specified.<br/>
+ Example: <code>age desc, name</code><br/>
+ Please note that specifying a localized custom attribute as the sorting attribute is currently not supported.
+ </p>
+ <p>
+ It is strongly recommended to call <code>close()</code> on the returned SeekableIterator if not all of its
+ elements are being retrieved. This will ensure the proper cleanup of system resources.
+ </p>
+ <p>
+ This method does not consider locale specific attributes. It returns all objects by checking the default
+ non-localizable attributes. Any locale specific filtering after fetching the objects must be done by other custom
+ code.<br/>
+ Example: For store objects, such a locale specific filtering can be:
+ <ul>
+ <li>Get the store objects using this method with non-localized attributes query.</li>
+ <li>Access the <code>store.getCustom("myattr")</code>. It returns the localized value of the attribute.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the system object type for the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryAttributes</span>
+						 - 
+						<span class="parameterDesc">key-value pairs, which define the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

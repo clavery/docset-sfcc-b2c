@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet FinalizeOAuthLogin</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet FinalizeOAuthLogin</div>
+            <div class="topLevelDescription">This pipelet works in tandem with the InitiateOAuthLogin pipelet. After the user has been redirected by the InitiateOAuthLogin pipelet to the external OAuth2 compliant provider and the user has interacted with the provider's site, the browser is redirected to a URL configured on the provider's web site. This URL should be that of a pipeline that contains the FinalizeOAuthLogin pipelet. At this point the user has either been authenticated by the external provider or not (forgot password, or simply refused to provide credentials). If the user has been authenticated by the external provider and the provider returns an authentication code, this pipelet exchanges the code for a token and with that token it requests from the provider the user information specified by the configured scope (id, first/last name, email, etc.).</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ResponseText</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The plain text of the response from the provider containing the user information. Usually in JSON or XML format.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AccessToken</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The Access Token obtained from the OAuth provider
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">RefreshToken</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The Refresh Token if returned by the OAuth provider
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">AccessTokenExpiry</span>
+					&nbsp;:&nbsp;
+					Long
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+If the OAuth Provider returns this parameter - means for how many seconds the AccessToken is valid (typically at least 3600 secs).
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OAuthProviderID</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The OAuth provider ID
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ErrorStatus</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Error Status - populated if there is an error inside the pipelet. Different than the 'error' code that may be returned from the provider.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

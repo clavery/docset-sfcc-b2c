@@ -1,0 +1,992 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Site</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.system.Site">
+            <a name="dw.system.Site"></a>
+            <div class="packageName">dw.system</div>
+            <div class="className
+					">	
+        	
+				Class Site</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.system.Site
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This class represents a site in Commerce Cloud Digital and provides access to
+ several site-level configuration values which are managed from within the
+ Business Manager. It is only possible to get a reference to the current site
+ as determined by the current request. The static method
+ <a href="class_dw_system_Site.html#dw_system_Site_getCurrent_DetailAnchor">getCurrent()</a> returns a reference to the current site.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Site_SITE_STATUS_MAINTENANCE_DetailAnchor"></a>SITE_STATUS_MAINTENANCE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;3
+                        <div class="description">Constant that represents the Site under maintenance/offline</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Site_SITE_STATUS_ONLINE_DetailAnchor"></a>SITE_STATUS_ONLINE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">Constant that represents the Site is Online</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_system_Site_SITE_STATUS_PROTECTED_DetailAnchor"></a>SITE_STATUS_PROTECTED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;5
+                        <div class="description">Constant that represents the Site is in preview mode or online/password (protected)</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allowedCurrencies
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The allowed currencies of the current site as a collection of
+ currency codes.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allowedLocales
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The allowed locales of the current site as a collection of
+ locale ID's.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>allSites
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All sites.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>calendar
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A new Calendar object in the time zone of the
+ current site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>currencyCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The default currency code for the current site.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_system_Site.html#dw_system_Site_getDefaultCurrency_DetailAnchor">getDefaultCurrency()</a> method instead,</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>current
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_system_Site.html"><span class="">Site</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The current site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>defaultCurrency
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The default currency code for the current site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>defaultLocale
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Return default locale for the site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>einsteinSiteID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The Einstein site Id. Typically this is a concatenation of the realm, underscore character and the site id.
+ It can be overwritten by support users to help with realm moves to continue using the Einstein data from the old realm.
+ Used when making calls to the Einstein APIs.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>httpHostName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The configured HTTP host name. If no host name
+ is configured the method returns the instance hostname.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>httpsHostName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The configured HTTPS host name. If no host name
+ is configured the method returns the HTTP host name or the instance hostname, if
+ that is not configured as well.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A descriptive name for the site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>OMSEnabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Whether oms is active in the current site. This depends on a general
+ property which states whether oms is active for the server,
+ and a site-dependent preference whether oms is available for the current site.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This item is deprecated.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageMetaTags
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Array.html"><span class="">Array</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All page meta tags, defined for this instance for which content can be generated.</p>
+
+ The meta tag content is generated based on the home page meta tag context and rules.
+ The rules are obtained from the current repository domain.</p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>preferences
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_system_SitePreferences.html"><span class="">SitePreferences</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">This method returns a container of all site preferences of this site.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>status
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The status of this site.
+ <p/>
+ Possible values are <a href="class_dw_system_Site.html#dw_system_Site_SITE_STATUS_ONLINE_DetailAnchor">SITE_STATUS_ONLINE</a>, <a href="class_dw_system_Site.html#dw_system_Site_SITE_STATUS_MAINTENANCE_DetailAnchor">SITE_STATUS_MAINTENANCE</a>, <a href="class_dw_system_Site.html#dw_system_Site_SITE_STATUS_PROTECTED_DetailAnchor">SITE_STATUS_PROTECTED</a>
+ <p/></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>timezone
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The code for the time zone in which the storefront is
+ running.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>timezoneOffset
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns time zone offset in which the storefront is running.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getAllowedCurrencies_DetailAnchor"><span class="">getAllowedCurrencies</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns the allowed currencies of the current site as a collection of currency codes.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getAllowedLocales_DetailAnchor"><span class="">getAllowedLocales</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns the allowed locales of the current site as a collection of locale ID's.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_Site_getAllSites_DetailAnchor"><span class="">getAllSites</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Returns all sites.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_Site_getCalendar_DetailAnchor"><span class="">getCalendar</span></a></span>()
+						: 
+					<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a></span>
+                    <div class="description">Returns a new Calendar object in the time zone of the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_system_Site_getCurrencyCode_DetailAnchor"><span class="">getCurrencyCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the default currency code for the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_system_Site_getCurrent_DetailAnchor"><span class="">getCurrent</span></a></span>()
+						: 
+					<a href="class_dw_system_Site.html"><span class="">Site</span></a></span>
+                    <div class="description">Returns the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getCustomPreferenceValue_String_DetailAnchor"><span class="">getCustomPreferenceValue</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns a custom preference value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getDefaultCurrency_DetailAnchor"><span class="">getDefaultCurrency</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the default currency code for the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getDefaultLocale_DetailAnchor"><span class="">getDefaultLocale</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Return default locale for the site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getEinsteinSiteID_DetailAnchor"><span class="">getEinsteinSiteID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Einstein site Id.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getHttpHostName_DetailAnchor"><span class="">getHttpHostName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the configured HTTP host name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getHttpsHostName_DetailAnchor"><span class="">getHttpsHostName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the configured HTTPS host name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a descriptive name for the site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getPageMetaTag_String_DetailAnchor"><span class="">getPageMetaTag</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_PageMetaTag.html"><span class="">PageMetaTag</span></a></span>
+                    <div class="description">Returns the page meta tag for the specified id.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getPageMetaTags_DetailAnchor"><span class="">getPageMetaTags</span></a></span>()
+						: 
+					<a href="class_TopLevel_Array.html"><span class="">Array</span></a></span>
+                    <div class="description">Returns all page meta tags, defined for this instance for which content can be generated.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getPreferences_DetailAnchor"><span class="">getPreferences</span></a></span>()
+						: 
+					<a href="class_dw_system_SitePreferences.html"><span class="">SitePreferences</span></a></span>
+                    <div class="description">This method returns a container of all site preferences of this site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getStatus_DetailAnchor"><span class="">getStatus</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the status of this site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getTimezone_DetailAnchor"><span class="">getTimezone</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the code for the time zone in which the storefront is running.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_getTimezoneOffset_DetailAnchor"><span class="">getTimezoneOffset</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns time zone offset in which the storefront is running.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_system_Site_isOMSEnabled_DetailAnchor"><span class="">isOMSEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Whether oms is active in the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Site_setCustomPreferenceValue_String_Object_DetailAnchor"><span class="">setCustomPreferenceValue</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">The method sets a value for a custom preference.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getAllowedCurrencies_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllowedCurrencies</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllowedCurrencies</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns the allowed currencies of the current site as a collection of
+ currency codes.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of allowed site currencies</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getAllowedLocales_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllowedLocales</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllowedLocales</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns the allowed locales of the current site as a collection of
+ locale ID's.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection if allowed site locales</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getAllSites_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllSites</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getAllSites</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Returns all sites.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">all sites for the current instance</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getCalendar_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCalendar</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCalendar</span>()
+					 : 
+					<a href="class_dw_util_Calendar.html"><span class="">Calendar</span></a>
+                    </div>
+                    <div class="description">Returns a new Calendar object in the time zone of the
+ current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the Calendar object in the time zone of the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getCurrencyCode_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getCurrencyCode</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getCurrencyCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the default currency code for the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_system_Site.html#dw_system_Site_getDefaultCurrency_DetailAnchor">getDefaultCurrency()</a> method instead,</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the default currency code for the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getCurrent_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCurrent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCurrent</span>()
+					 : 
+					<a href="class_dw_system_Site.html"><span class="">Site</span></a>
+                    </div>
+                    <div class="description">Returns the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getCustomPreferenceValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomPreferenceValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomPreferenceValue</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns a custom preference value. If the preference does not exist the
+ method returns null.  This method is simply a shortcut method for
+ accessing the value for a custom attribute defined on the
+ <a href="class_dw_system_SitePreferences.html">SitePreferences</a> object.
+
+ <pre>
+ // Method #1
+ var mySitePrefValue1 : String =  dw.system.Site.getCurrent().
+     getCustomPreferenceValue("mySitePref");
+
+ // Method #2
+ var sitePrefs : SitePreferences = dw.system.Site.getCurrent().getPreferences();
+ var mySitePrefValue2 : String = sitePrefs.getCustom()["mySitePref"];
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">preference name.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the preference value, or null if there is no preference with the given name.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getDefaultCurrency_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDefaultCurrency</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDefaultCurrency</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the default currency code for the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the default currency code for the current site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getDefaultLocale_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDefaultLocale</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDefaultLocale</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Return default locale for the site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">default locale for the site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getEinsteinSiteID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEinsteinSiteID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEinsteinSiteID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Einstein site Id. Typically this is a concatenation of the realm, underscore character and the site id.
+ It can be overwritten by support users to help with realm moves to continue using the Einstein data from the old realm.
+ Used when making calls to the Einstein APIs.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the Einstein site Id</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getHttpHostName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHttpHostName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHttpHostName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the configured HTTP host name. If no host name
+ is configured the method returns the instance hostname.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the configured HTTP host name or if it is not set the instance hostname.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getHttpsHostName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHttpsHostName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHttpsHostName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the configured HTTPS host name. If no host name
+ is configured the method returns the HTTP host name or the instance hostname, if
+ that is not configured as well.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the configured HTTPS host name or HTTP host name or the instance hostname.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of the site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a descriptive name for the site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a descriptive name for the site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getPageMetaTag_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageMetaTag</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageMetaTag</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_PageMetaTag.html"><span class="">PageMetaTag</span></a>
+                    </div>
+                    <div class="description">Returns the page meta tag for the specified id.</p>
+
+ The meta tag content is generated based on the home page meta tag context and rule.
+ The rule is obtained from the current repository domain.</p>
+
+ Null will be returned if the meta tag is undefined on the current instance, or if no rule can be found for the
+ current context, or if the rule resolves to an empty string.</p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">the ID to get the page meta tag for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">page meta tag containing content generated based on rules</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getPageMetaTags_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageMetaTags</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageMetaTags</span>()
+					 : 
+					<a href="class_TopLevel_Array.html"><span class="">Array</span></a>
+                    </div>
+                    <div class="description">Returns all page meta tags, defined for this instance for which content can be generated.</p>
+
+ The meta tag content is generated based on the home page meta tag context and rules.
+ The rules are obtained from the current repository domain.</p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">page meta tags defined for this instance, containing content generated based on rules</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getPreferences_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPreferences</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPreferences</span>()
+					 : 
+					<a href="class_dw_system_SitePreferences.html"><span class="">SitePreferences</span></a>
+                    </div>
+                    <div class="description">This method returns a container of all site preferences of this site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a preferences object containing all system and custom site preferences of this site</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStatus</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the status of this site.
+ <p/>
+ Possible values are <a href="class_dw_system_Site.html#dw_system_Site_SITE_STATUS_ONLINE_DetailAnchor">SITE_STATUS_ONLINE</a>, <a href="class_dw_system_Site.html#dw_system_Site_SITE_STATUS_MAINTENANCE_DetailAnchor">SITE_STATUS_MAINTENANCE</a>, <a href="class_dw_system_Site.html#dw_system_Site_SITE_STATUS_PROTECTED_DetailAnchor">SITE_STATUS_PROTECTED</a>
+ <p/></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status of the this site.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getTimezone_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTimezone</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTimezone</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the code for the time zone in which the storefront is
+ running.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">time zone code in which the storefront is running.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_getTimezoneOffset_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTimezoneOffset</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTimezoneOffset</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns time zone offset in which the storefront is running.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">time zone offset in which the storefront is running.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_isOMSEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">isOMSEnabled</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">isOMSEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Whether oms is active in the current site. This depends on a general
+ property which states whether oms is active for the server,
+ and a site-dependent preference whether oms is available for the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This item is deprecated.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">whether oms is active in the site</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Site_setCustomPreferenceValue_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomPreferenceValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomPreferenceValue</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">The method sets a value for a custom preference. The type of the value
+ must match with the declared type of the preference definition.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">name of the preference</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">new value for the preference</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

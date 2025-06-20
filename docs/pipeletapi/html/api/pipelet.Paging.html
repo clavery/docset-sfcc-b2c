@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet Paging</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet Paging</div>
+            <div class="topLevelDescription">This pipelet creates a PagingModel for paging through lists of Objects. The pipelet accepts a Collection or Iterator as the list of Objects. 
+If an Iterator is used, then ObjectsCount must also be provided. <p/>
+Start determines the first item in the search set to return and PageSize determines the total number of items to return. The first item in the search set is indicated with zero, not one. <p/>
+For example, if you specify a Start of 0 and a Page Size of 15, then items 1-15 are returned. 
+If you specify a Start of 15 and a PageSize of 15, then items 16-30 are returned. <p/>
+Start and PageSize are optional parameters. If no Start value is provided, then zero is used as the Start value. If no PageSize is provided, then the pipelet uses the configured DefaultPageSize. If no DefaultPageSize exists, then a page size of 10 is used.</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Common</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DefaultPageSize</span>
+					&nbsp;:&nbsp;
+					Integer
+							(Optional)
+						</span>
+                    <div class="description">
+Used if no PageSize input value is provided. If no DefaultPageSize is specified, pipelet uses 10 as the page size.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Objects</span>
+					&nbsp;:&nbsp;
+					Object
+							(Required)
+						</span>
+                    <div class="description">
+dw.util.Collection or dw.util.Iterator of objects.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PageSize</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Number of search items to return. If not provided, the DefaultPageSize value is used instead.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Start</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+The first item requested in the subset of the search. For example, assume the default PageSize is set to 12. To return the first page: Start is 0, for the second page: Start is 12, for the third page: Start is 24. Usually, this is specified using logic that determines the total number of items in the search set and makes sure that the Start parameter is not higher than the total number of items in the search set and is a multiple of the PageSize. If not provided, a Start of 0 is used.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ObjectsCount</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PagingModel</span>
+					&nbsp;:&nbsp;
+					PagingModel
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

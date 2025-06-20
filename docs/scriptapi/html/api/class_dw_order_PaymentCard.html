@@ -1,0 +1,538 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PaymentCard</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.PaymentCard">
+            <a name="dw.order.PaymentCard"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class PaymentCard</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%;">
+                    <img src="images/inherit.gif">dw.order.PaymentCard
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents payment cards and provides methods to access the payment card
+ attributes and status.
+ <p/>
+ <b>Note:</b> this class handles sensitive financial and card holder data.
+ Pay special attention to PCI DSS v3. requirements 1, 3, 7, and 9.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>active
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns 'true' if payment card is active (enabled), otherwise 'false' is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>cardType
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The unique card type of the payment card.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>description
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The description of the payment card.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>image
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The reference to the payment card image.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>name
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The name of the payment card.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_getCardType_DetailAnchor"><span class="">getCardType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the unique card type of the payment card.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_getDescription_DetailAnchor"><span class="">getDescription</span></a></span>()
+						: 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a></span>
+                    <div class="description">Returns the description of the payment card.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_getImage_DetailAnchor"><span class="">getImage</span></a></span>()
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">Returns the reference to the payment card image.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_getName_DetailAnchor"><span class="">getName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the payment card.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_isActive_DetailAnchor"><span class="">isActive</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if payment card is active (enabled), otherwise 'false' is returned.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_isApplicable_Customer_String_Number_DetailAnchor"><span class="">isApplicable</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>, countryCode
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, paymentAmount
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns 'true' if this payment card is applicable for the specified customer, country and payment amount and the session currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_verify_Number_Number_String_DetailAnchor"><span class="">verify</span></a></span>(expiresMonth
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, expiresYear
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, cardNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Verify the card against the provided values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_PaymentCard_verify_Number_Number_String_String_DetailAnchor"><span class="">verify</span></a></span>(expiresMonth
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, expiresYear
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, cardNumber
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, csc
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Verify the card against the provided values.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_getCardType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCardType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCardType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the unique card type of the payment card.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">cardType of the payment card.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_getDescription_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDescription</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDescription</span>()
+					 : 
+					<a href="class_dw_content_MarkupText.html"><span class="">MarkupText</span></a>
+                    </div>
+                    <div class="description">Returns the description of the payment card.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Description of the payment card.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_getImage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>()
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">Returns the reference to the payment card image.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Image of the payment card.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_getName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the payment card.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Name of the payment card.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_isActive_DetailAnchor"></a>
+                    <div class="detailName 
+						">isActive</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isActive</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if payment card is active (enabled), otherwise 'false' is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if payment card is active, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_isApplicable_Customer_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">isApplicable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isApplicable</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>, countryCode
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, paymentAmount
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns 'true' if this payment card is applicable for the specified
+ customer, country and payment amount and the session currency.
+ <p/>
+
+ The payment card is applicable if
+ <ul>
+ <li>the card is restricted by customer group, and at least one of the
+ groups of the specified customer is assigned to the card</li>
+ <li>the card is restricted by billing country, and the specified country
+ code is assigned to the card</li>
+ <li>the method is restricted by payment amount for the session currency,
+ and the specified payment amount is within the limits of the min/max
+ payment amount defined for the method and the session currency</li>
+ <li>the method is restricted by session currency, and the session
+ currency code is assigned to the method</li>
+ </ul>
+
+ All parameters are optional, and if not specified, the respective
+ restriction won't be validated. For example, if a card is restricted by
+ billing country, but no country code is specified, this card will be
+ returned, unless it is filtered out by customer group or payment amount.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">Customer or null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">countryCode</span>
+						 - 
+						<span class="parameterDesc">Billing country code or null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentAmount</span>
+						 - 
+						<span class="parameterDesc">Payment amount or null</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if payment card is applicable, false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_verify_Number_Number_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">verify</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">verify</span>(expiresMonth
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, expiresYear
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, cardNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Verify the card against the provided values. This method is equivalent to
+ <a href="class_dw_order_PaymentCard.html#dw_order_PaymentCard_verify_Number_Number_String_String_DetailAnchor">verify(Number, Number, String, String)</a> but omits verification of the
+ card security code. If the verification fails the resulting
+ <a href="class_dw_system_Status.html">Status</a> will hold up to 2 error items each with a code:
+
+ <ul>
+ <li><a href="class_dw_order_PaymentStatusCodes.html#dw_order_PaymentStatusCodes_CREDITCARD_INVALID_EXPIRATION_DATE_DetailAnchor">PaymentStatusCodes.CREDITCARD_INVALID_EXPIRATION_DATE</a> - the expiresMonth and expiresYear do not describe a
+ month in the future, or describe an invalid month outside the range 1-12.</li>
+ <li><a href="class_dw_order_PaymentStatusCodes.html#dw_order_PaymentStatusCodes_CREDITCARD_INVALID_CARD_NUMBER_DetailAnchor">PaymentStatusCodes.CREDITCARD_INVALID_CARD_NUMBER</a> - the cardNumber does not verify against one or more configured
+ checks, which may include the Luhn checksum, accepted number lengths, or accepted number prefixes.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expiresMonth</span>
+						 - 
+						<span class="parameterDesc">expiration month as integer, 1 (January) to 12 (December)</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expiresYear</span>
+						 - 
+						<span class="parameterDesc">expiration year as integer, e.g. 2025</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">cardNumber</span>
+						 - 
+						<span class="parameterDesc">card number, a string containing digital characters</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">status indicating result</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_PaymentCard_verify_Number_Number_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">verify</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">verify</span>(expiresMonth
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, expiresYear
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, cardNumber
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, csc
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Verify the card against the provided values. If the verification fails the resulting
+ <a href="class_dw_system_Status.html">Status</a> will hold up to 3 error items with these codes:
+
+ <ul>
+ <li><a href="class_dw_order_PaymentStatusCodes.html#dw_order_PaymentStatusCodes_CREDITCARD_INVALID_EXPIRATION_DATE_DetailAnchor">PaymentStatusCodes.CREDITCARD_INVALID_EXPIRATION_DATE</a>  - the expiresMonth and expiresYear do not describe a
+ month in the future, or describe an invalid month outside the range 1-12.</li>
+ <li><a href="class_dw_order_PaymentStatusCodes.html#dw_order_PaymentStatusCodes_CREDITCARD_INVALID_CARD_NUMBER_DetailAnchor">PaymentStatusCodes.CREDITCARD_INVALID_CARD_NUMBER</a> - the cardNumber does not verify against one or more configured
+ checks, which may include the Luhn checksum, accepted number lengths, or accepted number prefixes.</li>
+ <li><a href="class_dw_order_PaymentStatusCodes.html#dw_order_PaymentStatusCodes_CREDITCARD_INVALID_SECURITY_CODE_DetailAnchor">PaymentStatusCodes.CREDITCARD_INVALID_SECURITY_CODE</a> - the card security code does not verify against the configured
+ accepted length.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expiresMonth</span>
+						 - 
+						<span class="parameterDesc">expiration month as integer, 1 (January) to 12 (December)</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">expiresYear</span>
+						 - 
+						<span class="parameterDesc">expiration year as integer, e.g. 2025</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">cardNumber</span>
+						 - 
+						<span class="parameterDesc">card number, a string containing digital characters</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">csc</span>
+						 - 
+						<span class="parameterDesc">card security code, a string containing digital characters</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">status indicating result</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

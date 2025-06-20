@@ -1,0 +1,295 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Cache</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.system.Cache">
+            <a name="dw.system.Cache"></a>
+            <div class="packageName">dw.system</div>
+            <div class="className
+					">	
+        	
+				Class Cache</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.system.Cache
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The Cache class represents a custom cache.
+ <p>
+ A cache stores data over multiple requests. Each cartridge can define its own
+ caches for different business requirements. To limit the
+ visibility of cache entries by scope, for example, by site, catalog, or
+ external system, include the scope reference when constructing the
+ key. For example:
+
+ <pre>
+    var cache = CacheMgr.getCache( 'SiteConfigurations' );
+    cache.get( Site.current.ID + "config", function loadSiteConfiguration() {return loadCfg( Site.current );} );
+ </pre>
+
+ <p>
+ Do not build the cache key using personal user data, since the key might be
+ visible in log messages.
+
+ <p>
+ There is never a guarantee that a stored object can be retrieved from the
+ cache. The storage allocated for entries is limited and clearing or
+ invalidation might occur at any time. To maintain the cache size limits, the
+ cache evicts entries that are less likely to be used again. For example, the
+ cache might evict an entry because it hasn't been used recently or very
+ often. Cache entries aren't synchronized between different application
+ servers.
+
+ <p>
+ The cache returns immutable copies of the original objects put into the
+ cache. Lists are converted to arrays during this process. Only JavaScript
+ primitive values and tree-like object structures can be stored as entries.
+ Object structures can consist of arrays, lists, and basic JavaScript
+ objects. Script API classes are not supported, except <a href="class_dw_util_List.html">List</a>
+ and its subclasses. <code>null</code> can be stored as a value.
+ <code>undefined</code> can't be stored.
+
+ <p>
+ See <a href="class_dw_system_CacheMgr.html">CacheMgr</a> for details about how to configure a custom cache.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Cache_get_String_Function_DetailAnchor"><span class="">get</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, loader
+								 : 	
+								 
+								<a href="class_TopLevel_Function.html"><span class="">Function</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the value associated with key in this cache, or invokes the loader function to generate the entry if there is no entry found.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Cache_get_String_DetailAnchor"><span class="">get</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">Returns the value associated with key in this cache.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Cache_invalidate_String_DetailAnchor"><span class="">invalidate</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the cache entry for key (if one exists) manually before the cache's eviction strategy goes into effect.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_system_Cache_put_String_Object_DetailAnchor"><span class="">put</span></a></span>(key
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					void</span>
+                    <div class="description">Stores the specified entry directly into the cache, replacing any previously cached entry for key if one exists.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_system_Cache_get_String_Function_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, loader
+								 : 
+								 
+								<a href="class_TopLevel_Function.html"><span class="">Function</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the value associated with key in this cache, or invokes the loader function to generate the entry if
+ there is no entry found. The generated entry is stored for future retrieval. If the loader function returns
+ <code>undefined</code>, this value is not stored in the cache.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">The cache key.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">loader</span>
+						 - 
+						<span class="parameterDesc">The loader function that is called if no value is stored in the cache.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The value found in the cache or the value returned from the loader function call.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Cache_get_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">get</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">get</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">Returns the value associated with key in this cache. If there is no entry in the cache then
+ <code>undefined</code> is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">The cache key.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The stored value or <code>undefined</code> if no value is found in the cache.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Cache_invalidate_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">invalidate</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">invalidate</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the cache entry for key (if one exists) manually before the cache's eviction strategy goes into effect.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">The cache key.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_system_Cache_put_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">put</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">put</span>(key
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Stores the specified entry directly into the cache, replacing any previously cached entry for key if one exists.
+ Storing <code>undefined</code> as value has the same effect as calling <a href="class_dw_system_Cache.html#dw_system_Cache_invalidate_String_DetailAnchor">invalidate(String)</a> for that key.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">key</span>
+						 - 
+						<span class="parameterDesc">The cache key.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be store in the cache.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

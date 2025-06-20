@@ -1,0 +1,716 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Quantity</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.value.Quantity">
+            <a name="dw.value.Quantity"></a>
+            <div class="packageName">dw.value</div>
+            <div class="className
+					">	
+        	
+				Class Quantity</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.value.Quantity
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents the quantity of an item.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>available
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the instance contains settings for value and unit.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>decimalValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The quantity as <a href="class_dw_util_Decimal.html">Decimal</a>, <code>null</code> is returned when the quantity is not available.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>unit
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The value for unit which identifies the
+ unit of measure for the quantity. Examples of unit
+ are 'inches' or 'pounds'.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>value
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The quantity value.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_Quantity_Number_String_DetailAnchor"><span class="">Quantity</span></a></span>(value
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, unit
+									 : 
+									
+									<a href="class_TopLevel_String.html"><span class="">String</span></a>)</span>
+                    <div class="description">Creates a new quantity instance with the specified value and unit.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_add_Quantity_DetailAnchor"><span class="">add</span></a></span>(value
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Add Quantity object to the current object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_compareTo_Quantity_DetailAnchor"><span class="">compareTo</span></a></span>(other
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Compares two Quantity values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_divide_Number_DetailAnchor"><span class="">divide</span></a></span>(divisor
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Divide Quantity object by specified divisor.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_equals_Object_DetailAnchor"><span class="">equals</span></a></span>(other
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Compares two decimal values whether they are equivalent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_getDecimalValue_DetailAnchor"><span class="">getDecimalValue</span></a></span>()
+						: 
+					<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a></span>
+                    <div class="description">Returns the quantity as <a href="class_dw_util_Decimal.html">Decimal</a>, <code>null</code> is returned when the quantity is not available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_getUnit_DetailAnchor"><span class="">getUnit</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value for unit which identifies the unit of measure for the quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_getValue_DetailAnchor"><span class="">getValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the quantity value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_hashCode_DetailAnchor"><span class="">hashCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Calculates the hash code for a decimal.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_isAvailable_DetailAnchor"><span class="">isAvailable</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the instance contains settings for value and unit.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_isOfSameUnit_Quantity_DetailAnchor"><span class="">isOfSameUnit</span></a></span>(value
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if two Quantities have the same unit.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_multiply_Number_DetailAnchor"><span class="">multiply</span></a></span>(factor
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Multiply Quantity object by specified factor.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_newQuantity_Decimal_DetailAnchor"><span class="">newQuantity</span></a></span>(value
+								 : 	
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>)
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Method returns a new instance of Quantity with the same unit but different value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_round_Number_DetailAnchor"><span class="">round</span></a></span>(precision
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Rounds the Quantity value to the number of specified decimal digits.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_subtract_Quantity_DetailAnchor"><span class="">subtract</span></a></span>(value
+								 : 	
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Subtract Quantity object from the current object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_toString_DetailAnchor"><span class="">toString</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns a string representation of this quantity object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_value_Quantity_valueOf_DetailAnchor"><span class="">valueOf</span></a></span>()
+						: 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a></span>
+                    <div class="description">According to the ECMA spec returns the "natural" primitive value.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_Quantity_Number_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">Quantity</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">Quantity</span>(value
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>, unit
+								 : 
+								 					
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+                    </div>
+                    <div class="description">Creates a new quantity instance with the specified value and unit.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the actual quantity, must not be <code>null</code></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">unit</span>
+						 - 
+						<span class="parameterDesc">the unit identifier for the quantity, must not be <code>null</code></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_add_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">add</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">add</span>(value
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Add Quantity object to the current object. Only objects representing the same unit can be added.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">Quantity object</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Quantity object representing the sum of the operands</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_compareTo_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">compareTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">compareTo</span>(other
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Compares two Quantity values. An exception is thrown if the two Quantities values
+ are of different unit. If one of the Quantity values represents the N/A value
+ it is treated as 0.0.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">other</span>
+						 - 
+						<span class="parameterDesc">the other quantity to compare.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the comparison.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_divide_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">divide</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">divide</span>(divisor
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Divide Quantity object by specified divisor.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">divisor</span>
+						 - 
+						<span class="parameterDesc">divisor</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Quantity object representing division result</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_equals_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">equals</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">equals</span>(other
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Compares two decimal values whether they are equivalent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">other</span>
+						 - 
+						<span class="parameterDesc">the object to compare against this quantity instance.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if equal, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_getDecimalValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDecimalValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDecimalValue</span>()
+					 : 
+					<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>
+                    </div>
+                    <div class="description">Returns the quantity as <a href="class_dw_util_Decimal.html">Decimal</a>, <code>null</code> is returned when the quantity is not available.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the quantity as <a href="class_dw_util_Decimal.html">Decimal</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_getUnit_DetailAnchor"></a>
+                    <div class="detailName 
+						">getUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getUnit</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value for unit which identifies the
+ unit of measure for the quantity. Examples of unit
+ are 'inches' or 'pounds'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the unit value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_getValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the quantity value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the quantity value.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_value_Quantity.html#dw_value_Quantity_getDecimalValue_DetailAnchor">getDecimalValue()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_hashCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">hashCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hashCode</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Calculates the hash code for a decimal.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the hash code.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_isAvailable_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAvailable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAvailable</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the instance contains settings for value and unit.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the instance is initialized with value and unit, false if the state is 'not available'.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_isOfSameUnit_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">isOfSameUnit</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isOfSameUnit</span>(value
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if two Quantities have the same unit.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the second quantity for the comparison.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if both quantities have the same unit, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_multiply_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">multiply</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">multiply</span>(factor
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Multiply Quantity object by specified factor.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">factor</span>
+						 - 
+						<span class="parameterDesc">multiplication factor</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Quantity object representing multiplication result</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_newQuantity_Decimal_DetailAnchor"></a>
+                    <div class="detailName 
+						">newQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">newQuantity</span>(value
+								 : 
+								 
+								<a href="class_dw_util_Decimal.html"><span class="">Decimal</span></a>)
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Method returns a new instance of Quantity with the same unit but
+ different value. An N/A instance is returned if value is null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">as a decimal</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">new Quantity instance with same unit</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_round_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">round</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">round</span>(precision
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Rounds the Quantity value to the number of specified decimal digits.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">precision</span>
+						 - 
+						<span class="parameterDesc">number of decimal digits after the decimal point</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new rounded Quantity value</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_subtract_Quantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">subtract</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">subtract</span>(value
+								 : 
+								 
+								<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>)
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Subtract Quantity object from the current object. Only objects representing the same unit can be subtracted.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">Quantity object to subtract</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Quantity object representing the result of subtraction</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_toString_DetailAnchor"></a>
+                    <div class="detailName 
+						">toString</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">toString</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns a string representation of this quantity object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a string representation of this quantity object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_value_Quantity_valueOf_DetailAnchor"></a>
+                    <div class="detailName 
+						">valueOf</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">valueOf</span>()
+					 : 
+					<a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                    </div>
+                    <div class="description">According to the ECMA spec returns the "natural" primitive value. Here
+ the value portion of the Quantity is returned.</div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

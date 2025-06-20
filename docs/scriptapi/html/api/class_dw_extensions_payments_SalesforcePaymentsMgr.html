@@ -1,0 +1,1597 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SalesforcePaymentsMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.payments.SalesforcePaymentsMgr">
+            <a name="dw.extensions.payments.SalesforcePaymentsMgr"></a>
+            <div class="packageName">dw.extensions.payments</div>
+            <div class="className
+					">	
+        	
+				Class SalesforcePaymentsMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.payments.SalesforcePaymentsMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Contains functionality for use with Salesforce Payments. See Salesforce Payments documentation for how to
+ gain access and configure it for use on your sites.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_ABANDONED_DetailAnchor"></a>CANCELLATION_REASON_ABANDONED
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"abandoned"
+                        <div class="description">Cancellation reason indicating customer abandoned payment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_DUPLICATE_DetailAnchor"></a>CANCELLATION_REASON_DUPLICATE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"duplicate"
+                        <div class="description">Cancellation reason indicating payment intent was a duplicate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_FRAUDULENT_DetailAnchor"></a>CANCELLATION_REASON_FRAUDULENT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"fraudulent"
+                        <div class="description">Cancellation reason indicating payment was fraudulent.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_REQUESTED_BY_CUSTOMER_DetailAnchor"></a>CANCELLATION_REASON_REQUESTED_BY_CUSTOMER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"requested_by_customer"
+                        <div class="description">Cancellation reason indicating customer action or request.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_REFUND_REASON_DUPLICATE_DetailAnchor"></a>REFUND_REASON_DUPLICATE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"duplicate"
+                        <div class="description">Refund reason indicating payment intent was a duplicate.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_REFUND_REASON_FRAUDULENT_DetailAnchor"></a>REFUND_REASON_FRAUDULENT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"fraudulent"
+                        <div class="description">Refund reason indicating payment was fraudulent.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsMgr_REFUND_REASON_REQUESTED_BY_CUSTOMER_DetailAnchor"></a>REFUND_REASON_REQUESTED_BY_CUSTOMER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"requested_by_customer"
+                        <div class="description">Refund reason indicating customer action or request.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>paymentsSiteConfig
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_extensions_payments_SalesforcePaymentsSiteConfiguration.html"><span class="">SalesforcePaymentsSiteConfiguration</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A payments site configuration object for the current site.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_attachPaymentMethod_SalesforcePaymentMethod_Customer_DetailAnchor"><span class="">attachPaymentMethod</span></a></span>(paymentMethod
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>, customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					void</span>
+                    <div class="description">Attaches the given payment method to the given customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_cancelPaymentIntent_SalesforcePaymentIntent_Object_DetailAnchor"><span class="">cancelPaymentIntent</span></a></span>(paymentIntent
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, paymentIntentProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Cancels the given payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_capturePaymentIntent_SalesforcePaymentIntent_Money_DetailAnchor"><span class="">capturePaymentIntent</span></a></span>(paymentIntent
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Captures funds for the given payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_confirmPaymentIntent_Order_SalesforcePaymentMethod_Object_DetailAnchor"><span class="">confirmPaymentIntent</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, paymentMethod
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>, paymentIntentProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Confirms a new payment intent using the given payment method, and associates it with the given order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_createPaymentIntent_Basket_Shipment_String_Money_Boolean_Object_DetailAnchor"><span class="">createPaymentIntent</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, zoneId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, stripeCustomerRequired
+								 : 	
+								 
+								boolean, paymentIntentProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Creates a payment intent using the given information, and associates it with the given basket.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_detachPaymentMethod_SalesforcePaymentMethod_DetailAnchor"><span class="">detachPaymentMethod</span></a></span>(paymentMethod
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>)
+						: 
+					void</span>
+                    <div class="description">Detaches the given payment method from its associated customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getAttachedPaymentMethods_Customer_DetailAnchor"><span class="">getAttachedPaymentMethods</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing the payment methods attached to the given customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getOffSessionPaymentMethods_Customer_DetailAnchor"><span class="">getOffSessionPaymentMethods</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing the payment methods for the given customer set up for future off session reuse.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPaymentDetails_OrderPaymentInstrument_DetailAnchor"><span class="">getPaymentDetails</span></a></span>(paymentInstrument
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentDetails.html"><span class="">SalesforcePaymentDetails</span></a></span>
+                    <div class="description">Returns the details to the Salesforce Payments payment associated with the given payment instrument, or <code>null</code> if the given payment instrument has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPaymentIntent_Basket_DetailAnchor"><span class="">getPaymentIntent</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a></span>
+                    <div class="description">Returns the payment intent for the given basket, or <code>null</code> if the given basket has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPaymentIntent_Order_DetailAnchor"><span class="">getPaymentIntent</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a></span>
+                    <div class="description">Returns the payment intent for the given order, or <code>null</code> if the given order has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPaymentsSiteConfig_DetailAnchor"><span class="">getPaymentsSiteConfig</span></a></span>()
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentsSiteConfiguration.html"><span class="">SalesforcePaymentsSiteConfiguration</span></a></span>
+                    <div class="description">Returns a payments site configuration object for the current site.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPayPalOrder_Basket_DetailAnchor"><span class="">getPayPalOrder</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a></span>
+                    <div class="description">Returns the PayPal order for the given basket, or <code>null</code> if the given basket has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPayPalOrder_Order_DetailAnchor"><span class="">getPayPalOrder</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a></span>
+                    <div class="description">Returns the PayPal order for the given order, or <code>null</code> if the given order has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getSavedPaymentMethods_Customer_DetailAnchor"><span class="">getSavedPaymentMethods</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing the payment methods saved to be presented to the given customer for reuse in checkouts.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_onCustomerRegistered_Order_DetailAnchor"><span class="">onCustomerRegistered</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					void</span>
+                    <div class="description">Handles the account registration of the shopper who placed the given order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_refundPaymentIntent_SalesforcePaymentIntent_Money_Object_DetailAnchor"><span class="">refundPaymentIntent</span></a></span>(paymentIntent
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, refundProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Refunds previously captured funds for the given payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_removeSavedPaymentMethod_SalesforcePaymentMethod_DetailAnchor"><span class="">removeSavedPaymentMethod</span></a></span>(paymentMethod
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the given saved payment method so that it is no longer presented to the given customer for reuse in checkouts.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_savePaymentMethod_Customer_SalesforcePaymentMethod_DetailAnchor"><span class="">savePaymentMethod</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>, paymentMethod
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>)
+						: 
+					void</span>
+                    <div class="description">Saves the given payment method to be presented to the given customer for reuse in subsequent checkouts.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_setPaymentDetails_OrderPaymentInstrument_SalesforcePaymentDetails_DetailAnchor"><span class="">setPaymentDetails</span></a></span>(paymentInstrument
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, paymentDetails
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentDetails.html"><span class="">SalesforcePaymentDetails</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the details to the Salesforce Payments payment associated with the given payment instrument.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_updatePaymentIntent_SalesforcePaymentIntent_Shipment_Money_String_Object_DetailAnchor"><span class="">updatePaymentIntent</span></a></span>(paymentIntent
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, orderNo
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, paymentIntentProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Updates the provided information in the given payment intent.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_attachPaymentMethod_SalesforcePaymentMethod_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">attachPaymentMethod</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">attachPaymentMethod</span>(paymentMethod
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>, customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Attaches the given payment method to the given customer. Use this method to attach a payment method of type
+ <a href="class_dw_extensions_payments_SalesforcePaymentMethod.html#dw_extensions_payments_SalesforcePaymentMethod_TYPE_CARD_DetailAnchor">SalesforcePaymentMethod.TYPE_CARD</a> to a shopper who registers as a customer after placing an order, and
+ has affirmatively elected to save their card as part of the registration process. This method will throw an error
+ if passed incompatible payment method and/or customer objects.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use <a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_onCustomerRegistered_Order_DetailAnchor">onCustomerRegistered(Order)</a> and <a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_savePaymentMethod_Customer_SalesforcePaymentMethod_DetailAnchor">savePaymentMethod(Customer, SalesforcePaymentMethod)</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentMethod</span>
+						 - 
+						<span class="parameterDesc">payment method to attach to customer</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">customer whose payment method to attach</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error attaching the payment method to the customer</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_cancelPaymentIntent_SalesforcePaymentIntent_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">cancelPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">cancelPaymentIntent</span>(paymentIntent
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, paymentIntentProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Cancels the given payment intent. If a payment authorization has been made for the payment intent, the
+ authorization is removed.
+ <p>
+ The payment intent must be in a status that supports cancel. See the Stripe documentation for more details.
+ </p>
+ <p>
+ The following Payment Intent property is supported:
+ <ul>
+ <li><code>cancellationReason</code> - optional payment intent cancellation reason
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntent</span>
+						 - 
+						<span class="parameterDesc">payment intent to capture</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntentProperties</span>
+						 - 
+						<span class="parameterDesc">additional properties to pass to the create Payment Intent API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'paymentintent'</code> contains the payment intent, if it is available in the Stripe response. Status detail <code>'error'</code> contains the Stripe error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_ABANDONED_DetailAnchor">CANCELLATION_REASON_ABANDONED</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_DUPLICATE_DetailAnchor">CANCELLATION_REASON_DUPLICATE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_FRAUDULENT_DetailAnchor">CANCELLATION_REASON_FRAUDULENT</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_CANCELLATION_REASON_REQUESTED_BY_CUSTOMER_DetailAnchor">CANCELLATION_REASON_REQUESTED_BY_CUSTOMER</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error canceling the payment intent</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_capturePaymentIntent_SalesforcePaymentIntent_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						">capturePaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">capturePaymentIntent</span>(paymentIntent
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Captures funds for the given payment intent.
+ <p>
+ The payment intent must be in a status that supports capture. See the Stripe documentation for more details.
+ </p>
+ <p>
+ If <code>amount</code> is not specified, the default is the full amount available to capture. If specified, the
+ amount must be less than or equal to the amount available to capture.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntent</span>
+						 - 
+						<span class="parameterDesc">payment intent to capture</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">optional amount to capture, defaults to amount available to capture</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'error'</code> contains the Stripe error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error capturing the payment intent</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_confirmPaymentIntent_Order_SalesforcePaymentMethod_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">confirmPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">confirmPaymentIntent</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, paymentMethod
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>, paymentIntentProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Confirms a new payment intent using the given payment method, and associates it with the given order.
+ </p>
+ <p>
+ The order must be prepared to contain products, shipments, and any other necessary data, and must be calculated
+ to reflect the correct total amounts. If the order is not for the same <a href="class_dw_customer_Customer.html">Customer</a> as the given
+ payment method, an error is thrown.
+ </p>
+ <p>
+ The specified payment method must be set up for off session future use or an error is thrown. iDeal and
+ Bancontact implement reuse differently than other payment methods, but they can't be reused themselves.
+ </p>
+ <p>
+ The following Payment Intent properties are supported:
+ <ul>
+ <li><code>statementDescriptor</code> - optional statement descriptor
+ <li><code>cardCaptureAutomatic</code> - optional <code>true</code> if the credit card payment should be
+ automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be
+ captured later
+ </ul>
+ </p>
+ <p>
+ If <code>cardCaptureAutomatic</code> is provided it is used to determine card capture timing, and otherwise the
+ default card capture timing set for the site is used.
+ </p>
+ <p>
+ If <code>statementDescriptor</code> is provided it is used as the complete description that appears on your
+ customers' statements for the payment, and if not a default statement descriptor is used. If a default statement
+ descriptor is set for the site it is used as the default, and otherwise the default statement descriptor for the
+ account will apply.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order to pay using Salesforce Payments</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentMethod</span>
+						 - 
+						<span class="parameterDesc">payment method to use to pay</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntentProperties</span>
+						 - 
+						<span class="parameterDesc">additional properties to pass to the create Payment Intent API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'paymentintent'</code> contains the payment intent, if it is available in the Stripe response. Status detail <code>'error'</code> contains the Stripe error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the parameter validation failed or there's an error confirming the payment intent</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_createPaymentIntent_Basket_Shipment_String_Money_Boolean_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">createPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createPaymentIntent</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, zoneId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, stripeCustomerRequired
+								 : 
+								 
+								boolean, paymentIntentProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Creates a payment intent using the given information, and associates it with the given basket.
+ </p>
+ <p>
+ The following Payment Intent properties are supported:
+ <ul>
+ <li><code>type</code> - required payment method type, such as <a href="class_dw_extensions_payments_SalesforcePaymentMethod.html#dw_extensions_payments_SalesforcePaymentMethod_TYPE_CARD_DetailAnchor">SalesforcePaymentMethod.TYPE_CARD</a>
+ <li><code>statementDescriptor</code> - optional statement descriptor
+ <li><code>cardCaptureAutomatic</code> - optional <code>true</code> if the credit card payment should be
+ automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be
+ captured later
+ </ul>
+ </p>
+ <p>
+ The <code>stripeCustomerRequired</code> must be set to <code>true</code> if the payment will be set up for future
+ usage, whether on session or off session. If <code>true</code> then if a Stripe Customer is associated with the
+ shopper then it will be used, and otherwise a new Stripe Customer will be created. The new Stripe Customer will
+ be associated with the shopper if logged into a registered customer account for the site.
+ </p>
+ <p>
+ If <code>cardCaptureAutomatic</code> is provided it is used to determine card capture timing, and otherwise the
+ default card capture timing set for the site is used.
+ </p>
+ <p>
+ If <code>statementDescriptor</code> is provided it is used as the complete description that appears on your
+ customers' statements for the payment, and if not a default statement descriptor is used. If a default statement
+ descriptor is set for the site it is used as the default, and otherwise the default statement descriptor for the
+ account will apply.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">basket to checkout and pay using Salesforce Payments</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">shipment to use for shipping information in the payment intent</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">zoneId</span>
+						 - 
+						<span class="parameterDesc">id of the payment zone</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">payment amount</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">stripeCustomerRequired</span>
+						 - 
+						<span class="parameterDesc"><code>true</code> if a Stripe Customer must be associated with the payment intent, and would be created if it doesn't already exist, or <code>false</code> if a Stripe Customer does not have to be associated with the payment intent</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntentProperties</span>
+						 - 
+						<span class="parameterDesc">properties to pass to the create Payment Intent API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'paymentintent'</code> contains the payment intent, if it is available in the Stripe response. Status detail <code>'error'</code> contains the Stripe error information, if it is available in the response.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_detachPaymentMethod_SalesforcePaymentMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">detachPaymentMethod</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">detachPaymentMethod</span>(paymentMethod
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Detaches the given payment method from its associated customer. Once detached the payment method remains
+ associated with payment intents in the payment account, but is no longer saved for use by the customer in future
+ orders.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use <a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_removeSavedPaymentMethod_SalesforcePaymentMethod_DetailAnchor">removeSavedPaymentMethod(SalesforcePaymentMethod)</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentMethod</span>
+						 - 
+						<span class="parameterDesc">payment method to detach from customer</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error detaching the payment method from its customer</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getAttachedPaymentMethods_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getAttachedPaymentMethods</div>
+                    <div class="detailSignature
+	    				dep">
+                        static&nbsp;<span class="emphasis">getAttachedPaymentMethods</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing the payment methods attached to the given customer. The collection will be empty
+ if there are no payment methods attached to the customer, or there was an error retrieving the attached payment
+ methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">use <a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_getSavedPaymentMethods_Customer_DetailAnchor">getSavedPaymentMethods(Customer)</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">customer whose payment methods to get</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">collection of attached payment methods</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the given customer is <code>null</code> or <code>undefined</code></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getOffSessionPaymentMethods_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOffSessionPaymentMethods</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getOffSessionPaymentMethods</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing the payment methods for the given customer set up for future off session reuse.
+ The collection will be empty if there are no off session payment methods for the customer, or there was an
+ error retrieving the off session payment methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">customer whose off session payment methods to get</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">collection of off session payment methods</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the given customer is <code>null</code> or <code>undefined</code>, or there is an error getting the off session payment methods</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPaymentDetails_OrderPaymentInstrument_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentDetails</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPaymentDetails</span>(paymentInstrument
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentDetails.html"><span class="">SalesforcePaymentDetails</span></a>
+                    </div>
+                    <div class="description">Returns the details to the Salesforce Payments payment associated with the given payment instrument, or
+ <code>null</code> if the given payment instrument has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentInstrument</span>
+						 - 
+						<span class="parameterDesc">payment instrument</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The payment details</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if paymentInstrument is null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPaymentIntent_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPaymentIntent</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>
+                    </div>
+                    <div class="description">Returns the payment intent for the given basket, or <code>null</code> if the given basket has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">basket to checkout and pay using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The payment intent</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error retrieving the payment intent for the basket</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPaymentIntent_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPaymentIntent</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>
+                    </div>
+                    <div class="description">Returns the payment intent for the given order, or <code>null</code> if the given order has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order paid using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The payment intent</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error retrieving the payment intent for the order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPaymentsSiteConfig_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentsSiteConfig</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPaymentsSiteConfig</span>()
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentsSiteConfiguration.html"><span class="">SalesforcePaymentsSiteConfiguration</span></a>
+                    </div>
+                    <div class="description">Returns a payments site configuration object for the current site.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a payments site configuration or null if no payments site configuration found</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there is no current site</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPayPalOrder_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPayPalOrder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPayPalOrder</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a>
+                    </div>
+                    <div class="description">Returns the PayPal order for the given basket, or <code>null</code> if the given basket has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">basket to checkout and pay using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The PayPal order</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error retrieving the PayPal order for the basket</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPayPalOrder_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPayPalOrder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPayPalOrder</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a>
+                    </div>
+                    <div class="description">Returns the PayPal order for the given order, or <code>null</code> if the given order has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order paid using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The PayPal order</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error retrieving the PayPal order for the order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getSavedPaymentMethods_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSavedPaymentMethods</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getSavedPaymentMethods</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing the payment methods saved to be presented to the given customer for reuse in
+ checkouts. The collection will be empty if there are no payment methods saved for the customer, or there was an
+ error retrieving the saved payment methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">customer whose saved payment methods to get</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">collection of saved payment methods</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the given customer is <code>null</code> or <code>undefined</code>, or there is an error getting the saved payment methods</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_onCustomerRegistered_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">onCustomerRegistered</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">onCustomerRegistered</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Handles the account registration of the shopper who placed the given order. Use this method to ensure the
+ registered customer profile is associated with the order in Salesforce Payments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order paid using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error attaching the payment method to the customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_refundPaymentIntent_SalesforcePaymentIntent_Money_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">refundPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">refundPaymentIntent</span>(paymentIntent
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, refundProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Refunds previously captured funds for the given payment intent.
+ <p>
+ The payment intent must be in a state that supports refund. This includes its status as well as any previous
+ refunds. See the Stripe documentation for more details.
+ </p>
+ <p>
+ The following Payment Intent property is supported:
+ <ul>
+ <li><code>reason</code> - optional payment intent refund reason
+ </ul>
+ </p>
+ <p>
+ If <code>amount</code> is not specified, the default is the full amount available to refund. If specified, the
+ amount must be less than or equal to the amount available to refund.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntent</span>
+						 - 
+						<span class="parameterDesc">payment intent to refund</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">optional amount to refund, defaults to amount previously captured</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">refundProperties</span>
+						 - 
+						<span class="parameterDesc">additional properties to pass to the refund API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'error'</code> contains the Stripe error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_REFUND_REASON_DUPLICATE_DetailAnchor">REFUND_REASON_DUPLICATE</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_REFUND_REASON_FRAUDULENT_DetailAnchor">REFUND_REASON_FRAUDULENT</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentsMgr.html#dw_extensions_payments_SalesforcePaymentsMgr_REFUND_REASON_REQUESTED_BY_CUSTOMER_DetailAnchor">REFUND_REASON_REQUESTED_BY_CUSTOMER</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error refunding the payment intent</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_removeSavedPaymentMethod_SalesforcePaymentMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeSavedPaymentMethod</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">removeSavedPaymentMethod</span>(paymentMethod
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the given saved payment method so that it is no longer presented to the given customer for reuse in
+ checkouts. The payment method remains in the payment account, but is no longer saved for use by the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentMethod</span>
+						 - 
+						<span class="parameterDesc">payment method to detach from customer</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error removing the saved payment method from its customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_savePaymentMethod_Customer_SalesforcePaymentMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">savePaymentMethod</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">savePaymentMethod</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>, paymentMethod
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentMethod.html"><span class="">SalesforcePaymentMethod</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Saves the given payment method to be presented to the given customer for reuse in subsequent checkouts. This
+ method will throw an error if passed incompatible payment method and/or customer objects.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">customer for which to save the payment method</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentMethod</span>
+						 - 
+						<span class="parameterDesc">payment method to save for the customer</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error saving the payment method for the customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_setPaymentDetails_OrderPaymentInstrument_SalesforcePaymentDetails_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPaymentDetails</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">setPaymentDetails</span>(paymentInstrument
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, paymentDetails
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentDetails.html"><span class="">SalesforcePaymentDetails</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the details to the Salesforce Payments payment associated with the given payment instrument.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentInstrument</span>
+						 - 
+						<span class="parameterDesc">payment instrument</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentDetails</span>
+						 - 
+						<span class="parameterDesc">payment details</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePaymentMethod.html#dw_extensions_payments_SalesforcePaymentMethod_getPaymentDetails_OrderPaymentInstrument_DetailAnchor">SalesforcePaymentMethod.getPaymentDetails(OrderPaymentInstrument)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforcePayPalOrder.html#dw_extensions_payments_SalesforcePayPalOrder_getPaymentDetails_OrderPaymentInstrument_DetailAnchor">SalesforcePayPalOrder.getPaymentDetails(OrderPaymentInstrument)</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if either paymentInstrument or paymentDetails is null</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_updatePaymentIntent_SalesforcePaymentIntent_Shipment_Money_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">updatePaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">updatePaymentIntent</span>(paymentIntent
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePaymentIntent.html"><span class="">SalesforcePaymentIntent</span></a>, shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, orderNo
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, paymentIntentProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Updates the provided information in the given payment intent.
+ <p>
+ The payment intent must be in a status that supports update. See the Stripe documentation for more details.
+ </p>
+ <p>
+ The following Payment Intent properties are supported:
+ <ul>
+ <li><code>statementDescriptor</code> - optional statement descriptor
+ <li><code>cardCaptureAutomatic</code> - optional <code>true</code> if the credit card payment should be
+ automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be
+ captured later
+ </ul>
+ </p>
+ <p>
+ If <code>cardCaptureAutomatic</code> is provided it is used to determine card capture timing, and otherwise the
+ default card capture timing set for the site is used.
+ </p>
+ <p>
+ If <code>statementDescriptor</code> is provided it is used as the complete description that appears on your
+ customers' statements for the payment, and if not a default statement descriptor is used. If a default statement
+ descriptor is set for the site it is used as the default, and otherwise the default statement descriptor for the
+ account will apply.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntent</span>
+						 - 
+						<span class="parameterDesc">payment intent to update</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">optional shipment to use to update shipping information in the payment intent</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">optional new payment amount</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">orderNo</span>
+						 - 
+						<span class="parameterDesc">optional order no of <a href="class_dw_order_Order.html">Order</a> to associate with the payment intent in metadata</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntentProperties</span>
+						 - 
+						<span class="parameterDesc">optional additional properties to pass to the update Payment Intent API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'paymentintent'</code> contains the payment intent, if it is available in the Stripe response. Status detail <code>'error'</code> contains the Stripe error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the parameter validation failed or there's an error updating the payment intent</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

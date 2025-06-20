@@ -1,0 +1,774 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class PagingModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.web.PagingModel">
+            <a name="dw.web.PagingModel"></a>
+            <div class="packageName">dw.web</div>
+            <div class="className
+					">	
+        	
+				Class PagingModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.web.PagingModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">A page model is a helper class to apply a pages to a collection of
+ elements or an iterator of elements and supports creating URLs for
+ continued paging through the elements.
+
+ The page model is intended to be initialized with the collection or
+ iterator, than the paging position is applyed and than the elements are
+ extracted with getPageElements().
+
+ In case the page model is initialized with a collection the page model
+ can be reused multiple times.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_web_PagingModel_DEFAULT_PAGE_SIZE_DetailAnchor"></a>DEFAULT_PAGE_SIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;10
+                        <div class="description">The default page size.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_web_PagingModel_MAX_PAGE_SIZE_DetailAnchor"></a>MAX_PAGE_SIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2000
+                        <div class="description">The maximum supported page size.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_web_PagingModel_PAGING_SIZE_PARAMETER_DetailAnchor"></a>PAGING_SIZE_PARAMETER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"sz"
+                        <div class="description">The URL Parameter used for the page size.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_web_PagingModel_PAGING_START_PARAMETER_DetailAnchor"></a>PAGING_START_PARAMETER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"start"
+                        <div class="description">The URL parameter used for the start position.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>count
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The count of the number of items in the model.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>currentPage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The index number of the current page. The page
+ counting starts with 0. The method also works with a miss-aligned
+ start. In that case the start is always treated as the start of
+ a page.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>empty
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the model is empty.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>end
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The index of the last element on the current page.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>maxPage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The maximum possible page number. Counting for pages starts
+ with 0.  The method also works with a miss-aligned start. In that case
+ the returned number might be higher than ((count-1) / pageSize).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageCount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The total page count. The method also works
+ with a miss-aligned start. In that case the returned number might
+ be higher than (count / pageSize).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageElements
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An iterator that can be used to iterate through the elements of
+ the current page.
+
+ In case of a collection as the page models source, the method can be
+ called multiple times. Each time a fresh iterator is returned.
+
+ In case of an iterator as the page models source, the method must be
+ called only once. The method will always return the same iterator,
+ which means the method amy return an exhausted iterator.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>pageSize
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The size of the page.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>start
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The current start position from which iteration will start.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_PagingModel_Iterator_Number_DetailAnchor"><span class="">PagingModel</span></a></span>(elements
+									 : 
+									
+									<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>, count
+									 : 
+									
+									<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)</span>
+                    <div class="description">Constructs the PagingModel using the specified iterator and count value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_PagingModel_Collection_DetailAnchor"><span class="">PagingModel</span></a></span>(elements
+									 : 
+									
+									<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)</span>
+                    <div class="description">Constructs the PagingModel using the specified collection.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_web_PagingModel_appendPageSize_URL_Number_DetailAnchor"><span class="">appendPageSize</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, pageSize
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL containing the page size parameter appended to the specified url.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_appendPaging_URL_DetailAnchor"><span class="">appendPaging</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL by appending the current page start position and the current page size to the URL.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_appendPaging_URL_Number_DetailAnchor"><span class="">appendPaging</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, position
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Returns an URL by appending the paging parameters for a desired page start position and the current page size to the specified url.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getCount_DetailAnchor"><span class="">getCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the count of the number of items in the model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getCurrentPage_DetailAnchor"><span class="">getCurrentPage</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the index number of the current page.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getEnd_DetailAnchor"><span class="">getEnd</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the index of the last element on the current page.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getMaxPage_DetailAnchor"><span class="">getMaxPage</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the maximum possible page number.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getPageCount_DetailAnchor"><span class="">getPageCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the total page count.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getPageElements_DetailAnchor"><span class="">getPageElements</span></a></span>()
+						: 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a></span>
+                    <div class="description">Returns an iterator that can be used to iterate through the elements of the current page.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getPageSize_DetailAnchor"><span class="">getPageSize</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the size of the page.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_getStart_DetailAnchor"><span class="">getStart</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the current start position from which iteration will start.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_isEmpty_DetailAnchor"><span class="">isEmpty</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the model is empty.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_setPageSize_Number_DetailAnchor"><span class="">setPageSize</span></a></span>(pageSize
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the size of the page.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_web_PagingModel_setStart_Number_DetailAnchor"><span class="">setStart</span></a></span>(start
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the current start position from which iteration will start.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_PagingModel_Iterator_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">PagingModel</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">PagingModel</span>(elements
+								 : 
+								 					
+								<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>, count
+								 : 
+								 					
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+                    </div>
+                    <div class="description">Constructs the PagingModel using the specified iterator and count value.
+ Count must not be negative.
+
+ Note: A valid count must be provided. The PageModel class can not be used
+ if the number of elements is unknown. Without knowning the number of
+ elements it still would be possible to return the elements of a particular
+ page, but it would be not possible to calculate data like the total number
+ of pages or to construct an URL to jump to a particular page.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">elements</span>
+						 - 
+						<span class="parameterDesc">the iterator containing the model elements.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">count</span>
+						 - 
+						<span class="parameterDesc">the count of elements.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_PagingModel_Collection_DetailAnchor"></a>
+                    <div class="detailName 
+						">PagingModel</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">PagingModel</span>(elements
+								 : 
+								 					
+								<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>)
+                    </div>
+                    <div class="description">Constructs the PagingModel using the specified collection.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">elements</span>
+						 - 
+						<span class="parameterDesc">the collection containing the model elements.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_appendPageSize_URL_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">appendPageSize</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">appendPageSize</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, pageSize
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL containing the page size parameter appended to the
+ specified url. The name of the page size parameter is 'sz' (see
+ PAGE_SIZE_PARAMETER). The start position parameter is not appended to the
+ returned URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the URL to append the page size parameter to.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pageSize</span>
+						 - 
+						<span class="parameterDesc">the page size</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL that contains the page size parameter.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_appendPaging_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">appendPaging</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">appendPaging</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL by appending the current page start position and the
+ current page size to the URL.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the URL to append the current paging position to.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL containing the current paging position.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_appendPaging_URL_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">appendPaging</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">appendPaging</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, position
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Returns an URL by appending the paging parameters for a desired
+ page start position and the current page size to the specified url. The name of
+ the page start position parameter is 'start' (see PAGING_START_PARAMETER)
+ and the page size parameter is 'sz' (see PAGE_SIZE_PARAMETER).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the URL to append the paging parameter to.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">position</span>
+						 - 
+						<span class="parameterDesc">the start position.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL that contains the paging parameters.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the count of the number of items in the model.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the count of the number of items in the model.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getCurrentPage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCurrentPage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCurrentPage</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the index number of the current page. The page
+ counting starts with 0. The method also works with a miss-aligned
+ start. In that case the start is always treated as the start of
+ a page.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the index number of the current page.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getEnd_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEnd</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEnd</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the index of the last element on the current page.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the index of the last element on the current page.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getMaxPage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaxPage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaxPage</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the maximum possible page number. Counting for pages starts
+ with 0.  The method also works with a miss-aligned start. In that case
+ the returned number might be higher than ((count-1) / pageSize).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the maximum possible page number.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getPageCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageCount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the total page count. The method also works
+ with a miss-aligned start. In that case the returned number might
+ be higher than (count / pageSize).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the total page count.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getPageElements_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageElements</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageElements</span>()
+					 : 
+					<a href="class_dw_util_Iterator.html"><span class="">Iterator</span></a>
+                    </div>
+                    <div class="description">Returns an iterator that can be used to iterate through the elements of
+ the current page.
+
+ In case of a collection as the page models source, the method can be
+ called multiple times. Each time a fresh iterator is returned.
+
+ In case of an iterator as the page models source, the method must be
+ called only once. The method will always return the same iterator,
+ which means the method amy return an exhausted iterator.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an iterator that you use to iterate through the elements of the current page.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getPageSize_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPageSize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPageSize</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the size of the page.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the size of the page.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_getStart_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStart</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStart</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the current start position from which iteration will start.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current start position from which iteration will start.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_isEmpty_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEmpty</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEmpty</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the model is empty.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the model is empty, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_setPageSize_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPageSize</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPageSize</span>(pageSize
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the size of the page. The page size must be greater or
+ equal to 1.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">pageSize</span>
+						 - 
+						<span class="parameterDesc">the size of the page.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_web_PagingModel_setStart_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStart</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStart</span>(start
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the current start position from which iteration will start.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">start</span>
+						 - 
+						<span class="parameterDesc">the current start position from which iteration will start.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

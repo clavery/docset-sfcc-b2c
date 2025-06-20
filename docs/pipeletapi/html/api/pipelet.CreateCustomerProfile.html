@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateCustomerProfile</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet CreateCustomerProfile</div>
+            <div class="topLevelDescription">Deprecated. Do not use this pipelet. Use the CreateCustomer pipelet instead. A customer profile is now created automatically along with the customer.<br/>
+This pipelet creates a new Customer using the supplied Login and Password. It exits with an ERROR if any of the following conditions are encountered:
+- A Customer with the supplied Login already exists.
+- The Password is not acceptable.
+- The system cannot create the Customer.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">Deprecated. Do not use this pipelet. Use the CreateCustomer pipelet instead. A customer profile is now created automatically along with the customer.</div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer (deprecated)</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Login</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The unique login name associated with the new customer and its profile. If login is already in use, the pipelet ends on the ERROR exist.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Password</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Customer plain customer password, which is encrypted before it is stored at the profile.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Profile</span>
+					&nbsp;:&nbsp;
+					Profile
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The new customer object.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ExecuteScriptModule</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className dep">
+                                    Job Step
+                                    ExecuteScriptModule</div>
+            <div class="topLevelDescription">Executes a function exported by a script module.
+    </div>
+            <div class="topLevelDescription">The module ID has to be configured at parameter 'ExecuteScriptModule.Module'.
+    </div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">This job step is deprecated. We recommend that you use the steptypes.json file to execute a
+        script.
+    </div>
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Organization or Sites</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExecuteScriptModule.Module</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Required)
+                                                </span>
+                    <div class="description">The ID of the script module, e.g. my_cartridge/cartridge/scripts/job/myScriptModule.js
+            </div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExecuteScriptModule.FunctionName</span>
+                                            &nbsp;:&nbsp;
+                                            String
+                                                    (Optional)
+                                                </span>
+                    <div class="description">The name of the script module's exported function to execute. If not defined teh script
+                is supposed to export a function named 'execute'.
+            </div>
+                    <div class="description">
+                                                Default Value:
+                                                execute</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExecuteScriptModule.TimeoutInSeconds</span>
+                                            &nbsp;:&nbsp;
+                                            Long
+                                                    (Optional)
+                                                </span>
+                    <div class="description">The timeout in seconds for the script module's function. If not defined the batch
+                processing framework applies the default timeout.
+            </div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ExecuteScriptModule.Transactional</span>
+                                            &nbsp;:&nbsp;
+                                            Boolean
+                                                    (Optional)
+                                                </span>
+                    <div class="description">Indicates if the script module's function requires transaction handling. The default
+                value is 'false'. To avoid a negative impact on system performance and allow more granular 
+                transaction control, keep the default setting of 'false'. Implement transaction handling within the 
+                job step using the dw.system.Transaction API.
+            </div>
+                    <div class="description">
+                                                Default Value:
+                                                false</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Script Module execution finished successfully.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Script Module execution failed.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

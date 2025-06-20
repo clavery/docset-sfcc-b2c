@@ -1,0 +1,793 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductAvailabilityModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.ProductAvailabilityModel">
+            <a name="dw.catalog.ProductAvailabilityModel"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class ProductAvailabilityModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.ProductAvailabilityModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The ProductAvailabilityModel provides methods for retrieving all information
+ on availability of a single product.
+
+ <p>
+ When using Omnichannel Inventory (OCI):
+ <ul>
+ <li>OCI supports backorders, but does not support preorders or perpetual availability. OCI refers to expected
+ restocks as Future inventory.</li>
+ <li>OCI uses an eventual consistency model with asynchronous inventory data updates. Your code must not assume that
+ inventory-affecting actions, such as placing orders, will immediately change inventory levels.</li>
+ </ul>
+ </p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductAvailabilityModel_AVAILABILITY_STATUS_BACKORDER_DetailAnchor"></a>AVAILABILITY_STATUS_BACKORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"BACKORDER"
+                        <div class="description">Indicates that the product stock has run out, but will be replenished, and is therefore available for ordering.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductAvailabilityModel_AVAILABILITY_STATUS_IN_STOCK_DetailAnchor"></a>AVAILABILITY_STATUS_IN_STOCK
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"IN_STOCK"
+                        <div class="description">Indicates that the product is in stock and available for ordering.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductAvailabilityModel_AVAILABILITY_STATUS_NOT_AVAILABLE_DetailAnchor"></a>AVAILABILITY_STATUS_NOT_AVAILABLE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"NOT_AVAILABLE"
+                        <div class="description">Indicates that the product is not currently available for ordering.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductAvailabilityModel_AVAILABILITY_STATUS_PREORDER_DetailAnchor"></a>AVAILABILITY_STATUS_PREORDER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"PREORDER"
+                        <div class="description">Indicates that the product is not yet in stock but is available for ordering.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>availability
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The availability of the product, which roughly defined is the
+ ratio of the original stock that is still available to sell.  The basic
+ formula, if the current site uses an
+ inventory list, is the ATS quantity divided by allocation
+ amount. If the product is not orderable at all this method returns 0.
+ The following specific rules apply for standard products:
+ <ul>
+ <li>If inventory lists are in use:
+     <ul>
+     <li>If no inventory record exists and the inventory list default-in-stock flag is true this method returns 1.</li>
+     <li>If no inventory record exists the inventory list default-in-stock flag is false this method returns 0.</li>
+     <li>If the product is not available this method returns 0.</li>
+     <li>If the product is perpetually available this method returns 1.</li>
+     <li>Otherwise, this method returns ATS / (allocation + preorderBackorderAllocation). (Values from <a href="class_dw_catalog_ProductInventoryRecord.html">ProductInventoryRecord</a>.)</li>
+     </ul>
+ </li>
+ </ul>
+ If inventory lists are not in use the method returns 0.
+
+ The following rules apply for special product types:
+ <ul>
+ <li>For a master product this method returns the average availability
+ of its online variations.</li>
+ <li>For a master product with no online variations this method returns 0.</li>
+ <li>For a master product with own inventory record the rules of the standard
+ products apply. Note: In this case the availability of the variations is not considered.</li>
+ <li>For a product set this method returns the greatest availability of
+ the online products in the set.</li>
+ <li>For a product set with no online products this method returns 0.</li>
+ <li>For a product set with an inventory record the rules of the standard
+ products apply. Note: In this case the availability of the set products is not considered.</li>
+ <li>For a bundle, this method returns the least availability of the bundled
+ products according to their bundled quantity and if it exist also from
+ the bundle inventory record.</li>
+ </ul></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>availabilityStatus
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The availability-status for the minimum-orderable-quantity (MOQ) of
+ the product.  The MOQ essentially represents a single orderable unit, and
+ therefore can be represented by a single availability-status.  This
+ method is essentially a convenience method.  The same information
+ can be retrieved by calling <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_getAvailabilityLevels_Number_DetailAnchor">getAvailabilityLevels(Number)</a>
+ with the MOQ of the product as the parameter and then retrieving the
+ single status from the returned map.
+
+ This method is typically used to display a product's availability in
+ the catalog when the order quantity is not known.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>inStock
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Convenience method for <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isInStock_Number_DetailAnchor">isInStock(Number)</a>. Returns true, if the
+ Product is available in the minimum-order-quantity. If the product does
+ not have a minimum-order-quantity defined, in-stock is checked for a
+ quantity value 1.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>inventoryRecord
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductInventoryRecord.html"><span class="">ProductInventoryRecord</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ProductInventoryRecord for the Product associated
+ with this model.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderable
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Convenience method for <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isOrderable_Number_DetailAnchor">isOrderable(Number)</a>. Returns true if the
+ Product is currently online (based on its online flag and online dates)
+ and is orderable in its minimum-order-quantity. If the product does not
+ have a minimum-order-quantity specified, then 1 is used. The method
+ returns false otherwise.
+ <p/>
+ Note: Orderable status is more general than in-stock status. A product
+ may be out-of-stock but orderable because it is back-orderable or
+ pre-orderable.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>SKUCoverage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The SKU coverage of the product.  The basic formula for a
+ master product is the ratio of online variations that are in stock
+ to the total number of online variations.  The following specific rules
+ apply for standard products:
+ <ul>
+ <li>If the product is in stock this method returns the availability of the product.</li>
+ <li>If the product is out of stock this method returns 0.</li>
+ </ul>
+ The following rules apply for special product types:
+ <ul>
+ <li>For a master product this method returns the average SKU coverage
+ of its online variations.</li>
+ <li>For a master product with no online variations this method returns 0.</li>
+ <li>For a product set this method returns the ratio of orderable SKUs in the product set
+ over the total number of online SKUs in the product set. </li>
+ <li>For a product set with no online products this method returns 0.</li>
+ <li>For a product bundle this method returns 1 if all of the bundled
+ products are online, and 0 otherwise.</li>
+ <li>For a product bundle with no online bundled products this method
+ returns 0.</li>
+ </ul></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>timeToOutOfStock
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of hours before the product is expected to go out
+ of stock.  The basic formula is the ATS quantity divided by the
+ sales velocity for the most recent day.  The following specific rules
+ apply for standard products:
+ <ul>
+ <li>If the product is out of stock this method returns 0.</li>
+ <li>If the product is perpetually available this method returns 1.</li>
+ <li>If the sales velocity or ATS is not available this method returns 0.</li>
+ <li>Otherwise this method returns ATS / sales velocity.</li>
+ </ul>
+ The following rules apply for special product types:
+ <ul>
+ <li>For a master product this method returns the greatest time to out
+ of stock of its online variations.</li>
+ <li>For a master product with no online variations this method returns 0.</li>
+ <li>For a product set this method returns the greatest time to out
+ of stock of the online products in the set.</li>
+ <li>For a product set with no online products this method returns 0.</li>
+ <li>For a bundle with no product inventory record, this method returns
+ the least time to out of stock of the online bundled products.</li>
+ <li>For a bundle with no product inventory record, and no online
+ bundled products, this method returns 0.</li>
+ </ul></div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_getAvailability_DetailAnchor"><span class="">getAvailability</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the availability of the product, which roughly defined is the ratio of the original stock that is still available to sell.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_getAvailabilityLevels_Number_DetailAnchor"><span class="">getAvailabilityLevels</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductAvailabilityLevels.html"><span class="">ProductAvailabilityLevels</span></a></span>
+                    <div class="description"><p>Returns an instance of <a href="class_dw_catalog_ProductAvailabilityLevels.html">ProductAvailabilityLevels</a>, where each available quantity represents a part of the input quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_getAvailabilityStatus_DetailAnchor"><span class="">getAvailabilityStatus</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the availability-status for the minimum-orderable-quantity (MOQ) of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_getInventoryRecord_DetailAnchor"><span class="">getInventoryRecord</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductInventoryRecord.html"><span class="">ProductInventoryRecord</span></a></span>
+                    <div class="description">Returns the ProductInventoryRecord for the Product associated with this model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_getSKUCoverage_DetailAnchor"><span class="">getSKUCoverage</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the SKU coverage of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_getTimeToOutOfStock_DetailAnchor"><span class="">getTimeToOutOfStock</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of hours before the product is expected to go out of stock.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_isInStock_Number_DetailAnchor"><span class="">isInStock</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the Product is in-stock in the given quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_isInStock_DetailAnchor"><span class="">isInStock</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Convenience method for <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isInStock_Number_DetailAnchor">isInStock(Number)</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_isOrderable_Number_DetailAnchor"><span class="">isOrderable</span></a></span>(quantity
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the Product is currently online (based on its online flag and online dates) and the specified quantity does not exceed the quantity available for sale, and returns false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductAvailabilityModel_isOrderable_DetailAnchor"><span class="">isOrderable</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Convenience method for <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isOrderable_Number_DetailAnchor">isOrderable(Number)</a>.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_getAvailability_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAvailability</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAvailability</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the availability of the product, which roughly defined is the
+ ratio of the original stock that is still available to sell.  The basic
+ formula, if the current site uses an
+ inventory list, is the ATS quantity divided by allocation
+ amount. If the product is not orderable at all this method returns 0.
+ The following specific rules apply for standard products:
+ <ul>
+ <li>If inventory lists are in use:
+     <ul>
+     <li>If no inventory record exists and the inventory list default-in-stock flag is true this method returns 1.</li>
+     <li>If no inventory record exists the inventory list default-in-stock flag is false this method returns 0.</li>
+     <li>If the product is not available this method returns 0.</li>
+     <li>If the product is perpetually available this method returns 1.</li>
+     <li>Otherwise, this method returns ATS / (allocation + preorderBackorderAllocation). (Values from <a href="class_dw_catalog_ProductInventoryRecord.html">ProductInventoryRecord</a>.)</li>
+     </ul>
+ </li>
+ </ul>
+ If inventory lists are not in use the method returns 0.
+
+ The following rules apply for special product types:
+ <ul>
+ <li>For a master product this method returns the average availability
+ of its online variations.</li>
+ <li>For a master product with no online variations this method returns 0.</li>
+ <li>For a master product with own inventory record the rules of the standard
+ products apply. Note: In this case the availability of the variations is not considered.</li>
+ <li>For a product set this method returns the greatest availability of
+ the online products in the set.</li>
+ <li>For a product set with no online products this method returns 0.</li>
+ <li>For a product set with an inventory record the rules of the standard
+ products apply. Note: In this case the availability of the set products is not considered.</li>
+ <li>For a bundle, this method returns the least availability of the bundled
+ products according to their bundled quantity and if it exist also from
+ the bundle inventory record.</li>
+ </ul></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_getAvailabilityLevels_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAvailabilityLevels</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAvailabilityLevels</span>(quantity
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductAvailabilityLevels.html"><span class="">ProductAvailabilityLevels</span></a>
+                    </div>
+                    <div class="description"><p>Returns an instance of <a href="class_dw_catalog_ProductAvailabilityLevels.html">ProductAvailabilityLevels</a>,
+ where each available quantity represents a part of the input quantity.
+ This method is typically used to display availability information in
+ the context of a known order quantity, e.g. a shopping cart.</p>
+
+ <p>For example, if for a given product
+ there are 3 pieces in stock with no pre/backorder handling specified,
+ and the order quantity is 10, then the return instance would have the
+ following state:
+ <ul>
+ <li><a href="class_dw_catalog_ProductAvailabilityLevels.html#dw_catalog_ProductAvailabilityLevels_getInStock_DetailAnchor">ProductAvailabilityLevels.getInStock()</a> - 3</li>
+ <li><a href="class_dw_catalog_ProductAvailabilityLevels.html#dw_catalog_ProductAvailabilityLevels_getPreorder_DetailAnchor">ProductAvailabilityLevels.getPreorder()</a> - 0</li>
+ <li><a href="class_dw_catalog_ProductAvailabilityLevels.html#dw_catalog_ProductAvailabilityLevels_getBackorder_DetailAnchor">ProductAvailabilityLevels.getBackorder()</a> - 0</li>
+ <li><a href="class_dw_catalog_ProductAvailabilityLevels.html#dw_catalog_ProductAvailabilityLevels_getNotAvailable_DetailAnchor">ProductAvailabilityLevels.getNotAvailable()</a> - 7</li>
+ </ul>
+
+ The following assertions can be made about the state of the returned instance.
+ <ul>
+ <li>Between 1 and 3 levels are non-zero.</li>
+ <li>The sum of the levels equals the input quantity.</li>
+ <li><a href="class_dw_catalog_ProductAvailabilityLevels.html#dw_catalog_ProductAvailabilityLevels_getPreorder_DetailAnchor">ProductAvailabilityLevels.getPreorder()</a> or <a href="class_dw_catalog_ProductAvailabilityLevels.html#dw_catalog_ProductAvailabilityLevels_getBackorder_DetailAnchor">ProductAvailabilityLevels.getBackorder()</a> may be available, but not both.</li>
+ </ul>
+ </p>
+
+ <p>Product bundles are handled specially:  The availability of product
+ bundles is calculated based on the availability of the bundled products.
+ Therefore, if a bundle contains products that are not in stock, then
+ the bundle itself is not in stock.  If all the products in the bundle
+ are on backorder, then the bundle itself is backordered.  If a product
+ bundle has its own inventory record, then this record may
+ further limit the availability.  If a bundle has no record, then
+ only the records of the bundled products are considered.</p>
+
+ <p>Product masters and product sets without an own inventory record are
+ handled specially too:   The availability is calculated based on the
+ availability of the variants or set products. A product master or product
+ set is in stock as soon as one of its variants or set products is in stock.
+ Each product master or product set availability level reflects the sum of
+ the variant or set product availability levels up to the specified quantity.</p>
+
+ <p>Product masters or product sets with own inventory record are handled like
+ standard products. The availability of the variants or set products is not
+ considered. (Such an inventory scenario should be avoided.)</p>
+
+ <p>Offline products are always unavailable and will result in returned
+ levels that are all unavailable.</p>
+
+ When using Omnichannel Inventory (OCI), future restocks provided by OCI are mapped to
+ <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_AVAILABILITY_STATUS_BACKORDER_DetailAnchor">AVAILABILITY_STATUS_BACKORDER</a>. For more information, see the comments for
+ <a href="class_dw_catalog_ProductInventoryRecord.html">ProductInventoryRecord</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">The quantity to evaluate.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an instance of ProductAvailabilityLevels, which encapsulates the number of items for each relevant availability-status.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_catalog_ProductAvailabilityLevels.html">ProductAvailabilityLevels</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the specified quantity is less or equal than zero</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_getAvailabilityStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAvailabilityStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAvailabilityStatus</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the availability-status for the minimum-orderable-quantity (MOQ) of
+ the product.  The MOQ essentially represents a single orderable unit, and
+ therefore can be represented by a single availability-status.  This
+ method is essentially a convenience method.  The same information
+ can be retrieved by calling <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_getAvailabilityLevels_Number_DetailAnchor">getAvailabilityLevels(Number)</a>
+ with the MOQ of the product as the parameter and then retrieving the
+ single status from the returned map.
+
+ This method is typically used to display a product's availability in
+ the catalog when the order quantity is not known.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the availability-status.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_getInventoryRecord_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInventoryRecord</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInventoryRecord</span>()
+					 : 
+					<a href="class_dw_catalog_ProductInventoryRecord.html"><span class="">ProductInventoryRecord</span></a>
+                    </div>
+                    <div class="description">Returns the ProductInventoryRecord for the Product associated
+ with this model.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ProductInventoryRecord or null if there is none.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_getSKUCoverage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSKUCoverage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSKUCoverage</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the SKU coverage of the product.  The basic formula for a
+ master product is the ratio of online variations that are in stock
+ to the total number of online variations.  The following specific rules
+ apply for standard products:
+ <ul>
+ <li>If the product is in stock this method returns the availability of the product.</li>
+ <li>If the product is out of stock this method returns 0.</li>
+ </ul>
+ The following rules apply for special product types:
+ <ul>
+ <li>For a master product this method returns the average SKU coverage
+ of its online variations.</li>
+ <li>For a master product with no online variations this method returns 0.</li>
+ <li>For a product set this method returns the ratio of orderable SKUs in the product set
+ over the total number of online SKUs in the product set. </li>
+ <li>For a product set with no online products this method returns 0.</li>
+ <li>For a product bundle this method returns 1 if all of the bundled
+ products are online, and 0 otherwise.</li>
+ <li>For a product bundle with no online bundled products this method
+ returns 0.</li>
+ </ul></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_getTimeToOutOfStock_DetailAnchor"></a>
+                    <div class="detailName 
+						">getTimeToOutOfStock</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getTimeToOutOfStock</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of hours before the product is expected to go out
+ of stock.  The basic formula is the ATS quantity divided by the
+ sales velocity for the most recent day.  The following specific rules
+ apply for standard products:
+ <ul>
+ <li>If the product is out of stock this method returns 0.</li>
+ <li>If the product is perpetually available this method returns 1.</li>
+ <li>If the sales velocity or ATS is not available this method returns 0.</li>
+ <li>Otherwise this method returns ATS / sales velocity.</li>
+ </ul>
+ The following rules apply for special product types:
+ <ul>
+ <li>For a master product this method returns the greatest time to out
+ of stock of its online variations.</li>
+ <li>For a master product with no online variations this method returns 0.</li>
+ <li>For a product set this method returns the greatest time to out
+ of stock of the online products in the set.</li>
+ <li>For a product set with no online products this method returns 0.</li>
+ <li>For a bundle with no product inventory record, this method returns
+ the least time to out of stock of the online bundled products.</li>
+ <li>For a bundle with no product inventory record, and no online
+ bundled products, this method returns 0.</li>
+ </ul></div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_isInStock_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">isInStock</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isInStock</span>(quantity
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the Product is in-stock in the given quantity. This is
+ determined as follows:
+ <ol>
+ <li>If the product is not currently online (based on its online flag and
+ online dates), then return false.</li>
+ <li>If there is no inventory-list for the current site, then return
+ false.</li>
+ <li>If there is no inventory-record for the product, then return the
+ default setting on the inventory-list.</li>
+ <li>If there is no allocation-amount on the inventory-record, then return
+ the value of the perpetual-flag.</li>
+ <li>If there is an allocation-amount, but the perpetual-flag is true,
+ then return true.</li>
+ <li>If the quantity is less than or equal to the stock-level, then return
+ true.</li>
+ <li>Otherwise return false.</li>
+ </ol></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">the quantity that is requested</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the Product is in-stock.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the specified quantity is less or equal than zero</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_isInStock_DetailAnchor"></a>
+                    <div class="detailName 
+						">isInStock</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isInStock</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Convenience method for <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isInStock_Number_DetailAnchor">isInStock(Number)</a>. Returns true, if the
+ Product is available in the minimum-order-quantity. If the product does
+ not have a minimum-order-quantity defined, in-stock is checked for a
+ quantity value 1.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the Product is in stock, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_isOrderable_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">isOrderable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isOrderable</span>(quantity
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the Product is currently online (based on its online flag
+ and online dates) and the specified quantity does not exceed the quantity
+ available for sale, and returns false otherwise.
+ <p/>
+ Note: Orderable status is more general than in-stock status. A product
+ may be out-of-stock but orderable because it is back-orderable or
+ pre-orderable.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantity</span>
+						 - 
+						<span class="parameterDesc">the quantity to test against.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the item can be ordered in the specified quantity.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the specified quantity is less or equal than zero</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductAvailabilityModel_isOrderable_DetailAnchor"></a>
+                    <div class="detailName 
+						">isOrderable</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isOrderable</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Convenience method for <a href="class_dw_catalog_ProductAvailabilityModel.html#dw_catalog_ProductAvailabilityModel_isOrderable_Number_DetailAnchor">isOrderable(Number)</a>. Returns true if the
+ Product is currently online (based on its online flag and online dates)
+ and is orderable in its minimum-order-quantity. If the product does not
+ have a minimum-order-quantity specified, then 1 is used. The method
+ returns false otherwise.
+ <p/>
+ Note: Orderable status is more general than in-stock status. A product
+ may be out-of-stock but orderable because it is back-orderable or
+ pre-orderable.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the Product is orderable for the minimum-order-quantity of the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

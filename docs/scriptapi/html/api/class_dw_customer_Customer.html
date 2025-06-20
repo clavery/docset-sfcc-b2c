@@ -1,0 +1,996 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class Customer</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.customer.Customer">
+            <a name="dw.customer.Customer"></a>
+            <div class="packageName">dw.customer</div>
+            <div class="className
+					">	
+        	
+				Class Customer</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.customer.Customer
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a customer.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>activeData
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerActiveData.html"><span class="">CustomerActiveData</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The active data for this customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>addressBook
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_AddressBook.html"><span class="">AddressBook</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The address book for the profile of this customer,
+ or <code>null</code> if this customer has no profile, such as for an
+ anonymous customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>anonymous
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the customer is anonymous. An anonymous
+ customer is the opposite of a registered customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>authenticated
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the customer is authenticated. This method checks whether
+ this customer is the customer associated with the session and than checks
+ whether the session in an authenticated state.
+
+ Note: The pipeline debugger will always show 'false' for this value
+ regardless of whether the customer is authenticated or not.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>CDPData
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerCDPData.html"><span class="">CustomerCDPData</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The Salesforce CDP (Customer Data Platform) data for this customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customerGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer groups this customer is member of.
+ <ul>
+ <li>Result contains static customer groups in storefront and job session</li>
+ <li>Result contains dynamic customer groups in storefront  and job session.
+ Dynamic customer groups referring session or request data are not available
+ when processing the customer in a job session, or when this customer is not the customer assigned to the current session.
+ </li>
+ <li>Result contains system groups 'Everyone', 'Unregistered', 'Registered' for all customers in storefront and job sessions</li>
+ </ul></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>externallyAuthenticated
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the customer is externally authenticated. An externally
+ authenticated customer does not have the password stored in our system
+ but logs in through an external OAuth provider (Google, Facebook, LinkedIn, etc.)</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>externalProfiles
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of any external profiles the customer may have</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>globalPartyID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The Global Party ID for the customer, if there is one.
+ Global Party ID is created by Customer 360 and identifies a person across multiple systems.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The unique, system generated ID of the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>note
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The note for this customer, or <code>null</code> if this customer has no note, such as for an anonymous
+ customer or when note has 0 length.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderHistory
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_OrderHistory.html"><span class="">OrderHistory</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer order history.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>profile
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_Profile.html"><span class="">Profile</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The customer profile.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>registered
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the customer is registered. A registered customer
+ may or may not be authenticated. This method checks whether
+ the user has a profile.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_createExternalProfile_String_String_DetailAnchor"><span class="">createExternalProfile</span></a></span>(authenticationProviderId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_ExternalProfile.html"><span class="">ExternalProfile</span></a></span>
+                    <div class="description">Creates an externalProfile and attaches it to the list of external profiles for the customer</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getActiveData_DetailAnchor"><span class="">getActiveData</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerActiveData.html"><span class="">CustomerActiveData</span></a></span>
+                    <div class="description">Returns the active data for this customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getAddressBook_DetailAnchor"><span class="">getAddressBook</span></a></span>()
+						: 
+					<a href="class_dw_customer_AddressBook.html"><span class="">AddressBook</span></a></span>
+                    <div class="description">Returns the address book for the profile of this customer, or <code>null</code> if this customer has no profile, such as for an anonymous customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getCDPData_DetailAnchor"><span class="">getCDPData</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerCDPData.html"><span class="">CustomerCDPData</span></a></span>
+                    <div class="description">Returns the Salesforce CDP (Customer Data Platform) data for this customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getCustomerGroups_DetailAnchor"><span class="">getCustomerGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the customer groups this customer is member of.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getExternalProfile_String_String_DetailAnchor"><span class="">getExternalProfile</span></a></span>(authenticationProviderId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_customer_ExternalProfile.html"><span class="">ExternalProfile</span></a></span>
+                    <div class="description">A convenience method for finding an external profile among the customer's external profiles collection</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getExternalProfiles_DetailAnchor"><span class="">getExternalProfiles</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of any external profiles the customer may have</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getGlobalPartyID_DetailAnchor"><span class="">getGlobalPartyID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the Global Party ID for the customer, if there is one.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the unique, system generated ID of the customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getNote_DetailAnchor"><span class="">getNote</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the note for this customer, or <code>null</code> if this customer has no note, such as for an anonymous customer or when note has 0 length.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getOrderHistory_DetailAnchor"><span class="">getOrderHistory</span></a></span>()
+						: 
+					<a href="class_dw_customer_OrderHistory.html"><span class="">OrderHistory</span></a></span>
+                    <div class="description">Returns the customer order history.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getProductLists_Number_DetailAnchor"><span class="">getProductLists</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the product lists of the specified type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_getProfile_DetailAnchor"><span class="">getProfile</span></a></span>()
+						: 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a></span>
+                    <div class="description">Returns the customer profile.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isAnonymous_DetailAnchor"><span class="">isAnonymous</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the customer is anonymous.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isAuthenticated_DetailAnchor"><span class="">isAuthenticated</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the customer is authenticated.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isExternallyAuthenticated_DetailAnchor"><span class="">isExternallyAuthenticated</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the customer is externally authenticated.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isMemberOfAnyCustomerGroup_String_DetailAnchor"><span class="">isMemberOfAnyCustomerGroup</span></a></span>(groupIDs
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if there exist <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a> for all of the given IDs and the customer is member of at least one of that groups.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isMemberOfCustomerGroup_CustomerGroup_DetailAnchor"><span class="">isMemberOfCustomerGroup</span></a></span>(group
+								 : 	
+								 
+								<a href="class_dw_customer_CustomerGroup.html"><span class="">CustomerGroup</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the customer is member of the specified <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isMemberOfCustomerGroup_String_DetailAnchor"><span class="">isMemberOfCustomerGroup</span></a></span>(groupID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if there is a <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a> with such an ID and the customer is member of that group.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isMemberOfCustomerGroups_String_DetailAnchor"><span class="">isMemberOfCustomerGroups</span></a></span>(groupIDs
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if there exist <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a> for all of the given IDs and the customer is member of all that groups.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_isRegistered_DetailAnchor"><span class="">isRegistered</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the customer is registered.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_removeExternalProfile_ExternalProfile_DetailAnchor"><span class="">removeExternalProfile</span></a></span>(externalProfile
+								 : 	
+								 
+								<a href="class_dw_customer_ExternalProfile.html"><span class="">ExternalProfile</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes an external profile from the customer</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Customer_setNote_String_DetailAnchor"><span class="">setNote</span></a></span>(aValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the note for this customer.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_createExternalProfile_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createExternalProfile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createExternalProfile</span>(authenticationProviderId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_ExternalProfile.html"><span class="">ExternalProfile</span></a>
+                    </div>
+                    <div class="description">Creates an externalProfile and attaches it to the list of external profiles for the customer</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authenticationProviderId</span>
+						 - 
+						<span class="parameterDesc">the authenticationProviderId for the externalProfile</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">externalId</span>
+						 - 
+						<span class="parameterDesc">the externalId for the external Profile</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new externalProfile</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getActiveData_DetailAnchor"></a>
+                    <div class="detailName 
+						">getActiveData</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getActiveData</span>()
+					 : 
+					<a href="class_dw_customer_CustomerActiveData.html"><span class="">CustomerActiveData</span></a>
+                    </div>
+                    <div class="description">Returns the active data for this customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the active data for this customer.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getAddressBook_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAddressBook</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAddressBook</span>()
+					 : 
+					<a href="class_dw_customer_AddressBook.html"><span class="">AddressBook</span></a>
+                    </div>
+                    <div class="description">Returns the address book for the profile of this customer,
+ or <code>null</code> if this customer has no profile, such as for an
+ anonymous customer.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getCDPData_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCDPData</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCDPData</span>()
+					 : 
+					<a href="class_dw_customer_CustomerCDPData.html"><span class="">CustomerCDPData</span></a>
+                    </div>
+                    <div class="description">Returns the Salesforce CDP (Customer Data Platform) data for this customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the Salesforce CDP data for this customer.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getCustomerGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomerGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the customer groups this customer is member of.
+ <ul>
+ <li>Result contains static customer groups in storefront and job session</li>
+ <li>Result contains dynamic customer groups in storefront  and job session.
+ Dynamic customer groups referring session or request data are not available
+ when processing the customer in a job session, or when this customer is not the customer assigned to the current session.
+ </li>
+ <li>Result contains system groups 'Everyone', 'Unregistered', 'Registered' for all customers in storefront and job sessions</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Collection of customer groups of this customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getExternalProfile_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExternalProfile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExternalProfile</span>(authenticationProviderId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, externalId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_customer_ExternalProfile.html"><span class="">ExternalProfile</span></a>
+                    </div>
+                    <div class="description">A convenience method for finding an external profile among the customer's external profiles collection</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">authenticationProviderId</span>
+						 - 
+						<span class="parameterDesc">the authenticationProviderId to look for</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">externalId</span>
+						 - 
+						<span class="parameterDesc">the externalId to look for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the externalProfile found among the customer's external profile or null if not found</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getExternalProfiles_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExternalProfiles</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExternalProfiles</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of any external profiles the customer may have</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of any external profiles the customer may have</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getGlobalPartyID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGlobalPartyID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGlobalPartyID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the Global Party ID for the customer, if there is one.
+ Global Party ID is created by Customer 360 and identifies a person across multiple systems.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The global party ID</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the unique, system generated ID of the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of the customer.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getNote_DetailAnchor"></a>
+                    <div class="detailName 
+						">getNote</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getNote</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the note for this customer, or <code>null</code> if this customer has no note, such as for an anonymous
+ customer or when note has 0 length.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the note for this customer.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getOrderHistory_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderHistory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderHistory</span>()
+					 : 
+					<a href="class_dw_customer_OrderHistory.html"><span class="">OrderHistory</span></a>
+                    </div>
+                    <div class="description">Returns the customer order history.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the customer order history.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getProductLists_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductLists</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductLists</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the product lists of the specified type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the type of product lists to return.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product lists of the specified type.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_customer_ProductList.html">ProductList</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_getProfile_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProfile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProfile</span>()
+					 : 
+					<a href="class_dw_customer_Profile.html"><span class="">Profile</span></a>
+                    </div>
+                    <div class="description">Returns the customer profile.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the customer profile.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isAnonymous_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAnonymous</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAnonymous</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the customer is anonymous. An anonymous
+ customer is the opposite of a registered customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the customer is anonymous, false otherwise. <p/> <b>Note:</b> this method handles sensitive security-related data. Pay special attention to PCI DSS v3. requirements 2, 4, and 12.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isAuthenticated_DetailAnchor"></a>
+                    <div class="detailName 
+						">isAuthenticated</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isAuthenticated</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the customer is authenticated. This method checks whether
+ this customer is the customer associated with the session and than checks
+ whether the session in an authenticated state.
+
+ Note: The pipeline debugger will always show 'false' for this value
+ regardless of whether the customer is authenticated or not.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the customer is authenticated, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isExternallyAuthenticated_DetailAnchor"></a>
+                    <div class="detailName 
+						">isExternallyAuthenticated</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isExternallyAuthenticated</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the customer is externally authenticated. An externally
+ authenticated customer does not have the password stored in our system
+ but logs in through an external OAuth provider (Google, Facebook, LinkedIn, etc.)</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the customer is externally authenticated, false otherwise. <p/> <b>Note:</b> this method handles sensitive security-related data. Pay special attention to PCI DSS v3. requirements 2, 4, and 12.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isMemberOfAnyCustomerGroup_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isMemberOfAnyCustomerGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isMemberOfAnyCustomerGroup</span>(groupIDs
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if there exist <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a> for all of the given IDs and the customer is member of at least one of that groups.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">groupIDs</span>
+						 - 
+						<span class="parameterDesc">A list of unique semantic customer group IDs.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if customer groups exist for the given IDs and the customer is member of at least one of that existing groups. False if none of customer groups exist or if the customer is not a member of any of that existing groups.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isMemberOfCustomerGroup_CustomerGroup_DetailAnchor"></a>
+                    <div class="detailName 
+						">isMemberOfCustomerGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isMemberOfCustomerGroup</span>(group
+								 : 
+								 
+								<a href="class_dw_customer_CustomerGroup.html"><span class="">CustomerGroup</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the customer is member of the specified
+ <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a>.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">group</span>
+						 - 
+						<span class="parameterDesc">Customer group</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if customer is member of the group, otherwise false.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isMemberOfCustomerGroup_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isMemberOfCustomerGroup</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isMemberOfCustomerGroup</span>(groupID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if there is a <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a> with such an ID and the customer is member of that group.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">groupID</span>
+						 - 
+						<span class="parameterDesc">The unique semantic customer group ID.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if a customer group with such an ID exist and the customer is member of that group. False if no such customer group exist or, if the group exist, the customer is not member of that group.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isMemberOfCustomerGroups_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isMemberOfCustomerGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isMemberOfCustomerGroups</span>(groupIDs
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if there exist <a href="class_dw_customer_CustomerGroup.html">CustomerGroup</a> for all of the given IDs and the customer is member of all that groups.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">groupIDs</span>
+						 - 
+						<span class="parameterDesc">A list of unique semantic customer group IDs.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if customer groups exist for all of the given IDs and the customer is member of all that groups. False if there is at least one ID for which no customer group exist or, if all groups exist, the customer is not member of all that groups.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_isRegistered_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRegistered</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRegistered</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the customer is registered. A registered customer
+ may or may not be authenticated. This method checks whether
+ the user has a profile.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the customer is registered, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_removeExternalProfile_ExternalProfile_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeExternalProfile</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeExternalProfile</span>(externalProfile
+								 : 
+								 
+								<a href="class_dw_customer_ExternalProfile.html"><span class="">ExternalProfile</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes an external profile from the customer</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">externalProfile</span>
+						 - 
+						<span class="parameterDesc">the externalProfile to be removed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Customer_setNote_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setNote</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setNote</span>(aValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the note for this customer. This is a no-op for an anonymous customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">aValue</span>
+						 - 
+						<span class="parameterDesc">the value of the note</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

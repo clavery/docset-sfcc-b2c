@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet CreateCustomer</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet CreateCustomer</div>
+            <div class="topLevelDescription"><p>This pipelet creates a new Customer using the supplied 
+Login (i.e. Username),Password, and an optional CustomerNo.
+If the optional CustomerNo is not specified, the system 
+automatically assigns a customer number based on the customer sequence
+ numbers configured for the site and/or organization. <p/>
+
+<p>The pipelet exits with an ERROR if any of the following conditions are encountered:
+<ul><li>A Customer with the supplied Login already exists.</li>
+<li>A Customer with the explicitly provided or calculated customer number already exists.</li>
+<li>The Login is not acceptable.</li>
+<li>The Password is not acceptable.</li>
+<li>The system cannot create the Customer.</li></ul><p/>
+
+<p>A valid login name has between 1 and 256 characters (not counting leading or trailing whitespace). The name can contain the uppercase and lowercase Latin letters A to Z and a to z, the digits 1 to 9, and special characters .@_\\-'#!&$%*+/?=^`~}|{"<p/>
+
+<p>Note: a storefront can be customized to provide further constraints 
+on characters in a login name, but it cannot remove any constraints described above.<p/>
+<p>A valid CustomerNo is between 1 and 100 characters in length (not counting leading or trailing whitespace). 
+Commerce Cloud Digital recommends that a CustomerNo only contain characters valid for URLs. <p/>
+
+<p>If the customer search API is configured to use the new Search Service,
+note that the new customer might not be found immediately via the search service (there is a slight delay in updating the index).
+Use the customer object returned by this pipelet instead.<p/>
+
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Customer</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+                <div class="parameterDetail">Transaction Required</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Login</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The unique login name associated with the new customer and its profile. If login is already in use, the pipelet ends on the ERROR exist.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Password</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+Customer plain customer password, which is encrypted before it is stored at the profile.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomerNo</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The unique CustomerNo is an optional parameter. The system will automatically assign a new value when not specified. When provided explicitly, the system will make sure that no other customer uses the same value and will end on the ERROR exist otherwise.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Customer</span>
+					&nbsp;:&nbsp;
+					Customer
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The new customer object.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

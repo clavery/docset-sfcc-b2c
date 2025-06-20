@@ -1,0 +1,975 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class CustomObjectMgr</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.object.CustomObjectMgr">
+            <a name="dw.object.CustomObjectMgr"></a>
+            <div class="packageName">dw.object</div>
+            <div class="className
+					">	
+        	
+				Class CustomObjectMgr</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.object.CustomObjectMgr
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Manager class which provides methods for creating, retrieving, deleting,
+ and searching for custom objects.
+ <p/>
+ To search for system objects, use <a href="class_dw_object_SystemObjectMgr.html">SystemObjectMgr</a>.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_createCustomObject_String_String_DetailAnchor"><span class="">createCustomObject</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a></span>
+                    <div class="description">Returns a new custom object instance of the specified type, using the given key value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_createCustomObject_String_Number_DetailAnchor"><span class="">createCustomObject</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a></span>
+                    <div class="description">Returns a new custom object instance of the specified type, using the given key value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_describe_String_DetailAnchor"><span class="">describe</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_object_ObjectTypeDefinition.html"><span class="">ObjectTypeDefinition</span></a></span>
+                    <div class="description">Returns the meta data for the given type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_getAllCustomObjects_String_DetailAnchor"><span class="">getAllCustomObjects</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description">Returns all custom objects of a specific type.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_getCustomObject_String_String_DetailAnchor"><span class="">getCustomObject</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a></span>
+                    <div class="description">Returns a custom object based on it's type and unique key.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_getCustomObject_String_Number_DetailAnchor"><span class="">getCustomObject</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a></span>
+                    <div class="description">Returns a custom object based on it's type and unique key.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_queryCustomObject_String_String_Object_DetailAnchor"><span class="">queryCustomObject</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a></span>
+                    <div class="description"><p/> Searches for a single custom object instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_queryCustomObjects_String_String_String_Object_DetailAnchor"><span class="">queryCustomObjects</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description">Searches for custom object instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_queryCustomObjects_String_Map_String_DetailAnchor"><span class="">queryCustomObjects</span></a></span>(type
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryAttributes
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a></span>
+                    <div class="description"><p/> Searches for custom object instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_object_CustomObjectMgr_remove_CustomObject_DetailAnchor"><span class="">remove</span></a></span>(object
+								 : 	
+								 
+								<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes a given custom object.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_createCustomObject_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createCustomObject</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createCustomObject</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>
+                    </div>
+                    <div class="description">Returns a new custom object instance of the specified type, using the
+ given key value. Custom object keys need to be unique for custom object
+ type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">The unique name of the custom object type.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">keyValue</span>
+						 - 
+						<span class="parameterDesc">The unique key value for the instance.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The newly created custom object instance.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_createCustomObject_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">createCustomObject</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createCustomObject</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>
+                    </div>
+                    <div class="description">Returns a new custom object instance of the specified type, using the
+ given key value. Custom object keys need to be unique for custom object
+ type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">The unique name of the custom object type.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">keyValue</span>
+						 - 
+						<span class="parameterDesc">The unique key value for the instance.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The newly created custom object instance.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_describe_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">describe</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">describe</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_object_ObjectTypeDefinition.html"><span class="">ObjectTypeDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the meta data for the given type.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the type whose meta data is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the meta data for the given type.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_getAllCustomObjects_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllCustomObjects</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getAllCustomObjects</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description">Returns all custom objects of a specific type.
+
+ <p>It is strongly recommended to call <code>close()</code> on the returned SeekableIterator
+ if not all of its elements are being retrieved. This will ensure the proper cleanup of system resources.</p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">The name of the custom object type.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_getCustomObject_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomObject</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomObject</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>
+                    </div>
+                    <div class="description">Returns a custom object based on it's type and unique key.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">The name of the custom object type.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">keyValue</span>
+						 - 
+						<span class="parameterDesc">The unique key value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The matching custom object instance or <code>null</code> in case no matching custom object instance could be found.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_getCustomObject_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomObject</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getCustomObject</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, keyValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>
+                    </div>
+                    <div class="description">Returns a custom object based on it's type and unique key.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">The name of the custom object type.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">keyValue</span>
+						 - 
+						<span class="parameterDesc">The unique key value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The matching custom object instance or <code>null</code> in case no matching custom object instance could be found.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_queryCustomObject_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">queryCustomObject</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">queryCustomObject</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>
+                    </div>
+                    <div class="description"><p/>
+ Searches for a single custom object instance.
+ <p/>
+ The search can be configured using a simple query language, which provides most common filter and operator
+ functionality.
+ <p/>
+ The identifier for an <b>attribute</b> to use in a query condition is always the ID of the attribute as defined
+ in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g.
+ <code>custom.color = {1}</code>), while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+ <p/>
+ Supported attribute value <b>types</b> with sample expression values:
+ <ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i>
+ <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li>
+ </ul>
+ <br/>
+ The following types of attributes are not queryable:
+ <ul>
+ <br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li>
+ </ul>
+ <br/>
+ Note, that some system attributes are not queryable by default regardless of the actual value type code.
+ <p/>
+ The following <b>operators</b> are supported in a condition:<br/>
+ <ul>
+ <li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+ <li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+ <li><code>&lt;</code> Less than - Integer, Number and Date types only</li>
+ <li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+ <li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+ <li><code>&gt;=</code> Greater or equals than - Integer, Number and Date types only</li>
+ <li><code>LIKE</code> Like - String types and Email only; use if leading or trailing wildcards will be used to
+ support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+ <li><code>ILIKE</code> Case-independent Like - String types and Email only, use to support case insensitive query
+ (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for substring matching</li>
+ </ul>
+ <p/>
+ Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT' and nested using parenthesis e.g.
+ <code>gender = {1} AND (age >= {2} OR (NOT profession LIKE {3}))</code>.
+ <p/>
+ The query language provides a placeholder syntax to pass objects as additional search parameters. Each passed
+ object is related to a placeholder in the query string. The placeholder must be an Integer that is surrounded by
+ braces. The first Integer value must be '0', the second '1' and so on, e.g.
+ <code>querySystemObjects("sample", "age = {0} or creationDate >= {1}", 18, date)</code>
+ <p/>
+ If there is more than one object matching the specified query criteria, the result is not deterministic. In order
+ to retrieve a single object from a sorted result set it is recommended to use the following code:
+ <code>queryCustomObjects("", "custom.myAttr asc", null).first()</code>. The method <code>first()</code> returns
+ only the next element and closes the iterator.
+ <p>
+ This method does not consider locale specific attributes. It returns all objects by checking the default
+ non-localizable attributes. Any locale specific filtering after fetching the objects must be done by other custom
+ code.<br/>
+ Example:
+ <ul>
+ <li>Get the custom objects using this method with non-localized attributes query.</li>
+ <li>Access the <code>obj.getCustom("myattr")</code>. It returns the localized value of the attribute.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the custom object type for the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the actual query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional parameters for the queryString.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the custom object defined by <code>type</code> which was found when executing the <code>queryString</code>.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_queryCustomObjects_String_String_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">queryCustomObjects</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">queryCustomObjects</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, args
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description">Searches for custom object instances.
+ <p/>
+ The search can be configured using a simple query language, which provides most common filter and operator
+ functionality.
+ <p/>
+ The identifier for an <b>attribute</b> to use in a query condition is always the ID of the attribute as defined
+ in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g.
+ <code>custom.color = {1}</code>), while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+ <p/>
+ Supported attribute value <b>types</b> with sample expression values:
+ <ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i>
+ <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li>
+ </ul>
+ <br/>
+ The following types of attributes are not queryable:
+ <ul>
+ <br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li>
+ </ul>
+ <br/>
+ Note, that some system attributes are not queryable by default regardless of the actual value type code.
+ <p/>
+ The following <b>operators</b> are supported in a condition:<br/>
+ <ul>
+ <li><code>=</code> Equals - All types; supports NULL value (<code>thumbnail = NULL</code>)</li>
+ <li><code>!=</code> Not equals - All types; supports NULL value (<code>thumbnail != NULL</code>)</li>
+ <li><code>&lt;</code> Less than - Integer, Number and Date types only</li>
+ <li><code>&gt;</code> Greater than - Integer, Number and Date types only</li>
+ <li><code>&lt;=</code> Less or equals than - Integer, Number and Date types only</li>
+ <li><code>&gt;=</code> Greater or equals than - Integer, Number and Date types only</li>
+ <li><code>LIKE</code> Like - String types and Email only; use if leading or trailing wildcards will be used to
+ support substring search(<code>custom.country LIKE 'US*'</code>)</li>
+ <li><code>ILIKE</code> Caseindependent Like - String types and Email only, use to support case insensitive query
+ (<code>custom.country ILIKE 'usa'</code>), does also support wildcards for substring matching</li>
+ </ul>
+ <p/>
+ Conditions can be combined using logical expressions 'AND', 'OR' and 'NOT' and nested using parenthesis e.g.
+ <code>gender = {1} AND (age >= {2} OR (NOT profession LIKE {3}))</code>.
+ <p/>
+ The query language provides a placeholder syntax to pass objects as additional search parameters. Each passed
+ object is related to a placeholder in the query string. The placeholder must be an Integer that is surrounded by
+ braces. The first Integer value must be '0', the second '1' and so on, e.g.
+ <code>querySystemObjects("sample", "age = {0} or creationDate >= {1}", 18, date)</code>
+ <p/>
+ The <b>sorting</b> parameter is optional and may contain a comma separated list of attribute names to sort by.
+ Each sort attribute name may be followed by an optional sort direction specifier ('asc' | 'desc'). Default
+ sorting directions is ascending, if no direction was specified.<br/>
+ Example: <code>age desc, name</code><br/>
+ Please note that specifying a localized custom attribute as the sorting attribute is currently not supported.
+ <p/>
+ Sometimes it is desired to get all instances of specified type with a special sorting condition. This can be
+ easily done by providing the 'type' of the custom object and the 'sortString' in combination with an empty
+ 'queryString', e.g. <code>queryCustomObjects("sample", "", "custom.myAttr asc")</code>
+ <p>
+ It is strongly recommended to call <code>close()</code> on the returned SeekableIterator if not all of its
+ elements are being retrieved. This will ensure the proper cleanup of system resources.
+ </p>
+ <p>
+ This method does not consider locale specific attributes. It returns all objects by checking the default
+ non-localizable attributes. Any locale specific filtering after fetching the objects must be done by other custom
+ code.<br/>
+ Example:
+ <ul>
+ <li>Get the custom objects using this method with non-localized attributes query.</li>
+ <li>Access the <code>obj.getCustom("myattr")</code>. It returns the localized value of the attribute.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the custom object type for the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryString</span>
+						 - 
+						<span class="parameterDesc">the actual query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">args</span>
+						 - 
+						<span class="parameterDesc">optional parameters for the queryString.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_queryCustomObjects_String_Map_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">queryCustomObjects</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">queryCustomObjects</span>(type
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, queryAttributes
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>, sortString
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_SeekableIterator.html"><span class="">SeekableIterator</span></a>
+                    </div>
+                    <div class="description"><p/>
+ Searches for custom object instances.
+ <p/>
+ The search can be configured with a map, which key-value pairs are converted into a query expression. The
+ key-value pairs are turned into a sequence of '=' or 'like' conditions, which are combined with AND statements.
+ <p/>
+ Example:<br/>
+ A map with the key/value pairs: <i>'name'/'tom*', 'age'/66</i> will be converted as follows:
+ <code>"name like 'tom*' and age = 66"</code>
+ <p/>
+ The identifier for an <b>attribute</b> to use in a query condition is always the ID of the attribute as defined
+ in the type definition. For custom defined attributes the prefix custom is required in the search term (e.g.
+ <code>custom.color = {1}</code>), while for system attributes no prefix is used (e.g. <code>name = {4}</code>).
+ <p/>
+ Supported attribute value <b>types</b> with sample expression values:
+ <ul>
+ <li><i>String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Integer</i> <code>1, 3E4</code></li>
+ <li><i>Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Date</i> <code>yyyy-MM-dd e.g. 2007-05-31 (Default TimeZone = UTC)</code></li>
+ <li><i>DateTime</i>
+ <code>yyyy-MM-dd'T'hh:mm:ss+Z e.g. 2007-05-31T00:00+Z (Z TimeZone = UTC) or 2007-05-31T00:00:00</code></li>
+ <li><i>Boolean</i> <code>true, false</code></li>
+ <li><i>Email</i> <code>'search@demandware.com', '*@demandware.com'</code></li>
+ <li><i>Set of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Set of Integer</i> <code>1, 3E4</code></li>
+ <li><i>Set of Number</i> <code>1.0, 3.99E5</code></li>
+ <li><i>Enum of String</i> <code>'String', 'Str*', 'Strin?'</code></li>
+ <li><i>Enum of Integer</i> <code>1, 3E4</code></li>
+ </ul>
+ <br/>
+ The following types of attributes are not queryable:
+ <ul>
+ <br/>
+ <li><i>Image</i></li>
+ <li><i>HTML</i></li>
+ <li><i>Text</i></li>
+ <li><i>Quantity</i></li>
+ <li><i>Password</i></li>
+ </ul>
+ <br/>
+ Note, that some system attributes are not queryable by default regardless of the actual value type code.
+ <p/>
+ The <b>sorting</b> parameter is optional and may contain a comma separated list of attribute names to sort by.
+ Each sort attribute name may be followed by an optional sort direction specifier ('asc' | 'desc'). Default
+ sorting directions is ascending, if no direction was specified.<br/>
+ Example: <code>age desc, name</code><br/>
+ Please note that specifying a localized custom attribute as the sorting attribute is currently not supported.
+ <p>
+ It is strongly recommended to call <code>close()</code> on the returned SeekableIterator if not all of its
+ elements are being retrieved. This will ensure the proper cleanup of system resources.
+ </p>
+ <p>
+ This method does not consider locale specific attributes. It returns all objects by checking the default
+ non-localizable attributes. Any locale specific filtering after fetching the objects must be done by other custom
+ code.<br/>
+ Example:
+ <ul>
+ <li>Get the custom objects using this method with non-localized attributes query.</li>
+ <li>Access the <code>obj.getCustom("myattr")</code>. It returns the localized value of the attribute.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">type</span>
+						 - 
+						<span class="parameterDesc">the custom object type for the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">queryAttributes</span>
+						 - 
+						<span class="parameterDesc">key-value pairs, which define the query.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortString</span>
+						 - 
+						<span class="parameterDesc">an optional sorting or null if no sorting is necessary.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">SeekableIterator containing the result set of the query.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_util_SeekableIterator.html#dw_util_SeekableIterator_close_DetailAnchor">SeekableIterator.close()</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the given type is invalid</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_object_CustomObjectMgr_remove_CustomObject_DetailAnchor"></a>
+                    <div class="detailName 
+						">remove</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">remove</span>(object
+								 : 
+								 
+								<a href="class_dw_object_CustomObject.html"><span class="">CustomObject</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes a given custom object.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">object</span>
+						 - 
+						<span class="parameterDesc">the custom object to remove, must not be null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

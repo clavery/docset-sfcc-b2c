@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^[\\w]+$"
+    },
+    "full_qualified_id": {
+      "type": "string",
+      "pattern": "^[\\w\\.]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

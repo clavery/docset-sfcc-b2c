@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet UpdateProductVariationSelections</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet UpdateProductVariationSelections</div>
+            <div class="topLevelDescription">The purpose of this pipelet is to process variation value selections, and
+calculate and return the ProductVariationModels for one or multiple products.
+The pipelet uses the HttpParameterMap stored in the pipeline dictionary under
+the key "CurrentHttpParameterMap" and so the request parameters do not have
+to be passed in. Variation value selections must be specified as HTTP
+parameters in the following form:
+"{prefix_}{pid}_varAttrID={varAttrValueID}". A custom prefix can be set using
+the "CustomPrefix" parameter. Otherwise, the default prefix "dwvar_" is used.
+{pid} is the product id. Example: "dwvar_PN00050_color=red".
+<p/>
+For each product specified as {pid}, a ProductVariationModel instance is
+created and returned as an element of the "ProductVariationModels" HashMap
+output parameter. The pipelet processes variation attributes in their defined
+order and ignores attributes or values not defined for a variation. The
+pipelet returns a map of ProductVariationModels with the product instance as
+the key and the ProductVariationModel as the value.
+<p/>
+For backwards compatibility reasons, the pipelet accepts an optional Product
+instance as input parameter. The product may either be a master or a variant.
+If specified, the pipelet returns the ProductVariationModel for this product
+as "ProductVariationModel" and also as element of the
+"ProductVariationModels" HashMap parameter. Also, the system tries to find a
+variant which matches the attributes selected in the HttpParameterMap as
+closely as possible. The matching product is returned under the key
+"SelectedProduct". If the passed product is neither a master or a variant,
+then the product itself is simply returned under the key "SelectedProduct".
+No value will be set under the "SelectedProduct" key unless a Product
+instance was passed to the pipelet.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Catalog</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Product</span>
+					&nbsp;:&nbsp;
+					Product
+							(Optional)
+						</span>
+                    <div class="description">
+Optional master product or variant for which to process variation value selections.  If nothing passed, then the system processes all HTTP request parameters in the current HttpParameterMap beginning with "dwvar_".
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CustomFormPrefix</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Optional prefix for HTTP parameters.  If nothing is passed, the default prefix "dwvar_" is assumed.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductVariationModel</span>
+					&nbsp;:&nbsp;
+					VariationModel
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The variation model with updated variation attribute value selections.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="parameterTitle">SelectedProduct</span>
+					&nbsp;:&nbsp;
+					Product
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+Deprecated: Selected variant or master.  Will only be returned if optional Product is passed in as input parameter.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ProductVariationModels</span>
+					&nbsp;:&nbsp;
+					Map
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+A map of updated ProductVariationModels with product as key.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

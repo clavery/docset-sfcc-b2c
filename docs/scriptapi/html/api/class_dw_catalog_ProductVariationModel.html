@@ -1,0 +1,1981 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductVariationModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.ProductVariationModel">
+            <a name="dw.catalog.ProductVariationModel"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class ProductVariationModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.ProductVariationModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Class representing the complete variation information for a master product in
+ the system. An instance of this class provides methods to access the
+ following information:
+
+ <ul>
+ <li>The variation attributes of the master product (e.g. size and color). Use
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor">getProductVariationAttributes()</a>.</li>
+ <li>The variation attribute values (e.g. size=Small, Medium, Large and
+ color=Red, Blue). Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getAllValues_ProductVariationAttribute_DetailAnchor">getAllValues(ProductVariationAttribute)</a>.</li>
+ <li>The variation groups which may represent a subset of variants by defining a
+ subset of the variation attribute values (e.g. color=Red, size=empty). Use
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getVariationGroups_DetailAnchor">getVariationGroups()</a>.</li>
+ <li>The variants themselves (e.g. the products representing Small Red, Large
+ Red, Small Blue, Large Blue, etc). Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getVariants_DetailAnchor">getVariants()</a>.</li>
+ <li>The variation attribute values of those variants. Use
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getVariationValue_Product_ProductVariationAttribute_DetailAnchor">getVariationValue(Product, ProductVariationAttribute)</a>.</li>
+ </ul>
+
+ This model only considers variants which are complete (i.e. the variant has a
+ value for each variation attribute), and currently online. Incomplete or
+ offline variants will not be returned by any method that returns Variants,
+ and their attribute values will not be considered in any method that returns
+ values.
+ <p/>
+ In addition to providing access to this meta information,
+ ProductVariationModel maintains a collection of selected variation attribute
+ values, representing the selections that a customer makes in the storefront.
+ If this model was constructed for a master product, then none of the
+ attributes will have pre-selected values. If this model was constructed for a
+ variant product, then all the attribute values of that variant will be
+ pre-selected.
+ <p/>
+ It is possible to query the current selections by calling
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getSelectedValue_ProductVariationAttribute_DetailAnchor">getSelectedValue(ProductVariationAttribute)</a> or
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_isSelectedAttributeValue_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor">isSelectedAttributeValue(ProductVariationAttribute, ProductVariationAttributeValue)</a>.
+ <p/>
+ The method <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_setSelectedAttributeValue_String_String_DetailAnchor">setSelectedAttributeValue(String, String)</a> can be used to modify
+ the selected values. Depending on the product type, it's possible to select or modify
+ variation attribute values:
+
+ <ul>
+     <li>If this model was constructed for a master product, it's possible to select and modify all variation attributes.</li>
+     <li>If this model was constructed for a variation group, it's possible to select and modify all variation attributes that are not defined by the variation group.</li>
+     <li>If this model was constructed for a variation product, it's not possible to select or modify any of the variation attributes.</li>
+ </ul>
+
+ <p/>
+ Furthermore, the model provides helper methods to generate URLs
+ for selecting and unselecting variation attribute values. See those methods
+ for details.
+ <p/>
+ If this model was constructed for a product that is neither a
+ master nor a variant, then none of the methods will return useful values at
+ all.
+ <p/>
+ The methods in this class which access the currently selected variation
+ attribute values can be used on product detail pages to render information
+ about which combinations are available or unavailable. The methods
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getFilteredValues_ProductVariationAttribute_DetailAnchor">getFilteredValues(ProductVariationAttribute)</a> and
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_hasOrderableVariants_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor">hasOrderableVariants(ProductVariationAttribute, ProductVariationAttributeValue)</a>
+ can be used to determine this type of situation and render the appropriate
+ message in the storefront.
+ <p/>
+ NOTE: Several methods in this class have a version taking a
+ <a href="class_dw_catalog_ProductVariationAttribute.html">ProductVariationAttribute</a> parameter, and another
+ deprecated version accepting a <a href="class_dw_object_ObjectAttributeDefinition.html">ObjectAttributeDefinition</a>
+ parameter instead. The former should be strictly favored. The latter are
+ historical leftovers from when object attributes were used directly as the
+ basis for variation, and the value lists were stored directly on the
+ ObjectAttributeDefinition. Every ProductVariationAttribute corresponds with
+ exactly one ObjectAttributeDefinition, but values are now stored on the
+ ProductVariationAttribute and not the ObjectAttributeDefinition.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span class="dep"><a name="_DetailAnchor"></a>attributeDefinitions
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The object attribute definitions corresponding with the product
+ variation attributes of the master product.</div>
+                    </span>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This method is deprecated since custom code should work with ProductVariationAttributes and not directly with their corresponding ObjectAttributeDefinitions. Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor">getProductVariationAttributes()</a> to get the product variation attributes.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>defaultVariant
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Variant.html"><span class="">Variant</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Return the default variant of this model's master product. If no default
+ variant has been defined, return an arbitrary variant.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>master
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The master of the product variation.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productVariationAttributes
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection of product variation attributes of the variation.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>selectedVariant
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Variant.html"><span class="">Variant</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The variant currently selected for this variation model.
+ Returns null if no variant is selected.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>selectedVariants
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The variants currently selected for this variation model.
+ Returns an empty collection if no variant is selected.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>variants
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of product variants of this variation model.
+ This collection only includes online variants. Offline variants are
+ filtered out. If all variation products are required, consider using
+ <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariants_DetailAnchor">Product.getVariants()</a>.
+
+ The product variants are returned in no particular order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>variationGroups
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The collection of variation groups of this variation model.
+ This collection only includes online variation groups. Offline variation
+ groups are filtered out. If all variation group products are required,
+ consider using <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariationGroups_DetailAnchor">Product.getVariationGroups()</a>.
+
+ The variation groups are returned in no particular order.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getAllValues_ObjectAttributeDefinition_DetailAnchor"><span class="">getAllValues</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the value definitions for the specified attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getAllValues_ProductVariationAttribute_DetailAnchor"><span class="">getAllValues</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the values for the specified attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getAttributeDefinitions_DetailAnchor"><span class="">getAttributeDefinitions</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the object attribute definitions corresponding with the product variation attributes of the master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getDefaultVariant_DetailAnchor"><span class="">getDefaultVariant</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Variant.html"><span class="">Variant</span></a></span>
+                    <div class="description">Return the default variant of this model's master product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getFilteredValues_ObjectAttributeDefinition_DetailAnchor"><span class="">getFilteredValues</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of the value definitions defined for the specified attribute, filtered based on currently selected values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getFilteredValues_ProductVariationAttribute_DetailAnchor"><span class="">getFilteredValues</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of the value definitions defined for the specified attribute, filtered based on currently selected values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getHtmlName_ObjectAttributeDefinition_DetailAnchor"><span class="">getHtmlName</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTML representation of the variation attribute id.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getHtmlName_String_ObjectAttributeDefinition_DetailAnchor"><span class="">getHtmlName</span></a></span>(prefix
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTML representation of the variation attribute id with the custom prefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getHtmlName_ProductVariationAttribute_DetailAnchor"><span class="">getHtmlName</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTML representation of the product variation attribute id.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getHtmlName_String_ProductVariationAttribute_DetailAnchor"><span class="">getHtmlName</span></a></span>(prefix
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns an HTML representation of the product variation attribute id with the custom prefix.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getImage_String_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"><span class="">getImage</span></a></span>(viewtype
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">The method returns the first image appropriate for the currently selected attribute values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getImage_String_Number_DetailAnchor"><span class="">getImage</span></a></span>(viewtype
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, index
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">The method returns an image appropriate for the current selected variation values with the specific index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getImage_String_DetailAnchor"><span class="">getImage</span></a></span>(viewtype
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a></span>
+                    <div class="description">The method returns the first image appropriate for the current selected variation values with the specific index.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getImages_String_DetailAnchor"><span class="">getImages</span></a></span>(viewtype
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">The method returns the image appropriate for the currently selected attribute values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getMaster_DetailAnchor"><span class="">getMaster</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a></span>
+                    <div class="description">Returns the master of the product variation.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getProductVariationAttribute_String_DetailAnchor"><span class="">getProductVariationAttribute</span></a></span>(id
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a></span>
+                    <div class="description">Returns the product variation attribute for the specific id, or null if there is no product variation attribute for that id.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor"><span class="">getProductVariationAttributes</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection of product variation attributes of the variation.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getSelectedValue_ObjectAttributeDefinition_DetailAnchor"><span class="">getSelectedValue</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_dw_object_ObjectAttributeValueDefinition.html"><span class="">ObjectAttributeValueDefinition</span></a></span>
+                    <div class="description">Returns the selected value for the specified attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getSelectedValue_ProductVariationAttribute_DetailAnchor"><span class="">getSelectedValue</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a></span>
+                    <div class="description">Returns the selected value for the specified product variation attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getSelectedVariant_DetailAnchor"><span class="">getSelectedVariant</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Variant.html"><span class="">Variant</span></a></span>
+                    <div class="description">Returns the variant currently selected for this variation model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getSelectedVariants_DetailAnchor"><span class="">getSelectedVariants</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the variants currently selected for this variation model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getVariants_DetailAnchor"><span class="">getVariants</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of product variants of this variation model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getVariants_HashMap_DetailAnchor"><span class="">getVariants</span></a></span>(filter
+								 : 	
+								 
+								<a href="class_dw_util_HashMap.html"><span class="">HashMap</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the variants that match the specified filter conditions.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getVariationGroups_DetailAnchor"><span class="">getVariationGroups</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of variation groups of this variation model.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_getVariationValue_Product_ProductVariationAttribute_DetailAnchor"><span class="">getVariationValue</span></a></span>(variantOrVariationGroup
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a></span>
+                    <div class="description">Returns the value for the specified variant or variation group product and variation attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_hasOrderableVariants_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"><span class="">hasOrderableVariants</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Returns true if any variant is available with the specified value of the specified variation attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_isSelectedAttributeValue_ObjectAttributeDefinition_ObjectAttributeValueDefinition_DetailAnchor"><span class="">isSelectedAttributeValue</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeValueDefinition.html"><span class="">ObjectAttributeValueDefinition</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the specified variation value is the one currently selected.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_isSelectedAttributeValue_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"><span class="">isSelectedAttributeValue</span></a></span>(attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the specified product variation attribute value is the one currently selected.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_setSelectedAttributeValue_String_String_DetailAnchor"><span class="">setSelectedAttributeValue</span></a></span>(variationAttributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, variationAttributeValueID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Applies a selected attribute value to this model instance.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_url_String_Object_DetailAnchor"><span class="">url</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, varAttrAndValues
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs a URL to select a set of variation attribute values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_urlSelectVariationValue_String_ObjectAttributeDefinition_ObjectAttributeValueDefinition_DetailAnchor"><span class="">urlSelectVariationValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeValueDefinition.html"><span class="">ObjectAttributeValueDefinition</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Constructs an URL to select the specified value of the specified variation attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_urlSelectVariationValue_String_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"><span class="">urlSelectVariationValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Generates a URL for selecting a value for a given variation attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_urlUnselectVariationValue_String_ObjectAttributeDefinition_DetailAnchor"><span class="">urlUnselectVariationValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Constructs an URL to unselect the value of the specified variation attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductVariationModel_urlUnselectVariationValue_String_ProductVariationAttribute_DetailAnchor"><span class="">urlUnselectVariationValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Generates a URL for unselecting a value for a given variation attribute.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getAllValues_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getAllValues</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getAllValues</span>(attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the value definitions for the specified attribute. Only values
+ that actually exist for at least one of the master product's currently
+ online and complete variants are returned.
+ <p/>
+ Returns an empty collection if the passed attribute is not even a
+ variation attribute of the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This method is deprecated since custom code should work with ProductVariationAttributes and not directly with their corresponding ObjectAttributeDefinitions. Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getAllValues_ProductVariationAttribute_DetailAnchor">getAllValues(ProductVariationAttribute)</a> to get the collection of ProductVariationAttributeValue instances instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute whose values will be returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of ObjectAttributeValueDefinition instances representing the value definitions defined for the specified attribute. The collection is sorted by the explicit sort order defined for the values.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getAllValues_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAllValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAllValues</span>(attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the values for the specified attribute. Only values that actually
+ exist for at least one of the master product's currently online and
+ complete variants are returned.
+ <p/>
+ Returns an empty collection if the passed attribute is not even a
+ variation attribute of the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the variation attribute whose values will be returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the sorted collection of ProductVariationAttributeValue instances representing the values defined for the specified attribute. The collection is sorted by the explicit sort order defined for the values.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getAttributeDefinitions_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getAttributeDefinitions</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getAttributeDefinitions</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the object attribute definitions corresponding with the product
+ variation attributes of the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">This method is deprecated since custom code should work with ProductVariationAttributes and not directly with their corresponding ObjectAttributeDefinitions. Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor">getProductVariationAttributes()</a> to get the product variation attributes.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the collection of ObjectAttributeDefinition instances corresponding with the variation attributes of the master product, sorted by explicit position.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getDefaultVariant_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDefaultVariant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDefaultVariant</span>()
+					 : 
+					<a href="class_dw_catalog_Variant.html"><span class="">Variant</span></a>
+                    </div>
+                    <div class="description">Return the default variant of this model's master product. If no default
+ variant has been defined, return an arbitrary variant.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the default value of this model's master product, an arbitrary variant if no default is defined, or null if this model does not represent a master product with variants.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getFilteredValues_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getFilteredValues</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getFilteredValues</span>(attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of the value definitions defined for the specified
+ attribute, filtered based on currently selected values.
+ <p/>
+ A value is only returned if it at least one variant has the value and
+ also possesses the selected values for all previous attributes. It is
+ important to know that the filter is applied in a certain order. The
+ method looks at all ObjectAttributeDefinition instances that appear
+ before the passed one in the sorted collection returned by
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getAttributeDefinitions_DetailAnchor">getAttributeDefinitions()</a>. If the passed attribute is the first
+ in this collection, then this method simply returns all its values. If an
+ earlier attribute does not have a selected value, this method returns an
+ empty list. Otherwise, the filter looks at all variants matching the
+ selected value for all previous attributes, and considers the range of
+ values possessed by these variants for the passed attribute.
+ <p/>
+ The idea behind this method is that customers in the storefront select
+ variation attribute values one by one in the order the variation
+ attributes are defined and displayed. After each selection, customer only
+ wants to see values that he can possibly order for the remaining
+ attributes.
+ <p/>
+ Returns an empty collection if the passed attribute is not even a
+ variation attribute of the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getFilteredValues_ProductVariationAttribute_DetailAnchor">getFilteredValues(ProductVariationAttribute)</a> to get the sorted and calculated collection of product variation attribute values.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute whose values are returned by this method.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted collection of ObjectAttributeDefinitionValue instances calculated based on the currently selected variation values.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getFilteredValues_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">getFilteredValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getFilteredValues</span>(attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of the value definitions defined for the specified
+ attribute, filtered based on currently selected values.
+ <p/>
+ A value is only returned if it at least one variant has the value and
+ also possesses the selected values for all previous attributes. It is
+ important to know that the filter is applied in a certain order. The
+ method looks at all ProductVariationAttribute instances that appear
+ before the passed one in the sorted collection returned by
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor">getProductVariationAttributes()</a>. If the passed attribute is the
+ first in this collection, then this method simply returns all its values.
+ If an earlier attribute does not have a selected value, this method
+ returns an empty list. Otherwise, the filter looks at all variants
+ matching the selected value for all previous attributes, and considers
+ the range of values possessed by these variants for the passed attribute.
+ <p/>
+ The idea behind this method is that customers in the storefront select
+ variation attribute values one by one in the order the variation
+ attributes are defined and displayed. After each selection, customer only
+ wants to see values that he can possibly order for the remaining
+ attributes.
+ <p/>
+ Returns an empty collection if the passed attribute is not even a
+ variation attribute of the master product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute whose values are to be returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a sorted and filtered collection of product variation attribute values. The collection is sorted by the explicit sort order defined for the values.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getHtmlName_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getHtmlName</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getHtmlName</span>(attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTML representation of the variation attribute id. This method
+ is deprecated. You should use getHtmlName(ProductVariationAttribute)
+ instead.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getHtmlName_ProductVariationAttribute_DetailAnchor">getHtmlName(ProductVariationAttribute)</a> to get the HTML representation of the product variation attribute id.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute whose ID is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTML representation of the attribute id.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getHtmlName_String_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getHtmlName</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getHtmlName</span>(prefix
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTML representation of the variation attribute id with the
+ custom prefix. This method is deprecated. You should use
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getHtmlName_String_ProductVariationAttribute_DetailAnchor">getHtmlName(String, ProductVariationAttribute)</a> instead.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getHtmlName_String_ProductVariationAttribute_DetailAnchor">getHtmlName(String, ProductVariationAttribute)</a> to get the HTML representation of the product variation attribute id with the custom prefix.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">prefix</span>
+						 - 
+						<span class="parameterDesc">a custom prefix.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute whose ID is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTML representation of the attribute id.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getHtmlName_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHtmlName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHtmlName</span>(attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTML representation of the product variation attribute id.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute whose ID is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTML representation of the product variation attribute id.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getHtmlName_String_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHtmlName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHtmlName</span>(prefix
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns an HTML representation of the  product variation attribute id with the custom prefix.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">prefix</span>
+						 - 
+						<span class="parameterDesc">a custom prefix.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute whose ID is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an HTML representation of the product variation attribute id.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getImage_String_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>(viewtype
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">The method returns the first image appropriate for the currently selected attribute values.
+
+ The method first considers the most specific combination of attribute values (e.g
+ "Red leather") and if that is not found, more general (e.g "Red").  If no image group
+ is found for the attributes, returns null
+
+ The view type parameter is required, otherwise a exception is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">viewtype</span>
+						 - 
+						<span class="parameterDesc">the view type annotated to image</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the variation attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the the variation attribute value</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the first image, or null if not found</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getImage_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>(viewtype
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, index
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">The method returns an image appropriate for the current selected variation values
+ with the specific index.
+
+ If images are defined for this view type and variants, but not for
+ specified index, the method returns null.
+
+ If no images are defined for all variants and specified view type, the
+ image at the specified index of the master product images is returned. If
+ no master product image for specified index is defined, the method
+ returns null.
+
+ The view type parameter is required, otherwise a exception is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">viewtype</span>
+						 - 
+						<span class="parameterDesc">the view type annotated to image</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">index</span>
+						 - 
+						<span class="parameterDesc">the index number of the image within image list</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the MediaFile or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getImage_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImage</span>(viewtype
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_content_MediaFile.html"><span class="">MediaFile</span></a>
+                    </div>
+                    <div class="description">The method returns the first image appropriate for the current selected variation values
+ with the specific index.
+
+ If images are defined for this view type and variants, but not for
+ specified index, the method returns null.
+
+ If no images are defined for all variants and specified view type, the
+ image at the specified index of the master product images is returned. If
+ no master product image for specified index is defined, the method
+ returns null.
+
+ The view type parameter is required, otherwise a exception is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">viewtype</span>
+						 - 
+						<span class="parameterDesc">the view type annotated to image</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the MediaFile or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getImages_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getImages</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getImages</span>(viewtype
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">The method returns the image appropriate for the currently selected attribute values.
+
+ The method first considers the most specific combination of attribute values (e.g
+ "Red leather") and if that is not found, more general (e.g "Red").  If no image group
+ is found for the attributes, returns null
+
+ The view type parameter is required, otherwise a exception is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">viewtype</span>
+						 - 
+						<span class="parameterDesc">the view type annotated to image</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an array of images</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getMaster_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMaster</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMaster</span>()
+					 : 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+                    </div>
+                    <div class="description">Returns the master of the product variation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the master of the product variation.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getProductVariationAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductVariationAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductVariationAttribute</span>(id
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>
+                    </div>
+                    <div class="description">Returns the product variation attribute for the specific id,
+ or null if there is no product variation attribute for that id.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">id</span>
+						 - 
+						<span class="parameterDesc">the id of the product variation attribute</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product variation attribute, or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductVariationAttributes</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductVariationAttributes</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection of product variation attributes of the variation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of product variation attributes of the variation.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getSelectedValue_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getSelectedValue</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getSelectedValue</span>(attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_dw_object_ObjectAttributeValueDefinition.html"><span class="">ObjectAttributeValueDefinition</span></a>
+                    </div>
+                    <div class="description">Returns the selected value for the specified attribute. If no value is
+ selected, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getSelectedValue_ProductVariationAttribute_DetailAnchor">getSelectedValue(ProductVariationAttribute)</a> to get the selected product variation attribute value for the specified attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute whose value will be returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the selected value for the specified attribute or null.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getSelectedValue_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelectedValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelectedValue</span>(attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>
+                    </div>
+                    <div class="description">Returns the selected value for the specified product variation attribute. If no value is
+ selected, null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute whose value will be returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the selected product variation attribute value for the specified attribute or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getSelectedVariant_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelectedVariant</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelectedVariant</span>()
+					 : 
+					<a href="class_dw_catalog_Variant.html"><span class="">Variant</span></a>
+                    </div>
+                    <div class="description">Returns the variant currently selected for this variation model.
+ Returns null if no variant is selected.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">selected variant or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getSelectedVariants_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSelectedVariants</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSelectedVariants</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the variants currently selected for this variation model.
+ Returns an empty collection if no variant is selected.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">selected variants, might be empty if no valid variant was selected by the given attribute values</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getVariants_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVariants</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVariants</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of product variants of this variation model.
+ This collection only includes online variants. Offline variants are
+ filtered out. If all variation products are required, consider using
+ <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariants_DetailAnchor">Product.getVariants()</a>.
+
+ The product variants are returned in no particular order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of all the product variants of the variation model.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getVariants_HashMap_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVariants</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVariants</span>(filter
+								 : 
+								 
+								<a href="class_dw_util_HashMap.html"><span class="">HashMap</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the variants that match the specified filter conditions. The
+ filter conditions are specified as a hash map of &lt;attribute_id&gt; -
+ &lt;value_id&gt;.  This method does not consider the currently selected
+ attribute values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">filter</span>
+						 - 
+						<span class="parameterDesc">the filters to apply when collecting the variants.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the collection of variants that match the specified filter conditions.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getVariationGroups_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVariationGroups</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVariationGroups</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of variation groups of this variation model.
+ This collection only includes online variation groups. Offline variation
+ groups are filtered out. If all variation group products are required,
+ consider using <a href="class_dw_catalog_Product.html#dw_catalog_Product_getVariationGroups_DetailAnchor">Product.getVariationGroups()</a>.
+
+ The variation groups are returned in no particular order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of all the variation groups of the variation model.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_getVariationValue_Product_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">getVariationValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getVariationValue</span>(variantOrVariationGroup
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>
+                    </div>
+                    <div class="description">Returns the value for the specified variant or variation group product and
+ variation attribute. The specified product should be a <a href="class_dw_catalog_Variant.html">Variant</a>
+ returned by <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getVariants_DetailAnchor">getVariants()</a> or a <a href="class_dw_catalog_VariationGroup.html">VariationGroup</a> returned by
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getVariationGroups_DetailAnchor">getVariationGroups()</a>. The variation attribute should be one returned by
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_getProductVariationAttributes_DetailAnchor">getProductVariationAttributes()</a>. If an invalid product or attribute is passed,
+ null is returned. If null is passed for either argument, an exception is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">variantOrVariationGroup</span>
+						 - 
+						<span class="parameterDesc">the variant or variation group product to retrieve a value for, must not be null.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute to get the value for, must not be null.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the attribute value for the specified variant or variation group and attribute, or null if an invalid variant, variation group or attribute is passed or the variation group define no value for the variation attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_hasOrderableVariants_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">hasOrderableVariants</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">hasOrderableVariants</span>(attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if any variant is available with the specified value of the
+ specified variation attribute. Available means that the variant is
+ orderable according to the variant's availability model. This method
+ takes currently selected attribute values into consideration. The
+ specific rules are as follows:
+ <ul>
+ <li>If no variation value is currently selected, the method returns true
+ if any variant with the specified value is available, else false.</li>
+ <li>if one or more variation values are selected, the method returns true
+ if any variant with a combination of the specified value and the selected
+ value is available, else false.</li>
+ <li>if all variation values are selected, the method returns true of the
+ variant that is represented by the current selection is available, else
+ false.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">The product variation attribute whose values are to be tested for orderable variants.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The specific attribute value to test for orderable variants.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if any variant is available with the specified value of the specified variation attribute based on the currently selected attribute values, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_isSelectedAttributeValue_ObjectAttributeDefinition_ObjectAttributeValueDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">isSelectedAttributeValue</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">isSelectedAttributeValue</span>(attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>, value
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeValueDefinition.html"><span class="">ObjectAttributeValueDefinition</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the specified variation value is the one currently
+ selected.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_isSelectedAttributeValue_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor">isSelectedAttributeValue(ProductVariationAttribute, ProductVariationAttributeValue)</a> to identify if the specified product variation attribute value is the one currently selected.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute to check.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to check for selection.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the specified variation value is currently selected, false otherwise.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_isSelectedAttributeValue_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">isSelectedAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isSelectedAttributeValue</span>(attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the specified product variation attribute value is the one
+ currently selected.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute to check.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value to check for selection.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the specified variation attribute value is currently selected, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_setSelectedAttributeValue_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSelectedAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSelectedAttributeValue</span>(variationAttributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, variationAttributeValueID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Applies a selected attribute value to this model instance.
+ Usually this method is used to set the model state corresponding to the variation attribute values
+ specified by a URL. The URLs can be obtained by using one of the models URL methods, like
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_urlSelectVariationValue_String_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor">urlSelectVariationValue(String, ProductVariationAttribute, ProductVariationAttributeValue)</a> and
+ <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_urlUnselectVariationValue_String_ProductVariationAttribute_DetailAnchor">urlUnselectVariationValue(String, ProductVariationAttribute)</a>.
+
+ Anyway, there are some limitations to keep in mind when selecting variation attribute values.
+ A Variation Model created for a Variation Group or Variant Product is bound to an initial state.
+ Example:
+ <ul>
+ <li>A Variation Model created for Variation Group A can't be switched to Variation Group B.</li>
+ <li>A Variation Model created for Variant A can't be switched to Variant B.</li>
+ <li>The state of a Variation Model for a Variation Group that defines color = red can't be changed to color = black.</li>
+ <li>The state of a Variation Model for a Variant that defines color = red / size = L can't be changed to color = black / size = S.
+ However, the state of a Variation Model created for a Variation Group that defines color = red
+ can be changed to a more specific state by adding another selected value, e.g. size = L.</li>
+ </ul>
+ The state of a Variation Model created for a Variation Master can be changed in any possible way
+ because the initial state involves all variation values and Variants.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">variationAttributeID</span>
+						 - 
+						<span class="parameterDesc">the ID of an product variation attribute, must not be <code>null</code>, otherwise a exception is thrown</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">variationAttributeValueID</span>
+						 - 
+						<span class="parameterDesc">the ID of the product variation attribute value to apply, this value must not be part of the initial model state (e.g. the variant or group that the model has been created for), otherwise a exception is thrown</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_url_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">url</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">url</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, varAttrAndValues
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>...)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs a URL to select a set of variation attribute values. The
+ optional <code>varAttrAndValues</code> argument can be empty, or can
+ contain one or more variation attribute / value pairs. This variable list
+ should be even in length, with attributes and values alternating.
+ Attributes can be specified as instances of ProductVariationAttribute, or
+ String variation attribute ID. (Note: ObjectAttributeDefinition IDs are
+ not supported.) Values can be specified as instances of
+ ProductVariationAttributeValue or String or Integer depending on the data
+ type of the variation attribute. If a parameter type is invalid, or does
+ not reference a valid ProductVariationAttribute or
+ ProductVariationAttributeValue, then the parameter pair is not included
+ in the generated URL. The returned URL will contain variation attributes
+ and values already selected in the product variation model, as well as
+ attributes and values specified as method parameters. <p/>
+
+ Sample usage: <p/>
+
+ <pre>
+ master.variationModel.url("Product-Show", "color", "red", "size", "XL"); <br/>
+ master.variationModel.url("Product-Show", colorVarAttr, colorValue, sizeVarAttr, sizeValue); <br/>
+ // --> on/demandware.store/Sites-SiteGenesis-Site/default/Product-Show?pid=master_id&amp;dwvar_color=red&amp;dwvar_size=XL <br/>
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">The pipeline action.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">varAttrAndValues</span>
+						 - 
+						<span class="parameterDesc">Variable length list of attributes and corresponding values to select.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The constructed URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_urlSelectVariationValue_String_ObjectAttributeDefinition_ObjectAttributeValueDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">urlSelectVariationValue</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">urlSelectVariationValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>, value
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeValueDefinition.html"><span class="">ObjectAttributeValueDefinition</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Constructs an URL to select the specified value of the specified
+ variation attribute.
+ <p/>
+ The generated URL will be an absolute URL which uses the protocol of the
+ current request.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_urlSelectVariationValue_String_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor">urlSelectVariationValue(String, ProductVariationAttribute, ProductVariationAttributeValue)</a> to construct an URL to select the specified product variation attribute value of the specified product variation attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action, e.g. "Product-Show".</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute to select a value for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the attribute definition value portion of the variation.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the generated URL, an absolute URL which uses the protocol of the current request.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_urlSelectVariationValue_String_ProductVariationAttribute_ProductVariationAttributeValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlSelectVariationValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlSelectVariationValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>, value
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttributeValue.html"><span class="">ProductVariationAttributeValue</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Generates a URL for selecting a value for a given variation attribute.
+ This URL is intended to be used on dynamic product detail pages. When a
+ customer selects which value he wants for one of the variation
+ attributes, the product detail page can issue a request to the passed URL
+ which in turn can invoke the
+ <code>UpdateProductVariationSelections</code> pipelet. That pipelet reads
+ the querystring parameters and returns an updated variation model with
+ the desired attribute value selected.
+ <p/>
+ The generated URL will be an absolute URL which uses the protocol of
+ the current request.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action, e.g. "Product-Show".</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute to select a value for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute value to select.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the generated URL, an absolute URL which uses the protocol of the current request.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_urlUnselectVariationValue_String_ObjectAttributeDefinition_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">urlUnselectVariationValue</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">urlUnselectVariationValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_object_ObjectAttributeDefinition.html"><span class="">ObjectAttributeDefinition</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Constructs an URL to unselect the value of the specified variation
+ attribute.
+ <p/>
+ The generated URL will be an absolute URL which uses the protocol of the
+ current request.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_ProductVariationModel.html#dw_catalog_ProductVariationModel_urlUnselectVariationValue_String_ProductVariationAttribute_DetailAnchor">urlUnselectVariationValue(String, ProductVariationAttribute)</a> to unselect the product variation attribute value of the specified product variation attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action, e.g. "Product-Show".</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the attribute to unselect.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the generated URL, an absolute URL which uses the protocol of the current request.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductVariationModel_urlUnselectVariationValue_String_ProductVariationAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlUnselectVariationValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlUnselectVariationValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attribute
+								 : 
+								 
+								<a href="class_dw_catalog_ProductVariationAttribute.html"><span class="">ProductVariationAttribute</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Generates a URL for unselecting a value for a given variation attribute.
+ This URL is intended to be used on dynamic product detail pages. When a
+ customer deselects a value for one of the variation attributes, the
+ product detail page can issue a request to the passed URL which in turn
+ can invoke the <code>UpdateProductVariationSelections</code> pipelet.
+ That pipelet reads the querystring parameters and returns an updated
+ variation model with the desired attribute value unselected.
+ <p/>
+ The generated URL will be an absolute URL which uses the protocol of
+ the current request.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action, e.g. "Product-Show".</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attribute</span>
+						 - 
+						<span class="parameterDesc">the product variation attribute to unselect.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the generated URL, an absolute URL which uses the protocol of the current request.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

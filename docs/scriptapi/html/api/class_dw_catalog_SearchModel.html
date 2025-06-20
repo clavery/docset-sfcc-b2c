@@ -1,0 +1,1996 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SearchModel</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.catalog.SearchModel">
+            <a name="dw.catalog.SearchModel"></a>
+            <div class="packageName">dw.catalog</div>
+            <div class="className
+					">	
+        	
+				Class SearchModel</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.catalog.SearchModel
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Common search model base class.</div>
+                    <div class="subclasses">
+                        <div class="subclass">
+	    	All Known Subclasses
+    	</div>
+                        <div class="subclasses">
+                            <a href="class_dw_content_ContentSearchModel.html"><span class="parameterName">ContentSearchModel</span></a>, <a href="class_dw_catalog_ProductSearchModel.html"><span class="parameterName">ProductSearchModel</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_SearchModel_SEARCH_PHRASE_PARAMETER_DetailAnchor"></a>SEARCH_PHRASE_PARAMETER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"q"
+                        <div class="description">URL Parameter for the Search Phrase</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_SearchModel_SORT_DIRECTION_ASCENDING_DetailAnchor"></a>SORT_DIRECTION_ASCENDING
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;1
+                        <div class="description">Sorting parameter ASCENDING</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_SearchModel_SORT_DIRECTION_DESCENDING_DetailAnchor"></a>SORT_DIRECTION_DESCENDING
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;2
+                        <div class="description">Sorting parameter DESCENDING</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_SearchModel_SORT_DIRECTION_NONE_DetailAnchor"></a>SORT_DIRECTION_NONE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;0
+                        <div class="description">Sorting parameter NO_SORT - will remove a sorting condition</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>count
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The number of search results found by this search.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>emptyQuery
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the query is emtpy when no search term, search parameter or
+ refinement was specified for the search. In case also no result is
+ returned. This "empty" is different to a query with a specified query and
+ with an empty result.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>refinedByAttribute
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">The method returns true, if this search is refined by at least one
+ attribute.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>refinedSearch
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if this was a refined search. A search is a refined search if
+ at least one refinement is part of the query.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>searchPhrase
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The search phrase used in this search.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    
+    			To get an instance of this class, use one of the subclass constructors. 
+    		 </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_addRefinementValues_String_String_DetailAnchor"><span class="">addRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Adds a refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_canRelax_DetailAnchor"><span class="">canRelax</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the search can be relaxed without creating a search for all searchable items.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_getCount_DetailAnchor"><span class="">getCount</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the number of search results found by this search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_getRefinementMaxValue_String_DetailAnchor"><span class="">getRefinementMaxValue</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the maximum refinement value selected in the query for the specific attribute, or null if there is no maximum refinement value or no refinement for that attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_getRefinementMinValue_String_DetailAnchor"><span class="">getRefinementMinValue</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the minimum refinement value selected in the query for the specific attribute, or null if there is no minimum refinement value or no refinement for that attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_catalog_SearchModel_getRefinementValue_String_DetailAnchor"><span class="">getRefinementValue</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the refinement value selected in the query for the specific attribute, or null if there is no refinement for that attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_getRefinementValues_String_DetailAnchor"><span class="">getRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the list of selected refinement values for the given attribute as used in the search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_getSearchPhrase_DetailAnchor"><span class="">getSearchPhrase</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the search phrase used in this search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_catalog_SearchModel_getSearchRedirect_String_DetailAnchor"><span class="">getSearchRedirect</span></a></span>(searchPhrase
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URLRedirect.html"><span class="">URLRedirect</span></a></span>
+                    <div class="description">Returns an URLRedirect object for a search phrase.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_getSortingCondition_String_DetailAnchor"><span class="">getSortingCondition</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the sorting condition for a given attribute name.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isEmptyQuery_DetailAnchor"><span class="">isEmptyQuery</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the query is emtpy when no search term, search parameter or refinement was specified for the search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isRefinedByAttribute_String_DetailAnchor"><span class="">isRefinedByAttribute</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if this search has been refined on the given attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isRefinedByAttribute_DetailAnchor"><span class="">isRefinedByAttribute</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">The method returns true, if this search is refined by at least one attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isRefinedByAttributeValue_String_String_DetailAnchor"><span class="">isRefinedByAttributeValue</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if this search has been refined on the given attribute and value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isRefinedSearch_DetailAnchor"><span class="">isRefinedSearch</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if this was a refined search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isRefinementByValueRange_String_DetailAnchor"><span class="">isRefinementByValueRange</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if this search has been refined on the given attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_isRefinementByValueRange_String_String_String_DetailAnchor"><span class="">isRefinementByValueRange</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, minValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					boolean</span>
+                    <div class="description">Identifies if this search has been refined on the given attribute and range values.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_removeRefinementValues_String_String_DetailAnchor"><span class="">removeRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes a refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_search_DetailAnchor"><span class="">search</span></a></span>()
+						: 
+					<a href="class_dw_system_SearchStatus.html"><span class="">SearchStatus</span></a></span>
+                    <div class="description">Execute the search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_setRefinementValueRange_String_String_String_DetailAnchor"><span class="">setRefinementValueRange</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, minValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets a refinement value range for an attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_setRefinementValues_String_String_DetailAnchor"><span class="">setRefinementValues</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets refinement values for an attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_setSearchPhrase_String_DetailAnchor"><span class="">setSearchPhrase</span></a></span>(phrase
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the search phrase used in this search.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_setSortingCondition_String_Number_DetailAnchor"><span class="">setSortingCondition</span></a></span>(attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, direction
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets or removes a sorting condition for the specified attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_url_String_DetailAnchor"><span class="">url</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the exact same query.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_url_URL_DetailAnchor"><span class="">url</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the exact same query.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlDefaultSort_String_DetailAnchor"><span class="">urlDefaultSort</span></a></span>(url
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a default sorting.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlDefaultSort_URL_DetailAnchor"><span class="">urlDefaultSort</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a default sorting.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRefineAttribute_String_String_String_DetailAnchor"><span class="">urlRefineAttribute</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an additional refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRefineAttribute_URL_String_String_DetailAnchor"><span class="">urlRefineAttribute</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an additional refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRefineAttributeValue_String_String_String_DetailAnchor"><span class="">urlRefineAttributeValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an additional refinement value for a given refinement attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRefineAttributeValue_URL_String_String_DetailAnchor"><span class="">urlRefineAttributeValue</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an additional refinement value for a given refinement attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRefineAttributeValueRange_String_String_String_String_DetailAnchor"><span class="">urlRefineAttributeValueRange</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, minValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an additional refinement value range for a given refinement attribute.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRelaxAttribute_String_String_DetailAnchor"><span class="">urlRelaxAttribute</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the specified refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRelaxAttribute_URL_String_DetailAnchor"><span class="">urlRelaxAttribute</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the specified refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRelaxAttributeValue_String_String_String_DetailAnchor"><span class="">urlRelaxAttributeValue</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the specified refinement.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlRelaxAttributeValue_URL_String_String_DetailAnchor"><span class="">urlRelaxAttributeValue</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the specified refinement value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlSort_String_String_Number_DetailAnchor"><span class="">urlSort</span></a></span>(action
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortBy
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortDir
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a specific sorting criteria.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_SearchModel_urlSort_URL_String_Number_DetailAnchor"><span class="">urlSort</span></a></span>(url
+								 : 	
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, sortBy
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortDir
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a></span>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a specific sorting criteria.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_addRefinementValues_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Adds a refinement. The method can be called to add an additional query
+ parameter specified as name-value pair. The values string may encode
+ multiple values delimited by the pipe symbol ('|').</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the refinement value to set</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_canRelax_DetailAnchor"></a>
+                    <div class="detailName 
+						">canRelax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">canRelax</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the search can be relaxed without creating a search for all
+ searchable items.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the search can be relaxed without creating a search for all searchable items, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getCount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCount</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the number of search results found by this search.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the number of search results found by this search.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getRefinementMaxValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRefinementMaxValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRefinementMaxValue</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the maximum refinement value selected in the query for the specific
+ attribute, or null if there is no maximum refinement value or no refinement for that attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the attribute whose refinement value is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the maximum refinement value selected in the query for the specific attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getRefinementMinValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRefinementMinValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRefinementMinValue</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the minimum refinement value selected in the query for the specific
+ attribute, or null if there is no minimum refinement value or no refinement for that attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the attribute whose refinement value is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the minimum refinement value selected in the query for the specific attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getRefinementValue_String_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">getRefinementValue</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">getRefinementValue</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the refinement value selected in the query for the specific
+ attribute, or null if there is no refinement for that attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_catalog_SearchModel.html#dw_catalog_SearchModel_getRefinementValues_String_DetailAnchor">getRefinementValues(String)</a> to get the collection of refinement values.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the attribute whose refinement value is returned.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the refinement value selected in the query for the specific attribute.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getRefinementValues_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the list of selected refinement values for the given attribute as
+ used in the search.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The name of the refinement attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A list of values currently selected for the refinement attribute.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getSearchPhrase_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSearchPhrase</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSearchPhrase</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the search phrase used in this search.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the search phrase used in this search.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getSearchRedirect_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSearchRedirect</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getSearchRedirect</span>(searchPhrase
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URLRedirect.html"><span class="">URLRedirect</span></a>
+                    </div>
+                    <div class="description">Returns an URLRedirect object for a search phrase.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">searchPhrase</span>
+						 - 
+						<span class="parameterDesc">a search phrase to lookup a URLRedirect for</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">URLRedirect containing the location and status code, null in case no redirect was found for the search phrase.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_getSortingCondition_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSortingCondition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSortingCondition</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the sorting condition for a given attribute name. A value of 0
+ indicates that no sorting condition is set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the attribute name</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">zero if no sorting order set, or the sorting order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isEmptyQuery_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEmptyQuery</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEmptyQuery</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the query is emtpy when no search term, search parameter or
+ refinement was specified for the search. In case also no result is
+ returned. This "empty" is different to a query with a specified query and
+ with an empty result.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the query is emtpy when no search term, search parameter or refinement was specified for the search.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isRefinedByAttribute_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinedByAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinedByAttribute</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if this search has been refined on the given attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if the search is refined on the attribute, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isRefinedByAttribute_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinedByAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinedByAttribute</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">The method returns true, if this search is refined by at least one
+ attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true, if the search is refined by at least one attribute, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isRefinedByAttributeValue_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinedByAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinedByAttributeValue</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if this search has been refined on the given attribute and
+ value.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">The value to be checked for inclusion in the refinement.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if the search is refined on the attribute and value, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isRefinedSearch_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinedSearch</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinedSearch</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if this was a refined search. A search is a refined search if
+ at least one refinement is part of the query.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this is a refined search, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isRefinementByValueRange_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinementByValueRange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinementByValueRange</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if this search has been refined on the given attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if the search is refined on the attribute, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_isRefinementByValueRange_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">isRefinementByValueRange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isRefinementByValueRange</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, minValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if this search has been refined on the given attribute and range values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">minValue</span>
+						 - 
+						<span class="parameterDesc">The minimum value to be checked for inclusion in the refinement.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxValue</span>
+						 - 
+						<span class="parameterDesc">The maximum value to be checked for inclusion in the refinement.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">True if the search is refined on the attribute and range values, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_removeRefinementValues_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes a refinement. The method can be called to remove previously added
+ refinement values. The values string may encode multiple values delimited
+ by the pipe symbol ('|').</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the refinement value to remove or null to remove all values</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_search_DetailAnchor"></a>
+                    <div class="detailName 
+						">search</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">search</span>()
+					 : 
+					<a href="class_dw_system_SearchStatus.html"><span class="">SearchStatus</span></a>
+                    </div>
+                    <div class="description">Execute the search.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the searchStatus object with search status code and description of search result.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_setRefinementValueRange_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRefinementValueRange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setRefinementValueRange</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, minValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets a refinement value range for an attribute. The method can be called to set
+ an additional range query parameter specified as name-range-value pair. The values
+ string can contain only a range boundary.
+ Existing refinement values for the attribute will be removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">minValue</span>
+						 - 
+						<span class="parameterDesc">the minimum refinement boundary value to set or null to remove the minimum boundary</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxValue</span>
+						 - 
+						<span class="parameterDesc">the maximum refinement boundary value to set or null to remove the maximum boundary</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_setRefinementValues_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setRefinementValues</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setRefinementValues</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, values
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets refinement values for an attribute. The method can be called to set
+ an additional query parameter specified as name-value pair. The value
+ string may encode multiple values delimited by the pipe symbol ('|').
+ Existing refinement values for the attribute will be removed.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">The ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">values</span>
+						 - 
+						<span class="parameterDesc">the refinement values to set (delimited by '|') or null to remove all values</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_setSearchPhrase_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSearchPhrase</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSearchPhrase</span>(phrase
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the search phrase used in this search. The search query parser uses
+ the following operators:
+
+ <ul>
+ <li>PHRASE operator (""), e.g. "cream cheese", "John Lennon"</li>
+ <li>NOT operator (-), e.g. -cargo (will not return results containing
+ "cargo")</li>
+ <li>WILDCARD operator (*), e.g. sho* (will return results containing
+ "shoulder", "shoes" and "shoot")</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">phrase</span>
+						 - 
+						<span class="parameterDesc">the search phrase used in this search.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_setSortingCondition_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSortingCondition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSortingCondition</span>(attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, direction
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets or removes a sorting condition for the specified attribute. Specify
+ either SORT_DIRECTION_ASCENDING or SORT_DIRECTION_DESCENDING to set a
+ sorting condition. Specify SORT_DIRECTION_NONE to remove a sorting
+ condition from the attribute.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the attribute ID</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">direction</span>
+						 - 
+						<span class="parameterDesc">SORT_DIRECTION_ASCENDING, SORT_DIRECTION_DESCENDING or SORT_DIRECTION_NONE</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_url_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">url</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">url</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the exact same query.
+ The provided parameter must be an action, e.g. 'Search-Show'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an URL that can be used to re-execute the exact same query.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_url_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">url</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">url</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the exact same query.
+ The search specific parameter are appended to the provided URL. The URL
+ is typically generated with one of the URLUtils methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the url to use.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a new url URL that can be used to re-execute the exact same query.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlDefaultSort_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlDefaultSort</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlDefaultSort</span>(url
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a default
+ sorting. The provided parameter must be an action, e.g. 'Search-Show'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">url or pipeline name</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlDefaultSort_URL_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlDefaultSort</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlDefaultSort</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a default
+ sorting. The search specific parameters are appended to the provided URL.
+ The URL is typically generated with one of the URLUtils methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">url or pipeline name</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRefineAttribute_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRefineAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRefineAttribute</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an
+ additional refinement.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value for the refinement attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRefineAttribute_URL_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRefineAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRefineAttribute</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an
+ additional refinement. The search specific parameters are appended to the
+ provided URL. The URL is typically generated with one of the URLUtils
+ methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">url</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the ID of the refinement attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">value for the refinement attribute</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRefineAttributeValue_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRefineAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRefineAttributeValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an
+ additional refinement value for a given refinement attribute. The
+ provided value will be added to the set of allowed values for the
+ refinement attribute. This basically broadens the search result.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the ID of the refinement attribute.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the additional value for the refinement attribute.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRefineAttributeValue_URL_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRefineAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRefineAttributeValue</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an
+ additional refinement value for a given refinement attribute. The
+ provided value will be added to the set of allowed values for the
+ refinement attribute. This basically broadens the search result.
+
+ The search specific parameters are appended to the provided URL. The URL
+ is typically generated with one of the URLUtils methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">url</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">ID of the refinement attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the additional value for the refinement attribute</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRefineAttributeValueRange_String_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRefineAttributeValueRange</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRefineAttributeValueRange</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, minValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, maxValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with an additional refinement value range for a given refinement attribute. The
+ provided value range will be replace to the existing value range for the refinement attribute.
+
+ The search specific parameters are appended to the provided URL. The URL is typically generated with one of the URLUtils methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">ID of the refinement attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">minValue</span>
+						 - 
+						<span class="parameterDesc">the min value for the refinement attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">maxValue</span>
+						 - 
+						<span class="parameterDesc">the max value for the refinement attribute</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRelaxAttribute_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRelaxAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRelaxAttribute</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the
+ specified refinement. The value for the action parameter must be a
+ pipeline action, e.g. 'Search-Show'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">ID of the refinement attribute to be removed</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRelaxAttribute_URL_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRelaxAttribute</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRelaxAttribute</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the
+ specified refinement. The search specific parameters are appended to the
+ provided URL. The URL is typically generated with one of the URLUtils
+ methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the url to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the ID of the refinement attribute to be removed.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRelaxAttributeValue_String_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRelaxAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRelaxAttributeValue</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the
+ specified refinement. The value for the action parameter must be a
+ pipeline action, e.g. 'Search-Show'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">the pipeline action.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">ID of the refinement attribute to be removed</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value that should be removed from the list of refinement values.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlRelaxAttributeValue_URL_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlRelaxAttributeValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlRelaxAttributeValue</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, attributeID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, value
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query without the
+ specified refinement value. The search specific parameters are appended
+ to the provided URL. The URL is typically generated with one of the
+ URLUtils methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">the url to use.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">attributeID</span>
+						 - 
+						<span class="parameterDesc">the ID of the refinement attribute to relax the value for.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">the value that should be removed from the list of refinement values.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlSort_String_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlSort</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlSort</span>(action
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortBy
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortDir
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a
+ specific sorting criteria. This criteria will overwrite all previous sort
+ critiria. The provided parameter must be an action, e.g. 'Search-Show'.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">action</span>
+						 - 
+						<span class="parameterDesc">Pipeline action</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortBy</span>
+						 - 
+						<span class="parameterDesc">ID of the sort attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortDir</span>
+						 - 
+						<span class="parameterDesc">Sort direction. 1 - ASCENDING (default), 2 - DESCENDING</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_SearchModel_urlSort_URL_String_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">urlSort</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">urlSort</span>(url
+								 : 
+								 
+								<a href="class_dw_web_URL.html"><span class="">URL</span></a>, sortBy
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, sortDir
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_dw_web_URL.html"><span class="">URL</span></a>
+                    </div>
+                    <div class="description">Constructs an URL that you can use to re-execute the query with a
+ specific sorting criteria. This criteria will overwrite all previous sort
+ critiria. The search specific parameters are appended to the provided
+ URL. The URL is typically generated with one of the URLUtils methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">url</span>
+						 - 
+						<span class="parameterDesc">URL</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortBy</span>
+						 - 
+						<span class="parameterDesc">ID of the sort attribute</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sortDir</span>
+						 - 
+						<span class="parameterDesc">Sort direction. 1 - ASCENDING (default), 2 - DESCENDING</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new URL.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

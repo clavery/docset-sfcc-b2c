@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet GetNearestStores</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet GetNearestStores</div>
+            <div class="topLevelDescription">
+This pipelet gets the list of stores, for the current site, that are within a 
+configured distance of a location on the earth. The stores and their distance
+from the specified location are returned as a Map of Store objects to
+doubles. The distance is interpreted either in miles or kilometers depending
+on the "DistanceUnit" input or configuration parameter.
+
+The location can be specified by either directly providing a
+latitude/longitude coordinate pair or by providing a country and a postal
+code:
+* If a postal code is passed, the pipelet looks in the system's geolocation
+mappings to find the coordinates for this postal code. If no matching
+geolocation is found, the pipelet will return an empty list of stores. If a
+match is found then the name of the city and the state will be stored in the
+pipeline dictionary in addition to the map of stores.
+* If coordinates are passed, the values for country and postal code are
+ignored.
+* If neither of the two input pairs is provided the pipelet will throw an
+exception.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Store</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Configuration Properties
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DistanceUnit</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The distance unit to be used for the calculation.
+</div>
+                    <span class="parameterTitle">Permissible Values:</span>
+                    <div class="parameterDetail
+										">km</div>
+                    <div class="parameterDetail
+										">mi</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">PostalCode</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Customers postalCode
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">CountryCode</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+ISO Country Code.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">MaxDistance</span>
+					&nbsp;:&nbsp;
+					Double
+							(Optional)
+						</span>
+                    <div class="description">
+Area (radius) in DistancUnit where Stores will be searched for.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DistanceUnit</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+The distance unit to be used for the calculation. Supported values are 'mi' and 'km' (for miles and kilometers respectively). Overwrites the configuration value.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Latitude</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Current latitude.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Longitude</span>
+					&nbsp;:&nbsp;
+					Number
+							(Optional)
+						</span>
+                    <div class="description">
+Current longitude.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Stores</span>
+					&nbsp;:&nbsp;
+					LinkedHashMap
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+A map containing Store objects as keys and their distance to the provided location.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">City</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The city matching the provided CountryCode and ZipCode.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">State</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The state matching the provided CountryCode and ZipCode.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Job Step
+                        ExecuteDataReplication</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+                            Overview
+                        </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className">
+                                    Job Step
+                                    ExecuteDataReplication</div>
+            <div class="topLevelDescription">Replicates data to a target system.</div>
+            <div class="topLevelDescription">
+    
+ <p>
+ The ReplicationConfiguration parameter requires a string in JSON format that describes the replication process and
+ its tasks that will be executed. The parameter section that describes the tasks is similar to the Replication Tasks
+ step of the Business Manager Data Replication wizard. Replication tasks not included in the JSON are not included in
+ the data replication process. The JSON syntax and replication tasks are validated when you add the step to the job.
+ If something is wrong, a log message is written during runtime. The following is an example JSON-snippet for the
+ ReplicationConfiguration parameter.
+ </p>
+
+ <pre>
+ <code>
+
+ {
+   "data_replication_configuration" : {
+     "target" : "production",
+     "type" : "transfer_and_publish",
+     "description" : "Any data replication process description",
+     "cache_invalidation" : "clear_all",
+     "notification" : {
+       "type": "process_end",
+       "to": [
+         "john@example.com",
+         "jane@example.com"
+       ]
+     },
+     "tasks" : {
+       "global" : {
+         "csc_settings" : true,
+         "csrf_whitelists" : true,
+         "catalogs" : {
+           "catalogDEMO" : true
+         },
+         "custom_object_types" : true,
+         "custom_objects" : true,
+         "customer_lists" : true,
+         "geolocations" : true,
+         "global_sorting" : true,
+         "libraries" : {
+           "libDEMO" : true
+         },
+         "oauth_providers" : true,
+         "ocapi_settings" : true,
+         "page_meta_tags" : true,
+         "payments_config" : true,
+         "preferences" : {
+           "system_preferences" : true,
+           "custom_preferences" : true
+         },
+         "price_books": true,
+         "sites" : {
+           "siteDEMO" : true
+         },
+         "static_content" : true,
+         "webdav_client_permissions" : true
+       },
+       "sites" : {
+         "siteDEMO" : {
+           "ab_tests" : true,
+           "ab_tests_and_experiences" : true,
+           "active_data_feeds" : true,
+           "cache_settings" : true,
+           "campaigns_and_promotions" : true,
+           "content_library" : true,
+           "content_slots" : true,
+           "coupons" : true,
+           "custom_objects" : true,
+           "customer_groups" : true,
+           "dynamic_content" : true,
+           "ocapi_settings" : true,
+           "payment" : true,
+           "preferences" : {
+             "system_preferences" : true,
+             "custom_preferences" : true
+           },
+           "search_indexes" : true,
+           "shipping_methods" : true,
+           "sorting" : true,
+           "source_codes" : true,
+           "storefront_urls" : {
+             "catalog_urls" : true,
+             "content_urls" : true,
+             "pipeline_urls" : true,
+             "redirects" : true
+           },
+           "stores" : true,
+           "taxation" : true
+         }
+       }
+     }
+   }
+ }
+
+ </code>
+ </pre>
+ <ul>
+ <li>data_replication_configuration: Highest level array.
+ <ul>
+ <li>target: Target system, either 'production' or 'development'.</li>
+ <li>type: Data replication type, either 'transfer_and_publish', 'transfer', 'publish' or 'undo'.</li>
+ <li>description: Optional description of the data replication process.</li>
+ <li>cache_invalidation:
+ <ul>
+ <li>'clear_impacted_partitions' - Clear caches based on impacted cache partitions.</li>
+ <li>'clear_all' - Clear caches.</li>
+ <li>'keep_all' - Keep caches.</li>
+ </ul>
+ <li>keep_caches: 'true' or 'false', to keep caches or not. <b><i>Deprecated: Use 'cache_invalidation' property
+ instead which has precedence.</i></b> If neither 'cache_invalidation' nor 'keep_caches' is configured, caches will be
+ cleared.</li>
+ <li>notification:
+ <ul>
+ <li>type: Notification type:
+ <ul>
+ <li>'process_end' - Notified when process ends.</li>
+ <li>'process_error' - Notified only if process does not succeed.</li>
+ <li>'periodically' - Notified periodically (see below for interval configuration - defaults to 10 minutes).</li>
+ </ul>
+ </li>
+ <li>to: List of recipients.</li>
+ <li>interval: Optional configuration of the notification interval if type is 'periodically'.</li>
+ </ul>
+ </li>
+ <li>tasks:
+ <ul>
+ <li>global: Global data replication tasks. To process all tasks, use the keyword 'all', otherwise use these:
+ <ul>
+ <li>csc_settings</li>
+ <li>csrf_whitelists: Where possible, we changed noninclusive terms to align with our company value of Equality.
+ Because changing terms in our code can break current implementations, we maintained this object name.</li>
+ <li>catalogs: Catalogs. To process only certain catalogs, specify the catalog names. To process all catalogs, use the
+ keyword 'all'.</li>
+ <li>custom_object_types</li>
+ <li>custom_objects</li>
+ <li>customer_lists</li>
+ <li>geolocations</li>
+ <li>global_sorting</li>
+ <li>libraries: Libraries. To process only certain libraries, specify the library names. To process all libraries, use
+ the keyword 'all'.</li>
+ <li>oauth_providers</li>
+ <li>ocapi_settings</li>
+ <li>page_meta_tags</li>
+ <li>payments_config</li>
+ <li>preferences: Preferences. To process all preferences, use the keyword 'all', otherwise use these:
+ <ul>
+ <li>system_preferences</li>
+ <li>custom_preferences</li>
+ </ul>
+ </li>
+ <li>price_books</li>
+ <li>sites: Site definition, content library, and site preferences. You can process these for individual sites by
+ specifying their names, or for all sites using the keyword 'all'.</li>
+ <li>static_content</li>
+ <li>webdav_client_permissions</li>
+ </ul>
+ </li>
+ <li>sites: Site-specific data to process. You can process individual sites by specifying their names and replication
+ tasks. To process all tasks, use the keyword 'all', otherwise use these:
+ <ul>
+ <li>ab_tests</li>
+ <li>ab_tests_and_experience</li>
+ <li>active_data_feeds</li>
+ <li>cache_settings</li>
+ <li>campaigns_and_promotions</li>
+ <li>content_library</li>
+ <li>content_slots</li>
+ <li>coupons</li>
+ <li>custom_objects</li>
+ <li>customer_groups</li>
+ <li>dynamic_content</li>
+ <li>ocapi_settings</li>
+ <li>payment</li>
+ <li>preferences: Preferences. To process all preferences, use the keyword 'all', otherwise use these:
+ <ul>
+ <li>system_preferences</li>
+ <li>custom_preferences</li>
+ </ul>
+ </li>
+ <li>search_indexes</li>
+ <li>shipping_methods</li>
+ <li>sorting</li>
+ <li>source_codes</li>
+ <li>storefront_urls: Storefront URLs. To process all storefront URLs, use the keyword 'all', otherwise use these:
+ <ul>
+ <li>catalog_urls</li>
+ <li>content_urls</li>
+ <li>pipeline_urls</li>
+ <li>redirects</li>
+ </ul>
+ </li>
+ <li>stores</li>
+ <li>taxation</li>
+ </ul>
+ </li>
+ </ul>
+ </li>
+ </ul>
+ </li>
+ <ul>
+ <p>
+ Where possible, we changed noninclusive terms to align with our company value of Equality. Because changing terms in
+ our code can break current implementations, we maintained this object's name.
+ </p>
+ 
+  </div>
+            <div class="parameters">
+                <span class="parameterTitle">Execution Context:</span>
+                <div class="parameterDetail">Organization</div>
+                <span class="parameterTitle">Parallel Execution:</span>
+                <div class="parameterDetail">
+                                        Not Supported
+                                    </div>
+                <span class="parameterTitle">Always execute on restart:</span>
+                <div class="parameterDetail">
+                                        Supported
+                                    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Input Parameters
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ReplicationConfiguration</span>
+                                            &nbsp;:&nbsp;
+                                            JSONString
+                                                    (Required)
+                                                </span>
+                    <div class="description">Describes the replication process and its replication tasks that will be executed.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+                                    Exit Status
+                                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR</span></span>
+                    <div class="description">Data replication process has failed.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">OK</span></span>
+                    <div class="description">Data replication process was successful.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">NO_STAGING_INSTANCE</span></span>
+                    <div class="description">Step is used on non-staging instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR_LOCKING</span></span>
+                    <div class="description">Data replication could not get all locks required.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ERROR_REPLICATION_IN_PROGRESS</span></span>
+                    <div class="description">Data replication could not be started because another replication process is currently running.</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

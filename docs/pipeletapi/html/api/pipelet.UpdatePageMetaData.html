@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet UpdatePageMetaData</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				">
+			Pipelet UpdatePageMetaData</div>
+            <div class="topLevelDescription">Updates the page metadata (that is used to specify the page title, among
+other things), based on an input parameter. The pipelet checks the following
+input parameters, in the following order, for a valid object: Product,
+Content, Category, Folder and stores it in the
+&quot;CurrentPageMetaData&quot; key in the pipline dictionary. It transfers
+data from the first object found into the page metadata. If no input object
+is found, then it uses the Default* parameters.
+
+If a valid object is found, a three-way process is started to find the title
+used to present in the &lt;title&gt; tag. First the pipelet tries to obtain
+the title from the &quot;pageTitle&quot; attribute of the object. If this is
+blank the title is being obtained from the &quot;defaultTitle&quot; parameter
+passed to the pipelet. If this param is also blank the title falls back to
+the name (Product, Content) or displayName (Category, Folder) attribute
+depending on the object type.
+
+The information stored in CurrentPageMetaData can be referenced in templates
+and rendered in an HTML head section for example:
+
+<pre>
+ &lt;head&gt;
+ &lt;title&gt;${pdict.CurrentPageMetaData.title}&lt;/title&gt;
+ &lt;meta name=&quot;description&quot; content=&quot;${pdict.CurrentPageMetaData.description}&quot; /&gt;
+  .
+  .
+  .
+ &lt;/head&gt;
+</pre></div>
+            <div class="parameters">
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Common</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DefaultTitle</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+An explicit title for the page.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DefaultKeywords</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+Explicit keywords for the page.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">DefaultDescription</span>
+					&nbsp;:&nbsp;
+					String
+							(Optional)
+						</span>
+                    <div class="description">
+An explicit page description.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Product</span>
+					&nbsp;:&nbsp;
+					Product
+							(Optional)
+						</span>
+                    <div class="description">
+A product, which is used to determine the page meta data information.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Category</span>
+					&nbsp;:&nbsp;
+					CatalogCategory
+							(Optional)
+						</span>
+                    <div class="description">
+A category, which is used to determine the page meta data.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Content</span>
+					&nbsp;:&nbsp;
+					Content
+							(Optional)
+						</span>
+                    <div class="description">
+A content asset used to determine the page meta data.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Folder</span>
+					&nbsp;:&nbsp;
+					Folder
+							(Optional)
+						</span>
+                    <div class="description">
+A content folder used to determine the page meta data.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

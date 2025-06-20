@@ -1,0 +1,450 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SalesforcePayPalOrder</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.payments.SalesforcePayPalOrder">
+            <a name="dw.extensions.payments.SalesforcePayPalOrder"></a>
+            <div class="packageName">dw.extensions.payments</div>
+            <div class="className
+					">	
+        	
+				Class SalesforcePayPalOrder</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.payments.SalesforcePayPalOrder
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description"><p>
+ Salesforce Payments representation of a PayPal order object. See Salesforce Payments documentation for how
+ to gain access and configure it for use on your sites.
+ </p>
+ <p>
+ A PayPal order is automatically created when a shopper is ready to pay for items in their basket. It becomes
+ completed when the shopper provides information to the payment provider that is acceptable to authorize payment for a
+ given amount.
+ </p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePayPalOrder_TYPE_PAYPAL_DetailAnchor"></a>TYPE_PAYPAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"paypal"
+                        <div class="description">Represents the PayPal funding source.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePayPalOrder_TYPE_VENMO_DetailAnchor"></a>TYPE_VENMO
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"venmo"
+                        <div class="description">Represents the Venmo funding source.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>amount
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The amount of this PayPal order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>captureID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the capture against this order, or <code>null</code> if not available.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>completed
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns <code>true</code> if this PayPal order has been completed, or <code>false</code> if not.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The identifier of this PayPal order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>payer
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_extensions_payments_SalesforcePayPalOrderPayer.html"><span class="">SalesforcePayPalOrderPayer</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The payer information for this PayPal order, or <code>null</code> if not known.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shipping
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_extensions_payments_SalesforcePayPalOrderAddress.html"><span class="">SalesforcePayPalOrderAddress</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The shipping address for this PayPal order, or <code>null</code> if not known.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getAmount_DetailAnchor"><span class="">getAmount</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the amount of this PayPal order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getCaptureID_DetailAnchor"><span class="">getCaptureID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the capture against this order, or <code>null</code> if not available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the identifier of this PayPal order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getPayer_DetailAnchor"><span class="">getPayer</span></a></span>()
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrderPayer.html"><span class="">SalesforcePayPalOrderPayer</span></a></span>
+                    <div class="description">Returns the payer information for this PayPal order, or <code>null</code> if not known.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getPaymentDetails_OrderPaymentInstrument_DetailAnchor"><span class="">getPaymentDetails</span></a></span>(paymentInstrument
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentDetails.html"><span class="">SalesforcePaymentDetails</span></a></span>
+                    <div class="description">Returns the details to the Salesforce Payments payment for this PayPal order, using the given payment instrument.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getPaymentInstrument_Basket_DetailAnchor"><span class="">getPaymentInstrument</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a></span>
+                    <div class="description">Returns the payment instrument for this PayPal order in the given basket, or <code>null</code> if the given basket has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getPaymentInstrument_Order_DetailAnchor"><span class="">getPaymentInstrument</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a></span>
+                    <div class="description">Returns the payment instrument for this PayPal order in the given order, or <code>null</code> if the given order has none.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getShipping_DetailAnchor"><span class="">getShipping</span></a></span>()
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrderAddress.html"><span class="">SalesforcePayPalOrderAddress</span></a></span>
+                    <div class="description">Returns the shipping address for this PayPal order, or <code>null</code> if not known.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_isCompleted_DetailAnchor"><span class="">isCompleted</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns <code>true</code> if this PayPal order has been completed, or <code>false</code> if not.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getAmount_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAmount</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAmount</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the amount of this PayPal order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PayPal order amount</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getCaptureID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCaptureID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCaptureID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the capture against this order, or <code>null</code> if not available.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PayPal order capture identifier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the identifier of this PayPal order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PayPal order identifier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getPayer_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPayer</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPayer</span>()
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrderPayer.html"><span class="">SalesforcePayPalOrderPayer</span></a>
+                    </div>
+                    <div class="description">Returns the payer information for this PayPal order, or <code>null</code> if not known.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">order payer information</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getPaymentDetails_OrderPaymentInstrument_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentDetails</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentDetails</span>(paymentInstrument
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentDetails.html"><span class="">SalesforcePaymentDetails</span></a>
+                    </div>
+                    <div class="description">Returns the details to the Salesforce Payments payment for this PayPal order, using the given payment instrument.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentInstrument</span>
+						 - 
+						<span class="parameterDesc">payment instrument</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The payment details</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getPaymentInstrument_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentInstrument</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentInstrument</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>
+                    </div>
+                    <div class="description">Returns the payment instrument for this PayPal order in the given basket, or <code>null</code> if the given
+ basket has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">basket</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">basket payment instrument</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getPaymentInstrument_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentInstrument</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPaymentInstrument</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>
+                    </div>
+                    <div class="description">Returns the payment instrument for this PayPal order in the given order, or <code>null</code> if the given
+ order has none.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">order payment instrument</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getShipping_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShipping</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShipping</span>()
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePayPalOrderAddress.html"><span class="">SalesforcePayPalOrderAddress</span></a>
+                    </div>
+                    <div class="description">Returns the shipping address for this PayPal order, or <code>null</code> if not known.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">order shipping address</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_isCompleted_DetailAnchor"></a>
+                    <div class="detailName 
+						">isCompleted</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isCompleted</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns <code>true</code> if this PayPal order has been completed, or <code>false</code> if not.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>true</code> if this PayPal order has been completed</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

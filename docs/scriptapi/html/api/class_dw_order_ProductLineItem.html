@@ -1,0 +1,3179 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ProductLineItem</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.ProductLineItem">
+            <a name="dw.order.ProductLineItem"></a>
+            <div class="packageName">dw.order</div>
+            <div class="className
+					">	
+        	
+				Class ProductLineItem</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_PersistentObject.html">dw.object.PersistentObject</a>
+                </div>
+                <div style="position:relative;left:5%">
+                    <img src="images/inherit.gif"><a href="class_dw_object_ExtensibleObject.html">dw.object.ExtensibleObject</a>
+                </div>
+                <div style="position:relative;left:7%">
+                    <img src="images/inherit.gif"><a href="class_dw_order_LineItem.html">dw.order.LineItem</a>
+                </div>
+                <div style="position:relative;left:9%;">
+                    <img src="images/inherit.gif">dw.order.ProductLineItem
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Represents a specific product line item.</div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedGrossPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The gross price of the product line item after applying all product-level
+ adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedNetPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The net price of the product line item after applying all product-level
+ adjustments.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The price of the product line item after applying all product-level
+ adjustments. For net pricing the adjusted net price is returned
+ (see <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedNetPrice_DetailAnchor">getAdjustedNetPrice()</a>). For gross pricing, the adjusted
+ gross price is returned (see <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedGrossPrice_DetailAnchor">getAdjustedGrossPrice()</a>).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>adjustedTax
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The tax of the unit after applying adjustments, in the purchase currency.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>bonusDiscountLineItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_BonusDiscountLineItem.html"><span class="">BonusDiscountLineItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The parent bonus discount line item of this line item.  Only
+ bonus product line items that have been selected by the customer as
+ part of a BONUS_CHOICE discount have one of these.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>bonusProductLineItem
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the product line item represents a bonus line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>bundledProductLineItem
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the product line item represents a bundled line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>bundledProductLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection containing the bundled product line items.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>catalogProduct
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns true if the product line item represents a catalog product.
+ <p>
+ That flag is determined during product line item creation with
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createProductLineItem_String_Shipment_DetailAnchor">LineItemCtnr.createProductLineItem(String, Shipment)</a>, stored at the line item container and can
+ be accessed as productLineItem.catalogProduct. It represents what can be evaluated with
+
+ <pre>
+ dw.catalog.ProductMgr.getProduct( productID ) != null
+     && dw.catalog.ProductMgr.getProduct( productID ).isAssignedToSiteCatalog()
+ </pre>
+
+ If the product is not available during product line item creation it is considered a non catalog product line item without
+ connection to a product.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>category
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Category.html"><span class="">Category</span></a>
+                        <div class="description">The category the product line item is associated with. If the
+ line item is not associated with a category, or the category does not
+ exist in the site catalog, the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>categoryID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The ID of the category the product line item is associated with.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>externalLineItemStatus
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The value set for the external line item status
+ or null if no value set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>externalLineItemText
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The value set for the external line item text
+ or null if no value set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>gift
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">Returns true if this line item represents a gift, false otherwise.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>giftMessage
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The value set for gift message or null if no value set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>manufacturerName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The name of the manfacturer of the product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>manufacturerSKU
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The name of the manfacturer's SKU of this product line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minOrderQuantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The minimal order quantity allowed for the product represented by the
+ ProductLineItem (copied from product on initialization).
+ Note: the quantity of a ProductLineItem must obey the limits set by the
+ ProductLineItem's attributes 'MinOrderQuantity' and 'StepQuantity', i.e.
+ for a 'MinOrderQuantity' of 2.0 and a 'StepQuantity' of 2.5 then values
+ 2.0, 4.5, 7.0... are allowed values.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>minOrderQuantityValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">Return the value portion of getMinOrderQuantity().</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>optionID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the product option this product line item
+ represents. If the product line item does not represent an option,
+ null is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>optionModel
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The product option model for a product line item representing an option product.
+ <p>
+ The returned option model has preselected values based on the dependent option line items of this product line
+ item. Null is returned if this line item does not represent an option product.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>optionProductLineItem
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Identifies if the product line item represents an option line item.
+ Option line items do not represent true products but rather options of
+ products.  An option line item always has a parent product line item
+ representing a true product.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>optionProductLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A collection containing option product line items.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>optionValueID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the product option value this product line item
+ represents. If the product line item does not represent an option,
+ null is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>orderItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_OrderItem.html"><span class="">OrderItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The <a href="class_dw_order_OrderItem.html"> order-item extension</a> for this item, or null. An order-item
+ extension will only exist for a ProductLineItem which belongs to an <a href="class_dw_order_Order.html">Order</a>.
+ <p/>
+ Order post-processing APIs (gillian) are now inactive by default and will throw
+ an exception if accessed. Activation needs preliminary approval by Product Management.
+ Please contact support in this case. Existing customers using these APIs are not
+ affected by this change and can use the APIs until further notice.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>parent
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The parent line item of this line item or null if the line item
+ is independent.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>position
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The position within the line item container assigned to the ProductLineItem upon its creation, may be
+ used as a sort-order.
+ <p>
+ The position is updated in the following way:
+ <ul>
+ <li>When a ProductLineItem is added to the LineItemCtnr, it is assigned the next available position, based on the
+ current count</li>
+ <li>When a ProductLineItem is removed from the LineItemCtnr then LineItemCtnr method reassignPositions is called,
+ so that the 'gap' left by the removed line-item is refilled. This method is dependent on no 2 ProductLineItem
+ having the same position.</li>
+ <li>When a LineItemCtnr is copied (e.g. when a PlacedOrder is created from a Basket), no special position
+ handling is necessary as the ProductLineItems are added according to their current position ordering in the
+ source LineItemCtnr.</li>
+ </ul>
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>priceAdjustments
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">An iterator of price adjustments that have been applied to this
+ product line item such as promotions on the purchase price
+ (i.e. $10 Off or 10% Off).</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>product
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The product associated with the product line item.
+ <p>
+ The product line item might not be related to an actual catalog product, for example if it represents an option,
+ or was not created from a catalog product, or if the product does not exist in the catalog anymore. In these
+ cases, the method returns null.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the related product.
+ <p>
+ Returns empty if no product is related.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productInventoryList
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a>
+                        <div class="description">The inventory list the product line item is associated with. If the
+ line item is not associated with a inventory list, or the inventory list does not
+ exist, the method returns null.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productInventoryListID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The ID of the inventory list the product line item is associated with.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productListItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The associated ProductListItem.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>productName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The name of the product that was copied when
+ product was added to line item container.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>proratedPrice
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The price of this product line item after considering all
+ dependent price adjustments and prorating all Buy-X-Get-Y
+ and order-level discounts, according to the scheme described in
+ <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>. For net pricing the
+ net price is returned. For gross pricing, the gross price is returned.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>proratedPriceAdjustmentPrices
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Map.html"><span class="">Map</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">A Map of PriceAdjustment to Money instances. They keys to this
+ map are the price adjustments that apply to this ProductLineItem either
+ directly or indirectly when discounts are prorated according to the
+ scheme described in <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>.
+ The values in the map are the portion of the adjustment which applies to
+ this particular product line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>qualifyingProductLineItemForBonusProduct
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ProductLineItem that qualified the basket for this bonus product.
+ <p>
+ This method is only applicable if the product line item is a bonus product line item, and if the promotion is a
+ product promotion with number of qualifying products granting a bonus-product discount. If these conditions
+ aren't met, the method returns null. If there are multiple product line items that triggered this bonus product,
+ this method returns the last one by position within the order.
+ </p></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>quantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The quantity of the product represented by this ProductLineItem.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>quantityValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">The value of the quantity of this ProductLineItem.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>relatedBonusProductLineItems
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">All bonus product line items for which this line item is a
+ qualifying product line item. This method is usually called when
+ rendering the cart so that bonus products can be shown next to the
+ products that triggered their creation.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>reserved
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+							&nbsp;(Read Only)
+                        <div class="description">Returns if the product line item is reserved.
+ <p>
+ Reservations for the basket can be created with e.g. <a href="class_dw_order_Basket.html#dw_order_Basket_reserveInventory_Number_DetailAnchor">Basket.reserveInventory(Number)</a>.
+ </p>
+ Method must only be called for basket product line items. Exception is thrown if called for order product line
+ item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shipment
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>
+                        <div class="description">The associated Shipment.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>shippingLineItem
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_order_ProductShippingLineItem.html"><span class="">ProductShippingLineItem</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The dependent shipping line item of this line item.
+ The shipping line item can define product-specific shipping
+ costs for this product line item.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>stepQuantity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Returns step quantity allowed for the product represented by the ProductLineItem
+ (copied from product on initialization).
+ Note: the quantity of a ProductLineItem must obey the limits set by the
+ ProductLineItem's attributes 'MinOrderQuantity' and 'StepQuantity', i.e.
+ for a 'MinOrderQuantity' of 2.0 and a 'StepQuantity' of 2.5 then values
+ 2.0, 4.5, 7.0... are allowed values.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>stepQuantityValue
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                        <div class="description">Return the value portion of getStepQuantity().</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_createPriceAdjustment_String_DetailAnchor"><span class="">createPriceAdjustment</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a></span>
+                    <div class="description">Creates a product price adjustment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_createPriceAdjustment_String_Discount_DetailAnchor"><span class="">createPriceAdjustment</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, discount
+								 : 	
+								 
+								<a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a>)
+						: 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a></span>
+                    <div class="description">Creates a product price adjustment representing a specific discount.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_createShippingLineItem_DetailAnchor"><span class="">createShippingLineItem</span></a></span>()
+						: 
+					<a href="class_dw_order_ProductShippingLineItem.html"><span class="">ProductShippingLineItem</span></a></span>
+                    <div class="description">Creates the dependent shipping line item for this line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getAdjustedGrossPrice_DetailAnchor"><span class="">getAdjustedGrossPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the gross price of the product line item after applying all product-level adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getAdjustedNetPrice_DetailAnchor"><span class="">getAdjustedNetPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the net price of the product line item after applying all product-level adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getAdjustedPrice_DetailAnchor"><span class="">getAdjustedPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the price of the product line item after applying all product-level adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getAdjustedPrice_Boolean_DetailAnchor"><span class="">getAdjustedPrice</span></a></span>(applyOrderLevelAdjustments
+								 : 	
+								 
+								boolean)
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the price of this product line item after considering all dependent price adjustments and optionally prorating all order-level price adjustments.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getAdjustedTax_DetailAnchor"><span class="">getAdjustedTax</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the tax of the unit after applying adjustments, in the purchase currency.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getBonusDiscountLineItem_DetailAnchor"><span class="">getBonusDiscountLineItem</span></a></span>()
+						: 
+					<a href="class_dw_order_BonusDiscountLineItem.html"><span class="">BonusDiscountLineItem</span></a></span>
+                    <div class="description">Returns the parent bonus discount line item of this line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getBundledProductLineItems_DetailAnchor"><span class="">getBundledProductLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing the bundled product line items.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getCategory_DetailAnchor"><span class="">getCategory</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Category.html"><span class="">Category</span></a></span>
+                    <div class="description">Returns the category the product line item is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getCategoryID_DetailAnchor"><span class="">getCategoryID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the category the product line item is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getExternalLineItemStatus_DetailAnchor"><span class="">getExternalLineItemStatus</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value set for the external line item status or null if no value set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getExternalLineItemText_DetailAnchor"><span class="">getExternalLineItemText</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value set for the external line item text or null if no value set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getGiftMessage_DetailAnchor"><span class="">getGiftMessage</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the value set for gift message or null if no value set.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getManufacturerName_DetailAnchor"><span class="">getManufacturerName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the manfacturer of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getManufacturerSKU_DetailAnchor"><span class="">getManufacturerSKU</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the manfacturer's SKU of this product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getMinOrderQuantity_DetailAnchor"><span class="">getMinOrderQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the minimal order quantity allowed for the product represented by the ProductLineItem (copied from product on initialization).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getMinOrderQuantityValue_DetailAnchor"><span class="">getMinOrderQuantityValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Return the value portion of getMinOrderQuantity().</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getOptionID_DetailAnchor"><span class="">getOptionID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the product option this product line item represents.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getOptionModel_DetailAnchor"><span class="">getOptionModel</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a></span>
+                    <div class="description">Returns the product option model for a product line item representing an option product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getOptionProductLineItems_DetailAnchor"><span class="">getOptionProductLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing option product line items.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getOptionValueID_DetailAnchor"><span class="">getOptionValueID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the product option value this product line item represents.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getOrderItem_DetailAnchor"><span class="">getOrderItem</span></a></span>()
+						: 
+					<a href="class_dw_order_OrderItem.html"><span class="">OrderItem</span></a></span>
+                    <div class="description">Returns the <a href="class_dw_order_OrderItem.html"> order-item extension</a> for this item, or null.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getParent_DetailAnchor"><span class="">getParent</span></a></span>()
+						: 
+					<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a></span>
+                    <div class="description">Returns the parent line item of this line item or null if the line item is independent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getPosition_DetailAnchor"><span class="">getPosition</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the position within the line item container assigned to the ProductLineItem upon its creation, may be used as a sort-order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getPriceAdjustmentByPromotionID_String_DetailAnchor"><span class="">getPriceAdjustmentByPromotionID</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a></span>
+                    <div class="description">Returns the first price adjustment associated to the specified promotion ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getPriceAdjustmentByPromotionIDAndCouponCode_String_String_DetailAnchor"><span class="">getPriceAdjustmentByPromotionIDAndCouponCode</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, couponCode
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a></span>
+                    <div class="description">Returns the price adjustment associated to the specified promotion ID and coupon code combination.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getPriceAdjustments_DetailAnchor"><span class="">getPriceAdjustments</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns an iterator of price adjustments that have been applied to this product line item such as promotions on the purchase price (i.e.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getPriceAdjustmentsByPromotionID_String_DetailAnchor"><span class="">getPriceAdjustmentsByPromotionID</span></a></span>(promotionID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns the collection of price adjustments associated to the specified promotion ID.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProduct_DetailAnchor"><span class="">getProduct</span></a></span>()
+						: 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a></span>
+                    <div class="description">Returns the product associated with the product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProductID_DetailAnchor"><span class="">getProductID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the related product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProductInventoryList_DetailAnchor"><span class="">getProductInventoryList</span></a></span>()
+						: 
+					<a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a></span>
+                    <div class="description">Returns the inventory list the product line item is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProductInventoryListID_DetailAnchor"><span class="">getProductInventoryListID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the inventory list the product line item is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProductListItem_DetailAnchor"><span class="">getProductListItem</span></a></span>()
+						: 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a></span>
+                    <div class="description">Returns the associated ProductListItem.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProductName_DetailAnchor"><span class="">getProductName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the name of the product that was copied when product was added to line item container.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProratedPrice_DetailAnchor"><span class="">getProratedPrice</span></a></span>()
+						: 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
+                    <div class="description">Returns the price of this product line item after considering all dependent price adjustments and prorating all Buy-X-Get-Y and order-level discounts, according to the scheme described in <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getProratedPriceAdjustmentPrices_DetailAnchor"><span class="">getProratedPriceAdjustmentPrices</span></a></span>()
+						: 
+					<a href="class_dw_util_Map.html"><span class="">Map</span></a></span>
+                    <div class="description">Returns a Map of PriceAdjustment to Money instances.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getQualifyingProductLineItemForBonusProduct_DetailAnchor"><span class="">getQualifyingProductLineItemForBonusProduct</span></a></span>()
+						: 
+					<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a></span>
+                    <div class="description">Returns the ProductLineItem that qualified the basket for this bonus product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getQuantity_DetailAnchor"><span class="">getQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns the quantity of the product represented by this ProductLineItem.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getQuantityValue_DetailAnchor"><span class="">getQuantityValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Returns the value of the quantity of this ProductLineItem.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getRelatedBonusProductLineItems_DetailAnchor"><span class="">getRelatedBonusProductLineItems</span></a></span>()
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns all bonus product line items for which this line item is a qualifying product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getShipment_DetailAnchor"><span class="">getShipment</span></a></span>()
+						: 
+					<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a></span>
+                    <div class="description">Returns the associated Shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getShippingLineItem_DetailAnchor"><span class="">getShippingLineItem</span></a></span>()
+						: 
+					<a href="class_dw_order_ProductShippingLineItem.html"><span class="">ProductShippingLineItem</span></a></span>
+                    <div class="description">Returns the dependent shipping line item of this line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getStepQuantity_DetailAnchor"><span class="">getStepQuantity</span></a></span>()
+						: 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a></span>
+                    <div class="description">Returns step quantity allowed for the product represented by the ProductLineItem (copied from product on initialization).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_getStepQuantityValue_DetailAnchor"><span class="">getStepQuantityValue</span></a></span>()
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Return the value portion of getStepQuantity().</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_isBonusProductLineItem_DetailAnchor"><span class="">isBonusProductLineItem</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the product line item represents a bonus line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_isBundledProductLineItem_DetailAnchor"><span class="">isBundledProductLineItem</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the product line item represents a bundled line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_isCatalogProduct_DetailAnchor"><span class="">isCatalogProduct</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if the product line item represents a catalog product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_isGift_DetailAnchor"><span class="">isGift</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns true if this line item represents a gift, false otherwise.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_isOptionProductLineItem_DetailAnchor"><span class="">isOptionProductLineItem</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Identifies if the product line item represents an option line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_isReserved_DetailAnchor"><span class="">isReserved</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Returns if the product line item is reserved.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_removePriceAdjustment_PriceAdjustment_DetailAnchor"><span class="">removePriceAdjustment</span></a></span>(priceAdjustmentLineItem
+								 : 	
+								 
+								<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>)
+						: 
+					void</span>
+                    <div class="description">Removes the specified price adjustment from the product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_removeShippingLineItem_DetailAnchor"><span class="">removeShippingLineItem</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Removes the dependent shipping line item for this line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_replaceProduct_Product_DetailAnchor"><span class="">replaceProduct</span></a></span>(newProduct
+								 : 	
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+						: 
+					void</span>
+                    <div class="description">Replaces the current product of the product line item with the product specified in parameter <i>newProduct</i>.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setCategory_Category_DetailAnchor"><span class="">setCategory</span></a></span>(category
+								 : 	
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the specified category as the product line item category context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setCategoryID_String_DetailAnchor"><span class="">setCategoryID</span></a></span>(categoryID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the ID of the category the product line item is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setExternalLineItemStatus_String_DetailAnchor"><span class="">setExternalLineItemStatus</span></a></span>(status
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the value to set for the external line item status.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setExternalLineItemText_String_DetailAnchor"><span class="">setExternalLineItemText</span></a></span>(text
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the value to set for the external line item text.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setGift_Boolean_DetailAnchor"><span class="">setGift</span></a></span>(isGift
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Controls if this line item is a gift or not.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setGiftMessage_String_DetailAnchor"><span class="">setGiftMessage</span></a></span>(message
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the value to set for the gift message.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setManufacturerName_String_DetailAnchor"><span class="">setManufacturerName</span></a></span>(name
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the name of the manufacturer of this product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setManufacturerSKU_String_DetailAnchor"><span class="">setManufacturerSKU</span></a></span>(sku
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the SKU of the manufacturer of this product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setMinOrderQuantityValue_Number_DetailAnchor"><span class="">setMinOrderQuantityValue</span></a></span>(quantityValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the minimum order quantity value for this object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setPosition_Number_DetailAnchor"><span class="">setPosition</span></a></span>(aValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the position within the line item container.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setPriceValue_Number_DetailAnchor"><span class="">setPriceValue</span></a></span>(value
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets price attributes of the line item based on the current purchase currency, taxation policy and line item quantity.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setProductInventoryList_ProductInventoryList_DetailAnchor"><span class="">setProductInventoryList</span></a></span>(productInventoryList
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the specified inventory list as the product line item inventory context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setProductInventoryListID_String_DetailAnchor"><span class="">setProductInventoryListID</span></a></span>(productInventoryListID
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the ID of the inventory list the product line item is associated with.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setProductName_String_DetailAnchor"><span class="">setProductName</span></a></span>(aValue
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the name of the product.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setQuantityValue_Number_DetailAnchor"><span class="">setQuantityValue</span></a></span>(quantityValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Updates the quantity value of the product line item.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setShipment_Shipment_DetailAnchor"><span class="">setShipment</span></a></span>(shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>)
+						: 
+					void</span>
+                    <div class="description">Associates the specified product line item with the specified shipment.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_setStepQuantityValue_Number_DetailAnchor"><span class="">setStepQuantityValue</span></a></span>(quantityValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					void</span>
+                    <div class="description">Set the step quantity value for this object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_updateOptionPrice_DetailAnchor"><span class="">updateOptionPrice</span></a></span>()
+						: 
+					void</span>
+                    <div class="description">Determines and sets the price of a option line item based on the selected option value the line item represents.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_ProductLineItem_updateOptionValue_ProductOptionValue_DetailAnchor"><span class="">updateOptionValue</span></a></span>(optionValue
+								 : 	
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+						: 
+					void</span>
+                    <div class="description">Updates an option line item with a new option value.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_ProductLineItem_updatePrice_Money_DetailAnchor"><span class="">updatePrice</span></a></span>(price
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+						: 
+					void</span>
+                    <div class="description">Updates the price attributes of the line item based on the specified price.</div>
+                </div>
+                <div class="summaryItem">
+                    <span class="dep"><span class="emphasis"><a href="#dw_order_ProductLineItem_updateQuantity_Number_DetailAnchor"><span class="">updateQuantity</span></a></span>(quantityValue
+								 : 	
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+						: 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
+                    <div class="description">Updates the quantity value of the product line item and all its dependent product line items.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_order_LineItem.html"><span class="">LineItem</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_order_LineItem.html#dw_order_LineItem_getBasePrice_DetailAnchor"><span class="">getBasePrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getGrossPrice_DetailAnchor"><span class="">getGrossPrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getLineItemCtnr_DetailAnchor"><span class="">getLineItemCtnr</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getLineItemText_DetailAnchor"><span class="">getLineItemText</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getNetPrice_DetailAnchor"><span class="">getNetPrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getPrice_DetailAnchor"><span class="">getPrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getPriceValue_DetailAnchor"><span class="">getPriceValue</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getTax_DetailAnchor"><span class="">getTax</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getTaxBasis_DetailAnchor"><span class="">getTaxBasis</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getTaxClassID_DetailAnchor"><span class="">getTaxClassID</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_getTaxRate_DetailAnchor"><span class="">getTaxRate</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setBasePrice_Money_DetailAnchor"><span class="">setBasePrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setGrossPrice_Money_DetailAnchor"><span class="">setGrossPrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setLineItemText_String_DetailAnchor"><span class="">setLineItemText</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setNetPrice_Money_DetailAnchor"><span class="">setNetPrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setPriceValue_Number_DetailAnchor"><span class="">setPriceValue</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setTax_Money_DetailAnchor"><span class="">setTax</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setTaxClassID_String_DetailAnchor"><span class="">setTaxClassID</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_setTaxRate_Number_DetailAnchor"><span class="">setTaxRate</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_updatePrice_Money_DetailAnchor"><span class="">updatePrice</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_updateTax_Number_DetailAnchor"><span class="">updateTax</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_updateTax_Number_Money_DetailAnchor"><span class="">updateTax</span></a>, <a href="class_dw_order_LineItem.html#dw_order_LineItem_updateTaxAmount_Money_DetailAnchor"><span class="">updateTaxAmount</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_ExtensibleObject.html"><span class="">ExtensibleObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_describe_DetailAnchor"><span class="">describe</span></a>, <a href="class_dw_object_ExtensibleObject.html#dw_object_ExtensibleObject_getCustom_DetailAnchor"><span class="">getCustom</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_dw_object_PersistentObject.html"><span class="">PersistentObject</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getCreationDate_DetailAnchor"><span class="">getCreationDate</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getLastModified_DetailAnchor"><span class="">getLastModified</span></a>, <a href="class_dw_object_PersistentObject.html#dw_object_PersistentObject_getUUID_DetailAnchor"><span class="">getUUID</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_createPriceAdjustment_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">createPriceAdjustment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createPriceAdjustment</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>
+                    </div>
+                    <div class="description">Creates a product price adjustment.
+ <p>
+ The price adjustment line item is being initialized with the tax class code and tax rate of the product line
+ item. The promotion ID is mandatory and must not be the ID of any actual promotion defined in B2C Commerce. If
+ there already exists a price adjustment for the same promotionID, an exception is thrown.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">Promotion ID</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new price adjustment</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_createPriceAdjustment_String_Discount_DetailAnchor"></a>
+                    <div class="detailName 
+						">createPriceAdjustment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createPriceAdjustment</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, discount
+								 : 
+								 
+								<a href="class_dw_campaign_Discount.html"><span class="">Discount</span></a>)
+					 : 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>
+                    </div>
+                    <div class="description">Creates a product price adjustment representing a specific discount. The price adjustment line item is
+ initialized with the tax class code and tax rate of the product line item.
+ <p>
+ The promotion ID is mandatory and must not be the ID of any actual promotion defined in B2C Commerce. If a price
+ adjustment already exists for the same promotionID, an exception is thrown.
+ </p>
+ <p>
+ The possible discounts are <a href="class_dw_campaign_FixedPriceDiscount.html">FixedPriceDiscount</a>, <a href="class_dw_campaign_AmountDiscount.html">AmountDiscount</a>,
+ <a href="class_dw_campaign_PercentageDiscount.html">PercentageDiscount</a>. Example:
+ </p>
+
+ <pre>
+ var myProductItem : dw.order.ProductLineItem; // assume known
+ var paFixedUnitPrice100 : dw.order.PriceAdjustment = myProductItem.createPriceAdjustment("myPromotionID1", new FixedPriceDiscount(100.00));
+ var paTenPercent : dw.order.PriceAdjustment = myProductItem.createPriceAdjustment("myPromotionID2", new PercentageDiscount(10));
+ var paReduceBy20 : dw.order.PriceAdjustment = myProductItem.createPriceAdjustment("myPromotionID3", new AmountDiscount(20.00);
+ </pre>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">Unique custom promotion ID, not null</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">discount</span>
+						 - 
+						<span class="parameterDesc">The desired discount, not null</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The new custom price adjustment</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_createShippingLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">createShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">createShippingLineItem</span>()
+					 : 
+					<a href="class_dw_order_ProductShippingLineItem.html"><span class="">ProductShippingLineItem</span></a>
+                    </div>
+                    <div class="description">Creates the dependent shipping line item for this line item.
+ The shipping line item can define product-specific shipping
+ costs for this product line item.
+ This method has replace semantics: If there is an existing
+ shipping line item it will be replaced
+ with a new shipping line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the created shipping line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getAdjustedGrossPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedGrossPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedGrossPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the gross price of the product line item after applying all product-level
+ adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">gross price after applying product-level adjustments</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedNetPrice_DetailAnchor">getAdjustedNetPrice()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedPrice_DetailAnchor">getAdjustedPrice()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getAdjustedNetPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedNetPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedNetPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the net price of the product line item after applying all product-level
+ adjustments.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">net price after applying product-level adjustments</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedGrossPrice_DetailAnchor">getAdjustedGrossPrice()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedPrice_DetailAnchor">getAdjustedPrice()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getAdjustedPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the price of the product line item after applying all product-level
+ adjustments. For net pricing the adjusted net price is returned
+ (see <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedNetPrice_DetailAnchor">getAdjustedNetPrice()</a>). For gross pricing, the adjusted
+ gross price is returned (see <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedGrossPrice_DetailAnchor">getAdjustedGrossPrice()</a>).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Adjusted net or gross price</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedGrossPrice_DetailAnchor">getAdjustedGrossPrice()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedNetPrice_DetailAnchor">getAdjustedNetPrice()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getAdjustedPrice_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedPrice</span>(applyOrderLevelAdjustments
+								 : 
+								 
+								boolean)
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the price of this product line item after considering all
+ dependent price adjustments and optionally prorating all order-level
+ price adjustments. For net pricing the net price is returned. For gross
+ pricing, the gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">applyOrderLevelAdjustments</span>
+						 - 
+						<span class="parameterDesc">If true, order-level adjustments will be applied to line item price.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Adjusted net or gross price</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getAdjustedPrice_DetailAnchor">getAdjustedPrice()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getAdjustedTax_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdjustedTax</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAdjustedTax</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the tax of the unit after applying adjustments, in the purchase currency.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the tax of the unit after applying adjustments, in the purchase currency.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getBonusDiscountLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBonusDiscountLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBonusDiscountLineItem</span>()
+					 : 
+					<a href="class_dw_order_BonusDiscountLineItem.html"><span class="">BonusDiscountLineItem</span></a>
+                    </div>
+                    <div class="description">Returns the parent bonus discount line item of this line item.  Only
+ bonus product line items that have been selected by the customer as
+ part of a BONUS_CHOICE discount have one of these.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the bonus discount line item of this line item or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getBundledProductLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBundledProductLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBundledProductLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing the bundled product line items.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection containing the bundled product line items.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getCategory_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCategory</span>()
+					 : 
+					<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>
+                    </div>
+                    <div class="description">Returns the category the product line item is associated with. If the
+ line item is not associated with a category, or the category does not
+ exist in the site catalog, the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Category or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getCategoryID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCategoryID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCategoryID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the category the product line item is associated with.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Category ID or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getExternalLineItemStatus_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExternalLineItemStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExternalLineItemStatus</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value set for the external line item status
+ or null if no value set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value set for the external line item status or null if no value set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getExternalLineItemText_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExternalLineItemText</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExternalLineItemText</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value set for the external line item text
+ or null if no value set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value set for the external line item text or null if no value set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getGiftMessage_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGiftMessage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGiftMessage</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the value set for gift message or null if no value set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the value set for gift message or null if no value set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getManufacturerName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getManufacturerName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getManufacturerName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the manfacturer of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The name of the manfacturer of the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getManufacturerSKU_DetailAnchor"></a>
+                    <div class="detailName 
+						">getManufacturerSKU</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getManufacturerSKU</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the manfacturer's SKU of this product line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the name of the manfacturer's SKU of this product line item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getMinOrderQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinOrderQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinOrderQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the minimal order quantity allowed for the product represented by the
+ ProductLineItem (copied from product on initialization).
+ Note: the quantity of a ProductLineItem must obey the limits set by the
+ ProductLineItem's attributes 'MinOrderQuantity' and 'StepQuantity', i.e.
+ for a 'MinOrderQuantity' of 2.0 and a 'StepQuantity' of 2.5 then values
+ 2.0, 4.5, 7.0... are allowed values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the minimal order quantity allowed for the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getMinOrderQuantityValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getMinOrderQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getMinOrderQuantityValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Return the value portion of getMinOrderQuantity().</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the minimal order quantity value allowed for the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getOptionID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptionID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptionID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the product option this product line item
+ represents. If the product line item does not represent an option,
+ null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of the product option this product line item represents.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getOptionModel_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptionModel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptionModel</span>()
+					 : 
+					<a href="class_dw_catalog_ProductOptionModel.html"><span class="">ProductOptionModel</span></a>
+                    </div>
+                    <div class="description">Returns the product option model for a product line item representing an option product.
+ <p>
+ The returned option model has preselected values based on the dependent option line items of this product line
+ item. Null is returned if this line item does not represent an option product.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product option model for a product line item representing an option product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getOptionProductLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptionProductLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptionProductLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing option product line items.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection containing option product line items.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getOptionValueID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOptionValueID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOptionValueID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the product option value this product line item
+ represents. If the product line item does not represent an option,
+ null is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of the product option value this product line item represents.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getOrderItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOrderItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOrderItem</span>()
+					 : 
+					<a href="class_dw_order_OrderItem.html"><span class="">OrderItem</span></a>
+                    </div>
+                    <div class="description">Returns the <a href="class_dw_order_OrderItem.html"> order-item extension</a> for this item, or null. An order-item
+ extension will only exist for a ProductLineItem which belongs to an <a href="class_dw_order_Order.html">Order</a>.
+ <p/>
+ Order post-processing APIs (gillian) are now inactive by default and will throw
+ an exception if accessed. Activation needs preliminary approval by Product Management.
+ Please contact support in this case. Existing customers using these APIs are not
+ affected by this change and can use the APIs until further notice.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">null or the order-item extension</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getParent_DetailAnchor"></a>
+                    <div class="detailName 
+						">getParent</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getParent</span>()
+					 : 
+					<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>
+                    </div>
+                    <div class="description">Returns the parent line item of this line item or null if the line item
+ is independent.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the parent line item of this line item or null if the line item is independent.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getPosition_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPosition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPosition</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the position within the line item container assigned to the ProductLineItem upon its creation, may be
+ used as a sort-order.
+ <p>
+ The position is updated in the following way:
+ <ul>
+ <li>When a ProductLineItem is added to the LineItemCtnr, it is assigned the next available position, based on the
+ current count</li>
+ <li>When a ProductLineItem is removed from the LineItemCtnr then LineItemCtnr method reassignPositions is called,
+ so that the 'gap' left by the removed line-item is refilled. This method is dependent on no 2 ProductLineItem
+ having the same position.</li>
+ <li>When a LineItemCtnr is copied (e.g. when a PlacedOrder is created from a Basket), no special position
+ handling is necessary as the ProductLineItems are added according to their current position ordering in the
+ source LineItemCtnr.</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the position within the line item container assigned to the ProductLineItem upon its creation.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getPriceAdjustmentByPromotionID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceAdjustmentByPromotionID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceAdjustmentByPromotionID</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>
+                    </div>
+                    <div class="description">Returns the first price adjustment associated to the specified promotion ID. It is highly recommended to use
+ <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getPriceAdjustmentsByPromotionID_String_DetailAnchor">getPriceAdjustmentsByPromotionID(String)</a> instead. If there are multiple price adjustments for the same
+ promotion, this method will return the first found. Alternatively, to uniquely identify a price adjustment using
+ its promotion id and coupon code, use <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getPriceAdjustmentByPromotionIDAndCouponCode_String_String_DetailAnchor">getPriceAdjustmentByPromotionIDAndCouponCode(String, String)</a></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">Promotion id</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The price adjustment associated with the promotion ID or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getPriceAdjustmentByPromotionIDAndCouponCode_String_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceAdjustmentByPromotionIDAndCouponCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceAdjustmentByPromotionIDAndCouponCode</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, couponCode
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>
+                    </div>
+                    <div class="description">Returns the price adjustment associated to the specified promotion ID and coupon code combination.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">Promotion id</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">couponCode</span>
+						 - 
+						<span class="parameterDesc">the code of the coupon used to apply the promotion, or null if the promotion is not coupon based.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The price adjustment associated with the promotion ID and coupon code combination, or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getPriceAdjustments_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceAdjustments</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceAdjustments</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns an iterator of price adjustments that have been applied to this
+ product line item such as promotions on the purchase price
+ (i.e. $10 Off or 10% Off).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a collection of price adjustments that have been applied to this product line item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getPriceAdjustmentsByPromotionID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPriceAdjustmentsByPromotionID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getPriceAdjustmentsByPromotionID</span>(promotionID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns the collection of price adjustments associated to the specified promotion ID. If only one coupon code is
+ allowed per order, then the collection should only ever have a single entry in it. The multiple coupon code
+ feature can cause multiple price adjustments to be returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">promotionID</span>
+						 - 
+						<span class="parameterDesc">Promotion id</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The collection of price adjustments associated with the promotion ID or null if the promotionID was null. If there are no price adjustments for the passed promotion, the collection will be empty.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProduct</span>()
+					 : 
+					<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>
+                    </div>
+                    <div class="description">Returns the product associated with the product line item.
+ <p>
+ The product line item might not be related to an actual catalog product, for example if it represents an option,
+ or was not created from a catalog product, or if the product does not exist in the catalog anymore. In these
+ cases, the method returns null.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the product of the line item, or null</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_isCatalogProduct_DetailAnchor">isCatalogProduct()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProductID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the related product.
+ <p>
+ Returns empty if no product is related.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ID of the related product.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_isCatalogProduct_DetailAnchor">isCatalogProduct()</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getProduct_DetailAnchor">getProduct()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProductInventoryList_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductInventoryList</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductInventoryList</span>()
+					 : 
+					<a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a>
+                    </div>
+                    <div class="description">Returns the inventory list the product line item is associated with. If the
+ line item is not associated with a inventory list, or the inventory list does not
+ exist, the method returns null.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">ProductInventoryList or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProductInventoryListID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductInventoryListID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductInventoryListID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the inventory list the product line item is associated with.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">ProductInventoryList ID or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProductListItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductListItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductListItem</span>()
+					 : 
+					<a href="class_dw_customer_ProductListItem.html"><span class="">ProductListItem</span></a>
+                    </div>
+                    <div class="description">Returns the associated ProductListItem.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">item or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProductName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProductName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProductName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the name of the product that was copied when
+ product was added to line item container.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the name of the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProratedPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProratedPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProratedPrice</span>()
+					 : 
+					<a href="class_dw_value_Money.html"><span class="">Money</span></a>
+                    </div>
+                    <div class="description">Returns the price of this product line item after considering all
+ dependent price adjustments and prorating all Buy-X-Get-Y
+ and order-level discounts, according to the scheme described in
+ <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>. For net pricing the
+ net price is returned. For gross pricing, the gross price is returned.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Adjusted and prorated net or gross price</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getProratedPriceAdjustmentPrices_DetailAnchor"></a>
+                    <div class="detailName 
+						">getProratedPriceAdjustmentPrices</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getProratedPriceAdjustmentPrices</span>()
+					 : 
+					<a href="class_dw_util_Map.html"><span class="">Map</span></a>
+                    </div>
+                    <div class="description">Returns a Map of PriceAdjustment to Money instances. They keys to this
+ map are the price adjustments that apply to this ProductLineItem either
+ directly or indirectly when discounts are prorated according to the
+ scheme described in <a href="class_dw_order_PriceAdjustment.html#dw_order_PriceAdjustment_getProratedPrices_DetailAnchor">PriceAdjustment.getProratedPrices()</a>.
+ The values in the map are the portion of the adjustment which applies to
+ this particular product line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Map of PriceAdjustment to Money instances, representing the prorated adjustments applied to this ProductLineItem.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getQualifyingProductLineItemForBonusProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">getQualifyingProductLineItemForBonusProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getQualifyingProductLineItemForBonusProduct</span>()
+					 : 
+					<a href="class_dw_order_ProductLineItem.html"><span class="">ProductLineItem</span></a>
+                    </div>
+                    <div class="description">Returns the ProductLineItem that qualified the basket for this bonus product.
+ <p>
+ This method is only applicable if the product line item is a bonus product line item, and if the promotion is a
+ product promotion with number of qualifying products granting a bonus-product discount. If these conditions
+ aren't met, the method returns null. If there are multiple product line items that triggered this bonus product,
+ this method returns the last one by position within the order.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the ProductLineItem that qualified the basket for this bonus product. Returns null if this is not a bonus product, or if there was no distinct qualifying product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns the quantity of the product represented by this ProductLineItem.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the quantity of the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getQuantityValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getQuantityValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Returns the value of the quantity of this ProductLineItem.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">quantity value of product line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getRelatedBonusProductLineItems_DetailAnchor"></a>
+                    <div class="detailName 
+						">getRelatedBonusProductLineItems</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getRelatedBonusProductLineItems</span>()
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns all bonus product line items for which this line item is a
+ qualifying product line item. This method is usually called when
+ rendering the cart so that bonus products can be shown next to the
+ products that triggered their creation.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the bonus product line items triggered by the addition of this product to the cart.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getShipment_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShipment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShipment</span>()
+					 : 
+					<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>
+                    </div>
+                    <div class="description">Returns the associated Shipment.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The shipment of the product line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getShippingLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">getShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getShippingLineItem</span>()
+					 : 
+					<a href="class_dw_order_ProductShippingLineItem.html"><span class="">ProductShippingLineItem</span></a>
+                    </div>
+                    <div class="description">Returns the dependent shipping line item of this line item.
+ The shipping line item can define product-specific shipping
+ costs for this product line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the shipping line item of this line item or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getStepQuantity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStepQuantity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStepQuantity</span>()
+					 : 
+					<a href="class_dw_value_Quantity.html"><span class="">Quantity</span></a>
+                    </div>
+                    <div class="description">Returns step quantity allowed for the product represented by the ProductLineItem
+ (copied from product on initialization).
+ Note: the quantity of a ProductLineItem must obey the limits set by the
+ ProductLineItem's attributes 'MinOrderQuantity' and 'StepQuantity', i.e.
+ for a 'MinOrderQuantity' of 2.0 and a 'StepQuantity' of 2.5 then values
+ 2.0, 4.5, 7.0... are allowed values.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">step quantity allowed for the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_getStepQuantityValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStepQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStepQuantityValue</span>()
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Return the value portion of getStepQuantity().</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">step quantity value allowed for the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_isBonusProductLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">isBonusProductLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isBonusProductLineItem</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the product line item represents a bonus line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the product line item represents a bonus line item, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_isBundledProductLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">isBundledProductLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isBundledProductLineItem</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the product line item represents a bundled line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the product line item represents a bundled line item.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_isCatalogProduct_DetailAnchor"></a>
+                    <div class="detailName 
+						">isCatalogProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isCatalogProduct</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if the product line item represents a catalog product.
+ <p>
+ That flag is determined during product line item creation with
+ <a href="class_dw_order_LineItemCtnr.html#dw_order_LineItemCtnr_createProductLineItem_String_Shipment_DetailAnchor">LineItemCtnr.createProductLineItem(String, Shipment)</a>, stored at the line item container and can
+ be accessed as productLineItem.catalogProduct. It represents what can be evaluated with
+
+ <pre>
+ dw.catalog.ProductMgr.getProduct( productID ) != null
+     && dw.catalog.ProductMgr.getProduct( productID ).isAssignedToSiteCatalog()
+ </pre>
+
+ If the product is not available during product line item creation it is considered a non catalog product line item without
+ connection to a product.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if product line item represents catalog product, otherwise false</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getProduct_DetailAnchor">getProduct()</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_isGift_DetailAnchor"></a>
+                    <div class="detailName 
+						">isGift</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isGift</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns true if this line item represents a gift, false otherwise.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if this line item represents a gift, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_isOptionProductLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">isOptionProductLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isOptionProductLineItem</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Identifies if the product line item represents an option line item.
+ Option line items do not represent true products but rather options of
+ products.  An option line item always has a parent product line item
+ representing a true product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if the product line item represents an option line item, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_isReserved_DetailAnchor"></a>
+                    <div class="detailName 
+						">isReserved</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isReserved</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Returns if the product line item is reserved.
+ <p>
+ Reservations for the basket can be created with e.g. <a href="class_dw_order_Basket.html#dw_order_Basket_reserveInventory_Number_DetailAnchor">Basket.reserveInventory(Number)</a>.
+ </p>
+ Method must only be called for basket product line items. Exception is thrown if called for order product line
+ item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if line item is reserved, false otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_removePriceAdjustment_PriceAdjustment_DetailAnchor"></a>
+                    <div class="detailName 
+						">removePriceAdjustment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removePriceAdjustment</span>(priceAdjustmentLineItem
+								 : 
+								 
+								<a href="class_dw_order_PriceAdjustment.html"><span class="">PriceAdjustment</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the specified price adjustment from the product line item.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">priceAdjustmentLineItem</span>
+						 - 
+						<span class="parameterDesc">The price adjustment to remove</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_removeShippingLineItem_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeShippingLineItem</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">removeShippingLineItem</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Removes the dependent shipping line item for this line item.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_replaceProduct_Product_DetailAnchor"></a>
+                    <div class="detailName 
+						">replaceProduct</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">replaceProduct</span>(newProduct
+								 : 
+								 
+								<a href="class_dw_catalog_Product.html"><span class="">Product</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Replaces the current product of the product line item with the product specified in parameter <i>newProduct</i>.
+ <p>
+ The following rules apply:
+ <ul>
+ <li>Preserve line item attributes UUID, Quantity, CategoryID, ExternalLineItemStatus, ExternalLineItemText,
+ isGift, GiftMessage, Position, Parent, Shipment</li>
+ <li>Replace product-specific attributes ProductID, ProductName, MinOrderQuantity, StepQuantity, ManufacturerName,
+ ManufacturerSKU</li>
+ <li>Remove all price adjustments related to the product line item</li>
+ <li>Remove the shipping line item related to the product line item</li>
+ <li>Remove all bundled line items of current product, and add bundled line items if new product is a bundle</li>
+ <li>Remove all option line items of current product, and add option line items if new product is an option
+ product; use default option selections</li>
+ <li>Set all price attributes to N/A</li>
+ <li>Preserve all custom attributes of line item, but override order-required attributes with values from new
+ product</li>
+ </ul>
+ </p>
+ <p>
+ The primary use is to replace one variation product with another, without having to both create a new line item
+ for the replacement and remove the line item for the replaced product.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">newProduct</span>
+						 - 
+						<span class="parameterDesc">The new product of the product line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setCategory_Category_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCategory</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCategory</span>(category
+								 : 
+								 
+								<a href="class_dw_catalog_Category.html"><span class="">Category</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the specified category as the product line item category context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">category</span>
+						 - 
+						<span class="parameterDesc">Category instance or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setCategoryID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCategoryID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCategoryID</span>(categoryID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the ID of the category the product line item is associated with.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">categoryID</span>
+						 - 
+						<span class="parameterDesc">the Category ID or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setExternalLineItemStatus_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setExternalLineItemStatus</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setExternalLineItemStatus</span>(status
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the value to set for the external line item status.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">status</span>
+						 - 
+						<span class="parameterDesc">the value to set for the external line item status.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setExternalLineItemText_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setExternalLineItemText</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setExternalLineItemText</span>(text
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the value to set for the external line item text.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">text</span>
+						 - 
+						<span class="parameterDesc">the value to set for the external line item text.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setGift_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGift</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGift</span>(isGift
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Controls if this line item is a gift or not.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">isGift</span>
+						 - 
+						<span class="parameterDesc">set to true if you want this line item to represent a gift.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setGiftMessage_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGiftMessage</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGiftMessage</span>(message
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the value to set for the gift message.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">message</span>
+						 - 
+						<span class="parameterDesc">the value to set for the gift message.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setManufacturerName_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setManufacturerName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setManufacturerName</span>(name
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the name of the manufacturer of this product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">name</span>
+						 - 
+						<span class="parameterDesc">The name of the manfacturer of this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setManufacturerSKU_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setManufacturerSKU</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setManufacturerSKU</span>(sku
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the SKU of the manufacturer of this product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sku</span>
+						 - 
+						<span class="parameterDesc">The SKU of the manfacturer of this product</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setMinOrderQuantityValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setMinOrderQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setMinOrderQuantityValue</span>(quantityValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the minimum order quantity value for this object.
+ <p>
+ This will be used to validate and adjust quantities when setQuantityValue() is called. For typical catalog
+ product line items, it is usually desirable to have this value inherited from the product attributes, but for
+ non-catalog products, it is sometimes desirable to set this value programmatically.
+ </p>
+ <p>
+ Null is accepted and represents Quantity.NA. Otherwise, the quantity value must be > 0.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantityValue</span>
+						 - 
+						<span class="parameterDesc">The minimal order quantity allowed for the product or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setPosition_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPosition</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPosition</span>(aValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the position within the line item container. This value may be used as a sort-order.
+ <p>
+ The position is updated in the following way:
+ <ul>
+ <li>When a ProductLineItem is added to the LineItemCtnr, it is assigned the next available position, based on the
+ current count</li>
+ <li>When a ProductLineItem is removed from the LineItemCtnr then LineItemCtnr method reassignPositions is called,
+ so that the 'gap' left by the removed line-item is refilled. This method is dependent on no 2 ProductLineItem
+ having the same position.</li>
+ <li>When a LineItemCtnr is copied (e.g. when an Order is created from a Basket), no special position handling is
+ necessary as the ProductLineItems are added according to their current position ordering in the source
+ LineItemCtnr.</li>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">aValue</span>
+						 - 
+						<span class="parameterDesc">the position within the line item container.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setPriceValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setPriceValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setPriceValue</span>(value
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets price attributes of the line item based on the current
+ purchase currency, taxation policy and line item quantity.
+ <p>
+ The method sets the 'basePrice' attribute of the line item.
+ Additionally, it sets the 'netPrice' attribute of the line item
+ if the current taxation policy is 'net', and the 'grossPrice'
+ attribute, if the current taxation policy is 'gross'. The
+ 'netPrice'/'grossPrice' attributes are set by multiplying the
+ specified price value with the line item quantity.
+ </p>
+ <p>
+ If null is specified as value, the price attributes are reset to
+ Money.NA.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">value</span>
+						 - 
+						<span class="parameterDesc">Price value or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setProductInventoryList_ProductInventoryList_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProductInventoryList</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setProductInventoryList</span>(productInventoryList
+								 : 
+								 
+								<a href="class_dw_catalog_ProductInventoryList.html"><span class="">ProductInventoryList</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the specified inventory list as the product line item inventory context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productInventoryList</span>
+						 - 
+						<span class="parameterDesc">ProductInventoryList instance or null</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setProductInventoryListID_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProductInventoryListID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setProductInventoryListID</span>(productInventoryListID
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the ID of the inventory list the product line item is associated with.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">productInventoryListID</span>
+						 - 
+						<span class="parameterDesc">the ProductInventoryList ID or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setProductName_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setProductName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setProductName</span>(aValue
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the name of the product.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">aValue</span>
+						 - 
+						<span class="parameterDesc">the name of the product.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setQuantityValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setQuantityValue</span>(quantityValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Updates the quantity value of the product line item.
+ <p>
+ Validates the specified quantity value against the line item's min order and step quantity and adjusts it if
+ necessary. In particular, if 0 is passed, then the value will be adjusted to the min order quantity, not removed
+ from the line item container.
+ </p>
+ <p>
+ Null values or values &lt; 0.0 are not accepted.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantityValue</span>
+						 - 
+						<span class="parameterDesc">Quantity value.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setShipment_Shipment_DetailAnchor"></a>
+                    <div class="detailName 
+						">setShipment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setShipment</span>(shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Associates the specified product line item with the specified shipment.
+ <p>
+ The method is only applicable for independent product line items. If called for any dependent line item (option
+ or bundled line item), the method will throw an exception. The shipment for all dependent line items will be
+ updated automatically by the method. Product line item and shipment must belong to the same line item ctnr.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">The new shipment of the product line item</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_setStepQuantityValue_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStepQuantityValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStepQuantityValue</span>(quantityValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Set the step quantity value for this object.
+ <p>
+ This will be used to validate and adjust quantities when updateQuantity() is called. For typical catalog product
+ line items, it is usually desirable to have this value inherited from the product attributes, but for non-catalog
+ products, it is sometimes desirable to set this value programmatically.
+ </p>
+ <p>
+ Null is accepted and represents Quantity.NA. Otherwise, the quantity value must be > 0.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantityValue</span>
+						 - 
+						<span class="parameterDesc">The minimal order quantity allowed for the product or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_updateOptionPrice_DetailAnchor"></a>
+                    <div class="detailName 
+						">updateOptionPrice</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">updateOptionPrice</span>()
+					 : 
+					void
+                    </div>
+                    <div class="description">Determines and sets the price of a option line item based on the
+ selected option value the line item represents.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_updateOptionValue_ProductOptionValue_DetailAnchor"></a>
+                    <div class="detailName 
+						">updateOptionValue</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">updateOptionValue</span>(optionValue
+								 : 
+								 
+								<a href="class_dw_catalog_ProductOptionValue.html"><span class="">ProductOptionValue</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Updates an option line item with a new option value.
+
+ This method will not do anything if the current line item is no
+ option line item, if the specified value does not exist for the
+ current option or if this value is already selected.
+
+ Note, that this method will update the attributes optionValueID,
+ productID, productName and lineItemText. It will not update the price
+ attributes of the line item. To update the price of the line item you
+ need to call <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_updateOptionPrice_DetailAnchor">updateOptionPrice()</a> in addition. This is
+ usually done during calculation in the calculate hook.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">optionValue</span>
+						 - 
+						<span class="parameterDesc">The value to update the option line item with</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_updatePrice_Money_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">updatePrice</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">updatePrice</span>(price
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Updates the price attributes of the line item based
+ on the specified price.  The base price is set to the specified
+ value.  If the line item is based on net pricing then the net price
+ attribute is set.  If the line item is based on  gross pricing then the
+ gross price attribute is set.  Whether or not a line item is based
+ on net or gross pricing is a site-wide configuration parameter.
+ In either case, this price is equal to the product of the base price
+ and the quantity of this line item in its container.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_setPriceValue_Number_DetailAnchor">setPriceValue(Number)</a></span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">price</span>
+						 - 
+						<span class="parameterDesc">The price to use when performing the update. This price must not be null and must either be equal to NOT_AVAIALBLE or must have a currency code equal to that of the parent container.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_order_ProductLineItem_updateQuantity_Number_DetailAnchor"></a>
+                    <div class="detailName 
+						dep">updateQuantity</div>
+                    <div class="detailSignature
+	    				dep">
+                        <span class="emphasis">updateQuantity</span>(quantityValue
+								 : 
+								 
+								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
+					 : 
+					<a href="class_TopLevel_Number.html"><span class="">Number</span></a>
+                    </div>
+                    <div class="description">Updates the quantity value of the product line item and all its dependent product line items.
+ <p>
+ Validates the specified quantity value against the line item's min order and step quantity and adjusts it if
+ necessary. The adjusted quantity value is returned.
+ </p>
+ <p>
+ In general, quantity values &lt; 0.0 are not accepted.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Deprecated:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Use <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_setQuantityValue_Number_DetailAnchor">setQuantityValue(Number)</a> followed by <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getQuantity_DetailAnchor">getQuantity()</a> instead.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">quantityValue</span>
+						 - 
+						<span class="parameterDesc">Numeric quantity value.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Adjusted quantity value</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

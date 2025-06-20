@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pipelet TriggerReplication</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+						Overview
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletVersioning.html">
+						API Versioning
+					</a>
+            </div>
+            <div class="bannerItem">
+                <a href="pipeletDeprecated.html">
+						Deprecated
+					</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div>
+            <div class="className 
+				 dep">
+			Pipelet TriggerReplication</div>
+            <div class="topLevelDescription">Deprecated. Do not use this pipelet. Replication tasks should be managed through the Business Manager.<br/>  
+This pipelet creates and starts a new replication process for the specified
+target system and configuration. The process is triggered asynchronously
+while the pipelet returns immediately.
+
+This pipelet can only be used on replication source systems (i.e. the
+'Staging' instance).
+
+The parameter ReplicationConfiguration contains a mapping of a site
+name to a list of replication groups.
+Example:
+{ 'Sites-SiteGenesis' : ['SITE_PROMOTION', 'SITE_PREFERENCE'], 'Sites-Site' : ['ORGANIZATION_CATALOG', 'ORGANIZATION_PRICE_BOOK'] }
+This parameter can be a Java object of type Map&lt;String, Collection&lt;String&gt;&gt;
+or a JavaScript String literal containing the needed information.
+Please refer to the documentation for a list of possible replication
+groups. The site ID can be provided with or without the prefix '-Site'. So
+'Sites' and 'Sites-Site' is resolved correctly, as well as 'Sites-SiteGenesis'
+and 'Sites-SiteGenesis-Site'.
+
+The parameter TargetSystemID must be one of 'Production' or 'Development'.
+The pipelet will return an error status if the specified target system
+does not exist or is not yet initialized.
+
+If the process could be created and started successfully the returned
+status object is in state OK and contains the unique identifier of the
+created process. Additionally the id is provided as output parameter
+of type String for convenience in conjunction with the pipelet
+GetReplicationStatus. This identifier can be used for querying the state of
+the process.
+In case of an error, the returned status object will contain details about the
+problem.
+</div>
+            <div class="parameters">
+                <span class="parameterTitle">Deprecated:</span>
+                <div class="parameterDetail">Deprecated. Do not use this pipelet. Replication tasks should be managed through the Business Manager.</div>
+                <span class="parameterTitle">Group:</span>
+                <div class="parameterDetail">Replication (deprecated)</div>
+                <span class="parameterTitle">Flags:</span>
+                <div class="parameterDetail">Error Connector</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Input Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">TargetSystemID</span>
+					&nbsp;:&nbsp;
+					String
+							(Required)
+						</span>
+                    <div class="description">
+The name of the target system to replicate.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ReplicationConfiguration</span>
+					&nbsp;:&nbsp;
+					Object
+							(Required)
+						</span>
+                    <div class="description">
+A mapping of a site name to a list of replication groups.
+</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Output Parameters
+		</div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">Status</span>
+					&nbsp;:&nbsp;
+					Status
+					&nbsp;:&nbsp;
+					
+							(Required)
+						</span>
+                    <div class="description">
+The status object containing details about the results of the call.
+</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="parameterTitle">ReplicationProcessID</span>
+					&nbsp;:&nbsp;
+					String
+					&nbsp;:&nbsp;
+					
+							(Optional)
+						</span>
+                    <div class="description">
+The unique ID of the created and triggered process in case no errors occurred. This ID can be used to query the status of the process.
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>
