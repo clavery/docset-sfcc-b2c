@@ -45,27 +45,29 @@
  OAuth providers to support the Authorization Code Flow.<br/>
  The way to use is:
  <ul>
-  <li>call <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_initiateOAuthLogin_String_DetailAnchor">initiateOAuthLogin(String)</a></li>
-  <li>redirect the user to the returned link</li>
-  <li>when the user authenticates there the server will call back to
-  a URL configured on the provider's web site</li>
-  <li>when processing the request made from the provider's web site
-  you have two choices - either call the <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_obtainAccessToken_DetailAnchor">obtainAccessToken()</a>
-  and <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_obtainUserInfo_String_String_DetailAnchor">obtainUserInfo(String, String)</a>
-  methods one after another separately (gives you more flexibility),
-  or call the <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_finalizeOAuthLogin_DetailAnchor">finalizeOAuthLogin()</a> method which internally
-  calls the other two (simpler to use).
- </ul> Sample code for using it:
-   <pre><code>
-    var finalizedResponse : OAuthFinalizedResponse = OAuthLoginFlowMgr.finalizeOAuthLogin();
-    var userInfo = finalizedResponse.userInfoResponse.userInfo;
-   </code></pre>
-   or:<pre><code>
-    var accessTokenResponse : OAuthAccessTokenResponse = OAuthLoginFlowMgr.obtainAccessToken();
-    var userInfoResponse : OAuthUserInfoResponse = OAuthLoginFlowMgr
-        .obtainUserInfo(accessTokenResponse.oauthProviderId, accessTokenResponse.accessToken);
-    var userInfo = userInfoResponse.userInfo;
-   </code></pre></div>
+ <li>call <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_initiateOAuthLogin_String_DetailAnchor">initiateOAuthLogin(String)</a></li>
+ <li>redirect the user to the returned link</li>
+ <li>when the user authenticates there the server will call back to
+ a URL configured on the provider's web site</li>
+ <li>when processing the request made from the provider's web site
+ you have two choices - either call the <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_obtainAccessToken_DetailAnchor">obtainAccessToken()</a>
+ and <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_obtainUserInfo_String_String_DetailAnchor">obtainUserInfo(String, String)</a>
+ methods one after another separately (gives you more flexibility),
+ or call the <a href="class_dw_customer_oauth_OAuthLoginFlowMgr.html#dw_customer_oauth_OAuthLoginFlowMgr_finalizeOAuthLogin_DetailAnchor">finalizeOAuthLogin()</a> method which internally
+ calls the other two (simpler to use).</li>
+ </ul>
+ Sample code for using it:
+ <pre><code>
+ var finalizedResponse : OAuthFinalizedResponse = OAuthLoginFlowMgr.finalizeOAuthLogin();
+ var userInfo = finalizedResponse.userInfoResponse.userInfo;
+ </code></pre>
+ or:
+ <pre><code>
+ var accessTokenResponse : OAuthAccessTokenResponse = OAuthLoginFlowMgr.obtainAccessToken();
+ var userInfoResponse : OAuthUserInfoResponse = OAuthLoginFlowMgr.obtainUserInfo(
+     accessTokenResponse.oauthProviderId, accessTokenResponse.accessToken);
+ var userInfo = userInfoResponse.userInfo;
+ </code></pre></div>
                     <div class="subclasses"></div>
                 </div>
             </div>
@@ -296,7 +298,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

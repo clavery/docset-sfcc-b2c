@@ -20,7 +20,16 @@
                                     Job Step
                                     ImportCouponCodeRedemptions</div>
             <div class="topLevelDescription">Imports the coupon code redemptions based on the couponredemption.xsd.</div>
-            <div class="topLevelDescription"></div>
+            <div class="topLevelDescription">
+ <p>
+ <b>Note: Coupon redemptions are evaluated during checkout. A large number of coupon redemptions negatively impacts
+ order creation performance and scale.</b>
+ <ol>
+ <li>Avoid importing unnecessary coupon redemptions.</li>
+ <li>Clean up coupon codes and related redemptions when they are no longer required.</li>
+ </ol>
+ </p>
+ </div>
             <div class="parameters">
                 <span class="parameterTitle">Execution Context:</span>
                 <div class="parameterDetail">Sites</div>
@@ -148,7 +157,7 @@
             </div>
         </div>
         <div class="copyright">
-                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                        &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
             <div class="clear"></div>

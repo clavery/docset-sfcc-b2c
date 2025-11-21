@@ -200,7 +200,7 @@
                     <span><span class="emphasis"><a href="#dw_order_Basket_releaseInventory_DetailAnchor"><span class="">releaseInventory</span></a></span>()
 						: 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
-                    <div class="description"><p> Releases all inventory previously reserved for this basket.</div>
+                    <div class="description"><p> Release all inventory previously reserved for this basket.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_order_Basket_reserveInventory_DetailAnchor"><span class="">reserveInventory</span></a></span>()
@@ -215,7 +215,7 @@
 								<a href="class_TopLevel_Number.html"><span class="">Number</span></a>)
 						: 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
-                    <div class="description"><p> Reserves inventory for all items in this basket for a specified amount of minutes.</div>
+                    <div class="description"><p> Reserve inventory for all items in this basket for 10 minutes.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_order_Basket_reserveInventory_Number_Boolean_DetailAnchor"><span class="">reserveInventory</span></a></span>(reservationDurationInMinutes
@@ -227,7 +227,7 @@
 								boolean)
 						: 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
-                    <div class="description"><p> Reserves inventory for all items in this basket for a specified amount of minutes.</div>
+                    <div class="description"><p> Reserve inventory for all items in this basket for 10 minutes.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_order_Basket_setBusinessType_Number_DetailAnchor"><span class="">setBusinessType</span></a></span>(aType
@@ -468,7 +468,12 @@
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
                     </div>
                     <div class="description"><p>
- Releases all inventory previously reserved for this basket.
+ Release all inventory previously reserved for this basket. This is not needed for a normal workflow.
+ You can call <code>dw.order.Basket.reserveInventory()</code> one time after every basket change.
+ For performance and scaling reasons, avoid calling <code>dw.order.Basket.releaseInventory()</code>
+ before <code>dw.order.Basket.reserveInventory()</code>. The <code>reserveInventory</code> function works in
+ an optimized way to release inventory reservations that are no longer relevant.
+ </p>
  <p>
  The method implements its own transaction handling. Calling the method from inside a transaction is disallowed
  and results in an exception being thrown. This behavior differs when calling the method from an <b>OCAPI
@@ -496,7 +501,47 @@
                     </div>
                     <div class="description"><p>
  Reserves inventory for all items in this basket for 10 minutes. Any reservations created by previous calls of
- this method will be reset to 10 minutes.
+ this method are replaced.
+ </p>
+ <p>
+ Sample workflow for subsequent basket reservations:
+ </p>
+ <p>
+ 1. Request: Add item to basket and reserve the basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.createProductLineItem("sku1",2,basket.defaultShipment)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku1:2} is complete.
+ </pre>
+ </p>
+ <p>
+ 2. Request: Add item to basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.createProductLineItem("sku2",2,basket.defaultShipment)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku1:2, sku2:2} is complete. The previous reservation was overwritten.
+ </pre>
+ </p>
+ <p>
+ 3. Request: Remove item from basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.removeProductLineItem(item1)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku2:2} is complete. The previous reservation was
+    // overwritten and a quantity of 2 is released for sku1.
+ </pre>
  </p>
  <p>
  The method can be used to reserve basket items before checkout to ensure that inventory is still available at the
@@ -581,8 +626,48 @@
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
                     </div>
                     <div class="description"><p>
- Reserves inventory for all items in this basket for a specified amount of minutes. Any reservations created by
- previous calls of this method will be reset to that amount of minutes.
+ Reserve inventory for all items in this basket for 10 minutes. Any reservations created by previous calls of
+ this method are replaced.
+ </p>
+ <p>
+ Sample workflow for subsequent basket reservations:
+ </p>
+ <p>
+ 1. Request: Add item to basket and reserve the basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.createProductLineItem("sku1",2,basket.defaultShipment)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku1:2} is complete.
+ </pre>
+ </p>
+ <p>
+ 2. Request: Add item to basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.createProductLineItem("sku2",2,basket.defaultShipment)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku1:2, sku2:2} is complete. The previous reservation was overwritten.
+ </pre>
+ </p>
+ <p>
+ 3. Request: Remove item from basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.removeProductLineItem(item1)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku2:2} is complete. The previous reservation was
+    // overwritten and a quantity of 2 is released for sku1.
+ </pre>
  </p>
  <p>
  The method can be used to reserve basket items before checkout to ensure that inventory is still available at the
@@ -682,8 +767,48 @@
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
                     </div>
                     <div class="description"><p>
- Reserves inventory for all items in this basket for a specified amount of minutes. Any reservations created by
- previous calls of this method will be reset to that amount of minutes.
+ Reserve inventory for all items in this basket for 10 minutes. Any reservations created by previous calls of
+ this method are replaced.
+ </p>
+ <p>
+ Sample workflow for subsequent basket reservations:
+ </p>
+ <p>
+ 1. Request: Add item to basket and reserve the basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.createProductLineItem("sku1",2,basket.defaultShipment)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku1:2} is complete
+ </pre>
+ </p>
+ <p>
+ 2. Request: Add item to basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.createProductLineItem("sku2",2,basket.defaultShipment)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku1:2, sku2:2} is complete. The previous reservation was overwritten.
+ </pre>
+ </p>
+ <p>
+ 3. Request: Remove item from basket.
+ </p>
+ <p>
+ <pre>
+    transaction.begin()
+    basket.removeProductLineItem(item1)
+    basket.commit()
+    basket.reserveInventory()
+    // The reservation {sku2:2} is complete. The previous reservation was
+    // overwritten and a quantity of 2 is released for sku1.
+ </pre>
  </p>
  <p>
  The method can be used to reserve basket items before checkout to ensure that inventory is still available at the
@@ -859,7 +984,12 @@
 					 : 
 					void
                     </div>
-                    <div class="description">Sets the customer number of the customer associated with this container.</div>
+                    <div class="description">Sets the customer number of the customer associated with this container.
+ <p/>
+ Note this method has little effect as it only sets the customer number and it does <i>not re-link the basket with
+ a customer profile</> object, nor is the number copied into the <a href="class_dw_order_Order.html">Order</a> should one be created from
+ the basket. Use <a href="class_dw_order_Order.html#dw_order_Order_setCustomer_Customer_DetailAnchor">Order.setCustomer(Customer)</a> instead for a registered customer. For a
+ guest customer the customerNo is usually generated during order creation and the attribute is set at order level.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Deprecated:</span>
                         <div class="parameterDetail"></div>
@@ -922,7 +1052,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

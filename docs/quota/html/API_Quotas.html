@@ -31,6 +31,9 @@
                         <a href="#category_Custom Objects">Custom Objects</a>
                     </li>
                     <li>
+                        <a href="#category_Email Attachments">Email Attachments</a>
+                    </li>
+                    <li>
                         <a href="#category_I/O and Network">I/O and Network</a>
                     </li>
                     <li>
@@ -656,6 +659,44 @@
                         <ul>
                             <li>Pipelet RemoveCustomObject</li>
                             <li> dw.object.CustomObjectMgr.remove(CustomObject)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <a name="category_Email Attachments"></a>
+            <div class="header">Email Attachments Category
+                                </div>
+            <div class="section">
+                <hr>
+                <a name="quota_api.dw.net.Mail.addAttachment()"></a>
+                <p class="className">api.dw.net.Mail.addAttachment()</p>
+                <p>
+            The api.dw.net.Mail.addAttachment() API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> api.dw.net.Mail.addAttachment()
+                    </li>
+                    <li>
+                        <b>Description:</b> The maximum number of email attachments allowed.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Storefront Limit: </b>0
+                            </li>
+                            <li>
+                                <b>Default Limit: </b>No limit
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Usage Context:</b> 
+                        <ul>
+                            <li>dw.net.Mail.addAttachment(File)</li>
                         </ul>
                     </li>
                 </ul>
@@ -1928,6 +1969,30 @@
                         <ul>
                             <li>
                                 <b>Default Limit: </b>20
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                <hr>
+                <a name="quota_object.OrderPO.multipleOrdersInCommit"></a>
+                <p class="className">Multiple Orders in Commit</p>
+                <p>
+            The Multiple Orders in Commit API quota consists of:
+        </p>
+                <ul>
+                    <li>
+                        <b>Log file ID:</b> object.OrderPO.multipleOrdersInCommit
+                    </li>
+                    <li>
+                        <b>Description:</b> Warning when more than one order is changed in a single transaction. Credit card masking jobs are excluded.
+                    </li>
+                    <li>
+                        <b>Limit:</b> 
+                        <ul>
+                            <li>
+                                <b>Default Limit: </b>1
                             </li>
                         </ul>
                     </li>
@@ -3717,7 +3782,7 @@
             </div>
         </div>
         <div class="copyright">
-                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                        &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
             <div class="clear"></div>

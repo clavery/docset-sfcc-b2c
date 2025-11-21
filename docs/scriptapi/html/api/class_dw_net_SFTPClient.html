@@ -77,7 +77,7 @@
      <tr><td>Cipher</td><td>aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com,
              aes256-gcm@openssh.com, aes128-cbc, 3des-ctr, 3des-cbc, blowfish-cbc, aes192-cbc,
              aes256-cbc</td></tr>
-     <tr><td>Message Authenticaton Code (MAC)</td><td>hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com,
+     <tr><td>Message Authentication Code (MAC)</td><td>hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com,
              hmac-sha1-etm@openssh.com, hmac-sha2-256, hmac-sha2-512, hmac-sha1, hmac-md5, hmac-sha1-96,
              hmac-md5-96</td></tr>
      <tr><td>Public Key Authentication</td><td>rsa-sha2-512, rsa-sha2-256, ssh-rsa</td></tr>
@@ -127,6 +127,17 @@
 					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
 							&nbsp;(Read Only)
                         <div class="description">The error message from the last SFTP action.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>identity
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>
+                        <div class="description">Gets the identity (private key) used for the connection.
+ <p/>
+ The key is only associated to this instance of the SFTP client.</div>
                     </span>
                 </div>
                 <div class="summaryItem">
@@ -291,6 +302,12 @@
                     <div class="description">Returns a SFTPFileInfo objects containing information about the given file/directory path.</div>
                 </div>
                 <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_SFTPClient_getIdentity_DetailAnchor"><span class="">getIdentity</span></a></span>()
+						: 
+					<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a></span>
+                    <div class="description">Gets the identity (private key) used for the connection.</div>
+                </div>
+                <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_SFTPClient_getTimeout_DetailAnchor"><span class="">getTimeout</span></a></span>()
 						: 
 					<a href="class_TopLevel_Number.html"><span class="">Number</span></a></span>
@@ -450,7 +467,7 @@
  This method associates the key to the host used in the subsequent connect method, and must be called prior to connect.
  The key is not persisted, and is only associated to this instance of the SFTP client.
  <p>
- Multiple keys may added, and the validation will succeed if the remote host matches any of them.
+ Multiple keys may be added, and the validation will succeed if the remote host matches any of them.
  <p>
  The default behavior is to persist and trust an unknown host key if there are no known host keys available.
  If addKnownHostKey is later used to trust specific a specific key or keys, then any previously persisted keys
@@ -531,7 +548,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">user</span>
 						 - 
-						<span class="parameterDesc">User name for the login</span>
+						<span class="parameterDesc">Username for the login</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">password</span>
@@ -588,7 +605,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">user</span>
 						 - 
-						<span class="parameterDesc">User name for the login</span>
+						<span class="parameterDesc">Username for the login</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">password</span>
@@ -792,7 +809,7 @@
 					 : 
 					boolean
                     </div>
-                    <div class="description">Reads the content of a remote file and creates a local copy in the given file. Copies at most "MAX_GET_FILE_SIZE
+                    <div class="description">Reads the content of a remote file and creates a local copy in the given file. Copies at most MAX_GET_FILE_SIZE
  bytes. The SFTP transfer is done in binary mode.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
@@ -882,6 +899,27 @@
                         <div class="parameterDetail"></div>
                         <div class="parameterDetail">
                             <span class="parameterDesc">the remote file information or <code>null</code> if not present.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_SFTPClient_getIdentity_DetailAnchor"></a>
+                    <div class="detailName 
+						">getIdentity</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getIdentity</span>()
+					 : 
+					<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a>
+                    </div>
+                    <div class="description">Gets the identity (private key) used for the connection.
+ <p/>
+ The key is only associated to this instance of the SFTP client.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Reference to the private key, or null if not configured</span>
                         </div>
                     </div>
                     <hr>
@@ -1059,7 +1097,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">path</span>
 						 - 
-						<span class="parameterDesc">the the path on the remote SFTP server, where the file will be stored.</span>
+						<span class="parameterDesc">the path on the remote SFTP server, where the file will be stored.</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">content</span>
@@ -1256,7 +1294,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

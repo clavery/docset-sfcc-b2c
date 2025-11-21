@@ -48,7 +48,7 @@
  <p>
  To create an instance of a WebReference2, you put a web service WSDL file in the <code>webreferences2</code>
  directory and reference the WSDL file in a B2C Commerce Script. You then request the service <a href="class_dw_ws_Port.html">Port</a>
- using one the the get service methods. For example, if your WSDL file is <code>MyWSDL.wsdl</code>,
+ using one of the get service methods. For example, if your WSDL file is <code>MyWSDL.wsdl</code>,
  here is how you create an instance of WebReference2 and access the <a href="class_dw_ws_Port.html">Port</a>:
  <br>
  <pre>
@@ -118,6 +118,12 @@
      <td><code>boolean</code></td>
      <td><code>true</code> to explicitly allow logging, <code>false</code> to disallow. Default is <code>true</code> on Sandboxes
      and <code>false</code> on all other instance types</td>
+   </tr>
+   <tr>
+     <td><code>logging.level</code></td>
+     <td><code>string</code></td>
+     <td>The logging level to use (<code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, <code>ERROR</code>). 
+     Default is <code>DEBUG</code>.</td>
    </tr>
    <tr>
      <td><code>logging.pretty</code></td>
@@ -298,7 +304,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

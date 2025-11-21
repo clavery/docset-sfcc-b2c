@@ -21,14 +21,14 @@
                                     ExecuteDataReplication</div>
             <div class="topLevelDescription">Replicates data to a target system.</div>
             <div class="topLevelDescription">
-    
  <p>
  The ReplicationConfiguration parameter requires a string in JSON format that describes the replication process and
  its tasks that will be executed. The parameter section that describes the tasks is similar to the Replication Tasks
  step of the Business Manager Data Replication wizard. Replication tasks not included in the JSON are not included in
- the data replication process. The JSON syntax and replication tasks are validated when you add the step to the job.
- If something is wrong, a log message is written during runtime. The following is an example JSON-snippet for the
- ReplicationConfiguration parameter.
+ the data replication process. Replication tasks set to 'false' are also not included in the data replication process.
+ However, this only applies if the keyword 'all' is not used. The JSON syntax and replication tasks are validated when
+ you add the step to the job. If something is wrong, a log message is written during runtime. The following is an example
+ JSON-snippet for the ReplicationConfiguration parameter.
  </p>
 
  <pre>
@@ -52,7 +52,8 @@
          "csc_settings" : true,
          "csrf_whitelists" : true,
          "catalogs" : {
-           "catalogDEMO" : true
+           "storefront" : true,
+           "master" : "exclude-static",
          },
          "custom_object_types" : true,
          "custom_objects" : true,
@@ -70,7 +71,10 @@
            "system_preferences" : true,
            "custom_preferences" : true
          },
-         "price_books": true,
+         "price_books": {
+           "usd-list-prices" : true,
+           "usd-sale-prices" : true
+         },
          "sites" : {
            "siteDEMO" : true
          },
@@ -151,34 +155,38 @@
  <li>csc_settings</li>
  <li>csrf_whitelists: Where possible, we changed noninclusive terms to align with our company value of Equality.
  Because changing terms in our code can break current implementations, we maintained this object name.</li>
- <li>catalogs: Catalogs. To process only certain catalogs, specify the catalog names. To process all catalogs, use the
- keyword 'all'.</li>
+ <li>catalogs: Catalogs. To process only certain catalogs, specify the catalog IDs. To process all catalogs, use the
+ keyword <code>'all'</code> as catalog ID or use <code>true</code> at the catalogs level. To exclude static catalog
+ content specify the catalog ID alongside with the value <code>'exclude-static'</code>.</li>
  <li>custom_object_types</li>
  <li>custom_objects</li>
  <li>customer_lists</li>
  <li>geolocations</li>
  <li>global_sorting</li>
- <li>libraries: Libraries. To process only certain libraries, specify the library names. To process all libraries, use
- the keyword 'all'.</li>
+ <li>libraries: Libraries. To process only certain libraries, specify the library IDs. To process all libraries, use
+ the keyword <code>'all'</code> as library ID or use <code>true</code> at the libraries level.</li>
  <li>oauth_providers</li>
  <li>ocapi_settings</li>
  <li>page_meta_tags</li>
  <li>payments_config</li>
- <li>preferences: Preferences. To process all preferences, use the keyword 'all', otherwise use these:
+ <li>preferences: Preferences. To process all preferences, use the keyword <code>'all'</code>, respectively use
+ <code>true</code> at the preferences level, otherwise use these:
  <ul>
  <li>system_preferences</li>
  <li>custom_preferences</li>
  </ul>
  </li>
- <li>price_books</li>
+ <li>price_books: Price Books. To process only certain price books, specify the price book IDs. To process all price books, use
+ the keyword <code>'all'</code> as price book ID or use <code>true</code> at the price_books level.</li>
  <li>sites: Site definition, content library, and site preferences. You can process these for individual sites by
- specifying their names, or for all sites using the keyword 'all'.</li>
+ specifying their IDs, or for all sites using the keyword <code>'all'</code> as site ID, respectively use <code>true</code> at
+ the sites level.</li>
  <li>static_content</li>
  <li>webdav_client_permissions</li>
  </ul>
  </li>
- <li>sites: Site-specific data to process. You can process individual sites by specifying their names and replication
- tasks. To process all tasks, use the keyword 'all', otherwise use these:
+ <li>sites: Site-specific data to process. You can process individual sites by specifying their IDs and replication
+ tasks. To process all tasks of a site, use the keyword <code>'all'</code>, otherwise use these:
  <ul>
  <li>ab_tests</li>
  <li>ab_tests_and_experience</li>
@@ -193,7 +201,8 @@
  <li>dynamic_content</li>
  <li>ocapi_settings</li>
  <li>payment</li>
- <li>preferences: Preferences. To process all preferences, use the keyword 'all', otherwise use these:
+ <li>preferences: Preferences. To process all preferences, use the keyword <code>'all'</code>, respectively use
+ <code>true</code> at the preferences level, otherwise use these:
  <ul>
  <li>system_preferences</li>
  <li>custom_preferences</li>
@@ -203,7 +212,8 @@
  <li>shipping_methods</li>
  <li>sorting</li>
  <li>source_codes</li>
- <li>storefront_urls: Storefront URLs. To process all storefront URLs, use the keyword 'all', otherwise use these:
+ <li>storefront_urls: Storefront URLs. To process all storefront URLs, use the keyword <code>'all'</code>, respectively use
+ <code>true</code> at the storefront_urls level, otherwise use these:
  <ul>
  <li>catalog_urls</li>
  <li>content_urls</li>
@@ -224,8 +234,7 @@
  Where possible, we changed noninclusive terms to align with our company value of Equality. Because changing terms in
  our code can break current implementations, we maintained this object's name.
  </p>
- 
-  </div>
+ </div>
             <div class="parameters">
                 <span class="parameterTitle">Execution Context:</span>
                 <div class="parameterDetail">Organization</div>
@@ -278,7 +287,7 @@
             </div>
         </div>
         <div class="copyright">
-                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                        &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
             <div class="clear"></div>

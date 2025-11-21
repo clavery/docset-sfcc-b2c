@@ -226,7 +226,7 @@
 								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
 						: 
 					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
-                    <div class="description">Serialize a page as json string with the following properties: <ul> <li><code>String id</code> - the id of the page</li> <li><code>String type_id</code> - the id of the page type</li> <li><code>Map&lt;String, Object&gt; data</code> - the content attribute key value pairs</li> <li><custom>Map&lt;String, Object&gt; custom</code> - the custom key value pairs as produced by the optional page type <code>serialize</code> function</li> <li><code>List&lt;Region&gt; regions</code> - the regions of this page.</div>
+                    <div class="description">Serialize a page as json string with the following properties: <ul> <li><code>String id</code> - the id of the page</li> <li><code>String type_id</code> - the id of the page type</li> <li><code>Map&lt;String, Object&gt; data</code> - the content attribute key value pairs</li> <li><code>Map&lt;String, Object&gt; custom</code> - the custom key value pairs as produced by the optional page type <code>serialize</code> function</li> <li><code>List&lt;Region&gt; regions</code> - the regions of this page.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_experience_PageMgr_serializePage_String_Map_String_DetailAnchor"><span class="">serializePage</span></a></span>(pageID
@@ -520,7 +520,8 @@
                     <div class="description">Render a page. All of this is going to happen in two layers of remote includes, therefore pagecaching of page rendering
  is separated from the pagecache lifecycle of the caller. The first one is going to be returned by this method.
  <ul>
-     <li>layer 1 - determines visibility fingerprint for the page and all its nested components driven by its visibility rules. This remote include will not be pagecached. It will then delegate to layer 2.</li>
+     <li>layer 1 - determines visibility fingerprint for the page and all its nested components driven by its visibility rules. This remote include will only be pagecached for a fixed duration if neither the page nor any of its
+                      nested components carries a visibility rule (configurable in Business Manager via the site's page caching settings). It will then delegate to layer 2.</li>
      <li>layer 2 - does the actual rendering of the page by invoking its render function. This remote include will factor the previously determined visibility fingerprint in to the pagecache key, in case you decide to use pagecaching.</li>
  </ul>
  <p>
@@ -538,9 +539,9 @@
  <p>
  The rendering of a page invokes the <code>render</code> function of the respective page type.
  <pre>
-     <code>String : render( <a href="class_dw_experience_PageScriptContext.html">PageScriptContext</a> context)</code>
+     <code>String : render( PageScriptContext context)</code>
  </pre>
- The return value of the <code>render</code> function finally represents the markup produced by this page type.<br />
+ The return value of the <code>render</code> function finally represents the markup produced by this page type.<br/>
  </p>
  <p>
  Nested page rendering, i.e. rendering a page within a page (or respectively its components), is not a supported use case.
@@ -700,19 +701,19 @@
  this region. For each of these components the render function of the respective component
  type is invoked.
  <pre>
-     <code>String : render( <a href="class_dw_experience_ComponentScriptContext.html">ComponentScriptContext</a> context)</code>
+     String : render( ComponentScriptContext context)
  </pre>
  The return value of the <code>render</code> function will be wrapped by an HTML element - this
  finally represents the markup produced by this component type. The markup of the region
  accordingly represents the concatenation of all the components markup within an
- own wrapper element.<br />
+ own wrapper element.<br/>
  In order to provide styling for these wrapper
  elements of the components and the region some render settings can optionally be provided,
  which basically allows to configure which kind of tag is used for the wrapper element and
  which attributes the wrapper element contains. A sample output could look like this if
  <a href="class_dw_experience_RegionRenderSettings.html">RegionRenderSettings</a> are applied with customized tag names and attributes
  for the region and component wrapper elements.</p>
- <pre><code>
+ <pre>
  &lt;p class="myRegionCssClass"&gt;
      &lt;span class="myComponentCssClass myComponentCssClass1" data-foo="bar"&gt;
          ...
@@ -721,7 +722,7 @@
          ...
      &lt;/span&gt;
  &lt;/p&gt;
- </code></pre>
+ </pre>
 
  <p>In order to go with the default settings for the wrapper elements see
  <a href="class_dw_experience_PageMgr.html#dw_experience_PageMgr_renderRegion_Region_DetailAnchor">renderRegion(Region)</a>.</p>
@@ -779,15 +780,15 @@
  this region. For each of these components the render function  of the respective component
  type is invoked.
  <pre>
-     <code>String : render( <a href="class_dw_experience_ComponentScriptContext.html">ComponentScriptContext</a> params)</code>
+     String : render( ComponentScriptContext params)
  </pre>
  The return value of the <code>render</code> function will be wrapped by an HTML element - this
  finally represents the markup produced by this component type. The markup of the region
  accordingly represents the concatenation of all the components markup within an
- own wrapper element.<br />
+ own wrapper element.<br/>
  The following sample shows how this would look like for a 'pictures' region
  that contains two components of type 'assets.image'. </p>
- <pre><code>
+ <pre>
  &lt;div class="experience-region experience-pictures"&gt;
      &lt;div class="experience-component experience-assets-image"&gt;
          ...
@@ -796,7 +797,7 @@
          ..
      &lt;/div&gt;
  &lt;/div&gt;
- </code></pre>
+ </pre>
 
  <p>The system default for region render settings are:
  <ul>
@@ -858,7 +859,7 @@
      <li><code>String id</code> - the id of the page</li>
      <li><code>String type_id</code> - the id of the page type</li>
      <li><code>Map&lt;String, Object&gt; data</code> - the content attribute key value pairs</li>
-     <li><custom>Map&lt;String, Object&gt; custom</code> - the custom key value pairs as produced by the optional page type <code>serialize</code> function</li>
+     <li><code>Map&lt;String, Object&gt; custom</code> - the custom key value pairs as produced by the optional page type <code>serialize</code> function</li>
      <li><code>List&lt;Region&gt; regions</code> - the regions of this page. A region consists of the following properties
           <ul>
               <li><code>String id</code> - the id of the region</li>
@@ -867,7 +868,7 @@
                   <li><code>String id</code> - the id of the component</li>
                   <li><code>String type_id</code> - the id of the component type</li>
                   <li><code>Map&lt;String, Object&gt; data</code> - the content attribute key value pairs</li>
-                  <li><custom>Map&lt;String, Object&gt; custom</code> - the custom key value pairs as produced by the optional component type <code>serialize</code> function</li>
+                  <li><code>Map&lt;String, Object&gt; custom</code> - the custom key value pairs as produced by the optional component type <code>serialize</code> function</li>
                   <li><code>List&lt;Region&gt; regions</code> - the regions of this component</li>
                </ul>
               </li>
@@ -878,7 +879,8 @@
  All of this is going to happen in two layers of remote includes, therefore pagecaching of page serialization
  is separated from the pagecache lifecycle of the caller. The first one is going to be returned by this method.
  <ul>
-     <li>layer 1 - determines visibility fingerprint for the page and all its nested components driven by its visibility rules. This remote include will not be pagecached. It will then delegate to layer 2.</li>
+     <li>layer 1 - determines visibility fingerprint for the page and all its nested components driven by its visibility rules. This remote include will only be pagecached for a fixed duration if neither the page nor any of its
+                      nested components carries a visibility rule (configurable in Business Manager via the site's page caching settings). It will then delegate to layer 2.</li>
      <li>layer 2 - does the actual rendering of the page by invoking its render function. This remote include will factor the previously determined visibility fingerprint in to the pagecache key, in case you decide to use pagecaching.</li>
  </ul>
  </p>
@@ -897,10 +899,10 @@
  <p>
  The serialization of a page also invokes the <code>serialize</code> function of the respective page type.
  <pre>
-     <code>Object : serialize( <a href="class_dw_experience_PageScriptContext.html">PageScriptContext</a> context)</code>
+     <code>Object : serialize( PageScriptContext context)</code>
  </pre>
  The return value of the <code>serialize</code> function will be injected as property <code>custom</code>
- into the json string produced as serialization result for this page type.<br />
+ into the json string produced as serialization result for this page type.<br/>
  </p>
  <p>
  Nested page serialization, i.e. serializing a page within a page (or respectively its components), is not a supported use case.
@@ -1042,7 +1044,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

@@ -2,7 +2,6 @@
 <xsd:schema
         xmlns="http://www.demandware.com/xml/impex/cachesettings/2013-08-15"
         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:xml="http://www.w3.org/XML/1998/namespace"
         targetNamespace="http://www.demandware.com/xml/impex/cachesettings/2013-08-15"
         elementFormDefault="qualified"
         attributeFormDefault="unqualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -47,7 +46,7 @@
 
     <xsd:complexType name="complexType.CachePartition">
         <xsd:sequence>
-            <xsd:element name="name" type="Generic.NonEmptyString.28" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="name" type="Generic.NonEmptyString.256" minOccurs="1" maxOccurs="1"/>
             <xsd:element name="pipelines" type="complexType.CachePartitionPipelines" minOccurs="1" maxOccurs="1"/>
             <xsd:element name="replication-tasks" type="Generic.String" minOccurs="0" maxOccurs="1" />
         </xsd:sequence>
@@ -64,13 +63,6 @@
 
     <xsd:simpleType name="Generic.String">
         <xsd:restriction base="xsd:string"/>
-    </xsd:simpleType>
-
-    <xsd:simpleType name="Generic.NonEmptyString.28">
-        <xsd:restriction base="Generic.String">
-            <xsd:minLength value="1"/>
-            <xsd:maxLength value="28"/>
-        </xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="Generic.NonEmptyString.256">

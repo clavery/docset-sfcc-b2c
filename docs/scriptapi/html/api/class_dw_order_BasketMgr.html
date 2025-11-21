@@ -55,7 +55,9 @@
 					    
 					    <a href="class_dw_util_List.html"><span class="">List</span></a>
 							&nbsp;(Read Only)
-                        <div class="description">Retrieve all open baskets for the logged in customer including the temporary baskets.
+                        <div class="description"><p>
+ Retrieve all open baskets for the logged in customer including the temporary baskets.
+ </p>
  <p>
  Restricted to agent scenario use cases: The returned list contains all agent baskets created with
  <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createAgentBasket_DetailAnchor">createAgentBasket()</a> and the current storefront basket which can also be retrieved with
@@ -82,8 +84,17 @@
  valid for the configured basket lifetime.
  </p>
  <p>
+ In hybrid storefront scenarios <i>(Phased Launch sites that utilize SFRA/SiteGenesis for some part while also
+ utilizing PWA Kit or other custom headless solution for another part of the same site)</i>, this method must
+ <b>NOT</b> be used. Instead, retrieve baskets via <code>GET baskets/{basketId}</code> or
+ <code>GET customers/{customerId}/baskets</code>. Do not use <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor">getCurrentOrNewBasket()</a> for basket creation
+ in any scenario.
+ </p>
+ <p>
  The current basket, if one exists, is usually updated by the method. In particular the last-modified date is
- updated. The lifetime of a basket can be extended in 2 ways:
+ updated. <b><i>No update is done when method <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> is used within a read-only hook
+ implementation (such as a beforeGet or a modifyResponse hook).</i></b> The lifetime of a basket can be extended
+ in 2 ways:
  <ul>
  <li>The basket is modified in some way, e.g. a product is added resulting in the basket total being newly
  calculated. This results in the basket lifetime being reset.</li>
@@ -92,14 +103,21 @@
  </ul>
  </p>
  <p>
- Personal data held inside the basket such as addresses, email addresses and payment settings is associated with
- the customer to whom the basket belongs. If the basket being updated belongs to a different customer this data is
- removed. This happens when a registered customer logs in after having previously created a basket as an anonymous
- customer. After the customer logs out, the previous basket is stored (where applicable) and the method returns
- <code>null</code>. Personal data is also cleared when the session times out for an anonymous customer.
+ What happens when a customer logs in? Personal data held inside the basket such as addresses, email addresses and
+ payment settings is associated with the customer to whom the basket belongs. If the basket being updated belongs
+ to a different customer this data is removed. This happens when a guest customer that has a basket logs in and
+ hence identifies as a registered customer. In this case the basket which was previously created by the guest
+ customer gets transferred to the (now logged in) registered customer. Should the registered customer already have
+ a basket, this basket is effectively invalidated, but made available using <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getStoredBasket_DetailAnchor">getStoredBasket()</a> allowing
+ the script to merge content from it if desired.
  </p>
  <p>
- The following personal data is cleared.
+ What happens when a customer logs out or when the customer session times out? After the customer logs out, a
+ basket belonging to the registered customer (now logged out) is stored (where applicable) and this method 
+ returns <code>null</code>. Personal data is also cleared when the session times out for a guest customer.
+ </p>
+ <p>
+ The following personal data is cleared:
  <ul>
  <li>product line items that were added from a wish list</li>
  <li>shipping method</li>
@@ -140,8 +158,15 @@
 					    
 					    <a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
 							&nbsp;(Read Only)
-                        <div class="description">This method returns the current valid basket of the session customer or creates a new one if no current valid
- basket exists. See <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> for more details.</div>
+                        <div class="description"><p>
+ This method returns the current valid basket of the session customer or creates a new one if no current valid
+ basket exists. See <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> for more details.
+ </p>
+ <p>
+ In hybrid storefront scenarios <i>(Phased Launch sites that utilize SFRA/SiteGenesis for some part while also
+ utilizing PWA Kit or other custom headless solution for another part of the same site)</i>, this method must
+ <b>NOT</b> be used. For these scenarios, create baskets via <code>POST baskets</code> REST calls.
+ </p></div>
                     </span>
                 </div>
                 <div class="summaryItem">
@@ -151,18 +176,30 @@
 					    
 					    <a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
 							&nbsp;(Read Only)
-                        <div class="description">This method returns the stored basket of the session customer or <code>null</code> if none is found. A stored
+                        <div class="description"><p>
+ This method returns the stored basket of the session customer or <code>null</code> if none is found. A stored
  basket is returned in the following situation:
  <ol>
- <li>During one visit, a customer-X logs in and receives a basket-A.
- <li>In a later visit, a second basket-B is created for an anonymous customer who then logs in as customer-X.
+ <li>During one visit, a customer-Q logs in and creates a basket-A by adding products to it.</li>
+ <li>During a subsequent visit, a second basket-B is created for a guest customer who then logs in as
+ customer-Q.</li>
  </ol>
- In this case basket-B is reassigned to him and basket-A is accessible as the stored basket. Now it is possible to
- merge the information from the stored basket to the active basket.
+ In this case, basket-B is reassigned to customer-Q and basket-A is accessible as the stored basket using this
+ method. It is now possible to merge the information from the stored basket (basket-A) to the active basket
+ (basket-B). If this method returns <code>null</code> in the previous scenario, verify that:
+ <ol>
+ <li>The session handling between the two visits is correct - the first visit and second visit must be in
+ different sessions. Furthermore, the second session must contain both basket creations: as guest and the customer
+ login.</li>
+ <li>The stored basket is not expired.</li>
+ <li>Basket persistence settings are configured correctly in the Business Manager.</li>
+ </ol>
  <p/>
- A stored basket will exist only if the corresponding setting is selected in the Business Manager site
- preferences' baskets section. A basket is valid for the configured basket lifetime.
+ <p>
+ A stored basket exists only if the corresponding setting is selected in Business Manager. preferences' baskets
+ section. A basket is valid for the configured basket lifetime.
  <p/>
+ <p>
  Typical usage:
 
  <pre>
@@ -172,6 +209,10 @@
      // transfer all the data needed from the stored to the active basket
  }
  </pre>
+
+ A exhaustive example on how to use this method in the context of the Merge Basket functionality can be found
+ here: <a href="https://gist.github.com/sf-thomas-loesche/3446c7d71a97e559bf1caee96ae56d9f">Merge Basket utility
+ functions using Script API</a>
  <p/></div>
                     </span>
                 </div>
@@ -214,7 +255,7 @@
 								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
 						: 
 					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
-                    <div class="description">Creates a Basket from an existing Order for the purposes of changing an Order.</div>
+                    <div class="description"><p> Creates a Basket from an existing Order for the purposes of changing an Order.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_createTemporaryBasket_DetailAnchor"><span class="">createTemporaryBasket</span></a></span>()
@@ -253,7 +294,7 @@
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getBaskets_DetailAnchor"><span class="">getBaskets</span></a></span>()
 						: 
 					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
-                    <div class="description">Retrieve all open baskets for the logged in customer including the temporary baskets.</div>
+                    <div class="description"><p> Retrieve all open baskets for the logged in customer including the temporary baskets.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getCurrentBasket_DetailAnchor"><span class="">getCurrentBasket</span></a></span>()
@@ -265,13 +306,13 @@
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor"><span class="">getCurrentOrNewBasket</span></a></span>()
 						: 
 					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
-                    <div class="description">This method returns the current valid basket of the session customer or creates a new one if no current valid basket exists.</div>
+                    <div class="description"><p> This method returns the current valid basket of the session customer or creates a new one if no current valid basket exists.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getStoredBasket_DetailAnchor"><span class="">getStoredBasket</span></a></span>()
 						: 
 					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a></span>
-                    <div class="description">This method returns the stored basket of the session customer or <code>null</code> if none is found.</div>
+                    <div class="description"><p> This method returns the stored basket of the session customer or <code>null</code> if none is found.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_order_BasketMgr_getTemporaryBasket_String_DetailAnchor"><span class="">getTemporaryBasket</span></a></span>(uuid
@@ -353,26 +394,34 @@
 					 : 
 					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
                     </div>
-                    <div class="description">Creates a Basket from an existing Order for the purposes of changing an Order. When an Order is later created
+                    <div class="description"><p>
+ Creates a Basket from an existing Order for the purposes of changing an Order. When an Order is later created
  from the Basket, the original Order is changed to status <a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_REPLACED_DetailAnchor">Order.ORDER_STATUS_REPLACED</a>. Restricted
- to agent scenario use cases: In case a storefront customer is using it the created storefront basket cannot be
- retrieved via
+ to agent scenario use cases.
+ </p>
+ <p>
+ In case a storefront customer is using it the created storefront basket cannot be retrieved via
  <ul>
  <li><a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> (ScriptAPI),</li>
- <li>GET /baskets/<basketid> (OCAPI) or</li>
- <li>GetBasket (Pipelet).</li>
+ <li>GET /baskets/&lt;basketid&gt; (REST APIs) or</li>
+ <li>DELETE /baskets/&lt;basketid&gt; (REST APIs) or</li>
+ <li>GetBasket (Pipelet) or</li>
+ <li>Basket-related CSC Operations from BM (these also use OCAPI REST API).</li>
  </ul>
  Baskets containing an "orderNumberBeingEdited" are explicitly excluded from the list of baskets that can be
- retrieved. Responsible for this behaviour (this kind of basket cannot be used as general purpose shopping
- baskets) - see <a href="class_dw_order_Basket.html#dw_order_Basket_getOrderNoBeingEdited_DetailAnchor">Basket.getOrderNoBeingEdited()</a> / <a href="class_dw_order_Basket.html#dw_order_Basket_getOrderBeingEdited_DetailAnchor">Basket.getOrderBeingEdited()</a>.
+ retrieved. Responsible for this behavior (this kind of basket cannot be used as general purpose shopping baskets)
+ - see <a href="class_dw_order_Basket.html#dw_order_Basket_getOrderNoBeingEdited_DetailAnchor">Basket.getOrderNoBeingEdited()</a> / <a href="class_dw_order_Basket.html#dw_order_Basket_getOrderBeingEdited_DetailAnchor">Basket.getOrderBeingEdited()</a>.
  <p/>
+ <p>
  In case a Business Manager user is logged in into the session the basket will be marked as an agent basket. See
  <a href="class_dw_order_Basket.html#dw_order_Basket_isAgentBasket_DetailAnchor">Basket.isAgentBasket()</a></>.
  <p/>
+ <p>
  Any inventory reservation associated with the order will be canceled either early when
  <a href="class_dw_order_Basket.html#dw_order_Basket_reserveInventory_DetailAnchor">Basket.reserveInventory()</a> is called for the new basket or (later) when a new replacement order
  is created from the basket. Consider reserving the basket following its creation.
  <p/>
+ <p>
  The method only succeeds for an Order
  <ul>
  <li>without gift certificates,</li>
@@ -391,6 +440,7 @@
  exported.</li>
  </ul>
  <p/>
+ <p>
  Usage:
 
  <pre>
@@ -406,7 +456,8 @@
      // handle e.errorCode
    }
  }
- </pre></div>
+ </pre>
+ </p></div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -422,9 +473,25 @@
                             <span class="parameterDesc">a new Basket</span>
                         </div>
                         <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_customer_AgentUserMgr.html#dw_customer_AgentUserMgr_loginAgentUser_String_String_DetailAnchor">AgentUserMgr.loginAgentUser(String, String)</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_customer_AgentUserMgr.html#dw_customer_AgentUserMgr_loginOnBehalfOfCustomer_Customer_DetailAnchor">AgentUserMgr.loginOnBehalfOfCustomer(Customer)</a></span>
+                        </div>
+                        <div class="parameterDetail"></div>
                     </div>
                     <div class="parameters">
                         <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
                         <div class="parameterDetail"></div>
                         <div class="parameterDetail"></div>
                         <div class="parameterDetail">
@@ -578,7 +645,9 @@
 					 : 
 					<a href="class_dw_util_List.html"><span class="">List</span></a>
                     </div>
-                    <div class="description">Retrieve all open baskets for the logged in customer including the temporary baskets.
+                    <div class="description"><p>
+ Retrieve all open baskets for the logged in customer including the temporary baskets.
+ </p>
  <p>
  Restricted to agent scenario use cases: The returned list contains all agent baskets created with
  <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_createAgentBasket_DetailAnchor">createAgentBasket()</a> and the current storefront basket which can also be retrieved with
@@ -614,8 +683,17 @@
  valid for the configured basket lifetime.
  </p>
  <p>
+ In hybrid storefront scenarios <i>(Phased Launch sites that utilize SFRA/SiteGenesis for some part while also
+ utilizing PWA Kit or other custom headless solution for another part of the same site)</i>, this method must
+ <b>NOT</b> be used. Instead, retrieve baskets via <code>GET baskets/{basketId}</code> or
+ <code>GET customers/{customerId}/baskets</code>. Do not use <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentOrNewBasket_DetailAnchor">getCurrentOrNewBasket()</a> for basket creation
+ in any scenario.
+ </p>
+ <p>
  The current basket, if one exists, is usually updated by the method. In particular the last-modified date is
- updated. The lifetime of a basket can be extended in 2 ways:
+ updated. <b><i>No update is done when method <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> is used within a read-only hook
+ implementation (such as a beforeGet or a modifyResponse hook).</i></b> The lifetime of a basket can be extended
+ in 2 ways:
  <ul>
  <li>The basket is modified in some way, e.g. a product is added resulting in the basket total being newly
  calculated. This results in the basket lifetime being reset.</li>
@@ -624,14 +702,21 @@
  </ul>
  </p>
  <p>
- Personal data held inside the basket such as addresses, email addresses and payment settings is associated with
- the customer to whom the basket belongs. If the basket being updated belongs to a different customer this data is
- removed. This happens when a registered customer logs in after having previously created a basket as an anonymous
- customer. After the customer logs out, the previous basket is stored (where applicable) and the method returns
- <code>null</code>. Personal data is also cleared when the session times out for an anonymous customer.
+ What happens when a customer logs in? Personal data held inside the basket such as addresses, email addresses and
+ payment settings is associated with the customer to whom the basket belongs. If the basket being updated belongs
+ to a different customer this data is removed. This happens when a guest customer that has a basket logs in and
+ hence identifies as a registered customer. In this case the basket which was previously created by the guest
+ customer gets transferred to the (now logged in) registered customer. Should the registered customer already have
+ a basket, this basket is effectively invalidated, but made available using <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getStoredBasket_DetailAnchor">getStoredBasket()</a> allowing
+ the script to merge content from it if desired.
  </p>
  <p>
- The following personal data is cleared.
+ What happens when a customer logs out or when the customer session times out? After the customer logs out, a
+ basket belonging to the registered customer (now logged out) is stored (where applicable) and this method 
+ returns <code>null</code>. Personal data is also cleared when the session times out for a guest customer.
+ </p>
+ <p>
+ The following personal data is cleared:
  <ul>
  <li>product line items that were added from a wish list</li>
  <li>shipping method</li>
@@ -681,8 +766,15 @@
 					 : 
 					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
                     </div>
-                    <div class="description">This method returns the current valid basket of the session customer or creates a new one if no current valid
- basket exists. See <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> for more details.</div>
+                    <div class="description"><p>
+ This method returns the current valid basket of the session customer or creates a new one if no current valid
+ basket exists. See <a href="class_dw_order_BasketMgr.html#dw_order_BasketMgr_getCurrentBasket_DetailAnchor">getCurrentBasket()</a> for more details.
+ </p>
+ <p>
+ In hybrid storefront scenarios <i>(Phased Launch sites that utilize SFRA/SiteGenesis for some part while also
+ utilizing PWA Kit or other custom headless solution for another part of the same site)</i>, this method must
+ <b>NOT</b> be used. For these scenarios, create baskets via <code>POST baskets</code> REST calls.
+ </p></div>
                     <div class="parameters">
                         <span class="parameterTitle">Returns:</span>
                         <div class="parameterDetail">
@@ -701,18 +793,30 @@
 					 : 
 					<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>
                     </div>
-                    <div class="description">This method returns the stored basket of the session customer or <code>null</code> if none is found. A stored
+                    <div class="description"><p>
+ This method returns the stored basket of the session customer or <code>null</code> if none is found. A stored
  basket is returned in the following situation:
  <ol>
- <li>During one visit, a customer-X logs in and receives a basket-A.
- <li>In a later visit, a second basket-B is created for an anonymous customer who then logs in as customer-X.
+ <li>During one visit, a customer-Q logs in and creates a basket-A by adding products to it.</li>
+ <li>During a subsequent visit, a second basket-B is created for a guest customer who then logs in as
+ customer-Q.</li>
  </ol>
- In this case basket-B is reassigned to him and basket-A is accessible as the stored basket. Now it is possible to
- merge the information from the stored basket to the active basket.
+ In this case, basket-B is reassigned to customer-Q and basket-A is accessible as the stored basket using this
+ method. It is now possible to merge the information from the stored basket (basket-A) to the active basket
+ (basket-B). If this method returns <code>null</code> in the previous scenario, verify that:
+ <ol>
+ <li>The session handling between the two visits is correct - the first visit and second visit must be in
+ different sessions. Furthermore, the second session must contain both basket creations: as guest and the customer
+ login.</li>
+ <li>The stored basket is not expired.</li>
+ <li>Basket persistence settings are configured correctly in the Business Manager.</li>
+ </ol>
  <p/>
- A stored basket will exist only if the corresponding setting is selected in the Business Manager site
- preferences' baskets section. A basket is valid for the configured basket lifetime.
+ <p>
+ A stored basket exists only if the corresponding setting is selected in Business Manager. preferences' baskets
+ section. A basket is valid for the configured basket lifetime.
  <p/>
+ <p>
  Typical usage:
 
  <pre>
@@ -722,6 +826,10 @@
      // transfer all the data needed from the stored to the active basket
  }
  </pre>
+
+ A exhaustive example on how to use this method in the context of the Merge Basket functionality can be found
+ here: <a href="https://gist.github.com/sf-thomas-loesche/3446c7d71a97e559bf1caee96ae56d9f">Merge Basket utility
+ functions using Script API</a>
  <p/></div>
                     <div class="parameters">
                         <span class="parameterTitle">Returns:</span>
@@ -797,7 +905,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

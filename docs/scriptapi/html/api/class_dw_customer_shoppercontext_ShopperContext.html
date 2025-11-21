@@ -1,0 +1,700 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class ShopperContext</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.customer.shoppercontext.ShopperContext">
+            <a name="dw.customer.shoppercontext.ShopperContext"></a>
+            <div class="packageName">dw.customer.shoppercontext</div>
+            <div class="className
+					">	
+        	
+				Class ShopperContext</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.customer.shoppercontext.ShopperContext
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">The class represents Shopper Context. It is used to manage personalized shopping experiences on your storefront.
+ <p>
+ Shopper Context is used to personalize shopper experiences with context values such as custom session attributes,
+ assignment qualifiers, geolocation, clientIP address, effective date time, source code, coupon code and customer
+ groups.
+ </p>
+ <p>
+ When Shopper Context is set for a shopper, the context is applied in the next request and can activate promotions or
+ price books assigned to customer groups, source codes, or stores (via assignments).
+ </p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>assignmentQualifiers
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Map.html"><span class="">Map</span></a>
+                        <div class="description">The assignment qualifiers from the Shopper Context. Assignment qualifiers are set when using the
+ assignment framework to trigger pricing and promotion experiences for Products, Product Search, Basket, Shipping
+ methods etc.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>clientIP
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The IP address of the client from the Shopper Context.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>couponCodes
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Set.html"><span class="">Set</span></a>
+                        <div class="description">The Coupon codes from the Shopper Context.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customerGroupIDs
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Set.html"><span class="">Set</span></a>
+                        <div class="description">Returns customer group IDs from the Shopper Context to apply. The customer group IDs set in Shopper Context
+ evaluate to customer groups that trigger the promotions (campaign assignment) assigned to the customer groups.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>customQualifiers
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Map.html"><span class="">Map</span></a>
+                        <div class="description">The custom qualifiers from the Shopper Context. Custom qualifiers contain the custom session attributes
+ set in the Shopper Context.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>effectiveDateTime
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                        <div class="description">The effective date time from the Shopper Context. With the effective date time you can retrieve
+ promotions that are active at a particular time. For example, "Shop the Future" use cases.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>geolocation
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_Geolocation.html"><span class="">Geolocation</span></a>
+                        <div class="description">The geographic location from the Shopper Context.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sourceCode
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">The source code from the Shopper Context. The source code set in Shopper Context evaluates to source code
+ group that triggers the promotion (campaign assignment) and Price books (assigned to Source code group).</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_ShopperContext_DetailAnchor"><span class="">ShopperContext</span></a></span>()</span>
+                    <div class="description">Constructor for ShopperContext.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getAssignmentQualifiers_DetailAnchor"><span class="">getAssignmentQualifiers</span></a></span>()
+						: 
+					<a href="class_dw_util_Map.html"><span class="">Map</span></a></span>
+                    <div class="description">Returns the assignment qualifiers from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getClientIP_DetailAnchor"><span class="">getClientIP</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the IP address of the client from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getCouponCodes_DetailAnchor"><span class="">getCouponCodes</span></a></span>()
+						: 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a></span>
+                    <div class="description">Returns the Coupon codes from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getCustomerGroupIDs_DetailAnchor"><span class="">getCustomerGroupIDs</span></a></span>()
+						: 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a></span>
+                    <div class="description">Returns customer group IDs from the Shopper Context to apply.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getCustomQualifiers_DetailAnchor"><span class="">getCustomQualifiers</span></a></span>()
+						: 
+					<a href="class_dw_util_Map.html"><span class="">Map</span></a></span>
+                    <div class="description">Returns the custom qualifiers from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getEffectiveDateTime_DetailAnchor"><span class="">getEffectiveDateTime</span></a></span>()
+						: 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a></span>
+                    <div class="description">Returns the effective date time from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getGeolocation_DetailAnchor"><span class="">getGeolocation</span></a></span>()
+						: 
+					<a href="class_dw_util_Geolocation.html"><span class="">Geolocation</span></a></span>
+                    <div class="description">Returns the geographic location from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_getSourceCode_DetailAnchor"><span class="">getSourceCode</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the source code from the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setAssignmentQualifiers_Map_DetailAnchor"><span class="">setAssignmentQualifiers</span></a></span>(assignmentQualifiers
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the assignment qualifiers in the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setClientIP_String_DetailAnchor"><span class="">setClientIP</span></a></span>(clientIP
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the IP address of the client in the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setCouponCodes_Set_DetailAnchor"><span class="">setCouponCodes</span></a></span>(couponCodes
+								 : 	
+								 
+								<a href="class_dw_util_Set.html"><span class="">Set</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the Coupon codes in the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setCustomerGroupIDs_Set_DetailAnchor"><span class="">setCustomerGroupIDs</span></a></span>(customerGroupIDs
+								 : 	
+								 
+								<a href="class_dw_util_Set.html"><span class="">Set</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the customer group IDs for the Shopper Context to apply.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setCustomQualifiers_Map_DetailAnchor"><span class="">setCustomQualifiers</span></a></span>(customQualifiers
+								 : 	
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the session custom attributes as custom qualifiers in the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setEffectiveDateTime_Date_DetailAnchor"><span class="">setEffectiveDateTime</span></a></span>(effectiveDateTime
+								 : 	
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the effective date time for the context to apply.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setGeolocation_Geolocation_DetailAnchor"><span class="">setGeolocation</span></a></span>(geolocation
+								 : 	
+								 
+								<a href="class_dw_util_Geolocation.html"><span class="">Geolocation</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the geographic location of the client in the Shopper Context.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_shoppercontext_ShopperContext_setSourceCode_String_DetailAnchor"><span class="">setSourceCode</span></a></span>(sourceCode
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the source code for the Shopper Context to apply.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_ShopperContext_DetailAnchor"></a>
+                    <div class="detailName 
+						">ShopperContext</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">ShopperContext</span>()
+                    </div>
+                    <div class="description">Constructor for ShopperContext.
+ </p>
+ This constructor is used to create an empty object. The object will be empty and must be populated with the
+ appropriate setter methods. For example:
+ <pre><code>
+ ShopperContext context = new ShopperContext();
+ context.setSourceCode( "sourcecode" );
+ </code></pre>
+ </p></div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getAssignmentQualifiers_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAssignmentQualifiers</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAssignmentQualifiers</span>()
+					 : 
+					<a href="class_dw_util_Map.html"><span class="">Map</span></a>
+                    </div>
+                    <div class="description">Returns the assignment qualifiers from the Shopper Context. Assignment qualifiers are set when using the
+ assignment framework to trigger pricing and promotion experiences for Products, Product Search, Basket, Shipping
+ methods etc.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A map of assignment qualifiers set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getClientIP_DetailAnchor"></a>
+                    <div class="detailName 
+						">getClientIP</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getClientIP</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the IP address of the client from the Shopper Context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The IP address of the client set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getCouponCodes_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCouponCodes</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCouponCodes</span>()
+					 : 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a>
+                    </div>
+                    <div class="description">Returns the Coupon codes from the Shopper Context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The Coupon codes set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getCustomerGroupIDs_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomerGroupIDs</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomerGroupIDs</span>()
+					 : 
+					<a href="class_dw_util_Set.html"><span class="">Set</span></a>
+                    </div>
+                    <div class="description">Returns customer group IDs from the Shopper Context to apply. The customer group IDs set in Shopper Context
+ evaluate to customer groups that trigger the promotions (campaign assignment) assigned to the customer groups.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The customer group IDs for the Shopper Context to apply.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getCustomQualifiers_DetailAnchor"></a>
+                    <div class="detailName 
+						">getCustomQualifiers</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getCustomQualifiers</span>()
+					 : 
+					<a href="class_dw_util_Map.html"><span class="">Map</span></a>
+                    </div>
+                    <div class="description">Returns the custom qualifiers from the Shopper Context. Custom qualifiers contain the custom session attributes
+ set in the Shopper Context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">A map containing the custom qualifiers set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getEffectiveDateTime_DetailAnchor"></a>
+                    <div class="detailName 
+						">getEffectiveDateTime</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getEffectiveDateTime</span>()
+					 : 
+					<a href="class_TopLevel_Date.html"><span class="">Date</span></a>
+                    </div>
+                    <div class="description">Returns the effective date time from the Shopper Context. With the effective date time you can retrieve
+ promotions that are active at a particular time. For example, "Shop the Future" use cases.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The effective date time in UTC for the Shopper Context to apply.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getGeolocation_DetailAnchor"></a>
+                    <div class="detailName 
+						">getGeolocation</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getGeolocation</span>()
+					 : 
+					<a href="class_dw_util_Geolocation.html"><span class="">Geolocation</span></a>
+                    </div>
+                    <div class="description">Returns the geographic location from the Shopper Context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The geographic location set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_getSourceCode_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSourceCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSourceCode</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the source code from the Shopper Context. The source code set in Shopper Context evaluates to source code
+ group that triggers the promotion (campaign assignment) and Price books (assigned to Source code group).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The source code for the Shopper Context to apply.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setAssignmentQualifiers_Map_DetailAnchor"></a>
+                    <div class="detailName 
+						">setAssignmentQualifiers</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setAssignmentQualifiers</span>(assignmentQualifiers
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the assignment qualifiers in the Shopper Context. Assignment qualifiers are set when using the assignment
+ framework to trigger pricing and promotion experiences for Products, Product Search, Basket, Shipping methods
+ etc.
+ <p>
+ <b>Example: Assignment qualifier for store can be set as follows: </b>
+ <pre><code>
+  var assignmentQualifiers = new dw.util.HashMap();
+  assignmentQualifiers.put( "storeId", "Boston" );
+  ShopperContext context = new ShopperContext();
+  context.setAssignmentQualifiers( customQualifiers );
+ </code></pre>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">assignmentQualifiers</span>
+						 - 
+						<span class="parameterDesc">A map which contains the assignment qualifiers to save in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setClientIP_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setClientIP</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setClientIP</span>(clientIP
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the IP address of the client in the Shopper Context. The client IP evaluates to a geolocation. If the client
+ IP address is not a valid IPv4/IPv6 address an error is thrown.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">clientIP</span>
+						 - 
+						<span class="parameterDesc">The IP Address of the client to set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setCouponCodes_Set_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCouponCodes</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCouponCodes</span>(couponCodes
+								 : 
+								 
+								<a href="class_dw_util_Set.html"><span class="">Set</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the Coupon codes in the Shopper Context. When you set coupon codes, it is saved as context for subsequent
+ requests and can then trigger promotions via the campaign which are tied to the coupon. A maximum of 5 coupon
+ codes can be set in the ShopperContext.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">couponCodes</span>
+						 - 
+						<span class="parameterDesc">The set of coupon codes to set in the Shopper Context. A maximum of 5 coupon codes per ShopperContext are allowed.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setCustomerGroupIDs_Set_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomerGroupIDs</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomerGroupIDs</span>(customerGroupIDs
+								 : 
+								 
+								<a href="class_dw_util_Set.html"><span class="">Set</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the customer group IDs for the Shopper Context to apply. Set the customer group IDs to evaluate customer
+ groups that trigger the promotions (campaign assignment) assigned to the customer groups.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customerGroupIDs</span>
+						 - 
+						<span class="parameterDesc">The customer group IDs for the Shopper Context to apply.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setCustomQualifiers_Map_DetailAnchor"></a>
+                    <div class="detailName 
+						">setCustomQualifiers</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setCustomQualifiers</span>(customQualifiers
+								 : 
+								 
+								<a href="class_dw_util_Map.html"><span class="">Map</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the session custom attributes as custom qualifiers in the Shopper Context. Custom qualifiers are set when
+ you want to trigger pricing and promotion experiences using a dynamic session-based customer groups.
+ <p>
+ <b>Example: A session custom attribute 'device_type' can be saved as follows: </b>
+ <pre><code>
+  var customQualifiers = new dw.util.HashMap();
+  customQualifiers.put( "deviceType", "iPad" );
+  ShopperContext context = new ShopperContext();
+  context.setCustomQualifiers( customQualifiers );
+ </code></pre>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customQualifiers</span>
+						 - 
+						<span class="parameterDesc">A map which contains the custom session attributes to save in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setEffectiveDateTime_Date_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEffectiveDateTime</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEffectiveDateTime</span>(effectiveDateTime
+								 : 
+								 
+								<a href="class_TopLevel_Date.html"><span class="">Date</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the effective date time for the context to apply. With the effective date time you can retrieve promotions
+ that are active at a particular time. For example, "Shop the Future" use cases.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">effectiveDateTime</span>
+						 - 
+						<span class="parameterDesc">The effective date time to set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setGeolocation_Geolocation_DetailAnchor"></a>
+                    <div class="detailName 
+						">setGeolocation</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setGeolocation</span>(geolocation
+								 : 
+								 
+								<a href="class_dw_util_Geolocation.html"><span class="">Geolocation</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the geographic location of the client in the Shopper Context. When you set a geolocation, it is saved as
+ context for subsequent requests. This overrides any context previously saved using clientIP in the Shopper
+ Context.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">geolocation</span>
+						 - 
+						<span class="parameterDesc">The geographic location of the client to set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_shoppercontext_ShopperContext_setSourceCode_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSourceCode</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSourceCode</span>(sourceCode
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the source code for the Shopper Context to apply. Set the source code to evaluate source code group that
+ triggers the promotion (campaign assignment) and Price books (assigned to Source code group).</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">sourceCode</span>
+						 - 
+						<span class="parameterDesc">The source code to set in the Shopper Context.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

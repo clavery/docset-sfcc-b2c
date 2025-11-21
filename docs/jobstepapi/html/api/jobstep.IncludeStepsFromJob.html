@@ -20,8 +20,15 @@
                                     Job Step
                                     IncludeStepsFromJob</div>
             <div class="topLevelDescription">Includes steps from another job.</div>
-            <div class="topLevelDescription">Includes steps from another job. This step makes it easy to create a set of standard steps that
-        you run in multiple jobs.
+            <div class="topLevelDescription">
+        This step makes it easy to create a set of standard steps 
+        that you can execute in multiple jobs. It is recommended to use the IncludeStepsFromJob step 
+        in single execution scope flows only (Organization or one specific Storefront Site).
+        If the IncludeStepsFromJob step is used in multi-site execution scope flows (more than one 
+        specific Storefront Site, All Storefront Sites) inclusion of the steps is done multiple times.
+        The included steps are always executed using the execution scope that was defined for them in the 
+        included job, regardless if the IncludeStepsFromJob step used in a single or multi-site execution scope
+        flow.
     </div>
             <div class="parameters">
                 <span class="parameterTitle">Execution Context:</span>
@@ -63,7 +70,7 @@
             </div>
         </div>
         <div class="copyright">
-                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                        &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
             <div class="clear"></div>

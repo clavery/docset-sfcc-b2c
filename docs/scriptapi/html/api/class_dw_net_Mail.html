@@ -107,6 +107,16 @@
                     </span>
                 </div>
                 <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>replyTo
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">Gets the <code>replyTo</code> address List.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="_DetailAnchor"></a>subject
 						&nbsp;:&nbsp;
 						
@@ -139,6 +149,15 @@
 			Method Summary
 		</div>
                 <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_Mail_addAttachment_File_DetailAnchor"><span class="">addAttachment</span></a></span>(file
+								 : 	
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+						: 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a></span>
+                    <div class="description">Adds a file attachment to the email.</div>
+                </div>
+                <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_Mail_addBcc_String_DetailAnchor"><span class="">addBcc</span></a></span>(bcc
 								 : 	
 								 
@@ -155,6 +174,15 @@
 						: 
 					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a></span>
                     <div class="description">Adds an address to the <code>cc</code> List.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_Mail_addReplyTo_String_DetailAnchor"><span class="">addReplyTo</span></a></span>(replyTo
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a></span>
+                    <div class="description">Adds an address to the <code>replyTo</code> List.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_Mail_addTo_String_DetailAnchor"><span class="">addTo</span></a></span>(to
@@ -182,6 +210,12 @@
 						: 
 					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
                     <div class="description">Gets the email address to use as the <code>from</code> address for the email.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_Mail_getReplyTo_DetailAnchor"><span class="">getReplyTo</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description">Gets the <code>replyTo</code> address List.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_Mail_getSubject_DetailAnchor"><span class="">getSubject</span></a></span>()
@@ -262,6 +296,24 @@
                     <div class="description"><b>Mandatory</b> Sets the sender address for this email.</div>
                 </div>
                 <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_Mail_setListUnsubscribe_String_DetailAnchor"><span class="">setListUnsubscribe</span></a></span>(listUnsubscribe
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a></span>
+                    <div class="description">Sets the List-Unsubscribe header value to work with List-Unsubscribe-Post to allow integration with an externally-managed mailing list.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_Mail_setListUnsubscribePost_String_DetailAnchor"><span class="">setListUnsubscribePost</span></a></span>(listUnsubscribePost
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a></span>
+                    <div class="description">Sets the List-Unsubscribe-Post header value.</div>
+                </div>
+                <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_Mail_setSubject_String_DetailAnchor"><span class="">setSubject</span></a></span>(subject
 								 : 	
 								 
@@ -320,6 +372,48 @@
 			Method Detail
 		</div>
                 <div class="detailItem">
+                    <a name="dw_net_Mail_addAttachment_File_DetailAnchor"></a>
+                    <div class="detailName 
+						">addAttachment</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addAttachment</span>(file
+								 : 
+								 
+								<a href="class_dw_io_File.html"><span class="">File</span></a>)
+					 : 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a>
+                    </div>
+                    <div class="description">Adds a file attachment to the email. This method is restricted to Job context only.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">file</span>
+						 - 
+						<span class="parameterDesc">The file to be attached to the email. Must not be null and must exist.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Mail object</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the file is null, doesn't exist, or is not a file</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_net_Mail_addBcc_String_DetailAnchor"></a>
                     <div class="detailName 
 						">addBcc</div>
@@ -377,6 +471,48 @@
                         <div class="parameterDetail"></div>
                         <div class="parameterDetail">
                             <span class="parameterDesc">this Mail object.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_Mail_addReplyTo_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">addReplyTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">addReplyTo</span>(replyTo
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a>
+                    </div>
+                    <div class="description">Adds an address to the <code>replyTo</code> List. Address must conform to the RFC822 standard.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">replyTo</span>
+						 - 
+						<span class="parameterDesc">new replyTo address to add to <code>replyTo</code> address List.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Mail object.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if the email address is invalid</span>
                         </div>
                     </div>
                     <hr>
@@ -466,6 +602,25 @@
                         <span class="parameterTitle">Returns:</span>
                         <div class="parameterDetail">
                             <span class="parameterDesc">the <code>from</code> address for this mail or null if no <code>from</code> address is set yet.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_Mail_getReplyTo_DetailAnchor"></a>
+                    <div class="detailName 
+						">getReplyTo</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getReplyTo</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description">Gets the <code>replyTo</code> address List.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><code>replyTo</code> address List or empty List if no <code>replyTo</code> addresses are set.</span>
                         </div>
                     </div>
                     <hr>
@@ -741,6 +896,69 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_net_Mail_setListUnsubscribe_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setListUnsubscribe</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setListUnsubscribe</span>(listUnsubscribe
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a>
+                    </div>
+                    <div class="description">Sets the List-Unsubscribe header value to work with List-Unsubscribe-Post to allow integration with an
+ externally-managed mailing list.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">listUnsubscribe</span>
+						 - 
+						<span class="parameterDesc">The List-Unsubscribe header value, e.g., "&lt;https://example.com/unsubscribe&gt;"</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Mail object</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_Mail_setListUnsubscribePost_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setListUnsubscribePost</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setListUnsubscribePost</span>(listUnsubscribePost
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_net_Mail.html"><span class="">Mail</span></a>
+                    </div>
+                    <div class="description">Sets the List-Unsubscribe-Post header value. This header supports one-click unsubscribe functionality.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">listUnsubscribePost</span>
+						 - 
+						<span class="parameterDesc">The List-Unsubscribe-Post header value, typically "List-Unsubscribe=One-Click"</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">this Mail object</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_net_Mail_setSubject_String_DetailAnchor"></a>
                     <div class="detailName 
 						">setSubject</div>
@@ -845,7 +1063,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

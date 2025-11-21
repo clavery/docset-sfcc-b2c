@@ -1163,19 +1163,20 @@
  cryptographic algorithm (for example, RSA) and may be followed by a mode and padding scheme.
  The supported algorithms are listed in the parameter description below.
  <p/>The cryptographic algorithms can be partitioned into <em>symmetric</em>
- and <em>asymmetric</em> (or public key/private key).<p/>
-
+ and <em>asymmetric</em> (or public key/private key).
+ <p/>
  <b>Symmetric</b> or "secret key" algorithms use the same key to encrypt
  and to decrypt the data. Symmetric algorithms are what most people think
  of as codes: using a well-known algorithm and a secret key to encode information,
  which can be decoded using the same algorithm and the same key. The algorithm
  is not secret, the secrecy is inherent to guarding the key. A significant
  problem with symmetric ciphers is that it is difficult to transfer the keys
- themselves securely. Symmetric algorithms include <em>password-based</em> algorithms.<p/>
+ themselves securely. Symmetric algorithms include <em>password-based</em> algorithms.
+ <p/>
  <b>AES with key length of 256 bits is the preferred choice for symmetric encryption going forward.
  Please consider switching to it if you are using any other scheme or if using AES with a
- shorter key length. The rest of the symmetric algorithms will be deprecated in the future.</b><br/><br/>
-
+ shorter key length. The rest of the symmetric algorithms will be deprecated in the future.</b>
+ <p/>
  <b>Asymmetric</b> or "public key" cryptography uses a public/private key pair, and then publishes the public key.
  Only the holder of the private key will be able to decrypt.
  The public key and private key together are also called a "key pair".
@@ -1186,53 +1187,56 @@
  a closely guarded secret (the "private key"). Many partners can then
  send data encrypted with the public key, but only the holder of the
  corresponding private key can decrypt it.
-
-  <p/>Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
-  One of the most popular options is the open source tool OpenSSL.
-  OpenSSL has a command-line syntax and is available on major platforms.
-  <p/>The following steps are involved in <b>creating an RSA key pair:</b>
-  <p/>
-  <p/>1. <code>openssl genrsa -out rsaprivatekey.pem 2048</code>
-  <p/>2. <code>openssl rsa -in rsaprivatekey.pem -out publickey.pem -pubout</code>
-  <p/>3. <code>openssl pkcs8 -topk8 -in rsaprivatekey.pem -out privatekey.pem -nocrypt</code>
-
-  <p/>1. Generates an RSA private key with keylength of 2048 bits. Store this key in a safe place.
-  <p/>2. Generates a public key from the private key. You use the public key to encrypt messages with Cipher.encrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.
-  <p/>3. Generates a private key in PKCS#8 format. You use that key to decrypt messages with Cipher.decrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.
- <p/><b>Modes</b><p/>
-  The following modes of operation are block cipher operations that
-     are used with some algorithms.
-          <ul>
-          <li>"NONE" no mode</li>
-          <li>"CBC" Cipher Block Chaining (defined in FIPS PUB 81)</li>
-          <li>"CTR" Counter mode or Segmented Integer Counter mode (defined in FIPS PUB 81)</li>
-          <li>"CTS" CipherText Streaming mode</li>
-          <li>"CFB" Cipher Feedback Mode,  can be referred to with key
-          length referenced as "CFB8","CFB16","CFB24".."CFB64" (defined in FIPS PUB 81)</li>
-          <li>"ECB" Electronic Cook book  as defined in: The National
-          Institute of Standards and Technology (NIST) Federal Information
-          Processing Standard (FIPS) PUB 81, "DES Modes of Operation,"
-          U.S. Department of Commerce, Dec 1980.</li>
-          <li>"OFB" Output Feedback Mode, can be referred to with key
-          length referenced as "OFB8","OFB16","OFB24".."OFB64" (defined in FIPS PUB 81)</li>
-          <li>"PCBC" Propagating Cipher Block Chaining (defined in Kerberos V4)</li>
-          </ul>
-<p/><b>Paddings</b>
-          <ul>
-          <li>"NoPadding": No padding.</li>
-          <li>OAEPWith&lt;digest&gt;And&lt;mgf&gt;Padding: <p/>Optimal Asymmetric Encryption
-          Padding scheme defined in PKCS#1, where &lt;digest&gt; should be replaced
-          by the message digest and &lt;mgf&gt; by the mask generation function.
-          <p/>Examples: OAEPWITHSHA-256ANDMGF1PADDING,
-          OAEPWITHSHA-384ANDMGF1PADDING, OAEPWITHSHA-512ANDMGF1PADDING</li>
-          <li>ISO10126PADDING: the ISO10126-2:1991 DEA padding scheme</li>
-          <li>PKCS1Padding: Public Key Cryptography Standard #1, a standard
-          for padding from RSA Laboratories that can encrypt messages up
-          to 11 bytes smaller than the modulus size in bytes.</li>
-          <li>PKCS5Padding: Public Key Cryptography Standard #1, a standard
-          for padding from RSA Laboratories, "PKCS#5: Password-Based Encryption Standard," version 1.5, November 1993.</li>
-          <li>SSL3Padding: The padding scheme defined in the SSL Protocol Version 3.0, November 18, 1996, section 5.2.3.2 (CBC block cipher)</li>
-          </ul></div>
+ <p/>
+ Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
+ One of the most popular options is the open source tool OpenSSL.
+ OpenSSL has a command-line syntax and is available on major platforms.
+ <p/>
+ The following steps are involved in <b>creating an RSA key pair:</b>
+ <ol>
+ <li>Generate an RSA private key with keylength of 2048 bits. Store this key in a safe place.<br/>
+ <pre>openssl genrsa -out rsaprivatekey.pem 2048</pre></li>
+ <li>Generate a public key from the private key. You use the public key to encrypt messages with Cipher.encrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.<br/>
+ <pre>openssl rsa -in rsaprivatekey.pem -out publickey.pem -pubout</pre></li>
+ <li>Generate a private key in PKCS#8 format. You use that key to decrypt messages with Cipher.decrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.<br/>
+ <pre>openssl pkcs8 -topk8 -in rsaprivatekey.pem -out privatekey.pem -nocrypt</pre></li>
+ </ol>
+ <p/>
+ <b>Modes</b><br/>
+ The following modes of operation are block cipher operations that
+ are used with some algorithms.
+ <ul>
+ <li>"NONE" no mode</li>
+ <li>"CBC" Cipher Block Chaining (defined in FIPS PUB 81)</li>
+ <li>"CTR" Counter mode or Segmented Integer Counter mode (defined in FIPS PUB 81)</li>
+ <li>"CTS" CipherText Streaming mode</li>
+ <li>"CFB" Cipher Feedback Mode,  can be referred to with key
+ length referenced as "CFB8","CFB16","CFB24".."CFB64" (defined in FIPS PUB 81)</li>
+ <li>"ECB" Electronic Cook book  as defined in: The National
+ Institute of Standards and Technology (NIST) Federal Information
+ Processing Standard (FIPS) PUB 81, "DES Modes of Operation,"
+ U.S. Department of Commerce, Dec 1980.</li>
+ <li>"OFB" Output Feedback Mode, can be referred to with key
+ length referenced as "OFB8","OFB16","OFB24".."OFB64" (defined in FIPS PUB 81)</li>
+ <li>"PCBC" Propagating Cipher Block Chaining (defined in Kerberos V4)</li>
+ </ul>
+ <p/>
+ <b>Paddings</b>
+ <ul>
+ <li>"NoPadding": No padding.</li>
+ <li>OAEPWith&lt;digest&gt;And&lt;mgf&gt;Padding: <p/>Optimal Asymmetric Encryption
+ Padding scheme defined in PKCS#1, where &lt;digest&gt; should be replaced
+ by the message digest and &lt;mgf&gt; by the mask generation function.
+ <p/>
+ Examples: OAEPWITHSHA-256ANDMGF1PADDING, OAEPWITHSHA-384ANDMGF1PADDING, OAEPWITHSHA-512ANDMGF1PADDING</li>
+ <li>ISO10126PADDING: the ISO10126-2:1991 DEA padding scheme</li>
+ <li>PKCS1Padding: Public Key Cryptography Standard #1, a standard
+ for padding from RSA Laboratories that can encrypt messages up
+ to 11 bytes smaller than the modulus size in bytes.</li>
+ <li>PKCS5Padding: Public Key Cryptography Standard #1, a standard
+ for padding from RSA Laboratories, "PKCS#5: Password-Based Encryption Standard," version 1.5, November 1993.</li>
+ <li>SSL3Padding: The padding scheme defined in the SSL Protocol Version 3.0, November 18, 1996, section 5.2.3.2 (CBC block cipher)</li>
+ </ul></div>
                     <div class="parameters">
                         <span class="parameterTitle">API Versioned:</span>
                         <div class="parameterDetail">
@@ -1310,33 +1314,32 @@
                     <div class="description">Alternative method to
  <a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encrypt_2_String_String_String_String_Number_DetailAnchor">encrypt(String, String, String, String, Number)</a>, which allows you to
  use a key in the keystore for encryption.
- <p>
+ <p/>
  Note: Only asymmetric (public/private key pair) algorithms can be used
  with this method, since only those keys can be added to a keystore.
- </p>
- <p>
+ <p/>
  For asymmetric algorithms a private/public key pair is required.
  Commerce Cloud Digital only allows you to add private keys in the format *.p12 and *.pfx.
  You can assign private keys an extra password in Business Manager. Public keys
  can only be imported as trusted certificates in the format *.crt, *.pem,
  *.der, and *.cer.
- </p>
- <p/>Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
+ <p/>
+ Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
  One of the most popular options is the open source tool OpenSSL.
  OpenSSL has a command-line syntax and is available on major platforms.
- <p/>The following steps are involved in <b>creating an RSA key pair:</b>
  <p/>
- <p/>1. Generate a public and a non-protected private key ( *.crt and *.key ).< br/>
- <code>openssl req -x509 -newkey rsa:2048 -keyout nopass.key -out nopass.crt -days 365 -nodes</code>
- <p/>2. Generate a keystore that contains the public and private keys ( *.p12 ). < br/>
- <code>openssl pkcs12 -export -out nopass.p12 -inkey nopass.key -in nopass.crt</code>
- <p/>
+ The following steps are involved in <b>creating an RSA key pair:</b>
+ <ol>
+ <li>Generate a public and a non-protected private key ( *.crt and *.key ).<br/>
+ <pre>openssl req -x509 -newkey rsa:2048 -keyout nopass.key -out nopass.crt -days 365 -nodes</pre></li>
+ <li>Generate a keystore that contains the public and private keys ( *.p12 ).<br/>
+ <pre>openssl pkcs12 -export -out nopass.p12 -inkey nopass.key -in nopass.crt</pre></li>
+ </ol>
  To import a private or public key into the Digital keystore, navigate to
  <b>Administration > Operations > Private Keys and Certificates</b>
  Use a .p12 file to import a private key and a *.crt to import a public key.
  <p/>
- Typical usage:
-
+ Typical usage:<br/>
  <pre>
  var plain : String = "some_plain_text";
  var publicKeyRef = new CertificateRef("rsa-certificate-2048");
@@ -1361,7 +1364,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">publicKey</span>
 						 - 
-						<span class="parameterDesc">A reference to a public key in the key store.</span>
+						<span class="parameterDesc">A reference to a public key.</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">transformation</span>
@@ -1427,8 +1430,8 @@
  cryptographic algorithm (for example, RSA) and may be followed by a mode and padding scheme.
  The supported algorithms are listed in the parameter description below.
  <p/>The cryptographic algorithms can be partitioned into <em>symmetric</em>
- and <em>asymmetric</em> (or public key/private key).<p/>
-
+ and <em>asymmetric</em> (or public key/private key).
+ <p/>
  <b>Symmetric</b> or "secret key" algorithms use the same key to encrypt
  and to decrypt the data. Symmetric algorithms are what most people think
  of as codes: using a well-known algorithm and a secret key to encode information,
@@ -1438,8 +1441,8 @@
  themselves securely. Symmetric algorithms include <em>password-based</em> algorithms.<p/>
  <b>AES with key length of 256 bits is the preferred choice for symmetric encryption going forward.
  Please consider switching to it if you are using any other scheme or if using AES with a
- shorter key length. The rest of the symmetric algorithms will be deprecated in the future.</b><br/><br/>
-
+ shorter key length. The rest of the symmetric algorithms will be deprecated in the future.</b>
+ <p/>
  <b>Asymmetric</b> or "public key" cryptography uses a public/private key pair, and then publishes the public key.
  Only the holder of the private key will be able to decrypt.
  The public key and private key together are also called a "key pair".
@@ -1450,54 +1453,57 @@
  a closely guarded secret (the "private key"). Many partners can then
  send data encrypted with the public key, but only the holder of the
  corresponding private key can decrypt it.
-
-  <p/>Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
-  One of the most popular options is the open source tool OpenSSL.
-  OpenSSL has a command-line syntax and is available on major platforms.
-  <p/>The following steps are involved in <b>creating an RSA key pair:</b>
-  <p/>
-  <p/>1. <code>openssl genrsa -out rsaprivatekey.pem 2048</code>
-  <p/>2. <code>openssl rsa -in rsaprivatekey.pem -out publickey.pem -pubout</code>
-  <p/>3. <code>openssl pkcs8 -topk8 -in rsaprivatekey.pem -out privatekey.pem -nocrypt</code>
-
-  <p/>1. Generates an RSA private key with keylength of 2048 bits. Store this key in a safe place.
-  <p/>2. Generates a public key from the private key. You use the public key to encrypt messages with Cipher.encrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.
-  <p/>3. Generates a private key in PKCS#8 format. You use that key to decrypt messages with Cipher.decrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.
- <p/><b>Modes</b><p/>
-  The following modes of operation are block cipher operations that
-     are used with some algorithms.
-          <ul>
-          <li>"NONE" no mode</li>
-          <li>"CBC" Cipher Block Chaining (defined in FIPS PUB 81)</li>
-          <li>"CTR" Counter mode or Segmented Integer Counter mode (defined in FIPS PUB 81)</li>
-          <li>"CTS" CipherText Streaming mode</li>
-          <li>"CFB" Cipher Feedback Mode,  can be referred to with key
-          length referenced as "CFB8","CFB16","CFB24".."CFB64" (defined in FIPS PUB 81)</li>
-          <li>"ECB" Electronic Cook book  as defined in: The National
-          Institute of Standards and Technology (NIST) Federal Information
-          Processing Standard (FIPS) PUB 81, "DES Modes of Operation,"
-          U.S. Department of Commerce, Dec 1980.</li>
-          <li>"GCM" Galois/Counter Mode (defined in NIST SP 800-38D)</li>
-          <li>"OFB" Output Feedback Mode, can be referred to with key
-          length referenced as "OFB8","OFB16","OFB24".."OFB64" (defined in FIPS PUB 81)</li>
-          <li>"PCBC" Propagating Cipher Block Chaining (defined in Kerberos V4)</li>
-          </ul>
-<p/><b>Paddings</b>
-          <ul>
-          <li>"NoPadding": No padding.</li>
-          <li>OAEPWith&lt;digest&gt;And&lt;mgf&gt;Padding: <p/>Optimal Asymmetric Encryption
-          Padding scheme defined in PKCS#1, where &lt;digest&gt; should be replaced
-          by the message digest and &lt;mgf&gt; by the mask generation function.
-          <p/>Examples: OAEPWITHSHA-256ANDMGF1PADDING,
-          OAEPWITHSHA-384ANDMGF1PADDING, OAEPWITHSHA-512ANDMGF1PADDING</li>
-          <li>ISO10126PADDING: the ISO10126-2:1991 DEA padding scheme</li>
-          <li>PKCS1Padding: Public Key Cryptography Standard #1, a standard
-          for padding from RSA Laboratories that can encrypt messages up
-          to 11 bytes smaller than the modulus size in bytes.</li>
-          <li>PKCS5Padding: Public Key Cryptography Standard #1, a standard
-          for padding from RSA Laboratories, "PKCS#5: Password-Based Encryption Standard," version 1.5, November 1993.</li>
-          <li>SSL3Padding: The padding scheme defined in the SSL Protocol Version 3.0, November 18, 1996, section 5.2.3.2 (CBC block cipher)</li>
-          </ul></div>
+ <p/>
+ Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
+ One of the most popular options is the open source tool OpenSSL.
+ OpenSSL has a command-line syntax and is available on major platforms.
+ <p/>
+ The following steps are involved in <b>creating an RSA key pair:</b>
+ <ol>
+ <li>Generate an RSA private key with keylength of 2048 bits. Store this key in a safe place.<br/>
+ <pre>openssl genrsa -out rsaprivatekey.pem 2048</pre></li>
+ <li>Generate a public key from the private key. You use the public key to encrypt messages with Cipher.encrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.<br/>
+ <pre>openssl rsa -in rsaprivatekey.pem -out publickey.pem -pubout</pre></li>
+ <li>Generate a private key in PKCS#8 format. You use that key to decrypt messages with Cipher.decrypt. OpenSSL saves the key PEM-encoded; this means the key is saved with a base64 encoding. After you removed the header and footer lines you can pass the content directly to the API method.<br/>
+ <pre>openssl pkcs8 -topk8 -in rsaprivatekey.pem -out privatekey.pem -nocrypt</pre></li>
+ </ol>
+ <p/>
+ <b>Modes</b><br/>
+ The following modes of operation are block cipher operations that
+ are used with some algorithms.
+ <ul>
+ <li>"NONE" no mode</li>
+ <li>"CBC" Cipher Block Chaining (defined in FIPS PUB 81)</li>
+ <li>"CTR" Counter mode or Segmented Integer Counter mode (defined in FIPS PUB 81)</li>
+ <li>"CTS" CipherText Streaming mode</li>
+ <li>"CFB" Cipher Feedback Mode,  can be referred to with key
+ length referenced as "CFB8","CFB16","CFB24".."CFB64" (defined in FIPS PUB 81)</li>
+ <li>"ECB" Electronic Cook book  as defined in: The National
+ Institute of Standards and Technology (NIST) Federal Information
+ Processing Standard (FIPS) PUB 81, "DES Modes of Operation,"
+ U.S. Department of Commerce, Dec 1980.</li>
+ <li>"GCM" Galois/Counter Mode (defined in NIST SP 800-38D)</li>
+ <li>"OFB" Output Feedback Mode, can be referred to with key
+ length referenced as "OFB8","OFB16","OFB24".."OFB64" (defined in FIPS PUB 81)</li>
+ <li>"PCBC" Propagating Cipher Block Chaining (defined in Kerberos V4)</li>
+ </ul>
+ <p/>
+ <b>Paddings</b>
+ <ul>
+ <li>"NoPadding": No padding.</li>
+ <li>OAEPWith&lt;digest&gt;And&lt;mgf&gt;Padding: <p/>Optimal Asymmetric Encryption
+ Padding scheme defined in PKCS#1, where &lt;digest&gt; should be replaced
+ by the message digest and &lt;mgf&gt; by the mask generation function.
+ <p/>
+ Examples: OAEPWITHSHA-256ANDMGF1PADDING, OAEPWITHSHA-384ANDMGF1PADDING, OAEPWITHSHA-512ANDMGF1PADDING</li>
+ <li>ISO10126PADDING: the ISO10126-2:1991 DEA padding scheme</li>
+ <li>PKCS1Padding: Public Key Cryptography Standard #1, a standard
+ for padding from RSA Laboratories that can encrypt messages up
+ to 11 bytes smaller than the modulus size in bytes.</li>
+ <li>PKCS5Padding: Public Key Cryptography Standard #1, a standard
+ for padding from RSA Laboratories, "PKCS#5: Password-Based Encryption Standard," version 1.5, November 1993.</li>
+ <li>SSL3Padding: The padding scheme defined in the SSL Protocol Version 3.0, November 18, 1996, section 5.2.3.2 (CBC block cipher)</li>
+ </ul></div>
                     <div class="parameters">
                         <span class="parameterTitle">API Versioned:</span>
                         <div class="parameterDetail">
@@ -1573,33 +1579,32 @@
                     <div class="description">Alternative method to
  <a href="class_dw_crypto_Cipher.html#dw_crypto_Cipher_encrypt_3_String_String_String_String_Number_DetailAnchor">encrypt_3(String, String, String, String, Number)</a>, which allows you to
  use a key in the keystore for encryption.
- <p>
+ <p/>
  Note: Only asymmetric (public/private key pair) algorithms can be used
  with this method, since only those keys can be added to a keystore.
- </p>
- <p>
+ <p/>
  For asymmetric algorithms a private/public key pair is required.
  Commerce Cloud Digital only allows you to add private keys in the format *.p12 and *.pfx.
  You can assign private keys an extra password in Business Manager. Public keys
  can only be imported as trusted certificates in the format *.crt, *.pem,
  *.der, and *.cer.
- </p>
- <p/>Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
+ <p/>
+ Key pairs for asymmetric ciphers can be generated with an arbitrary tool.
  One of the most popular options is the open source tool OpenSSL.
  OpenSSL has a command-line syntax and is available on major platforms.
- <p/>The following steps are involved in <b>creating an RSA key pair:</b>
  <p/>
- <p/>1. Generate a public and a non-protected private key ( *.crt and *.key ).< br/>
- <code>openssl req -x509 -newkey rsa:2048 -keyout nopass.key -out nopass.crt -days 365 -nodes</code>
- <p/>2. Generate a keystore that contains the public and private keys ( *.p12 ). < br/>
- <code>openssl pkcs12 -export -out nopass.p12 -inkey nopass.key -in nopass.crt</code>
- <p/>
+ The following steps are involved in <b>creating an RSA key pair:</b>
+ <ol>
+ <li>Generate a public and a non-protected private key ( *.crt and *.key ).<br/>
+ <pre>openssl req -x509 -newkey rsa:2048 -keyout nopass.key -out nopass.crt -days 365 -nodes</pre></li>
+ <li>Generate a keystore that contains the public and private keys ( *.p12 ).<br/>
+ <pre>openssl pkcs12 -export -out nopass.p12 -inkey nopass.key -in nopass.crt</pre></li>
+ </ol>
  To import a private or public key into the Digital keystore, navigate to
  <b>Administration > Operations > Private Keys and Certificates</b>
  Use a .p12 file to import a private key and a *.crt to import a public key.
  <p/>
- Typical usage:
-
+ Typical usage:<br/>
  <pre>
  var plain : String = "some_plain_text";
  var publicKeyRef = new CertificateRef("rsa-certificate-2048");
@@ -1622,7 +1627,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">publicKey</span>
 						 - 
-						<span class="parameterDesc">A reference to a public key in the key store.</span>
+						<span class="parameterDesc">A reference to a public key.</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">transformation</span>
@@ -1805,7 +1810,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">publicKey</span>
 						 - 
-						<span class="parameterDesc">A reference to a public key in the key store.</span>
+						<span class="parameterDesc">A reference to a public key.</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">transformation</span>
@@ -1984,7 +1989,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">publicKey</span>
 						 - 
-						<span class="parameterDesc">A reference to a public key in the key store.</span>
+						<span class="parameterDesc">A reference to a public key.</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">transformation</span>
@@ -2017,7 +2022,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

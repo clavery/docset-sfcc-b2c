@@ -222,23 +222,23 @@
  Use <a href="class_dw_experience_Page.html#dw_experience_Page_hasVisibilityRules_DetailAnchor">hasVisibilityRules()</a> prior to calling this method in order to check for the existence of visibility rules. If there are
  visibility rules then do not apply pagecaching. Otherwise the visibility decision making would end up in the pagecache and any subsequent
  call would just return from the pagecache instead of performing the <a href="class_dw_experience_Page.html#dw_experience_Page_isVisible_DetailAnchor">isVisible()</a> check again as desired.
- <code><pre>
-   ...
-   var page = PageMgr.getPage(pageID);
-   if(page.hasVisibilityRules())
-   {
-      // pagecaching is NOT ok here
-      if(page.isVisible())
-      {
+ <pre>
+ ...
+ var page = PageMgr.getPage(pageID);
+ if (page.hasVisibilityRules())
+ {
+     // pagecaching is NOT ok here
+     if (page.isVisible())
+     {
          response.writer.print(PageMgr.renderPage(pageID, {});
-      }
-   }
-   else
-   {
-       // pagecaching is ok here, but requires a pagecache refresh if merchants start adding visibility rules to the page
-   }
-   ...
- </pre></code>
+     }
+ }
+ else
+ {
+     // pagecaching is ok here, but requires a pagecache refresh if merchants start adding visibility rules to the page
+ }
+ ...
+ </pre>
  </p></div>
                     </span>
                 </div>
@@ -735,23 +735,23 @@
  Use <a href="class_dw_experience_Page.html#dw_experience_Page_hasVisibilityRules_DetailAnchor">hasVisibilityRules()</a> prior to calling this method in order to check for the existence of visibility rules. If there are
  visibility rules then do not apply pagecaching. Otherwise the visibility decision making would end up in the pagecache and any subsequent
  call would just return from the pagecache instead of performing the <a href="class_dw_experience_Page.html#dw_experience_Page_isVisible_DetailAnchor">isVisible()</a> check again as desired.
- <code><pre>
-   ...
-   var page = PageMgr.getPage(pageID);
-   if(page.hasVisibilityRules())
-   {
-      // pagecaching is NOT ok here
-      if(page.isVisible())
-      {
+ <pre>
+ ...
+ var page = PageMgr.getPage(pageID);
+ if (page.hasVisibilityRules())
+ {
+     // pagecaching is NOT ok here
+     if (page.isVisible())
+     {
          response.writer.print(PageMgr.renderPage(pageID, {});
-      }
-   }
-   else
-   {
-       // pagecaching is ok here, but requires a pagecache refresh if merchants start adding visibility rules to the page
-   }
-   ...
- </pre></code>
+     }
+ }
+ else
+ {
+     // pagecaching is ok here, but requires a pagecache refresh if merchants start adding visibility rules to the page
+ }
+ ...
+ </pre>
  </p></div>
                     <div class="parameters">
                         <span class="parameterTitle">Returns:</span>
@@ -771,7 +771,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

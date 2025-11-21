@@ -57,8 +57,8 @@
 
  <pre>
  <code>
- var httpClient : HTTPClient = new HTTPClient();
- var message : String;
+ var httpClient = new HTTPClient();
+ var message;
  httpClient.open('GET', 'http://www.myinstance.com/feed.xml');
  httpClient.setTimeout(3000);
  httpClient.send();
@@ -69,7 +69,7 @@
  else
  {
      // error handling
-     message="An error occurred with status code "+httpClient.statusCode;
+     message = "An error occurred with status code "+httpClient.statusCode;
  }
  </code>
  </pre></div>
@@ -194,6 +194,15 @@
                     </span>
                 </div>
                 <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>loggingConfig
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_net_HTTPClientLoggingConfig.html"><span class="">HTTPClientLoggingConfig</span></a>
+                        <div class="description">Gets the logging configuration for this HTTP client.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="_DetailAnchor"></a>responseHeaders
 						&nbsp;:&nbsp;
 						
@@ -250,7 +259,14 @@
 		</div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_HTTPClient_HTTPClient_DetailAnchor"><span class="">HTTPClient</span></a></span>()</span>
-                    <div class="description"></div>
+                    <div class="description">Constructs the HTTPClient instance with the default configuration.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClient_HTTPClient_Object_DetailAnchor"><span class="">HTTPClient</span></a></span>(configMap
+									 : 
+									
+									<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)</span>
+                    <div class="description">Constructs the HTTPClient instance with the given configuration.</div>
                 </div>
             </div>
             <div class="section">
@@ -307,6 +323,12 @@
 						: 
 					<a href="class_dw_crypto_KeyRef.html"><span class="">KeyRef</span></a></span>
                     <div class="description">Gets the identity used for mutual TLS (mTLS).</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClient_getLoggingConfig_DetailAnchor"><span class="">getLoggingConfig</span></a></span>()
+						: 
+					<a href="class_dw_net_HTTPClientLoggingConfig.html"><span class="">HTTPClientLoggingConfig</span></a></span>
+                    <div class="description">Gets the logging configuration for this HTTP client.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_HTTPClient_getResponseHeader_String_DetailAnchor"><span class="">getResponseHeader</span></a></span>(header
@@ -546,6 +568,15 @@
                     <div class="description">Sets the identity (private key) to use when mutual TLS (mTLS) is configured.</div>
                 </div>
                 <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClient_setLoggingConfig_HTTPClientLoggingConfig_DetailAnchor"><span class="">setLoggingConfig</span></a></span>(config
+								 : 	
+								 
+								<a href="class_dw_net_HTTPClientLoggingConfig.html"><span class="">HTTPClientLoggingConfig</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the logging configuration for this HTTP client.</div>
+                </div>
+                <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_net_HTTPClient_setRequestHeader_String_String_DetailAnchor"><span class="">setRequestHeader</span></a></span>(key
 								 : 	
 								 
@@ -589,7 +620,53 @@
 	    				">
                         public&nbsp;<span class="emphasis">HTTPClient</span>()
                     </div>
-                    <div class="description"></div>
+                    <div class="description">Constructs the HTTPClient instance with the default configuration.</div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClient_HTTPClient_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPClient</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPClient</span>(configMap
+								 : 
+								 					
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+                    </div>
+                    <div class="description">Constructs the HTTPClient instance with the given configuration.
+ <p>
+ There is one supported configuration option. Unknown options are ignored.
+ <table>
+     <caption>Supported configuration</caption>
+     <tr>
+         <th>Name</th>
+         <th>Type</th>
+         <th>Description</th>
+     </tr>
+     <tr>
+         <td><code>allowHTTP2</code></td>
+         <td><code>boolean</code></td>
+         <td>Allow connections over HTTP/2. This will still allow HTTP/1.1 if that is what the remote server
+         supports. It will also cause all request and response headers to be case-insensitive.
+         The default value is <code>false</code>.</td>
+     </tr>
+ </table>
+
+ <p>
+ Sample usage:
+ <pre>
+ var httpClient = new HTTPClient( { allowHTTP2: true } )
+ </pre>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">configMap</span>
+						 - 
+						<span class="parameterDesc">A Map containing configuration options.</span>
+                        </div>
+                    </div>
                     <hr>
                 </div>
             </div>
@@ -614,10 +691,10 @@
  <p>
  It basically means that a response is cached, and before making a request the HTTP client looks into the cache to
  determine whether the response is already available. Only responses with a status code of 2xx, with a content
- length, with a size less then 50k, and which are not intended to be immediately written to a file are cached.
+ length, with a size less than 50k, and which are not intended to be immediately written to a file are cached.
  <p>
  The provided parameter defines the TTL (time to live) for the cached content. A value of 0 disables caching. The
- URL and the user name are used as cache keys. The total size of the cacheable content and the number of cached
+ URL and the username are used as cache keys. The total size of the cacheable content and the number of cached
  items is limited and automatically managed by the system. Cache control information send by the remote server is
  ignored. Caching HTTP responses should be done very carefully. It is important to ensure that the response really
  depends only on the URL and doesn't contain any remote state information or time information which is independent
@@ -771,6 +848,25 @@
                         <span class="parameterTitle">Returns:</span>
                         <div class="parameterDetail">
                             <span class="parameterDesc">Reference to the private key, or null if not configured</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClient_getLoggingConfig_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLoggingConfig</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLoggingConfig</span>()
+					 : 
+					<a href="class_dw_net_HTTPClientLoggingConfig.html"><span class="">HTTPClientLoggingConfig</span></a>
+                    </div>
+                    <div class="description">Gets the logging configuration for this HTTP client.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the current logging configuration</span>
                         </div>
                     </div>
                     <hr>
@@ -1144,7 +1240,7 @@
 					void
                     </div>
                     <div class="description">This method performs the actual HTTP communication. The text is sent as a request body. If the text is null no
- data will be send to the HTTP server.</div>
+ data will be sent to the HTTP server.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -1172,7 +1268,7 @@
 					void
                     </div>
                     <div class="description">This method performs the actual HTTP communication. The text is sent as a request body. If the text is null no
- data will be send to the HTTP server.</div>
+ data will be sent to the HTTP server.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -1226,7 +1322,7 @@
 					 : 
 					boolean
                     </div>
-                    <div class="description">This method performs the actual HTTP communication. If the file is null no data will be send to the HTTP server.
+                    <div class="description">This method performs the actual HTTP communication. If the file is null no data will be sent to the HTTP server.
  If this method is used with a GET then the file parameter will contain the contents retrieved. When using this
  method with a PUT/POST then the contents of the file parameter will be sent to the server.</div>
                     <div class="parameters">
@@ -1262,7 +1358,7 @@
 					 : 
 					boolean
                     </div>
-                    <div class="description">This method performs the actual HTTP communication. If the text is null no data will be send to the HTTP server.</div>
+                    <div class="description">This method performs the actual HTTP communication. If the text is null no data will be sent to the HTTP server.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -1305,7 +1401,7 @@
 					 : 
 					boolean
                     </div>
-                    <div class="description">This method performs the actual HTTP communication. If the text is null no data will be send to the HTTP server.</div>
+                    <div class="description">This method performs the actual HTTP communication. If the text is null no data will be sent to the HTTP server.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -1524,6 +1620,30 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_net_HTTPClient_setLoggingConfig_HTTPClientLoggingConfig_DetailAnchor"></a>
+                    <div class="detailName 
+						">setLoggingConfig</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setLoggingConfig</span>(config
+								 : 
+								 
+								<a href="class_dw_net_HTTPClientLoggingConfig.html"><span class="">HTTPClientLoggingConfig</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the logging configuration for this HTTP client.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">config</span>
+						 - 
+						<span class="parameterDesc">the logging configuration to use</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_net_HTTPClient_setRequestHeader_String_String_DetailAnchor"></a>
                     <div class="detailName 
 						">setRequestHeader</div>
@@ -1596,7 +1716,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

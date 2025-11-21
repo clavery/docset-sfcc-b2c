@@ -41,14 +41,20 @@
             </div>
             <div class="classSummary">
                 <div class="classSummaryDetail">
-                    <div class="description"><h1>The class represents a remote include value that can be assigned to JSON Object properties.</h1> </br>
- <h2>Important notes:</h2>
+                    <div class="description">The class represents a remote include value that can be assigned to JSON Object properties.
+ <p>
+ <b>Important notes:</b>
+ <ul>
  <li>Authentication and authorization checks are performed only for the top
- level request, but NOT for remote include requests.
+ level request, but NOT for remote include requests.</li>
+ <li>The <code>RestResponseMgr</code> method <code>createScapiRemoteInclude()</code> allows only SCAPI URLs.</li>
+ <li>The <code>RestResponseMgr</code> method <code>createStorefrontControllerRemoteInclude()</code> allows only Controller URLs.</li>
  <li>Correct rendering of RemoteInclude-containing objects is only performed
- when processed by <pre>dw.system.RESTSuccessResponse.render()</pre> method. Please check the provided examples. </br>
- <h3>Example 1. Specify remote include properties.</h3>
-
+ when processed by <code>dw.system.RESTSuccessResponse.render()</code> method. Please check the provided examples.</li>
+ </ul>
+ </p>
+ <p>
+ <b>Example 1. Specify remote include properties.</b><br/>
  <pre>
  function specifyRemoteIncludeProperties() {
     var includeValue0 = dw.system.RESTResponseMgr.createScapiRemoteInclude("custom", "sample", "v1", "resource/path/0", dw.web.URLParameter("siteId", "TestWapi"));
@@ -58,10 +64,9 @@
     dw.system.RESTResponseMgr.createSuccess(greeting).render();
  }
  </pre>
-
- </br>
- <h3>Example 2. Specify array of remote include properties.</h3>
-
+ </p>
+ <p>
+ <b>Example 2. Specify array of remote include properties.</b><br/>
  <pre>
  function specifyArrayOfRemoteIncludes() {
    var includeValue0 = dw.system.RESTResponseMgr.createScapiRemoteInclude("custom", "sample", "v1", "resource/path/0", dw.web.URLParameter("siteId", "TestWapi"));
@@ -71,35 +76,34 @@
    dw.system.RESTResponseMgr.createSuccess(greeting).render();
  }
  </pre>
-
- </br>
- <h3>Example 3. Storefront controller remote include.</h3>
-
+ </p>
+ <p>
+ <b>Example 3. Storefront controller remote include.</b><br/>
  <pre>
-function storefrontRemoteInclude()
-{
-    let remoteInclude = dw.system.RESTResponseMgr.createStorefrontControllerRemoteInclude(new URLAction("Category-Show", "Sites-MyShop-Site", dw.web.URLParameter("cid", "root")));
-    let json = {
-        status: "JSONOK",
-        include: remoteInclude
-    };
-    dw.system.RESTResponseMgr.createSuccess(json).render();
-}
+ function storefrontRemoteInclude()
+ {
+     let remoteInclude = dw.system.RESTResponseMgr.createStorefrontControllerRemoteInclude(new URLAction("Category-Show", "Sites-MyShop-Site", dw.web.URLParameter("cid", "root")));
+     let json = {
+         status: "JSONOK",
+         include: remoteInclude
+     };
+     dw.system.RESTResponseMgr.createSuccess(json).render();
+ }
  </pre>
-
- <br>
- <b>Error handling:</b><br>
- <b>SCAPI:</b>
+ </p>
+ <p>
+ <b>Error handling:</b><br/>
+ <b>SCAPI:</b><br/>
  <ul>
  <li>In case of 404 response received on included resource, an empty JSON object '{}' will be supplied in final JSON.</li>
  <li>In case of 201..299, 3xx, 4xx (excluding 404), 5xx response from included resource, final response status will be 500 'Internal Server Error'</li>
  </ul>
- <br>
- <b>Controllers:</b>
+ <b>Controllers:</b><br/>
  <ul>
  <li>In case of any non 200 response from the included resource an empty string will be included.</li>
  <li>Note: In case your response format is JSON be aware that this can result in invalid JSON.</li>
- </ul></div>
+ </ul>
+ </p></div>
                     <div class="subclasses"></div>
                 </div>
             </div>
@@ -114,6 +118,16 @@ function storefrontRemoteInclude()
 					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
 							&nbsp;(Read Only)
                         <div class="description">The URL string value specified for the current instance.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>value
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description"></div>
                     </span>
                 </div>
             </div>
@@ -205,7 +219,7 @@ function storefrontRemoteInclude()
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

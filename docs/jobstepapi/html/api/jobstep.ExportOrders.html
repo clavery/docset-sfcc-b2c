@@ -19,7 +19,7 @@
             <div class="className">
                                     Job Step
                                     ExportOrders</div>
-            <div class="topLevelDescription">Exports all orders matching the selected criteria using Search Service, with a maximum of 1000 orders per run. After an order has been exported successfully, its export status is EXPORTED. If an order did not export successfully, its order export status is FAILED. This job step is intended to export orders at recurring intervals. To include all orders that are ready to be exported (up to 1000), set the filter criteria to Export Status = READY FOR EXPORT.</div>
+            <div class="topLevelDescription">Exports all orders matching the selected criteria using Search Service, with a maximum of 1000 orders per run. After an order has been exported successfully, its export status is EXPORTED. If an order did not export successfully, its order export status is FAILED. It is important to note that an  asynchronous write action performed on an order by another process can result in an optimistic locking exception during order export.  In this case, the order is written to the export file but the order status is not updated.  To prevent this from happening,  the order export status is initialized as EXPORT_STATUS_NOT_EXPORTED per default and  should only be changed to EXPORT_STATUS_READY when all other order modifications are completed. After an order  is exported successfully, the export status is changed to EXPORT_STATUS_EXPORTED. Otherwise, the export status is changed to   EXPORT_STATUS_FAILED. Orders in EXPORT_STATUS_FAILED should manually be reviewed and the export  status set back to EXPORT_STATUS_READY.  The system consuming the export file should also be able to receive the same order multiple times  in an idempotent manner.  This job step is intended to export orders at recurring intervals. To include all orders that are ready to be exported (up to 1000), set the filter criteria to Export Status = READY FOR EXPORT.</div>
             <div class="topLevelDescription"></div>
             <div class="parameters">
                 <span class="parameterTitle">Execution Context:</span>
@@ -228,7 +228,7 @@
             </div>
         </div>
         <div class="copyright">
-                        &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                        &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
             <div class="clear"></div>

@@ -63,11 +63,36 @@
                     </span>
                 </div>
                 <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductSearchModel_INVENTORY_LIST_IDS_PARAMETER_DetailAnchor"></a>INVENTORY_LIST_IDS_PARAMETER
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"ilids"
+                        <div class="description">URL Parameter for the inventory list IDs</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductSearchModel_MAXIMUM_INVENTORY_LIST_IDS_DetailAnchor"></a>MAXIMUM_INVENTORY_LIST_IDS
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;10
+                        <div class="description">The maximum number of inventory list IDs that can be passed to <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_setInventoryListIDs_List_DetailAnchor">setInventoryListIDs(List)</a></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="dw_catalog_ProductSearchModel_MAXIMUM_PRODUCT_IDS_DetailAnchor"></a>MAXIMUM_PRODUCT_IDS
 						&nbsp;:&nbsp;
 						
 					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;30
                         <div class="description">The maximum number of product IDs that can be passed to <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_setProductIDs_List_DetailAnchor">setProductIDs(List)</a></div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_catalog_ProductSearchModel_MAXIMUM_STORE_INVENTORY_FILTER_VALUES_DetailAnchor"></a>MAXIMUM_STORE_INVENTORY_FILTER_VALUES
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_Number.html"><span class="">Number</span></a>&nbsp;=&nbsp;10
+                        <div class="description">The maximum number of store inventory values for a store inventory filter that can be passed to
+ <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_setStoreInventoryFilter_StoreInventoryFilter_DetailAnchor">setStoreInventoryFilter(StoreInventoryFilter)</a></div>
                     </span>
                 </div>
                 <div class="summaryItem">
@@ -255,6 +280,17 @@
                     </span>
                 </div>
                 <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>inventoryIDs
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_util_List.html"><span class="">List</span></a>
+							&nbsp;(Read Only)
+                        <div class="description"><p>
+ Returns a list of inventory IDs that were specified in the search query or an empty list if no inventory ID set.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="_DetailAnchor"></a>orderableProductsOnly
 						&nbsp;:&nbsp;
 						
@@ -364,7 +400,7 @@
  Note that method does also return search hits representing products that
  were removed or went offline since the last index update, i.e. you must
  implement appropriate checks before accessing the product related to the
- search hit instance (see <a href="class_dw_catalog_ProductSearchHit.html#dw_catalog_ProductSearchHit_getProduct_DetailAnchor">ProductSearchHit.getProduct</a>)</div>
+ search hit instance (see <a href="class_dw_catalog_ProductSearchHit.html#dw_catalog_ProductSearchHit_getProduct_DetailAnchor">ProductSearchHit.getProduct()</a>)</div>
                     </span>
                 </div>
                 <div class="summaryItem">
@@ -509,6 +545,16 @@
                     </span>
                 </div>
                 <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>storeInventoryFilter
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_catalog_StoreInventoryFilter.html"><span class="">StoreInventoryFilter</span></a>
+                        <div class="description"><p>
+ Returns the <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a>, which was specified for this search.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span class="dep"><a name="_DetailAnchor"></a>suggestedSearchPhrase
 						&nbsp;:&nbsp;
 						
@@ -621,6 +667,12 @@
 						: 
 					<a href="class_dw_catalog_SortingRule.html"><span class="">SortingRule</span></a></span>
                     <div class="description">Returns the sorting rule used to order the products in the results of this query, or <code>null</code> if no search has been executed yet.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_getInventoryIDs_DetailAnchor"><span class="">getInventoryIDs</span></a></span>()
+						: 
+					<a href="class_dw_util_List.html"><span class="">List</span></a></span>
+                    <div class="description"><p> Returns a list of inventory IDs that were specified in the search query or an empty list if no inventory ID set.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_getOrderableProductsOnly_DetailAnchor"><span class="">getOrderableProductsOnly</span></a></span>()
@@ -737,6 +789,12 @@
                     <div class="description">Returns the sorting rule explicitly set on this model to be used to order the products in the results of this query, or <code>null</code> if no rule has been explicitly set.</div>
                 </div>
                 <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_getStoreInventoryFilter_DetailAnchor"><span class="">getStoreInventoryFilter</span></a></span>()
+						: 
+					<a href="class_dw_catalog_StoreInventoryFilter.html"><span class="">StoreInventoryFilter</span></a></span>
+                    <div class="description"><p> Returns the <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a>, which was specified for this search.</div>
+                </div>
+                <div class="summaryItem">
                     <span class="dep"><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_getSuggestedSearchPhrase_DetailAnchor"><span class="">getSuggestedSearchPhrase</span></a></span>()
 						: 
 					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
@@ -846,6 +904,15 @@
 						: 
 					void</span>
                     <div class="description">Set a flag indicating whether no-hits search should be tracked for predictive intelligence use.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_setInventoryListIDs_List_DetailAnchor"><span class="">setInventoryListIDs</span></a></span>(inventoryListIDs
+								 : 	
+								 
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+						: 
+					void</span>
+                    <div class="description"><p> Specifies multiple inventory list IDs used for the search query.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_setOrderableProductsOnly_Boolean_DetailAnchor"><span class="">setOrderableProductsOnly</span></a></span>(orderableOnly
@@ -975,6 +1042,15 @@
 						: 
 					void</span>
                     <div class="description">Sets the sorting rule to be used to order the products in the results of this query.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_catalog_ProductSearchModel_setStoreInventoryFilter_StoreInventoryFilter_DetailAnchor"><span class="">setStoreInventoryFilter</span></a></span>(storeInventoryFilter
+								 : 	
+								 
+								<a href="class_dw_catalog_StoreInventoryFilter.html"><span class="">StoreInventoryFilter</span></a>)
+						: 
+					void</span>
+                    <div class="description"><p> Filters the search result by one or more inventory list IDs provided by the class <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a> which supports a semantic URL parameter like zip, city, store ...</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_catalog_ProductSearchModel_urlForCategory_String_String_DetailAnchor"><span class="">urlForCategory</span></a></span>(action
@@ -1417,6 +1493,26 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchModel_getInventoryIDs_DetailAnchor"></a>
+                    <div class="detailName 
+						">getInventoryIDs</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getInventoryIDs</span>()
+					 : 
+					<a href="class_dw_util_List.html"><span class="">List</span></a>
+                    </div>
+                    <div class="description"><p>
+ Returns a list of inventory IDs that were specified in the search query or an empty list if no inventory ID set.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the list of inventory IDs that were specified in the search query or an empty list if no inventory ID set.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_catalog_ProductSearchModel_getOrderableProductsOnly_DetailAnchor"></a>
                     <div class="detailName 
 						">getOrderableProductsOnly</div>
@@ -1668,7 +1764,7 @@
  Note that method does also return search hits representing products that
  were removed or went offline since the last index update, i.e. you must
  implement appropriate checks before accessing the product related to the
- search hit instance (see <a href="class_dw_catalog_ProductSearchHit.html#dw_catalog_ProductSearchHit_getProduct_DetailAnchor">ProductSearchHit.getProduct</a>)</div>
+ search hit instance (see <a href="class_dw_catalog_ProductSearchHit.html#dw_catalog_ProductSearchHit_getProduct_DetailAnchor">ProductSearchHit.getProduct()</a>)</div>
                     <div class="parameters">
                         <span class="parameterTitle">Returns:</span>
                         <div class="parameterDetail">
@@ -1857,6 +1953,26 @@
                         <span class="parameterTitle">Returns:</span>
                         <div class="parameterDetail">
                             <span class="parameterDesc">a SortingRule or null.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchModel_getStoreInventoryFilter_DetailAnchor"></a>
+                    <div class="detailName 
+						">getStoreInventoryFilter</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getStoreInventoryFilter</span>()
+					 : 
+					<a href="class_dw_catalog_StoreInventoryFilter.html"><span class="">StoreInventoryFilter</span></a>
+                    </div>
+                    <div class="description"><p>
+ Returns the <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a>, which was specified for this search.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a>, which was specified for this search.</span>
                         </div>
                     </div>
                     <hr>
@@ -2238,6 +2354,42 @@
                             <span class="parameterName">trackingEmptySearches</span>
 						 - 
 						<span class="parameterDesc">true, no-hits search should be tracked, false, otherwise.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchModel_setInventoryListIDs_List_DetailAnchor"></a>
+                    <div class="detailName 
+						">setInventoryListIDs</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setInventoryListIDs</span>(inventoryListIDs
+								 : 
+								 
+								<a href="class_dw_util_List.html"><span class="">List</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>
+ Specifies multiple inventory list IDs used for the search query. The method supports up to
+ <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_MAXIMUM_INVENTORY_LIST_IDS_DetailAnchor">MAXIMUM_INVENTORY_LIST_IDS</a> inventory IDs. If more than <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_MAXIMUM_INVENTORY_LIST_IDS_DetailAnchor">MAXIMUM_INVENTORY_LIST_IDS</a> inventory IDs
+ used the method throws an IllegalArgumentException.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">inventoryListIDs</span>
+						 - 
+						<span class="parameterDesc">the inventory IDs for the search query.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if more than <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_MAXIMUM_INVENTORY_LIST_IDS_DetailAnchor">MAXIMUM_INVENTORY_LIST_IDS</a> inventory IDs used</span>
                         </div>
                     </div>
                     <hr>
@@ -2654,6 +2806,56 @@
                             <span class="parameterName">rule</span>
 						 - 
 						<span class="parameterDesc">the SortingRule to use to sort the products</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_catalog_ProductSearchModel_setStoreInventoryFilter_StoreInventoryFilter_DetailAnchor"></a>
+                    <div class="detailName 
+						">setStoreInventoryFilter</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setStoreInventoryFilter</span>(storeInventoryFilter
+								 : 
+								 
+								<a href="class_dw_catalog_StoreInventoryFilter.html"><span class="">StoreInventoryFilter</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description"><p>
+ Filters the search result by one or more inventory list IDs provided by the class <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a>
+ which supports a semantic URL parameter like zip, city, store ... and a list of <a href="class_dw_catalog_StoreInventoryFilterValue.html">StoreInventoryFilterValue</a>
+ which maps the semantic inventory list id value like Burlington, Boston, ... to a real inventory list id like
+ 'Burlington -> inventory1', 'Boston -> inventory2'. The search will filter the result by the real inventory list
+ id(s) but will use the semantic URL parameter and semantic inventory list id values for URL generation via all
+ URLRefine and URLRelax methods e.g. for <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_urlRefineCategory_URL_String_DetailAnchor">urlRefineCategory(URL, String)</a>, <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_urlRelaxPrice_URL_DetailAnchor">urlRelaxPrice(URL)</a>,
+ <a href="class_dw_catalog_SearchModel.html#dw_catalog_SearchModel_urlRefineAttribute_String_String_String_DetailAnchor">SearchModel.urlRefineAttribute(String, String, String)</a>.
+ <p>
+ Example custom URL: city=Burlington|Boston
+ <p>
+ <pre>
+ var storeFilter = new dw.catalog.StoreInventoryFilter("city",
+     new dw.util.ArrayList(
+         new dw.catalog.StoreInventoryFilterValue("Burlington","inventory_store_store9"),
+         new dw.catalog.StoreInventoryFilterValue("Boston","inventory_store_store8")
+ ));
+ searchModel.setStoreInventoryFilter(filter)</pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">storeInventoryFilter</span>
+						 - 
+						<span class="parameterDesc">The <a href="class_dw_catalog_StoreInventoryFilter.html">StoreInventoryFilter</a> instance to filter the search result by one or more inventory IDs with semantic key and semantic value support.</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            IllegalArgumentException						
+						 - 
+						 <span class="parameterDesc">if more than <a href="class_dw_catalog_ProductSearchModel.html#dw_catalog_ProductSearchModel_MAXIMUM_STORE_INVENTORY_FILTER_VALUES_DetailAnchor">MAXIMUM_STORE_INVENTORY_FILTER_VALUES</a> filter values used</span>
                         </div>
                     </div>
                     <hr>
@@ -3605,7 +3807,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

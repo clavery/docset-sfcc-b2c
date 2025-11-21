@@ -42,27 +42,28 @@
             <div class="classSummary">
                 <div class="classSummaryDetail">
                     <div class="description">Defines <i>extensions</i> to <a href="class_dw_order_ProductLineItem.html">ProductLineItem</a>s and
- <a href="class_dw_order_ShippingLineItem.html">ShippingLineItem</a>s belonging to an <a href="class_dw_order_Order.html"> order</a>.
+ <a href="class_dw_order_ShippingLineItem.html">ShippingLineItem</a>s belonging to an <a href="class_dw_order_Order.html">order</a>.
 
  <p/>
  The order-item can be accessed using
  <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getOrderItem_DetailAnchor">ProductLineItem.getOrderItem()</a> or
  <a href="class_dw_order_ShippingLineItem.html#dw_order_ShippingLineItem_getOrderItem_DetailAnchor">ShippingLineItem.getOrderItem()</a> - these methods return null
- if the item is associated with a <a href="class_dw_order_Basket.html"> basket</a> rather than
- an <a href="class_dw_order_Order.html"> order</a>. Alternative access is available using
+ if the item is associated with a <a href="class_dw_order_Basket.html">basket</a> rather than
+ an <a href="class_dw_order_Order.html">order</a>. Alternative access is available using
  <a href="class_dw_order_Order.html#dw_order_Order_getOrderItem_String_DetailAnchor">Order.getOrderItem(String)</a> by passing the
- <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getItemID_DetailAnchor"> itemID</a> used to identify the
+ <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getItemID_DetailAnchor">itemID</a> used to identify the
  order-item in for example export files. The
  associated order-item can also be accessed from
- <a href="class_dw_order_InvoiceItem.html"> invoice-items</a>,
- <a href="class_dw_order_ShippingOrderItem.html"> shipping-order-items</a>,
- <a href="class_dw_order_ReturnItem.html"> return-items</a> and <a href="class_dw_order_ReturnCaseItem.html"> return-case-items</a> using <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getOrderItem_DetailAnchor">AbstractItem.getOrderItem()</a>.
+ <a href="class_dw_order_InvoiceItem.html">invoice-items</a>,
+ <a href="class_dw_order_ShippingOrderItem.html">shipping-order-items</a>,
+ <a href="class_dw_order_ReturnItem.html">return-items</a> and <a href="class_dw_order_ReturnCaseItem.html">return-case-items</a>
+ using <a href="class_dw_order_AbstractItem.html#dw_order_AbstractItem_getOrderItem_DetailAnchor">AbstractItem.getOrderItem()</a>.
 
  <p/>
- The order-item provides an item-level <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getStatus_DetailAnchor"> status</a> and
- <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getType_DetailAnchor"> type</a>, methods for accessing and creating associated items,
- and methods used to <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_allocateInventory_Boolean_DetailAnchor"> allocate
- inventory</a> for <a href="class_dw_order_ShippingOrder.html"> shipping-order</a> creation.
+ The order-item provides an item-level <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getStatus_DetailAnchor">status</a> and
+ <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_getType_DetailAnchor">type</a>, methods for accessing and creating associated items,
+ and methods used to <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_allocateInventory_Boolean_DetailAnchor">allocate
+ inventory</a> for <a href="class_dw_order_ShippingOrder.html">shipping-order</a> creation.
  <p/>
  Order post-processing APIs (gillian) are now inactive by default and will throw
  an exception if accessed. Activation needs preliminary approval by Product Management.
@@ -513,7 +514,7 @@
  Attempts to allocate inventory for the item and returns the quantity that could be allocated or <code>null</code>
  if no allocation was possible.
  <p/>
- All <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getOptionProductLineItems_DetailAnchor"> option product line items</a> are allocated with
+ All <a href="class_dw_order_ProductLineItem.html#dw_order_ProductLineItem_getOptionProductLineItems_DetailAnchor">option product line items</a> are allocated with
  their parent. Note that for items with option product line items no partial allocation is possible. That means
  the partialAllocation parameter will in this case always be considered as <code>false</code></div>
                     <div class="parameters">
@@ -933,7 +934,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

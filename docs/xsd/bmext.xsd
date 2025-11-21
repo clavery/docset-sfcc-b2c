@@ -24,6 +24,11 @@
                 <xsd:element name="short_description" type="complexType.LocalizedString" minOccurs="0" maxOccurs="unbounded"/>
                 <xsd:element name="description" type="complexType.LocalizedString" minOccurs="0" maxOccurs="unbounded"/>
                 <xsd:element name="icon" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="sldsIconName" type="xsd:string" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Refers to one of the SLDS 'utility' icons (see https://www.lightningdesignsystem.com/icons/#utility ). In the 'Modern' BM UI, it is preferred over the regular icon.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
                 <xsd:element ref="exec" minOccurs="0"/>
             </xsd:sequence>
             <xsd:attribute name="id" type="xsd:string" use="required"/>

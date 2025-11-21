@@ -43,24 +43,26 @@
                 <div class="classSummaryDetail">
                     <div class="description">Container used to represent an subtotal or grandtotal item which contains various prices and a tax breakdown
  held in a collection of tax-items.
- <p/>Usage example:
- <code>
- <br/>var invoice : Invoice = ...;
- <br/>var productNet = invoice.productSubTotal.netPrice;
- <br/>var serviceNet = invoice.serviceSubTotal.netPrice;
- <br/>var grandNet   = invoice.grandTotal.netPrice;
- <br/>var grandTax   = invoice.grandTotal.tax;
- <br/>var grandGross = invoice.grandTotal.grossPrice;
- <br/>
- <br/> # tax breakdown
- <br/>for each(taxItem : TaxItem in invoice.grandTotal.taxItems) {
- <br/>  var tax : Money         = taxItem.amount;
- <br/>  var taxGroup : TaxGroup = taxItem.taxGroup;
- <br/>  var rate : Double       = taxGroup.rate;
- <br/>  var caption :String     = taxGroup.caption;
- <br/>  var taxType :String     = taxGroup.taxType;
- <br/>}
- </code></div>
+ <p>
+ <b>Usage example:</b>
+ <pre>
+ var invoice : Invoice = ...;
+ var productNet = invoice.productSubTotal.netPrice;
+ var serviceNet = invoice.serviceSubTotal.netPrice;
+ var grandNet   = invoice.grandTotal.netPrice;
+ var grandTax   = invoice.grandTotal.tax;
+ var grandGross = invoice.grandTotal.grossPrice;
+ 
+ # tax breakdown
+ for each(taxItem : TaxItem in invoice.grandTotal.taxItems) {
+   var tax : Money         = taxItem.amount;
+   var taxGroup : TaxGroup = taxItem.taxGroup;
+   var rate : Double       = taxGroup.rate;
+   var caption :String     = taxGroup.caption;
+   var taxType :String     = taxGroup.taxType;
+ }
+ </pre>
+ </p></div>
                     <div class="subclasses"></div>
                 </div>
             </div>
@@ -282,7 +284,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

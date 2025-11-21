@@ -958,7 +958,7 @@
 								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
 						: 
 					<a href="class_dw_order_OrderItem.html"><span class="">OrderItem</span></a></span>
-                    <div class="description">Returns the <a href="class_dw_order_OrderItem.html"> order item</a> with the given status which wraps a new <a href="class_dw_order_ShippingLineItem.html"> service item</a> which is created and added to the order.</div>
+                    <div class="description">Returns the <a href="class_dw_order_OrderItem.html">order item</a> with the given status which wraps a new <a href="class_dw_order_ShippingLineItem.html">service item</a> which is created and added to the order.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_order_Order_createShippingOrder_DetailAnchor"><span class="">createShippingOrder</span></a></span>()
@@ -1486,7 +1486,7 @@
 								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
 						: 
 					void</span>
-                    <div class="description">Sets the customer number of the customer associated with this container.</div>
+                    <div class="description">Sets the customer number associated with this order.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_order_Order_setCustomerOrderReference_String_DetailAnchor"><span class="">setCustomerOrderReference</span></a></span>(reference
@@ -1858,8 +1858,8 @@
 					 : 
 					<a href="class_dw_order_OrderItem.html"><span class="">OrderItem</span></a>
                     </div>
-                    <div class="description">Returns the <a href="class_dw_order_OrderItem.html"> order item</a> with the given status which wraps a new
- <a href="class_dw_order_ShippingLineItem.html"> service item</a> which is created and added to the order.</div>
+                    <div class="description">Returns the <a href="class_dw_order_OrderItem.html">order item</a> with the given status which wraps a new
+ <a href="class_dw_order_ShippingLineItem.html">service item</a> which is created and added to the order.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -1870,7 +1870,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">status</span>
 						 - 
-						<span class="parameterDesc">the status of the order item, use one of <ul> <li><a href="class_dw_order_OrderItem.html#dw_order_OrderItem_STATUS_NEW_DetailAnchor">OrderItem.STATUS_NEW</a></li> <li> <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_STATUS_OPEN_DetailAnchor">OrderItem.STATUS_OPEN</a></li> <li> <a href="class_dw_order_OrderItem.html#dw_order_OrderItem_STATUS_SHIPPED_DetailAnchor">OrderItem.STATUS_SHIPPED</a></li> </ul> <p/> Order post-processing APIs (gillian) are now inactive by default and will throw an exception if accessed. Activation needs preliminary approval by Product Management. Please contact support in this case. Existing customers using these APIs are not affected by this change and can use the APIs until further notice.</span>
+						<span class="parameterDesc">the status of the order item, use one of <ul> <li><a href="class_dw_order_OrderItem.html#dw_order_OrderItem_STATUS_NEW_DetailAnchor">OrderItem.STATUS_NEW</a></li> <li><a href="class_dw_order_OrderItem.html#dw_order_OrderItem_STATUS_OPEN_DetailAnchor">OrderItem.STATUS_OPEN</a></li> <li><a href="class_dw_order_OrderItem.html#dw_order_OrderItem_STATUS_SHIPPED_DetailAnchor">OrderItem.STATUS_SHIPPED</a></li> </ul> <p/> Order post-processing APIs (gillian) are now inactive by default and will throw an exception if accessed. Activation needs preliminary approval by Product Management. Please contact support in this case. Existing customers using these APIs are not affected by this change and can use the APIs until further notice.</span>
                         </div>
                     </div>
                     <div class="parameters">
@@ -2795,7 +2795,7 @@
                     <div class="parameters">
                         <span class="parameterTitle">Deprecated:</span>
                         <div class="parameterDetail">
-                            <span class="parameterDesc">This method will be removed soon. Please use the following methods instead: <ul> <li><a href="class_dw_order_Order.html#dw_order_Order_getOrderExportXML_DetailAnchor">getOrderExportXML()</a> – if payment instrument data should be masked <li> <a href="class_dw_order_Order.html#dw_order_Order_getOrderExportXML_1_String_String_DetailAnchor">getOrderExportXML(String, String)</a> – if payment instrument data should be re-encrypted </ul></span>
+                            <span class="parameterDesc">This method will be removed soon. Please use the following methods instead: <ul> <li><a href="class_dw_order_Order.html#dw_order_Order_getOrderExportXML_DetailAnchor">getOrderExportXML()</a> – if payment instrument data should be masked <li><a href="class_dw_order_Order.html#dw_order_Order_getOrderExportXML_1_String_String_DetailAnchor">getOrderExportXML(String, String)</a> – if payment instrument data should be re-encrypted </ul></span>
                         </div>
                         <div class="parameterDetail"></div>
                         <div class="parameterDetail"></div>
@@ -2900,7 +2900,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">encryptionAlgorithm</span>
 						 - 
-						<span class="parameterDesc">The encryption algorithm used for the re-encryption of the payment instrument data (credit card number, bank account number, bank account driver's license number). Must be one of the following: <ul> <li><a href="class_dw_order_Order.html#dw_order_Order_ENCRYPTION_ALGORITHM_RSA_ECB_OAEPWITHSHA_256ANDMGF1PADDING_DetailAnchor">ENCRYPTION_ALGORITHM_RSA_ECB_OAEPWITHSHA56ANDMGF1PADDING</a> – The current and preferred algorithm. <li> <a href="class_dw_order_Order.html#dw_order_Order_ENCRYPTION_ALGORITHM_RSA_ECB_PKCS1PADDING_DetailAnchor">ENCRYPTION_ALGORITHM_RSA_ECB_PKCS1PADDING</a> – This algorithm is outdated/deprecated and will be removed in a future release. Please do <b>not</b> use anymore. </ul></span>
+						<span class="parameterDesc">The encryption algorithm used for the re-encryption of the payment instrument data (credit card number, bank account number, bank account driver's license number). Must be one of the following: <ul> <li><a href="class_dw_order_Order.html#dw_order_Order_ENCRYPTION_ALGORITHM_RSA_ECB_OAEPWITHSHA_256ANDMGF1PADDING_DetailAnchor">ENCRYPTION_ALGORITHM_RSA_ECB_OAEPWITHSHA56ANDMGF1PADDING</a> – The current and preferred algorithm. <li><a href="class_dw_order_Order.html#dw_order_Order_ENCRYPTION_ALGORITHM_RSA_ECB_PKCS1PADDING_DetailAnchor">ENCRYPTION_ALGORITHM_RSA_ECB_PKCS1PADDING</a> – This algorithm is outdated/deprecated and will be removed in a future release. Please do <b>not</b> use anymore. </ul></span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">encryptionKey</span>
@@ -4272,13 +4272,18 @@
 					 : 
 					void
                     </div>
-                    <div class="description">Sets the customer number of the customer associated with this container.</div>
+                    <div class="description">Sets the customer number associated with this order.
+ <p/>
+ Note it is recommended to use (<a href="class_dw_order_Order.html#dw_order_Order_setCustomer_Customer_DetailAnchor">setCustomer(Customer)</a>) instead of this method. This method
+ only sets the customer number and should be used with care as it does <i>not re-link the order with a customer
+ profile</> object which can lead to an inconsistency! Ensure that the customer number used is not already taken
+ by a different customer profile.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
                             <span class="parameterName">customerNo</span>
 						 - 
-						<span class="parameterDesc">the customer number of the customer associated with this container.</span>
+						<span class="parameterDesc">the customer number associated with this order.</span>
                         </div>
                     </div>
                     <hr>
@@ -4489,7 +4494,7 @@
                     </div>
                     <div class="description">Sets the order status.
  <p/>
- Use this method when using Order Post Processing such as the creation of <a href="class_dw_order_ShippingOrder.html"> shipping
+ Use this method when using Order Post Processing such as the creation of <a href="class_dw_order_ShippingOrder.html">shipping
  orders</a>. The only supported values are <a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_OPEN_DetailAnchor">ORDER_STATUS_OPEN</a>, <a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_CANCELLED_DetailAnchor">ORDER_STATUS_CANCELLED</a>. Setting the
  status will adjust the order item status when applicable (item status not SHIPPED or CANCELLED). Note that the
  order status and the status of the items are directly related and dependent on one another.
@@ -4518,7 +4523,7 @@
                         <div class="parameterDetail">
                             <span class="parameterName">status</span>
 						 - 
-						<span class="parameterDesc">the status to be set, use one of: <ul> <li><a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_OPEN_DetailAnchor">ORDER_STATUS_OPEN</a></li> <li> <a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_CANCELLED_DetailAnchor">ORDER_STATUS_CANCELLED</a></li> </ul></span>
+						<span class="parameterDesc">the status to be set, use one of: <ul> <li><a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_OPEN_DetailAnchor">ORDER_STATUS_OPEN</a></li> <li><a href="class_dw_order_Order.html#dw_order_Order_ORDER_STATUS_CANCELLED_DetailAnchor">ORDER_STATUS_CANCELLED</a></li> </ul></span>
                         </div>
                     </div>
                     <div class="parameters">
@@ -4700,9 +4705,11 @@
  <p>
  This adds a history entry to the order. Focus of history entries are changes through business logic, both custom
  and internal logic. Tracked order changes are read-only and can be accessed in the Business Manager order
- history. The following attributes of the created <a href="class_dw_object_Note.html"> history entry</a> are initialized:
+ history. The following attributes of the created <a href="class_dw_object_Note.html">history entry</a> are initialized:
+ <ul>
  <li><a href="class_dw_object_Note.html#dw_object_Note_getCreatedBy_DetailAnchor">Note.getCreatedBy()</a> gets the current user assigned</li>
  <li><a href="class_dw_object_Note.html#dw_object_Note_getCreationDate_DetailAnchor">Note.getCreationDate()</a> gets the current date assigned</li>
+ </ul>
  </p>
  <p>
  This feature is intended to track important changes in custom order flow which should become visible in Business
@@ -4733,7 +4740,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

@@ -48,7 +48,8 @@
  These methods are called in sequence when a service is called:
  <ol>
  <li><a href="class_dw_svc_ServiceCallback.html#dw_svc_ServiceCallback_initServiceClient_Service_DetailAnchor">initServiceClient(Service)</a> -- Creates the underlying client that will be used to make the call. This is
- intended for SOAP Services. Other client types will be created automatically.
+ intended for SOAP Services and optionally for setting configuration options on the HTTP client. Other client types
+ will be created automatically.
  <li><a href="class_dw_svc_ServiceCallback.html#dw_svc_ServiceCallback_createRequest_Service_Object_DetailAnchor">createRequest(Service, Object...)</a> -- Given arguments to the <a href="class_dw_svc_Service.html#dw_svc_Service_call_Object_DetailAnchor">Service.call(Object...)</a>, configure
  the actual service request. This may include setting request headers, defining the message body, etc.
  <li><a href="class_dw_svc_ServiceCallback.html#dw_svc_ServiceCallback_execute_Service_Object_DetailAnchor">execute(Service, Object)</a> -- Perform the actual request. At this point the client has been configured
@@ -78,7 +79,8 @@
  </th>
  <tr>
  <td>HTTP</td>
- <td>Not normally implemented. Must return a <a href="class_dw_net_HTTPClient.html">HTTPClient</a></td>
+ <td>This is only required to use non-default options. It must return either a <a href="class_dw_net_HTTPClient.html">HTTPClient</a> or a Map
+ containing the <a href="class_dw_net_HTTPClient.html#dw_net_HTTPClient_HTTPClient_Object_DetailAnchor">HTTPClient.HTTPClient(Object)</a> options.</td>
  <td>Required unless execute is provided. The return value is expected to be either a String or array of
  <a href="class_dw_net_HTTPRequestPart.html">HTTPRequestPart</a>, which will be used as the request body</td>
  <td>Not called unless a boolean "executeOverride:true" is set on the callback. This is a temporary limitation, a
@@ -511,9 +513,19 @@
  <p>
  This does not normally need to be implemented, except in the case of SOAP services.
  <p>
- Example declaration:
+ It may also be used for HTTP services to override the default configuration.
+ </p>
+ <p>
+ Example SOAP service:
  <pre>
- initServiceClient: function( svc:SOAPService ) {
+ initServiceClient: function( svc ) {
+     return webreferences2.MyWSDL.getDefaultService();
+ }
+ </pre>
+ Example configuration override for an HTTP service:
+ <pre>
+ initServiceClient: function( svc ) {
+     return { allowHTTP2: true };
  }
  </pre></div>
                     <div class="parameters">
@@ -694,7 +706,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

@@ -51,11 +51,11 @@
 
  <pre>
  //CSRF token generation
- &lt;form ... action="<protected location>">
-   &lt;input name="foo" value="bar">
+ &lt;form ... action="&lt;protected location&gt;"&gt;
+   &lt;input name="foo" value="bar"&gt;
    &lt;input name="${dw.web.CSRFProtection.getTokenName()}"
-             value="${dw.web.CSRFProtection.generateToken()">
- &lt;/form>
+             value="${dw.web.CSRFProtection.generateToken()"&gt;
+ &lt;/form&gt;
  </pre>
 
  Then, in scripts call:
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

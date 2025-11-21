@@ -239,9 +239,13 @@
 						&nbsp;:&nbsp;
 						
 					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__EncryptionPropKeystoreType"
-                        <div class="description">WS-Security Encryption: The encryption/decryption keystore type ( jks or pkcs12 ),
-                         default is jks.
- Note: The keystore file has the basename of the WSDL file and the
+                        <div class="description">WS-Security Encryption: The signature keystore type ( jks, pkcs12, or managed ).
+ <p>
+ The default is jks.
+ <p>
+ The "managed" type will resolve aliases against the names of certificates and keys in Business Manager.
+ <p>
+ Note: For non-managed types, the keystore file has the basename of the WSDL file and the
  file extension based on the keystore type (e.g. MyService.jks).
  The keystore file has to be placed in the same cartridge directory
  as the WSDL file.</div>
@@ -378,8 +382,13 @@
 						&nbsp;:&nbsp;
 						
 					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"__SignaturePropKeystoreType"
-                        <div class="description">WS-Security: The signature keystore type ( jks or pkcs12 ), default is jks.
- Note: The keystore file has the basename of the WSDL file and the
+                        <div class="description">WS-Security: The signature keystore type ( jks, pkcs12, or managed ).
+ <p>
+ The default is jks.
+ <p>
+ The "managed" type will resolve aliases against the names of certificates and keys in Business Manager.
+ <p>
+ Note: For non-managed types, the keystore file has the basename of the WSDL file and the
  file extension based on the keystore type (e.g. MyService.jks).
  The keystore file has to be placed in the same cartridge directory
  as the WSDL file.</div>
@@ -1460,7 +1469,7 @@
                 </div>
             </div>
             <div class="copyright">
-                            &copy; Copyright 2000-2024, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
 
 			
                 <div class="clear"></div>

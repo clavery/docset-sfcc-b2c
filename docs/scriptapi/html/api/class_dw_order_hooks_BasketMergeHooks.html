@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class BasketMergeHooks</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.order.hooks.BasketMergeHooks">
+            <a name="dw.order.hooks.BasketMergeHooks"></a>
+            <div class="packageName">dw.order.hooks</div>
+            <div class="className
+					">	
+        	
+				Class BasketMergeHooks</div>
+            <div class="hierarchy">
+                <div style="position:relative;left:1%;">
+                    <img src="images/inherit.gif">dw.order.hooks.BasketMergeHooks
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">This interface represents all script hooks that can be registered to merge baskets. It contains the extension points
+ (hook names), and the functions that are called by each extension point. A function must be defined inside a
+ JavaScript source and must be exported. The script with the exported hook function must be located inside a site
+ cartridge. Inside the site cartridge a 'package.json' file with a 'hooks' entry must exist.
+
+ <pre>
+ "hooks": "./hooks.json"</pre>
+
+ The hooks entry links to a json file, relative to the 'package.json' file. This file lists all registered hooks
+ inside the hooks property:
+
+ <pre>
+ "hooks": [
+      {"name": "dw.order.mergeBasket", "script": "./mergeBasket.js"}
+ ]</pre>
+
+ A hook entry has a 'name' and a 'script' property.
+ <ul>
+ <li>The 'name' contains the extension point, the hook name.</li>
+ <li>The 'script' contains the script relative to the hooks file, with the exported hook function.</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_order_hooks_BasketMergeHooks_extensionPointMerge_DetailAnchor"></a>extensionPointMerge
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.order.mergeBasket"
+                        <div class="description">The extension point name dw.order.mergeBasket.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_order_hooks_BasketMergeHooks_mergeBasket_Basket_Basket_DetailAnchor"><span class="">mergeBasket</span></a></span>(source
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, currentBasket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Merges contents from a source basket (usually a former registered shopper's basket) to a destination basket (usually a former guest shopper basket that was transferred to the registered shopper upon login).</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_order_hooks_BasketMergeHooks_mergeBasket_Basket_Basket_DetailAnchor"></a>
+                    <div class="detailName 
+						">mergeBasket</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">mergeBasket</span>(source
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, currentBasket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Merges contents from a source basket (usually a former registered shopper's basket) to a destination basket
+ (usually a former guest shopper basket that was transferred to the registered shopper upon login).
+ <p>
+ In case of no implementation is registered, the default implementation is invoked.
+ <p>
+ This method is automatically called for the following scenarios:
+ <ul>
+ <li>After a successful call to the transfer Rest API with query parameter merge=true, whereby the guest and
+ registered users, both had an active basket attached. In this scenario the registered shopper's basket will be
+ the source of the merge and the transferred guest shopper's basket will be the destination.</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">source</span>
+						 - 
+						<span class="parameterDesc">the basket from which data should be merged into the destination, can be <code>null</code> e.g. in case the former guest shopper did not create a basket</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">currentBasket</span>
+						 - 
+						<span class="parameterDesc">the destination basket to merge data into</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

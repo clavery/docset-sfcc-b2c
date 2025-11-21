@@ -1,0 +1,640 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class HTTPClientLoggingConfig</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.net.HTTPClientLoggingConfig">
+            <a name="dw.net.HTTPClientLoggingConfig"></a>
+            <div class="packageName">dw.net</div>
+            <div class="className
+					">	
+        	
+				Class HTTPClientLoggingConfig</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.net.HTTPClientLoggingConfig
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description">Script API for configuring HTTP client logging and sensitive data redaction.
+ <p/>
+ This class provides a customer-facing interface for configuring HTTP client logging behavior, including
+ enabling/disabling logging, setting log levels, and defining sensitive fields that should be redacted from HTTP
+ request and response bodies.
+ <p/>
+ <b>Security Note:</b> This class handles sensitive security-related data and logging
+ configuration. Pay special attention to PCI DSS requirements when configuring sensitive field redaction to ensure
+ proper data protection.
+ Sensitive Fields of appropriate types MUST be set else logging will be skipped.
+ <p/>
+ <b>Usage Example:</b>
+ <pre>
+ var config = new dw.net.HTTPClientLoggingConfig();
+ // Enable logging and set level
+ config.setEnabled(true);
+ config.setLevel("INFO");
+ // Configure sensitive JSON fields
+ config.setSensitiveJsonFields(["password", "creditCard", "ssn"]);
+ // Configure sensitive XML fields
+ config.setSensitiveXmlFields(["password", "creditCard", "ssn"]);
+ // Configure sensitive headers
+ config.setSensitiveHeaders(["authorization", "x-api-key", "cookie"]);
+ // Configure sensitive body fields (for form data)
+ config.setSensitiveBodyFields(["password", "creditCard", "ssn"]);
+ // Configure text patterns for plain text/HTML content
+ config.setSensitiveTextPatterns([["password\\s*=\\s*[^\\s&]+"]]);
+ </pre>
+ <p/>
+ <b>Content Type Support:</b>
+ <ul>
+   <li><b>JSON:</b> Use setSensitiveJsonFields() to specify field names to redact</li>
+   <li><b>XML:</b> Use setSensitiveXmlFields() to specify element/attribute names to redact</li>
+   <li><b>Form Data:</b> Use setSensitiveBodyFields() to specify parameter names to redact</li>
+   <li><b>Plain Text/HTML:</b> Use setSensitiveTextPatterns() to specify regex patterns</li>
+   <li><b>Binary/Multipart:</b> Entire body is automatically treated as sensitive</li>
+ </ul></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>enabled
+						&nbsp;:&nbsp;
+						
+					    
+					    boolean
+                        <div class="description">Gets whether HTTP client logging is enabled.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>level
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+                        <div class="description">Gets the current log level for HTTP client logging.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sensitiveBodyFields
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                        <div class="description">Gets the sensitive body fields configured for form data redaction.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sensitiveHeaders
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                        <div class="description">Gets the sensitive headers configured for redaction.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sensitiveJsonFields
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                        <div class="description">Gets the sensitive JSON fields configured for redaction.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>sensitiveXmlFields
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                        <div class="description">Gets the sensitive XML fields configured for redaction.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_HTTPClientLoggingConfig_DetailAnchor"><span class="">HTTPClientLoggingConfig</span></a></span>()</span>
+                    <div class="description">Creates a new HTTPClientLoggingConfig instance.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_getLevel_DetailAnchor"><span class="">getLevel</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Gets the current log level for HTTP client logging.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_getSensitiveBodyFields_DetailAnchor"><span class="">getSensitiveBodyFields</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Gets the sensitive body fields configured for form data redaction.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_getSensitiveHeaders_DetailAnchor"><span class="">getSensitiveHeaders</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Gets the sensitive headers configured for redaction.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_getSensitiveJsonFields_DetailAnchor"><span class="">getSensitiveJsonFields</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Gets the sensitive JSON fields configured for redaction.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_getSensitiveXmlFields_DetailAnchor"><span class="">getSensitiveXmlFields</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]</span>
+                    <div class="description">Gets the sensitive XML fields configured for redaction.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_isEnabled_DetailAnchor"><span class="">isEnabled</span></a></span>()
+						: 
+					boolean</span>
+                    <div class="description">Gets whether HTTP client logging is enabled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setEnabled_Boolean_DetailAnchor"><span class="">setEnabled</span></a></span>(enabled
+								 : 	
+								 
+								boolean)
+						: 
+					void</span>
+                    <div class="description">Sets whether HTTP client logging is enabled.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setLevel_String_DetailAnchor"><span class="">setLevel</span></a></span>(level
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					void</span>
+                    <div class="description">Sets the log level for HTTP client logging.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setSensitiveBodyFields_String_DetailAnchor"><span class="">setSensitiveBodyFields</span></a></span>(fields
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					void</span>
+                    <div class="description">Sets the sensitive body fields that should be redacted from HTTP form data.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setSensitiveHeaders_String_DetailAnchor"><span class="">setSensitiveHeaders</span></a></span>(headers
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					void</span>
+                    <div class="description">Sets the sensitive headers that should be redacted from HTTP requests/responses.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setSensitiveJsonFields_String_DetailAnchor"><span class="">setSensitiveJsonFields</span></a></span>(fields
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					void</span>
+                    <div class="description">Sets the sensitive JSON fields that should be redacted from HTTP request/response bodies.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setSensitiveTextPatterns_String_DetailAnchor"><span class="">setSensitiveTextPatterns</span></a></span>(patterns
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					void</span>
+                    <div class="description">Sets the sensitive text patterns that should be redacted from HTTP request/response bodies.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_net_HTTPClientLoggingConfig_setSensitiveXmlFields_String_DetailAnchor"><span class="">setSensitiveXmlFields</span></a></span>(fields
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+						: 
+					void</span>
+                    <div class="description">Sets the sensitive XML fields that should be redacted from HTTP request/response bodies.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_HTTPClientLoggingConfig_DetailAnchor"></a>
+                    <div class="detailName 
+						">HTTPClientLoggingConfig</div>
+                    <div class="detailSignature
+	    				">
+                        public&nbsp;<span class="emphasis">HTTPClientLoggingConfig</span>()
+                    </div>
+                    <div class="description">Creates a new HTTPClientLoggingConfig instance.
+ <p/>
+ The public constructor should only be called from JavaScript, but cfgAPI uses this constructor for creating the
+ Service instance -> so fill the factory here</div>
+                    <hr>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_getLevel_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLevel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLevel</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Gets the current log level for HTTP client logging.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">the log level as a string (DEBUG, INFO, WARN, ERROR)</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_getSensitiveBodyFields_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSensitiveBodyFields</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSensitiveBodyFields</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Gets the sensitive body fields configured for form data redaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an array of field names that will be redacted from form data</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_getSensitiveHeaders_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSensitiveHeaders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSensitiveHeaders</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Gets the sensitive headers configured for redaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an array of header names that will be redacted</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_getSensitiveJsonFields_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSensitiveJsonFields</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSensitiveJsonFields</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Gets the sensitive JSON fields configured for redaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an array of field names that will be redacted from JSON content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_getSensitiveXmlFields_DetailAnchor"></a>
+                    <div class="detailName 
+						">getSensitiveXmlFields</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getSensitiveXmlFields</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>[]
+                    </div>
+                    <div class="description">Gets the sensitive XML fields configured for redaction.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">an array of field names that will be redacted from XML content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_isEnabled_DetailAnchor"></a>
+                    <div class="detailName 
+						">isEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">isEnabled</span>()
+					 : 
+					boolean
+                    </div>
+                    <div class="description">Gets whether HTTP client logging is enabled.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">true if logging is enabled, false otherwise</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setEnabled_Boolean_DetailAnchor"></a>
+                    <div class="detailName 
+						">setEnabled</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setEnabled</span>(enabled
+								 : 
+								 
+								boolean)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets whether HTTP client logging is enabled.
+ <p/>
+ When enabled, HTTP requests and responses will be logged according to the configured log level and sensitive
+ field redaction settings. When disabled, no HTTP logging will occur.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">enabled</span>
+						 - 
+						<span class="parameterDesc">true to enable logging, false to disable</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setLevel_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setLevel</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setLevel</span>(level
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the log level for HTTP client logging.
+ <p/>
+ The log level determines the verbosity of HTTP logging output. Available levels:
+ <ul>
+   <li><b>DEBUG:</b> Most verbose, includes detailed request/response information</li>
+   <li><b>INFO:</b> Standard level, includes basic request/response details</li>
+   <li><b>WARN:</b> Only logs warnings and errors</li>
+   <li><b>ERROR:</b> Only logs errors</li>
+ </ul></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">level</span>
+						 - 
+						<span class="parameterDesc">the log level (DEBUG, INFO, WARN, ERROR). Case-insensitive.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setSensitiveBodyFields_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSensitiveBodyFields</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSensitiveBodyFields</span>(fields
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the sensitive body fields that should be redacted from HTTP form data.
+ <p/>
+ When HTTP requests or responses contain form data (application/x-www-form-urlencoded), any parameters matching
+ the specified field names will be redacted with "****FILTERED****" in the logs.
+ Sensitive Field MUST be set else logging will be skipped for form body type
+ Setting with empty array will use default values ["name", "email", "email_address", "ssn", "first_name", "last_name"]
+ <p/>
+ <b>Example:</b>
+ <pre>
+ config.setSensitiveBodyFields(["fname", "creditCard", "ssn_last_4"]);
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">fields</span>
+						 - 
+						<span class="parameterDesc">an array of field names to redact from form data</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setSensitiveHeaders_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSensitiveHeaders</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSensitiveHeaders</span>(headers
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the sensitive headers that should be redacted from HTTP requests/responses.
+ <p/>
+ Any HTTP headers matching the specified names will be redacted with "****FILTERED****" in the logs. This is useful for
+ protecting sensitive authentication tokens, API keys, and session information.
+ Sensitive Headers MUST be set else logging will be skipped for headers
+ Setting the sensitive headers with empty array will use default values ["authorization", "cookie"]
+ <p/>
+ <b>Example:</b>
+ <pre>
+ config.setSensitiveHeaders([ "x-api-key", "x-auth-token"]);
+ config.setSensiviteHeaders([]);
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">headers</span>
+						 - 
+						<span class="parameterDesc">an array of header names to redact</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setSensitiveJsonFields_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSensitiveJsonFields</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSensitiveJsonFields</span>(fields
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the sensitive JSON fields that should be redacted from HTTP request/response bodies.
+ <p/>
+ When HTTP requests or responses contain JSON content, any fields matching the specified names will be redacted
+ with "****FILTERED****" in the logs.
+ Sensitive Field MUST be set else logging will be skipped for JSON body type
+ Setting with empty array will use default values ["name", "email", "email_address", "ssn", "first_name", "last_name", "password"]
+ <p/>
+ <b>Example:</b>
+ <pre>
+ config.setSensitiveJsonFields(["password", "creditCard", "ssn"]);
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">fields</span>
+						 - 
+						<span class="parameterDesc">an array of field names to redact from JSON content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setSensitiveTextPatterns_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSensitiveTextPatterns</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSensitiveTextPatterns</span>(patterns
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the sensitive text patterns that should be redacted from HTTP request/response bodies.
+ <p/>
+ When HTTP requests or responses contain text content, any text matching the specified regex patterns will be
+ redacted with "****FILTERED****" in the logs.
+ <p/>
+ <b>Example:</b>
+ <pre>
+ config.setSensitiveTextPatterns(["password", "credit.*card", "\\d{3}-\\d{2}-\\d{4}"]);
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">patterns</span>
+						 - 
+						<span class="parameterDesc">an array of regex patterns to match and redact from text content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_net_HTTPClientLoggingConfig_setSensitiveXmlFields_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">setSensitiveXmlFields</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">setSensitiveXmlFields</span>(fields
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>...)
+					 : 
+					void
+                    </div>
+                    <div class="description">Sets the sensitive XML fields that should be redacted from HTTP request/response bodies.
+ <p/>
+ When HTTP requests or responses contain XML content, any elements or attributes matching the specified names will
+ be redacted with "****FILTERED****" in the logs.
+ Sensitive Field MUST be set else logging will be skipped for XML body type
+ Setting with empty array will use default values ["name", "email", "email_address", "ssn", "first_name", "last_name", "password"]
+ <p/>
+ <b>Example:</b>
+ <pre>
+ config.setSensitiveXmlFields(["password", "creditCard", "ssn"]);
+ </pre></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">fields</span>
+						 - 
+						<span class="parameterDesc">an array of element/attribute names to redact from XML content</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

@@ -940,7 +940,7 @@
             <xsd:element name="categorization-rule" type="complexType.CategorizationRule" minOccurs="0"
                          maxOccurs="5"/>
         </xsd:sequence>
-        <xsd:attribute ref="xml:lang" />
+        <xsd:attribute ref="xml:lang" default="x-default"/>
         <xsd:attribute name="site-id" type="simpleType.Generic.NonEmptyString.256"/>
         <xsd:attribute name="primary-category-assignment" type="xsd:boolean" default="false"/>
         <xsd:attribute name="classification-category-assignment" type="xsd:boolean" default="false"/>
