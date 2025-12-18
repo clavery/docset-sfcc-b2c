@@ -1,0 +1,7 @@
+- title: dw.extensions.facebook
+  link: dw.extensions.facebook.md
+  topics:
+  - title: FacebookFeedHooks
+    link: dw.extensions.facebook.FacebookFeedHooks.md
+  - title: FacebookProduct
+    link: dw.extensions.facebook.FacebookProduct.md

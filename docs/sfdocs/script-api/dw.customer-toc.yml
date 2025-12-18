@@ -1,0 +1,55 @@
+- title: dw.customer
+  link: dw.customer.md
+  topics:
+  - title: AddressBook
+    link: dw.customer.AddressBook.md
+  - title: AgentUserMgr
+    link: dw.customer.AgentUserMgr.md
+  - title: AgentUserStatusCodes
+    link: dw.customer.AgentUserStatusCodes.md
+  - title: AuthenticationStatus
+    link: dw.customer.AuthenticationStatus.md
+  - title: Credentials
+    link: dw.customer.Credentials.md
+  - title: Customer
+    link: dw.customer.Customer.md
+  - title: CustomerActiveData
+    link: dw.customer.CustomerActiveData.md
+  - title: CustomerAddress
+    link: dw.customer.CustomerAddress.md
+  - title: CustomerCDPData
+    link: dw.customer.CustomerCDPData.md
+  - title: CustomerContextMgr
+    link: dw.customer.CustomerContextMgr.md
+  - title: CustomerGroup
+    link: dw.customer.CustomerGroup.md
+  - title: CustomerList
+    link: dw.customer.CustomerList.md
+  - title: CustomerMgr
+    link: dw.customer.CustomerMgr.md
+  - title: CustomerPasswordConstraints
+    link: dw.customer.CustomerPasswordConstraints.md
+  - title: CustomerPaymentInstrument
+    link: dw.customer.CustomerPaymentInstrument.md
+  - title: CustomerStatusCodes
+    link: dw.customer.CustomerStatusCodes.md
+  - title: EncryptedObject
+    link: dw.customer.EncryptedObject.md
+  - title: ExternalProfile
+    link: dw.customer.ExternalProfile.md
+  - title: OrderHistory
+    link: dw.customer.OrderHistory.md
+  - title: ProductList
+    link: dw.customer.ProductList.md
+  - title: ProductListItem
+    link: dw.customer.ProductListItem.md
+  - title: ProductListItemPurchase
+    link: dw.customer.ProductListItemPurchase.md
+  - title: ProductListMgr
+    link: dw.customer.ProductListMgr.md
+  - title: ProductListRegistrant
+    link: dw.customer.ProductListRegistrant.md
+  - title: Profile
+    link: dw.customer.Profile.md
+  - title: Wallet
+    link: dw.customer.Wallet.md

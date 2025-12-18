@@ -53,6 +53,17 @@
             <div class="section">
                 <div class="header">Properties</div>
                 <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>defaultPaymentInstrument
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_dw_customer_CustomerPaymentInstrument.html"><span class="">CustomerPaymentInstrument</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The default payment instrument associated with the related customer. If not available, returns the first
+ payment instrument or null if no payment instruments are associated with the customer.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="_DetailAnchor"></a>paymentInstruments
 						&nbsp;:&nbsp;
 						
@@ -84,6 +95,12 @@
 						: 
 					<a href="class_dw_customer_CustomerPaymentInstrument.html"><span class="">CustomerPaymentInstrument</span></a></span>
                     <div class="description">Creates a new, empty payment instrument object associated with the related customer for the given payment method.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_customer_Wallet_getDefaultPaymentInstrument_DetailAnchor"><span class="">getDefaultPaymentInstrument</span></a></span>()
+						: 
+					<a href="class_dw_customer_CustomerPaymentInstrument.html"><span class="">CustomerPaymentInstrument</span></a></span>
+                    <div class="description">Returns the default payment instrument associated with the related customer.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_customer_Wallet_getPaymentInstruments_DetailAnchor"><span class="">getPaymentInstruments</span></a></span>()
@@ -164,6 +181,26 @@
 						 <span class="parameterDesc">If passed 'paymentMethodId' is null.</span>
                         </div>
                         <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_customer_Wallet_getDefaultPaymentInstrument_DetailAnchor"></a>
+                    <div class="detailName 
+						">getDefaultPaymentInstrument</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getDefaultPaymentInstrument</span>()
+					 : 
+					<a href="class_dw_customer_CustomerPaymentInstrument.html"><span class="">CustomerPaymentInstrument</span></a>
+                    </div>
+                    <div class="description">Returns the default payment instrument associated with the related customer. If not available, returns the first
+ payment instrument or null if no payment instruments are associated with the customer.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">The default payment instrument object.</span>
+                        </div>
                     </div>
                     <hr>
                 </div>

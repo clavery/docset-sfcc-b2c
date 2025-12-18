@@ -4,6 +4,9 @@
   "properties": {
     "name": {"$ref":"common.json#/definitions/name"},
     "description": {"$ref":"common.json#/definitions/description"},
+    "arch_type": {
+      "$ref": "common.json#/definitions/arch_type"
+    },
     "attribute_definitions": {
       "type": "array",
       "items": {

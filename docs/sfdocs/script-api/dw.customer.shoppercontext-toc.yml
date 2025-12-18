@@ -1,0 +1,11 @@
+- title: dw.customer.shoppercontext
+  link: dw.customer.shoppercontext.md
+  topics:
+  - title: ShopperContext
+    link: dw.customer.shoppercontext.ShopperContext.md
+  - title: ShopperContextErrorCodes
+    link: dw.customer.shoppercontext.ShopperContextErrorCodes.md
+  - title: ShopperContextException
+    link: dw.customer.shoppercontext.ShopperContextException.md
+  - title: ShopperContextMgr
+    link: dw.customer.shoppercontext.ShopperContextMgr.md

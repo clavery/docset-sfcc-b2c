@@ -1,0 +1,457 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Class SalesforceAdyenSavedPaymentMethod</title>
+        <link rel="stylesheet" type="text/css" href="styles/javadoc.css" title="Style">
+        <script src="js/dwapi.js" type="text/javascript"></script>
+    </head>
+    <body onload="openFrameSet();">
+        <div class="banner">
+            <div class="bannerItem">
+                <a href="overview.html">
+	      			Overview
+	      		</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiVersioning.html">
+      					API Versioning
+      				</a>
+            </div>
+            <div class="bannerItem">
+                <a href="apiDeprecated.html">
+	      			Deprecated
+	      		</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="class_dw.extensions.payments.SalesforceAdyenSavedPaymentMethod">
+            <a name="dw.extensions.payments.SalesforceAdyenSavedPaymentMethod"></a>
+            <div class="packageName">dw.extensions.payments</div>
+            <div class="className
+					">	
+        	
+				Class SalesforceAdyenSavedPaymentMethod</div>
+            <div class="hierarchy">
+                <div>
+                    <a href="class_TopLevel_Object.html">Object</a>
+                </div>
+                <div style="position:relative;left:3%;">
+                    <img src="images/inherit.gif">dw.extensions.payments.SalesforceAdyenSavedPaymentMethod
+                </div>
+            </div>
+            <div class="classSummary">
+                <div class="classSummaryDetail">
+                    <div class="description"><p>
+ Salesforce Payments representation of an Adyen saved payment method object. See Salesforce Payments documentation for
+ how to gain access and configure it for use on your sites.
+ </p>
+ <p>
+ An Adyen saved payment method contains information about a credential used by a shopper to attempt payment, such as a
+ payment card or bank account. The available information differs for each type of payment method. It includes only
+ limited information that can be safely presented to a shopper to remind them what credential they used, and
+ specifically not complete card, account, or other numbers that could be used to make future payments.
+ </p></div>
+                    <div class="subclasses"></div>
+                </div>
+            </div>
+            <!--End of class div-->
+            <div class="section">
+                <div class="header">
+			Constants
+		</div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor"></a>TYPE_BANCONTACT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"bancontact"
+                        <div class="description">Represents the Bancontact payment method.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor"></a>TYPE_CARD
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"card"
+                        <div class="description">Represents a credit card type of payment method.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_IDEAL_DetailAnchor"></a>TYPE_IDEAL
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"ideal"
+                        <div class="description">Represents the iDEAL payment method.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_SEPA_DEBIT_DetailAnchor"></a>TYPE_SEPA_DEBIT
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"sepa_debit"
+                        <div class="description">Represents the SEPA Debit payment method.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">Properties</div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>brand
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The brand of this payment method, or <code>null</code> if none is available. Available on
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> type methods.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>expiryMonth
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The expiry month of the card for this payment method, or <code>null</code> if none is available.
+ Available on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a> type methods.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>expiryYear
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The expiry year of the card for this payment method, or <code>null</code> if none is available. Available
+ on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a> type methods.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>holderName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The cardholder name for this payment method, or <code>null</code> if none is available. Available on
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a>
+ type methods.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The identifier of this payment method.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>last4
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The last 4 digits of the credential for this payment method, or <code>null</code> if none is available.
+ Available on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a> type methods.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>ownerName
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The back account owner name for this payment method, or <code>null</code> if none is available. Available
+ on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_SEPA_DEBIT_DetailAnchor">TYPE_SEPA_DEBIT</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_IDEAL_DetailAnchor">TYPE_IDEAL</a> type method.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>type
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The type of this payment method.</div>
+                    </span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Constructor Summary
+		</div>
+                <div class="summaryItem"> 
+			This class does not have a constructor, so you cannot create it directly.  
+		    </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Summary
+		</div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getBrand_DetailAnchor"><span class="">getBrand</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the brand of this payment method, or <code>null</code> if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getExpiryMonth_DetailAnchor"><span class="">getExpiryMonth</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the expiry month of the card for this payment method, or <code>null</code> if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getExpiryYear_DetailAnchor"><span class="">getExpiryYear</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the expiry year of the card for this payment method, or <code>null</code> if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getHolderName_DetailAnchor"><span class="">getHolderName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the cardholder name for this payment method, or <code>null</code> if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getID_DetailAnchor"><span class="">getID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the identifier of this payment method.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getLast4_DetailAnchor"><span class="">getLast4</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the last 4 digits of the credential for this payment method, or <code>null</code> if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getOwnerName_DetailAnchor"><span class="">getOwnerName</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the back account owner name for this payment method, or <code>null</code> if none is available.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getType_DetailAnchor"><span class="">getType</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the type of this payment method.</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subHeader">
+                    						Methods inherited from class 
+						
+					    <a href="class_TopLevel_Object.html"><span class="">Object</span></a>
+                </div>
+                <div class="summaryItem">
+                    <a href="class_TopLevel_Object.html#TopLevel_Object_assign_Object_Object_DetailAnchor"><span class="">assign</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_create_Object_Object_DetailAnchor"><span class="">create</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperties_Object_Object_DetailAnchor"><span class="">defineProperties</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_defineProperty_Object_Object_Object_DetailAnchor"><span class="">defineProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_entries_Object_DetailAnchor"><span class="">entries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_freeze_Object_DetailAnchor"><span class="">freeze</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_fromEntries_Iterable_DetailAnchor"><span class="">fromEntries</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyDescriptor_Object_Object_DetailAnchor"><span class="">getOwnPropertyDescriptor</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertyNames_Object_DetailAnchor"><span class="">getOwnPropertyNames</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getOwnPropertySymbols_Object_DetailAnchor"><span class="">getOwnPropertySymbols</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_getPrototypeOf_Object_DetailAnchor"><span class="">getPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_hasOwnProperty_String_DetailAnchor"><span class="">hasOwnProperty</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_is_Object_Object_DetailAnchor"><span class="">is</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isExtensible_Object_DetailAnchor"><span class="">isExtensible</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isFrozen_Object_DetailAnchor"><span class="">isFrozen</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isPrototypeOf_Object_DetailAnchor"><span class="">isPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_isSealed_Object_DetailAnchor"><span class="">isSealed</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_keys_Object_DetailAnchor"><span class="">keys</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_preventExtensions_Object_DetailAnchor"><span class="">preventExtensions</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_propertyIsEnumerable_String_DetailAnchor"><span class="">propertyIsEnumerable</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_seal_Object_DetailAnchor"><span class="">seal</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_setPrototypeOf_Object_Object_DetailAnchor"><span class="">setPrototypeOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toLocaleString_DetailAnchor"><span class="">toLocaleString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_toString_DetailAnchor"><span class="">toString</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_valueOf_DetailAnchor"><span class="">valueOf</span></a>, <a href="class_TopLevel_Object.html#TopLevel_Object_values_Object_DetailAnchor"><span class="">values</span></a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="header">
+			Method Detail
+		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getBrand_DetailAnchor"></a>
+                    <div class="detailName 
+						">getBrand</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getBrand</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the brand of this payment method, or <code>null</code> if none is available. Available on
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> type methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method brand</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getExpiryMonth_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExpiryMonth</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExpiryMonth</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the expiry month of the card for this payment method, or <code>null</code> if none is available.
+ Available on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a> type methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method credential expiry month</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getExpiryYear_DetailAnchor"></a>
+                    <div class="detailName 
+						">getExpiryYear</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getExpiryYear</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the expiry year of the card for this payment method, or <code>null</code> if none is available. Available
+ on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a> type methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method credential expiry year</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getHolderName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getHolderName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getHolderName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the cardholder name for this payment method, or <code>null</code> if none is available. Available on
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a>
+ type methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method credential cardholder name</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the identifier of this payment method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method identifier</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getLast4_DetailAnchor"></a>
+                    <div class="detailName 
+						">getLast4</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getLast4</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the last 4 digits of the credential for this payment method, or <code>null</code> if none is available.
+ Available on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a> type methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method credential last 4 digits</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getOwnerName_DetailAnchor"></a>
+                    <div class="detailName 
+						">getOwnerName</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getOwnerName</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the back account owner name for this payment method, or <code>null</code> if none is available. Available
+ on <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_SEPA_DEBIT_DetailAnchor">TYPE_SEPA_DEBIT</a> and
+ <a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_IDEAL_DetailAnchor">TYPE_IDEAL</a> type method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method credential back account owner name</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_getType_DetailAnchor"></a>
+                    <div class="detailName 
+						">getType</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getType</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the type of this payment method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">payment method type</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">See Also:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_BANCONTACT_DetailAnchor">TYPE_BANCONTACT</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_CARD_DetailAnchor">TYPE_CARD</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_IDEAL_DetailAnchor">TYPE_IDEAL</a></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc"><a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html#dw_extensions_payments_SalesforceAdyenSavedPaymentMethod_TYPE_SEPA_DEBIT_DetailAnchor">TYPE_SEPA_DEBIT</a></span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="copyright">
+                            &copy; Copyright 2000-2025, salesforce.com inc. All rights reserved. Various trademarks held by their respective owners.
+
+			
+                <div class="clear"></div>
+            </div>
+            <!--End of formatClass-->
+        </div>
+    </body>
+</html>

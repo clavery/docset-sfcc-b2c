@@ -1,0 +1,37 @@
+- title: B2C Commerce Script API 26.1
+  link: index.md
+  tocRefs:
+    - TopLevel-toc.yml
+    - dw.alert-toc.yml
+    - dw.campaign-toc.yml
+    - dw.catalog-toc.yml
+    - dw.content-toc.yml
+    - dw.crypto-toc.yml
+    - dw.customer-toc.yml
+    - dw.customer.oauth-toc.yml
+    - dw.customer.shoppercontext-toc.yml
+    - dw.experience-toc.yml
+    - dw.experience.cms-toc.yml
+    - dw.experience.image-toc.yml
+    - dw.extensions.applepay-toc.yml
+    - dw.extensions.facebook-toc.yml
+    - dw.extensions.paymentapi-toc.yml
+    - dw.extensions.paymentrequest-toc.yml
+    - dw.extensions.payments-toc.yml
+    - dw.extensions.pinterest-toc.yml
+    - dw.io-toc.yml
+    - dw.job-toc.yml
+    - dw.net-toc.yml
+    - dw.object-toc.yml
+    - dw.order-toc.yml
+    - dw.order.hooks-toc.yml
+    - dw.rpc-toc.yml
+    - dw.sitemap-toc.yml
+    - dw.suggest-toc.yml
+    - dw.svc-toc.yml
+    - dw.system-toc.yml
+    - dw.template-toc.yml
+    - dw.util-toc.yml
+    - dw.value-toc.yml
+    - dw.web-toc.yml
+    - dw.ws-toc.yml

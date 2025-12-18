@@ -1,0 +1,11 @@
+- title: dw.value
+  link: dw.value.md
+  topics:
+  - title: EnumValue
+    link: dw.value.EnumValue.md
+  - title: MimeEncodedText
+    link: dw.value.MimeEncodedText.md
+  - title: Money
+    link: dw.value.Money.md
+  - title: Quantity
+    link: dw.value.Quantity.md

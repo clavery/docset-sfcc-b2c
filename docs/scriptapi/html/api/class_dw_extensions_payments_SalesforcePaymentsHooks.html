@@ -39,16 +39,15 @@
             <div class="classSummary">
                 <div class="classSummaryDetail">
                     <div class="description"><p>
- This interface represents all script hooks that can be registered to customize the Salesforce Payments
- functionality. See Salesforce Payments documentation for how to gain access and configure it for use on your
- sites.
+ This interface represents all script hooks that can be registered to customize the Salesforce Payments functionality.
+ See Salesforce Payments documentation for how to gain access and configure it for use on your sites.
  </p>
  <p>
- It contains the extension points (hook names), and the functions that are called by each extension
- point. A function must be defined inside a JavaScript source and must be exported. The script with the exported hook
- function must be located inside a site cartridge. Inside the site cartridge a 'package.json' file with a 'hooks'
- entry must exist.
+ It contains the extension points (hook names), and the functions that are called by each extension point. A function
+ must be defined inside a JavaScript source and must be exported. The script with the exported hook function must be
+ located inside a site cartridge. Inside the site cartridge a 'package.json' file with a 'hooks' entry must exist.
  </p>
+ 
  <pre>
  "hooks": "./hooks.json"
  </pre>
@@ -56,9 +55,12 @@
  The hooks entry links to a json file, relative to the 'package.json' file. This file lists all registered hooks
  inside the hooks property:
  </p>
+ 
  <pre>
  "hooks": [
-      {"name": "dw.extensions.payments.asyncPaymentSucceeded", "script": "./payments.js"}
+      {"name": "dw.extensions.payments.asyncPaymentSucceeded", "script": "./payments.js"},
+      {"name": "dw.extensions.payments.adyenNotification", "script": "./payments.js"},
+      {"name": "dw.extensions.payments.sendOrderConfirmationEmail", "script": "./emails.js"}
  ]
  </pre>
  <p>
@@ -77,11 +79,35 @@
 			Constants
 		</div>
                 <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsHooks_extensionPointAdyenNotification_DetailAnchor"></a>extensionPointAdyenNotification
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.payments.adyenNotification"
+                        <div class="description">The extension point name dw.extensions.payments.adyenNotification.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="dw_extensions_payments_SalesforcePaymentsHooks_extensionPointAsyncPaymentSucceeded_DetailAnchor"></a>extensionPointAsyncPaymentSucceeded
 						&nbsp;:&nbsp;
 						
 					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.payments.asyncPaymentSucceeded"
                         <div class="description">The extension point name dw.extensions.payments.asyncPaymentSucceeded.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsHooks_extensionPointSendOrderConfirmationEmail_DetailAnchor"></a>extensionPointSendOrderConfirmationEmail
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.payments.sendOrderConfirmationEmail"
+                        <div class="description">The extension point name dw.extensions.payments.sendOrderConfirmationEmail.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePaymentsHooks_extensionPointStripePaymentEvent_DetailAnchor"></a>extensionPointStripePaymentEvent
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"dw.extensions.payments.stripePaymentEvent"
+                        <div class="description">The extension point name dw.extensions.payments.stripePaymentEvent.</div>
                     </span>
                 </div>
             </div>
@@ -101,6 +127,15 @@
 			Method Summary
 		</div>
                 <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsHooks_adyenNotification_Order_DetailAnchor"><span class="">adyenNotification</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called when an Adyen webhook notification is received for the given order.</div>
+                </div>
+                <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsHooks_asyncPaymentSucceeded_Order_DetailAnchor"><span class="">asyncPaymentSucceeded</span></a></span>(order
 								 : 	
 								 
@@ -109,11 +144,63 @@
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
                     <div class="description">Called when asynchronous payment succeeded for the given order.</div>
                 </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsHooks_sendOrderConfirmationEmail_Order_DetailAnchor"><span class="">sendOrderConfirmationEmail</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called to send order confirmation email after successful payment processing.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsHooks_stripePaymentEvent_String_Order_DetailAnchor"><span class="">stripePaymentEvent</span></a></span>(eventName
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Called when a Stripe payment event is received for the given order.</div>
+                </div>
             </div>
             <div class="section">
                 <div class="header">
 			Method Detail
 		</div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsHooks_adyenNotification_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">adyenNotification</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">adyenNotification</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called when an Adyen webhook notification is received for the given order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order for which the notification was received</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution, and is ignored</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
                 <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsHooks_asyncPaymentSucceeded_Order_DetailAnchor"></a>
                     <div class="detailName 
@@ -138,6 +225,77 @@
                     </div>
                     <div class="parameters">
                         <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution, and is ignored</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsHooks_sendOrderConfirmationEmail_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">sendOrderConfirmationEmail</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">sendOrderConfirmationEmail</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called to send order confirmation email after successful payment processing.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order for which to send confirmation email</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a non-null result ends the hook execution</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsHooks_stripePaymentEvent_String_Order_DetailAnchor"></a>
+                    <div class="detailName 
+						">stripePaymentEvent</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">stripePaymentEvent</span>(eventName
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Called when a Stripe payment event is received for the given order.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">eventName</span>
+						 - 
+						<span class="parameterDesc">the Stripe event name, such as <code>"payment_intent.succeeded"</code></span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">the order for which the event was received</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
                         <div class="parameterDetail"></div>
                         <div class="parameterDetail">
                             <span class="parameterDesc">a non-null result ends the hook execution, and is ignored</span>

@@ -1,0 +1,65 @@
+- title: dw.campaign
+  link: dw.campaign.md
+  topics:
+  - title: ABTest
+    link: dw.campaign.ABTest.md
+  - title: ABTestMgr
+    link: dw.campaign.ABTestMgr.md
+  - title: ABTestSegment
+    link: dw.campaign.ABTestSegment.md
+  - title: AmountDiscount
+    link: dw.campaign.AmountDiscount.md
+  - title: ApproachingDiscount
+    link: dw.campaign.ApproachingDiscount.md
+  - title: BonusChoiceDiscount
+    link: dw.campaign.BonusChoiceDiscount.md
+  - title: BonusDiscount
+    link: dw.campaign.BonusDiscount.md
+  - title: Campaign
+    link: dw.campaign.Campaign.md
+  - title: CampaignMgr
+    link: dw.campaign.CampaignMgr.md
+  - title: CampaignStatusCodes
+    link: dw.campaign.CampaignStatusCodes.md
+  - title: Coupon
+    link: dw.campaign.Coupon.md
+  - title: CouponMgr
+    link: dw.campaign.CouponMgr.md
+  - title: CouponRedemption
+    link: dw.campaign.CouponRedemption.md
+  - title: CouponStatusCodes
+    link: dw.campaign.CouponStatusCodes.md
+  - title: Discount
+    link: dw.campaign.Discount.md
+  - title: DiscountPlan
+    link: dw.campaign.DiscountPlan.md
+  - title: FixedPriceDiscount
+    link: dw.campaign.FixedPriceDiscount.md
+  - title: FixedPriceShippingDiscount
+    link: dw.campaign.FixedPriceShippingDiscount.md
+  - title: FreeDiscount
+    link: dw.campaign.FreeDiscount.md
+  - title: FreeShippingDiscount
+    link: dw.campaign.FreeShippingDiscount.md
+  - title: PercentageDiscount
+    link: dw.campaign.PercentageDiscount.md
+  - title: PercentageOptionDiscount
+    link: dw.campaign.PercentageOptionDiscount.md
+  - title: PriceBookPriceDiscount
+    link: dw.campaign.PriceBookPriceDiscount.md
+  - title: Promotion
+    link: dw.campaign.Promotion.md
+  - title: PromotionMgr
+    link: dw.campaign.PromotionMgr.md
+  - title: PromotionPlan
+    link: dw.campaign.PromotionPlan.md
+  - title: SlotContent
+    link: dw.campaign.SlotContent.md
+  - title: SourceCodeGroup
+    link: dw.campaign.SourceCodeGroup.md
+  - title: SourceCodeInfo
+    link: dw.campaign.SourceCodeInfo.md
+  - title: SourceCodeStatusCodes
+    link: dw.campaign.SourceCodeStatusCodes.md
+  - title: TotalFixedPriceDiscount
+    link: dw.campaign.TotalFixedPriceDiscount.md

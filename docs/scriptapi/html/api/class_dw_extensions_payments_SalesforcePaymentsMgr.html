@@ -41,8 +41,8 @@
             </div>
             <div class="classSummary">
                 <div class="classSummaryDetail">
-                    <div class="description">Contains functionality for use with Salesforce Payments. See Salesforce Payments documentation for how to
- gain access and configure it for use on your sites.</div>
+                    <div class="description">Contains functionality for use with Salesforce Payments. See Salesforce Payments documentation for how to gain access
+ and configure it for use on your sites.</div>
                     <div class="subclasses"></div>
                 </div>
             </div>
@@ -146,6 +146,15 @@
                     <div class="description">Attaches the given payment method to the given customer.</div>
                 </div>
                 <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_authorizePayPalOrder_SalesforcePayPalOrder_DetailAnchor"><span class="">authorizePayPalOrder</span></a></span>(paypalOrder
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Authorizes the given PayPal order.</div>
+                </div>
+                <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_cancelPaymentIntent_SalesforcePaymentIntent_Object_DetailAnchor"><span class="">cancelPaymentIntent</span></a></span>(paymentIntent
 								 : 	
 								 
@@ -158,6 +167,21 @@
                     <div class="description">Cancels the given payment intent.</div>
                 </div>
                 <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_captureAdyenPayment_OrderPaymentInstrument_Money_Object_DetailAnchor"><span class="">captureAdyenPayment</span></a></span>(orderPaymentInstrument
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, transactionProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Captures funds for the given order payment instrument.</div>
+                </div>
+                <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_capturePaymentIntent_SalesforcePaymentIntent_Money_DetailAnchor"><span class="">capturePaymentIntent</span></a></span>(paymentIntent
 								 : 	
 								 
@@ -168,6 +192,15 @@
 						: 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
                     <div class="description">Captures funds for the given payment intent.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_capturePayPalOrder_SalesforcePayPalOrder_DetailAnchor"><span class="">capturePayPalOrder</span></a></span>(paypalOrder
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Captures funds for the given PayPal order.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_confirmPaymentIntent_Order_SalesforcePaymentMethod_Object_DetailAnchor"><span class="">confirmPaymentIntent</span></a></span>(order
@@ -183,6 +216,33 @@
 						: 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
                     <div class="description"><p> Confirms a new payment intent using the given payment method, and associates it with the given order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_createAdyenPaymentIntent_Order_Shipment_String_Money_Boolean_Object_Object_DetailAnchor"><span class="">createAdyenPaymentIntent</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, zoneId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, customerRequired
+								 : 	
+								 
+								boolean, paymentData
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, paymentIntentProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Creates an Adyen payment intent using the given information, and associates it with the given order.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_createPaymentIntent_Basket_Shipment_String_Money_Boolean_Object_DetailAnchor"><span class="">createPaymentIntent</span></a></span>(basket
@@ -209,6 +269,27 @@
                     <div class="description"><p> Creates a payment intent using the given information, and associates it with the given basket.</div>
                 </div>
                 <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_createPayPalOrder_Basket_Shipment_String_Money_Object_DetailAnchor"><span class="">createPayPalOrder</span></a></span>(basket
+								 : 	
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, shipment
+								 : 	
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, zoneId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, paypalOrderProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Creates a PayPal order using the given information, and associates it with the given basket.</div>
+                </div>
+                <div class="summaryItem">
                     <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_detachPaymentMethod_SalesforcePaymentMethod_DetailAnchor"><span class="">detachPaymentMethod</span></a></span>(paymentMethod
 								 : 	
 								 
@@ -216,6 +297,15 @@
 						: 
 					void</span>
                     <div class="description">Detaches the given payment method from its associated customer.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getAdyenSavedPaymentMethods_Customer_DetailAnchor"><span class="">getAdyenSavedPaymentMethods</span></a></span>(customer
+								 : 	
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+						: 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a></span>
+                    <div class="description">Returns a collection containing the Adyen payment methods saved to be presented to the given customer for reuse in checkouts.</div>
                 </div>
                 <div class="summaryItem">
                     <span class="dep">static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getAttachedPaymentMethods_Customer_DetailAnchor"><span class="">getAttachedPaymentMethods</span></a></span>(customer
@@ -269,6 +359,15 @@
                     <div class="description">Returns a payments site configuration object for the current site.</div>
                 </div>
                 <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPaymentsZone_String_DetailAnchor"><span class="">getPaymentsZone</span></a></span>(zoneId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentsZone.html"><span class="">SalesforcePaymentsZone</span></a></span>
+                    <div class="description">Returns a payments zone object for the passed in payments zone ID.</div>
+                </div>
+                <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_getPayPalOrder_Basket_DetailAnchor"><span class="">getPayPalOrder</span></a></span>(basket
 								 : 	
 								 
@@ -296,6 +395,21 @@
                     <div class="description">Returns a collection containing the payment methods saved to be presented to the given customer for reuse in checkouts.</div>
                 </div>
                 <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_handleAdyenAdditionalDetails_Order_String_Object_DetailAnchor"><span class="">handleAdyenAdditionalDetails</span></a></span>(order
+								 : 	
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, zoneId
+								 : 	
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, data
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description"><p> Handles the given additional Adyen payment details and associates the associated payment with the given order, if applicable.</div>
+                </div>
+                <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_onCustomerRegistered_Order_DetailAnchor"><span class="">onCustomerRegistered</span></a></span>(order
 								 : 	
 								 
@@ -303,6 +417,21 @@
 						: 
 					void</span>
                     <div class="description">Handles the account registration of the shopper who placed the given order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_refundAdyenPayment_OrderPaymentInstrument_Money_Object_DetailAnchor"><span class="">refundAdyenPayment</span></a></span>(orderPaymentInstrument
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, amount
+								 : 	
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, transactionProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Refunds previously captured funds for the given order payment instrument.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_refundPaymentIntent_SalesforcePaymentIntent_Money_Object_DetailAnchor"><span class="">refundPaymentIntent</span></a></span>(paymentIntent
@@ -320,6 +449,15 @@
                     <div class="description">Refunds previously captured funds for the given payment intent.</div>
                 </div>
                 <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_removeAdyenSavedPaymentMethod_SalesforceAdyenSavedPaymentMethod_DetailAnchor"><span class="">removeAdyenSavedPaymentMethod</span></a></span>(savedPaymentMethod
+								 : 	
+								 
+								<a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html"><span class="">SalesforceAdyenSavedPaymentMethod</span></a>)
+						: 
+					void</span>
+                    <div class="description">Deletes an Adyen saved payment method.</div>
+                </div>
+                <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_removeSavedPaymentMethod_SalesforcePaymentMethod_DetailAnchor"><span class="">removeSavedPaymentMethod</span></a></span>(paymentMethod
 								 : 	
 								 
@@ -327,6 +465,27 @@
 						: 
 					void</span>
                     <div class="description">Removes the given saved payment method so that it is no longer presented to the given customer for reuse in checkouts.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_resolvePaymentsZone_Object_DetailAnchor"><span class="">resolvePaymentsZone</span></a></span>(paymentsZoneProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_extensions_payments_SalesforcePaymentsZone.html"><span class="">SalesforcePaymentsZone</span></a></span>
+                    <div class="description">Resolves and returns the payments zone object for the passed in payments zone properties object.</div>
+                </div>
+                <div class="summaryItem">
+                    <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_reverseAdyenPayment_OrderPaymentInstrument_Object_DetailAnchor"><span class="">reverseAdyenPayment</span></a></span>(orderPaymentInstrument
+								 : 	
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, transactionProperties
+								 : 	
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+						: 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
+                    <div class="description">Reverses the authorisation for the given order payment instrument.</div>
                 </div>
                 <div class="summaryItem">
                     <span>static&nbsp;<span class="emphasis"><a href="#dw_extensions_payments_SalesforcePaymentsMgr_savePaymentMethod_Customer_SalesforcePaymentMethod_DetailAnchor"><span class="">savePaymentMethod</span></a></span>(customer
@@ -444,6 +603,51 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_authorizePayPalOrder_SalesforcePayPalOrder_DetailAnchor"></a>
+                    <div class="detailName 
+						">authorizePayPalOrder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">authorizePayPalOrder</span>(paypalOrder
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Authorizes the given PayPal order.
+ <p>
+ The PayPal order must be in a status that supports authorization. See the PayPal documentation for more details.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paypalOrder</span>
+						 - 
+						<span class="parameterDesc">PayPal order to authorize</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'error'</code> contains the PayPal error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error authorizing the PayPal order</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsMgr_cancelPaymentIntent_SalesforcePaymentIntent_Object_DetailAnchor"></a>
                     <div class="detailName 
 						">cancelPaymentIntent</div>
@@ -533,6 +737,80 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_captureAdyenPayment_OrderPaymentInstrument_Money_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">captureAdyenPayment</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">captureAdyenPayment</span>(orderPaymentInstrument
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, transactionProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Captures funds for the given order payment instrument.
+ <p>
+ The order payment instrument must be in a state that supports capture.
+ </p>
+ <p>
+ The <code>amount</code> must be less than or equal to the amount available to capture.
+ </p>
+ <p>
+ The following Transaction properties are supported:
+ <ul>
+ <li><code>reference</code> - optional reference for the transaction, for example order number
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">orderPaymentInstrument</span>
+						 - 
+						<span class="parameterDesc">payment instrument to capture</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">amount to capture</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transactionProperties</span>
+						 - 
+						<span class="parameterDesc">properties to pass to the capture Adyen Payment API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error capturing the payment instrument</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsMgr_capturePaymentIntent_SalesforcePaymentIntent_Money_DetailAnchor"></a>
                     <div class="detailName 
 						">capturePaymentIntent</div>
@@ -587,6 +865,51 @@
                             Exception						
 						 - 
 						 <span class="parameterDesc">if there was an error capturing the payment intent</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_capturePayPalOrder_SalesforcePayPalOrder_DetailAnchor"></a>
+                    <div class="detailName 
+						">capturePayPalOrder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">capturePayPalOrder</span>(paypalOrder
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforcePayPalOrder.html"><span class="">SalesforcePayPalOrder</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Captures funds for the given PayPal order.
+ <p>
+ The PayPal order must be in a status that supports capture. See the PayPal documentation for more details.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paypalOrder</span>
+						 - 
+						<span class="parameterDesc">PayPal order to capture</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'error'</code> contains the PayPal error information, if it is available in the response.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error capturing the PayPal order</span>
                         </div>
                     </div>
                     <hr>
@@ -684,6 +1007,108 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_createAdyenPaymentIntent_Order_Shipment_String_Money_Boolean_Object_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">createAdyenPaymentIntent</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createAdyenPaymentIntent</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, zoneId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, customerRequired
+								 : 
+								 
+								boolean, paymentData
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>, paymentIntentProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Creates an Adyen payment intent using the given information, and associates it with the given order.
+ </p>
+ <p>
+ The following Payment Intent properties are supported:
+ <ul>
+ <li><code>type</code> - required payment method type, such as <a href="class_dw_extensions_payments_SalesforcePaymentMethod.html#dw_extensions_payments_SalesforcePaymentMethod_TYPE_CARD_DetailAnchor">SalesforcePaymentMethod.TYPE_CARD</a>
+ <li><code>cardCaptureAutomatic</code> - optional <code>true</code> if the credit card payment should be
+ automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be
+ captured later
+ <li><code>storePaymentMethod</code> - optional <code>true</code> if the payment method should be stored for
+ future usage, or <code>false</code> if not
+ </ul>
+ </p>
+ <p>
+ If <code>cardCaptureAutomatic</code> is provided it is used to determine card capture timing, and otherwise the
+ default card capture timing set for the site is used.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order to checkout and pay using Salesforce Payments</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">shipment to use for shipping information in the payment intent</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">zoneId</span>
+						 - 
+						<span class="parameterDesc">id of the payment zone</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">payment amount</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customerRequired</span>
+						 - 
+						<span class="parameterDesc"><code>true</code> if an Adyen shopper reference must be associated with the transaction and needs to be created if it does not already exist for the given ecom customer or <code>false</code> a shopper reference does not have to be associated with the transaction. A customer is required if storing a payment method for future usage or using an existing stored payment method.</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentData</span>
+						 - 
+						<span class="parameterDesc">Adyen specific payment data passed directly from the client as-is</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentIntentProperties</span>
+						 - 
+						<span class="parameterDesc">properties to pass to the create Payment Intent API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'paymentintent'</code> contains the payment intent, if it is available in the Adyen response. Status detail <code>'error'</code> contains the Adyen error information, if it is available in the response.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsMgr_createPaymentIntent_Basket_Shipment_String_Money_Boolean_Object_DetailAnchor"></a>
                     <div class="detailName 
 						">createPaymentIntent</div>
@@ -722,6 +1147,8 @@
  <li><code>cardCaptureAutomatic</code> - optional <code>true</code> if the credit card payment should be
  automatically captured at the time of the sale, or <code>false</code> if the credit card payment should be
  captured later
+ <li><code>setupFutureUsage</code> - optional future usage setup value, such as
+ <a href="class_dw_extensions_payments_SalesforcePaymentIntent.html#dw_extensions_payments_SalesforcePaymentIntent_SETUP_FUTURE_USAGE_ON_SESSION_DetailAnchor">SalesforcePaymentIntent.SETUP_FUTURE_USAGE_ON_SESSION</a>
  </ul>
  </p>
  <p>
@@ -739,6 +1166,10 @@
  customers' statements for the payment, and if not a default statement descriptor is used. If a default statement
  descriptor is set for the site it is used as the default, and otherwise the default statement descriptor for the
  account will apply.
+ </p>
+ <p>
+ If <code>setupFutureUsage</code> is provided it will be used to prepare the payment to be set up for future usage
+ at confirmation time. When set, this future usage setup value must match the value used at confirmation time.
  </p></div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
@@ -788,6 +1219,89 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_createPayPalOrder_Basket_Shipment_String_Money_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">createPayPalOrder</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">createPayPalOrder</span>(basket
+								 : 
+								 
+								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>, shipment
+								 : 
+								 
+								<a href="class_dw_order_Shipment.html"><span class="">Shipment</span></a>, zoneId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, paypalOrderProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Creates a PayPal order using the given information, and associates it with the given basket.
+ </p>
+ <p>
+ The following PayPal order properties are supported:
+ <ul>
+ <li><code>fundingSource</code> - required funding source, such as <a href="class_dw_extensions_payments_SalesforcePayPalOrder.html#dw_extensions_payments_SalesforcePayPalOrder_TYPE_PAYPAL_DetailAnchor">SalesforcePayPalOrder.TYPE_PAYPAL</a>
+ <li><code>intent</code> - optional order capture timing intent, such as
+ <a href="class_dw_extensions_payments_SalesforcePayPalOrder.html#dw_extensions_payments_SalesforcePayPalOrder_INTENT_AUTHORIZE_DetailAnchor">SalesforcePayPalOrder.INTENT_AUTHORIZE</a> or <a href="class_dw_extensions_payments_SalesforcePayPalOrder.html#dw_extensions_payments_SalesforcePayPalOrder_INTENT_CAPTURE_DetailAnchor">SalesforcePayPalOrder.INTENT_CAPTURE</a>
+ <li><code>shippingPreference</code> - optional shipping preference, such as <code>"GET_FROM_FILE"</code>
+ <li><code>userAction</code> - optional user action, such as <code>"PAY_NOW"</code>
+ </ul>
+ </p>
+ <p>
+ If <code>intent</code> is provided it is used to determine manual or automatic capture, and otherwise the default
+ card capture timing set for the site is used.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">basket</span>
+						 - 
+						<span class="parameterDesc">basket to checkout and pay using Salesforce Payments</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">shipment</span>
+						 - 
+						<span class="parameterDesc">shipment to use for shipping information in the payment intent</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">zoneId</span>
+						 - 
+						<span class="parameterDesc">id of the payment zone</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">payment amount</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paypalOrderProperties</span>
+						 - 
+						<span class="parameterDesc">properties to pass to the create PayPal order API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'paypalorder'</code> contains the PayPal order, if it is available in the PayPal response. Status detail <code>'error'</code> contains the PayPal error information, if it is available in the response.</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsMgr_detachPaymentMethod_SalesforcePaymentMethod_DetailAnchor"></a>
                     <div class="detailName 
 						dep">detachPaymentMethod</div>
@@ -828,6 +1342,50 @@
 						 <span class="parameterDesc">if there was an error detaching the payment method from its customer</span>
                         </div>
                         <div class="parameterDetail"></div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getAdyenSavedPaymentMethods_Customer_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAdyenSavedPaymentMethods</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getAdyenSavedPaymentMethods</span>(customer
+								 : 
+								 
+								<a href="class_dw_customer_Customer.html"><span class="">Customer</span></a>)
+					 : 
+					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
+                    </div>
+                    <div class="description">Returns a collection containing the Adyen payment methods saved to be presented to the given customer for reuse
+ in checkouts. The collection will be empty if there are no payment methods saved for the customer, or there was
+ an error retrieving the saved payment methods.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">customer</span>
+						 - 
+						<span class="parameterDesc">customer whose saved payment methods to get</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">collection of saved payment methods</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the given customer is <code>null</code> or <code>undefined</code>, or there is configuration missing that is required to retrieve the saved payment methods</span>
+                        </div>
                     </div>
                     <hr>
                 </div>
@@ -900,8 +1458,8 @@
 					<a href="class_dw_util_Collection.html"><span class="">Collection</span></a>
                     </div>
                     <div class="description">Returns a collection containing the payment methods for the given customer set up for future off session reuse.
- The collection will be empty if there are no off session payment methods for the customer, or there was an
- error retrieving the off session payment methods.</div>
+ The collection will be empty if there are no off session payment methods for the customer, or there was an error
+ retrieving the off session payment methods.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
@@ -1087,6 +1645,37 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPaymentsZone_String_DetailAnchor"></a>
+                    <div class="detailName 
+						">getPaymentsZone</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">getPaymentsZone</span>(zoneId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentsZone.html"><span class="">SalesforcePaymentsZone</span></a>
+                    </div>
+                    <div class="description">Returns a payments zone object for the passed in payments zone ID.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">zoneId</span>
+						 - 
+						<span class="parameterDesc">ID of the payments zone to retrieve and use to checkout and pay using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a payments zone or null if no payments zone with the given ID exists</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsMgr_getPayPalOrder_Basket_DetailAnchor"></a>
                     <div class="detailName 
 						">getPayPalOrder</div>
@@ -1209,7 +1798,63 @@
                         <div class="parameterDetail">
                             Exception						
 						 - 
-						 <span class="parameterDesc">if the given customer is <code>null</code> or <code>undefined</code>, or there is an error getting the saved payment methods</span>
+						 <span class="parameterDesc">if the given customer is <code>null</code> or <code>undefined</code>, or there is configuration missing that is required to retrieve the saved payment methods</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_handleAdyenAdditionalDetails_Order_String_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">handleAdyenAdditionalDetails</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">handleAdyenAdditionalDetails</span>(order
+								 : 
+								 
+								<a href="class_dw_order_Order.html"><span class="">Order</span></a>, zoneId
+								 : 
+								 
+								<a href="class_TopLevel_String.html"><span class="">String</span></a>, data
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description"><p>
+ Handles the given additional Adyen payment details and associates the associated payment with the given order, if
+ applicable.
+ </p>
+ <p>
+ Pass the state data from the Adyen <code>onAdditionalDetails</code> event as-is, without any encoding or other
+ changes to the data or its structure. See the Adyen documentation for more information.
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">order</span>
+						 - 
+						<span class="parameterDesc">order to checkout and pay using Salesforce Payments</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">zoneId</span>
+						 - 
+						<span class="parameterDesc">id of the payment zone</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">data</span>
+						 - 
+						<span class="parameterDesc">additional details state data</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'. Status detail <code>'adyenpayment'</code> contains the payment details, if it is available in the Adyen response and the response resultCode is 'Authorised'. Status detail <code>'error'</code> contains the Adyen error information, if it is available in the response.</span>
                         </div>
                     </div>
                     <hr>
@@ -1244,6 +1889,80 @@
                             Exception						
 						 - 
 						 <span class="parameterDesc">if there was an error attaching the payment method to the customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_refundAdyenPayment_OrderPaymentInstrument_Money_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">refundAdyenPayment</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">refundAdyenPayment</span>(orderPaymentInstrument
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, amount
+								 : 
+								 
+								<a href="class_dw_value_Money.html"><span class="">Money</span></a>, transactionProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Refunds previously captured funds for the given order payment instrument.
+ <p>
+ The order payment instrument must be in a state that supports refund.
+ </p>
+ <p>
+ The <code>amount</code> must be less than or equal to the amount available to refund.
+ </p>
+ <p>
+ The following Transaction properties are supported:
+ <ul>
+ <li><code>reference</code> - optional reference for the transaction, for example order number
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">orderPaymentInstrument</span>
+						 - 
+						<span class="parameterDesc">payment instrument to refund</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">amount</span>
+						 - 
+						<span class="parameterDesc">amount to refund</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transactionProperties</span>
+						 - 
+						<span class="parameterDesc">properties to pass to the refund Adyen Payment API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error refunding the payment instrument</span>
                         </div>
                     </div>
                     <hr>
@@ -1348,6 +2067,39 @@
                     <hr>
                 </div>
                 <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_removeAdyenSavedPaymentMethod_SalesforceAdyenSavedPaymentMethod_DetailAnchor"></a>
+                    <div class="detailName 
+						">removeAdyenSavedPaymentMethod</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">removeAdyenSavedPaymentMethod</span>(savedPaymentMethod
+								 : 
+								 
+								<a href="class_dw_extensions_payments_SalesforceAdyenSavedPaymentMethod.html"><span class="">SalesforceAdyenSavedPaymentMethod</span></a>)
+					 : 
+					void
+                    </div>
+                    <div class="description">Deletes an Adyen saved payment method.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">savedPaymentMethod</span>
+						 - 
+						<span class="parameterDesc">the saved payment method to delete</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if the saved payment method is <code>null</code> or <code>undefined</code>, or there is configuration missing that is required to delete the saved payment method</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
                     <a name="dw_extensions_payments_SalesforcePaymentsMgr_removeSavedPaymentMethod_SalesforcePaymentMethod_DetailAnchor"></a>
                     <div class="detailName 
 						">removeSavedPaymentMethod</div>
@@ -1377,6 +2129,117 @@
                             Exception						
 						 - 
 						 <span class="parameterDesc">if there was an error removing the saved payment method from its customer</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_resolvePaymentsZone_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">resolvePaymentsZone</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">resolvePaymentsZone</span>(paymentsZoneProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_extensions_payments_SalesforcePaymentsZone.html"><span class="">SalesforcePaymentsZone</span></a>
+                    </div>
+                    <div class="description">Resolves and returns the payments zone object for the passed in payments zone properties object. If an empty
+ object is provided, the default payments zone will be returned if it exists.
+ <p>
+ The following payments zone properties are supported:
+ <ul>
+ <li><code>countryCode</code> - optional country code of the shopper, or <code>null</code> if not known</li>
+ <li><code>currency</code> - optional basket currency, or <code>null</code> if not known</li>
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">paymentsZoneProperties</span>
+						 - 
+						<span class="parameterDesc">properties to use to retrieve the payments zone for to use to checkout and pay using Salesforce Payments</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">a payments zone</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if no default payments zone exists</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePaymentsMgr_reverseAdyenPayment_OrderPaymentInstrument_Object_DetailAnchor"></a>
+                    <div class="detailName 
+						">reverseAdyenPayment</div>
+                    <div class="detailSignature
+	    				">
+                        static&nbsp;<span class="emphasis">reverseAdyenPayment</span>(orderPaymentInstrument
+								 : 
+								 
+								<a href="class_dw_order_OrderPaymentInstrument.html"><span class="">OrderPaymentInstrument</span></a>, transactionProperties
+								 : 
+								 
+								<a href="class_TopLevel_Object.html"><span class="">Object</span></a>)
+					 : 
+					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
+                    </div>
+                    <div class="description">Reverses the authorisation for the given order payment instrument.
+ <p>
+ The order payment instrument must be in a state that supports reversal.
+ </p>
+ <p>
+ The following Transaction properties are supported:
+ <ul>
+ <li><code>reference</code> - optional reference for the transaction, for example order number
+ </ul>
+ </p></div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Parameters:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterName">orderPaymentInstrument</span>
+						 - 
+						<span class="parameterDesc">payment instrument to reverse</span>
+                        </div>
+                        <div class="parameterDetail">
+                            <span class="parameterName">transactionProperties</span>
+						 - 
+						<span class="parameterDesc">properties to pass to the reverse Adyen Payment API</span>
+                        </div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">Status 'OK' or 'ERROR'.</span>
+                        </div>
+                        <div class="parameterDetail"></div>
+                    </div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Throws:</span>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail"></div>
+                        <div class="parameterDetail">
+                            Exception						
+						 - 
+						 <span class="parameterDesc">if there was an error reversing the payment instrument</span>
                         </div>
                     </div>
                     <hr>

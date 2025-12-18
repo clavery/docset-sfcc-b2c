@@ -1,0 +1,31 @@
+- title: dw.object
+  link: dw.object.md
+  topics:
+  - title: ActiveData
+    link: dw.object.ActiveData.md
+  - title: CustomAttributes
+    link: dw.object.CustomAttributes.md
+  - title: CustomObject
+    link: dw.object.CustomObject.md
+  - title: CustomObjectMgr
+    link: dw.object.CustomObjectMgr.md
+  - title: Extensible
+    link: dw.object.Extensible.md
+  - title: ExtensibleObject
+    link: dw.object.ExtensibleObject.md
+  - title: Note
+    link: dw.object.Note.md
+  - title: ObjectAttributeDefinition
+    link: dw.object.ObjectAttributeDefinition.md
+  - title: ObjectAttributeGroup
+    link: dw.object.ObjectAttributeGroup.md
+  - title: ObjectAttributeValueDefinition
+    link: dw.object.ObjectAttributeValueDefinition.md
+  - title: ObjectTypeDefinition
+    link: dw.object.ObjectTypeDefinition.md
+  - title: PersistentObject
+    link: dw.object.PersistentObject.md
+  - title: SimpleExtensible
+    link: dw.object.SimpleExtensible.md
+  - title: SystemObjectMgr
+    link: dw.object.SystemObjectMgr.md

@@ -1,0 +1,11 @@
+- title: dw.customer.oauth
+  link: dw.customer.oauth.md
+  topics:
+  - title: OAuthAccessTokenResponse
+    link: dw.customer.oauth.OAuthAccessTokenResponse.md
+  - title: OAuthFinalizedResponse
+    link: dw.customer.oauth.OAuthFinalizedResponse.md
+  - title: OAuthLoginFlowMgr
+    link: dw.customer.oauth.OAuthLoginFlowMgr.md
+  - title: OAuthUserInfoResponse
+    link: dw.customer.oauth.OAuthUserInfoResponse.md

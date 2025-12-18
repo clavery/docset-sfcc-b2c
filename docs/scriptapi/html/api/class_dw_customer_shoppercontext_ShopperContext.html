@@ -50,6 +50,7 @@
  <p>
  When Shopper Context is set for a shopper, the context is applied in the next request and can activate promotions or
  price books assigned to customer groups, source codes, or stores (via assignments).
+ Also see: <a href="class_dw_customer_shoppercontext_ShopperContextMgr.html">ShopperContextMgr</a>
  </p></div>
                     <div class="subclasses"></div>
                 </div>
@@ -299,6 +300,7 @@
  <pre><code>
  ShopperContext context = new ShopperContext();
  context.setSourceCode( "sourcecode" );
+ ShopperContextMgr.setShopperContext( context, true );
  </code></pre>
  </p></div>
                     <hr>
@@ -489,6 +491,7 @@
   assignmentQualifiers.put( "storeId", "Boston" );
   ShopperContext context = new ShopperContext();
   context.setAssignmentQualifiers( customQualifiers );
+  ShopperContextMgr.setShopperContext( context, true );
  </code></pre>
  </p></div>
                     <div class="parameters">
@@ -599,6 +602,7 @@
   customQualifiers.put( "deviceType", "iPad" );
   ShopperContext context = new ShopperContext();
   context.setCustomQualifiers( customQualifiers );
+  ShopperContextMgr.setShopperContext( context, true );
  </code></pre>
  </p></div>
                     <div class="parameters">

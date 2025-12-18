@@ -1,0 +1,5 @@
+- title: dw.extensions.paymentapi
+  link: dw.extensions.paymentapi.md
+  topics:
+  - title: PaymentApiHooks
+    link: dw.extensions.paymentapi.PaymentApiHooks.md

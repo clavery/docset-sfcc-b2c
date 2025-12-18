@@ -15,6 +15,10 @@
     },
     "description": {
       "type": "string"
+    },
+    "arch_type": {
+      "type": "string",
+      "enum": ["controller", "headless"]
     }
   }
 }

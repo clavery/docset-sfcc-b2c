@@ -87,6 +87,27 @@
  <li>To delete Shopper Context, use methods <a href="class_dw_customer_shoppercontext_ShopperContextMgr.html#dw_customer_shoppercontext_ShopperContextMgr_removeShopperContext_DetailAnchor">removeShopperContext()</a>.
  <li>To fetch Geolocation based on clientIP already set in Shopper Context, use method <a href="class_dw_customer_shoppercontext_ShopperContextMgr.html#dw_customer_shoppercontext_ShopperContextMgr_getGeolocation_DetailAnchor">getGeolocation()</a>
  </ul>
+ </p>
+ <p>
+ Typical usage:
+ 
+ <pre><code>
+  // get the ShopperContext if it exists
+  ShopperContext context = ShopperContextMgr.getShopperContext();
+  if (context == null) {
+      context = new ShopperContext();
+  }
+  // set the values in the ShopperContext object
+  context.setSourceCode( "sourcecode" );
+  var customQualifiers = new dw.util.HashMap();
+  customQualifiers.put( "deviceType", "iPad" );
+  context.setCustomQualifiers( customQualifiers );
+  // Save the ShopperContext
+  ShopperContextMgr.setShopperContext( context, true );
+  </code></pre>
+ 
+ NOTE: Ensure the ShopperContext object is saved using <a href="class_dw_customer_shoppercontext_ShopperContextMgr.html#dw_customer_shoppercontext_ShopperContextMgr_setShopperContext_ShopperContext_Boolean_DetailAnchor">setShopperContext(ShopperContext, Boolean)</a> after
+ setting or updating the context values.
  </p></div>
                     <div class="subclasses"></div>
                 </div>

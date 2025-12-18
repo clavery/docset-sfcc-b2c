@@ -1,0 +1,23 @@
+- title: dw.net
+  link: dw.net.md
+  topics:
+  - title: FTPClient
+    link: dw.net.FTPClient.md
+  - title: FTPFileInfo
+    link: dw.net.FTPFileInfo.md
+  - title: HTTPClient
+    link: dw.net.HTTPClient.md
+  - title: HTTPClientLoggingConfig
+    link: dw.net.HTTPClientLoggingConfig.md
+  - title: HTTPRequestPart
+    link: dw.net.HTTPRequestPart.md
+  - title: Mail
+    link: dw.net.Mail.md
+  - title: SFTPClient
+    link: dw.net.SFTPClient.md
+  - title: SFTPFileInfo
+    link: dw.net.SFTPFileInfo.md
+  - title: WebDAVClient
+    link: dw.net.WebDAVClient.md
+  - title: WebDAVFileInfo
+    link: dw.net.WebDAVFileInfo.md

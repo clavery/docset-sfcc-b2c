@@ -59,6 +59,22 @@
 			Constants
 		</div>
                 <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePayPalOrder_INTENT_AUTHORIZE_DetailAnchor"></a>INTENT_AUTHORIZE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"AUTHORIZE"
+                        <div class="description">Represents the <code>"AUTHORIZE"</code> intent, meaning manual capture.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="dw_extensions_payments_SalesforcePayPalOrder_INTENT_CAPTURE_DetailAnchor"></a>INTENT_CAPTURE
+						&nbsp;:&nbsp;
+						
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>&nbsp;=&nbsp;"CAPTURE"
+                        <div class="description">Represents the <code>"CAPTURE"</code> intent, meaning automatic capture.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
                     <span><a name="dw_extensions_payments_SalesforcePayPalOrder_TYPE_PAYPAL_DetailAnchor"></a>TYPE_PAYPAL
 						&nbsp;:&nbsp;
 						
@@ -85,6 +101,16 @@
 					    <a href="class_dw_value_Money.html"><span class="">Money</span></a>
 							&nbsp;(Read Only)
                         <div class="description">The amount of this PayPal order.</div>
+                    </span>
+                </div>
+                <div class="summaryItem">
+                    <span><a name="_DetailAnchor"></a>authorizationID
+						&nbsp;:&nbsp;
+						
+					    
+					    <a href="class_TopLevel_String.html"><span class="">String</span></a>
+							&nbsp;(Read Only)
+                        <div class="description">The ID of the authorization against this order, or <code>null</code> if not available.</div>
                     </span>
                 </div>
                 <div class="summaryItem">
@@ -155,6 +181,12 @@
 						: 
 					<a href="class_dw_value_Money.html"><span class="">Money</span></a></span>
                     <div class="description">Returns the amount of this PayPal order.</div>
+                </div>
+                <div class="summaryItem">
+                    <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getAuthorizationID_DetailAnchor"><span class="">getAuthorizationID</span></a></span>()
+						: 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a></span>
+                    <div class="description">Returns the ID of the authorization against this order, or <code>null</code> if not available.</div>
                 </div>
                 <div class="summaryItem">
                     <span><span class="emphasis"><a href="#dw_extensions_payments_SalesforcePayPalOrder_getCaptureID_DetailAnchor"><span class="">getCaptureID</span></a></span>()
@@ -243,6 +275,25 @@
                         <span class="parameterTitle">Returns:</span>
                         <div class="parameterDetail">
                             <span class="parameterDesc">PayPal order amount</span>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="detailItem">
+                    <a name="dw_extensions_payments_SalesforcePayPalOrder_getAuthorizationID_DetailAnchor"></a>
+                    <div class="detailName 
+						">getAuthorizationID</div>
+                    <div class="detailSignature
+	    				">
+                        <span class="emphasis">getAuthorizationID</span>()
+					 : 
+					<a href="class_TopLevel_String.html"><span class="">String</span></a>
+                    </div>
+                    <div class="description">Returns the ID of the authorization against this order, or <code>null</code> if not available.</div>
+                    <div class="parameters">
+                        <span class="parameterTitle">Returns:</span>
+                        <div class="parameterDetail">
+                            <span class="parameterDesc">PayPal order authorization identifier</span>
                         </div>
                     </div>
                     <hr>

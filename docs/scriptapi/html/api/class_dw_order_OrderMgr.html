@@ -1609,16 +1609,20 @@
  next element and closes the iterator.
  </p>
  <p>
- If the order search API is configured to use the new Search Service, the following differences apply:
+ If the order search API is configured to use the new Search Service, these differences apply:
  <ul>
- <li>wildcards will be filtered from the query (*, %, +) and replaced by spaces</li>
- <li>LIKE and ILIKE queries will be executed as fulltext queries (working on whole words), not as substring
+ <li>Search may match and return documents with missing (NULL) values in search fields, depending on
+ how the query is structured, potentially leading to broader result sets. For example, a query like
+ <code>custom.searchField != "some value"</code> also returns documents where <code>custom.searchField</code>
+ is NULL — whereas in relational databases, such documents are excluded.</li>
+ <li>Wildcards are filtered from the query (*, %, +) and replaced by spaces</li>
+ <li>LIKE and ILIKE queries are executed as fulltext queries (working on whole words), not as substring
  searches</li>
- <li>LIKE queries will always be case-insensitive</li>
- <li>using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending
+ <li>LIKE queries are always case-insensitive</li>
+ <li>Using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending
  on how they are combined</li>
- <li>using logical operators may result in degraded performance, depending on how they are combined</li>
- </ul>
+ <li>Using logical operators may result in degraded performance, depending on how they are combined</li>
+ </ul>     
  </p>
  <p>
  Order search index updates are asynchronous, triggered only by committing changes to the underlying system.
@@ -1757,16 +1761,20 @@
  resources.
  </p>
  <p>
- If the order search API is configured to use the new Search Service, the following differences apply:
+ If the order search API is configured to use the new Search Service, these differences apply:
  <ul>
- <li>wildcards will be filtered from the query (*, %, +) and replaced by spaces</li>
- <li>LIKE and ILIKE queries will be executed as fulltext queries (working on whole words), not as substring
+ <li>Search may match and return documents with missing (NULL) values in search fields, depending on
+ how the query is structured, potentially leading to broader result sets. For example, a query like
+ <code>custom.searchField != "some value"</code> also returns documents where <code>custom.searchField</code>
+ is NULL — whereas in relational databases, such documents are excluded.</li>
+ <li>Wildcards are filtered from the query (*, %, +) and replaced by spaces</li>
+ <li>LIKE and ILIKE queries are executed as fulltext queries (working on whole words), not as substring
  searches</li>
- <li>LIKE queries will always be case-insensitive</li>
- <li>using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending
+ <li>LIKE queries are always case-insensitive</li>
+ <li>Using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending
  on how they are combined</li>
- <li>using logical operators may result in degraded performance, depending on how they are combined</li>
- <li>the result is limited to a maximum of 1000 orders</li>
+ <li>Using logical operators may result in degraded performance, depending on how they are combined</li>
+ <li>The result is limited to a maximum of 1000 orders</li>
  </ul>
  </p>
  <p>
@@ -1895,16 +1903,20 @@
  resources.
  </p>
  <p>
- If the order search API is configured to use the new Search Service, the following differences apply:
+ If the order search API is configured to use the new Search Service, these differences apply:
  <ul>
- <li>wildcards will be filtered from the query (*, %, +) and replaced by spaces</li>
- <li>LIKE and ILIKE queries will be executed as fulltext queries (working on whole words), not as substring
+ <li>Search may match and return documents with missing (NULL) values in search fields, depending on
+ how the query is structured, potentially leading to broader result sets. For example, a query like
+ <code>custom.searchField != "some value"</code> also returns documents where <code>custom.searchField</code>
+ is NULL — whereas in relational databases, such documents are excluded.</li>
+ <li>Wildcards are filtered from the query (*, %, +) and replaced by spaces</li>
+ <li>LIKE and ILIKE queries are executed as fulltext queries (working on whole words), not as substring
  searches</li>
- <li>LIKE queries will always be case-insensitive</li>
- <li>using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending
+ <li>LIKE queries are always case-insensitive</li>
+ <li>Using logical operators may change the execution of LIKE/ILIKE clauses to exact string comparison, depending
  on how they are combined</li>
- <li>using logical operators may result in degraded performance, depending on how they are combined</li>
- <li>the result is limited to a maximum of 1000 orders</li>
+ <li>Using logical operators may result in degraded performance, depending on how they are combined</li>
+ <li>The result is limited to a maximum of 1000 orders</li>
  </ul>
  </p>
  <p>

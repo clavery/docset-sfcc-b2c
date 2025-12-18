@@ -1,0 +1,7 @@
+- title: dw.extensions.applepay
+  link: dw.extensions.applepay.md
+  topics:
+  - title: ApplePayHookResult
+    link: dw.extensions.applepay.ApplePayHookResult.md
+  - title: ApplePayHooks
+    link: dw.extensions.applepay.ApplePayHooks.md

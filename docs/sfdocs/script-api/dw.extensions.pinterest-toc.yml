@@ -1,0 +1,13 @@
+- title: dw.extensions.pinterest
+  link: dw.extensions.pinterest.md
+  topics:
+  - title: PinterestAvailability
+    link: dw.extensions.pinterest.PinterestAvailability.md
+  - title: PinterestFeedHooks
+    link: dw.extensions.pinterest.PinterestFeedHooks.md
+  - title: PinterestOrder
+    link: dw.extensions.pinterest.PinterestOrder.md
+  - title: PinterestOrderHooks
+    link: dw.extensions.pinterest.PinterestOrderHooks.md
+  - title: PinterestProduct
+    link: dw.extensions.pinterest.PinterestProduct.md

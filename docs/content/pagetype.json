@@ -10,6 +10,9 @@
     "description": {
       "$ref": "common.json#/definitions/description"
     },
+    "arch_type": {
+      "$ref": "common.json#/definitions/arch_type"
+    },
     "region_definitions": {
       "type": "array",
       "items": {"$ref": "regiondefinition.json"}

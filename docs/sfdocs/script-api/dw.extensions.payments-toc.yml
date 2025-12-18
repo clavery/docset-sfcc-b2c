@@ -1,0 +1,49 @@
+- title: dw.extensions.payments
+  link: dw.extensions.payments.md
+  topics:
+  - title: SalesforceAdyenPaymentIntent
+    link: dw.extensions.payments.SalesforceAdyenPaymentIntent.md
+  - title: SalesforceAdyenSavedPaymentMethod
+    link: dw.extensions.payments.SalesforceAdyenSavedPaymentMethod.md
+  - title: SalesforceBancontactPaymentDetails
+    link: dw.extensions.payments.SalesforceBancontactPaymentDetails.md
+  - title: SalesforceCardPaymentDetails
+    link: dw.extensions.payments.SalesforceCardPaymentDetails.md
+  - title: SalesforceEpsPaymentDetails
+    link: dw.extensions.payments.SalesforceEpsPaymentDetails.md
+  - title: SalesforceIdealPaymentDetails
+    link: dw.extensions.payments.SalesforceIdealPaymentDetails.md
+  - title: SalesforceKlarnaPaymentDetails
+    link: dw.extensions.payments.SalesforceKlarnaPaymentDetails.md
+  - title: SalesforcePaymentDetails
+    link: dw.extensions.payments.SalesforcePaymentDetails.md
+  - title: SalesforcePaymentIntent
+    link: dw.extensions.payments.SalesforcePaymentIntent.md
+  - title: SalesforcePaymentMethod
+    link: dw.extensions.payments.SalesforcePaymentMethod.md
+  - title: SalesforcePaymentRequest
+    link: dw.extensions.payments.SalesforcePaymentRequest.md
+  - title: SalesforcePaymentsHooks
+    link: dw.extensions.payments.SalesforcePaymentsHooks.md
+  - title: SalesforcePaymentsMerchantAccount
+    link: dw.extensions.payments.SalesforcePaymentsMerchantAccount.md
+  - title: SalesforcePaymentsMerchantAccountPaymentMethod
+    link: dw.extensions.payments.SalesforcePaymentsMerchantAccountPaymentMethod.md
+  - title: SalesforcePaymentsMgr
+    link: dw.extensions.payments.SalesforcePaymentsMgr.md
+  - title: SalesforcePaymentsSiteConfiguration
+    link: dw.extensions.payments.SalesforcePaymentsSiteConfiguration.md
+  - title: SalesforcePaymentsZone
+    link: dw.extensions.payments.SalesforcePaymentsZone.md
+  - title: SalesforcePayPalOrder
+    link: dw.extensions.payments.SalesforcePayPalOrder.md
+  - title: SalesforcePayPalOrderAddress
+    link: dw.extensions.payments.SalesforcePayPalOrderAddress.md
+  - title: SalesforcePayPalOrderPayer
+    link: dw.extensions.payments.SalesforcePayPalOrderPayer.md
+  - title: SalesforcePayPalPaymentDetails
+    link: dw.extensions.payments.SalesforcePayPalPaymentDetails.md
+  - title: SalesforceSepaDebitPaymentDetails
+    link: dw.extensions.payments.SalesforceSepaDebitPaymentDetails.md
+  - title: SalesforceVenmoPaymentDetails
+    link: dw.extensions.payments.SalesforceVenmoPaymentDetails.md

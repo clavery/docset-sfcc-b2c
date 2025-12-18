@@ -1,0 +1,7 @@
+- title: dw.sitemap
+  link: dw.sitemap.md
+  topics:
+  - title: SitemapFile
+    link: dw.sitemap.SitemapFile.md
+  - title: SitemapMgr
+    link: dw.sitemap.SitemapMgr.md

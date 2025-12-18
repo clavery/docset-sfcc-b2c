@@ -1,0 +1,37 @@
+- title: dw.svc
+  link: dw.svc.md
+  topics:
+  - title: FTPService
+    link: dw.svc.FTPService.md
+  - title: FTPServiceDefinition
+    link: dw.svc.FTPServiceDefinition.md
+  - title: HTTPFormService
+    link: dw.svc.HTTPFormService.md
+  - title: HTTPFormServiceDefinition
+    link: dw.svc.HTTPFormServiceDefinition.md
+  - title: HTTPService
+    link: dw.svc.HTTPService.md
+  - title: HTTPServiceDefinition
+    link: dw.svc.HTTPServiceDefinition.md
+  - title: LocalServiceRegistry
+    link: dw.svc.LocalServiceRegistry.md
+  - title: Result
+    link: dw.svc.Result.md
+  - title: Service
+    link: dw.svc.Service.md
+  - title: ServiceCallback
+    link: dw.svc.ServiceCallback.md
+  - title: ServiceConfig
+    link: dw.svc.ServiceConfig.md
+  - title: ServiceCredential
+    link: dw.svc.ServiceCredential.md
+  - title: ServiceDefinition
+    link: dw.svc.ServiceDefinition.md
+  - title: ServiceProfile
+    link: dw.svc.ServiceProfile.md
+  - title: ServiceRegistry
+    link: dw.svc.ServiceRegistry.md
+  - title: SOAPService
+    link: dw.svc.SOAPService.md
+  - title: SOAPServiceDefinition
+    link: dw.svc.SOAPServiceDefinition.md

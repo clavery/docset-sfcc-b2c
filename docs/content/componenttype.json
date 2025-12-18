@@ -6,6 +6,9 @@
   "properties": {
     "name": {"$ref":"common.json#/definitions/name"},
     "description": {"$ref":"common.json#/definitions/description"},
+    "arch_type": {
+      "$ref": "common.json#/definitions/arch_type"
+    },
     "group": {"$ref":"common.json#/definitions/id"},
     "region_definitions": {
       "type": "array",

@@ -1,0 +1,17 @@
+- title: dw.order.hooks
+  link: dw.order.hooks.md
+  topics:
+  - title: BasketMergeHooks
+    link: dw.order.hooks.BasketMergeHooks.md
+  - title: CalculateHooks
+    link: dw.order.hooks.CalculateHooks.md
+  - title: CheckoutHooks
+    link: dw.order.hooks.CheckoutHooks.md
+  - title: OrderHooks
+    link: dw.order.hooks.OrderHooks.md
+  - title: PaymentHooks
+    link: dw.order.hooks.PaymentHooks.md
+  - title: ReturnHooks
+    link: dw.order.hooks.ReturnHooks.md
+  - title: ShippingOrderHooks
+    link: dw.order.hooks.ShippingOrderHooks.md

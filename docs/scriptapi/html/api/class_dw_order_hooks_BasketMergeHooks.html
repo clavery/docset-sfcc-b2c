@@ -101,7 +101,7 @@
 								<a href="class_dw_order_Basket.html"><span class="">Basket</span></a>)
 						: 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a></span>
-                    <div class="description">Merges contents from a source basket (usually a former registered shopper's basket) to a destination basket (usually a former guest shopper basket that was transferred to the registered shopper upon login).</div>
+                    <div class="description">Merges content from a source basket (typically a former registered shopper's basket) into the current basket (usually a former guest shopper's basket that was transferred to the registered shopper).</div>
                 </div>
             </div>
             <div class="section">
@@ -124,28 +124,25 @@
 					 : 
 					<a href="class_dw_system_Status.html"><span class="">Status</span></a>
                     </div>
-                    <div class="description">Merges contents from a source basket (usually a former registered shopper's basket) to a destination basket
- (usually a former guest shopper basket that was transferred to the registered shopper upon login).
+                    <div class="description">Merges content from a source basket (typically a former registered shopper's basket) into the current basket
+ (usually a former guest shopper's basket that was transferred to the registered shopper).
  <p>
- In case of no implementation is registered, the default implementation is invoked.
+ If no override script is registered, the system defaults to the platform's standard basket merging logic.
  <p>
- This method is automatically called for the following scenarios:
- <ul>
- <li>After a successful call to the transfer Rest API with query parameter merge=true, whereby the guest and
- registered users, both had an active basket attached. In this scenario the registered shopper's basket will be
- the source of the merge and the transferred guest shopper's basket will be the destination.</li>
- </ul></div>
+ This method is automatically invoked after a successful execution of the /transfer REST API with the query
+ parameter merge=true, if either the guest or the registered users had baskets assigned. The registered shopper's
+ basket will be the source for the merge, and the transferred guest shopper's basket will be the current basket.</div>
                     <div class="parameters">
                         <span class="parameterTitle">Parameters:</span>
                         <div class="parameterDetail">
                             <span class="parameterName">source</span>
 						 - 
-						<span class="parameterDesc">the basket from which data should be merged into the destination, can be <code>null</code> e.g. in case the former guest shopper did not create a basket</span>
+						<span class="parameterDesc">the basket from which data will be merged into the current basket. Will be <code>null</code> if the former guest shopper did not have an assigned basket.</span>
                         </div>
                         <div class="parameterDetail">
                             <span class="parameterName">currentBasket</span>
 						 - 
-						<span class="parameterDesc">the destination basket to merge data into</span>
+						<span class="parameterDesc">the current basket to merge data into</span>
                         </div>
                     </div>
                     <hr>

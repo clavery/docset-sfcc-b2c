@@ -403,6 +403,8 @@
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="STRIPE_TEST" />
             <xsd:enumeration value="STRIPE_LIVE" />
+            <xsd:enumeration value="ADYEN_TEST" />
+            <xsd:enumeration value="ADYEN_LIVE" />
         </xsd:restriction>
     </xsd:simpleType>
 

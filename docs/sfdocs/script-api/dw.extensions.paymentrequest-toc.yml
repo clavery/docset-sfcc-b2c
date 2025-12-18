@@ -1,0 +1,7 @@
+- title: dw.extensions.paymentrequest
+  link: dw.extensions.paymentrequest.md
+  topics:
+  - title: PaymentRequestHookResult
+    link: dw.extensions.paymentrequest.PaymentRequestHookResult.md
+  - title: PaymentRequestHooks
+    link: dw.extensions.paymentrequest.PaymentRequestHooks.md

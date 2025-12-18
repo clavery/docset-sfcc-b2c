@@ -268,6 +268,7 @@
 
     <xsd:complexType name="BoostBuryRule">
         <xsd:sequence>
+            <xsd:element name="description" type="Generic.String.4000" minOccurs="0" maxOccurs="1" />
             <xsd:element name="boost-bury-qualifier" type="BoostBuryQualifier" minOccurs="0" maxOccurs="5" />
             <xsd:element name="boost-bury-target" type="BoostBuryTarget" minOccurs="0" maxOccurs="10" />
         </xsd:sequence>
@@ -288,9 +289,9 @@
     </xsd:complexType>
 
     <xsd:simpleType name="BoostBuryQualifierType">
-        <xsd:restriction base="xsd:int">
-            <xsd:enumeration value="0" />
-            <xsd:enumeration value="1" />
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Category Scope" />
+            <xsd:enumeration value="Search Term Scope" />
         </xsd:restriction>
     </xsd:simpleType>
 

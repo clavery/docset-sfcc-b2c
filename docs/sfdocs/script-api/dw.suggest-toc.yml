@@ -1,0 +1,31 @@
+- title: dw.suggest
+  link: dw.suggest.md
+  topics:
+  - title: BrandSuggestions
+    link: dw.suggest.BrandSuggestions.md
+  - title: CategorySuggestions
+    link: dw.suggest.CategorySuggestions.md
+  - title: ContentSuggestions
+    link: dw.suggest.ContentSuggestions.md
+  - title: CustomSuggestions
+    link: dw.suggest.CustomSuggestions.md
+  - title: ProductSuggestions
+    link: dw.suggest.ProductSuggestions.md
+  - title: SearchPhraseSuggestions
+    link: dw.suggest.SearchPhraseSuggestions.md
+  - title: SuggestedCategory
+    link: dw.suggest.SuggestedCategory.md
+  - title: SuggestedContent
+    link: dw.suggest.SuggestedContent.md
+  - title: SuggestedPhrase
+    link: dw.suggest.SuggestedPhrase.md
+  - title: SuggestedProduct
+    link: dw.suggest.SuggestedProduct.md
+  - title: SuggestedTerm
+    link: dw.suggest.SuggestedTerm.md
+  - title: SuggestedTerms
+    link: dw.suggest.SuggestedTerms.md
+  - title: Suggestions
+    link: dw.suggest.Suggestions.md
+  - title: SuggestModel
+    link: dw.suggest.SuggestModel.md
